@@ -103,8 +103,11 @@ export async function getTestimonials(): Promise<Testimonial[]> {
 }
 
 export async function getAbout(): Promise<AboutData> {
-  const res = await query<Partial<AboutData>>(ABOUT_QUERY);
-  return res?.sections?.length ? { ...DEFAULT_ABOUT, ...stripNulls(res) } : DEFAULT_ABOUT;
+  // Served from the code defaults: the seeded CMS copy has older punctuation and
+  // the Studio dashboard isn't currently accessible. Edit DEFAULT_ABOUT in
+  // defaults.ts and it deploys. (Re-enable the Sanity read below once Studio
+  // access is restored and the doc is resynced.)
+  return DEFAULT_ABOUT;
 }
 
 export async function getPolicies(): Promise<PoliciesData> {
