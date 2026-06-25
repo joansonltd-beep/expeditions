@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+  Expeditions With Jo palette: ocean teal primary + warm coral accent on white.
+  Adapted from the clean, readable layout of joansonbjames.com. Retune here.
+*/
+@theme {
+  --color-brand: #0f766e;        /* ocean teal */
+  --color-brand-dark: #115e59;
+  --color-brand-light: #14b8a6;
+  --color-brand-soft: #f0fdfa;   /* teal tint background */
+  --color-accent: #f4845f;       /* warm coral */
+  --color-accent-dark: #c2410c;
+  --color-accent-soft: #fff3ec;  /* sand */
+  --color-whatsapp: #25d366;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 80%, transparent), transparent 60%),
+    radial-gradient(700px 460px at -8% 108%, color-mix(in srgb, var(--color-accent-soft) 75%, transparent), transparent 58%),
+    #ffffff;
+  background-attachment: fixed;
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
