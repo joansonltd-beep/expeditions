@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Floats from "@/components/Floats";
 import SocialLinks from "@/components/SocialLinks";
@@ -65,9 +66,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="flex items-center gap-2.5 text-lg font-extrabold text-white">
-                <span className="grid h-9 w-9 place-items-center rounded-[10px] bg-gradient-to-br from-brand to-brand-light text-white">
-                  ✈
-                </span>
+                <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain brightness-0 invert" />
                 {settings.businessName}
               </div>
               <p className="mt-4 max-w-xs text-sm text-slate-400">{settings.footerBlurb}</p>

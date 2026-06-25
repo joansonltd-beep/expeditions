@@ -44,9 +44,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
           ) : (
             <>
-              <span className="grid h-9 w-9 place-items-center rounded-[10px] bg-gradient-to-br from-brand to-brand-light text-white">
-                ✈
-              </span>
+              <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain" priority />
               {businessName}
             </>
           )}
