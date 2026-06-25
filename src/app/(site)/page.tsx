@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 
 const PILLARS = [
   { icon: "✈️", title: "Travel Booking", text: "Flights, stays, transfers and cruises, coordinated worldwide.", href: "/flights" },
-  { icon: "🛡️", title: "Insurance", text: "Free consultations for life, health, income and retirement cover.", href: "/insurance" },
+  { icon: "🛡️", title: "Insurance", text: "We have moved. Our insurance services are now at joansonbjames.com.", href: "/insurance" },
   { icon: "💰", title: "Finance", text: "Help with loans, credit cards and registering your business.", href: "/finance" },
   { icon: "🛂", title: "Travel Visas", text: "Step-by-step support with the Canadian visa process from Trinidad.", href: "/travel-visas" },
 ];
@@ -33,7 +33,23 @@ export default async function HomePage() {
     getTestimonials(),
   ]);
   const travel = services.filter((s) => s.category === "travel" || s.category === "visa");
-  const local = services.filter((s) => s.category === "local");
+  const finance = services.find((s) => s.slug === "finance");
+  const localCards = [
+    {
+      slug: "insurance",
+      icon: "🛡️",
+      scope: "Now at joansonbjames.com",
+      title: "Insurance",
+      shortBlurb:
+        "We have moved. Our insurance services are now handled at joansonbjames.com, in partnership with Guardian Life of the Caribbean.",
+      cardFeatures: [
+        "Life, health and critical illness",
+        "Retirement and income protection",
+        "Visit the site or book a consultation",
+      ],
+    },
+    ...(finance ? [finance] : []),
+  ];
   const waHref = `https://wa.me/${settings.whatsappNumber.replace(/\D/g, "")}`;
 
   return (
@@ -62,7 +78,7 @@ export default async function HomePage() {
                 <strong className="block text-xl font-bold text-slate-900">Worldwide</strong>flights &amp; stays
               </div>
               <div>
-                <strong className="block text-xl font-bold text-slate-900">Free</strong>insurance consultation
+                <strong className="block text-xl font-bold text-slate-900">Free</strong>finance guidance
               </div>
               <div>
                 <strong className="block text-xl font-bold text-slate-900">One booking</strong>for the whole trip
@@ -169,7 +185,7 @@ export default async function HomePage() {
           intro="Based in Trinidad and Tobago and ready to help you get things in order."
         />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
-          {local.map((s) => (
+          {localCards.map((s) => (
             <Link
               key={s.slug}
               href={`/${s.slug}`}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Section, PageHeader, btnPrimary } from "@/components/ui";
+import { Section, PageHeader, btnPrimary, btnGhost } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Insurance",
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const SITE = "https://www.joansonbjames.com";
+const BOOK = "https://www.joansonbjames.com/book";
 
 export default function InsurancePage() {
   return (
@@ -28,8 +29,12 @@ export default function InsurancePage() {
             of the Caribbean.
           </p>
 
-          <div className="mt-7 flex justify-center">
-            <a href={SITE} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
+          <p className="mt-3 text-slate-500">You can still book a consultation directly on the new site.</p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <a href={BOOK} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
+              Book a consultation
+            </a>
+            <a href={SITE} target="_blank" rel="noopener noreferrer" className={btnGhost}>
               Visit joansonbjames.com →
             </a>
           </div>
