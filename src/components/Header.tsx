@@ -11,7 +11,6 @@ type NavItem = { href: string; label: string };
 const TRAVEL: NavItem[] = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
-  { href: "/transfers", label: "Transfers" },
   { href: "/cruises", label: "Cruises" },
 ];
 
@@ -22,6 +21,7 @@ const MAIN: NavItem[] = [
 ];
 
 const AFTER: NavItem[] = [
+  { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
   { href: "/about", label: "About" },
   { href: "/policies", label: "Policies" },

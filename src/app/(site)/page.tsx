@@ -4,10 +4,10 @@ import { Container, Section, SectionHead, Eyebrow, CheckList, btnPrimary, btnGho
 import ContactForm from "@/components/ContactForm";
 
 const PILLARS = [
-  { icon: "✈️", title: "Travel booking", text: "Flights, stays, transfers and cruises, coordinated worldwide.", href: "/flights" },
+  { icon: "✈️", title: "Travel Booking", text: "Flights, stays, transfers and cruises, coordinated worldwide.", href: "/flights" },
   { icon: "🛡️", title: "Insurance", text: "Free consultations for life, health, income and retirement cover.", href: "/insurance" },
   { icon: "💰", title: "Finance", text: "Help with loans, credit cards and registering your business.", href: "/finance" },
-  { icon: "🛂", title: "Travel visas", text: "Step-by-step support with the Canadian visa process from Trinidad.", href: "/travel-visas" },
+  { icon: "🛂", title: "Travel Visas", text: "Step-by-step support with the Canadian visa process from Trinidad.", href: "/travel-visas" },
 ];
 
 const STEPS = [

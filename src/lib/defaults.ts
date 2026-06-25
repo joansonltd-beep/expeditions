@@ -71,7 +71,7 @@ export type Service = {
   slug: string;
   title: string;
   icon: string;
-  scope: string; // e.g. "Worldwide", "Trinidad only", "CARICOM only"
+  scope: string; // e.g. "Worldwide", "Trinidad Only", "CARICOM Only"
   category: ServiceCategory;
   order: number;
   shortBlurb: string; // home-page card text
@@ -212,7 +212,7 @@ export const DEFAULT_SERVICES: Service[] = [
     slug: "travel-visas",
     title: "Travel Visas",
     icon: "🛂",
-    scope: "CARICOM only",
+    scope: "CARICOM Only",
     category: "visa",
     order: 5,
     shortBlurb:
@@ -238,7 +238,7 @@ export const DEFAULT_SERVICES: Service[] = [
     slug: "insurance",
     title: "Insurance",
     icon: "🛡️",
-    scope: "Trinidad only",
+    scope: "Trinidad Only",
     category: "local",
     order: 6,
     shortBlurb:
@@ -270,7 +270,7 @@ export const DEFAULT_SERVICES: Service[] = [
     slug: "finance",
     title: "Finance",
     icon: "💰",
-    scope: "Trinidad only",
+    scope: "Trinidad Only",
     category: "local",
     order: 7,
     shortBlurb:
@@ -425,18 +425,18 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "Travel & visa support",
       bullets: [
-        "Flights – Affordable one-way or round-trip options",
-        "Accommodation – Comfortable, safe places to stay",
-        "Transportation – Reliable rides for airports, visa appointments, and getting around town",
-        "Visa help – Assistance with booking appointments and coordinating your visit",
+        "Flights: Affordable one-way or round-trip options",
+        "Accommodation: Comfortable, safe places to stay",
+        "Transportation: Reliable rides for airports, visa appointments, and getting around town",
+        "Visa help: Assistance with booking appointments and coordinating your visit",
       ],
     },
     {
       heading: "Financial services (Trinidad & Tobago only)",
       bullets: [
-        "Business Registration & Account Opening (Paid Service) – Guidance through registering your business and getting your documents ready to open a bank account.",
-        "Loans & Credit Cards (Free Service) – Help organizing and preparing applications for personal loans, car loans, mortgages, and credit cards so they are ready to submit.",
-        "Insurance (Free Consultation) – Free insurance consultations covering life, health, income protection, and retirement planning.",
+        "Business Registration & Account Opening (Paid Service): Guidance through registering your business and getting your documents ready to open a bank account.",
+        "Loans & Credit Cards (Free Service): Help organizing and preparing applications for personal loans, car loans, mortgages, and credit cards so they are ready to submit.",
+        "Insurance (Free Consultation): Free insurance consultations covering life, health, income protection, and retirement planning.",
       ],
       note: "All loan, credit card, and account applications are processed through First Citizens Bank. All insurance consultations and products are provided through Guardian Life of the Caribbean.",
     },
