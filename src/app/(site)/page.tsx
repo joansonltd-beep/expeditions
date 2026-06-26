@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getSiteSettings, getServices, getTestimonials } from "@/lib/siteData";
 import { Container, Section, SectionHead, Eyebrow, CheckList, btnPrimary, btnGhost, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
+import HeroGallery from "@/components/HeroGallery";
 
 const PILLARS = [
   { icon: "✈️", title: "Travel Booking", text: "Flights, stays, transfers and cruises, coordinated worldwide.", href: "/flights" },
@@ -85,21 +86,7 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-          <div className="relative grid min-h-[360px] place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-sky-400 via-cyan-600 to-cyan-900 text-white shadow-xl">
-            <div className="cube-scene">
-              <div className="cube">
-                <div className="cube-face cube-side cube-f-front"><span className="text-5xl">✈️</span><span className="text-lg font-bold">Flights</span></div>
-                <div className="cube-face cube-side cube-f-right"><span className="text-5xl">🏡</span><span className="text-lg font-bold">Stays</span></div>
-                <div className="cube-face cube-side cube-f-back"><span className="text-5xl">🚗</span><span className="text-lg font-bold">Transfers</span></div>
-                <div className="cube-face cube-side cube-f-left"><span className="text-5xl">🛂</span><span className="text-lg font-bold">Visas</span></div>
-                <div className="cube-face cube-top cube-f-top" />
-                <div className="cube-face cube-f-bottom" />
-              </div>
-            </div>
-            <div className="absolute bottom-5 left-0 right-0 text-center text-sm font-semibold tracking-wide text-white/90">
-              One team for the whole journey
-            </div>
-          </div>
+          <HeroGallery />
         </div>
       </Section>
 

@@ -27,46 +27,43 @@ body {
   background-attachment: fixed;
 }
 
-/* Hero 3D rotating cube: four side faces cycle toward the viewer. */
-.cube-scene { perspective: 1100px; }
-.cube {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  margin: 0 auto;
-  transform-style: preserve-3d;
-  animation: cubespin 16s ease-in-out infinite;
+/* Hero flip gallery: a tile that rotates out and the next tile rotates in. */
+.flip-scene { perspective: 1000px; }
+.flip-card {
+  transition: transform 0.35s ease;
+  transform: rotateY(0deg);
+  will-change: transform;
 }
-.cube-face {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 18px;
-}
-.cube-side {
-  background: #ffffff;
-  color: #0f172a;
-  box-shadow: 0 14px 36px rgba(8, 47, 73, 0.3);
-}
-.cube-top { background: linear-gradient(135deg, #0f766e, #14b8a6); }
-.cube-f-front { transform: rotateY(0deg) translateZ(90px); }
-.cube-f-right { transform: rotateY(90deg) translateZ(90px); }
-.cube-f-back { transform: rotateY(180deg) translateZ(90px); }
-.cube-f-left { transform: rotateY(-90deg) translateZ(90px); }
-.cube-f-top { transform: rotateX(90deg) translateZ(90px); }
-.cube-f-bottom { transform: rotateX(-90deg) translateZ(90px); background: #0e7490; }
+.flip-card.is-flipping { transform: rotateY(90deg); }
 
-/* Constant back-tilt so the cube reads as 3D, with a stepped quarter-turn spin. */
-@keyframes cubespin {
-  0%, 18%   { transform: rotateX(-20deg) rotateY(0deg); }
-  25%, 43%  { transform: rotateX(-20deg) rotateY(-90deg); }
-  50%, 68%  { transform: rotateX(-20deg) rotateY(-180deg); }
-  75%, 93%  { transform: rotateX(-20deg) rotateY(-270deg); }
-  100%      { transform: rotateX(-20deg) rotateY(-360deg); }
+/* Per-tile looping animations (the "gif" on each face). */
+.anim-fly { display: inline-block; animation: flyacross 3s ease-in-out infinite; }
+.anim-bob { display: inline-block; animation: floaty 2.6s ease-in-out infinite; }
+.anim-drive { display: inline-block; animation: drive 3s ease-in-out infinite; }
+.anim-sail { display: inline-block; animation: sail 3s ease-in-out infinite; }
+.anim-coin { display: inline-block; animation: coinflip 2.4s ease-in-out infinite; }
+
+@keyframes flyacross {
+  0% { transform: translateX(-26px) translateY(6px); }
+  50% { transform: translateX(0) translateY(-6px); }
+  100% { transform: translateX(26px) translateY(6px); }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes drive {
+  0% { transform: translateX(-30px); }
+  50% { transform: translateX(0); }
+  100% { transform: translateX(30px); }
+}
+@keyframes sail {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-9px) rotate(4deg); }
+}
+@keyframes coinflip {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
 }
 
 /* Respect users who prefer less motion. */
