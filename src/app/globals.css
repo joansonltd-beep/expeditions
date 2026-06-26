@@ -27,6 +27,12 @@ body {
   background-attachment: fixed;
 }
 
+/* Drifting clouds in the hero flight scene. */
+@keyframes drift {
+  from { transform: translateX(-70px); }
+  to   { transform: translateX(460px); }
+}
+
 /* Respect users who prefer less motion. */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

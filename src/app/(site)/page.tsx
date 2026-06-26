@@ -85,16 +85,29 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-          <div className="relative grid min-h-[360px] place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-brand via-cyan-700 to-cyan-900 text-white shadow-xl">
-            <div className="text-[5rem] opacity-90">🌍</div>
-            <div className="absolute left-6 top-6 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-lg">
-              ✈️ Flights booked
-            </div>
-            <div className="absolute bottom-6 right-6 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-lg">
-              🏡 Stays sorted
-            </div>
-            <div className="absolute bottom-24 left-7 flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-lg">
-              🚗 Transfers ready
+          <div className="relative grid min-h-[360px] place-items-center overflow-hidden rounded-3xl bg-gradient-to-br from-sky-400 via-cyan-600 to-cyan-900 text-white shadow-xl">
+            {/* drifting clouds */}
+            <span className="pointer-events-none absolute left-0 top-10 text-4xl opacity-70 [animation:drift_16s_linear_infinite]">☁️</span>
+            <span className="pointer-events-none absolute left-0 top-44 text-2xl opacity-50 [animation:drift_24s_linear_infinite] [animation-delay:3s]">☁️</span>
+            <span className="pointer-events-none absolute bottom-10 left-0 text-3xl opacity-60 [animation:drift_20s_linear_infinite] [animation-delay:6s]">☁️</span>
+            {/* animated flight route + plane */}
+            <svg viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full" aria-hidden="true">
+              <defs>
+                <path id="route" d="M45 300 Q 170 40 360 140" fill="none" />
+              </defs>
+              <use href="#route" stroke="rgba(255,255,255,0.55)" strokeWidth="3" strokeDasharray="1 12" strokeLinecap="round" />
+              <circle cx="45" cy="300" r="7" fill="#ffffff" />
+              <circle cx="360" cy="140" r="7" fill="#ffffff" />
+              <circle cx="360" cy="140" r="14" fill="none" stroke="#ffffff" strokeOpacity="0.5" strokeWidth="2" />
+              <text textAnchor="middle" dominantBaseline="central" fontSize="36">
+                ✈️
+                <animateMotion dur="5.5s" repeatCount="indefinite">
+                  <mpath href="#route" />
+                </animateMotion>
+              </text>
+            </svg>
+            <div className="absolute bottom-5 left-0 right-0 text-center text-sm font-semibold tracking-wide text-white/90">
+              Wherever you&rsquo;re headed
             </div>
           </div>
         </div>
