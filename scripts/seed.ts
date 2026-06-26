@@ -21,6 +21,10 @@ import {
   DEFAULT_ABOUT,
   DEFAULT_POLICIES,
 } from "../src/lib/defaults";
+import { DEFAULT_HOME, DEFAULT_INSURANCE } from "../src/lib/homeDefaults";
+
+// Sanity needs a stable _key on every object inside an array.
+const keyed = <T,>(arr: T[], prefix: string) => arr.map((x, i) => ({ _key: `${prefix}-${i}`, ...x }));
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
@@ -43,6 +47,19 @@ const client = createClient({
 
 async function run() {
   const tx = client.transaction();
+
+  tx.createIfNotExists({
+    _id: "homeContent",
+    _type: "homeContent",
+    ...DEFAULT_HOME,
+    heroStats: keyed(DEFAULT_HOME.heroStats, "stat"),
+    pillars: keyed(DEFAULT_HOME.pillars, "pillar"),
+    steps: keyed(DEFAULT_HOME.steps, "step"),
+    why: keyed(DEFAULT_HOME.why, "why"),
+    gallery: keyed(DEFAULT_HOME.gallery, "tile"),
+  });
+
+  tx.createIfNotExists({ _id: "insurancePage", _type: "insurancePage", ...DEFAULT_INSURANCE });
 
   tx.createIfNotExists({
     _id: "siteSettings",

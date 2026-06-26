@@ -22,6 +22,9 @@ import {
   DEFAULT_ABOUT,
   DEFAULT_POLICIES,
 } from "../src/lib/defaults";
+import { DEFAULT_HOME, DEFAULT_INSURANCE } from "../src/lib/homeDefaults";
+
+const keyed = <T,>(arr: T[], prefix: string) => arr.map((x, i) => ({ _key: `${prefix}-${i}`, ...x }));
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
@@ -36,6 +39,19 @@ const client = createClient({ projectId, dataset, token, apiVersion: "2024-10-01
 
 async function run() {
   const tx = client.transaction();
+
+  tx.createOrReplace({
+    _id: "homeContent",
+    _type: "homeContent",
+    ...DEFAULT_HOME,
+    heroStats: keyed(DEFAULT_HOME.heroStats, "stat"),
+    pillars: keyed(DEFAULT_HOME.pillars, "pillar"),
+    steps: keyed(DEFAULT_HOME.steps, "step"),
+    why: keyed(DEFAULT_HOME.why, "why"),
+    gallery: keyed(DEFAULT_HOME.gallery, "tile"),
+  });
+
+  tx.createOrReplace({ _id: "insurancePage", _type: "insurancePage", ...DEFAULT_INSURANCE });
 
   tx.createOrReplace({
     _id: "siteSettings",

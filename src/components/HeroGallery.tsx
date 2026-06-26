@@ -7,7 +7,7 @@ import Image from "next/image";
 // tile; set `gif` to a path in /public to use a real GIF instead.
 type Slide = { label: string; emoji: string; anim: string; gif?: string };
 
-const SLIDES: Slide[] = [
+const DEFAULT_SLIDES: Slide[] = [
   { label: "Flights", emoji: "✈️", anim: "anim-fly" },
   { label: "Stays", emoji: "🏡", anim: "anim-bob" },
   { label: "Transfers", emoji: "🚗", anim: "anim-drive" },
@@ -16,7 +16,14 @@ const SLIDES: Slide[] = [
   { label: "Finance", emoji: "💰", anim: "anim-coin" },
 ];
 
-export default function HeroGallery() {
+// Animations are assigned by position so CMS-edited tiles still get motion.
+const ANIMS = ["anim-fly", "anim-bob", "anim-drive", "anim-sail", "anim-bob", "anim-coin"];
+
+export default function HeroGallery({ tiles }: { tiles?: { emoji: string; label: string }[] }) {
+  const SLIDES: Slide[] =
+    tiles && tiles.length
+      ? tiles.map((t, idx) => ({ ...t, anim: ANIMS[idx % ANIMS.length] }))
+      : DEFAULT_SLIDES;
   const [i, setI] = useState(0);
   const [flipping, setFlipping] = useState(false);
 

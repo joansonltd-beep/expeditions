@@ -22,6 +22,12 @@ import {
   type AboutData,
   type PoliciesData,
 } from "@/lib/defaults";
+import {
+  DEFAULT_HOME,
+  DEFAULT_INSURANCE,
+  type HomeContent,
+  type InsurancePage,
+} from "@/lib/homeDefaults";
 
 export type {
   SiteSettings,
@@ -32,6 +38,8 @@ export type {
   Testimonial,
   AboutData,
   PoliciesData,
+  HomeContent,
+  InsurancePage,
 };
 
 // --- GROQ ---------------------------------------------------------------
@@ -51,13 +59,26 @@ const STAY_QUERY = `*[_type == "stay"][0]{ name, tagline, description, tags, fea
 const TESTIMONIALS_QUERY = `*[_type == "testimonial"]|order(order asc){ quote, person, context }`;
 const ABOUT_QUERY = `*[_type == "aboutContent"][0]{ intro, sections }`;
 const POLICIES_QUERY = `*[_type == "policiesContent"][0]{ intro, sections }`;
+const HOME_QUERY = `*[_type == "homeContent"][0]{
+  heroStats, pillarsEyebrow, pillarsTitle, pillarsIntro, pillars,
+  travelEyebrow, travelTitle, travelIntro, notSureTitle, notSureText,
+  bundleEyebrow, bundleTitle, bundleText,
+  localEyebrow, localTitle, localIntro, localMoved,
+  howEyebrow, howTitle, howIntro, steps,
+  whyEyebrow, whyTitle, why,
+  testimonialsEyebrow, testimonialsTitle,
+  contactEyebrow, contactTitle, contactIntro, gallery
+}`;
+const INSURANCE_QUERY = `*[_type == "insurancePage"][0]{ title, intro, body, bookNote, bookLabel, visitLabel }`;
 
 // Cache CMS reads for a minute; edits show up shortly after publishing.
 const fetchOpts = { next: { revalidate: 60 } } as const;
 
 function stripNulls<T extends object>(obj: T): Partial<T> {
   return Object.fromEntries(
-    Object.entries(obj).filter(([, v]) => v != null && v !== "")
+    Object.entries(obj).filter(
+      ([, v]) => v != null && v !== "" && !(Array.isArray(v) && v.length === 0)
+    )
   ) as Partial<T>;
 }
 
@@ -113,14 +134,25 @@ export async function getTestimonials(): Promise<Testimonial[]> {
 }
 
 export async function getAbout(): Promise<AboutData> {
-  // Served from the code defaults: the seeded CMS copy has older punctuation and
-  // the Studio dashboard isn't currently accessible. Edit DEFAULT_ABOUT in
-  // defaults.ts and it deploys. (Re-enable the Sanity read below once Studio
-  // access is restored and the doc is resynced.)
-  return DEFAULT_ABOUT;
+  const res = await query<Partial<AboutData>>(ABOUT_QUERY);
+  return res?.sections?.length ? { ...DEFAULT_ABOUT, ...stripNulls(res) } : DEFAULT_ABOUT;
 }
 
 export async function getPolicies(): Promise<PoliciesData> {
   const res = await query<Partial<PoliciesData>>(POLICIES_QUERY);
   return res?.sections?.length ? { ...DEFAULT_POLICIES, ...stripNulls(res) } : DEFAULT_POLICIES;
+}
+
+export async function getHomeContent(): Promise<HomeContent> {
+  const res = await query<Partial<HomeContent>>(HOME_QUERY);
+  if (!res) return DEFAULT_HOME;
+  const merged = { ...DEFAULT_HOME, ...stripNulls(res) };
+  // Keep the moved-card sub-fields filled in even if only some are edited.
+  merged.localMoved = { ...DEFAULT_HOME.localMoved, ...(res.localMoved ? stripNulls(res.localMoved) : {}) };
+  return merged;
+}
+
+export async function getInsurancePage(): Promise<InsurancePage> {
+  const res = await query<Partial<InsurancePage>>(INSURANCE_QUERY);
+  return res ? { ...DEFAULT_INSURANCE, ...stripNulls(res) } : DEFAULT_INSURANCE;
 }

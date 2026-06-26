@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Section, PageHeader, btnPrimary, btnGhost } from "@/components/ui";
+import { getInsurancePage } from "@/lib/siteData";
 
 export const metadata: Metadata = {
   title: "Insurance",
@@ -11,31 +12,23 @@ export const metadata: Metadata = {
 const SITE = "https://www.joansonbjames.com";
 const BOOK = "https://www.joansonbjames.com/book";
 
-export default function InsurancePage() {
+export default async function InsurancePage() {
+  const p = await getInsurancePage();
   return (
     <>
-      <PageHeader
-        icon="🛡️"
-        title="We have moved"
-        crumb="Insurance"
-        intro="Our insurance services now have their own dedicated home."
-      />
+      <PageHeader icon="🛡️" title={p.title} crumb="Insurance" intro={p.intro} />
 
       <Section>
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg text-slate-600">
-            For life, health, critical illness, income protection and retirement planning, visit
-            Joanson Baptiste James&rsquo;s dedicated insurance site, in partnership with Guardian Life
-            of the Caribbean.
-          </p>
+          <p className="text-lg text-slate-600">{p.body}</p>
 
-          <p className="mt-3 text-slate-500">You can still book a consultation directly on the new site.</p>
+          <p className="mt-3 text-slate-500">{p.bookNote}</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a href={BOOK} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
-              Book a consultation
+              {p.bookLabel}
             </a>
             <a href={SITE} target="_blank" rel="noopener noreferrer" className={btnGhost}>
-              Visit joansonbjames.com →
+              {p.visitLabel} →
             </a>
           </div>
 

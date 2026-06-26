@@ -7,18 +7,22 @@ import { stay } from "./stay";
 import { testimonial } from "./testimonial";
 import { aboutContent } from "./aboutContent";
 import { policiesContent } from "./policiesContent";
+import { homeContent } from "./homeContent";
+import { insurancePage } from "./insurancePage";
 import { contentSection } from "./contentSection";
 import { linkRef } from "./linkRef";
 
 export const schemaTypes: SchemaTypeDefinition[] = [
   // documents
   siteSettings,
+  homeContent,
   service,
   packageType,
   stay,
   testimonial,
   aboutContent,
   policiesContent,
+  insurancePage,
   // objects
   contentSection,
   linkRef,
