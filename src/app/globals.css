@@ -27,10 +27,46 @@ body {
   background-attachment: fixed;
 }
 
-/* Drifting clouds in the hero flight scene. */
-@keyframes drift {
-  from { transform: translateX(-70px); }
-  to   { transform: translateX(460px); }
+/* Hero 3D rotating cube: four side faces cycle toward the viewer. */
+.cube-scene { perspective: 1100px; }
+.cube {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: cubespin 16s ease-in-out infinite;
+}
+.cube-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 18px;
+}
+.cube-side {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 14px 36px rgba(8, 47, 73, 0.3);
+}
+.cube-top { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+.cube-f-front { transform: rotateY(0deg) translateZ(90px); }
+.cube-f-right { transform: rotateY(90deg) translateZ(90px); }
+.cube-f-back { transform: rotateY(180deg) translateZ(90px); }
+.cube-f-left { transform: rotateY(-90deg) translateZ(90px); }
+.cube-f-top { transform: rotateX(90deg) translateZ(90px); }
+.cube-f-bottom { transform: rotateX(-90deg) translateZ(90px); background: #0e7490; }
+
+/* Constant back-tilt so the cube reads as 3D, with a stepped quarter-turn spin. */
+@keyframes cubespin {
+  0%, 18%   { transform: rotateX(-20deg) rotateY(0deg); }
+  25%, 43%  { transform: rotateX(-20deg) rotateY(-90deg); }
+  50%, 68%  { transform: rotateX(-20deg) rotateY(-180deg); }
+  75%, 93%  { transform: rotateX(-20deg) rotateY(-270deg); }
+  100%      { transform: rotateX(-20deg) rotateY(-360deg); }
 }
 
 /* Respect users who prefer less motion. */
