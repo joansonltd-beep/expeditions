@@ -5,7 +5,11 @@ import ServicePage from "@/components/ServicePage";
 import { Section, SectionHead, CheckList } from "@/components/ui";
 import CtaButtons from "@/components/CtaButtons";
 
-export const metadata: Metadata = { title: "Finance" };
+export const metadata: Metadata = {
+  title: "Finance & Business Registration",
+  description:
+    "Help with loans, credit card applications and business registration in Trinidad and Tobago. Loan and credit card applications are processed through First Citizens Bank; business setup packages from TT$700.",
+};
 
 export default async function FinancePage() {
   const [service, packages] = await Promise.all([getService("finance"), getPackages()]);

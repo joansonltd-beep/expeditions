@@ -5,7 +5,11 @@ import ServicePage from "@/components/ServicePage";
 import { Section, Eyebrow, CheckList } from "@/components/ui";
 import CtaButtons from "@/components/CtaButtons";
 
-export const metadata: Metadata = { title: "Accommodations" };
+export const metadata: Metadata = {
+  title: "Accommodations & Stays",
+  description:
+    "Hotels, Airbnb and short-stay apartments worldwide at the best available prices, plus A Likkle Rest by Jo, our own affordable room minutes from Trinidad's Piarco airport, ideal for layovers and visa appointments.",
+};
 
 export default async function AccommodationsPage() {
   const [service, stay] = await Promise.all([getService("accommodations"), getStay()]);
