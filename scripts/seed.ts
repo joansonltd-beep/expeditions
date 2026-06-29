@@ -22,6 +22,7 @@ import {
   DEFAULT_POLICIES,
 } from "../src/lib/defaults";
 import { DEFAULT_HOME, DEFAULT_INSURANCE } from "../src/lib/homeDefaults";
+import { DEFAULT_ARTICLES } from "../src/lib/articleDefaults";
 
 // Sanity needs a stable _key on every object inside an array.
 const keyed = <T,>(arr: T[], prefix: string) => arr.map((x, i) => ({ _key: `${prefix}-${i}`, ...x }));
@@ -60,6 +61,18 @@ async function run() {
   });
 
   tx.createIfNotExists({ _id: "insurancePage", _type: "insurancePage", ...DEFAULT_INSURANCE });
+
+  DEFAULT_ARTICLES.forEach((a) => {
+    tx.createIfNotExists({
+      _id: `post-${a.slug}`,
+      _type: "post",
+      title: a.title,
+      slug: { _type: "slug", current: a.slug },
+      excerpt: a.excerpt,
+      publishedAt: a.publishedAt,
+      body: a.body.map((b, i) => ({ _type: "contentSection", _key: `${a.slug}-${i}`, ...b })),
+    });
+  });
 
   tx.createIfNotExists({
     _id: "siteSettings",

@@ -28,6 +28,7 @@ import {
   type HomeContent,
   type InsurancePage,
 } from "@/lib/homeDefaults";
+import { DEFAULT_ARTICLES, type Article } from "@/lib/articleDefaults";
 
 export type {
   SiteSettings,
@@ -40,6 +41,7 @@ export type {
   PoliciesData,
   HomeContent,
   InsurancePage,
+  Article,
 };
 
 // --- GROQ ---------------------------------------------------------------
@@ -70,6 +72,9 @@ const HOME_QUERY = `*[_type == "homeContent"][0]{
   contactEyebrow, contactTitle, contactIntro, gallery
 }`;
 const INSURANCE_QUERY = `*[_type == "insurancePage"][0]{ title, intro, body, bookNote, bookLabel, visitLabel }`;
+const ARTICLES_QUERY = `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){
+  "slug": slug.current, title, excerpt, publishedAt, body
+}`;
 
 // Cache CMS reads for a minute; edits show up shortly after publishing.
 const fetchOpts = { next: { revalidate: 60 } } as const;
@@ -155,4 +160,14 @@ export async function getHomeContent(): Promise<HomeContent> {
 export async function getInsurancePage(): Promise<InsurancePage> {
   const res = await query<Partial<InsurancePage>>(INSURANCE_QUERY);
   return res ? { ...DEFAULT_INSURANCE, ...stripNulls(res) } : DEFAULT_INSURANCE;
+}
+
+export async function getArticles(): Promise<Article[]> {
+  const res = await query<Article[]>(ARTICLES_QUERY);
+  return res?.length ? res : DEFAULT_ARTICLES;
+}
+
+export async function getArticle(slug: string): Promise<Article | null> {
+  const all = await getArticles();
+  return all.find((a) => a.slug === slug) ?? null;
 }

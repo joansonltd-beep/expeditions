@@ -9,6 +9,7 @@ import { aboutContent } from "./aboutContent";
 import { policiesContent } from "./policiesContent";
 import { homeContent } from "./homeContent";
 import { insurancePage } from "./insurancePage";
+import { post } from "./post";
 import { contentSection } from "./contentSection";
 import { linkRef } from "./linkRef";
 
@@ -23,6 +24,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   aboutContent,
   policiesContent,
   insurancePage,
+  post,
   // objects
   contentSection,
   linkRef,

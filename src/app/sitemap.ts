@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/siteUrl";
+import { getArticles } from "@/lib/siteData";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
     "/flights",
@@ -10,11 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/travel-visas",
     "/insurance",
     "/finance",
+    "/guides",
     "/about",
     "/policies",
   ];
+  const articles = await getArticles();
+  const guideRoutes = articles.map((a) => `/guides/${a.slug}`);
   const now = new Date();
-  return routes.map((path) => ({
+  return [...routes, ...guideRoutes].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency: "monthly",

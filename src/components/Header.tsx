@@ -23,8 +23,8 @@ const MAIN: NavItem[] = [
 const AFTER: NavItem[] = [
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
+  { href: "/guides", label: "Guides" },
   { href: "/about", label: "About" },
-  { href: "/policies", label: "Policies" },
 ];
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
