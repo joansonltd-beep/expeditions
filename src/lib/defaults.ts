@@ -56,7 +56,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   heroEyebrow: "Travel, Insurance & Finance",
   heroHeadline: "Plan your trip. Sort your finances. Travel with confidence.",
   heroSubcopy:
-    "Expeditions With Jo is your one-stop service for flights, accommodation, transfers, cruises and travel visas worldwide, plus insurance and finance help across Trinidad and Tobago.",
+    "Expeditions With Jo is your one-stop service for flights, accommodation, transfers, cruises and travel visas worldwide, plus insurance and finance help across CARICOM.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:
