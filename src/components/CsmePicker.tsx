@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { CsmeCountry } from "@/lib/csmeData";
 
 // Country picker for the CSME Skills Certificate page. Every country's panel is
@@ -34,7 +35,7 @@ export default function CsmePicker({ countries }: { countries: CsmeCountry[] }) 
         {countries.map((c) => (
           <div key={c.slug} className={sel === c.slug ? "" : "hidden"}>
             <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">CSME Skills Certificate in {c.name}</h3>
+              <h3 className="text-xl font-bold text-slate-900">CARICOM Skills Certificate in {c.name}</h3>
 
               {c.fullFreeMovement ? (
                 <div className="mt-4 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
@@ -49,20 +50,29 @@ export default function CsmePicker({ countries }: { countries: CsmeCountry[] }) 
               </p>
               <p className="mt-3 text-slate-600">{c.howTo}</p>
 
-              {c.officialUrl ? (
-                <a
-                  href={c.officialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <Link
+                  href={`/caricom-skills-certificate/${c.slug}`}
+                  className="inline-flex items-center gap-1 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
                 >
-                  Official {c.name} information →
-                </a>
-              ) : (
-                <p className="mt-5 text-sm text-slate-400">
+                  Full steps for {c.name} →
+                </Link>
+                {c.officialUrl ? (
+                  <a
+                    href={c.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-brand hover:underline"
+                  >
+                    Official {c.name} site →
+                  </a>
+                ) : null}
+              </div>
+              {!c.officialUrl ? (
+                <p className="mt-3 text-sm text-slate-400">
                   Search your government website for &ldquo;{c.authority}&rdquo; to confirm the current requirements.
                 </p>
-              )}
+              ) : null}
             </div>
           </div>
         ))}

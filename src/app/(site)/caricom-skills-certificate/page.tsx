@@ -5,20 +5,22 @@ import CtaButtons from "@/components/CtaButtons";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
 
 export const metadata: Metadata = {
-  title: "CSME Skills Certificate: How to Apply by Country",
+  title: "CARICOM Skills Certificate (CSME): How to Apply by Country",
   description:
-    "How to get a CARICOM (CSME) Skills Certificate. The eligible categories, the documents, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
+    "How to get a CARICOM Skills Certificate (CSME). The eligible categories, the documents, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
   keywords: [
-    "CSME skills certificate",
     "CARICOM skills certificate",
-    "how to apply for CARICOM skills certificate",
+    "CARICOM skill certificate",
+    "CSME skills certificate",
+    "CARICOM certificate",
+    "how to apply for a CARICOM skills certificate",
     "CARICOM skills certificate Trinidad",
     "CARICOM skills certificate Jamaica",
     "CARICOM skills certificate Grenada",
     "CARICOM free movement of skills",
     "certificate of recognition of CARICOM skills qualification",
   ],
-  alternates: { canonical: "/csme-skills-certificate" },
+  alternates: { canonical: "/caricom-skills-certificate" },
 };
 
 const faqJsonLd = {
@@ -38,9 +40,9 @@ export default function CsmePage() {
 
       <PageHeader
         icon="🌎"
-        title="CSME Skills Certificate: How to Apply"
+        title="CARICOM Skills Certificate (CSME): How to Apply"
         crumb="Guides"
-        intro="A clear guide to the CARICOM Skills Certificate, with the steps and the exact office to apply to in each CARICOM country. Pick your country below."
+        intro="A clear guide to the CARICOM Skills Certificate, also called the CSME Skills Certificate, with the steps and the exact office to apply to in each CARICOM country. Pick your country below."
       />
 
       {/* WHAT IT IS */}

@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.book-online-transfers.com/en/expeditionswithjo",
         permanent: false,
       },
+      {
+        source: "/csme-skills-certificate",
+        destination: "/caricom-skills-certificate",
+        permanent: true,
+      },
     ];
   },
 };

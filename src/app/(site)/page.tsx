@@ -3,6 +3,8 @@ import { getSiteSettings, getServices, getTestimonials, getHomeContent } from "@
 import { Section, SectionHead, Eyebrow, CheckList, btnPrimary, btnGhost, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import HeroGallery from "@/components/HeroGallery";
+import CsmePicker from "@/components/CsmePicker";
+import { CSME_COUNTRIES } from "@/lib/csmeData";
 
 export default async function HomePage() {
   const [settings, services, testimonials, home] = await Promise.all([
@@ -148,6 +150,23 @@ export default async function HomePage() {
               <CheckList items={s.cardFeatures} className="mt-auto text-sm" />
             </Link>
           ))}
+        </div>
+      </Section>
+
+      {/* CARICOM SKILLS CERTIFICATE */}
+      <Section>
+        <SectionHead
+          eyebrow="CARICOM"
+          title="CARICOM Skills Certificate: apply in your country"
+          intro="Want to live and work in another CARICOM country? Pick where you live and see exactly where to apply for your CARICOM (CSME) Skills Certificate."
+        />
+        <div className="mx-auto max-w-3xl">
+          <CsmePicker countries={CSME_COUNTRIES} />
+          <div className="mt-6">
+            <Link href="/caricom-skills-certificate" className={btnGhost}>
+              Read the full CARICOM Skills Certificate guide →
+            </Link>
+          </div>
         </div>
       </Section>
 
