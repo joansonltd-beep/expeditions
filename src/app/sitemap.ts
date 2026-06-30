@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/insurance",
     "/finance",
     "/guides",
+    "/csme-skills-certificate",
     "/about",
     "/policies",
   ];
