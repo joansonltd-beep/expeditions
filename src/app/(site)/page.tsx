@@ -5,6 +5,7 @@ import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, b
 import ContactForm from "@/components/ContactForm";
 import CsmePicker from "@/components/CsmePicker";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { Icon, serviceIcon, pillarIcon, WHY_ICONS } from "@/components/icons";
 
 // Presentation-only photo map (decorative), keyed by service slug. Falls back
 // to the hero photo. Content still comes from Sanity.
@@ -75,11 +76,11 @@ export default async function HomePage() {
                 </a>
               ) : null}
             </div>
-            <div className="mt-10 flex flex-wrap gap-8">
+            <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
               {home.heroStats.map((st, i) => (
-                <div key={i} className="text-sm text-white/80">
-                  <strong className="block text-2xl font-bold text-white">{st.value}</strong>
-                  {st.label}
+                <div key={i} className={i > 0 ? "sm:border-l sm:border-white/20 sm:pl-8" : ""}>
+                  <div className="text-lg font-extrabold uppercase tracking-wide text-white sm:text-xl">{st.value}</div>
+                  <div className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/65">{st.label}</div>
                 </div>
               ))}
             </div>
@@ -97,7 +98,9 @@ export default async function HomePage() {
               href={p.href}
               className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-transparent hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
-              <div className="mb-4 grid h-13 w-13 place-items-center rounded-2xl bg-brand-soft p-3 text-2xl">{p.icon}</div>
+              <div className="mb-4 grid h-13 w-13 place-items-center rounded-2xl bg-brand-soft text-brand">
+                <Icon name={pillarIcon(p.href)} className="h-6 w-6" />
+              </div>
               <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-500">{p.text}</p>
               <span className="mt-4 inline-block text-sm font-semibold text-brand">Learn more →</span>
@@ -118,8 +121,8 @@ export default async function HomePage() {
               href={`/${s.slug}`}
               className="group flex w-20 flex-col items-center gap-2 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
-              <span className="grid h-16 w-16 place-items-center rounded-full bg-white text-2xl shadow-sm ring-1 ring-slate-200 transition group-hover:bg-brand group-hover:text-white group-hover:ring-brand group-hover:shadow-md">
-                {s.icon}
+              <span className="grid h-16 w-16 place-items-center rounded-full bg-white text-brand shadow-sm ring-1 ring-slate-200 transition group-hover:bg-brand group-hover:text-white group-hover:ring-brand group-hover:shadow-md">
+                <Icon name={serviceIcon(s.slug)} className="h-7 w-7" />
               </span>
               <span className="text-center text-xs font-semibold text-slate-700 group-hover:text-brand">{s.title}</span>
             </Link>
@@ -158,7 +161,9 @@ export default async function HomePage() {
           ))}
           {/* Plan-a-trip CTA card */}
           <div className="flex flex-col justify-center gap-3.5 rounded-3xl border border-dashed border-brand/40 bg-brand-soft p-7">
-            <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white text-2xl shadow-sm">🧳</div>
+            <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white text-brand shadow-sm">
+              <Icon name="briefcase" className="h-6 w-6" />
+            </div>
             <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
             <p className="text-sm text-slate-600">{home.notSureText}</p>
             <Link href="#contact" className={`${btnPrimary} self-start`}>
@@ -197,7 +202,9 @@ export default async function HomePage() {
               className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
               <div className="mb-3.5 flex items-center gap-3">
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-xl">{s.icon}</div>
+                <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand">
+                  <Icon name={serviceIcon(s.slug)} className="h-5 w-5" />
+                </div>
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wide text-brand">{s.scope}</span>
                   <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
@@ -247,7 +254,9 @@ export default async function HomePage() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {home.why.map((w, i) => (
             <div key={i} className="rounded-2xl border border-slate-200 bg-white p-7">
-              <div className="mb-3 text-2xl">{w.icon}</div>
+              <div className="mb-3 grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand">
+                <Icon name={WHY_ICONS[i % WHY_ICONS.length]} className="h-5 w-5" />
+              </div>
               <h3 className="font-semibold text-slate-900">{w.title}</h3>
               <p className="mt-2 text-sm text-slate-500">{w.text}</p>
             </div>
@@ -280,24 +289,22 @@ export default async function HomePage() {
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{home.contactTitle}</h2>
             <p className="mt-4 text-slate-500">{home.contactIntro}</p>
             <ul className="mt-6 grid gap-3 text-sm font-medium text-slate-900">
-              <li>
-                💬{" "}
-                <a href={waHref} target="_blank" rel="noopener noreferrer" className="hover:text-brand">
-                  WhatsApp 868-723-6644
-                </a>
+              <li className="flex items-center gap-2.5">
+                <Icon name="message" className="h-4 w-4 shrink-0 text-brand" />
+                <a href={waHref} target="_blank" rel="noopener noreferrer" className="hover:text-brand">WhatsApp 868-723-6644</a>
               </li>
-              <li>
-                📞 <a href="tel:+18687236644" className="hover:text-brand">Call 868-723-6644</a>
+              <li className="flex items-center gap-2.5">
+                <Icon name="phone" className="h-4 w-4 shrink-0 text-brand" />
+                <a href="tel:+18687236644" className="hover:text-brand">Call 868-723-6644</a>
               </li>
-              <li>
-                ✉️ <a href={`mailto:${settings.generalEmail}`} className="hover:text-brand">{settings.generalEmail}</a>
+              <li className="flex items-center gap-2.5">
+                <Icon name="mail" className="h-4 w-4 shrink-0 text-brand" />
+                <a href={`mailto:${settings.generalEmail}`} className="hover:text-brand">{settings.generalEmail}</a>
               </li>
               {settings.chatbotUrl ? (
-                <li>
-                  🤖{" "}
-                  <a href={settings.chatbotUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand">
-                    Chat with us online
-                  </a>
+                <li className="flex items-center gap-2.5">
+                  <Icon name="sparkles" className="h-4 w-4 shrink-0 text-brand" />
+                  <a href={settings.chatbotUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand">Chat with us online</a>
                 </li>
               ) : null}
             </ul>
