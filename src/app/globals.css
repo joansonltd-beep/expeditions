@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 /*
-  Expeditions With Jo palette: ocean teal primary + warm coral accent on white.
-  Adapted from the clean, readable layout of joansonbjames.com. Retune here.
+  Expeditions With Jo palette: green primary, dominant, with a red/coral accent
+  used sparingly (CTAs and small highlights only). Green and red are never
+  combined on one element or as adjacent same-size blocks, for colorblind
+  readability. Retune the whole site from this single @theme block.
 */
 @theme {
-  --color-brand: #0f766e;        /* ocean teal */
-  --color-brand-dark: #115e59;
-  --color-brand-light: #14b8a6;
-  --color-brand-soft: #f0fdfa;   /* teal tint background */
-  --color-accent: #f4845f;       /* warm coral */
-  --color-accent-dark: #c2410c;
-  --color-accent-soft: #fff3ec;  /* sand */
+  --color-brand: #16a34a;        /* green-600 — primary */
+  --color-brand-dark: #15803d;   /* green-700 — hover/pressed */
+  --color-brand-light: #22c55e;  /* green-500 */
+  --color-brand-soft: #f0fdf4;   /* green-50 — soft tint background */
+  --color-accent: #e11d48;       /* rose-600 — sparing accent only */
+  --color-accent-dark: #be123c;  /* rose-700 */
+  --color-accent-soft: #fff1f2;  /* rose-50 */
   --color-whatsapp: #25d366;
 
   --font-sans: var(--font-geist-sans);
@@ -20,9 +22,9 @@
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* Keep green dominant: a single soft green wash on white, no red in the field. */
   background:
-    radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 80%, transparent), transparent 60%),
-    radial-gradient(700px 460px at -8% 108%, color-mix(in srgb, var(--color-accent-soft) 75%, transparent), transparent 58%),
+    radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 90%, transparent), transparent 60%),
     #ffffff;
   background-attachment: fixed;
 }

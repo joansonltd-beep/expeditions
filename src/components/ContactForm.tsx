@@ -16,8 +16,10 @@ const SERVICES = [
   "Something else",
 ];
 
+// Inputs keep focus:outline-none but replace it with a visible focus-visible ring
+// (plus a brand border) so keyboard focus is always clear.
 const field =
-  "w-full rounded-xl border-[1.5px] border-slate-200 bg-white px-3.5 py-3 text-[0.97rem] text-slate-900 transition focus:border-brand focus:outline-none";
+  "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 
 // Static-friendly contact form: builds a prefilled email on submit. Works on
 // any host with no backend. (A lead webhook can be wired in later if wanted.)
@@ -38,20 +40,22 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+    <form onSubmit={onSubmit} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg shadow-slate-900/5 sm:p-8">
+      <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-brand">Trip planner</p>
+      <p className="mb-6 text-xl font-bold text-slate-900">Start your enquiry</p>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-semibold text-slate-900">
           Name
-          <input required value={form.name} onChange={set("name")} className={`mt-1.5 ${field}`} placeholder="Your name" />
+          <input required autoComplete="name" value={form.name} onChange={set("name")} className={`mt-1.5 ${field}`} placeholder="Your name" />
         </label>
         <label className="block text-sm font-semibold text-slate-900">
           Email
-          <input required type="email" value={form.email} onChange={set("email")} className={`mt-1.5 ${field}`} placeholder="you@email.com" />
+          <input required type="email" autoComplete="email" value={form.email} onChange={set("email")} className={`mt-1.5 ${field}`} placeholder="you@email.com" />
         </label>
       </div>
       <label className="mt-4 block text-sm font-semibold text-slate-900">
         Phone / WhatsApp
-        <input value={form.phone} onChange={set("phone")} className={`mt-1.5 ${field}`} placeholder="Optional" />
+        <input type="tel" autoComplete="tel" value={form.phone} onChange={set("phone")} className={`mt-1.5 ${field}`} placeholder="Optional" />
       </label>
       <label className="mt-4 block text-sm font-semibold text-slate-900">
         What can we help with?

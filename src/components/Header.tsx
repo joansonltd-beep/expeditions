@@ -91,7 +91,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             Get started
           </Link>
           <button
-            className="p-2 lg:hidden"
+            className="flex h-11 w-11 items-center justify-center lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
