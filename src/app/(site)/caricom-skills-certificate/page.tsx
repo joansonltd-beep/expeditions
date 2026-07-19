@@ -96,6 +96,18 @@ export default function CsmePage() {
               <div>
                 <h3 className="font-semibold text-slate-900">{s.title}</h3>
                 <p className="mt-1 text-sm text-slate-600">{s.text}</p>
+                {s.tips?.length ? (
+                  <ul className="mt-2 space-y-1.5">
+                    {s.tips.map((t, j) => (
+                      <li key={j} className="flex gap-2 text-sm text-slate-500">
+                        <span aria-hidden="true" className="mt-0.5 shrink-0 text-brand">
+                          •
+                        </span>
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           ))}
