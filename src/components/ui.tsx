@@ -85,7 +85,7 @@ export function PageHeader({
   intro,
   crumb,
 }: {
-  icon?: string;
+  icon?: React.ReactNode;
   title: string;
   intro?: string;
   crumb: string;

@@ -19,7 +19,7 @@ const TRAVEL: NavItem[] = [
 
 const FINANCE: NavItem[] = [
   { href: "/insurance", label: "Insurance" },
-  { href: "/finance", label: "Finance" },
+  { href: "/finance", label: "Banking" },
 ];
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];

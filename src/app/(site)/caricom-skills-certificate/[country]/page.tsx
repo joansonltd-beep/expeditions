@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
+import { CaribbeanGlobe } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
 
@@ -51,7 +52,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
-        icon="🌎"
+        icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
         title={`CARICOM Skills Certificate in ${c.name}`}
         crumb={c.name}
         intro={`How to apply for a CARICOM Skills Certificate (also called the CSME Skills Certificate) in ${c.name}, with the office to apply to, who qualifies, and what you need.`}

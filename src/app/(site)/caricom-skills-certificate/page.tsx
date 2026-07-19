@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
+import { CaribbeanGlobe } from "@/components/icons";
 import CsmePicker from "@/components/CsmePicker";
 import CtaButtons from "@/components/CtaButtons";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
@@ -39,7 +40,7 @@ export default function CsmePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
-        icon="🌎"
+        icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
         title="CARICOM Skills Certificate (CSME): How to Apply"
         crumb="Guides"
         intro="A clear guide to the CARICOM Skills Certificate, also called the CSME Skills Certificate, with the steps and the exact office to apply to in each CARICOM country. Pick your country below."

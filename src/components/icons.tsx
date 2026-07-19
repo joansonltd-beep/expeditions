@@ -20,7 +20,13 @@ export type IconName =
   | "check"
   | "phone"
   | "mail"
-  | "sparkles";
+  | "sparkles"
+  | "building"
+  | "landmark"
+  | "calculator"
+  | "share"
+  | "globe"
+  | "creditCard";
 
 const PATHS: Record<IconName, ReactNode> = {
   plane: (
@@ -127,6 +133,63 @@ const PATHS: Record<IconName, ReactNode> = {
       <path d="M22 5h-4" />
     </>
   ),
+  building: (
+    <>
+      <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+      <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+      <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+      <path d="M10 6h4" />
+      <path d="M10 10h4" />
+      <path d="M10 14h4" />
+      <path d="M10 18h4" />
+    </>
+  ),
+  landmark: (
+    <>
+      <line x1="3" x2="21" y1="22" y2="22" />
+      <line x1="6" x2="6" y1="18" y2="11" />
+      <line x1="10" x2="10" y1="18" y2="11" />
+      <line x1="14" x2="14" y1="18" y2="11" />
+      <line x1="18" x2="18" y1="18" y2="11" />
+      <polygon points="12 2 20 7 4 7" />
+    </>
+  ),
+  calculator: (
+    <>
+      <rect width="16" height="20" x="4" y="2" rx="2" />
+      <line x1="8" x2="16" y1="6" y2="6" />
+      <path d="M8 10h.01" />
+      <path d="M12 10h.01" />
+      <path d="M16 10h.01" />
+      <path d="M8 14h.01" />
+      <path d="M12 14h.01" />
+      <path d="M16 14h.01" />
+      <path d="M8 18h.01" />
+      <path d="M12 18h.01" />
+    </>
+  ),
+  share: (
+    <>
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+      <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20" />
+    </>
+  ),
+  creditCard: (
+    <>
+      <rect width="20" height="14" x="2" y="5" rx="2" />
+      <line x1="2" x2="22" y1="10" y2="10" />
+    </>
+  ),
 };
 
 export function Icon({ name, className = "h-6 w-6" }: { name: IconName; className?: string }) {
@@ -178,3 +241,37 @@ export function pillarIcon(href: string): IconName {
 
 // Icons for the "why book with us" cards, in default content order.
 export const WHY_ICONS: IconName[] = ["users", "message", "tag", "heart", "pin", "check"];
+
+// Icons for the business setup service cards, in default content order.
+export const BUSINESS_SETUP_ICONS: IconName[] = ["building", "landmark", "calculator", "share", "globe", "creditCard"];
+
+// Stylised globe centred on the Caribbean: the Greater Antilles, the Lesser
+// Antilles arc down to Trinidad, and the surrounding mainland for context.
+// Inherits its colour from the surrounding text (use text-brand).
+export function CaribbeanGlobe({ className = "h-12 w-12" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" fill="none" className={className} aria-hidden="true">
+      {/* globe and graticule */}
+      <circle cx="32" cy="32" r="29" stroke="currentColor" strokeWidth="2.5" />
+      <ellipse cx="32" cy="32" rx="13" ry="29" stroke="currentColor" strokeWidth="1" opacity="0.22" />
+      <ellipse cx="32" cy="32" rx="23" ry="29" stroke="currentColor" strokeWidth="1" opacity="0.16" />
+      <path d="M4 26 Q32 20 60 26" stroke="currentColor" strokeWidth="1" opacity="0.22" />
+      <path d="M4 40 Q32 46 60 40" stroke="currentColor" strokeWidth="1" opacity="0.22" />
+      {/* mainland context: North America, Central America, South America */}
+      <path d="M10 20 Q15 9 28 7 L30 12 Q21 15 17 21 L14 26 Q11 24 10 20 Z" fill="currentColor" opacity="0.3" />
+      <path d="M12 30 Q15 28 18 31 L16 38 Q13 42 12.5 46 Q10 38 12 30 Z" fill="currentColor" opacity="0.3" />
+      <path d="M20 53 Q28 47 40 48 Q49 48.5 52 45 L54 49 Q50 56 40 58 Q28 59 20 53 Z" fill="currentColor" opacity="0.3" />
+      {/* Greater Antilles: Cuba, Jamaica, Hispaniola, Puerto Rico */}
+      <path d="M20 27 Q25 24.5 30 26 L34 28 L32.5 30.5 Q26 29 21 30 Z" fill="currentColor" />
+      <circle cx="27" cy="34" r="1.7" fill="currentColor" />
+      <path d="M36 30 L41.5 29.5 L43.5 31.5 L42 33.5 L36.5 33 Z" fill="currentColor" />
+      <circle cx="46" cy="32.5" r="1.5" fill="currentColor" />
+      {/* Lesser Antilles arc down to Trinidad */}
+      <circle cx="49" cy="35" r="1.2" fill="currentColor" />
+      <circle cx="50.3" cy="38.5" r="1.2" fill="currentColor" />
+      <circle cx="50.6" cy="42" r="1.2" fill="currentColor" />
+      <circle cx="49.6" cy="45.5" r="1.2" fill="currentColor" />
+      <circle cx="47.5" cy="48.5" r="1.6" fill="currentColor" />
+    </svg>
+  );
+}
