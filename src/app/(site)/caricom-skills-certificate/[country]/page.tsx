@@ -31,6 +31,10 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
   const c = CSME_COUNTRIES.find((x) => x.slug === country);
   if (!c) notFound();
 
+  const d = c.detail;
+  const steps = d?.steps ?? CSME_STEPS;
+  const documents = d?.documents ?? CSME_DOCUMENTS;
+  const hasCountryDocs = Boolean(d?.documents);
   const others = CSME_COUNTRIES.filter((x) => x.slug !== c.slug);
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -74,24 +78,76 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
             <span className="font-semibold text-slate-900">Office:</span> {c.authority}
           </p>
           <p className="mt-3 text-slate-600">{c.howTo}</p>
+
+          {d?.submit || d?.address || d?.phone || d?.email || d?.processingTime ? (
+            <div className="mt-4 space-y-2 rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm">
+              {d?.submit ? (
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
+                  <span className="shrink-0 font-semibold text-slate-900 sm:w-36">How to submit</span>
+                  <span className="text-slate-600">{d.submit}</span>
+                </div>
+              ) : null}
+              {d?.address ? (
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
+                  <span className="shrink-0 font-semibold text-slate-900 sm:w-36">Address</span>
+                  <span className="text-slate-600">{d.address}</span>
+                </div>
+              ) : null}
+              {d?.phone ? (
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
+                  <span className="shrink-0 font-semibold text-slate-900 sm:w-36">Phone</span>
+                  <span className="text-slate-600">{d.phone}</span>
+                </div>
+              ) : null}
+              {d?.email ? (
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
+                  <span className="shrink-0 font-semibold text-slate-900 sm:w-36">Email</span>
+                  <a href={`mailto:${d.email}`} className="text-brand hover:underline">
+                    {d.email}
+                  </a>
+                </div>
+              ) : null}
+              {d?.processingTime ? (
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
+                  <span className="shrink-0 font-semibold text-slate-900 sm:w-36">Processing time</span>
+                  <span className="text-slate-600">{d.processingTime}</span>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+
           <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
             <span className="font-semibold text-slate-900">Fee:</span>{" "}
             {c.fee ?? `Not published by ${c.authority}. Confirm the current cost when you apply.`}
           </div>
-          {c.officialUrl ? (
-            <a
-              href={c.officialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-1 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
-            >
-              Official {c.name} site →
-            </a>
-          ) : (
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            {c.officialUrl ? (
+              <a
+                href={c.officialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
+              >
+                Official {c.name} site →
+              </a>
+            ) : null}
+            {c.formUrl ? (
+              <a
+                href={c.formUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-brand px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand-soft"
+              >
+                Application form →
+              </a>
+            ) : null}
+          </div>
+          {!c.officialUrl && !c.formUrl ? (
             <p className="mt-4 text-sm text-slate-400">
               Search your government website for &ldquo;{c.authority}&rdquo; to confirm the current requirements.
             </p>
-          )}
+          ) : null}
         </div>
       </Section>
 
@@ -109,9 +165,9 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
       {/* STEPS + DOCUMENTS */}
       <Section>
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-slate-900">The steps</h2>
+          <h2 className="text-2xl font-bold text-slate-900">How to apply in {c.name}</h2>
           <div className="mt-5 grid gap-5">
-            {CSME_STEPS.map((s, i) => (
+            {steps.map((s, i) => (
               <div key={i} className="flex gap-4">
                 <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand text-sm font-bold text-white">
                   {i + 1}
@@ -124,10 +180,27 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
             ))}
           </div>
 
-          <h2 className="mt-12 text-2xl font-bold text-slate-900">Documents you usually need</h2>
-          <CheckList items={CSME_DOCUMENTS} className="mt-4" />
-          <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
-            This is general guidance and the rules change. Always confirm the current requirements with {c.authority}.
+          <h2 className="mt-12 text-2xl font-bold text-slate-900">
+            {hasCountryDocs ? `Documents required in ${c.name}` : "Documents you usually need"}
+          </h2>
+          <CheckList items={documents} className="mt-4" />
+
+          {d?.notes?.length ? (
+            <>
+              <h2 className="mt-12 text-2xl font-bold text-slate-900">Good to know</h2>
+              <ul className="mt-4 space-y-2">
+                {d.notes.map((n, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-slate-600">
+                    <span aria-hidden="true" className="mt-0.5 text-brand">•</span>
+                    <span>{n}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+
+          <div className="mt-8 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
+            This is guidance and the rules and fees change. Always confirm the current requirements with {c.authority}.
           </div>
         </div>
       </Section>
