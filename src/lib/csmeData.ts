@@ -10,6 +10,11 @@ export type CsmeCountry = {
   howTo: string;
   officialUrl?: string;
   fullFreeMovement?: boolean; // implemented full free movement on 1 Oct 2025
+  // Application fee in the country's own currency, human-readable. Omit when the
+  // country does not publish a fee (the page then tells the reader to confirm).
+  // Sourced from official/government pages; fees change, so each panel carries a
+  // "confirm" note.
+  fee?: string;
 };
 
 // The 12 approved categories of skilled CARICOM nationals (CARICOM, Aug 2024).
@@ -105,6 +110,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       "Applications are addressed to the Executive Director of the Barbados Accreditation Council, which verifies your qualification and issues the certificate.",
     officialUrl: "https://bac.gov.bb/caricom-skills-certificate/",
     fullFreeMovement: true,
+    fee: "Bds$100 (BBD) application fee, per application.",
   },
   {
     slug: "belize",
@@ -114,6 +120,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       "Apply through the Belize Immigration Department, which handles the CSME Skilled Certificate.",
     officialUrl: "https://immigration.gov.bz/other-services/csme/",
     fullFreeMovement: true,
+    fee: "BZ$225 (BZD) for a new Skills Certificate.",
   },
   {
     slug: "dominica",
@@ -138,6 +145,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     howTo:
       "Submit your documents and the applicant particulars form to the Ministry of Foreign Affairs. Note that Guyana now requires an in-person step.",
     officialUrl: "https://www.minfor.gov.gy/csme",
+    fee: "G$1,500 (GYD) application fee.",
   },
   {
     slug: "jamaica",
@@ -146,6 +154,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     howTo:
       "Apply through the Ministry of Labour and Social Security. In Jamaica the Skills Certificate is issued by the Labour Ministry.",
     officialUrl: "https://www.mlss.gov.jm/",
+    fee: "J$2,000 (JMD) application fee plus J$8,000 processing, and J$2,000 for each dependent.",
   },
   {
     slug: "montserrat",
@@ -169,6 +178,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     howTo:
       "Complete the application form and return it to the Ministry of External Affairs (CSME unit).",
     officialUrl: "https://www.govt.lc/services/csme-skills-certificate",
+    fee: "EC$200 (XCD), payable when you collect the certificate.",
   },
   {
     slug: "st-vincent-and-the-grenadines",
@@ -178,6 +188,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       "Apply through the Ministry of Foreign Affairs (CSME unit) in Kingstown.",
     officialUrl: "https://foreign.gov.vc/",
     fullFreeMovement: true,
+    fee: "EC$250 (XCD) processing fee.",
   },
   {
     slug: "suriname",
@@ -193,5 +204,6 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     howTo:
       "Apply through the Ministry of Foreign and CARICOM Affairs. Trinidad and Tobago offers an online CSME e-Application, and biometrics or in-person steps may apply.",
     officialUrl: "https://foreign.gov.tt/services/csme/",
+    fee: "Free — the Ministry charges no fee to apply for or verify the Skills Certificate.",
   },
 ];
