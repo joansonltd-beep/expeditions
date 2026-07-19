@@ -3,8 +3,6 @@ import Image from "next/image";
 import { getSiteSettings, getServices, getTestimonials, getHomeContent } from "@/lib/siteData";
 import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
-import CsmePicker from "@/components/CsmePicker";
-import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { Icon, serviceIcon, pillarIcon, WHY_ICONS } from "@/components/icons";
 
 // Presentation-only photo map (decorative), keyed by service slug. Falls back
@@ -214,23 +212,6 @@ export default async function HomePage() {
               <CheckList items={s.cardFeatures} className="mt-auto text-sm" />
             </Link>
           ))}
-        </div>
-      </Section>
-
-      {/* CARICOM SKILLS CERTIFICATE */}
-      <Section alt>
-        <SectionHead
-          eyebrow="CARICOM"
-          title="CARICOM Skills Certificate: apply in your country"
-          intro="Want to live and work in another CARICOM country? Pick where you live and see exactly where to apply for your CARICOM (CSME) Skills Certificate."
-        />
-        <div className="mx-auto max-w-3xl">
-          <CsmePicker countries={CSME_COUNTRIES} />
-          <div className="mt-6">
-            <Link href="/caricom-skills-certificate" className={`${btn} bg-brand-soft text-brand hover:bg-brand hover:text-white focus-visible:ring-brand`}>
-              Read the full CARICOM Skills Certificate guide →
-            </Link>
-          </div>
         </div>
       </Section>
 

@@ -29,6 +29,18 @@ export default async function GuidesPage() {
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5">
+          {/* CSME certificate guide — the only entry point into the country picker flow */}
+          <Link
+            href="/caricom-skills-certificate"
+            className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <h2 className="mt-1 text-xl font-semibold text-slate-900">How to apply for a CSME Certificate</h2>
+            <p className="mt-2 text-slate-600">
+              What the CARICOM (CSME) Skills Certificate is, who qualifies, and how to apply. Choose your country to get
+              the exact steps and the office to apply to.
+            </p>
+            <span className="mt-3 inline-block text-sm font-semibold text-brand">Read more →</span>
+          </Link>
           {articles.map((a) => (
             <Link
               key={a.slug}

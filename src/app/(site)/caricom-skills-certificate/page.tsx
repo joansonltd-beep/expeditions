@@ -112,7 +112,7 @@ export default function CsmePage() {
           <CheckList items={CSME_DOCUMENTS} className="mt-4" />
           <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
             This is general guidance and the rules change. Always confirm the current requirements with the official
-            office for your country, linked above.
+            office for your country, linked on your country&rsquo;s page.
           </div>
         </div>
       </Section>

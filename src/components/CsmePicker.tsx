@@ -1,81 +1,51 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { CsmeCountry } from "@/lib/csmeData";
 
-// Country picker for the CSME Skills Certificate page. Every country's panel is
-// rendered in the HTML (so search engines see it); only the selected one shows.
+// Country picker for the CSME Skills Certificate. The visitor chooses their
+// country from a dropdown, then is taken to that country's instructions page.
 export default function CsmePicker({ countries }: { countries: CsmeCountry[] }) {
-  const initial = countries.find((c) => c.slug === "trinidad-and-tobago")?.slug ?? countries[0].slug;
-  const [sel, setSel] = useState(initial);
+  const router = useRouter();
+  const [slug, setSlug] = useState("");
+
+  const go = () => {
+    if (slug) router.push(`/caricom-skills-certificate/${slug}`);
+  };
 
   return (
-    <div>
-      <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-brand">Where do you live? Pick your country</p>
-      <div className="flex flex-wrap gap-2">
-        {countries.map((c) => (
-          <button
-            key={c.slug}
-            type="button"
-            onClick={() => setSel(c.slug)}
-            aria-pressed={sel === c.slug}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-              sel === c.slug
-                ? "border-brand bg-brand text-white"
-                : "border-slate-200 bg-white text-slate-700 hover:border-brand hover:text-brand"
-            }`}
-          >
-            {c.name}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-8">
-        {countries.map((c) => (
-          <div key={c.slug} className={sel === c.slug ? "" : "hidden"}>
-            <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">CARICOM Skills Certificate in {c.name}</h3>
-
-              {c.fullFreeMovement ? (
-                <div className="mt-4 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
-                  {c.name} began <strong>full free movement</strong> on 1 October 2025. Its nationals can live and work in
-                  Barbados, Belize, Dominica and St. Vincent and the Grenadines without a Skills Certificate. You still need
-                  the certificate to live and work in other CARICOM countries.
-                </div>
-              ) : null}
-
-              <p className="mt-5 text-slate-600">
-                <span className="font-semibold text-slate-900">Where to apply:</span> {c.authority}
-              </p>
-              <p className="mt-3 text-slate-600">{c.howTo}</p>
-
-              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
-                <Link
-                  href={`/caricom-skills-certificate/${c.slug}`}
-                  className="inline-flex items-center gap-1 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark"
-                >
-                  Full steps for {c.name} →
-                </Link>
-                {c.officialUrl ? (
-                  <a
-                    href={c.officialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-brand hover:underline"
-                  >
-                    Official {c.name} site →
-                  </a>
-                ) : null}
-              </div>
-              {!c.officialUrl ? (
-                <p className="mt-3 text-sm text-slate-400">
-                  Search your government website for &ldquo;{c.authority}&rdquo; to confirm the current requirements.
-                </p>
-              ) : null}
-            </div>
-          </div>
-        ))}
+    <div className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+      <label htmlFor="csme-country" className="block text-sm font-semibold uppercase tracking-wide text-brand">
+        Choose your country
+      </label>
+      <p className="mt-1 text-sm text-slate-500">
+        Pick where you live (or where you want to work) to see the exact steps and office for that country.
+      </p>
+      <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+        <select
+          id="csme-country"
+          value={slug}
+          onChange={(e) => setSlug(e.target.value)}
+          className="w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
+        >
+          <option value="" disabled>
+            Select a country…
+          </option>
+          {countries.map((c) => (
+            <option key={c.slug} value={c.slug}>
+              {c.name}
+            </option>
+          ))}
+        </select>
+        <button
+          type="button"
+          onClick={go}
+          disabled={!slug}
+          className="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          View instructions →
+        </button>
       </div>
     </div>
   );
