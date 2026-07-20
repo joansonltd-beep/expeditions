@@ -27,12 +27,17 @@ export const structure: StructureResolver = (S) =>
         .id("insurancePage")
         .child(S.document().schemaType("insurancePage").documentId("insurancePage")),
       S.listItem()
+        .title("Business setup page")
+        .id("businessSetupPage")
+        .child(S.document().schemaType("businessSetupPage").documentId("businessSetupPage")),
+      S.listItem()
         .title("Featured stay")
         .id("stay")
         .child(S.document().schemaType("stay").documentId("stay")),
       S.divider(),
       S.documentTypeListItem("service").title("Services"),
       S.documentTypeListItem("package").title("Packages"),
+      S.documentTypeListItem("addOn").title("Finance add-ons"),
       S.documentTypeListItem("testimonial").title("Testimonials"),
       S.documentTypeListItem("post").title("Guides"),
     ]);

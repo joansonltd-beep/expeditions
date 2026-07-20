@@ -13,7 +13,7 @@ const DEFAULT_SLIDES: Slide[] = [
   { label: "Transfers", emoji: "🚗", anim: "anim-drive" },
   { label: "Cruises", emoji: "🚢", anim: "anim-sail" },
   { label: "Visas", emoji: "🛂", anim: "anim-bob" },
-  { label: "Finance", emoji: "💰", anim: "anim-coin" },
+  { label: "Banking", emoji: "💰", anim: "anim-coin" },
 ];
 
 // Animations are assigned by position so CMS-edited tiles still get motion.

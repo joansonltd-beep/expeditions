@@ -54,7 +54,7 @@ export const DEFAULT_HOME: HomeContent = {
   pillars: [
     { icon: "✈️", title: "Travel Booking", text: "Flights, stays, transfers and cruises, coordinated worldwide.", href: "/flights" },
     { icon: "🛡️", title: "Insurance", text: "We have moved. Our insurance services are now at joansonbjames.com.", href: "/insurance" },
-    { icon: "💰", title: "Finance", text: "Help with loans, credit cards and registering your business.", href: "/finance" },
+    { icon: "💰", title: "Banking", text: "Help with loans, credit cards and registering your business.", href: "/finance" },
     { icon: "🛂", title: "Travel Visas", text: "Step-by-step support with the Canadian visa process from Trinidad.", href: "/travel-visas" },
   ],
   travelEyebrow: "Travel, worldwide",
@@ -96,11 +96,11 @@ export const DEFAULT_HOME: HomeContent = {
     { icon: "💬", title: "Real support", text: "Clear updates and someone to talk to before and during your trip." },
     { icon: "💵", title: "Best available prices", text: "We look for options that fit your budget, then bundle to save you more." },
     { icon: "🧓", title: "Senior and group friendly", text: "Mobility support, accessibility needs and group travel are all welcome." },
-    { icon: "📍", title: "Local roots", text: "Based in Trinidad and Tobago, serving travelers everywhere." },
+    { icon: "📍", title: "Local roots", text: "Based in Trinidad and Tobago, serving travellers everywhere." },
     { icon: "✅", title: "Done right the first time", text: "We guide you through bookings, visas and paperwork step by step." },
   ],
-  testimonialsEyebrow: "What travelers say",
-  testimonialsTitle: "Trusted by travelers and families",
+  testimonialsEyebrow: "What travellers say",
+  testimonialsTitle: "Trusted by travellers and families",
   contactEyebrow: "Get started",
   contactTitle: "Tell us about your trip or what you need",
   contactIntro:
@@ -111,7 +111,7 @@ export const DEFAULT_HOME: HomeContent = {
     { emoji: "🚗", label: "Transfers" },
     { emoji: "🚢", label: "Cruises" },
     { emoji: "🛂", label: "Visas" },
-    { emoji: "💰", label: "Finance" },
+    { emoji: "💰", label: "Banking" },
   ],
 };
 

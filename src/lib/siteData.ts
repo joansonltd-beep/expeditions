@@ -9,6 +9,7 @@ import {
   DEFAULT_SETTINGS,
   DEFAULT_SERVICES,
   DEFAULT_PACKAGES,
+  DEFAULT_ADDONS,
   DEFAULT_STAY,
   DEFAULT_TESTIMONIALS,
   DEFAULT_ABOUT,
@@ -17,6 +18,7 @@ import {
   type Service,
   type ServiceCategory,
   type Package,
+  type AddOn,
   type Stay,
   type Testimonial,
   type AboutData,
@@ -29,12 +31,14 @@ import {
   type InsurancePage,
 } from "@/lib/homeDefaults";
 import { DEFAULT_ARTICLES, type Article } from "@/lib/articleDefaults";
+import { DEFAULT_BUSINESS_SETUP, type BusinessSetupPage } from "@/lib/businessSetupDefaults";
 
 export type {
   SiteSettings,
   Service,
   ServiceCategory,
   Package,
+  AddOn,
   Stay,
   Testimonial,
   AboutData,
@@ -42,6 +46,7 @@ export type {
   HomeContent,
   InsurancePage,
   Article,
+  BusinessSetupPage,
 };
 
 // --- GROQ ---------------------------------------------------------------
@@ -56,7 +61,8 @@ const SERVICES_QUERY = `*[_type == "service"]|order(order asc){
   "slug": slug.current, title, icon, scope, category, order,
   shortBlurb, cardFeatures, intro, body, primaryLink
 }`;
-const PACKAGES_QUERY = `*[_type == "package"]|order(order asc){ name, price, terms, features, featured, order }`;
+const PACKAGES_QUERY = `*[_type == "package"]|order(order asc){ name, priceUsd, features, featured, order }`;
+const ADDONS_QUERY = `*[_type == "addOn"]|order(order asc){ title, usdPrice, amountText, trinidadOnly, order }`;
 const STAY_QUERY = `*[_type == "stay"][0]{ name, tagline, description, tags, features }`;
 const TESTIMONIALS_QUERY = `*[_type == "testimonial"]|order(order asc){ quote, person, context }`;
 const ABOUT_QUERY = `*[_type == "aboutContent"][0]{ intro, sections }`;
@@ -72,6 +78,9 @@ const HOME_QUERY = `*[_type == "homeContent"][0]{
   contactEyebrow, contactTitle, contactIntro, gallery
 }`;
 const INSURANCE_QUERY = `*[_type == "insurancePage"][0]{ title, intro, body, bookNote, bookLabel, visitLabel }`;
+const BUSINESS_SETUP_QUERY = `*[_type == "businessSetupPage"][0]{
+  eyebrow, title, intro, services, eligibilityTitle, eligibilityIntro, ineligibleMessage
+}`;
 const ARTICLES_QUERY = `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){
   "slug": slug.current, title, excerpt, publishedAt, body
 }`;
@@ -128,6 +137,11 @@ export async function getPackages(): Promise<Package[]> {
   return res?.length ? res : DEFAULT_PACKAGES;
 }
 
+export async function getAddOns(): Promise<AddOn[]> {
+  const res = await query<AddOn[]>(ADDONS_QUERY);
+  return res?.length ? res : DEFAULT_ADDONS;
+}
+
 export async function getStay(): Promise<Stay> {
   const res = await query<Partial<Stay>>(STAY_QUERY);
   return res ? { ...DEFAULT_STAY, ...stripNulls(res) } : DEFAULT_STAY;
@@ -160,6 +174,11 @@ export async function getHomeContent(): Promise<HomeContent> {
 export async function getInsurancePage(): Promise<InsurancePage> {
   const res = await query<Partial<InsurancePage>>(INSURANCE_QUERY);
   return res ? { ...DEFAULT_INSURANCE, ...stripNulls(res) } : DEFAULT_INSURANCE;
+}
+
+export async function getBusinessSetupPage(): Promise<BusinessSetupPage> {
+  const res = await query<Partial<BusinessSetupPage>>(BUSINESS_SETUP_QUERY);
+  return res?.services?.length ? { ...DEFAULT_BUSINESS_SETUP, ...stripNulls(res) } : DEFAULT_BUSINESS_SETUP;
 }
 
 export async function getArticles(): Promise<Article[]> {

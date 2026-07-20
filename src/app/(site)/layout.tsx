@@ -16,7 +16,7 @@ const travelLinks = [
 ];
 const companyLinks = [
   { href: "/insurance", label: "Insurance" },
-  { href: "/finance", label: "Finance" },
+  { href: "/finance", label: "Banking" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];

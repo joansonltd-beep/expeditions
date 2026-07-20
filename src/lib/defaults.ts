@@ -45,8 +45,8 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   generalEmail: "info@expeditionswithjo.com",
   staysEmail: "stays@expeditionswithjo.com",
   flightsEmail: "flights@expeditionswithjo.com",
-  supportEmail: "Support@expeditionswithjo.com",
-  queriesEmail: "Queries@expeditionswithjo.com",
+  supportEmail: "support@expeditionswithjo.com",
+  queriesEmail: "queries@expeditionswithjo.com",
   facebookUrl: "https://www.facebook.com/profile.php?id=61575932890445",
   instagramUrl: "https://www.instagram.com/expeditionswithjo",
   linkedinUrl: null,
@@ -103,12 +103,12 @@ export const DEFAULT_SERVICES: Service[] = [
       {
         heading: "Our flight services include",
         bullets: [
-          "Personalized flight booking based on your needs",
+          "Personalised flight booking based on your needs",
           "Fares that ensure you get the best value",
           "Simple one-way or round-trip bookings",
           "Assistance with baggage info and special airline requests",
           "Travel itinerary planning and confirmations",
-          "Support for seniors and travelers needing extra care",
+          "Support for seniors and travellers needing extra care",
           "WhatsApp updates and guidance before and during your journey",
         ],
       },
@@ -131,7 +131,7 @@ export const DEFAULT_SERVICES: Service[] = [
       {
         paragraphs: [
           "We work with a range of options to match your comfort, location, and budget needs. Wherever you are headed, we will make sure your stay is smooth, affordable, and convenient.",
-          "For travelers visiting Trinidad, we personally offer a private Airbnb room through Expeditions With Jo (see below), available as one of several options based on your preferences, and the cheapest option available on the island.",
+          "For travellers visiting Trinidad, we personally offer a private Airbnb room through Expeditions With Jo (see below), available as one of several options based on your preferences, and the cheapest option available on the island.",
         ],
         note: "For more information, send an email with your itinerary to stays@expeditionswithjo.com or use the chat button.",
       },
@@ -149,7 +149,7 @@ export const DEFAULT_SERVICES: Service[] = [
       "Pre-booked, English-speaking drivers in over 100 cities through Welcome Pickups, plus local rides in Trinidad.",
     cardFeatures: ["Airport pickups and drop-offs", "Over 100 cities worldwide", "Door-to-door, no taxi lines"],
     intro:
-      "Traveling abroad and need a ride? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
+      "Travelling abroad and need a ride? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
     body: [
       {
         heading: "International airport transfers",
@@ -186,7 +186,7 @@ export const DEFAULT_SERVICES: Service[] = [
         bullets: [
           "Caribbean beaches by day, fine dining by night",
           "Island hopping without worrying about multiple flights or hotels",
-          "Endless onboard activities for families, couples, or solo travelers",
+          "Endless onboard activities for families, couples, or solo travellers",
         ],
       },
       {
@@ -268,14 +268,14 @@ export const DEFAULT_SERVICES: Service[] = [
   },
   {
     slug: "finance",
-    title: "Finance",
+    title: "Banking",
     icon: "💰",
     scope: "Trinidad Only",
     category: "local",
     order: 7,
     shortBlurb:
       "Guidance through loans, credit cards and business registration so it is done right the first time.",
-    cardFeatures: ["Loan and credit card applications (free)", "Business registration from TT$700", "Account opening support"],
+    cardFeatures: ["Loan and credit card applications (free)", "Business registration from US$110", "Account opening support"],
     intro:
       "If you are in Trinidad and Tobago and need help with important financial steps, we will guide you through it so you do not have to figure it all out on your own.",
     body: [
@@ -295,27 +295,19 @@ export const DEFAULT_SERVICES: Service[] = [
           "Starting a business is exciting, but the paperwork can feel like a maze. We will help you register your business name with the right offices, pull together the documents you need, and get everything ready to open your business bank account. It is about making sure the setup is done right, without the stress, so you can focus on actually running your business.",
         ],
       },
-      {
-        heading: "Add-on services",
-        bullets: [
-          "BIR File Number registration ($100)",
-          "NIS staff registration (1-10 $200, 11-100 $300, 101+ $300)",
-          "Simple logo design & social media page setup ($300 for all Meta apps, $100 per additional app)",
-          "Business plan template ($200)",
-          "Starter bookkeeping package ($200)",
-          "Website (starts at $100 USD)",
-        ],
-      },
     ],
     primaryLink: null,
   },
 ];
 
 // --- finance packages ---------------------------------------------------
+// Prices are set in USD and converted to TTD or XCD (rounded up to the
+// nearest 100) depending on the country the visitor selects. Trinidad-only
+// inclusions (LLC + BIR registration) are appended in the Professional card
+// at render time rather than stored here, since they never apply to Grenada.
 export type Package = {
   name: string;
-  price: string;
-  terms: string;
+  priceUsd: number;
   features: string[];
   featured: boolean;
   order: number;
@@ -324,34 +316,32 @@ export type Package = {
 export const DEFAULT_PACKAGES: Package[] = [
   {
     name: "Starter",
-    price: "TT$700",
-    terms: "50% upfront (TT$350), balance on completion",
+    priceUsd: 110,
     features: [
       "Business name search & reservation",
       "Registration as Sole Trader or Partnership",
       "Checklist and documents for opening a business bank account",
+      "Social media setup",
     ],
     featured: false,
     order: 1,
   },
   {
     name: "Professional",
-    price: "TT$1,500",
-    terms: "50% upfront (TT$750), balance on completion",
+    priceUsd: 250,
     features: [
       "All Starter services",
-      "Limited Liability Company registration (Articles of Incorporation, BIR registration, NIS employer number)",
       "Preparation of bank account opening documents",
       "In-person or virtual assistance at the bank",
       "Branded invoice & receipt template for your new business",
+      "Website setup",
     ],
     featured: true,
     order: 2,
   },
   {
     name: "Premium",
-    price: "TT$3,000",
-    terms: "50% upfront (TT$1,500), balance on completion",
+    priceUsd: 450,
     features: [
       "All Professional services",
       "VAT registration (if required)",
@@ -362,6 +352,28 @@ export const DEFAULT_PACKAGES: Package[] = [
     featured: false,
     order: 3,
   },
+];
+
+// --- finance add-ons ------------------------------------------------------
+// Either usdPrice (converted + rounded up to the nearest 100 in the visitor's
+// currency) or amountText (an existing figure shown as-is, just tagged with
+// TTD/XCD) is set, never both.
+export type AddOn = {
+  title: string;
+  usdPrice?: number;
+  amountText?: string;
+  trinidadOnly?: boolean;
+  order: number;
+};
+
+export const DEFAULT_ADDONS: AddOn[] = [
+  { title: "BIR File Number registration", amountText: "$100", trinidadOnly: true, order: 1 },
+  { title: "NIS staff registration", amountText: "1-10 $200, 11-100 $300, 101+ $300", order: 2 },
+  { title: "Logo design & social media page setup", amountText: "$300 for all Meta apps, $100 per additional app", order: 3 },
+  { title: "Business plan template", amountText: "$200", order: 4 },
+  { title: "Starter bookkeeping package", amountText: "$200", order: 5 },
+  { title: "Business Stamp", usdPrice: 50, order: 6 },
+  { title: "Website setup", usdPrice: 250, order: 7 },
 ];
 
 // --- featured stay ------------------------------------------------------
@@ -378,7 +390,7 @@ export const DEFAULT_STAY: Stay = {
   tagline: "Our own stay in Trinidad",
   description:
     "Owned and managed by us, A Likkle Rest by Jo offers a clean, cozy space to unwind. Located in a quiet, convenient area, it is the perfect spot to refresh, recharge, and feel at home, even if just for a night. Simple comfort. Easy booking. A likkle rest, just when you need it.",
-  tags: ["Single or double occupancy", "Private room, queen bed", "Free Wi-Fi & breakfast nook", "Quiet, secure neighborhood"],
+  tags: ["Single or double occupancy", "Private room, queen bed", "Free Wi-Fi & breakfast nook", "Quiet, secure neighbourhood"],
   features: [
     "5-minute walk to major malls, restaurants and points of interest",
     "Under 10 minutes' drive to the airport, perfect for layovers and visa appointments",
@@ -419,7 +431,7 @@ export const DEFAULT_ABOUT: AboutData = {
   sections: [
     {
       paragraphs: [
-        "Our sole mission is to make life easier for people traveling to Trinidad for Canadian visa appointments, heading abroad for short trips, or handling important financial matters right here in Trinidad and Tobago or in the wider Caribbean. We offer support you can rely on, keeping things simple and clear.",
+        "Our sole mission is to make life easier for people travelling to Trinidad for Canadian visa appointments, heading abroad for short trips, or handling important financial matters right here in Trinidad and Tobago or in the wider Caribbean. We offer support you can rely on, keeping things simple and clear.",
       ],
     },
     {
@@ -435,7 +447,7 @@ export const DEFAULT_ABOUT: AboutData = {
       heading: "Financial services (Trinidad & Tobago only)",
       bullets: [
         "Business Registration & Account Opening (Paid Service): Guidance through registering your business and getting your documents ready to open a bank account.",
-        "Loans & Credit Cards (Free Service): Help organizing and preparing applications for personal loans, car loans, mortgages, and credit cards so they are ready to submit.",
+        "Loans & Credit Cards (Free Service): Help organising and preparing applications for personal loans, car loans, mortgages, and credit cards so they are ready to submit.",
         "Insurance (Free Consultation): Free insurance consultations covering life, health, income protection, and retirement planning.",
       ],
       note: "All loan, credit card, and account applications are processed through First Citizens Bank. All insurance consultations and products are provided through Guardian Life of the Caribbean.",
@@ -498,14 +510,14 @@ export const DEFAULT_POLICIES: PoliciesData = {
     {
       heading: "Chargeback Policy",
       paragraphs: [
-        "Unauthorized disputes or chargebacks without first contacting us will be reported and challenged. Repeated or fraudulent chargebacks may result in a ban from future bookings.",
-        "If you suspect fraud on your account or need help with a payment issue, please contact us immediately at Support@expeditionswithjo.com.",
+        "Unauthorised disputes or chargebacks without first contacting us will be reported and challenged. Repeated or fraudulent chargebacks may result in a ban from future bookings.",
+        "If you suspect fraud on your account or need help with a payment issue, please contact us immediately at support@expeditionswithjo.com.",
       ],
     },
     { heading: "Data Protection Policy" },
     {
       paragraphs: [
-        "Effective Date: November 05, 2025",
+        "Effective Date: November 5, 2025",
         "At Expeditions With Jo (the \"Company,\" \"we,\" \"us,\" or \"our\"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.expeditionswithjo.com (the \"Site\"), book expeditions, make purchases, or interact with our services. By using the Site or our services, you consent to the practices described in this policy.",
         "This policy complies with applicable laws, including but not limited to the General Data Protection Regulation (GDPR) for EU residents, the California Consumer Privacy Act (CCPA) for California residents, the Gramm-Leach-Bliley Act (GLBA) for financial information handling, and relevant Trinidad and Tobago data protection regulations. We also adhere to Payment Card Industry Data Security Standards (PCI DSS) for secure payment processing to enable acceptance of Visa, Mastercard, and other major credit cards. Our payment processing is handled through Fygaro, integrated with First Citizens Bank's e-commerce gateway, which supports 3D Secure (3DS) authentication for enhanced transaction security. If you do not agree with this policy, please do not use the Site or our services.",
       ],
@@ -528,9 +540,9 @@ export const DEFAULT_POLICIES: PoliciesData = {
       bullets: [
         "Processing bookings, payments, and refunds.",
         "Communicating about your expeditions, updates, and promotions (with opt-out options).",
-        "Enhancing Site functionality and personalizing your experience.",
+        "Enhancing Site functionality and personalising your experience.",
         "Ensuring safety and compliance (e.g., sharing emergency contacts if needed during trips).",
-        "Analyzing usage to improve services and prevent fraud.",
+        "Analysing usage to improve services and prevent fraud.",
         "Complying with legal obligations, such as tax reporting or health/safety regulations for travel.",
       ],
       note: "For payment processing, we use your card information solely to complete transactions via Fygaro and First Citizens Bank's gateway. We obtain explicit consent before storing any payment details for recurring bookings or subscriptions, as required by Visa and Mastercard rules. 3D Secure may be prompted during checkout to verify your identity and reduce fraud risk.",
@@ -554,7 +566,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
         "PCI DSS Level 1 compliance through Fygaro and First Citizens Bank's payment gateway to protect cardholder data.",
         "Support for 3D Secure (3DS) authentication protocols (e.g., Verified by Visa, Mastercard SecureCode).",
         "Regular security audits, firewalls, and access controls.",
-        "Anonymization of usage data where possible.",
+        "Anonymisation of usage data where possible.",
       ],
       note: "Despite these measures, no system is completely secure. We cannot guarantee absolute security but will notify affected users and authorities of any breach as required by law (e.g., within 72 hours under GDPR).",
     },
@@ -564,7 +576,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
       bullets: [
         "Essential Cookies: For Site functionality (e.g., cart persistence).",
         "Analytics Cookies: To track usage (e.g., Google Analytics; you can opt out via tools like Google Analytics Opt-Out).",
-        "Marketing Cookies: For personalized ads (managed by partners like Facebook Pixel).",
+        "Marketing Cookies: For personalised ads (managed by partners like Facebook Pixel).",
       ],
       note: "You can manage cookies via browser settings. Disabling them may limit Site features.",
     },
@@ -577,7 +589,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
         "Do Not Sell/Share: Under CCPA, opt out of any \"sales\" (we do not sell data).",
         "GDPR Rights: Withdraw consent, object to processing, or data portability.",
       ],
-      note: "To exercise rights, email Queries@expeditionswithjo.com. We respond within 30-45 days. For CCPA, verified requests are free (up to twice yearly). We retain data only as long as needed (e.g., 7 years for financial records per IRS rules) or as required by law, then securely delete it.",
+      note: "To exercise rights, email queries@expeditionswithjo.com. We respond within 30-45 days. For CCPA, verified requests are free (up to twice yearly). We retain data only as long as needed (e.g., 7 years for financial records per IRS rules) or as required by law, then securely delete it.",
     },
     {
       heading: "7. Children's Privacy",
@@ -594,7 +606,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
     {
       heading: "9. Contact Us",
       paragraphs: ["For questions, concerns, or complaints, contact:"],
-      bullets: ["Email: Queries@expeditionswithjo.com", "Phone/WhatsApp: 868-723-6644"],
+      bullets: ["Email: queries@expeditionswithjo.com", "Phone/WhatsApp: 868-723-6644"],
       note: "If in the EU, you may also contact your local data protection authority.",
     },
   ],

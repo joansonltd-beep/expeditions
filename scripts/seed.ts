@@ -16,6 +16,7 @@ import {
   DEFAULT_SETTINGS,
   DEFAULT_SERVICES,
   DEFAULT_PACKAGES,
+  DEFAULT_ADDONS,
   DEFAULT_STAY,
   DEFAULT_TESTIMONIALS,
   DEFAULT_ABOUT,
@@ -23,6 +24,7 @@ import {
 } from "../src/lib/defaults";
 import { DEFAULT_HOME, DEFAULT_INSURANCE } from "../src/lib/homeDefaults";
 import { DEFAULT_ARTICLES } from "../src/lib/articleDefaults";
+import { DEFAULT_BUSINESS_SETUP } from "../src/lib/businessSetupDefaults";
 
 // Sanity needs a stable _key on every object inside an array.
 const keyed = <T,>(arr: T[], prefix: string) => arr.map((x, i) => ({ _key: `${prefix}-${i}`, ...x }));
@@ -61,6 +63,13 @@ async function run() {
   });
 
   tx.createIfNotExists({ _id: "insurancePage", _type: "insurancePage", ...DEFAULT_INSURANCE });
+
+  tx.createIfNotExists({
+    _id: "businessSetupPage",
+    _type: "businessSetupPage",
+    ...DEFAULT_BUSINESS_SETUP,
+    services: keyed(DEFAULT_BUSINESS_SETUP.services, "bsvc"),
+  });
 
   DEFAULT_ARTICLES.forEach((a) => {
     tx.createIfNotExists({
@@ -142,11 +151,22 @@ async function run() {
       _id: `package-${i}`,
       _type: "package",
       name: p.name,
-      price: p.price,
-      terms: p.terms,
+      priceUsd: p.priceUsd,
       features: p.features,
       featured: p.featured,
       order: p.order,
+    });
+  });
+
+  DEFAULT_ADDONS.forEach((a, i) => {
+    tx.createIfNotExists({
+      _id: `addon-${i}`,
+      _type: "addOn",
+      title: a.title,
+      usdPrice: a.usdPrice,
+      amountText: a.amountText,
+      trinidadOnly: a.trinidadOnly ?? false,
+      order: a.order,
     });
   });
 
@@ -163,9 +183,9 @@ async function run() {
 
   await tx.commit();
   console.log(
-    `Seed complete (createIfNotExists): settings, about, policies, stay, ` +
+    `Seed complete (createIfNotExists): settings, about, policies, stay, business setup, ` +
       `${DEFAULT_SERVICES.length} services, ${DEFAULT_PACKAGES.length} packages, ` +
-      `${DEFAULT_TESTIMONIALS.length} testimonials.`
+      `${DEFAULT_ADDONS.length} add-ons, ${DEFAULT_TESTIMONIALS.length} testimonials.`
   );
 }
 

@@ -17,12 +17,14 @@ import {
   DEFAULT_SETTINGS,
   DEFAULT_SERVICES,
   DEFAULT_PACKAGES,
+  DEFAULT_ADDONS,
   DEFAULT_STAY,
   DEFAULT_TESTIMONIALS,
   DEFAULT_ABOUT,
   DEFAULT_POLICIES,
 } from "../src/lib/defaults";
 import { DEFAULT_HOME, DEFAULT_INSURANCE } from "../src/lib/homeDefaults";
+import { DEFAULT_BUSINESS_SETUP } from "../src/lib/businessSetupDefaults";
 
 const keyed = <T,>(arr: T[], prefix: string) => arr.map((x, i) => ({ _key: `${prefix}-${i}`, ...x }));
 
@@ -52,6 +54,13 @@ async function run() {
   });
 
   tx.createOrReplace({ _id: "insurancePage", _type: "insurancePage", ...DEFAULT_INSURANCE });
+
+  tx.createOrReplace({
+    _id: "businessSetupPage",
+    _type: "businessSetupPage",
+    ...DEFAULT_BUSINESS_SETUP,
+    services: keyed(DEFAULT_BUSINESS_SETUP.services, "bsvc"),
+  });
 
   tx.createOrReplace({
     _id: "siteSettings",
@@ -121,11 +130,22 @@ async function run() {
       _id: `package-${i}`,
       _type: "package",
       name: p.name,
-      price: p.price,
-      terms: p.terms,
+      priceUsd: p.priceUsd,
       features: p.features,
       featured: p.featured,
       order: p.order,
+    });
+  });
+
+  DEFAULT_ADDONS.forEach((a, i) => {
+    tx.createOrReplace({
+      _id: `addon-${i}`,
+      _type: "addOn",
+      title: a.title,
+      usdPrice: a.usdPrice,
+      amountText: a.amountText,
+      trinidadOnly: a.trinidadOnly ?? false,
+      order: a.order,
     });
   });
 
@@ -134,7 +154,9 @@ async function run() {
   });
 
   await tx.commit();
-  console.log("Resync complete (createOrReplace): settings, about, policies, stay, services, packages, testimonials.");
+  console.log(
+    "Resync complete (createOrReplace): settings, about, policies, stay, business setup, services, packages, add-ons, testimonials."
+  );
 }
 
 run().catch((err) => {
