@@ -39,7 +39,7 @@ export type SiteSettings = {
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   businessName: "Expeditions With Jo",
-  tagline: "Travel, Insurance & Finance",
+  tagline: "CARICOM Relocation & Settlement",
   whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "8687236644").replace(/\D/g, ""),
   chatbotUrl: "https://chatbot-c359f6.zapier.app",
   generalEmail: "info@expeditionswithjo.com",
@@ -53,14 +53,14 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   tiktokUrl: null,
   youtubeUrl: null,
   xUrl: null,
-  heroEyebrow: "Travel, Insurance & Finance",
-  heroHeadline: "Plan your trip. Sort your finances. Travel with confidence.",
+  heroEyebrow: "Island-to-island relocation",
+  heroHeadline: "Moving to another CARICOM island? We handle the hard parts.",
   heroSubcopy:
-    "Expeditions With Jo is your one-stop service for flights, accommodation, transfers, cruises and travel visas worldwide, plus insurance and finance help across CARICOM.",
+    "Expeditions With Jo helps CARICOM nationals relocate between member states: CSME Skills Certificates, bank accounts, business setup and settling-in support, with flights and stays arranged whenever the move calls for them.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:
-    "Your one-stop service for flights, accommodation, transfers, cruises and travel visas worldwide, plus insurance and finance help in Trinidad and Tobago.",
+    "Relocation support for CARICOM nationals moving between member states: CSME Skills Certificates, banking, business setup and settling-in help, with travel arranged when you need it.",
   logoUrl: null,
 };
 
@@ -404,19 +404,19 @@ export type Testimonial = { quote: string; person: string; context: string };
 
 export const DEFAULT_TESTIMONIALS: Testimonial[] = [
   {
-    quote: "Jo handled my flights, hotel and airport pickup in one go. I just had to show up and travel.",
+    quote: "Jo walked me through my CSME Skills Certificate step by step. I knew exactly what to submit and what it would cost before I ever left home.",
     person: "Sample client",
-    context: "Family holiday",
+    context: "Moved from Grenada to Trinidad",
   },
   {
-    quote: "The free insurance consultation helped me finally understand what cover I actually needed.",
+    quote: "Bank account, business name, everything was ready when I landed. Settling in felt like a checklist, not a scramble.",
     person: "Sample client",
-    context: "Trinidad",
+    context: "New business in Trinidad",
   },
   {
-    quote: "Booking the cruise was so easy. Every detail was sorted and the updates kept me at ease.",
+    quote: "They sorted the paperwork for the move and still found us affordable flights and a place to stay while we searched for a home.",
     person: "Sample client",
-    context: "Caribbean cruise",
+    context: "Family relocation",
   },
 ];
 
