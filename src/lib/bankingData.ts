@@ -3,14 +3,15 @@
 //
 // Coverage rule: an island is listed when Republic Bank or Scotiabank has a
 // retail presence there. Where both operate (Barbados, Guyana), Republic Bank
-// is the one we point people to. Islands with neither are omitted — see
-// UNCOVERED below for who they are and why.
+// is the one we point people to. Antigua and Barbuda has neither, so it uses
+// ACB Caribbean, the largest indigenous bank on the island. Remaining members
+// with no listed bank are omitted — see UNCOVERED below.
 //
 // Researched July 2026 from the banks' own product pages. Fees, minimums and
 // document lists change, so every island page carries a "confirm with the
 // branch" note and links to the bank's own page.
 
-export type Bank = "republic" | "scotia";
+export type Bank = "republic" | "scotia" | "acb";
 
 export type BankingIsland = {
   slug: string; // matches the CSME country slugs so URLs stay consistent
@@ -54,6 +55,34 @@ export const SCOTIA_DOCUMENTS = [
   "Two references, each with a name, address, telephone number and occupation",
   "Documentation showing your original source of funds and your ongoing source of funds",
 ];
+
+export const ACB_DOCUMENTS = [
+  "Two pieces of government-issued photo identification: a passport (valid, and clearly showing both your photograph and your signature), driver's licence or voter's ID",
+  "Proof of address, dated within the last three months: a statement from a reputable bank, a statement from a recognised credit card provider, or a utility bill",
+  "Source of funds: a letter from your employer stating your position, years of service and monthly salary or weekly wage. If you are self-employed, the latest financial statements, invoices of purchases, an estimate of sales and a completed Declaration of Income form",
+  "Original source of wealth: 12 months of bank statements for accumulated savings, a solicitor's or agent's letter for a property sale or inheritance, or a pension letter",
+  "The minimum opening deposit for the account",
+];
+
+export const ACB_NONRESIDENT_DOCUMENTS = [
+  "A reference letter from a financial institution",
+  "Valid government-issued photo identification evidencing your nationality or residence, such as a passport, driver's licence or national ID",
+  "Two reference letters from two different well-known banks, addressed to ACB Caribbean. If two are not possible, ask the bank what it will accept instead",
+];
+
+// Per-bank document lists, so the pages do not branch on the bank name.
+export const BANK_DOCUMENTS: Record<Bank, string[]> = {
+  republic: REPUBLIC_DOCUMENTS,
+  scotia: SCOTIA_DOCUMENTS,
+  acb: ACB_DOCUMENTS,
+};
+
+// Extra documents for people opening before they have moved. Scotiabank does
+// not publish a separate non-resident list, so it is absent here.
+export const BANK_NONRESIDENT_DOCUMENTS: Partial<Record<Bank, string[]>> = {
+  republic: REPUBLIC_NONRESIDENT_DOCUMENTS,
+  acb: ACB_NONRESIDENT_DOCUMENTS,
+};
 
 export const BANKING_ISLANDS: BankingIsland[] = [
   {
@@ -194,6 +223,24 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     ],
   },
   {
+    slug: "antigua-and-barbuda",
+    name: "Antigua and Barbuda",
+    bank: "acb",
+    bankName: "ACB Caribbean",
+    bankUrl: "https://ag.acbonline.com",
+    accountName: "Regular Savings Account",
+    accountUrl: "https://ag.acbonline.com/personal/savings-account-2/",
+    currency: "XCD",
+    minOpening: "EC$100",
+    noElectronicAccount:
+      "ACB Caribbean does not offer a dedicated electronic-access account in Antigua. The Regular Savings Account is the everyday starting point, and it comes with a debit card, ATM access and mobile banking.",
+    notes: [
+      "Pays 2% interest. You need to keep EC$100 in the account: fall below it and a EC$10 fee applies.",
+      "Neither Republic Bank nor Scotiabank operates here. Scotiabank's old branches became Eastern Caribbean Amalgamated Bank (ECAB) in 2021, so ACB Caribbean, the island's largest indigenous bank, is where we send people.",
+      "You can start by phone on 1-268-481-4200, Monday to Friday, 8am to 4:30pm, or download the application form and take it into a branch.",
+    ],
+  },
+  {
     slug: "jamaica",
     name: "Jamaica",
     bank: "scotia",
@@ -216,11 +263,6 @@ export const BANKING_ISLANDS: BankingIsland[] = [
 // omission is explicit rather than looking like an oversight.
 export const UNCOVERED: { name: string; reason: string }[] = [
   {
-    name: "Antigua and Barbuda",
-    reason:
-      "Scotiabank sold its branches to Eastern Caribbean Amalgamated Bank (ECAB) in 2021, and Republic Bank does not operate here.",
-  },
-  {
     name: "Belize",
     reason: "Scotiabank sold its operations to Belize Bank in 2021, and Republic Bank does not operate here.",
   },
@@ -241,4 +283,5 @@ export function getIsland(slug: string): BankingIsland | undefined {
 export const BANK_LABEL: Record<Bank, string> = {
   republic: "Republic Bank",
   scotia: "Scotiabank",
+  acb: "ACB Caribbean",
 };

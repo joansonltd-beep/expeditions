@@ -7,13 +7,7 @@ import CtaButtons from "@/components/CtaButtons";
 import ContentSections from "@/components/ContentSections";
 import FinancePricing from "@/components/FinancePricing";
 import { getService, getPackages, getAddOns } from "@/lib/siteData";
-import {
-  BANKING_ISLANDS,
-  BANK_LABEL,
-  REPUBLIC_DOCUMENTS,
-  REPUBLIC_NONRESIDENT_DOCUMENTS,
-  SCOTIA_DOCUMENTS,
-} from "@/lib/bankingData";
+import { BANKING_ISLANDS, BANK_LABEL, BANK_DOCUMENTS, BANK_NONRESIDENT_DOCUMENTS } from "@/lib/bankingData";
 
 // Trinidad also carries our own local services (loans, credit cards and
 // business registration through First Citizens), which exist nowhere else.
@@ -47,7 +41,8 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
   if (!i) notFound();
 
   const isTrinidad = i.slug === TRINIDAD;
-  const documents = i.bank === "republic" ? REPUBLIC_DOCUMENTS : SCOTIA_DOCUMENTS;
+  const documents = BANK_DOCUMENTS[i.bank];
+  const nonResidentDocs = BANK_NONRESIDENT_DOCUMENTS[i.bank];
   const others = BANKING_ISLANDS.filter((x) => x.slug !== i.slug);
 
   // Trinidad-only: our First Citizens loan/credit-card/business-registration
@@ -140,14 +135,15 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
           </p>
           <CheckList items={documents} className="mt-4" />
 
-          {i.bank === "republic" ? (
+          {nonResidentDocs ? (
             <>
               <h3 className="mt-10 text-lg font-semibold text-slate-900">If you are not resident yet</h3>
               <p className="mt-2 text-slate-600">
-                Opening before you have moved, or while your status is still being sorted out? Republic Bank asks for
-                these on top of the documents above:
+                Opening before you have moved, or while your status is still being sorted out? {BANK_LABEL[i.bank]} asks
+                for these on top of the documents above
+                {i.bank === "acb" ? ", as notarised copies" : ""}:
               </p>
-              <CheckList items={REPUBLIC_NONRESIDENT_DOCUMENTS} className="mt-4" />
+              <CheckList items={nonResidentDocs} className="mt-4" />
             </>
           ) : null}
 
