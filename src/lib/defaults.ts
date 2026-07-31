@@ -270,14 +270,18 @@ export const DEFAULT_SERVICES: Service[] = [
     slug: "finance",
     title: "Banking",
     icon: "💰",
-    scope: "Trinidad Only",
+    scope: "Across CARICOM",
     category: "local",
     order: 7,
     shortBlurb:
-      "Guidance through loans, credit cards and business registration so it is done right the first time.",
-    cardFeatures: ["Loan and credit card applications (free)", "Business registration from US$110", "Account opening support"],
+      "Open a local bank account on your new island. We tell you which bank to use and exactly what to bring.",
+    cardFeatures: [
+      "Republic Bank e-Free and Scotiabank accounts",
+      "Document checklist for your island",
+      "Loans, credit cards and business registration in Trinidad",
+    ],
     intro:
-      "If you are in Trinidad and Tobago and need help with important financial steps, we will guide you through it so you do not have to figure it all out on your own.",
+      "A local bank account is the first thing you need after you move. We tell you which bank to go to on your island and exactly what to bring.",
     body: [
       {
         heading: "Loans & Credit Card Applications (Free)",
