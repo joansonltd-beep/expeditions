@@ -79,7 +79,10 @@ const HOME_QUERY = `*[_type == "homeContent"][0]{
 }`;
 const INSURANCE_QUERY = `*[_type == "insurancePage"][0]{ title, intro, body, bookNote, bookLabel, visitLabel }`;
 const BUSINESS_SETUP_QUERY = `*[_type == "businessSetupPage"][0]{
-  eyebrow, title, intro, services, eligibilityTitle, eligibilityIntro, ineligibleMessage
+  eyebrow, title, intro, services,
+  establishmentTitle, establishmentParagraphs, establishmentNote,
+  comingSoonTitle, comingSoonText,
+  eligibilityTitle, eligibilityIntro, ineligibleMessage
 }`;
 const ARTICLES_QUERY = `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){
   "slug": slug.current, title, excerpt, publishedAt, body
