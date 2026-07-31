@@ -8,26 +8,25 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string };
 
+const RELOCATE: NavItem[] = [
+  { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
+  { href: "/business-setup", label: "Business Setup" },
+  { href: "/finance", label: "Banking" },
+  { href: "/insurance", label: "Insurance" },
+  { href: "/guides", label: "Guides" },
+];
+
 const TRAVEL: NavItem[] = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
   { href: "/cruises", label: "Cruises" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
-  { href: "/guides", label: "Guides" },
-];
-
-const FINANCE: NavItem[] = [
-  { href: "/insurance", label: "Insurance" },
-  { href: "/finance", label: "Banking" },
 ];
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
-const AFTER: NavItem[] = [
-  { href: "/business-setup", label: "Business Setup" },
-  { href: "/about", label: "About" },
-];
+const AFTER: NavItem[] = [{ href: "/about", label: "About" }];
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
@@ -88,8 +87,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               {l.label}
             </Link>
           ))}
+          <Dropdown label="Relocate" items={RELOCATE} />
           <Dropdown label="Travel" items={TRAVEL} />
-          <Dropdown label="Finance" items={FINANCE} />
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} className={linkClass(l.href)}>
               {l.label}
@@ -123,7 +122,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       {open ? (
         <div className="border-t border-slate-200 bg-white px-5 py-4 lg:hidden">
           <div className="flex flex-col gap-1">
-            {[...MAIN, ...TRAVEL, ...FINANCE, ...AFTER].map((l) => (
+            {[...MAIN, ...RELOCATE, ...TRAVEL, ...AFTER].map((l) => (
               <Link
                 key={l.href}
                 href={l.href}

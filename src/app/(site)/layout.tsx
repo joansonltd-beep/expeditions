@@ -7,16 +7,18 @@ import { SiteSettingsProvider } from "@/components/SiteSettingsProvider";
 import { getSiteSettings } from "@/lib/siteData";
 import { SITE_URL } from "@/lib/siteUrl";
 
-const travelLinks = [
+const relocateLinks = [
+  { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
+  { href: "/business-setup", label: "Business Setup" },
+  { href: "/finance", label: "Banking" },
+  { href: "/insurance", label: "Insurance" },
+  { href: "/guides", label: "Guides" },
+];
+const companyLinks = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
   { href: "/transfers", label: "Transfers" },
-  { href: "/cruises", label: "Cruises" },
   { href: "/travel-visas", label: "Travel Visas" },
-];
-const companyLinks = [
-  { href: "/insurance", label: "Insurance" },
-  { href: "/finance", label: "Banking" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];
@@ -28,7 +30,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
+    "@type": ["ProfessionalService", "TravelAgency"],
     "@id": `${SITE_URL}/#business`,
     name: settings.businessName,
     description: settings.footerBlurb,
@@ -47,13 +49,13 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       "Worldwide",
     ],
     knowsAbout: [
-      "Flight booking",
-      "Hotel and accommodation booking",
-      "Airport transfers",
-      "Cruise planning",
-      "Canadian visa applications from Trinidad",
-      "Biometrics appointments in Port of Spain",
+      "CARICOM inter-island relocation",
+      "CSME Skills Certificate applications",
+      "CARICOM free movement of skilled nationals",
       "Business registration in Trinidad and Tobago",
+      "Bank account opening in Trinidad and Tobago",
+      "Flight and accommodation booking",
+      "Canadian visa applications from Trinidad",
     ],
     sameAs: [settings.facebookUrl, settings.instagramUrl].filter(Boolean),
   };
@@ -94,9 +96,9 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Travel</h4>
+              <h4 className="mb-3.5 text-sm font-semibold text-white">Relocation</h4>
               <ul className="grid gap-2.5 text-sm">
-                {travelLinks.map((l) => (
+                {relocateLinks.map((l) => (
                   <li key={l.href}>
                     <Link href={l.href} className="text-slate-400 hover:text-white">
                       {l.label}
@@ -107,7 +109,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Company</h4>
+              <h4 className="mb-3.5 text-sm font-semibold text-white">Travel &amp; Company</h4>
               <ul className="grid gap-2.5 text-sm">
                 {companyLinks.map((l) => (
                   <li key={l.href}>

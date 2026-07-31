@@ -233,10 +233,13 @@ export function serviceIcon(slug: string): IconName {
 
 // Map a home pillar (by its link) to an icon.
 export function pillarIcon(href: string): IconName {
+  if (href.includes("skills-certificate")) return "passport";
+  if (href.includes("business-setup")) return "building";
   if (href.includes("insurance")) return "shield";
   if (href.includes("finance")) return "banknote";
   if (href.includes("visa")) return "passport";
-  return "compass"; // travel booking
+  if (href.includes("guides")) return "compass";
+  return "compass";
 }
 
 // Icons for the "why book with us" cards, in default content order.
