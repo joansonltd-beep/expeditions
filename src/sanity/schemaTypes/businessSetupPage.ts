@@ -25,6 +25,21 @@ export const businessSetupPage = defineType({
         },
       ],
     }),
+    defineField({ name: "establishmentTitle", title: "Right of Establishment — heading", type: "string" }),
+    defineField({
+      name: "establishmentParagraphs",
+      title: "Right of Establishment — paragraphs",
+      type: "array",
+      of: [{ type: "text", rows: 4 }],
+    }),
+    defineField({
+      name: "establishmentNote",
+      title: "Right of Establishment — highlighted note",
+      type: "text",
+      rows: 3,
+    }),
+    defineField({ name: "comingSoonTitle", title: "Coming soon — heading", type: "string" }),
+    defineField({ name: "comingSoonText", title: "Coming soon — text", type: "text", rows: 3 }),
     defineField({ name: "eligibilityTitle", title: "Eligibility prompt — heading", type: "string" }),
     defineField({ name: "eligibilityIntro", title: "Eligibility prompt — text", type: "text", rows: 2 }),
     defineField({
