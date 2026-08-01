@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Section, PageHeader } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
-import CtaButtons from "@/components/CtaButtons";
 import BankingPicker from "@/components/BankingPicker";
 import { BANKING_ISLANDS } from "@/lib/bankingData";
 
@@ -36,20 +35,6 @@ export default function BankingHubPage() {
       <Section>
         <div className="mx-auto max-w-3xl">
           <BankingPicker islands={BANKING_ISLANDS} />
-        </div>
-      </Section>
-
-      {/* CTA */}
-      <Section alt>
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Want help getting it opened?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-500">
-            We will check your documents before you go, tell you which branch to use, and walk you through the
-            application so it is not a wasted trip.
-          </p>
-          <div className="mt-7 flex justify-center">
-            <CtaButtons message="Hi Jo, I need help opening a bank account when I move." />
-          </div>
         </div>
       </Section>
     </>
