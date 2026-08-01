@@ -84,6 +84,26 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             </div>
           ) : null}
 
+          {i.alternative ? (
+            <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-brand">The other option</h3>
+              <p className="mt-2 font-semibold text-slate-900">{i.alternative.bankName}</p>
+              <p className="mt-1 text-sm text-slate-600">
+                Ask for the {i.alternative.accountName}
+                {i.alternative.minOpening ? `, ${i.alternative.minOpening} to open` : ""}.
+              </p>
+              {i.alternative.note ? <p className="mt-2 text-sm text-slate-600">{i.alternative.note}</p> : null}
+              <a
+                href={i.alternative.accountUrl ?? i.alternative.bankUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
+              >
+                {i.alternative.bankName} details →
+              </a>
+            </div>
+          ) : null}
+
           {i.noElectronicAccount ? (
             <div className="mt-4 rounded-xl border-l-4 border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-700">
               {i.noElectronicAccount}

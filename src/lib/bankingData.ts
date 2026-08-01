@@ -11,7 +11,19 @@
 // document lists change, so every island page carries a "confirm with the
 // branch" note and links to the bank's own page.
 
-export type Bank = "republic" | "scotia" | "acb";
+export type Bank = "republic" | "scotia" | "acb" | "ncb";
+
+// A second bank worth knowing about on an island, with enough detail to act on
+// rather than just a name.
+export type BankOption = {
+  bank: Bank;
+  bankName: string;
+  bankUrl: string;
+  accountName: string;
+  accountUrl?: string;
+  minOpening?: string;
+  note?: string;
+};
 
 export type BankingIsland = {
   slug: string; // matches the CSME country slugs so URLs stay consistent
@@ -28,6 +40,7 @@ export type BankingIsland = {
   // explains what they get instead.
   noElectronicAccount?: string;
   alsoHas?: string; // the other bank present, when we had to pick
+  alternative?: BankOption; // a second bank documented in full on the island page
   notes?: string[];
 };
 
@@ -70,11 +83,20 @@ export const ACB_NONRESIDENT_DOCUMENTS = [
   "Two reference letters from two different well-known banks, addressed to ACB Caribbean. If two are not possible, ask the bank what it will accept instead",
 ];
 
+export const NCB_DOCUMENTS = [
+  "One valid photo ID: driver's licence (both sides), National ID (Elector Registration Identification Card), passport, diplomatic ID, or the National Council for Senior Citizens card. Without a driver's licence, your TRN card works",
+  "Your Taxpayer Registration Number (TRN)",
+  "Proof of address, no more than six months old: a utility bill, a current credit card or bank statement, a postmarked envelope addressed to you, or your National ID",
+  "Proof of income, no more than six months old: a letter from your employer, a payslip, or proof of salary paid into an account for the last three months. If you are self-employed, an accountant's letter stating your salary range and title, your tax return, or bank statements",
+  "Two referees, each with a name, telephone number and occupation. A referee must have been an NCB customer for at least a year and cannot be an immediate family member",
+];
+
 // Per-bank document lists, so the pages do not branch on the bank name.
 export const BANK_DOCUMENTS: Record<Bank, string[]> = {
   republic: REPUBLIC_DOCUMENTS,
   scotia: SCOTIA_DOCUMENTS,
   acb: ACB_DOCUMENTS,
+  ncb: NCB_DOCUMENTS,
 };
 
 // Extra documents for people opening before they have moved. Scotiabank does
@@ -243,18 +265,27 @@ export const BANKING_ISLANDS: BankingIsland[] = [
   {
     slug: "jamaica",
     name: "Jamaica",
-    bank: "scotia",
-    bankName: "Scotiabank Jamaica",
-    bankUrl: "https://jm.scotiabank.com",
-    accountName: "Savings or Day-To-Day account",
-    accountUrl: "https://jm.scotiabank.com/personal/chequing-and-savings/opening-a-new-account-requirements.html",
+    bank: "ncb",
+    bankName: "NCB (National Commercial Bank Jamaica)",
+    bankUrl: "https://www.jncb.com",
+    accountName: "On-The-Go Standard",
+    accountUrl: "https://www.jncb.com/personal/banking/bank-accounts",
     currency: "JMD",
-    minOpening: "J$5,000",
-    noElectronicAccount:
-      "Scotiabank Jamaica does not offer the Electronic Access Account. Its everyday Savings and Day-To-Day accounts are the equivalent starting point, and both come with Scotia OnLine and mobile banking.",
+    minOpening: "J$2,000",
+    alternative: {
+      bank: "scotia",
+      bankName: "Scotiabank Jamaica",
+      bankUrl: "https://jm.scotiabank.com",
+      accountName: "Savings or Day-To-Day account",
+      accountUrl: "https://jm.scotiabank.com/personal/chequing-and-savings/opening-a-new-account-requirements.html",
+      minOpening: "J$5,000",
+      note: "Scotiabank Jamaica does not offer the Electronic Access Account it runs elsewhere in the region, so its everyday Savings and Day-To-Day accounts are the starting point. Both come with Scotia OnLine and mobile banking. Its document list differs from NCB's, so check with the branch.",
+    },
     notes: [
-      "Local residents need a TRN (Tax Registration Number). If you have not been issued one yet, the tax ID from your current country of residence is accepted while you apply for a TRN.",
-      "You can start the application online. Expect it to take about 20 minutes and to need photos of your ID and uploads of your documents.",
+      "No monthly service charge and no minimum balance fee. You get four free NCB ATM withdrawals a month and free online bill payment.",
+      "The account is non-interest bearing, so it is for day-to-day money rather than savings. Pair it with a savings account if you want interest.",
+      "You can open it online through NCB's remote onboarding, without visiting a branch, if you have a driver's licence, National ID or passport.",
+      "You need a TRN. If you have not been issued one yet, apply for it first — it is required for any Jamaican bank account.",
     ],
   },
 ];
@@ -284,4 +315,5 @@ export const BANK_LABEL: Record<Bank, string> = {
   republic: "Republic Bank",
   scotia: "Scotiabank",
   acb: "ACB Caribbean",
+  ncb: "NCB",
 };
