@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
-import CtaButtons from "@/components/CtaButtons";
 import ContentSections from "@/components/ContentSections";
 import FinancePricing from "@/components/FinancePricing";
 import { getService, getPackages, getAddOns } from "@/lib/siteData";
@@ -68,6 +67,13 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
               ← All islands
             </Link>
           </p>
+
+          {i.keyRequirement ? (
+            <div className="mt-6 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3.5 text-sm text-slate-700">
+              <span className="block font-semibold text-slate-900">Before anything else</span>
+              <span className="mt-1 block">{i.keyRequirement}</span>
+            </div>
+          ) : null}
 
           <h2 className="mt-6 text-2xl font-bold text-slate-900">Where to go in {i.name}</h2>
           <p className="mt-3 text-slate-600">
@@ -229,20 +235,6 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
               {o.name}
             </Link>
           ))}
-        </div>
-      </Section>
-
-      {/* CTA */}
-      <Section>
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Want us to check your documents first?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-500">
-            Send us what you have and we will tell you what is missing before you make the trip to the branch in{" "}
-            {i.name}.
-          </p>
-          <div className="mt-7 flex justify-center">
-            <CtaButtons message={`Hi Jo, I want to open a bank account in ${i.name}.`} />
-          </div>
         </div>
       </Section>
     </>

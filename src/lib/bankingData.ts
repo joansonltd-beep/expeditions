@@ -41,6 +41,9 @@ export type BankingIsland = {
   noElectronicAccount?: string;
   alsoHas?: string; // the other bank present, when we had to pick
   alternative?: BankOption; // a second bank documented in full on the island page
+  // A requirement that applies to every bank on the island, not just the one we
+  // recommend. Shown up front so it is read before any bank-specific detail.
+  keyRequirement?: string;
   notes?: string[];
 };
 
@@ -279,13 +282,14 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       accountName: "Savings or Day-To-Day account",
       accountUrl: "https://jm.scotiabank.com/personal/chequing-and-savings/opening-a-new-account-requirements.html",
       minOpening: "J$5,000",
-      note: "Scotiabank Jamaica does not offer the Electronic Access Account it runs elsewhere in the region, so its everyday Savings and Day-To-Day accounts are the starting point. Both come with Scotia OnLine and mobile banking. Its document list differs from NCB's, so check with the branch.",
+      note: "Scotiabank Jamaica does not offer the Electronic Access Account it runs elsewhere in the region, so its everyday Savings and Day-To-Day accounts are the starting point. Both come with Scotia OnLine and mobile banking. The TRN requirement applies here too, and the rest of its document list differs from NCB's, so check with the branch.",
     },
+    keyRequirement:
+      "You need a Taxpayer Registration Number (TRN) to open any bank account in Jamaica, at any bank. There is no way around it and no account you can open without one, so if you do not have a TRN yet, apply for that before anything else.",
     notes: [
       "No monthly service charge and no minimum balance fee. You get four free NCB ATM withdrawals a month and free online bill payment.",
       "The account is non-interest bearing, so it is for day-to-day money rather than savings. Pair it with a savings account if you want interest.",
       "You can open it online through NCB's remote onboarding, without visiting a branch, if you have a driver's licence, National ID or passport.",
-      "You need a TRN. If you have not been issued one yet, apply for it first — it is required for any Jamaican bank account.",
     ],
   },
 ];
