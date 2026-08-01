@@ -136,8 +136,13 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     accountName: "e-Free",
     accountUrl: "https://www.republicbarbados.com/personal/e-free",
     currency: "BBD",
+    minOpening: "BDS$100",
     alsoHas: "Scotiabank",
-    notes: ["Confirm the current minimum opening deposit with the branch — Republic Barbados does not publish it online."],
+    notes: [
+      "No monthly maintenance fee. You get a free OneCard Visa Debit for 24-hour ABM and point-of-sale access, a pocket wallet to protect it, and monthly e-statements.",
+      "A driver's licence is only accepted alongside a second form of valid photo ID. A National ID card or passport works on its own.",
+      "Your address verification must be a utility bill no older than three months, and a cell phone bill will not be accepted. A bank statement also works.",
+    ],
   },
   {
     slug: "guyana",
@@ -148,8 +153,17 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     accountName: "e-Free",
     accountUrl: "https://www.republicguyana.com/personal/e-free",
     currency: "GYD",
+    minOpening: "GY$5,000",
     alsoHas: "Scotiabank",
-    notes: ["Confirm the current minimum opening deposit with the branch — Republic Guyana does not publish it online."],
+    keyRequirement:
+      "You need a TIN Certificate to open a bank account in Guyana, and that includes foreign nationals working there. Sort it out before you go to the branch.",
+    notes: [
+      "No monthly maintenance fee and no restrictions on deposits or withdrawals. ATM and point-of-sale transactions are free.",
+      "Interest is only calculated on a minimum monthly balance of G$25,000 and over, paid on the last day of the month. The current rate is 0.082%.",
+      "Daily withdrawal limits are G$700,000 in total: G$200,000 at ATMs and G$500,000 online and at point of sale.",
+      "Your proof of address must be a utility bill issued within the last eight months, which is a longer window than most of the region allows.",
+      "Foreign nationals also need a banker's reference, and conditions apply.",
+    ],
   },
   {
     slug: "grenada",
@@ -226,9 +240,12 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     bankName: "Republic Bank (Suriname) N.V.",
     bankUrl: "https://republicbanksr.com",
     accountName: "e-Free",
+    accountUrl: "https://republicbanksr.com/personal/e-free",
     currency: "SRD",
+    minOpening: "SRD 25",
     notes: [
-      "Confirm the current minimum opening deposit with the branch — Republic Suriname does not publish it online.",
+      "No monthly maintenance fee, a free OneCard for 24-hour ATM and point-of-sale access, and monthly e-statements.",
+      "If your utility bill is not in your name, bring an authorisation letter from the person it belongs to, along with a job letter or payslip.",
       "Banking here is conducted in Dutch as well as English. Ask whether your documents need a translation.",
     ],
   },
