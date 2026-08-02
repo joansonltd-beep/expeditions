@@ -34,7 +34,8 @@ export type BankingIsland = {
   accountName: string; // the basic account we point people to
   accountUrl?: string;
   currency: string;
-  minOpening?: string; // human-readable; omitted when the bank does not publish it
+  minOpening?: string; // human-readable; omitted when the bank genuinely does not publish it
+  phone?: string; // shown alongside a "confirm with the branch" fallback
   // Set when the island's basic account is NOT the bank's electronic-access
   // product (e.g. Scotiabank Jamaica, which does not offer one). The text
   // explains what they get instead.
@@ -258,10 +259,12 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     accountName: "Electronic Access Account",
     accountUrl: "https://bs.scotiabank.com/personal/chequing-and-savings/electronic-access-account.html",
     currency: "BSD",
+    phone: "242-356-1697/8/9",
     notes: [
-      "One low monthly fee covers unlimited self-service banking. You pay only when you use a teller or write a cheque.",
-      "No fee for using your ScotiaCard to shop, or for Scotia OnLine and mobile banking.",
-      "Confirm the current monthly fee against Scotiabank's rate and fee schedule before you open the account.",
+      "The monthly fee is $8.80, including the 10% VAT. That covers unlimited self-service banking and five branch or cheque transactions a month.",
+      "Beyond those five: $4.40 at a branch, $4.40 per cheque, and $2.20 per ATM withdrawal after the first two each month. Point-of-sale purchases are free.",
+      "The account pays no interest and there is no balance you need to keep to waive the fee. Statements are quarterly.",
+      "Ask what you need to deposit to open the account when you call. It is the one figure Scotiabank keeps off its published schedule.",
     ],
   },
   {
