@@ -119,7 +119,8 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
 
           <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
             <span className="font-semibold text-slate-900">Fee:</span>{" "}
-            {c.fee ?? `Not published by ${c.authority}. Confirm the current cost when you apply.`}
+            {c.fee ??
+              `Confirm with ${c.authority}${c.detail?.phone ? ` on ${c.detail.phone}` : ""}.`}
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">

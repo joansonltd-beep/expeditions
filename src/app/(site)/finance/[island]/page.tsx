@@ -124,7 +124,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             <div className="flex flex-col gap-0.5 sm:flex-row sm:gap-3">
               <span className="shrink-0 font-semibold text-slate-900 sm:w-44">Minimum to open</span>
               <span className="text-slate-600">
-                {i.minOpening ?? "Confirm with the branch."}
+                {i.minOpening ?? `Confirm with the branch${i.phone ? ` on ${i.phone}` : ""}.`}
               </span>
             </div>
           </div>

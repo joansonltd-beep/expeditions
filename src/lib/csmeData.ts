@@ -141,7 +141,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Contact the Ministry of Labour first",
-          text: "Antigua and Barbuda does not publish its requirements online, so call or visit the Ministry of Labour at Nevis Street and Friendly Alley in St. John's to get the current form, document list and fee before you gather anything.",
+          text: "Call or visit the Ministry of Labour at Nevis Street and Friendly Alley in St. John's to get the current form, document list and fee before you gather anything.",
         },
         {
           title: "Gather your documents",
@@ -164,7 +164,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       submit: "In person at the Ministry of Labour.",
       address: "Nevis Street & Friendly Alley, St. John's",
       notes: [
-        "Antigua and Barbuda does not publish a fixed fee or document checklist online. Confirm both with the Ministry of Labour before you apply.",
+        "Confirm the fee and the document checklist with the Ministry of Labour before you apply.",
       ],
     },
   },
@@ -319,7 +319,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Confirm the fee and wait",
-          text: "Dominica does not publish a fee online, so confirm the current cost when you submit. Allow several weeks for verification, then collect your certificate when notified.",
+          text: "Confirm the current cost when you submit. Allow several weeks for verification, then collect your certificate when notified.",
         },
         USE_IT_ABROAD,
       ],
@@ -329,7 +329,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       email: "cscentre@dominica.gov.dm",
       notes: [
         "The exact document checklist is inside the downloadable application form.",
-        "Dominica does not publish a fee online. Confirm the current cost with the CSME centre before you go.",
+        "Confirm the current cost with the CS Centre on +1 767 266 3000 or 266 3500, or email cscentre@dominica.gov.dm, before you go.",
       ],
     },
   },
@@ -490,7 +490,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Wait for processing and collect",
-          text: "Jamaica does not publish an official processing time, so allow several weeks and follow up with the Ministry. Amendments later cost J$2,000 and replacing a lost certificate costs J$3,000.",
+          text: "Allow several weeks and follow up with the Ministry. Amendments later cost J$2,000 and replacing a lost certificate costs J$3,000.",
         },
         USE_IT_ABROAD,
       ],
@@ -560,7 +560,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Get the form and confirm the document list",
-          text: "Collect the application form from the Ministry or request it by email. St. Kitts and Nevis does not publish its full document checklist online, so confirm it with the CSME Desk Officer. Expect the standard package: passport, birth certificate, qualification, police certificate, marriage certificate if applicable, and photos.",
+          text: "Collect form CSC-01 from the Ministry or request it by email, and confirm the document checklist with the CSME Desk Officer. Expect the standard package: passport, birth certificate, qualification, police certificate, marriage certificate if applicable, and photos.",
           tips: [
             "Police Certificates of Character are typically valid for only six months from issue.",
             "Bring actual certificates, not transcripts or letters.",
@@ -587,7 +587,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       email: "foreigntrade@gov.kn",
       notes: [
         "You must hold a CARICOM passport. Your spouse and dependants can benefit from your status.",
-        "St. Kitts and Nevis does not publish a fixed fee online. Confirm it with the Ministry.",
+        "Confirm the fee with the Ministry. The form is CSC-01, and the form and payment are submitted to the Inland Revenue Department in St. Kitts.",
       ],
     },
   },
@@ -744,7 +744,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       submit: "Free Movement of Skills unit, Ministry of Labour, Technological Development and Environment.",
       address: "Wagenwegstraat 22, Paramaribo",
       notes: [
-        "Suriname does not publish a fee online. Confirm the current cost with the Ministry.",
+        "Confirm the current cost with the Ministry.",
       ],
     },
   },
