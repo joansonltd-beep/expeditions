@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About &amp; Legal - EWJ Reader</title>
+<!-- Google Fonts: Inter & Merriweather -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1e1b17",
+                    "on-secondary-fixed-variant": "#474743",
+                    "on-primary-fixed-variant": "#862201",
+                    "primary": "#a43716",
+                    "inverse-primary": "#ffb5a0",
+                    "surface-container-high": "#efe7e0",
+                    "inverse-on-surface": "#f7efe9",
+                    "surface-bright": "#fff8f3",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-dim": "#e0d9d2",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "outline-variant": "#dfc0b7",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#a73918",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "outline": "#8b716a",
+                    "surface-variant": "#e9e1db",
+                    "surface-container": "#f4ece6",
+                    "primary-fixed": "#ffdbd1",
+                    "secondary-container": "#e5e2dd",
+                    "surface-container-highest": "#e9e1db",
+                    "on-secondary-fixed": "#1c1c19",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#c54f2c",
+                    "tertiary": "#5c5c5c",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#33302c",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "secondary": "#5f5e5b",
+                    "surface": "#fff8f3",
+                    "on-surface": "#1e1b17",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-container": "#fffcfb",
+                    "on-secondary-container": "#656461",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "background": "#fff8f3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#3b0900",
+                    "secondary-fixed": "#e5e2dd",
+                    "tertiary-container": "#757474",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#faf2ec",
+                    "on-surface-variant": "#58423c",
+                    "on-tertiary-fixed": "#1b1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "gutter": "16px",
+                    "edge-margin": "20px",
+                    "base": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "lg": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "ui-body": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "reading-body": ["Merriweather"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff8f3;
+            color: #1e1b17;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reading-column {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .glass-header {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 248, 243, 0.85);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-ui-body text-ui-body">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 glass-header flex items-center justify-between px-edge-margin h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">About &amp; Legal</h1>
+</div>
+<div class="flex items-center">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</header>
+<main class="pb-32 pt-8 px-edge-margin">
+<div class="reading-column space-y-12">
+<!-- Hero Section -->
+<section class="text-center space-y-4 py-8">
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-xl bg-surface-container-highest mb-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'opsz' 48;">auto_stories</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">EWJ Reader</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">Version 1.0.0</p>
+</section>
+<!-- Privacy Policy -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">shield</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Privacy Policy</h3>
+</div>
+<div class="bg-surface-container rounded-xl p-md border border-outline-variant/10">
+<p class="font-reading-body text-reading-body text-on-surface leading-relaxed">
+                        EWJ Document Reader does not collect, store, or transmit your files. All processing happens locally on your device.
+                    </p>
+<p class="mt-4 font-ui-body text-ui-body text-on-surface-variant">
+                        We believe that your data belongs to you. Our architecture is designed around "Privacy by Default," ensuring that your personal documents never leave the secure sandbox of your operating system.
+                    </p>
+</div>
+</section>
+<!-- Terms of Service -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Terms of Service</h3>
+</div>
+<div class="bg-surface-container rounded-xl p-md border border-outline-variant/10 space-y-6">
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface-variant mb-2">USAGE RIGHTS</h4>
+<p class="font-ui-body text-ui-body text-on-surface">
+                            EWJ Reader is provided for personal, non-commercial use. Users maintain full ownership of all content processed through the application.
+                        </p>
+</div>
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<div>
+<h4 class="font-label-sm text-label-sm text-on-surface-variant mb-2">LIMITATION OF LIABILITY</h4>
+<p class="font-ui-body text-ui-body text-on-surface italic">
+                            The software is provided "as is," without warranty of any kind, express or implied. In no event shall the authors be liable for any claim or damages.
+                        </p>
+</div>
+</div>
+</section>
+<!-- Support & Contact -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">contact_support</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Support</h3>
+</div>
+<div class="bg-surface-container-high rounded-xl p-md border border-outline-variant/30 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="space-y-1">
+<p class="font-ui-body text-ui-body text-on-surface font-semibold">Need help with EWJ Reader?</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">We typically respond within 24 hours.</p>
+</div>
+<a class="inline-flex items-center justify-center px-lg h-14 rounded-full bg-primary text-on-primary font-bold hover:opacity-90 active:scale-95 transition-all shadow-sm" href="mailto:support@ewjreader.com">
+                        Contact Support
+                    </a>
+</div>
+</section>
+<!-- Image Asset for Serene Aesthetic -->
+<section class="pt-8">
+<div class="w-full h-48 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A peaceful and minimalist still life photography composition featuring a wooden desk with a single open book, a ceramic mug of warm tea, and soft morning light filtering through a window. The scene is dominated by warm cream and terracotta tones, reflecting a focused serenity and calm reading environment. High-quality editorial style with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMYgwyNr67A8jTSKKvt4JsGTBZgeXiHfTjP82UXJKH5BCzg9sMKO0nynt4VRr9XKEjAmV8RaEzH_Y5GnabPwVOMKzH1zSLKRIj18A8gAXi-IbSKQ0woG7OyaMzo4V7G8z5WJBI7urKjqqk0gjxq6t4rcZDpDGIxuuqghq11lxfpS2g1Vjit3AaRGaPWkwmEGvozYPI8mKYysjkWX77uZjzHYP09utea9wrkVECqVjRydO7_N1_jI-n"/>
+</div>
+</section>
+<footer class="text-center py-12 space-y-2 opacity-60">
+<p class="font-label-sm text-label-sm">Built for focused reading.</p>
+<p class="font-label-sm text-label-sm">© 2024 EWJ Reader Lab.</p>
+</footer>
+</div>
+</main>
+<!-- BottomNavBar (Hidden as this is a sub-page per Relevance Check rule, but implemented for completeness of shell logic if navigated back) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface-container shadow-sm border-t border-outline-variant/10 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-label-sm text-label-sm mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-sm text-label-sm mt-1">Player</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-sm text-label-sm mt-1">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for sections
+        document.querySelectorAll('section').forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transition = 'transform 0.3s ease';
+                section.style.transform = 'translateY(-2px)';
+            });
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'translateY(0px)';
+            });
+        });
+    </script>
+</body></html>

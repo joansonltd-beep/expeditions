@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ReadAloud - Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5f5e5b",
+                    "surface-tint": "#a73918",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a0",
+                    "on-primary-container": "#fffbff",
+                    "surface-bright": "#fff8f3",
+                    "primary-container": "#c54f2c",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "outline-variant": "#dfc0b7",
+                    "primary-fixed": "#ffdbd1",
+                    "on-primary-fixed": "#3b0900",
+                    "on-error-container": "#93000a",
+                    "surface": "#fff8f3",
+                    "secondary-fixed": "#e5e2dd",
+                    "surface-container": "#f4ece6",
+                    "on-primary-fixed-variant": "#862201",
+                    "on-tertiary-container": "#fffcfb",
+                    "tertiary-container": "#757474",
+                    "on-surface": "#1e1b17",
+                    "on-secondary-fixed": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#8b716a",
+                    "surface-container-low": "#faf2ec",
+                    "on-background": "#1e1b17",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-high": "#efe7e0",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#33302c",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#474743",
+                    "background": "#fff8f3",
+                    "surface-dim": "#e0d9d2",
+                    "primary": "#a43716",
+                    "surface-variant": "#e9e1db",
+                    "secondary-container": "#e5e2dd",
+                    "on-surface-variant": "#58423c",
+                    "inverse-on-surface": "#f7efe9",
+                    "tertiary": "#5c5c5c",
+                    "on-secondary-container": "#656461",
+                    "surface-container-highest": "#e9e1db",
+                    "on-tertiary-fixed-variant": "#474747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "base": "8px",
+                    "edge-margin": "20px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "gutter": "16px",
+                    "lg": "40px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "ui-body": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "reading-body": ["Merriweather"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff8f3;
+            color: #1e1b17;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .library-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        /* Custom scrollbar for focus serenity */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #dfc0b7; border-radius: 10px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-ui-body text-ui-body selection:bg-primary-fixed selection:text-on-primary-fixed pb-32">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 z-50 bg-surface dark:bg-surface-dim flex items-center justify-between px-edge-margin h-[64px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="menu_book">menu_book</span>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight">ReadAloud</h1>
+</div>
+<button class="hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full transition-colors p-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-surface-variant" data-icon="search">search</span>
+</button>
+</header>
+<main class="max-w-4xl mx-auto px-edge-margin pt-base">
+<!-- Header & Action Section -->
+<div class="flex flex-col gap-md mb-xl">
+<div class="flex items-center justify-between mt-sm">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Your Library</h2>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-md py-sm rounded-full font-label-sm text-label-sm shadow-sm active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add File
+                </button>
+</div>
+<!-- Search Bar -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-ui-body placeholder:text-on-surface-variant/60 transition-all" placeholder="Search your documents..." type="text"/>
+</div>
+</div>
+<!-- Library List -->
+<div class="library-grid">
+<!-- Card 1: Active Progress -->
+<div class="group flex bg-surface-container-low p-4 rounded-xl items-center gap-md hover:bg-surface-container transition-all cursor-pointer shadow-[0_4px_20px_0_rgba(0,0,0,0.02)]">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden shadow-sm relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A detailed digital illustration of a weathered antique book cover titled The Art of War by Sun Tzu. The design uses deep terracotta and muted cream tones with elegant humanist serif typography. The lighting is soft and focused, creating a high-end scholarly aesthetic consistent with a modern minimalist library app." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCriN3mPCy2nNoAN08h6HckyJN8CJ6c61Puso5ajt4GPdOgap3Uk_OFGcA-5LK_92sFIO_rII6zCDi7m9CKkm4e-xJgch6dF3WXy4V9PVsrEj_eSDhADFV5g52BzTChHA3nLDVht74cVpFg5-QsgdNOaIynLUpLTAYq9SxxOC874a2zRYtIK8aBIbrOJ6uc_ZWSxpvJCQrQeZKM3Cm1k9vvQJVoQQThvdEVHJuIIREhyZfFkFx34Wsj')"></div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+<div class="h-full bg-primary" style="width: 65%"></div>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1 h-28">
+<div>
+<h3 class="font-headline-md text-ui-body font-semibold text-on-surface group-hover:text-primary transition-colors">The Art of War</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">42 pages • Sun Tzu</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface-variant">65% finished</span>
+<span class="text-primary font-bold">12m left</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700 ease-out" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<button class="p-3 text-primary-container">
+<span class="material-symbols-outlined" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="group flex bg-surface-container-low p-4 rounded-xl items-center gap-md hover:bg-surface-container transition-all cursor-pointer shadow-[0_4px_20px_0_rgba(0,0,0,0.02)]">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean professional document thumbnail for a corporate Project Brief Q3. The design is minimalist with a focused layout, featuring high-contrast typography and subtle terracotta accents. The background is a crisp white, illuminated by high-key soft lighting reflecting a productive and serene workspace environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADxdu0fGho8G7cK2VG1G_-2zPEUR7eGLZusSIMSX2CKqoVR9rUAhgmuiEx3fiP25026JqjJaXw_7Ilg4r1GQDy1xfleA7UFTxJHLs9rLmF5AA_8BB2B6fvBeMYM3lQEpkPccKmjpuqiPy8yZoX7ycgeDjfquqm_6lxImKLRzeDHlF0krfGD1kEQZhEtauwWY43T0DA4HpRL_Cmw1jIoIPyDs14uzAiAtfVntBv0gf6ZMJ5qPEhophU')"></div>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1 h-28">
+<div>
+<h3 class="font-headline-md text-ui-body font-semibold text-on-surface group-hover:text-primary transition-colors">Project Brief Q3</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">12 pages • Shared by Marketing</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-on-surface-variant">0% finished</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+<button class="p-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="group flex bg-surface-container-low p-4 rounded-xl items-center gap-md hover:bg-surface-container transition-all cursor-pointer shadow-[0_4_20px_0_rgba(0,0,0,0.02)]">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-container-highest rounded-lg overflow-hidden shadow-sm relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A soft-focus artistic thumbnail of a classic novel, Meditations by Marcus Aurelius. The visual features organic cream tones and elegant serif text with generous whitespace. The mood is peaceful and intellectual, using the brand's signature terracotta palette as a primary decorative element in the layout." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbvjGlSj7jvhXDYhGZil8AjFGlKq00lKrV7IJCkU9LNA8hYL1QCDaHsHhpDhXz0v8fOD2_nTass-oEaYUb0eTpAcISzX8RabNBqiFQufNEtoWvsGHkOMYjfJfCqD5HVUI6q771cwWLqp5zWHw2F7GlFIJfjxSCFfHNp9ZuL_GbVMovESweUM43M_cFgMWfOvp31Psoj1xy_kKp7YYte5K2iXaTjao7gmW3OCsxzQlYUwFM9yM9VxUI')"></div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-primary/20">
+<div class="h-full bg-primary" style="width: 100%"></div>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1 h-28">
+<div>
+<h3 class="font-headline-md text-ui-body font-semibold text-on-surface group-hover:text-primary transition-colors">Meditations</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">128 pages • Marcus Aurelius</p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-label-sm">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Completed
+                            </span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<button class="p-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="replay">replay</span>
+</button>
+</div>
+<!-- Empty State Suggestion / Spacer -->
+<div class="mt-lg border-2 border-dashed border-outline-variant rounded-2xl p-xl flex flex-col items-center justify-center text-center opacity-60">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant mb-sm" data-icon="upload_file">upload_file</span>
+<p class="font-label-sm text-label-sm">Drag and drop your local files here to listen anytime.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-3 bg-surface-container dark:bg-surface-container-high shadow-[0_-4px_20px_0_rgba(0,0,0,0.04)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-2xl px-5 py-1.5 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="library_books" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span class="font-label-sm text-label-sm">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-label-sm text-label-sm">Player</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<!-- Micro-interactions Script -->
+<script>
+        document.querySelectorAll('.library-grid > div').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Subtle interaction logic could go here
+            });
+            
+            card.addEventListener('click', function() {
+                // Flash interaction feedback
+                this.classList.add('scale-[0.98]');
+                setTimeout(() => this.classList.remove('scale-[0.98]'), 150);
+            });
+        });
+    </script>
+</body></html>

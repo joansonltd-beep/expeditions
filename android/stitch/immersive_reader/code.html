@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ReadAloud - Player</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5f5e5b",
+                    "surface-tint": "#a73918",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a0",
+                    "on-primary-container": "#fffbff",
+                    "surface-bright": "#fff8f3",
+                    "primary-container": "#c54f2c",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "outline-variant": "#dfc0b7",
+                    "primary-fixed": "#ffdbd1",
+                    "on-primary-fixed": "#3b0900",
+                    "on-error-container": "#93000a",
+                    "surface": "#fff8f3",
+                    "secondary-fixed": "#e5e2dd",
+                    "surface-container": "#f4ece6",
+                    "on-primary-fixed-variant": "#862201",
+                    "on-tertiary-container": "#fffcfb",
+                    "tertiary-container": "#757474",
+                    "on-surface": "#1e1b17",
+                    "on-secondary-fixed": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#8b716a",
+                    "surface-container-low": "#faf2ec",
+                    "on-background": "#1e1b17",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-low": "#faf2ec",
+                    "on-background": "#1e1b17",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-high": "#efe7e0",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#33302c",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#474743",
+                    "background": "#fff8f3",
+                    "surface-dim": "#e0d9d2",
+                    "primary": "#a43716",
+                    "surface-variant": "#e9e1db",
+                    "secondary-container": "#e5e2dd",
+                    "on-surface-variant": "#58423c",
+                    "inverse-on-surface": "#f7efe9",
+                    "tertiary": "#5c5c5c",
+                    "on-secondary-container": "#656461",
+                    "surface-container-highest": "#e9e1db",
+                    "on-tertiary-fixed-variant": "#474747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "base": "8px",
+                    "edge-margin": "20px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "gutter": "16px",
+                    "lg": "40px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "ui-body": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "reading-body": ["Merriweather"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; }
+        .active-sentence {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .scrim-bottom {
+            background: linear-gradient(to top, #fff8f3 0%, rgba(255, 248, 243, 0) 100%);
+        }
+        .waveform-bar {
+            animation: bounce 1.2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { height: 8px; }
+            50% { height: 24px; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-ui-body">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 bg-surface dark:bg-surface-dim z-50 flex items-center justify-between px-edge-margin h-[64px]">
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed active:scale-95 transition-transform p-2 hover:bg-surface-variant/50 rounded-full" data-icon="menu_book">menu_book</button>
+<div class="flex flex-col">
+<span class="font-headline-md text-[18px] leading-tight text-primary dark:text-primary-fixed tracking-tight">The Great Gatsby</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Page 12 of 300</span>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant dark:text-on-surface-variant active:scale-95 transition-transform p-2 hover:bg-surface-variant/50 rounded-full" data-icon="search">search</button>
+</header>
+<!-- Main Reading Area -->
+<main class="flex flex-col min-h-[calc(100vh-220px)] px-edge-margin pt-md pb-xl md:max-w-3xl md:mx-auto">
+<!-- Reading Content -->
+<article class="font-reading-body text-reading-body space-y-md text-on-surface">
+<p class="opacity-40">In my younger and more vulnerable years my father gave me some advice that I’ve been turning over in my mind ever since.</p>
+<p class="active-sentence bg-primary-container text-on-primary-container px-4 py-3 rounded-xl shadow-lg relative overflow-hidden group">
+<span class="relative z-10">“Whenever you feel like criticizing any one,” he told me, “just remember that all the people in this world haven’t had the advantages that you’ve had.”</span>
+<!-- Minimalist Waveform Visualizer -->
+</p><div class="absolute bottom-1 right-4 flex items-end gap-[2px] opacity-30 h-6">
+<div class="waveform-bar w-1 bg-on-primary-container rounded-full" style="animation-delay: 0.1s"></div>
+<div class="waveform-bar w-1 bg-on-primary-container rounded-full" style="animation-delay: 0.3s"></div>
+<div class="waveform-bar w-1 bg-on-primary-container rounded-full" style="animation-delay: 0.2s"></div>
+<div class="waveform-bar w-1 bg-on-primary-container rounded-full" style="animation-delay: 0.4s"></div>
+</div>
+<p></p>
+<p class="opacity-60">He didn’t say any more, but we’ve always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that.</p>
+<p class="opacity-60">In consequence, I’m inclined to reserve all judgments, a habit that has opened up many curious natures to me and also made me the victim of not a few veteran bores.</p>
+<p class="opacity-40">The abnormal mind is quick to detect and attach itself to this quality when it appears in a normal person, and so it came about that in college I was unjustly accused of being a politician.</p>
+</article>
+<!-- Floating Toggle Button -->
+<div class="fixed bottom-40 right-edge-margin z-40">
+<button class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-md py-3 rounded-full flex items-center gap-sm shadow-sm active:scale-95 transition-transform hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="article">article</span>
+                Text-only
+            </button>
+</div>
+</main>
+<!-- Playback Controls Bar -->
+<div class="fixed bottom-[72px] left-0 w-full bg-surface-container/95 backdrop-blur-md z-40 px-edge-margin pt-sm pb-md border-t border-outline-variant/10">
+<!-- Scrubber -->
+<div class="w-full mb-base">
+<div class="relative w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[40%] bg-primary"></div>
+<div class="absolute top-1/2 left-[40%] -translate-y-1/2 -translate-x-1/2 w-5 h-5 bg-primary border-4 border-surface rounded-full shadow-md cursor-pointer"></div>
+</div>
+<div class="flex justify-between mt-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>04:12</span>
+<span>-12:45</span>
+</div>
+</div>
+<!-- Buttons Row -->
+<div class="flex items-center justify-between">
+<!-- Speed Pill -->
+<button class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-4 py-1.5 rounded-full hover:bg-primary-fixed-dim transition-colors">
+                1.2x
+            </button>
+<!-- Playback Core -->
+<div class="flex items-center gap-lg">
+<button class="material-symbols-outlined text-secondary active:scale-90 transition-transform" data-icon="replay_10" style="font-size: 32px;">replay_10</button>
+<button class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all hover:brightness-110">
+<span class="material-symbols-outlined !text-[40px]" data-icon="pause" data-weight="fill" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="material-symbols-outlined text-secondary active:scale-90 transition-transform" data-icon="forward_10" style="font-size: 32px;">forward_10</button>
+</div>
+<!-- Voice Selection -->
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-variant/50 rounded-full" data-icon="spatial_audio_off">spatial_audio_off</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-3 bg-surface-container dark:bg-surface-container-high shadow-[0_-4px_20px_0_rgba(0,0,0,0.04)] rounded-t-xl">
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="font-label-sm text-label-sm">Library</span>
+</a>
+<!-- Player (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-2xl px-5 py-1.5 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-label-sm text-label-sm">Player</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for the play/pause button
+        const playBtn = document.querySelector('.bg-primary.text-on-primary');
+        let isPlaying = true;
+        
+        playBtn.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            const icon = playBtn.querySelector('.material-symbols-outlined');
+            icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+            
+            // Toggle animation of waveform
+            document.querySelectorAll('.waveform-bar').forEach(bar => {
+                bar.style.animationPlayState = isPlaying ? 'running' : 'paused';
+            });
+        });
+
+        // Toggle text opacity for immersion simulation
+        document.querySelectorAll('article p').forEach(p => {
+            if(!p.classList.contains('active-sentence')) {
+                p.addEventListener('click', () => {
+                   document.querySelector('.active-sentence').classList.remove('active-sentence', 'bg-primary-container', 'text-on-primary-container', 'px-4', 'py-3', 'rounded-xl', 'shadow-lg');
+                   p.classList.add('active-sentence', 'bg-primary-container', 'text-on-primary-container', 'px-4', 'py-3', 'rounded-xl', 'shadow-lg');
+                   p.style.opacity = '1';
+                });
+            }
+        });
+    </script>
+</body></html>

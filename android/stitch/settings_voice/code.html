@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - ReadAloud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#5f5e5b",
+                    "surface-tint": "#a73918",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a0",
+                    "on-primary-container": "#fffbff",
+                    "surface-bright": "#fff8f3",
+                    "primary-container": "#c54f2c",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "outline-variant": "#dfc0b7",
+                    "primary-fixed": "#ffdbd1",
+                    "on-primary-fixed": "#3b0900",
+                    "on-error-container": "#93000a",
+                    "surface": "#fff8f3",
+                    "secondary-fixed": "#e5e2dd",
+                    "surface-container": "#f4ece6",
+                    "on-primary-fixed-variant": "#862201",
+                    "on-tertiary-container": "#fffcfb",
+                    "tertiary-container": "#757474",
+                    "on-surface": "#1e1b17",
+                    "on-secondary-fixed": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#8b716a",
+                    "surface-container-low": "#faf2ec",
+                    "on-background": "#1e1b17",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-high": "#efe7e0",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#33302c",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed-variant": "#474743",
+                    "background": "#fff8f3",
+                    "surface-dim": "#e0d9d2",
+                    "primary": "#a43716",
+                    "surface-variant": "#e9e1db",
+                    "secondary-container": "#e5e2dd",
+                    "on-surface-variant": "#58423c",
+                    "inverse-on-surface": "#f7efe9",
+                    "tertiary": "#5c5c5c",
+                    "on-secondary-container": "#656461",
+                    "surface-container-highest": "#e9e1db",
+                    "on-tertiary-fixed-variant": "#474747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "base": "8px",
+                    "edge-margin": "20px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "gutter": "16px",
+                    "lg": "40px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "ui-body": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "reading-body": ["Merriweather"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+        .voice-card-active {
+            border: 2px solid theme('colors.primary');
+            background-color: theme('colors.primary-fixed');
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: theme('colors.surface-variant');
+            border-radius: 4px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: theme('colors.primary');
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: theme('colors.primary');
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot {
+            transform: translateX(100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full sticky top-0 bg-surface dark:bg-surface-dim z-50 flex items-center justify-between px-edge-margin h-[64px]">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed" data-icon="menu_book">menu_book</span>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed tracking-tight">ReadAloud</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center hover:bg-surface-variant/50 dark:hover:bg-surface-variant/20 rounded-full transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</button>
+</header>
+<main class="max-w-2xl mx-auto px-edge-margin mt-md space-y-lg">
+<!-- Header Section -->
+<section>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-xs">Settings</h2>
+<p class="font-ui-body text-ui-body text-on-surface-variant">Personalize your reading and audio experience.</p>
+</section>
+<!-- Voice Selection -->
+<section>
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Voice Selection</h3>
+<span class="text-primary text-label-sm font-semibold">Pro Voices Available</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Voice Option 1 (Active) -->
+<button class="voice-card-active text-left p-md rounded-xl transition-all active:scale-[0.98] flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="record_voice_over" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<div>
+<p class="font-ui-body text-ui-body font-bold text-on-primary-fixed">Oliver</p>
+<p class="text-label-sm text-on-primary-fixed-variant">British • Crisp</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Voice Option 2 -->
+<button class="bg-surface-container-low text-left p-md rounded-xl hover:bg-surface-container transition-all active:scale-[0.98] flex items-center justify-between border border-transparent">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="spatial_audio_off">spatial_audio_off</span>
+</div>
+<div>
+<p class="font-ui-body text-ui-body font-bold">Sophia</p>
+<p class="text-label-sm text-on-surface-variant">Natural • Calm</p>
+</div>
+</div>
+</button>
+<!-- Voice Option 3 -->
+<button class="bg-surface-container-low text-left p-md rounded-xl hover:bg-surface-container transition-all active:scale-[0.98] flex items-center justify-between border border-transparent">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="campaign">campaign</span>
+</div>
+<div>
+<p class="font-ui-body text-ui-body font-bold">Ava</p>
+<p class="text-label-sm text-on-surface-variant">Soft • Relaxed</p>
+</div>
+</div>
+</button>
+<!-- Voice Option 4 -->
+<button class="bg-surface-container-low text-left p-md rounded-xl hover:bg-surface-container transition-all active:scale-[0.98] flex items-center justify-between border border-transparent">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="person_play">person_play</span>
+</div>
+<div>
+<p class="font-ui-body text-ui-body font-bold">Marcus</p>
+<p class="text-label-sm text-on-surface-variant">Deep • Narrative</p>
+</div>
+</div>
+</button>
+</div>
+</section>
+<!-- Audio Controls -->
+<section class="bg-surface-container-low rounded-[24px] p-md space-y-md">
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-sm">Audio Controls</h3>
+<div class="space-y-base">
+<div class="flex justify-between items-center">
+<label class="font-ui-body font-bold text-on-surface">Playback Speed</label>
+<span class="text-primary font-bold">1.25x</span>
+</div>
+<input class="accent-primary" max="2.0" min="0.5" step="0.25" type="range" value="1.25"/>
+<div class="flex justify-between text-label-sm text-on-surface-variant pt-xs">
+<span>Slower</span>
+<span>Faster</span>
+</div>
+</div>
+<div class="space-y-base pt-md">
+<div class="flex justify-between items-center">
+<label class="font-ui-body font-bold text-on-surface">Voice Pitch</label>
+<span class="text-primary font-bold">Neutral</span>
+</div>
+<input class="accent-primary" max="1.5" min="0.5" step="0.1" type="range" value="1.0"/>
+<div class="flex justify-between text-label-sm text-on-surface-variant pt-xs">
+<span>Lower</span>
+<span>Higher</span>
+</div>
+</div>
+</section>
+<!-- Reading Experience & Utilities -->
+<section class="space-y-md">
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant px-xs">Experience &amp; Utilities</h3>
+<div class="divide-y divide-surface-variant/30 bg-surface-container-lowest rounded-xl border border-surface-variant/20 overflow-hidden">
+<!-- Toggle: Word Highlighting -->
+<div class="flex items-center justify-between p-md h-[72px]">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="ink_highlighter">ink_highlighter</span>
+<span class="font-ui-body text-on-surface">Word Highlighting</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-variant right-6 checked:right-0 transition-all" id="highlight" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant/40 cursor-pointer transition-colors" for="highlight"></label>
+</div>
+</div>
+<!-- Toggle: Auto-scroll -->
+<div class="flex items-center justify-between p-md h-[72px]">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="swap_vert">swap_vert</span>
+<span class="font-ui-body text-on-surface">Auto-scroll</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-variant right-6 checked:right-0 transition-all" id="autoscroll" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant/40 cursor-pointer transition-colors" for="autoscroll"></label>
+</div>
+</div>
+<!-- Sleep Timer -->
+<button class="flex items-center justify-between p-md h-[72px] w-full hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="bedtime">bedtime</span>
+<span class="font-ui-body text-on-surface">Sleep Timer</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-ui-body text-on-surface-variant">30 Minutes</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</button>
+<!-- Theme Picker -->
+<button class="flex items-center justify-between p-md h-[72px] w-full hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="palette">palette</span>
+<span class="font-ui-body text-on-surface">Appearance</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-ui-body text-on-surface-variant">Light</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Danger Zone / Logout -->
+<section class="pt-base">
+<button class="w-full flex items-center justify-center gap-xs p-md text-error font-bold border border-error/20 rounded-xl active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout from ReadAloud
+            </button>
+<p class="text-center text-label-sm text-on-surface-variant mt-md">Version 2.4.0 (Build 892)</p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-3 bg-surface-container dark:bg-surface-container-high shadow-[0_-4px_20px_0_rgba(0,0,0,0.04)] rounded-t-xl">
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="font-label-sm text-label-sm">Library</span>
+</a>
+<!-- Player -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-5 py-1.5 hover:text-primary dark:hover:text-primary-fixed active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-label-sm text-label-sm">Player</span>
+</a>
+<!-- Settings (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-2xl px-5 py-1.5 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple slider value display update logic
+        const speedInput = document.querySelector('input[type="range"]:nth-of-type(1)');
+        const speedDisplay = document.querySelector('.text-primary.font-bold');
+
+        speedInput.addEventListener('input', (e) => {
+            speedDisplay.textContent = e.target.value + 'x';
+        });
+
+        // Micro-interaction for voice card selection
+        const voiceCards = document.querySelectorAll('.grid button');
+        voiceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                voiceCards.forEach(c => {
+                    c.classList.remove('voice-card-active');
+                    c.classList.add('bg-surface-container-low');
+                    const check = c.querySelector('[data-icon="check_circle"]');
+                    if(check) check.remove();
+                });
+                card.classList.remove('bg-surface-container-low');
+                card.classList.add('voice-card-active');
+                
+                const checkIcon = document.createElement('span');
+                checkIcon.className = "material-symbols-outlined text-primary";
+                checkIcon.setAttribute('data-icon', 'check_circle');
+                checkIcon.style.fontVariationSettings = "'FILL' 1";
+                checkIcon.innerText = "check_circle";
+                card.appendChild(checkIcon);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EWJ Reader - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1e1b17",
+                    "on-secondary-fixed-variant": "#474743",
+                    "on-primary-fixed-variant": "#862201",
+                    "primary": "#a43716",
+                    "inverse-primary": "#ffb5a0",
+                    "surface-container-high": "#efe7e0",
+                    "inverse-on-surface": "#f7efe9",
+                    "surface-bright": "#fff8f3",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-dim": "#e0d9d2",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "outline-variant": "#dfc0b7",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#a73918",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "outline": "#8b716a",
+                    "surface-variant": "#e9e1db",
+                    "surface-container": "#f4ece6",
+                    "primary-fixed": "#ffdbd1",
+                    "secondary-container": "#e5e2dd",
+                    "surface-container-highest": "#e9e1db",
+                    "on-secondary-fixed": "#1c1c19",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#c54f2c",
+                    "tertiary": "#5c5c5c",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#33302c",
+                    "secondary-fixed-dim": "#c9c6c2",
+                    "secondary": "#5f5e5b",
+                    "surface": "#fff8f3",
+                    "on-surface": "#1e1b17",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-container": "#fffcfb",
+                    "on-secondary-container": "#656461",
+                    "error": "#ba1a1a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "background": "#fff8f3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#3b0900",
+                    "secondary-fixed": "#e5e2dd",
+                    "tertiary-container": "#757474",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#faf2ec",
+                    "on-surface-variant": "#58423c",
+                    "on-tertiary-fixed": "#1b1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "gutter": "16px",
+                    "edge-margin": "20px",
+                    "base": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "lg": "40px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "ui-body": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "reading-body": ["Merriweather"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                    "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f3;
+            color: #1e1b17;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fluid-inset {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-ui-body text-ui-body flex flex-col min-h-screen">
+<!-- Top Navigation Anchor (Suppressing Global Nav for Onboarding as per instructions) -->
+<header class="w-full top-0 sticky flex items-center justify-between px-edge-margin h-16 bg-surface z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+<span class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">EWJ Reader</span>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-edge-margin py-lg">
+<div class="fluid-inset w-full space-y-xl fade-in">
+<!-- Hero Section: Logo & Brand -->
+<div class="flex flex-col items-center text-center space-y-md">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden shadow-sm bg-surface-container-high flex items-center justify-center p-4">
+<img alt="EWJ Document Reader Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArXb7x50GbfIPQx25rJVOTAUNes7_BI_m0S2Rpo6qMf7u0n6Xs4kx__zXAN8-kkQayneshszyVImUk-hrOkm3w0I68le7gKK6230mKVyGiSmjkOMziP7dpqAwO2-AxhExIIVJwIpl-6qne48PahL_umnXjMVdpBdNIaxBFGj1tJxqI-o4P4lfMW6B8tGlHonYBi4OK0HBfFRPUZ6MViYK_HhNmT7Ic_pRylJpr7dF5nDm6d57ACnPq"/>
+</div>
+<div class="space-y-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">
+                        Read your files, your way.
+                    </h1>
+<p class="text-on-surface-variant font-ui-body max-w-sm mx-auto">
+                        Experience focused reading with total privacy and local storage security.
+                    </p>
+</div>
+</div>
+<!-- Permission Value Propositions -->
+<div class="bg-surface-container-low rounded-xl p-md space-y-gutter border border-outline-variant/30">
+<div class="flex items-start gap-gutter">
+<div class="flex-shrink-0 bg-primary-container rounded-full p-2 text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Library Management</h3>
+<p class="text-on-surface-variant mt-1">Access local PDFs directly from your device storage.</p>
+</div>
+</div>
+<div class="flex items-start gap-gutter">
+<div class="flex-shrink-0 bg-primary-container rounded-full p-2 text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Privacy First</h3>
+<p class="text-on-surface-variant mt-1">100% Offline & Private environment for your documents.</p>
+</div>
+</div>
+<div class="flex items-start gap-gutter">
+<div class="flex-shrink-0 bg-primary-container rounded-full p-2 text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">cloud_off</span>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Data Security</h3>
+<p class="text-on-surface-variant mt-1">No data leaves your device. Ever.</p>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col items-center space-y-md w-full pt-gutter">
+<button class="w-full h-14 bg-primary text-on-primary rounded-full font-label-sm flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all shadow-md" onclick="handleGrantAccess()">
+                    Grant Access
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<a class="text-primary font-label-sm hover:underline underline-offset-4 decoration-2 transition-all" href="#">
+                    Learn More about Permissions
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer Identity (Minimal) -->
+<footer class="py-lg text-center opacity-50 px-edge-margin">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Version 2.4.0 • Built for Focused Serenity</p>
+</footer>
+<!-- Simple Script for interaction feedback -->
+<script>
+        function handleGrantAccess() {
+            const btn = event.currentTarget;
+            const originalContent = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Syncing Storage...
+            `;
+            
+            // Artificial delay to simulate OS permission prompt
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Permission Granted';
+                btn.classList.replace('bg-primary', 'bg-green-700');
+                
+                setTimeout(() => {
+                    // In a real app, route to the next screen
+                    console.log('Permission flow complete');
+                    window.location.reload(); // Placeholder action
+                }, 1000);
+            }, 1500);
+        }
+
+        // Micro-interaction: logo tilt on hover
+        document.querySelector('.w-32').addEventListener('mousemove', (e) => {
+            const el = e.currentTarget;
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            el.style.transform = `perspective(500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            el.style.transition = 'none';
+        });
+
+        document.querySelector('.w-32').addEventListener('mouseleave', (e) => {
+            const el = e.currentTarget;
+            el.style.transform = 'perspective(500px) rotateX(0) rotateY(0)';
+            el.style.transition = 'transform 0.5s ease-out';
+        });
+    </script>
+</body></html>

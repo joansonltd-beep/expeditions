@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Import Document - ReadAloud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#5f5e5b",
+                        "surface-tint": "#a73918",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#ffb5a0",
+                        "on-primary-container": "#fffbff",
+                        "surface-bright": "#fff8f3",
+                        "primary-container": "#c54f2c",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "outline-variant": "#dfc0b7",
+                        "primary-fixed": "#ffdbd1",
+                        "on-primary-fixed": "#3b0900",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f3",
+                        "secondary-fixed": "#e5e2dd",
+                        "surface-container": "#f4ece6",
+                        "on-primary-fixed-variant": "#862201",
+                        "on-tertiary-container": "#fffcfb",
+                        "tertiary-container": "#757474",
+                        "on-surface": "#1e1b17",
+                        "on-secondary-fixed": "#1c1c19",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "outline": "#8b716a",
+                        "surface-container-low": "#faf2ec",
+                        "on-background": "#1e1b17",
+                        "tertiary-fixed": "#e4e2e1",
+                        "surface-container-high": "#efe7e0",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#33302c",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474743",
+                        "background": "#fff8f3",
+                        "surface-dim": "#e0d9d2",
+                        "primary": "#a43716",
+                        "surface-variant": "#e9e1db",
+                        "secondary-container": "#e5e2dd",
+                        "on-surface-variant": "#58423c",
+                        "inverse-on-surface": "#f7efe9",
+                        "tertiary": "#5c5c5c",
+                        "on-secondary-container": "#656461",
+                        "surface-container-highest": "#e9e1db",
+                        "on-tertiary-fixed-variant": "#474747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "base": "8px",
+                        "edge-margin": "20px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "gutter": "16px",
+                        "lg": "40px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "ui-body": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "reading-body": ["Merriweather"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "ui-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "34px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "reading-body": ["20px", {"lineHeight": "36px", "fontWeight": "400"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff8f3;
+            color: #1e1b17;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .import-card-shadow {
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.04);
+        }
+        .active-scale:active {
+            transform: scale(0.96);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar Shell -->
+<header class="w-full sticky top-0 bg-surface z-40 flex items-center justify-between px-edge-margin h-[64px]">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 hover:bg-surface-variant/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Import Document</h1>
+</div>
+<div class="flex items-center">
+<button class="flex items-center justify-center w-10 h-10 hover:bg-surface-variant/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-edge-margin py-8 md:max-w-2xl md:mx-auto w-full">
+<div class="mb-8">
+<p class="font-ui-body text-on-surface-variant text-lg">Select a source to add new reading material to your library.</p>
+</div>
+<!-- Bento Grid Layout for Import Options -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<!-- Device Files -->
+<button class="flex flex-col items-start p-md bg-surface-container-low rounded-xl import-card-shadow border border-outline-variant/10 hover:border-primary/30 transition-all group active-scale text-left">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-4 text-on-primary-container shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" data-icon="folder">folder</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Device Files</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">PDF, EPUB, TXT, or Word docs from your storage</p>
+</button>
+<!-- Google Drive -->
+<button class="flex flex-col items-start p-md bg-surface-container-low rounded-xl import-card-shadow border border-outline-variant/10 hover:border-primary/30 transition-all group active-scale text-left">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" data-icon="cloud">cloud</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Google Drive</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Import directly from your Google workspace</p>
+</button>
+<!-- Dropbox -->
+<button class="flex flex-col items-start p-md bg-surface-container-low rounded-xl import-card-shadow border border-outline-variant/10 hover:border-primary/30 transition-all group active-scale text-left">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" data-icon="cloud_queue">cloud_queue</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Dropbox</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Sync files from your Dropbox account</p>
+</button>
+<!-- Web URL -->
+<button class="flex flex-col items-start p-md bg-surface-container-low rounded-xl import-card-shadow border border-outline-variant/10 hover:border-primary/30 transition-all group active-scale text-left">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]" data-icon="link">link</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Web URL</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Paste a link to an article or webpage</p>
+</button>
+</div>
+<!-- Visual Decorative Area -->
+<div class="mt-12 p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col items-center text-center">
+<div class="relative w-full h-48 overflow-hidden rounded-xl mb-6 shadow-sm">
+<img class="w-full h-full object-cover opacity-80" data-alt="A peaceful and serene digital workspace with a tablet displaying a clean document, surrounded by organic textures of warm wood, soft linen, and a gentle terracotta palette. The lighting is soft and natural, emphasizing a minimalist and humanist focus on deep work and literacy. High-end modern photography style with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZxZuQ0zf5Ljw7ZJ6LF6V4I0u9gFkDhXw1J4SdZzcG7SSjZohkazjDsQ-lzSp9QUuy8blcuEuzChBRCNurQsC8BTJN9v3GtSiWZsymKgKZ7hvYQmP64A0lroJeye7PnFGVEKyTyNZyAIsggIt-6StYtNUzlEQ4x23XIJq6eLirqz-fvPr_DuY1w1rPyHjhs53wxFg04VKdfV9NtNm6ZHsb2i2eK23fPiRKh2L9Wxvo4Op_7tDiFIbE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<h4 class="font-headline-md text-on-surface mb-2">Transform any text</h4>
+<p class="font-ui-body text-on-surface-variant max-w-sm">ReadAloud converts your documents into high-quality audio for focused, hands-free consumption.</p>
+</div>
+<!-- Spacer for Bottom Nav -->
+<div class="h-32"></div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-3 bg-surface-container shadow-[0_-4px_20px_0_rgba(0,0,0,0.04)] rounded-t-xl">
+<!-- Library (Active because we are in the flow of adding to Library) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-5 py-1.5 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="library_books" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span class="font-label-sm text-label-sm mt-0.5">Library</span>
+</a>
+<!-- Player -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1.5 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+<span class="font-label-sm text-label-sm mt-0.5">Player</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1.5 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm mt-0.5">Settings</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('click', (e) => {
+                const ripple = document.createElement('div');
+                ripple.className = 'absolute bg-white/20 rounded-full w-2 h-2 animate-ping pointer-events-none';
+                ripple.style.left = `${e.clientX}px`;
+                ripple.style.top = `${e.clientY}px`;
+                document.body.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+    </script>
+</body></html>
