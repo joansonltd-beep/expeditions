@@ -4,9 +4,17 @@ import { getService } from "@/lib/siteData";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Cruises",
+  title: "Caribbean Cruises",
   description:
     "Plan and book the perfect Caribbean or worldwide cruise with Expeditions With Jo. Honest advice on cruise lines and itineraries, first-time cruiser guidance, and full support before, during and after your trip.",
+  keywords: [
+    "Caribbean cruises",
+    "book a cruise from Trinidad",
+    "Caribbean travel agent",
+    "Caribbean cruise packages",
+    "first time cruise advice",
+  ],
+  alternates: { canonical: "/cruises" },
 };
 
 export default async function CruisesPage() {

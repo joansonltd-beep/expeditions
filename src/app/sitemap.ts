@@ -7,14 +7,15 @@ import { BANKING_ISLANDS } from "@/lib/bankingData";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
+    "/caricom-skills-certificate",
+    "/business-setup",
+    "/finance",
+    "/guides",
     "/flights",
     "/accommodations",
     "/cruises",
     "/travel-visas",
     "/insurance",
-    "/finance",
-    "/guides",
-    "/caricom-skills-certificate",
     "/about",
     "/policies",
   ];
@@ -22,11 +23,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const guideRoutes = articles.map((a) => `/guides/${a.slug}`);
   const csmeRoutes = CSME_COUNTRIES.map((c) => `/caricom-skills-certificate/${c.slug}`);
   const bankingRoutes = BANKING_ISLANDS.map((i) => `/finance/${i.slug}`);
+
+  // Tiered priorities: the CSME guide is the site's main search entry point,
+  // so it and its country pages rank above the supporting travel pages.
+  const priorityFor = (path: string) => {
+    if (path === "") return 1;
+    if (path === "/caricom-skills-certificate") return 0.9;
+    if (path.startsWith("/caricom-skills-certificate/")) return 0.8;
+    if (path === "/business-setup" || path === "/finance" || path === "/guides") return 0.8;
+    if (path.startsWith("/guides/") || path.startsWith("/finance/")) return 0.7;
+    if (path === "/about" || path === "/policies" || path === "/insurance") return 0.4;
+    return 0.6;
+  };
+
   const now = new Date();
   return [...routes, ...guideRoutes, ...csmeRoutes, ...bankingRoutes].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: path === "" ? 1 : 0.7,
+    priority: priorityFor(path),
   }));
 }

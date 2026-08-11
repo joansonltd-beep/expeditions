@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Insurance",
   description:
     "Our insurance services have moved to joansonbjames.com, in partnership with Guardian Life of the Caribbean.",
+  alternates: { canonical: "/insurance" },
 };
 
 const SITE = "https://www.joansonbjames.com";

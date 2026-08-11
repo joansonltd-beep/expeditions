@@ -16,12 +16,17 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   if (!c) return { title: "CARICOM Skills Certificate" };
   return {
     title: `CARICOM Skills Certificate in ${c.name} (CSME)`,
-    description: `How to apply for a CARICOM Skills Certificate (CSME) in ${c.name}: where to apply (${c.authority}), who qualifies, the documents, and the steps.`,
+    description: `How to apply for a CARICOM Skills Certificate (CSME) in ${c.name} so you can live and work anywhere in CARICOM: where to apply (${c.authority}), who qualifies, the documents, the fee and the steps.`,
     keywords: [
       `CARICOM skills certificate ${c.name}`,
       `CARICOM skill certificate ${c.name}`,
       `CSME skills certificate ${c.name}`,
       `how to apply CARICOM skills certificate ${c.name}`,
+      `work in ${c.name}`,
+      `jobs in ${c.name} for CARICOM nationals`,
+      `${c.name} work permit CARICOM`,
+      "jobs in the Caribbean",
+      "work in the Caribbean",
     ],
     alternates: { canonical: `/caricom-skills-certificate/${c.slug}` },
   };

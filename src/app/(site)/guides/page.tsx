@@ -4,9 +4,18 @@ import { getArticles } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Travel & Visa Guides",
+  title: "CARICOM, Travel & Visa Guides",
   description:
-    "Helpful guides on Canadian visas from Trinidad, booking flights, and travelling from the Caribbean, from Expeditions With Jo.",
+    "Practical guides for the Caribbean: how to apply for a CSME Skills Certificate so you can work on another island, Canadian visas from Trinidad, booking flights, and travelling from the Caribbean.",
+  keywords: [
+    "CARICOM guides",
+    "how to work in another Caribbean country",
+    "jobs in the Caribbean",
+    "CSME Skills Certificate guide",
+    "Caribbean travel guides",
+    "Canadian visa from Trinidad",
+  ],
+  alternates: { canonical: "/guides" },
 };
 
 function formatDate(d: string) {

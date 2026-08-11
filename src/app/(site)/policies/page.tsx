@@ -3,7 +3,11 @@ import { getPolicies } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
 import ContentSections from "@/components/ContentSections";
 
-export const metadata: Metadata = { title: "Policies" };
+export const metadata: Metadata = {
+  title: "Policies",
+  description: "Booking, payment, cancellation and privacy policies for Expeditions With Jo.",
+  alternates: { canonical: "/policies" },
+};
 
 export default async function PoliciesPage() {
   const policies = await getPolicies();

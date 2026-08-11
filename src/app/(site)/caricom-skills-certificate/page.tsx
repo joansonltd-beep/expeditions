@@ -6,14 +6,20 @@ import CtaButtons from "@/components/CtaButtons";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
 
 export const metadata: Metadata = {
-  title: "CARICOM Skills Certificate (CSME): How to Apply by Country",
+  title: "CARICOM Skills Certificate (CSME): How to Work in Another Caribbean Country",
   description:
-    "How to get a CARICOM Skills Certificate (CSME). The eligible categories, the documents, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
+    "How to get a CARICOM Skills Certificate (CSME) and work in another Caribbean country without a work permit. The eligible categories, the documents, the fees, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
   keywords: [
     "CARICOM skills certificate",
     "CARICOM skill certificate",
     "CSME skills certificate",
     "CARICOM certificate",
+    "jobs in the Caribbean",
+    "work in the Caribbean",
+    "how to work in another Caribbean country",
+    "live and work in the Caribbean",
+    "work in CARICOM without a work permit",
+    "Caribbean work permit",
     "how to apply for a CARICOM skills certificate",
     "CARICOM skills certificate Trinidad",
     "CARICOM skills certificate Jamaica",

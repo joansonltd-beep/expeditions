@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "biometrics Port of Spain",
     "CARICOM Canadian visa help",
   ],
+  alternates: { canonical: "/travel-visas" },
 };
 
 // FAQ structured data — can earn rich results for common visa questions.

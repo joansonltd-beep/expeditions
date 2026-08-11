@@ -4,9 +4,19 @@ import { getService } from "@/lib/siteData";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Book Flights",
+  title: "Book Flights | Caribbean Travel Agent",
   description:
-    "Book affordable, reliable flights worldwide with your Trinidad and Tobago travel agent. One-way or round-trip, baggage help, itinerary planning and support before and during your trip.",
+    "Book affordable, reliable flights across the Caribbean and worldwide with your Trinidad and Tobago travel agent. Inter-island CARICOM routes, one-way or round-trip, baggage help, itinerary planning and support before and during your trip.",
+  keywords: [
+    "book flights Trinidad",
+    "Caribbean flights",
+    "Caribbean travel agent",
+    "inter-island flights Caribbean",
+    "CARICOM flights",
+    "cheap flights from Trinidad and Tobago",
+    "travel agent Trinidad and Tobago",
+  ],
+  alternates: { canonical: "/flights" },
 };
 
 export default async function FlightsPage() {

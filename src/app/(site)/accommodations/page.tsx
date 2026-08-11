@@ -6,9 +6,17 @@ import { Section, Eyebrow, CheckList } from "@/components/ui";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
-  title: "Accommodations & Stays",
+  title: "Accommodations & Stays in the Caribbean",
   description:
-    "Hotels, Airbnb and short-stay apartments worldwide at the best available prices, plus A Likkle Rest by Jo, our own affordable room minutes from Trinidad's Piarco airport, ideal for layovers and visa appointments.",
+    "Hotels, Airbnb and short-stay apartments across the Caribbean and worldwide at the best available prices, plus A Likkle Rest by Jo, our own affordable room minutes from Trinidad's Piarco airport, ideal for layovers and visa appointments.",
+  keywords: [
+    "Caribbean accommodation",
+    "hotels in Trinidad and Tobago",
+    "short stay near Piarco airport",
+    "Caribbean travel agent",
+    "where to stay when relocating to another Caribbean island",
+  ],
+  alternates: { canonical: "/accommodations" },
 };
 
 export default async function AccommodationsPage() {

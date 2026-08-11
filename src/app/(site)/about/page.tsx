@@ -7,7 +7,9 @@ import CtaButtons from "@/components/CtaButtons";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Expeditions With Jo, founded by Joanson Baptiste James, makes travel, Canadian visa appointments and financial matters simpler for people in Trinidad, Tobago and the wider Caribbean.",
+    "Expeditions With Jo, founded by Joanson Baptiste James, makes moving between CARICOM islands, travel and financial matters simpler for people in Trinidad, Tobago and the wider Caribbean.",
+  keywords: ["Caribbean travel agent", "CARICOM relocation specialist", "Joanson Baptiste James", "Expeditions With Jo"],
+  alternates: { canonical: "/about" },
 };
 
 export default async function AboutPage() {

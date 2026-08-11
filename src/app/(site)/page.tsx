@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getSiteSettings, getServices, getTestimonials, getHomeContent } from "@/lib/siteData";
 import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import { Icon, serviceIcon, pillarIcon, WHY_ICONS } from "@/components/icons";
+
+// Title and description come from the root layout; this page only needs to
+// claim its own canonical URL.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function HomePage() {
   const [settings, services, testimonials, home] = await Promise.all([
