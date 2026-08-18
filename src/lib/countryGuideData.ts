@@ -512,6 +512,184 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "belize",
+    name: "Belize",
+    tagline: "The only English-speaking CARICOM country in Central America: the world's second-largest barrier reef alongside Maya ruins and rainforest.",
+    overview:
+      "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It's a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland — a mix of marine and jungle that few CARICOM countries can offer.",
+    photo: {
+      src: "/destinations/belize.jpg",
+      alt: "The Great Blue Hole, a giant marine sinkhole off the coast of Belize",
+      credit: "The TerraMar Project, CC BY 2.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Belize_Blue_Hole_(TMP)_(16912331906).jpg",
+    },
+    coordinates: { lat: 17.1899, lng: -88.4977, display: "17.19°N, 88.50°W" },
+    demographics: {
+      population: {
+        value: "≈422,000–429,000 (2025–2026 estimate)",
+        sourceName: "Worldometer / UN-based estimates",
+        sourceUrl: "https://www.worldometers.info/world-population/belize-population/",
+      },
+      areaKm2: "≈22,966 km² — much larger than any other CARICOM member except Guyana and Suriname, since Belize is mainland Central America, not an island",
+      independence: "21 September 1981, from the United Kingdom",
+      capital: "Belmopan — a small, purpose-built inland capital. Belize City, the former capital, remains the largest city and main commercial hub.",
+      officialLanguages: [
+        "English (official)",
+        "Spanish (widely spoken)",
+        "Belize Kriol",
+        "Maya languages (Yucatec, Mopan, Q'eqchi')",
+        "Garifuna",
+      ],
+      currency: "Belize dollar (BZD), fixed at BZ$2 to US$1. US dollars are widely accepted in tourist areas.",
+      government:
+        "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
+      medianAge: "≈27–28 years — young relative to most CARICOM members",
+      ageStructure: "0–14 years: ≈26–28%. 15–64 years: ≈66–69%. 65 years and over: ≈5–6%.",
+      ethnicComposition: {
+        value: "Mestizo ≈53%, Creole ≈26%, Maya (combined groups) ≈11%, Garifuna ≈6%, East Indian ≈4%, Mennonite ≈4%, White, Asian and other small percentages",
+        sourceName: "CIA World Factbook (2010 census, most recent available)",
+      },
+      urbanizationNote:
+        "The largest population centre is Belize City. Inland towns like San Ignacio (Cayo), Orange Walk and Corozal are growing, while coastal towns and the cayes (Ambergris Caye's San Pedro, Caye Caulker, Placencia) are more tourism-oriented. Belize also receives immigration from neighbouring Central American countries.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$400–700/month in mainland towns (Belize City, San Ignacio, Belmopan) for an ordinary local unit",
+      rentPremium1BR: "≈US$800–1,500+/month on the tourist cayes (San Pedro on Ambergris Caye, Caye Caulker, Placencia)",
+      groceriesSingle: "≈US$200–350/month",
+      inexpensiveMeal: "≈US$5–12 (rice and beans with chicken or fish, fry jacks, street stalls)",
+      midRangeMealForTwo: "≈US$30–60, more at upscale beachfront or resort restaurants",
+      utilities: "≈US$125–300/month for electricity, water and garbage (heavy air conditioning pushes this higher), plus roughly US$50–80/month for home internet where available",
+      budgetModestSingle: "≈US$1,200–1,800/month all-in (modest rental, local food, limited AC, public transport)",
+      budgetComfortableSingle: "≈US$1,800–3,500/month all-in (good location, some dining out, AC, regular transport)",
+      notes:
+        "Belize is generally cheaper than the Caribbean islands, but costs vary sharply between mainland towns and the tourist cayes — a beachfront rental on Ambergris Caye or Placencia can run US$3,500–6,000+ a month all-in. Numbeo's Belize City sample is very thin (about 75 price entries from 5 contributors), so the ranges above lean more on rental listings and relocation guides. A local bus fare runs roughly US$1–3, with fuel around US$1.30–1.70 per litre.",
+      sourceName: "Numbeo (thin sample for Belize City)",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/in/Belize-City",
+      secondarySourceName: "rental listings and expat relocation guides (typical mainland and caye figures)",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Belize Barrier Reef",
+        description: "The second-largest barrier reef in the world and a UNESCO World Heritage Site, running the length of the coast and around dozens of cayes.",
+      },
+      {
+        name: "Great Blue Hole",
+        description: "A giant marine sinkhole on Lighthouse Reef — a signature dive site for the certified, and a dramatic sight from a scenic flight for everyone else.",
+      },
+      {
+        name: "Hol Chan Marine Reserve & Shark Ray Alley",
+        description: "A protected reef channel near San Pedro thick with fish, turtles and rays, next to a shallow sandbar where you can swim with nurse sharks and stingrays.",
+      },
+      {
+        name: "Caye Caulker",
+        description: "A laid-back island built around a \"Go Slow\" motto — golf carts instead of cars, easy snorkelling and day trips to the reef.",
+      },
+      {
+        name: "Placencia & Hopkins",
+        description: "Southern coastal villages with beaches, reef access, and Garifuna cultural heritage.",
+      },
+      {
+        name: "Actun Tunichil Muknal (ATM Cave)",
+        description: "A sacred Maya cave with calcified skeletal remains and ceramics still in place, reached by a jungle trek and river crossings — one of Belize's best-known adventures.",
+      },
+      {
+        name: "Xunantunich",
+        description: "A major Maya site near San Ignacio, with the climbable \"El Castillo\" pyramid and views into Guatemala.",
+      },
+      {
+        name: "Caracol",
+        description: "A large, remote Maya city deep in the Chiquibul Forest — a longer drive than Xunantunich, and a more adventurous ruins visit.",
+      },
+      {
+        name: "Cockscomb Basin Wildlife Sanctuary",
+        description: "A protected reserve known for jaguar conservation, hiking trails and waterfalls.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Snorkelling Hol Chan and Shark Ray Alley",
+        description: "Drifting through a coral channel and swimming with nurse sharks and rays in shallow water — often the top first activity for visitors.",
+      },
+      {
+        title: "ATM Cave expedition",
+        description: "A full-day trip combining jungle trekking, river crossings and cave exploration to see ancient Maya ceremonial remains in situ.",
+      },
+      {
+        title: "Diving or flying over the Great Blue Hole",
+        description: "A deep dive into the sinkhole for certified divers, or a scenic flight for a dramatic aerial view without getting in the water.",
+      },
+      {
+        title: "Cave tubing and jungle hikes",
+        description: "Floating through underground river systems in inner tubes, usually combined with a rainforest walk — commonly run as a day trip from San Ignacio or Belize City.",
+      },
+      {
+        title: "Garifuna cultural experiences",
+        description: "Drumming, dance and traditional food in Hopkins or Placencia, reflecting Belize's Afro-Caribbean Garifuna heritage.",
+      },
+      {
+        title: "Whale shark trips off Placencia",
+        description: "Seasonal (roughly March to June) boat excursions to swim with whale sharks at the Gladden Spit marine reserve.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Rice and beans with stewed chicken",
+        description: "The everyday Belizean staple, usually with potato salad or fried plantain on the side.",
+      },
+      {
+        name: "Fry jacks",
+        description: "Deep-fried pieces of dough served for breakfast with eggs, beans, cheese or jam.",
+      },
+      {
+        name: "Hudut",
+        description: "A Garifuna dish of mashed plantains served with fish or chicken in a coconut broth.",
+      },
+      {
+        name: "Panades",
+        description: "Fried corn masa turnovers filled with fish or beans — a Mestizo-influenced snack sold everywhere.",
+      },
+      {
+        name: "Conch soup and ceviche",
+        description: "Common coastal dishes, especially on the cayes and around Placencia and Hopkins.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Elvi's Kitchen",
+        area: "San Pedro, Ambergris Caye",
+        description: "A San Pedro institution since 1974, from a burger window to a full seafood restaurant — Belize Tourism Board's Restaurant of the Year in 2022.",
+      },
+      {
+        name: "Estel's Dine by the Sea",
+        area: "San Pedro, Ambergris Caye",
+        description: "A family-run, beachfront spot for Belizean breakfast — fry jacks, chorizo and beans — right on the sand.",
+      },
+      {
+        name: "The Guava Limb Restaurant & Café",
+        area: "San Ignacio, Cayo District",
+        description: "Farm-to-table dining using produce from its own Maya Farm; widely regarded as San Ignacio's best restaurant.",
+      },
+    ],
+    symbols: {
+      motto: "Sub Umbra Floreo (\"Under the Shade I Flourish\")",
+      anthem: {
+        title: "Land of the Free",
+        lyricist: "Samuel Alfred Haynes",
+        composer: "Selwyn Walford Young",
+        adopted: "1981, at independence (the lyrics began as Haynes's 1929 poem \"Land of the Gods\")",
+        officialUrl: "https://www.pressoffice.gov.bz/national-anthem-prayer/",
+      },
+      // No official National Pledge text confirmed. A school recitation
+      // often called the "Tribute to the Belizean Flag" circulates online,
+      // but different unofficial sources give different, inconsistent
+      // wording for it, and the Government of Belize Press Office's own
+      // national symbols page lists only the anthem and a national prayer.
+      // Left out rather than picking one of the conflicting versions.
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
