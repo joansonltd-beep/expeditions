@@ -861,6 +861,177 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "grenada",
+    name: "Grenada",
+    tagline: "The \"Spice Isle\": a tri-island state built on nutmeg, and home to the world's first underwater sculpture park.",
+    overview:
+      "Grenada is a tri-island state — Grenada, Carriacou and Petite Martinique — long known as the \"Spice Isle\" for the nutmeg, mace, cocoa and cinnamon grown on its slopes; nutmeg appears on the national flag. It's also a country that has rebuilt more than once: a 1979 revolution and its violent 1983 collapse brought a brief US-led intervention, and Hurricane Ivan in 2004 destroyed 90% of the island's buildings and nearly wiped out the nutmeg industry overnight. Today it's calm, green and mountainous, with diving, waterfalls and rainforest as much a draw as its beaches.",
+    photo: {
+      src: "/destinations/grenada.jpg",
+      alt: "Underwater sculptures at the Molinere Underwater Sculpture Park, Grenada",
+      credit: "Boris Kasimov, CC BY 2.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Underwater_sculptures_at_Molinere_Underwater_Sculpture_Park.jpg",
+    },
+    coordinates: { lat: 12.05, lng: -61.75, display: "12.05°N, 61.75°W" },
+    demographics: {
+      population: {
+        value: "≈114,000–117,000 (2024–2025 estimate)",
+        sourceName: "Worldometer / CIA World Factbook",
+        sourceUrl: "https://www.worldometers.info/world-population/grenada-population/",
+      },
+      areaKm2: "≈344 km² across three inhabited islands — Grenada (≈311 km²), Carriacou (≈34 km²) and Petite Martinique (≈2.4 km²)",
+      independence: "7 February 1974, from the United Kingdom",
+      capital: "St. George's",
+      officialLanguages: ["English (official)", "Grenadian Creole English and French Patois widely spoken"],
+      currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
+      government:
+        "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
+      medianAge: "≈35.4 years (2025 estimate)",
+      ageStructure: "0–14 years: ≈19%. 15–64 years: ≈68%. 65 years and over: ≈13%.",
+      ethnicComposition: {
+        value: "African descent ≈85%, mixed ≈10%, East Indian ≈1.4%, White ≈0.9%, Indigenous (Carib/Arawak) ≈0.2%",
+        sourceName: "2021 preliminary census",
+      },
+      outlyingPopulation: {
+        value: "Carriacou ≈5,700 and Petite Martinique ≈900",
+        sourceName: "2011 census, most recent island-level breakdown",
+      },
+      urbanizationNote:
+        "Most people live on the main island of Grenada, in and around St. George's. Carriacou (Hillsborough its main town) lies about 40km north-east by ferry or short flight; Petite Martinique, smaller still, sits just off Carriacou.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$435/month outside St. George's and the south-coast expat corridor",
+      rentPremium1BR: "≈US$780–1,800/month in St. George's city centre or the Lance aux Epines / Grand Anse / Westerhall south-coast corridor",
+      groceriesSingle: "≈US$200–300/month",
+      inexpensiveMeal: "≈US$7–10",
+      midRangeMealForTwo: "≈US$60–80",
+      utilities: "≈US$60–150/month for electricity and water, plus roughly US$48/month for home internet",
+      budgetModestSingle: "≈US$1,000–1,500/month all-in",
+      budgetComfortableSingle: "≈US$1,800–3,000/month all-in",
+      notes:
+        "Numbeo has no listing for St. George's, so these figures lean on a single detailed cost-of-living source rather than a cross-checked range — treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor.",
+      sourceName: "Global Citizen Solutions cost-of-living data",
+      sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Molinere Underwater Sculpture Park",
+        description: "The world's first underwater sculpture park (opened 2006), with more than 80 submerged works by Jason deCaires Taylor slowly becoming an artificial reef.",
+      },
+      {
+        name: "Grand Anse Beach",
+        description: "Grenada's best-known beach: two miles of soft white sand, calm water, and restaurants and bars along the shore.",
+      },
+      {
+        name: "Annandale Falls",
+        description: "An easily reached waterfall in lush tropical grounds, good for swimming and photos.",
+      },
+      {
+        name: "Grand Etang National Park",
+        description: "A rainforest park built around a crater lake, with trails from 15-minute strolls to multi-hour treks through the misty central highlands.",
+      },
+      {
+        name: "River Antoine Rum Distillery",
+        description: "Operating since 1785 and still turning a water wheel — the oldest functioning water-driven distillery in the Caribbean.",
+      },
+      {
+        name: "Belmont Estate",
+        description: "A 17th-century plantation turned working organic cocoa farm, with tours through the chocolate-making process.",
+      },
+      {
+        name: "Carriacou",
+        description: "Grenada's larger sister island, quieter and less developed — Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
+      },
+      {
+        name: "Fort George",
+        description: "An 18th-century fort overlooking St. George's harbour, with panoramic views over the capital.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Spicemas Carnival",
+        description: "Grenada's carnival, centred on St. George's in early August after a season that builds from May — soca, costume bands and street parades.",
+      },
+      {
+        title: "Diving the Bianca C wreck",
+        description: "A 180-metre former passenger liner that sank in 1961, now one of the largest diveable shipwrecks in the Caribbean — for experienced divers only, given its depth.",
+      },
+      {
+        title: "Snorkelling the Underwater Sculpture Park",
+        description: "Shallow enough for snorkellers, not just divers, to see the sculptures up close.",
+      },
+      {
+        title: "Nutmeg and spice plantation tours",
+        description: "Visits to working spice estates to see how nutmeg, mace and cocoa are grown and processed — the industry that gave Grenada its nickname.",
+      },
+      {
+        title: "Carriacou Maroon & String Band Music Festival",
+        description: "An April festival on Carriacou celebrating traditional Caribbean music and harvest celebrations.",
+      },
+      {
+        title: "A day trip to Carriacou",
+        description: "By ferry or short flight, for a quieter island with its own beaches, diving and boatbuilding culture.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Oil down",
+        description: "Grenada's national dish: breadfruit, coconut milk, callaloo, dumplings and salted meat or fish, slow-cooked in one pot until the coconut oil rises. Traditionally made as a communal, all-day beach cookout.",
+      },
+      {
+        name: "Callaloo soup",
+        description: "A soup built on callaloo (dasheen leaf), a staple ingredient in Grenadian cooking.",
+      },
+      {
+        name: "Lambi (conch)",
+        description: "Conch meat, marinated and tenderised with local spices — grilled, stewed, or added to a seafood oil down.",
+      },
+      {
+        name: "Crab back",
+        description: "Seasoned crab meat served stuffed back into its shell.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Patrick's Local Homestyle Restaurant",
+        area: "St. George's",
+        description: "Grenadian food tapas-style — oil down, callaloo soup, ginger pork and fish cakes, all in small plates.",
+      },
+      {
+        name: "BB's Crab Back",
+        area: "St. George's",
+        description: "Run by a well-known local chef, built around crab backs, curried goat and other Grenadian specialties.",
+      },
+      {
+        name: "Umbrella's Beach Bar",
+        area: "Grand Anse Beach",
+        description: "A women-run beach bar serving fresh, locally-sourced seafood on the sand.",
+      },
+      {
+        name: "The Aquarium",
+        area: "Magazine Beach",
+        description: "Beachfront dining ranging from casual lunches to fine dining — grilled lobster, jerk chicken and callaloo cannelloni.",
+      },
+    ],
+    symbols: {
+      motto: "Ever Conscious of God, We Aspire, Build and Advance as One People",
+      anthem: {
+        title: "Hail Grenada",
+        lyricist: "Irva Merle Baptiste-Blackett",
+        composer: "Louis Arnold Masanto",
+        adopted: "1974, at independence",
+        officialUrl: "https://www.oas.org/sap/peacefund/VirtualLibrary/NationalAnthems/GRENADA.pdf",
+      },
+      pledge: {
+        text: "I pledge allegiance to my flag and to the country for which it stands, with Liberty, Justice and Equality for all. I pledge also that I shall defend and uphold the Honour, Dignity and Laws and Institutions of my country.",
+        sourceName: "Government of Grenada (gov.gd)",
+        sourceUrl: "https://www.gov.gd/national-symbols",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
