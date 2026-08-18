@@ -1032,6 +1032,151 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "guyana",
+    name: "Guyana",
+    tagline: "Mainland South America's only English-speaking country: a vast, largely untouched interior of rainforest, savannah and waterfalls, transformed by a recent oil boom.",
+    overview:
+      "Guyana is the odd one out geographically among CARICOM's island states — mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown's real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
+    photo: {
+      src: "/destinations/guyana.jpg",
+      alt: "Aerial view of Kaieteur Falls, Guyana",
+      credit: "Amanda (amanderson), CC BY 2.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Kaieteur_Falls_Aerial_01.jpg",
+    },
+    coordinates: { lat: 6.8045, lng: -58.1553, display: "6.80°N, 58.16°W" },
+    demographics: {
+      population: {
+        value: "≈825,000–841,000 (2025–2026 estimate)",
+        sourceName: "Worldometer",
+        sourceUrl: "https://www.worldometers.info/world-population/guyana-population/",
+      },
+      areaKm2: "≈214,970 km² — by far the largest CARICOM member, over 80% of it rainforest",
+      independence: "26 May 1966, from the United Kingdom. Became a Cooperative Republic on 23 February 1970.",
+      capital: "Georgetown",
+      officialLanguages: ["English (official)", "Guyanese Creole, widely spoken"],
+      currency: "Guyanese dollar (GYD) — floating since 2015, trading at roughly GY$209 to US$1",
+      government:
+        "Cooperative Republic. Unlike several smaller CARICOM states, Guyana's President is an executive head of state and head of government combined (since the 1980 constitution), not a ceremonial office.",
+      medianAge: "≈27 years — one of the younger populations in CARICOM",
+      ethnicComposition: {
+        value: "East Indian ≈40%, African descent ≈29%, mixed ≈20%, Amerindian ≈10.5%, other ≈0.5%",
+        sourceName: "CIA World Factbook (2012 census, most recent available)",
+      },
+      urbanizationNote:
+        "Most of the population lives on a narrow coastal strip, with Georgetown the largest city by far. The vast interior — savannah, rainforest, and the Rupununi region bordering Brazil — is sparsely populated, largely by Amerindian communities.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$400–700/month outside Georgetown or in ordinary residential areas",
+      rentPremium1BR: "≈US$1,000–2,500+/month in central Georgetown, driven up sharply by oil-industry demand",
+      groceriesSingle: "≈US$250–400/month",
+      inexpensiveMeal: "≈US$8–15",
+      midRangeMealForTwo: "≈US$40–80",
+      utilities: "≈US$100–250/month for electricity and water",
+      budgetModestSingle: "≈US$1,000–1,600/month all-in",
+      budgetComfortableSingle: "≈US$2,000–3,500+/month all-in",
+      notes:
+        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere in the world since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result — one widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. Numbeo has no listing for Georgetown, and most published cost-of-living figures lag behind this fast-moving market — treat any number here as a rough guide, not current fact, and expect central Georgetown to cost noticeably more than the ranges above suggest.",
+      sourceName: "Real-estate and relocation reporting on the post-2019 oil boom",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Kaieteur Falls",
+        description:
+          "One of the world's most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it — visitors fly in on a small plane over unbroken rainforest.",
+      },
+      {
+        name: "Iwokrama Rainforest",
+        description: "A protected wilderness known for jaguars, giant river otters and over 500 bird species, with a high canopy walkway through the treetops.",
+      },
+      {
+        name: "Rupununi Savannah",
+        description: "Open savannah and working cattle ranches near the Brazilian border, for horseback riding, river safaris and wildlife tracking rather than beaches.",
+      },
+      {
+        name: "Georgetown's colonial architecture",
+        description: "18th- and 19th-century wooden buildings and the seawall protecting the below-sea-level capital, both distinctive among CARICOM capitals.",
+      },
+      {
+        name: "Shell Beach",
+        description: "One of only four major nesting sites in the world for the endangered leatherback sea turtle, on the remote north-west coast, with nesting season running March to August.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Flying to Kaieteur Falls",
+        description: "A small-plane flight over rainforest canopy to reach the falls — the journey is as much the experience as the waterfall itself.",
+      },
+      {
+        title: "The Iwokrama canopy walkway",
+        description: "Suspension bridges up to 30 metres above the forest floor, for a rainforest view most visitors never get.",
+      },
+      {
+        title: "A ranch stay in the Rupununi",
+        description: "Days built around horseback riding, wildlife tracking and river trips, staying at working cattle ranches or community-run lodges.",
+      },
+      {
+        title: "Birdwatching",
+        description: "Guyana is one of the world's most serious birding destinations — harpy eagles, macaws and hundreds of other species in largely untouched habitat.",
+      },
+      {
+        title: "Turtle watching at Shell Beach",
+        description: "Night visits during nesting season (March–August) to see leatherback, hawksbill, olive ridley and green turtles come ashore.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Pepperpot",
+        description: "Guyana's national dish: meat slow-cooked in cassareep, the reduced, bittersweet juice of cassava root, traditionally served at Christmas.",
+      },
+      {
+        name: "Cook-up rice",
+        description: "An everyday one-pot dish of rice and split peas cooked with meat and coconut milk — brought by enslaved West Africans, similar to Ghanaian waakye.",
+      },
+      {
+        name: "Metemgee",
+        description: "Ground provisions (cassava, eddoe, plantain, yam) cooked in coconut milk with dumplings and fish or meat.",
+      },
+      {
+        name: "Roti and curry",
+        description: "A strong Indo-Guyanese influence on everyday eating, reflecting the country's East Indian plurality — curried chicken, goat or vegetables wrapped in roti.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Backyard Café",
+        area: "Georgetown",
+        description: "Chef Delven Adams's take on Guyanese cuisine, named to TIME Magazine's World's Greatest Places 2026 list.",
+      },
+      {
+        name: "Aagman Indian Restaurant",
+        area: "Georgetown",
+        description: "A well-regarded Indian restaurant reflecting Guyana's large Indo-Guyanese population — the paneer tikka masala is a standout.",
+      },
+      {
+        name: "Govinda's Higher Taste",
+        area: "Georgetown",
+        description: "Georgetown's first all-vegetarian restaurant.",
+      },
+    ],
+    symbols: {
+      motto: "One People, One Nation, One Destiny",
+      anthem: {
+        title: "Dear Land of Guyana, of Rivers and Plains",
+        lyricist: "Rev. Archibald Leonard Luker",
+        composer: "Robert Cyril Gladstone Potter",
+        adopted: "1966, at independence",
+        officialUrl: "https://en.wikipedia.org/wiki/Dear_Land_of_Guyana,_of_Rivers_and_Plains",
+      },
+      pledge: {
+        text: "I pledge myself to honour always the Flag of Guyana, and to be loyal to my country, to be obedient to the laws of Guyana, to love my fellow citizens, and to dedicate my energies towards the happiness and prosperity of Guyana.",
+        sourceName:
+          "Widely and consistently reproduced across sources including Guyanese civic-education material; the exact wording could not be confirmed against a single official government page directly, but multiple independent sources agree without contradiction",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
