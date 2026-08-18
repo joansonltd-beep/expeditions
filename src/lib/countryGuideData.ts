@@ -325,6 +325,193 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "barbados",
+    name: "Barbados",
+    tagline: "The Caribbean's culinary capital: a former British colony turned republic, built around rum, reefs and Bajan cuisine.",
+    overview:
+      "Barbados is the easternmost Caribbean island, a former British colony that became a parliamentary republic in 2021. It combines well-developed tourism infrastructure with deep cultural heritage — historic Bridgetown, the birthplace of rum, and a food scene often called the best in the Caribbean.",
+    photo: {
+      src: "/destinations/barbados.jpg",
+      alt: "Carlisle Bay, Barbados, with Bridgetown visible in the distance",
+      credit: "Pontificalibus, CC0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Carlisle_Bay,_Barbados.jpg",
+    },
+    coordinates: { lat: 13.1939, lng: -59.5432, display: "13.19°N, 59.54°W" },
+    demographics: {
+      population: {
+        value: "≈282,000–283,000 (2025–2026 estimate)",
+        sourceName: "Worldometer / UN-based estimates",
+        sourceUrl: "https://www.worldometers.info/world-population/barbados-population/",
+      },
+      areaKm2: "≈430 km²",
+      independence: "30 November 1966, from the United Kingdom. Became a parliamentary republic on 30 November 2021.",
+      capital: "Bridgetown, in the parish of Saint Michael.",
+      officialLanguages: ["English (official)", "Bajan (Barbadian Creole) widely spoken"],
+      currency: "Barbadian dollar (BBD), fixed at BBD 2 to US$1. US dollars are widely accepted in tourist areas.",
+      government:
+        "Parliamentary republic. Barbados removed the British monarch as head of state in November 2021; a President (currently ceremonial, elected by Parliament) is head of state, with a Prime Minister as head of government.",
+      medianAge: "≈39.5 years (2020 estimate)",
+      ageStructure: "0–14 years: ≈17%. 15–64 years: ≈68%. 65 years and over: ≈16%.",
+      ethnicComposition: {
+        value: "African descent ≈92%, mixed ≈3%, White ≈3%, East Indian ≈1%, other/unspecified ≈1%",
+        sourceName: "CIA World Factbook (2010 census, most recent available)",
+      },
+      urbanizationNote:
+        "Most residents live in and around Bridgetown and the south-coast parishes (Christ Church, Saint Michael, Saint James), which are also the main tourist and business areas. Barbados has a sizeable diaspora in the UK, US and Canada.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$900–1,300/month inland or in smaller towns away from the coast",
+      rentPremium1BR: "≈US$1,200–2,600/month in Bridgetown and the popular south/west-coast parishes (Hastings, Worthing, Holetown)",
+      groceriesSingle: "≈US$250–450/month",
+      inexpensiveMeal: "≈US$10–15",
+      midRangeMealForTwo: "≈US$40–90, higher at upscale beachfront or hotel restaurants",
+      utilities: "≈US$140–210/month for a small apartment, driven mostly by air conditioning use",
+      budgetModestSingle: "≈US$1,900–2,500/month all-in (modest rental, limited AC, local food)",
+      budgetComfortableSingle: "≈US$3,000–4,500+/month all-in (good location, car, dining out, more AC)",
+      notes:
+        "Barbados runs more expensive than most of its CARICOM neighbours, especially housing on the south and west coasts and imported goods. A public bus pass runs roughly US$25–30/month, though coverage is limited. Luxury villas and premium rentals can run well beyond US$7,000/month. Crowd-sourced sites like Numbeo show notably lower rent figures for Barbados than current rental listings and relocation guides do — the ranges above lean on the latter, since Numbeo's Barbados sample is thin.",
+      sourceName: "Numbeo",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/in/Bridgetown",
+      secondarySourceName: "current rental listings and relocation guides (typical and popular-parish figures)",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Historic Bridgetown and its Garrison",
+        description:
+          "A UNESCO World Heritage Site since 2011: colonial architecture, the careenage waterfront, and the Garrison Savannah, once a British military headquarters.",
+      },
+      {
+        name: "George Washington House",
+        description:
+          "The only house outside the continental US where George Washington lived — six weeks in 1751, aged 19. Now a museum within the Garrison, with access to old tunnels.",
+      },
+      {
+        name: "St. Nicholas Abbey",
+        description: "A well-preserved 1658 plantation house with its own rum distillery, gardens and a heritage railway.",
+      },
+      {
+        name: "Carlisle Bay",
+        description: "A calm, clear bay near Bridgetown with several shipwrecks close to shore — popular for snorkelling and swimming with sea turtles.",
+      },
+      {
+        name: "Crane Beach",
+        description: "Pink-tinged sand below 80-foot cliffs on the southeast coast, regularly ranked among the world's best beaches.",
+      },
+      {
+        name: "Bathsheba and the east coast",
+        description:
+          "A rugged Atlantic coastline with the mushroom-shaped rock formations of the Soup Bowl — dramatic for photos and surfing, not for casual swimming.",
+      },
+      {
+        name: "Harrison's Cave",
+        description: "A large limestone cave system with guided tram tours past stalactites, streams and underground chambers.",
+      },
+      {
+        name: "Animal Flower Cave",
+        description: "A sea cave on the north coast with a natural swimming pool and panoramic Atlantic views.",
+      },
+      {
+        name: "Welchman Hall Gully & Andromeda Botanic Gardens",
+        description: "A collapsed-cave tropical gully with monkeys and old-growth vegetation, and a coastal botanic garden in Bathsheba with over 500 plant species.",
+      },
+      {
+        name: "Barbados Wildlife Reserve",
+        description: "A mahogany-wood reserve in St. Peter where Barbados's green monkeys roam free, best seen at the 11am and 2:30pm feedings.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Oistins Fish Fry",
+        description:
+          "Friday (and Saturday) nights in the fishing town of Oistins: grilled marlin, swordfish and flying fish, calypso and soca, and craft stalls. Barbados's biggest tourist draw.",
+      },
+      {
+        title: "Crop Over Festival",
+        description:
+          "A months-long festival rooted in the old sugar-harvest celebrations, building through July with calypso competitions to Grand Kadooment, a costumed road march in early August.",
+      },
+      {
+        title: "Rum distillery tours",
+        description: "Mount Gay (the world's oldest rum distillery, est. 1703), Foursquare in St. Philip, or St. Nicholas Abbey's own distillery.",
+      },
+      {
+        title: "Catamaran and snorkelling cruise",
+        description: "Half- and full-day sails from Bridgetown or the south coast, often including sea turtle encounters and shipwreck snorkelling in Carlisle Bay.",
+      },
+      {
+        title: "Surfing (or watching) at the Soup Bowl",
+        description: "A renowned reef break at Bathsheba on the east coast, one of the Caribbean's best-known surf spots.",
+      },
+      {
+        title: "A night out in St. Lawrence Gap",
+        description: "The south coast's dining and nightlife strip — everything from casual bars to gourmet restaurants, near Dover Beach.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Cou-cou and flying fish",
+        description:
+          "The national dish: a cornmeal-and-okra side (cou-cou) similar to polenta, served with flying fish stewed in a tomato-based sauce.",
+      },
+      {
+        name: "Macaroni pie",
+        description: "Baked, spiced macaroni and cheese — a Bajan Sunday-table staple, not a side dish to skip.",
+      },
+      {
+        name: "Fish cakes",
+        description: "Deep-fried, spiced saltfish fritters, sold everywhere as street food and a classic rum-shop snack.",
+      },
+      {
+        name: "Pudding and souse",
+        description: "A traditional Saturday dish: spiced pickled pork (souse) served with sweet potato pudding.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "The Cliff",
+        area: "St. James, west coast",
+        description: "Fine dining with a Michelin-trained chef and sea views over illuminated waters — a special-occasion splurge.",
+      },
+      {
+        name: "The Fish Pot",
+        area: "Six Men's Bay, north-west coast",
+        description: "A well-regarded, relaxed beachfront spot for fresh seafood in a converted fort.",
+      },
+      {
+        name: "Champers Restaurant",
+        area: "Hastings, south coast",
+        description: "A long-running, owner-run favourite for local, Barbados-caught seafood, with a gallery of Caribbean art on-site.",
+      },
+      {
+        name: "Uncle George's Fish Net Grill",
+        area: "Oistins",
+        description: "Grilled fish and seafood in the heart of the Oistins Fish Fry scene, with regular live music.",
+      },
+      {
+        name: "Cuz's Fish Stand",
+        area: "Pebbles Beach, Bridgetown",
+        description: "A decades-old, no-frills stand famous for its fried marlin fish cutter sandwiches — one of the island's most-loved cheap eats.",
+      },
+    ],
+    symbols: {
+      motto: "Pride and Industry",
+      anthem: {
+        title: "In Plenty and In Time of Need",
+        lyricist: "Irving Burgie",
+        composer: "C. Van Roland Edwards",
+        adopted: "30 November 1966, at independence",
+        officialUrl: "https://en.wikipedia.org/wiki/National_Anthem_of_Barbados",
+      },
+      pledge: {
+        text: "I pledge allegiance to my country Barbados and to my flag, To uphold and defend their honour, And by my living to do credit to my nation wherever I go.",
+        sourceName: "Government of Barbados (gov.bb), written by Lester Vaughan, adopted 2 April 1973",
+        sourceUrl: "https://www.gov.bb/Visit-Barbados/national-pledge",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
