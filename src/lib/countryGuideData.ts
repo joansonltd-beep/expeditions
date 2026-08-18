@@ -316,7 +316,6 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Novelle Hamilton Richards",
         composer: "Walter Garnet Picart Chambers",
         adopted: "1967 (retained as the national anthem at independence in 1981)",
-        officialUrl: "https://ab.gov.ag/detail_page.php?page=26",
       },
       // No distinct, publicly documented national pledge text found from an
       // official source — only a citizenship Oath of Allegiance in a
