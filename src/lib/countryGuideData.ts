@@ -288,8 +288,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       motto: "Each Endeavouring, All Achieving",
       anthem: {
         title: "Fair Antigua, We Salute Thee",
-        lyricist: "Novelle Richards",
-        composer: "Walter P. Chambers",
+        lyricist: "Novelle Hamilton Richards",
+        composer: "Walter Garnet Picart Chambers",
         adopted: "1967 (retained as the national anthem at independence in 1981)",
         officialUrl: "https://ab.gov.ag/detail_page.php?page=26",
       },
