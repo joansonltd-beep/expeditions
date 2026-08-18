@@ -690,6 +690,177 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "dominica",
+    name: "Dominica",
+    tagline: "The \"Nature Isle of the Caribbean\": a mountainous, volcanic island built for hikers and divers, not beach loungers.",
+    overview:
+      "Dominica is a mountainous, volcanic island of rainforest, rivers and hot springs, and the only Eastern Caribbean island still home to a Kalinago (Carib) community, the region's last pre-Columbian population. It's less developed for mass tourism than most of its neighbours and has few sandy beaches — the draw here is hiking, diving and nature, not lounging.",
+    photo: {
+      src: "/destinations/dominica.jpg",
+      alt: "Trafalgar Falls, twin waterfalls in Morne Trois Pitons National Park, Dominica",
+      credit: "Nelro, public domain, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Trafalgar_Falls_at_Morne_Trois_Pitons_National_Park.jpg",
+    },
+    coordinates: { lat: 15.3017, lng: -61.3881, display: "15.30°N, 61.39°W" },
+    demographics: {
+      population: {
+        value: "≈65,500–66,000 (2025–2026 estimate)",
+        sourceName: "Worldometer / World Population Review",
+        sourceUrl: "https://www.worldometers.info/world-population/dominica-population/",
+      },
+      areaKm2: "≈750 km²",
+      independence: "3 November 1978, from the United Kingdom",
+      capital: "Roseau",
+      officialLanguages: ["English (official)", "Dominican Creole French (Kwéyòl), widely spoken"],
+      currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are often accepted in tourist areas.",
+      government:
+        "Parliamentary republic — one of the few CARICOM states never to retain the British monarch as head of state after independence. A President, elected by the House of Assembly, is head of state; a Prime Minister is head of government.",
+      medianAge: "≈35.6 years (2023 estimate)",
+      ageStructure: "0–14 years: ≈18–21%. 15–64 years: ≈66–69%. 65 years and over: ≈13–14%.",
+      ethnicComposition: {
+        value: "African descent ≈85%, mixed ≈9%, indigenous Kalinago (Carib) ≈4%, other/unspecified ≈3%",
+        sourceName: "CIA World Factbook (2011 census, most recent available)",
+      },
+      urbanizationNote:
+        "Most people live in and around Roseau and the southwest. Portsmouth is the second-largest town. Dominica is the only Eastern Caribbean island where a Kalinago community survived colonisation — around 3,000–3,500 people live in the Kalinago Territory on the east coast, though only a small number are considered \"pure\" Kalinago after generations of intermarriage.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$300–600/month in Portsmouth, Calibishie, Salisbury and other towns and villages outside Roseau",
+      rentPremium1BR: "≈US$350–800+/month in and around Roseau, more for newer or waterfront/expat-oriented units",
+      groceriesSingle: "≈US$200–350/month; local produce and root crops are much cheaper than imports",
+      inexpensiveMeal: "≈US$5–12 (rice and peas, callaloo, a plate of chicken or fish)",
+      midRangeMealForTwo: "≈US$30–60, more at upscale hotel or waterfront restaurants",
+      utilities: "≈US$75–200/month for electricity and water (more with regular air conditioning), plus roughly US$55–85/month for fixed broadband internet",
+      budgetModestSingle: "≈US$1,200–1,600/month all-in (modest rental, local food, limited AC, public transport)",
+      budgetComfortableSingle: "≈US$1,600–2,500/month all-in (good location, some dining out, AC, regular transport)",
+      notes:
+        "Dominica is one of the more affordable Eastern Caribbean islands, with cheap local food but pricier imports and electricity. Numbeo doesn't carry data for Dominica, so these figures come from relocation and expat guides rather than a single crowd-sourced source. A premium lifestyle — luxury rental, frequent dining and tours — can run US$3,500–5,000+/month. Minibus fares run roughly US$0.50–1.50 per trip.",
+      sourceName: "Relocation and expat relocation guides",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Boiling Lake",
+        description:
+          "The world's second-largest thermally active lake, a churning, mist-covered crater in Morne Trois Pitons National Park (a UNESCO World Heritage Site), reachable only by a strenuous 6–8 hour round-trip hike.",
+      },
+      {
+        name: "Valley of Desolation",
+        description: "Surreal volcanic terrain of sulphur vents, steaming mud pools and hot streams, crossed on the way to Boiling Lake.",
+      },
+      {
+        name: "Trafalgar Falls",
+        description: "Twin waterfalls (\"Mother\" and \"Father\") near Wotten Waven, among the easiest of Dominica's falls to reach, with swimmable lower pools.",
+      },
+      {
+        name: "Emerald Pool",
+        description: "A forest-fringed pool and waterfall near Morne Trois Pitons, reached by a short, well-maintained trail.",
+      },
+      {
+        name: "Ti Tou Gorge & Wotten Waven hot springs",
+        description: "A narrow canyon with clear water for swimming, next to Wotten Waven, the village at the centre of Dominica's sulphur hot springs.",
+      },
+      {
+        name: "Champagne Reef",
+        description: "A shallow dive and snorkel site where underwater volcanic vents send streams of bubbles up through the coral and marine life.",
+      },
+      {
+        name: "Indian River",
+        description: "A calm, mangrove-lined river near Portsmouth, explored by rowed boat tour (no motors allowed).",
+      },
+      {
+        name: "Cabrits National Park & Fort Shirley",
+        description: "An 18th-century British garrison on a former volcanic islet near Portsmouth, now a national park with coastal hiking trails.",
+      },
+      {
+        name: "Kalinago Territory",
+        description: "Home to the Caribbean's last Kalinago (Carib) community, on the east coast — craft, cultural sites and coastal scenery.",
+      },
+    ],
+    experiences: [
+      {
+        title: "The Boiling Lake hike",
+        description: "A full-day, guided trek through rainforest and the Valley of Desolation to the edge of the lake — one of the Caribbean's most demanding and iconic hikes.",
+      },
+      {
+        title: "Waterfall hikes and swims",
+        description: "Trafalgar Falls, Emerald Pool and others, for hiking, swimming and picnicking in forest settings.",
+      },
+      {
+        title: "Snorkelling or diving Champagne Reef",
+        description: "Swimming over volcanic vents that send up constant bubbles, alongside coral and reef fish.",
+      },
+      {
+        title: "River tubing and canyoning",
+        description: "Floating down jungle rivers and exploring canyons with local operators, often with waterfall jumps included.",
+      },
+      {
+        title: "Whale watching off Scotts Head",
+        description: "Boat trips into deep offshore water, seasonally, to see sperm whales and other cetaceans.",
+      },
+      {
+        title: "Hiking the Waitukubuli National Trail",
+        description: "A 185km, 14-segment trail across the whole island, the Caribbean's only long-distance hiking trail — walkable in day-length sections or end to end.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Callaloo",
+        description: "A leafy-green soup, similar to spinach, cooked with okra, coconut milk and often crab or saltfish.",
+      },
+      {
+        name: "Crab back",
+        description: "Seasoned crab meat stuffed back into the shell — a festive, flavourful local specialty.",
+      },
+      {
+        name: "Rice and peas with stewed fish or chicken",
+        description: "The everyday plate, usually with fried plantain or provision (boiled root vegetables) on the side.",
+      },
+      {
+        name: "Fresh seafood",
+        description: "Grilled or stewed fish, and lobster in season, especially around Portsmouth and Scotts Head.",
+      },
+      {
+        name: "Mountain chicken (historical note, not a recommendation)",
+        description:
+          "Dominica's traditional national dish is actually a large frog (Leptodactylus fallax), not poultry. A chytrid fungus outbreak in 2002 wiped out over 80% of the wild population within 18 months, and it's now Critically Endangered — around 100 individuals remain in the wild across Dominica and Montserrat combined. Hunting has been banned since 2004. It's mentioned here for cultural context, not as something to order.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Lacou Melrose House",
+        area: "Roseau",
+        description: "A charming restaurant in the historic Melrose House, with a chalkboard menu that changes with what's fresh.",
+      },
+      {
+        name: "Petit Paris Restaurant & Bar",
+        area: "Roseau",
+        description: "French-Caribbean cuisine in the capital.",
+      },
+      {
+        name: "Kozy's Niche",
+        area: "Roseau",
+        description: "A local favourite blending Italian and Caribbean cooking — lionfish and grilled mahi-mahi are the dishes to order.",
+      },
+    ],
+    symbols: {
+      motto: "Après Bondie C'est La Ter (Kwéyòl for \"After God is the Earth\")",
+      anthem: {
+        title: "Isle of Beauty, Isle of Splendour",
+        lyricist: "Rev. Wilfred Oscar Morgan Pond",
+        composer: "Lemuel McPherson Christian",
+        adopted: "1967, at statehood; retained at independence in 1978",
+        officialUrl: "https://dominica.gov.dm/about-dominica/national-symbols/national-anthem",
+      },
+      pledge: {
+        text: "Before God and all mankind, I pledge allegiance to the flag of the Commonwealth of Dominica and to the Sovereign Republic for which it stands; my love, my loyalty and skills, in the service of Dominica and my fellow citizens. I promise to work diligently and to help build a prosperous and peaceful Nation.",
+        sourceName: "Government of Dominica (dominica.gov.dm), written by Peter Israel",
+        sourceUrl: "https://dominica.gov.dm/about-dominica/national-symbols/national-pledge",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
