@@ -91,6 +91,18 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                 )}
               </p>
             </div>
+            {g.demographics.areaKm2 ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Area</p>
+                <p className="mt-1 text-slate-700">{g.demographics.areaKm2}</p>
+              </div>
+            ) : null}
+            {g.demographics.independence ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Independence</p>
+                <p className="mt-1 text-slate-700">{g.demographics.independence}</p>
+              </div>
+            ) : null}
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Languages</p>
               <p className="mt-1 text-slate-700">{g.demographics.officialLanguages.join(", ")}</p>
@@ -99,10 +111,46 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Currency</p>
               <p className="mt-1 text-slate-700">{g.demographics.currency}</p>
             </div>
+            {g.demographics.medianAge ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Median age</p>
+                <p className="mt-1 text-slate-700">{g.demographics.medianAge}</p>
+              </div>
+            ) : null}
+            {g.demographics.outlyingPopulation ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Outlying islands</p>
+                <p className="mt-1 text-slate-700">
+                  {g.demographics.outlyingPopulation.value}
+                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.outlyingPopulation.sourceName})</span>
+                </p>
+              </div>
+            ) : null}
+            {g.demographics.ageStructure ? (
+              <div className="sm:col-span-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Age structure</p>
+                <p className="mt-1 text-slate-700">{g.demographics.ageStructure}</p>
+              </div>
+            ) : null}
+            {g.demographics.ethnicComposition ? (
+              <div className="sm:col-span-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Ethnic composition</p>
+                <p className="mt-1 text-slate-700">
+                  {g.demographics.ethnicComposition.value}
+                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.ethnicComposition.sourceName})</span>
+                </p>
+              </div>
+            ) : null}
             <div className="sm:col-span-2">
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Government</p>
               <p className="mt-1 text-slate-700">{g.demographics.government}</p>
             </div>
+            {g.demographics.urbanizationNote ? (
+              <div className="sm:col-span-2">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Where people live</p>
+                <p className="mt-1 text-slate-700">{g.demographics.urbanizationNote}</p>
+              </div>
+            ) : null}
           </div>
 
           {hasCsmePage ? (
@@ -121,32 +169,28 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <SectionHead eyebrow="Budgeting" title="Cost of living" />
         <div className="mx-auto max-w-3xl">
           <div className="grid gap-4 sm:grid-cols-2">
-            {g.costOfLiving.rentCityCenter1BR ? (
+            {g.costOfLiving.rentTypical1BR ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, city centre</p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentCityCenter1BR}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, ordinary local market</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentTypical1BR}</p>
               </div>
             ) : null}
-            {g.costOfLiving.rentOutsideCityCenter1BR ? (
+            {g.costOfLiving.rentPremium1BR ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, outside centre</p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentOutsideCityCenter1BR}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, marina / tourist areas</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentPremium1BR}</p>
               </div>
             ) : null}
-            {g.costOfLiving.overallExcludingRentSingle ? (
+            {g.costOfLiving.groceriesSingle ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                  Monthly costs excl. rent, single person
-                </p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.overallExcludingRentSingle}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Groceries, one person</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.groceriesSingle}</p>
               </div>
             ) : null}
-            {g.costOfLiving.overallExcludingRentFamilyOfFour ? (
+            {g.costOfLiving.utilities ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-                  Monthly costs excl. rent, family of four
-                </p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.overallExcludingRentFamilyOfFour}</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Utilities, small apartment</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.utilities}</p>
               </div>
             ) : null}
             {g.costOfLiving.inexpensiveMeal ? (
@@ -155,16 +199,53 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.inexpensiveMeal}</p>
               </div>
             ) : null}
+            {g.costOfLiving.midRangeMealForTwo ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Mid-range dinner for two</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.midRangeMealForTwo}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.budgetModestSingle ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Modest monthly budget, single person</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.budgetModestSingle}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.budgetComfortableSingle ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Comfortable monthly budget, single person</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.budgetComfortableSingle}</p>
+              </div>
+            ) : null}
           </div>
           {g.costOfLiving.notes ? <p className="mt-5 text-sm text-slate-600">{g.costOfLiving.notes}</p> : null}
           <p className="mt-5 text-xs text-slate-400">
-            Source: {g.costOfLiving.sourceUrl ? (
+            Sources:{" "}
+            {g.costOfLiving.sourceUrl ? (
               <a href={g.costOfLiving.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
                 {g.costOfLiving.sourceName}
               </a>
             ) : (
               g.costOfLiving.sourceName
-            )}, as of {g.costOfLiving.asOf}. Cost-of-living figures are estimates that shift with the season and the
+            )}
+            {g.costOfLiving.secondarySourceName ? (
+              <>
+                {" and "}
+                {g.costOfLiving.secondarySourceUrl ? (
+                  <a
+                    href={g.costOfLiving.secondarySourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand hover:underline"
+                  >
+                    {g.costOfLiving.secondarySourceName}
+                  </a>
+                ) : (
+                  g.costOfLiving.secondarySourceName
+                )}
+              </>
+            ) : null}
+            , as of {g.costOfLiving.asOf}. Cost-of-living figures are estimates that shift with the season and the
             neighbourhood — treat them as a starting point, not a quote.
           </p>
         </div>
@@ -201,8 +282,23 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         </div>
       </Section>
 
+      {/* LOCAL DISHES */}
+      {g.localDishes?.length ? (
+        <Section>
+          <SectionHead eyebrow="Eat" title="Local dishes to try" />
+          <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+            {g.localDishes.map((d, i) => (
+              <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+                <h3 className="font-semibold text-slate-900">{d.name}</h3>
+                <p className="mt-2 text-sm text-slate-600">{d.description}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
       {/* PLACES TO EAT */}
-      <Section>
+      <Section alt>
         <SectionHead eyebrow="Eat" title="Best places to eat" />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToEat.map((p, i) => (
@@ -218,7 +314,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       </Section>
 
       {/* NATIONAL SYMBOLS */}
-      <Section alt>
+      <Section>
         <SectionHead eyebrow="National symbols" title="Anthem, motto and pledge" />
         <div className="mx-auto max-w-3xl space-y-5">
           {g.symbols.motto ? (
