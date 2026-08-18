@@ -46,6 +46,22 @@ export type Experience = { title: string; description: string };
 export type PlaceToEat = { name: string; description: string; area?: string };
 export type LocalDish = { name: string; description: string };
 
+export type Coordinates = {
+  lat: number;
+  lng: number;
+  display: string; // human-readable, e.g. "17.06°N, 61.80°W"
+};
+
+// A real, appropriately-licensed photo — self-hosted under /public, never
+// hotlinked. Any non-public-domain license (e.g. Creative Commons) requires
+// a visible credit line on the page, which `credit`/`creditUrl` supply.
+export type CountryPhoto = {
+  src: string;
+  alt: string;
+  credit: string;
+  creditUrl?: string;
+};
+
 export type NationalSymbols = {
   motto?: string;
   anthem: {
@@ -78,6 +94,8 @@ export type CountryGuide = {
   name: string;
   tagline: string;
   overview: string;
+  photo?: CountryPhoto;
+  coordinates?: Coordinates;
   demographics: Demographics;
   costOfLiving: CostOfLiving;
   placesToSee: PlaceToSee[];
@@ -95,6 +113,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     tagline: "365 beaches, a working Georgian dockyard, and the Caribbean's biggest frigate bird colony.",
     overview:
       "Antigua and Barbuda is a two-island nation in the Eastern Caribbean: Antigua, the larger and more developed island, built around sailing, historic English Harbour and its beaches; and Barbuda, low-lying, sparsely populated and largely undeveloped, known for pink sand and seabirds.",
+    photo: {
+      src: "/destinations/antigua-and-barbuda.jpg",
+      alt: "Nelson's Dockyard, English Harbour, Antigua",
+      credit: "Dr. Thomas Liptak, CC BY 4.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_English_Harbour_Nelson's_Dockyard_2.jpg",
+    },
+    coordinates: { lat: 17.0608, lng: -61.7964, display: "17.06°N, 61.80°W" },
     demographics: {
       population: {
         value: "≈94,200 (2025 estimate; some sources put it as high as ≈105,000)",

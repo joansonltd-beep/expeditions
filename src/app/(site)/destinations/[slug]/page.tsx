@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead } from "@/components/ui";
@@ -38,12 +39,19 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const hasCsmePage = CSME_COUNTRIES.some((c) => c.slug === g.slug);
   const others = COUNTRY_GUIDES.filter((x) => x.slug !== g.slug);
 
+  const googleMapsUrl = g.coordinates
+    ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}`
+    : undefined;
+
   const placeJsonLd = {
     "@context": "https://schema.org",
     "@type": "Country",
     "@id": `${SITE_URL}/destinations/${g.slug}#country`,
     name: g.name,
     description: g.overview,
+    ...(g.coordinates
+      ? { geo: { "@type": "GeoCoordinates", latitude: g.coordinates.lat, longitude: g.coordinates.lng } }
+      : {}),
   };
 
   return (
@@ -65,6 +73,32 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               ← All country guides
             </Link>
           </p>
+
+          {g.photo ? (
+            <figure className="mt-5">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-2xl">
+                <Image
+                  src={g.photo.src}
+                  alt={g.photo.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <figcaption className="mt-2 text-xs text-slate-400">
+                {g.photo.alt}
+                {" — "}
+                {g.photo.creditUrl ? (
+                  <a href={g.photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {g.photo.credit}
+                  </a>
+                ) : (
+                  g.photo.credit
+                )}
+              </figcaption>
+            </figure>
+          ) : null}
 
           <p className="mt-5 text-lg text-slate-600">{g.overview}</p>
 
@@ -101,6 +135,24 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Independence</p>
                 <p className="mt-1 text-slate-700">{g.demographics.independence}</p>
+              </div>
+            ) : null}
+            {g.coordinates ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Coordinates</p>
+                <p className="mt-1 text-slate-700">
+                  {g.coordinates.display}
+                  {googleMapsUrl ? (
+                    <a
+                      href={googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-1.5 text-xs font-medium text-brand hover:underline"
+                    >
+                      (view on Google Maps)
+                    </a>
+                  ) : null}
+                </p>
               </div>
             ) : null}
             <div>
