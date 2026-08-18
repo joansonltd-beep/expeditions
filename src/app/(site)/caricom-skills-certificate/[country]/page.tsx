@@ -5,6 +5,7 @@ import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
+import { getCountryGuide } from "@/lib/countryGuideData";
 
 export function generateStaticParams() {
   return CSME_COUNTRIES.map((c) => ({ country: c.slug }));
@@ -42,6 +43,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
   const documents = d?.documents ?? CSME_DOCUMENTS;
   const hasCountryDocs = Boolean(d?.documents);
   const others = CSME_COUNTRIES.filter((x) => x.slug !== c.slug);
+  const countryGuide = getCountryGuide(c.slug);
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -71,6 +73,15 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
               ← All countries
             </Link>
           </p>
+          {countryGuide ? (
+            <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+              Want the bigger picture first?{" "}
+              <Link href={`/destinations/${countryGuide.slug}`} className="font-semibold text-brand hover:underline">
+                Read the {c.name} guide →
+              </Link>{" "}
+              — cost of living, places to see, food and more.
+            </div>
+          ) : null}
           {c.fullFreeMovement ? (
             <div className="mt-5 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
               {c.name} began <strong>full free movement</strong> on 1 October 2025. Its nationals can live and work in

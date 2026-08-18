@@ -14,6 +14,7 @@ const RELOCATE: NavItem[] = [
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "Guides" },
+  { href: "/destinations", label: "Destinations" },
 ];
 
 const TRAVEL: NavItem[] = [

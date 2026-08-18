@@ -1,0 +1,280 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Section, PageHeader, SectionHead } from "@/components/ui";
+import { Icon } from "@/components/icons";
+import { COUNTRY_GUIDES, getCountryGuide } from "@/lib/countryGuideData";
+import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { SITE_URL } from "@/lib/siteUrl";
+
+export function generateStaticParams() {
+  return COUNTRY_GUIDES.map((g) => ({ slug: g.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const g = getCountryGuide(slug);
+  if (!g) return { title: "Caribbean Country Guide" };
+  return {
+    title: `${g.name} Travel & Relocation Guide`,
+    description: `What to expect in ${g.name}: cost of living, places to see, things to do, where to eat, demographics and national symbols.`,
+    keywords: [
+      `cost of living in ${g.name}`,
+      `things to do in ${g.name}`,
+      `moving to ${g.name}`,
+      `${g.name} demographics`,
+      `${g.name} national anthem`,
+      `places to visit in ${g.name}`,
+    ],
+    alternates: { canonical: `/destinations/${g.slug}` },
+  };
+}
+
+export default async function CountryGuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const g = getCountryGuide(slug);
+  if (!g) notFound();
+
+  const hasCsmePage = CSME_COUNTRIES.some((c) => c.slug === g.slug);
+  const others = COUNTRY_GUIDES.filter((x) => x.slug !== g.slug);
+
+  const placeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Country",
+    "@id": `${SITE_URL}/destinations/${g.slug}#country`,
+    name: g.name,
+    description: g.overview,
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }} />
+
+      <PageHeader
+        icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
+        title={g.name}
+        crumb={g.name}
+        intro={g.tagline}
+      />
+
+      {/* OVERVIEW + DEMOGRAPHICS */}
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm">
+            <Link href="/destinations" className="font-semibold text-brand hover:underline">
+              ← All country guides
+            </Link>
+          </p>
+
+          <p className="mt-5 text-lg text-slate-600">{g.overview}</p>
+
+          <div className="mt-6 grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:grid-cols-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Capital</p>
+              <p className="mt-1 text-slate-700">{g.demographics.capital}</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Population</p>
+              <p className="mt-1 text-slate-700">
+                {g.demographics.population.value}
+                {g.demographics.population.sourceUrl ? (
+                  <a
+                    href={g.demographics.population.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-1.5 text-xs font-medium text-brand hover:underline"
+                  >
+                    ({g.demographics.population.sourceName})
+                  </a>
+                ) : (
+                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.population.sourceName})</span>
+                )}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Languages</p>
+              <p className="mt-1 text-slate-700">{g.demographics.officialLanguages.join(", ")}</p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Currency</p>
+              <p className="mt-1 text-slate-700">{g.demographics.currency}</p>
+            </div>
+            <div className="sm:col-span-2">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Government</p>
+              <p className="mt-1 text-slate-700">{g.demographics.government}</p>
+            </div>
+          </div>
+
+          {hasCsmePage ? (
+            <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
+              Planning to live and work in {g.name}?{" "}
+              <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
+                See how to apply for a CARICOM Skills Certificate in {g.name} →
+              </Link>
+            </div>
+          ) : null}
+        </div>
+      </Section>
+
+      {/* COST OF LIVING */}
+      <Section alt>
+        <SectionHead eyebrow="Budgeting" title="Cost of living" />
+        <div className="mx-auto max-w-3xl">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {g.costOfLiving.rentCityCenter1BR ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, city centre</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentCityCenter1BR}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.rentOutsideCityCenter1BR ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, outside centre</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentOutsideCityCenter1BR}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.overallExcludingRentSingle ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  Monthly costs excl. rent, single person
+                </p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.overallExcludingRentSingle}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.overallExcludingRentFamilyOfFour ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  Monthly costs excl. rent, family of four
+                </p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.overallExcludingRentFamilyOfFour}</p>
+              </div>
+            ) : null}
+            {g.costOfLiving.inexpensiveMeal ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Inexpensive restaurant meal</p>
+                <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.inexpensiveMeal}</p>
+              </div>
+            ) : null}
+          </div>
+          {g.costOfLiving.notes ? <p className="mt-5 text-sm text-slate-600">{g.costOfLiving.notes}</p> : null}
+          <p className="mt-5 text-xs text-slate-400">
+            Source: {g.costOfLiving.sourceUrl ? (
+              <a href={g.costOfLiving.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
+                {g.costOfLiving.sourceName}
+              </a>
+            ) : (
+              g.costOfLiving.sourceName
+            )}, as of {g.costOfLiving.asOf}. Cost-of-living figures are estimates that shift with the season and the
+            neighbourhood — treat them as a starting point, not a quote.
+          </p>
+        </div>
+      </Section>
+
+      {/* PLACES TO SEE */}
+      <Section>
+        <SectionHead eyebrow="See" title="Places to see" />
+        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+          {g.placesToSee.map((p, i) => (
+            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">{p.name}</h3>
+              <p className="mt-2 text-sm text-slate-600">{p.description}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* EXPERIENCES */}
+      <Section alt>
+        <SectionHead eyebrow="Do" title="Experiences to have" />
+        <div className="mx-auto grid max-w-3xl gap-5">
+          {g.experiences.map((e, i) => (
+            <div key={i} className="flex gap-4">
+              <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand text-sm font-bold text-white">
+                {i + 1}
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900">{e.title}</h3>
+                <p className="mt-1 text-sm text-slate-600">{e.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* PLACES TO EAT */}
+      <Section>
+        <SectionHead eyebrow="Eat" title="Best places to eat" />
+        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+          {g.placesToEat.map((p, i) => (
+            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">
+                {p.name}
+                {p.area ? <span className="ml-2 text-xs font-normal text-slate-400">{p.area}</span> : null}
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">{p.description}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* NATIONAL SYMBOLS */}
+      <Section alt>
+        <SectionHead eyebrow="National symbols" title="Anthem, motto and pledge" />
+        <div className="mx-auto max-w-3xl space-y-5">
+          {g.symbols.motto ? (
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">National motto</h3>
+              <p className="mt-2 text-slate-600">&ldquo;{g.symbols.motto}&rdquo;</p>
+            </div>
+          ) : null}
+
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 className="font-semibold text-slate-900">National anthem</h3>
+            <p className="mt-2 text-slate-600">
+              &ldquo;{g.symbols.anthem.title}&rdquo;
+              {g.symbols.anthem.lyricist ? <>, words by {g.symbols.anthem.lyricist}</> : null}
+              {g.symbols.anthem.composer ? <>, music by {g.symbols.anthem.composer}</> : null}
+              {g.symbols.anthem.adopted ? <>. Adopted {g.symbols.anthem.adopted}.</> : null}
+            </p>
+            {g.symbols.anthem.officialUrl ? (
+              <a
+                href={g.symbols.anthem.officialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-sm font-semibold text-brand hover:underline"
+              >
+                Listen / read more →
+              </a>
+            ) : null}
+          </div>
+
+          {g.symbols.pledge ? (
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">National pledge</h3>
+              <p className="mt-2 whitespace-pre-line text-slate-600">{g.symbols.pledge.text}</p>
+              <p className="mt-3 text-xs text-slate-400">Source: {g.symbols.pledge.sourceName}</p>
+            </div>
+          ) : null}
+        </div>
+      </Section>
+
+      {/* OTHER GUIDES */}
+      {others.length ? (
+        <Section>
+          <SectionHead eyebrow="More guides" title="Other country guides" />
+          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
+            {others.map((o) => (
+              <Link
+                key={o.slug}
+                href={`/destinations/${o.slug}`}
+                className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-brand hover:text-brand"
+              >
+                {o.name}
+              </Link>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+    </>
+  );
+}
