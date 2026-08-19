@@ -2680,6 +2680,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://www.nalis.gov.tt/resources/tt-content-guide/national-symbols/",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Trinidad and Tobago?",
+        a: "Trinidad and Tobago is moderate cost by Caribbean standards. Trinidad is more business-oriented and affordable for everyday items; Tobago is more tourism-focused and can be pricier in resort areas. A budget traveller can expect roughly US$70–120/day (guesthouse or budget hotel, local food like doubles and roti, public transport, few tours); mid-range roughly US$150–280/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$400+/day (an upscale Tobago resort or Trinidad boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent, and note that electricity here is genuinely cheap by Caribbean standards.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Trinidad and Tobago dollar (TTD). USD is sometimes accepted in tourist areas, but you'll usually get better value paying in TTD, and change often comes back in TTD. Major cards work in most hotels, larger restaurants and shops in Port of Spain, Chaguanas, San Fernando and the main Tobago towns, but smaller vendors, street food stalls and rural spots often prefer cash. ATMs are widely available in Port of Spain, major Trinidad towns, and in Tobago (Scarborough, Crown Point, Canaan).",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Trinidad and Tobago Immigration Division or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the islands?",
+        a: "Buses and \"maxi taxis\" (route taxis and minibuses on fixed routes) are inexpensive and common for getting between Port of Spain, Chaguanas, San Fernando and other Trinidad towns. Taxis are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and Trinidad's roads range from good highways to congested urban streets, while Tobago's are generally smaller and quieter. Short domestic flights connect Piarco (Trinidad) and Tobago, useful if you're splitting time between the islands, and passenger and vehicle ferries also run between the two; check schedules ahead either way.",
+      },
+      {
+        q: "What are the must-do experiences in Trinidad and Tobago?",
+        a: "Experience Carnival in Port of Spain in the pre-Lenten season, with calypso, soca, steelpan, costumes and street parties. Visit Pitch Lake in La Brea, one of the world's largest natural asphalt lakes, and walk its semi-solid surface. Go birdwatching at Asa Wright Nature Centre and the Caroni Bird Sanctuary, especially for scarlet ibis at sunset. Explore Tobago's beaches: Pigeon Point, the Nylon Pool sandbar, Buccoo Bay and Store Bay. Hike the Main Ridge Forest Reserve on Tobago, one of the oldest legally protected rainforest reserves in the world. Or just take in Port of Spain's street food and urban culture: doubles, roti, markets and music.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Crab and callaloo is the official national dish: callaloo stewed with coconut milk, okra and crab, traditionally the centrepiece of Sunday lunch. Doubles, curried chickpeas in fried bara, isn't the official national dish but is arguably eaten more often day to day, and is the country's best-known street food. Also look for roti, pelau (a one-pot rice dish with meat, pigeon peas, coconut milk and spices), and fresh grilled or curried fish, crab and lobster, especially in Tobago. Try the doubles stands and cookshops in Port of Spain, San Fernando and Chaguanas, beachside grills in Tobago (Store Bay, Buccoo), and mid-range to upscale restaurants on both islands.",
+      },
+      {
+        q: "Is Trinidad and Tobago safe for tourists?",
+        a: "Trinidad and Tobago can be visited safely, but it has higher crime rates in some urban areas, especially parts of Port of Spain and certain neighbourhoods. Major Tobago resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch, and includes Carnival season. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and prices are lowest. For Carnival, plan around the weeks leading up to Lent, usually February or early March. For beach time and diving with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. If you're visiting for Carnival, pack colourful clothes, comfortable shoes for dancing and walking, and protection from both sun and rain.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Trinidad and Tobago is highly multicultural: Afro-Trinbagonian, Indo-Trinbagonian, mixed, Chinese, Syrian-Lebanese, European and more, so respect local customs and religious practices. English is official, but you'll hear Trinidadian and Tobagonian English Creole daily, alongside Hindi, Spanish and other languages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers, tour guides and hotel staff welcome. During Carnival season, expect large crowds, loud music and a party atmosphere, so book accommodation and transport well in advance.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
 ];
