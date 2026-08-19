@@ -6,8 +6,14 @@ import { Icon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "On The Ground",
   description:
-    "Anonymous, crowdsourced surveys on what people actually earn and pay across CARICOM: salaries and utility costs, country by country. No name or email collected.",
-  keywords: ["CARICOM salary survey", "Caribbean utility costs", "Caribbean cost of living data", "On The Ground survey"],
+    "Anonymous, crowdsourced surveys on what people actually earn and pay across CARICOM: salaries, utility costs and rent, country by country. No name or email collected.",
+  keywords: [
+    "CARICOM salary survey",
+    "Caribbean utility costs",
+    "Caribbean rent survey",
+    "Caribbean cost of living data",
+    "On The Ground survey",
+  ],
   alternates: { canonical: "/survey" },
 };
 
@@ -23,6 +29,12 @@ const SURVEYS = [
     icon: "banknote" as const,
     title: "Utility Cost Survey",
     text: "What people actually pay for electricity, water, internet, mobile, cable and more, by household size and country.",
+  },
+  {
+    href: "/survey/rent",
+    icon: "home" as const,
+    title: "Rent Survey",
+    text: "What people actually pay in rent, by property type, area, and what's included, country by country.",
   },
 ];
 
@@ -40,7 +52,7 @@ export default function SurveyHubPage() {
         intro="Real numbers from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
       />
       <Section>
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SURVEYS.map((s) => (
             <Link
               key={s.href}

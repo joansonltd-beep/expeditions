@@ -1,6 +1,6 @@
 // Data for the "On The Ground" survey hub (/survey): the CARICOM salary
-// survey and the utility cost survey. Both are fully anonymous, no name or
-// email is collected. Country options are the 12 CSME free-movement
+// survey, utility cost survey, and rent survey. All fully anonymous, no name
+// or email is collected. Country options are the 12 CSME free-movement
 // countries this site already covers, kept in one place (csmeData.ts) so
 // the surveys' country lists can't drift from the rest of the site.
 
@@ -61,3 +61,44 @@ export const UTILITY_TYPES = [
   "Garbage/Waste Collection",
   "Other",
 ] as const;
+
+// --- rent survey ------------------------------------------------------------
+
+export const RENT_PROPERTY_TYPES = [
+  "Studio",
+  "1-bedroom apartment",
+  "2-bedroom apartment",
+  "3-bedroom apartment",
+  "4+ bedroom apartment",
+  "1-bedroom house",
+  "2-bedroom house",
+  "3-bedroom house",
+  "4+ bedroom house",
+  "Room",
+  "Townhouse",
+  "Other",
+] as const;
+
+// "None" is mutually exclusive with the rest; enforced in the form UI.
+export const RENT_INCLUDED_OPTIONS = [
+  "Electricity",
+  "Water",
+  "Internet",
+  "Cable/TV",
+  "Gas",
+  "Garbage collection",
+  "Security",
+  "Maintenance",
+  "None",
+  "Other",
+] as const;
+
+export const FURNISHED_OPTIONS = ["Fully furnished", "Partially furnished", "Unfurnished"] as const;
+
+export const AREA_TYPE_OPTIONS = ["Urban/City", "Suburban", "Rural"] as const;
+
+export const RENT_DURATION_OPTIONS = ["Less than 1 year", "1–2 years", "3–5 years", "6+ years"] as const;
+
+export const RENT_INCREASE_OPTIONS = ["Within the last year", "1–2 years ago", "3+ years ago", "It has never increased", "Not sure"] as const;
+
+export const RENT_REASONABLE_OPTIONS = ["Yes", "No", "Unsure"] as const;
