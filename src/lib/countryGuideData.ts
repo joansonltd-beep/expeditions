@@ -1543,8 +1543,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     coordinates: { lat: 13.9094, lng: -60.9789, display: "13.91°N, 60.98°W" },
     demographics: {
       population: {
-        value: "≈180,000–184,000 (2025–2026 estimate)",
-        sourceName: "UN World Population Prospects (2024 revision), via Worldometer",
+        value: "≈168,462 (CIA World Factbook, 2025 estimate) to ≈180,000–184,000 (UN World Population Prospects via Worldometer, 2025–2026 estimate) — the two source families diverge by roughly 7–9%",
+        sourceName: "CIA World Factbook / UN World Population Prospects (2024 revision), via Worldometer",
         sourceUrl: "https://www.worldometers.info/world-population/saint-lucia-population/",
       },
       areaKm2: "≈617 km²",
@@ -1554,8 +1554,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
       government:
         "Unitary parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
-      medianAge: "≈33.1 years (2021 census figure) to ≈35.1 years (2026 estimate), depending on source",
-      ageStructure: "0–14 years: ≈24.1%. 15–64 years: ≈67.3%. 65 years and over: ≈8.6%.",
+      medianAge: "≈40.4 years (CIA World Factbook, 2025 estimate; male 38.4, female 40.9) — other aggregators put it lower, around 35 years",
+      ageStructure: "0–14 years: ≈17.9%. 15–64 years: ≈66.7%. 65 years and over: ≈15.4%. (CIA World Factbook, 2025 estimate)",
       ethnicComposition: {
         value: "Black/African descent ≈85.3%, mixed ≈10.9%, Indo-Caribbean ≈2.2%, White ≈0.6%, Indigenous ≈0.6%",
         sourceName: "2010 census",
@@ -1569,11 +1569,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       groceriesSingle: "≈US$200–350/month for basics (rice, bread, chicken, beef, eggs, local produce)",
       inexpensiveMeal: "≈US$7–10",
       midRangeMealForTwo: "≈US$55, more at beachfront or resort restaurants in Rodney Bay",
-      utilities: "≈US$115/month for electricity, water, heating/cooling and garbage collection on an 85m² apartment, plus roughly US$43/month internet",
+      utilities: "≈US$90–160/month for electricity alone without heavy AC use, ≈US$160–300+/month with regular AC, plus roughly US$15–30/month water and US$35–70/month internet",
       budgetModestSingle: "≈US$1,500–2,000/month all-in (excluding-rent estimate of ≈US$883–2,500 plus rent)",
       budgetComfortableSingle: "≈US$2,500–3,500/month all-in",
       notes:
-        "Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
+        "A Global Citizen Solutions \"basic utilities\" bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia's utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use — treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/st-lucia-living-cost/",
       asOf: "August 2026",
@@ -1604,8 +1604,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A short, steep community-run trail above Soufrière with some of the best panoramic Piton views on the island, plus local history and plant life along the way.",
       },
       {
-        name: "Anse Chastanet & Anse Mamin",
-        description: "A pair of beaches near Soufrière backed by rainforest and reef, popular for snorkelling and diving right off the sand.",
+        name: "Sugar Beach",
+        description: "A white-sand beach nestled directly between Gros Piton and Petit Piton, among the most photographed spots in the Caribbean.",
+      },
+      {
+        name: "Anse Chastanet, Anse Mamin & Anse Cochon",
+        description: "A trio of beaches near Soufrière backed by rainforest and reef, popular for snorkelling and diving right off the sand.",
       },
       {
         name: "Castries Central Market",
@@ -1640,6 +1644,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         title: "Sailing or a catamaran trip to the Pitons",
         description: "A popular way to see the Pitons and Soufrière coastline from the water, often combined with snorkelling stops.",
+      },
+      {
+        title: "Rainforest Adventures aerial tram and zipline",
+        description: "A canopy tour above the rainforest near Chassin/Babonneau in the island's northeast, combining an open-air aerial tram, ziplines and nature trails.",
       },
     ],
     localDishes: [
