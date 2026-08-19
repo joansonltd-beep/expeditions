@@ -18,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/cruises",
     "/travel-visas",
     "/insurance",
+    "/survey",
     "/about",
     "/policies",
   ];

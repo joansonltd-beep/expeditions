@@ -27,7 +27,10 @@ const TRAVEL: NavItem[] = [
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
-const AFTER: NavItem[] = [{ href: "/about", label: "About" }];
+const AFTER: NavItem[] = [
+  { href: "/survey", label: "Salary Survey" },
+  { href: "/about", label: "About" },
+];
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
