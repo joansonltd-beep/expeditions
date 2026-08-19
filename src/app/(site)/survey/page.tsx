@@ -38,9 +38,12 @@ const SURVEYS = [
   },
 ];
 
-// TODO: replace with each survey's published Google Sheet "view" link once
-// available, then this whole section can render unconditionally.
-const RESULTS_LINKS: { label: string; href: string }[] = [];
+// Viewer-only Google Sheet links (confirmed, not edit access).
+const RESULTS_LINKS: { label: string; href: string }[] = [
+  { label: "Salary results", href: "https://docs.google.com/spreadsheets/d/1cqnWhi-waJdrMxG2tsrtbW8EhxUaAHfz09d7xACtGt8/edit?usp=sharing" },
+  { label: "Utility cost results", href: "https://docs.google.com/spreadsheets/d/1JAi0v5_Fw-3bNjUDic0ucu7VccxWCKB_D_yM5nHp9r0/edit?usp=sharing" },
+  { label: "Rent results", href: "https://docs.google.com/spreadsheets/d/1Q_0Cv3_jrVuZLZZRlMBjn5_x5Xfn82oxPPObcodYRwg/edit?usp=sharing" },
+];
 
 export default function SurveyHubPage() {
   return (
