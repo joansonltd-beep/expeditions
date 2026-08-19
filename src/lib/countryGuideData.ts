@@ -2638,6 +2638,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // Suriname; left out rather than guessed, same policy as Belize and
       // Guyana.
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Suriname?",
+        a: "Suriname is very affordable by regional standards, especially for housing and local food, one of the least expensive countries in South America and the Caribbean. A budget traveller can expect roughly US$50–90/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$100–180/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several guided tours); luxury US$250+/day (an upscale Paramaribo hotel or interior eco-lodge, private guides, fine dining). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Surinamese dollar (SRD), which has been volatile against the US dollar in recent years; USD is often quoted informally. USD is accepted in some tourist areas and for larger transactions, but many smaller vendors and rural spots prefer SRD. Major cards work in some hotels, larger restaurants and shops in Paramaribo, but cash is standard outside the capital and for most tours. ATMs are available in Paramaribo and a few larger towns, but limited or nonexistent in the interior, so carry enough cash before heading inland.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Visa rules vary widely by nationality: some, including certain CARICOM and EU passport holders, may get visa-free or simplified entry, while others need to arrange a visa or e-visa in advance. You'll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Suriname's Immigration Service or your nearest Surinamese embassy before travelling.",
+      },
+      {
+        q: "How do I get around the country?",
+        a: "Minibuses and taxis are common in and around Paramaribo and between major towns, inexpensive but often crowded. River boats are essential for reaching many interior communities, Maroon villages and some eco-lodges, usually arranged by a tour operator. Small domestic airlines link Paramaribo's Johan Adolf Pengel International Airport with interior airstrips, important for remote eco-tourism. Rental cars are available in Paramaribo; driving is on the left, unusually for a former Dutch colony, and a 4x4 is required for many interior roads. Guided, organised tours are the norm for Brownsberg, the Central Suriname Nature Reserve, and Maroon or Indigenous village visits, with transport, guides and permits usually included.",
+      },
+      {
+        q: "What are the must-do experiences in Suriname?",
+        a: "Explore Paramaribo's UNESCO historic inner city: Dutch colonial wooden architecture, the Waterkant riverfront, markets and historic buildings. Hike and birdwatch in Brownsberg Nature Park, with waterfalls and viewpoints over the Brokopondo Reservoir. Take a multi-day expedition into the Central Suriname Nature Reserve's pristine rainforest, or visit Maroon villages along the Suriname and Commewijne rivers. Tour former plantations in Commewijne, like Peperpot, now nature parks and heritage sites, or join a seasonal turtle nesting tour at Galibi to see leatherbacks come ashore.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Pom is Suriname's best-known festive dish: grated pomtajer root baked with chicken or fish, citrus and spices into a casserole, central to birthdays and celebrations. Also look for roti (curry chicken, goat or potato in flatbread, reflecting the Hindustani community), nasi goreng and bami (Indonesian-style fried rice and noodles, reflecting the Javanese community), and pindasoep, a West African-rooted peanut soup. Try the local eateries and street stalls in Paramaribo, the Waterkant and central market area, and the interior eco-lodges, which usually serve traditional meals.",
+      },
+      {
+        q: "Is Suriname safe for tourists?",
+        a: "Suriname can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Paramaribo. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government's current travel advisory and talk to your tour operator about current conditions.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "Suriname has two dry seasons and two wet seasons rather than the single Caribbean dry/hurricane pattern. The long dry season (August–November) is often considered best overall for interior travel and wildlife; the short dry season (February–April) is also good, with more roads and trails accessible. May–July and December–January are wetter, and some roads, trails or lodges may be harder to reach or reduce operations. For Brownsberg, the Central Suriname Nature Reserve and river trips, August–November and February–April are usually best.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, with long sleeves and trousers for jungle areas to help with insects and sun. Bring sturdy, closed-toe shoes for hiking and sandals for town or riverside, plus strong insect repellent, sunscreen, a hat and sunglasses. A rain jacket or poncho and quick-dry clothes help for boat trips and rainforest. Pack a basic first-aid kit, your personal medications and hand sanitiser, since medical facilities are limited in the interior; for Brownsberg or serious hikes, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Suriname is highly multicultural: Hindustani, Maroon, Creole, Javanese, mixed, Indigenous, Chinese, European and more, so respect local customs and religious practices. Dutch is official, but you'll hear Sranan Tongo, Hindi, Javanese, Chinese and Indigenous languages daily; English is spoken in many tourist contexts but not universally. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide's advice on behaviour in villages and protected areas.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
 ];
