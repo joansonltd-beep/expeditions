@@ -1387,7 +1387,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "Worldometer / World Population Review",
         sourceUrl: "https://www.worldometers.info/world-population/saint-kitts-and-nevis-population/",
       },
-      areaKm2: "≈269 km² — Saint Kitts ≈168 km², Nevis ≈93 km² — the smallest sovereign state in the Americas by area",
+      areaKm2: "≈261–269 km² depending on source (Saint Kitts ≈176 km², Nevis ≈93 km²) — the smallest sovereign state in the Americas by area",
       independence: "19 September 1983, from the United Kingdom",
       capital: "Basseterre, on Saint Kitts",
       officialLanguages: ["English (official)"],
@@ -1398,21 +1398,23 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         value: "African descent ≈93%, mixed ≈3%, White ≈2%, East Indian ≈1.5%, other ≈0.6%",
         sourceName: "CIA World Factbook (2001 census, most recent available)",
       },
+      medianAge: "≈36.5 years",
+      ageStructure: "0–14 years: ≈18–19%. 15–64 years: ≈68%. 65 years and over: ≈12–13%.",
       urbanizationNote:
         "Most people live on St. Kitts, concentrated around Basseterre. Nevis, reached by a short ferry, is smaller and more residential, centred on Charlestown.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$590–650/month outside the city centre",
-      rentPremium1BR: "≈US$700–900/month in Basseterre or Frigate Bay",
-      groceriesSingle: "≈US$270/month",
-      inexpensiveMeal: "≈US$10–18",
-      midRangeMealForTwo: "≈US$80",
-      utilities: "≈US$85–90/month for electricity, water and garbage",
-      budgetModestSingle: "≈US$1,100–1,400/month all-in",
-      budgetComfortableSingle: "≈US$1,800–2,500/month all-in",
+      rentTypical1BR: "≈US$600–900/month outside Basseterre or in a modest unit",
+      rentPremium1BR: "≈US$900–1,800/month in Basseterre, Frigate Bay, South Friars, or on Nevis near Charlestown/Pinney's Beach",
+      groceriesSingle: "≈US$220–350/month, more if relying on imported goods",
+      inexpensiveMeal: "≈US$10–22",
+      midRangeMealForTwo: "≈US$90",
+      utilities: "≈US$150–250/month for electricity alone (up to US$500+ with heavy AC use), plus roughly US$18–48 water and US$50–130 internet",
+      budgetModestSingle: "≈US$1,700–2,500/month all-in",
+      budgetComfortableSingle: "≈US$2,500–4,500/month all-in",
       notes:
-        "Numbeo's Basseterre listing is very thin — just 8 price entries from 2 contributors — so these figures lean more on relocation and expat cost-of-living guides. A monthly public transport pass runs roughly US$80.",
-      sourceName: "Global Citizen Solutions cost-of-living data, cross-checked against Numbeo",
+        "Electricity here runs notably higher than almost anywhere else in the Caribbean — St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. Numbeo's Basseterre listing is also very thin — just 8 price entries from 2 contributors — so these figures lean more on relocation and expat cost-of-living guides. A premium lifestyle — Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use — can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
+      sourceName: "Global Citizen Solutions cost-of-living data, cross-checked against Numbeo and other relocation guides",
       sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
       asOf: "August 2026",
     },
@@ -1424,6 +1426,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "The St. Kitts Scenic Railway",
         description: "A narrow-gauge railway built in 1912–1926 to move sugar cane, now a 30-mile tourist rail journey around the island's coastline and countryside.",
+      },
+      {
+        name: "Romney Manor",
+        description: "A 17th-century plantation estate, once owned by ancestors of Thomas Jefferson, with six acres of botanical gardens built around a Saman tree estimated at over 350 years old.",
+      },
+      {
+        name: "Timothy Hill",
+        description: "A viewpoint on St. Kitts's south-east peninsula where the Atlantic and Caribbean sides of the island are both visible at once.",
       },
       {
         name: "Nevis Peak",
@@ -1438,8 +1448,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A volcanic black-sand beach on the north coast, where the Caribbean and Atlantic meet.",
       },
       {
-        name: "Charlestown, Nevis",
-        description: "Nevis's small Georgian-era capital, with historic buildings and a slower pace than Basseterre.",
+        name: "Pinney's Beach, Nevis",
+        description: "A long, palm-fringed beach on Nevis's west coast lined with casual bars — one of the region's classic beach settings.",
+      },
+      {
+        name: "Charlestown & the Alexander Hamilton Museum",
+        description: "Nevis's small Georgian-era capital. The Museum of Nevis History sits on the site where US Founding Father Alexander Hamilton is believed to have been born, around 1754 — historians still debate the exact year.",
       },
     ],
     experiences: [
