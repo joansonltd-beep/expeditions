@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     "Caribbean accommodation",
     "hotels in Trinidad and Tobago",
     "short stay near Piarco airport",
-    "Caribbean travel agent",
     "where to stay when relocating to another Caribbean island",
+    "temporary housing while relocating CARICOM",
   ],
   alternates: { canonical: "/accommodations" },
 };

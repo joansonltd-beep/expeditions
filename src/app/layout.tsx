@@ -20,17 +20,15 @@ export const metadata: Metadata = {
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
   title: {
-    default: "CARICOM Relocation & Caribbean Travel Agent | Expeditions With Jo",
+    default: "CARICOM Relocation Specialists | Expeditions With Jo",
     template: "%s · Expeditions With Jo",
   },
   description:
-    "Caribbean travel agent and CARICOM relocation specialists. Step-by-step CSME Skills Certificate help so you can live and work on another island, plus bank accounts, business setup, flights, stays and transfers.",
+    "CARICOM relocation specialists. Step-by-step CSME Skills Certificate help so you can live and work on another island, plus bank accounts, business setup, and travel arranged when your move needs it.",
   keywords: [
     "CARICOM",
     "CARICOM relocation",
-    "Caribbean travel agent",
-    "Caribbean travel",
-    "travel agent Trinidad and Tobago",
+    "Caribbean relocation services",
     "jobs in the Caribbean",
     "work in the Caribbean",
     "live and work in the Caribbean",
@@ -43,21 +41,20 @@ export const metadata: Metadata = {
     "relocate to Grenada",
     "open bank account Trinidad",
     "register business Trinidad and Tobago",
-    "Caribbean relocation services",
   ],
   openGraph: {
     type: "website",
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "CARICOM Relocation & Caribbean Travel Agent | Expeditions With Jo",
+    title: "CARICOM Relocation Specialists | Expeditions With Jo",
     description:
       "Move between CARICOM islands with confidence: CSME Skills Certificates, bank accounts, business setup and settling-in support, plus travel when you need it.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Expeditions With Jo — CARICOM relocation services" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CARICOM Relocation & Caribbean Travel Agent | Expeditions With Jo",
+    title: "CARICOM Relocation Specialists | Expeditions With Jo",
     description: "CSME Skills Certificates, banking, business setup and settling-in support for moves between CARICOM islands.",
     images: ["/og.png"],
   },

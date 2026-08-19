@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   keywords: [
     "Caribbean cruises",
     "book a cruise from Trinidad",
-    "Caribbean travel agent",
     "Caribbean cruise packages",
     "first time cruise advice",
   ],
@@ -24,7 +23,7 @@ export default async function CruisesPage() {
     <ServicePage
       service={service}
       ctaTitle="Let us plan your cruise"
-      ctaText="Tell us your dream destination and budget, and we will find the right sailing for you."
+      ctaText="Tell us where you would like to go and your budget, and we will find the right sailing for you."
     />
   );
 }

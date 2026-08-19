@@ -15,8 +15,8 @@ export default async function TransfersPage() {
   return (
     <ServicePage
       service={service}
-      ctaTitle="Travel with confidence, wherever you go"
-      ctaText="Add a transfer to your flight and stay for a complete, discounted travel package."
+      ctaTitle="One less thing to arrange on moving day"
+      ctaText="Add a transfer to your flight and stay so you are not figuring out a ride the moment you land."
     />
   );
 }

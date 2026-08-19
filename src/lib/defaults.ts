@@ -90,14 +90,14 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "travel",
     order: 1,
     shortBlurb:
-      "Affordable, reliable flights that suit your schedule and your budget, with the details handled for you.",
+      "Affordable, reliable flights for your move or a scouting trip beforehand, with the details handled for you.",
     cardFeatures: ["One-way or round-trip", "Baggage and special requests", "Senior and mobility support"],
     intro:
-      "Need a flight? We have got you covered. We help you find and book flights at great prices, no matter where you are headed.",
+      "Moving to another island, or need to visit before you relocate? We help you find and book flights at great prices, no matter where you are headed.",
     body: [
       {
         paragraphs: [
-          "Whether you are planning a quick trip, returning home, or attending something important, we will guide you to the best options that fit your budget and schedule. We handle the logistics so you do not have to. Just be ready to travel.",
+          "Whether it is the flight for your move itself, a scouting trip beforehand, or a quick visit back home, we will guide you to the best options that fit your budget and schedule. We handle the logistics so you do not have to.",
         ],
       },
       {
@@ -123,15 +123,15 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "travel",
     order: 2,
     shortBlurb:
-      "Hotels, Airbnb and short-stay apartments to match your comfort, location and budget, including our own room in Trinidad.",
+      "Hotels, Airbnb and short-stay apartments while you settle in or scout your new island, including our own room in Trinidad.",
     cardFeatures: ["Hotel and guesthouse bookings", "Airbnb and vacation rentals", "A Likkle Rest by Jo from $30 USD"],
     intro:
-      "Need a place to stay during your trip? We help you find and book the right accommodation, whether it is a hotel, an Airbnb, or a short-stay apartment.",
+      "Need somewhere to stay while you settle in, or for a scouting trip before you move? We help you find and book the right accommodation, whether it is a hotel, an Airbnb, or a short-stay apartment.",
     body: [
       {
         paragraphs: [
-          "We work with a range of options to match your comfort, location, and budget needs. Wherever you are headed, we will make sure your stay is smooth, affordable, and convenient.",
-          "For travellers visiting Trinidad, we personally offer a private Airbnb room through Expeditions With Jo (see below), available as one of several options based on your preferences, and the cheapest option available on the island.",
+          "We work with a range of options to match your comfort, location, and budget needs, whether you are staying a few nights while you get your bearings or a few weeks while your certificate and bank account come through.",
+          "For those settling in or visiting Trinidad, we personally offer a private Airbnb room through Expeditions With Jo (see below), available as one of several options based on your preferences, and the cheapest option available on the island.",
         ],
         note: "For more information, send an email with your itinerary to stays@expeditionswithjo.com or use the chat button.",
       },
@@ -149,7 +149,7 @@ export const DEFAULT_SERVICES: Service[] = [
       "Pre-booked, English-speaking drivers in over 100 cities through Welcome Pickups, plus local rides in Trinidad.",
     cardFeatures: ["Airport pickups and drop-offs", "Over 100 cities worldwide", "Door-to-door, no taxi lines"],
     intro:
-      "Travelling abroad and need a ride? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
+      "Landing on your new island, or just need a ride while you're there? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
     body: [
       {
         heading: "International airport transfers",
@@ -175,34 +175,28 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "travel",
     order: 4,
     shortBlurb:
-      "Honest advice on cruise lines and itineraries that match your style and budget, with booking handled end to end.",
+      "Honest advice on cruise lines and itineraries for a Caribbean trip, with booking handled end to end.",
     cardFeatures: ["Itinerary and cruise line advice", "First-time cruiser guidance", "Support before, during and after"],
     intro:
-      "There is nothing quite like the freedom of sailing away on a cruise. Unpack once, settle in, and wake up somewhere new every day. We make cruising simple and clear so you can focus on the adventure.",
+      "Relocation is the main thing we do, but if you also want to see the Caribbean by cruise, we can plan and book that too.",
     body: [
       {
-        heading: "Why choose a cruise?",
-        paragraphs: ["A cruise is more than a trip. It is a floating experience filled with relaxation, entertainment, and discovery. Imagine:"],
+        heading: "Why a cruise",
+        paragraphs: ["A cruise covers several islands without separate flights or hotels for each one:"],
         bullets: [
           "Caribbean beaches by day, fine dining by night",
           "Island hopping without worrying about multiple flights or hotels",
-          "Endless onboard activities for families, couples, or solo travellers",
+          "Onboard activities for families, couples, or solo travellers",
         ],
       },
       {
         heading: "What we do for you",
-        paragraphs: ["We are here to guide you from the very first idea to the moment you return home. With us, you will get:"],
+        paragraphs: ["From picking a line to the day you disembark, you will get:"],
         bullets: [
-          "Honest advice on cruise lines and itineraries that match your style and budget",
+          "Honest advice on cruise lines and itineraries that match your budget",
           "Smooth booking and travel coordination",
           "Tips and guidance for first-time cruisers",
-          "Ongoing support before, during, and after your trip",
-        ],
-      },
-      {
-        heading: "Ready to sail?",
-        paragraphs: [
-          "Whether you are dreaming of a quick Caribbean getaway, a family adventure at sea, or a once in a lifetime luxury voyage, we will help make it happen. Your next journey starts with the right cruise. Let us plan it together.",
+          "Support before, during, and after your trip",
         ],
       },
     ],
@@ -531,17 +525,17 @@ export const DEFAULT_POLICIES: PoliciesData = {
     {
       paragraphs: [
         "Effective Date: November 5, 2025",
-        "At Expeditions With Jo (the \"Company,\" \"we,\" \"us,\" or \"our\"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.expeditionswithjo.com (the \"Site\"), book expeditions, make purchases, or interact with our services. By using the Site or our services, you consent to the practices described in this policy.",
+        "At Expeditions With Jo (the \"Company,\" \"we,\" \"us,\" or \"our\"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.expeditionswithjo.com (the \"Site\"), book a service, make purchases, or interact with our services. By using the Site or our services, you consent to the practices described in this policy.",
         "This policy complies with applicable laws, including but not limited to the General Data Protection Regulation (GDPR) for EU residents, the California Consumer Privacy Act (CCPA) for California residents, the Gramm-Leach-Bliley Act (GLBA) for financial information handling, and relevant Trinidad and Tobago data protection regulations. We also adhere to Payment Card Industry Data Security Standards (PCI DSS) for secure payment processing to enable acceptance of Visa, Mastercard, and other major credit cards. Our payment processing is handled through Fygaro, integrated with First Citizens Bank's e-commerce gateway, which supports 3D Secure (3DS) authentication for enhanced transaction security. If you do not agree with this policy, please do not use the Site or our services.",
       ],
     },
     {
       heading: "1. Information We Collect",
-      paragraphs: ["We collect information to provide and improve our expedition booking services, process payments, and communicate with you. The types of information include:"],
+      paragraphs: ["We collect information to provide and improve our relocation and travel booking services, process payments, and communicate with you. The types of information include:"],
       bullets: [
         "Personal Information: Name, email address, phone number, mailing address, date of birth, and emergency contact details (collected during booking or registration).",
         "Payment Information: Credit/debit card details (e.g., card number, expiration date, CVV), billing address. Note: We do not store full card details on our servers; payment processing is handled securely by Fygaro via First Citizens Bank's PCI DSS-compliant gateway, including 3D Secure authentication where applicable.",
-        "Travel and Preference Information: Expedition preferences, dietary restrictions, medical conditions (if disclosed for safety), passport details (for international trips).",
+        "Relocation and Travel Information: CSME application and supporting documents, dietary or medical needs disclosed for safety on a booked trip, passport details (for international travel).",
         "Usage Data: IP address, browser type, device information, pages visited, and time spent on the Site (collected via cookies and analytics tools).",
         "Communication Data: Information you provide in inquiries, reviews, or support requests.",
       ],
@@ -552,9 +546,9 @@ export const DEFAULT_POLICIES: PoliciesData = {
       paragraphs: ["We use your information for legitimate business purposes, including:"],
       bullets: [
         "Processing bookings, payments, and refunds.",
-        "Communicating about your expeditions, updates, and promotions (with opt-out options).",
+        "Communicating about your application, booking, updates, and promotions (with opt-out options).",
         "Enhancing Site functionality and personalising your experience.",
-        "Ensuring safety and compliance (e.g., sharing emergency contacts if needed during trips).",
+        "Ensuring safety and compliance (e.g., sharing emergency contacts if needed during travel bookings).",
         "Analysing usage to improve services and prevent fraud.",
         "Complying with legal obligations, such as tax reporting or health/safety regulations for travel.",
       ],
@@ -564,10 +558,10 @@ export const DEFAULT_POLICIES: PoliciesData = {
       heading: "3. How We Share Your Information",
       paragraphs: ["We do not sell your personal information. We may share it in limited circumstances:"],
       bullets: [
-        "Service Providers: With trusted third parties for payment processing (Fygaro integrated with First Citizens Bank), email services, analytics, or travel logistics (e.g., airlines, guides). These providers are contractually obligated to protect your data and comply with PCI DSS where applicable.",
+        "Service Providers: With trusted third parties for payment processing (Fygaro integrated with First Citizens Bank), email services, analytics, or travel logistics (e.g., airlines, transfer operators). These providers are contractually obligated to protect your data and comply with PCI DSS where applicable.",
         "Legal Requirements: If required by law, subpoena, or to protect our rights, safety, or property.",
         "Business Transfers: In the event of a merger, acquisition, or sale of assets.",
-        "With Your Consent: For marketing partners or shared experiences (e.g., group trip photos, with opt-in).",
+        "With Your Consent: For marketing partners or shared experiences (e.g., client testimonials or photos, with opt-in).",
       ],
       note: "Under CCPA, California residents have the right to know about sales (none occur) or disclosures. For international users, data may be transferred to Trinidad and Tobago or other regions where we operate. We use appropriate safeguards, such as Standard Contractual Clauses (SCCs), for GDPR compliance.",
     },
