@@ -1059,9 +1059,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     coordinates: { lat: 6.8045, lng: -58.1553, display: "6.80°N, 58.16°W" },
     demographics: {
       population: {
-        value: "≈825,000–841,000 (2025–2026 estimate)",
-        sourceName: "Worldometer",
-        sourceUrl: "https://www.worldometers.info/world-population/guyana-population/",
+        value: "1,025,334 at end of 2025 — Guyana passed 1 million people for the first time, up from 956,044 a year earlier",
+        sourceName: "Guyana Bureau of Statistics (announced July 2026, World Population Day)",
+        sourceUrl: "https://kaieteurnewsonline.com/2026/07/13/guyanas-population-surpasses-1-million-chief-statistician/",
       },
       areaKm2: "≈214,970 km² — by far the largest CARICOM member, over 80% of it rainforest",
       independence: "26 May 1966, from the United Kingdom. Became a Cooperative Republic on 23 February 1970.",
@@ -1079,17 +1079,17 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "Most of the population lives on a narrow coastal strip, with Georgetown the largest city by far. The vast interior — savannah, rainforest, and the Rupununi region bordering Brazil — is sparsely populated, largely by Amerindian communities.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$400–700/month outside Georgetown or in ordinary residential areas",
-      rentPremium1BR: "≈US$1,000–2,500+/month in central Georgetown, driven up sharply by oil-industry demand",
-      groceriesSingle: "≈US$250–400/month",
-      inexpensiveMeal: "≈US$8–15",
-      midRangeMealForTwo: "≈US$40–80",
-      utilities: "≈US$100–250/month for electricity and water",
-      budgetModestSingle: "≈US$1,000–1,600/month all-in",
-      budgetComfortableSingle: "≈US$2,000–3,500+/month all-in",
+      rentTypical1BR: "≈US$300–600/month in Georgetown suburbs (Providence, Diamond, East Bank Demerara) or other towns (Linden, New Amsterdam)",
+      rentPremium1BR: "≈US$400–900/month for a standard central Georgetown unit, but specific reported cases show the top end running far higher — see notes",
+      groceriesSingle: "≈US$150–400/month, wide because local produce is very cheap but imports are not",
+      inexpensiveMeal: "≈US$3–15",
+      midRangeMealForTwo: "≈US$30–80",
+      utilities: "≈US$60–170/month for electricity, water and cooking gas combined (more with regular AC use)",
+      budgetModestSingle: "≈US$1,000–1,400/month all-in",
+      budgetComfortableSingle: "≈US$1,400–2,500/month all-in",
       notes:
-        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere in the world since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result — one widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. Numbeo has no listing for Georgetown, and most published cost-of-living figures lag behind this fast-moving market — treat any number here as a rough guide, not current fact, and expect central Georgetown to cost noticeably more than the ranges above suggest.",
-      sourceName: "Real-estate and relocation reporting on the post-2019 oil boom",
+        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result — one widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. Numbeo has no listing for Georgetown. A premium lifestyle — luxury rental in central Georgetown or an upscale suburb, frequent dining — can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
+      sourceName: "Relocation and expat cost-of-living guides, cross-checked against real-estate reporting on the oil boom",
       asOf: "August 2026",
     },
     placesToSee: [
@@ -1107,8 +1107,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Open savannah and working cattle ranches near the Brazilian border, for horseback riding, river safaris and wildlife tracking rather than beaches.",
       },
       {
-        name: "Georgetown's colonial architecture",
-        description: "18th- and 19th-century wooden buildings and the seawall protecting the below-sea-level capital, both distinctive among CARICOM capitals.",
+        name: "Georgetown's colonial architecture & Stabroek Market",
+        description: "18th- and 19th-century wooden buildings and the seawall protecting the below-sea-level capital, plus Stabroek Market, a landmark iron-and-steel market building with a clock tower, open since 1881.",
+      },
+      {
+        name: "Orinduik Falls",
+        description: "A wide, tiered waterfall on the Ireng River bordering Brazil, with warm, shallow pools over reddish jasper stone terraces — less dramatic in height than Kaieteur, more swimmable.",
       },
       {
         name: "Shell Beach",
@@ -1181,11 +1185,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         adopted: "1966, at independence",
         officialUrl: "https://en.wikipedia.org/wiki/Dear_Land_of_Guyana,_of_Rivers_and_Plains",
       },
-      pledge: {
-        text: "I pledge myself to honour always the Flag of Guyana, and to be loyal to my country, to be obedient to the laws of Guyana, to love my fellow citizens, and to dedicate my energies towards the happiness and prosperity of Guyana.",
-        sourceName:
-          "Widely and consistently reproduced across sources including Guyanese civic-education material; the exact wording could not be confirmed against a single official government page directly, but multiple independent sources agree without contradiction",
-      },
+      // Two materially different texts circulate online as Guyana's National
+      // Pledge, both attributed to the same secondary source without a clean
+      // official-government confirmation for either. Rather than guess which
+      // is correct, it's left out — same policy as Belize.
     },
     lastUpdated: "August 2026",
   },
