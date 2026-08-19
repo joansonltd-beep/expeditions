@@ -1034,7 +1034,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Irva Merle Baptiste-Blackett",
         composer: "Louis Arnold Masanto",
         adopted: "1974, at independence",
-        officialUrl: "https://www.oas.org/sap/peacefund/VirtualLibrary/NationalAnthems/GRENADA.pdf",
+        officialUrl: "https://en.wikipedia.org/wiki/Hail_Grenada",
       },
       pledge: {
         text: "I pledge allegiance to my flag and to the country for which it stands, with Liberty, Justice and Equality for all. I pledge also that I shall defend and uphold the Honour, Dignity and Laws and Institutions of my country.",
@@ -1358,7 +1358,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Hugh Sherlock",
         composer: "Robert Lightbourne (arranged by Mapletoft Poulle)",
         adopted: "1962, at independence",
-        officialUrl: "https://jis.gov.jm/information/anthem-pledge/",
+        officialUrl: "https://en.wikipedia.org/wiki/Jamaica,_Land_We_Love",
       },
       pledge: {
         text: "Before God and all mankind, I pledge the love and loyalty of my heart, the wisdom and courage of my mind, the strength and vigor of my body in the service of my fellow citizens, I promise to stand up for Justice, Brotherhood and Peace, to work diligently and creatively, to think generously and honestly, so that Jamaica may, under God, increase in beauty, fellowship and prosperity, and play her part in advancing the welfare of the whole human race.",
@@ -1521,6 +1521,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Kenrick Georges",
         composer: "Kenrick Georges",
         adopted: "1983, chosen by national competition out of 45 entries, days before independence",
+        officialUrl: "https://en.wikipedia.org/wiki/O_Land_of_Beauty!",
       },
       // No official National Pledge text found on the government's national
       // symbols pages (gov.kn's certificate has also expired, blocking direct
@@ -1886,7 +1887,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Phyllis Joyce McClean Punnett",
         composer: "Joel Bertram Miguel",
         adopted: "1979, at independence (written and first performed in 1967)",
-        officialUrl: "https://www.indexmundi.com/saint_vincent_and_the_grenadines/national_anthem.html",
+        officialUrl: "https://en.wikipedia.org/wiki/Saint_Vincent,_Land_so_Beautiful",
       },
       pledge: {
         text: "Land of my birth I pledge to thee, my loyalty and devotion, in all I think or say or do.",
