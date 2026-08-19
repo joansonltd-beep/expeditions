@@ -155,8 +155,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,100–1,700/month all-in (modest rental, local food, limited AC)",
       budgetComfortableSingle: "≈US$1,800–2,500+/month all-in (private rental in a desirable area, dining out regularly, a car)",
       notes:
-        "Rent estimates vary widely by source: crowd-sourced cost-of-living sites tend to skew toward premium, expat-oriented listings, while real-estate market data and relocation guides point to lower figures for ordinary local rentals. Both are shown above rather than picking one. Prices are quoted in US dollars since the EC dollar is pegged to it.",
-      sourceName: "Numbeo / Global Citizen Solutions and Wise (premium-end figures)",
+        "Expect rent to vary a lot depending on the type of listing: a premium, expat-oriented apartment costs noticeably more than an ordinary local rental in the same area, which is why the range above is wide. Prices are quoted in US dollars since the EC dollar is pegged to it.",
+      sourceName: "Numbeo, Global Citizen Solutions and Wise",
       sourceUrl: "https://www.globalcitizensolutions.com/the-cost-of-living-in-antigua-and-barbuda/",
       secondarySourceName: "TheLatinvestor real-estate market analysis and expat relocation guides (typical local figures)",
       secondarySourceUrl: "https://thelatinvestor.com/blogs/news/antigua-rents",
@@ -369,7 +369,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,900–2,500/month all-in (modest rental, limited AC, local food)",
       budgetComfortableSingle: "≈US$3,000–4,500+/month all-in (good location, car, dining out, more AC)",
       notes:
-        "Barbados runs more expensive than most of its CARICOM neighbours, especially housing on the south and west coasts and imported goods. A public bus pass runs roughly US$25–30/month, though coverage is limited. Luxury villas and premium rentals can run well beyond US$7,000/month. Crowd-sourced sites like Numbeo show notably lower rent figures for Barbados than current rental listings and relocation guides do; the ranges above lean on the latter, since Numbeo's Barbados sample is thin.",
+        "Barbados runs more expensive than most of its CARICOM neighbours, especially housing on the south and west coasts and imported goods. A public bus pass runs roughly US$25–30/month, though coverage is limited. Luxury villas and premium rentals can run well beyond US$7,000/month. Listed rents vary a lot by source, so treat the ranges above as a starting point rather than a fixed price.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Bridgetown",
       secondarySourceName: "current rental listings and relocation guides (typical and popular-parish figures)",
@@ -562,8 +562,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,800/month all-in (modest rental, local food, limited AC, public transport)",
       budgetComfortableSingle: "≈US$1,800–3,500/month all-in (good location, some dining out, AC, regular transport)",
       notes:
-        "Belize is generally cheaper than the Caribbean islands, but costs vary sharply between mainland towns and the tourist cayes: a beachfront rental on Ambergris Caye or Placencia can run US$3,500–6,000+ a month all-in. Numbeo's Belize City sample is very thin (about 75 price entries from 5 contributors), so the ranges above lean more on rental listings and relocation guides. A local bus fare runs roughly US$1–3, with fuel around US$1.30–1.70 per litre.",
-      sourceName: "Numbeo (thin sample for Belize City)",
+        "Belize is generally cheaper than the Caribbean islands, but costs vary sharply between mainland towns and the tourist cayes: a beachfront rental on Ambergris Caye or Placencia can run US$3,500–6,000+ a month all-in. A local bus fare runs roughly US$1–3, with fuel around US$1.30–1.70 per litre.",
+      sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Belize-City",
       secondarySourceName: "rental listings and expat relocation guides (typical mainland and caye figures)",
       asOf: "August 2026",
@@ -734,7 +734,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,600/month all-in (modest rental, local food, limited AC, public transport)",
       budgetComfortableSingle: "≈US$1,600–2,500/month all-in (good location, some dining out, AC, regular transport)",
       notes:
-        "Dominica is one of the more affordable Eastern Caribbean islands, with cheap local food but pricier imports and electricity. Numbeo doesn't carry data for Dominica, so these figures come from relocation and expat guides rather than a single crowd-sourced source. A premium lifestyle (luxury rental, frequent dining and tours) can run US$3,500–5,000+/month. Minibus fares run roughly US$0.50–1.50 per trip.",
+        "Dominica is one of the more affordable Eastern Caribbean islands, with cheap local food but pricier imports and electricity. A premium lifestyle (luxury rental, frequent dining and tours) can run US$3,500–5,000+/month. Minibus fares run roughly US$0.50–1.50 per trip.",
       sourceName: "Relocation and expat relocation guides",
       asOf: "August 2026",
     },
@@ -909,7 +909,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,300–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–3,500/month all-in",
       notes:
-        "Numbeo has no listing for St. George's, so these figures come from relocation and expat cost-of-living guides rather than a single crowd-sourced dataset, so treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle (a beachfront rental near Grand Anse, frequent dining and tours) can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
+        "Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle (a beachfront rental near Grand Anse, frequent dining and tours) can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
       asOf: "August 2026",
@@ -1088,8 +1088,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,000–1,400/month all-in",
       budgetComfortableSingle: "≈US$1,400–2,500/month all-in",
       notes:
-        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result. One widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. Numbeo has no listing for Georgetown. A premium lifestyle (luxury rental in central Georgetown or an upscale suburb, frequent dining) can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
-      sourceName: "Relocation and expat cost-of-living guides, cross-checked against real-estate reporting on the oil boom",
+        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result. One widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. A premium lifestyle (luxury rental in central Georgetown or an upscale suburb, frequent dining) can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
+      sourceName: "Relocation and expat cost-of-living guides, and real-estate reporting on the oil boom",
       asOf: "August 2026",
     },
     placesToSee: [
@@ -1237,7 +1237,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–3,000/month all-in",
       notes:
-        "Jamaica has one of the better-populated Numbeo listings in the region, so the rent, meal and utility figures above rest on a reasonably sized sample rather than a handful of entries. They're also cross-checked against relocation guides, which is why groceries and the overall budget bands sit a little higher here than a Numbeo-only estimate would suggest. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle (uptown Kingston or beachfront tourist area, frequent dining, high AC use) can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
+        "Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle (uptown Kingston or beachfront tourist area, frequent dining, high AC use) can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Kingston-Jamaica",
       asOf: "August 2026",
@@ -1413,8 +1413,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,700–2,500/month all-in",
       budgetComfortableSingle: "≈US$2,500–4,500/month all-in",
       notes:
-        "Electricity here runs notably higher than almost anywhere else in the Caribbean: St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. Numbeo's Basseterre listing is also very thin, just 8 price entries from 2 contributors, so these figures lean more on relocation and expat cost-of-living guides. A premium lifestyle (Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use) can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
-      sourceName: "Global Citizen Solutions cost-of-living data, cross-checked against Numbeo and other relocation guides",
+        "Electricity here runs notably higher than almost anywhere else in the Caribbean: St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. A premium lifestyle (Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use) can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
+      sourceName: "Global Citizen Solutions, Numbeo and other relocation guides",
       sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
       asOf: "August 2026",
     },
@@ -1759,7 +1759,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetComfortableSingle: "≈US$1,400–2,800/month all-in on St. Vincent; noticeably more to live in or near the Grenadines' resort islands",
       notes:
         "Numbeo's bundled \"basic utilities\" figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month. The higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
-      sourceName: "Numbeo (crowd-sourced) and livingcost.org",
+      sourceName: "Numbeo and livingcost.org",
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Saint+Vincent+And+The+Grenadines",
       asOf: "August 2026",
     },
