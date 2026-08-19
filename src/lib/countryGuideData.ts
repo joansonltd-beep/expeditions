@@ -1798,6 +1798,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // symbols pages (gov.kn's certificate has also expired, blocking direct
       // access). Left out rather than guessed.
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit St. Kitts and Nevis?",
+        a: "St. Kitts and Nevis is moderate to high cost by Caribbean standards, especially in prime tourist and expat areas like Frigate Bay, South Friars and Nevis's beachfront. A budget traveller can expect roughly US$100–150/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$200–350/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$500+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent, including why electricity runs notably higher here than most of the Caribbean.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in many hotels, restaurants and larger shops, but smaller vendors, bars and rural spots often prefer cash. ATMs are available in Basseterre, Frigate Bay and a few other spots on St. Kitts, but limited on Nevis.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with the St. Kitts and Nevis Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the islands?",
+        a: "Inexpensive local buses connect Basseterre with many villages and key sites, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in Basseterre; driving is on the left, and roads are generally good but narrow and hilly. A ferry runs between Basseterre and Charlestown on Nevis for day trips or an overnight stay; check current schedules before planning.",
+      },
+      {
+        q: "What are the must-do experiences in St. Kitts and Nevis?",
+        a: "Explore Brimstone Hill Fortress National Park, a UNESCO World Heritage Site and one of the best-preserved historic fortresses in the Caribbean. Relax on Frigate Bay or South Friars Bay, both with beach bars and water sports. Hike Nevis Peak with a guide for rainforest trails and panoramic views, or spend the day at Pinney's Beach, a long palm-fringed beach with casual bars and restaurants. Tour historic sugar-estate sites like Romney Manor, or take the ferry to Nevis for beaches, Charlestown and waterfront dining.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Stewed saltfish with spicy plantains, seasoned breadfruit and coconut dumplings is the current national dish, chosen by national poll in 2003. Goat water, a hearty goat stew with breadfruit and dumplings, was the dish it replaced and is still widely eaten. Also look for roti (curry chicken, goat or shrimp in flatbread), fried fish, grilled lobster and conch, and rice and peas with stewed chicken or fish and provision. Try the local bars and small restaurants in Basseterre, beach bars in Frigate Bay and South Friars, and the waterfront venues around Pinney's Beach on Nevis.",
+      },
+      {
+        q: "Is St. Kitts and Nevis safe for tourists?",
+        a: "The federation is generally considered relatively safe for tourists, with most visits trouble-free. Petty theft (bags, phones) can occur, especially on beaches or in crowded areas. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and prices are lowest. For beach time, hiking and exploring with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and light hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking Nevis Peak or a longer walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Kittitians and Nevisians are generally friendly and polite; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Life runs relatively relaxed, especially on Nevis, so build in patience for schedules.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
