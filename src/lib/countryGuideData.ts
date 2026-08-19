@@ -2295,186 +2295,6 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     lastUpdated: "August 2026",
   },
   {
-    slug: "trinidad-and-tobago",
-    name: "Trinidad and Tobago",
-    tagline: "The most populous, most industrialised CARICOM state, and home of the world's biggest Carnival, calypso, soca and steelpan.",
-    overview:
-      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
-    photo: {
-      src: "/destinations/trinidad-and-tobago.jpg",
-      alt: "Pitch Lake, La Brea, Trinidad",
-      credit: "Martina Jackson, CC BY-SA 3.0, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Pitch_Lake.JPG",
-    },
-    coordinates: { lat: 10.6918, lng: -61.2225, display: "10.69°N, 61.22°W" },
-    demographics: {
-      population: {
-        value: "≈1,410,000 (CIA World Factbook, 2025 estimate) to ≈1,513,000 (UN World Population Prospects via Worldometer, 2026 estimate)",
-        sourceName: "CIA World Factbook / Worldometer",
-        sourceUrl: "https://www.worldometers.info/world-population/trinidad-and-tobago-population/",
-      },
-      areaKm2: "≈5,128 km² total: Trinidad ≈4,768 km², Tobago ≈300 km²",
-      independence: "31 August 1962, from the United Kingdom; became a republic within the Commonwealth in 1976",
-      capital: "Port of Spain, on Trinidad",
-      officialLanguages: ["English (official)", "Trinidadian and Tobagonian English Creole (widely spoken); Trinidadian Hindustani and other heritage languages spoken by some communities"],
-      currency: "Trinidad and Tobago dollar (TTD)",
-      government:
-        "Parliamentary republic within the Commonwealth. A President is head of state; a Prime Minister heads the government.",
-      medianAge: "≈39.1 years (2025 estimate)",
-      ageStructure: "0–14 years: ≈18.7%. 15–64 years: ≈67.2%. 65 years and over: ≈14.1%.",
-      ethnicComposition: {
-        value: "East Indian descent ≈35.4%, African descent ≈34.2%, mixed (other) ≈15.3%, mixed African/East Indian ≈7.7%, other ≈1.3%, unspecified ≈6.2%",
-        sourceName: "2011 census",
-      },
-      urbanizationNote:
-        "Most of the population lives on Trinidad, concentrated in and around Port of Spain and the east-west corridor through Chaguanas, San Fernando and Arima. Tobago has a much smaller, more dispersed population centred on Scarborough and the southwest coast around Crown Point.",
-    },
-    costOfLiving: {
-      rentTypical1BR: "≈US$295–665/month outside Port of Spain's city centre (Numbeo)",
-      rentPremium1BR: "≈US$515–1,105/month in Port of Spain's city centre; Tobago's tourist zones (Crown Point, Canaan) run similarly high",
-      groceriesSingle: "≈US$220–400/month for basics; imported goods cost noticeably more than local produce",
-      inexpensiveMeal: "≈US$3–8 (doubles, roti, a plate from a \"cookshop\")",
-      midRangeMealForTwo: "≈US$30–60, more at upscale Port of Spain or Tobago resort restaurants",
-      utilities: "≈US$25–60/month for electricity without heavy AC, ≈US$60–120/month with regular AC use, plus roughly US$9–20/month water and US$5–15/month cooking gas",
-      budgetModestSingle: "≈US$1,200–1,800/month all-in",
-      budgetComfortableSingle: "≈US$1,800–2,800/month all-in",
-      notes:
-        "Electricity is genuinely cheap here relative to the rest of the Caribbean: T&TEC's residential rate runs around US$0.05–0.06/kWh, among the lowest in the world, because natural gas (Trinidad produces its own) is priced to the utility well below international market rates. That's a real, durable cost-of-living advantage over the smaller islands, not just a marketing line. The main expenses are imported goods, private healthcare and car ownership. San Fernando, Chaguanas and Arima run cheaper than Port of Spain; Tobago's tourist areas run closer to Port of Spain prices.",
-      sourceName: "Numbeo (Port of Spain)",
-      sourceUrl: "https://www.numbeo.com/cost-of-living/in/Port-Of-Spain",
-      asOf: "August 2026",
-    },
-    placesToSee: [
-      {
-        name: "Pitch Lake",
-        description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
-      },
-      {
-        name: "Caroni Bird Sanctuary",
-        description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
-      },
-      {
-        name: "Asa Wright Nature Centre",
-        description: "A rainforest reserve and former plantation house in Trinidad's Northern Range, known for birdwatching: hummingbirds at close range and dozens of other species on its trails.",
-      },
-      {
-        name: "Fort George",
-        description: "An 1804 hilltop fort overlooking Port of Spain and the Gulf of Paria, built by enslaved labourers led by Jonas Mohammed Bath. Its cannons never fired in anger, but the view over the capital is one of the best on the island.",
-      },
-      {
-        name: "Queen's Park Savannah",
-        description: "A large city park in Port of Spain ringed by the Magnificent Seven colonial-era mansions, and the epicentre of Carnival's biggest stage shows.",
-      },
-      {
-        name: "Main Ridge Forest Reserve",
-        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere: over 10,000 acres of rainforest across Tobago's central spine, with hiking trails and dense birdlife.",
-      },
-      {
-        name: "Pigeon Point Heritage Park",
-        description: "Tobago's best-known beach, fronted by a thatched-roof jetty that's become the island's signature image, with calm, clear water.",
-      },
-      {
-        name: "Buccoo Reef & Nylon Pool",
-        description: "A protected reef system off Tobago's southwest coast, rated among the world's best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
-      },
-      {
-        name: "Argyle Falls",
-        description: "Tobago's tallest waterfall at about 54 metres, dropping across three tiers near Roxborough, with natural pools for swimming after a short rainforest walk.",
-      },
-      {
-        name: "Fort King George",
-        description: "An 18th-century fort above Scarborough, Tobago, that changed hands between the British and French several times. Now home to the Tobago Museum, with cannons and colonial-era buildings intact.",
-      },
-    ],
-    experiences: [
-      {
-        title: "Trinidad Carnival",
-        description: "The pre-Lenten Carnival that Caribbean carnivals across the region take their cue from: soca, calypso, steelpan and elaborate costume bands filling Port of Spain for days.",
-      },
-      {
-        title: "Walking Pitch Lake",
-        description: "Guided walks across the semi-solid asphalt surface of the world's largest natural bitumen deposit, with a guide explaining the geology and the small freshwater pools that support unusual microbial life.",
-      },
-      {
-        title: "Scarlet ibis watching at Caroni Swamp",
-        description: "A sunset boat tour through mangrove channels to watch thousands of scarlet ibis return to roost, one of the most reliable big wildlife spectacles in the Caribbean.",
-      },
-      {
-        title: "Diving or snorkelling Buccoo Reef",
-        description: "Boat trips from Pigeon Point or Store Bay out to the reef and the Nylon Pool, usually combined as a half-day tour.",
-      },
-      {
-        title: "Hiking Main Ridge Forest Reserve",
-        description: "Trails through Tobago's rainforest interior, including routes to Argyle Falls, with a good chance of spotting endemic and migratory birds.",
-      },
-      {
-        title: "Doubles at dawn",
-        description: "Trinidad's street-food ritual: curried channa in fried bara, bought from a stand that's often only open in the early morning, eaten standing up.",
-      },
-    ],
-    localDishes: [
-      {
-        name: "Crab and callaloo",
-        description: "The national dish: callaloo (dasheen leaf) stewed with coconut milk, okra and crab, traditionally the centrepiece of Sunday lunch.",
-      },
-      {
-        name: "Doubles",
-        description: "Trinidad's iconic street food, not the official national dish but arguably more eaten day to day: curried chickpeas (channa) between two pieces of fried flatbread (bara), dressed with chutneys and pepper sauce.",
-      },
-      {
-        name: "Roti",
-        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato: a staple lunch across both islands, reflecting the country's large Indo-Trinidadian population.",
-      },
-      {
-        name: "Pelau",
-        description: "A one-pot rice dish with meat (often chicken), pigeon peas and coconut milk, browned with caramelised sugar: an everyday dish and a Carnival/liming staple.",
-      },
-    ],
-    placesToEat: [
-      {
-        name: "Patraj Roti Shop",
-        area: "Port of Spain",
-        description: "A locally popular spot for roti and curry, best visited around 11:30am before the lunch rush.",
-      },
-      {
-        name: "George & Son Doubles and Pies",
-        area: "Woodbrook, Port of Spain",
-        description: "One of the city's well-known doubles stands, a quick, cheap classic Trini breakfast.",
-      },
-      {
-        name: "D'Lime Cafe",
-        area: "Port of Spain",
-        description: "Casual Trini fare (doubles, roti and curries) at reasonable prices in a laid-back setting.",
-      },
-      {
-        name: "Store Bay food stalls",
-        area: "Crown Point, Tobago",
-        description: "A cluster of local food stalls near the beach serving crab and dumpling, curried shrimp and other Tobagonian specialties.",
-      },
-      {
-        name: "Buccoo Bay beachside grills",
-        area: "Buccoo, Tobago",
-        description: "Casual, sea-view spots serving grilled and curried fish, crab and other local plates.",
-      },
-    ],
-    symbols: {
-      motto: "Together We Aspire, Together We Achieve",
-      anthem: {
-        title: "Forged from the Love of Liberty",
-        lyricist: "Patrick S. Castagne",
-        composer: "Patrick S. Castagne",
-        adopted: "1962, at independence (originally written as \"A Song for the Islands\" for the proposed West Indies Federation, then revised for Trinidad and Tobago)",
-        officialUrl: "https://en.wikipedia.org/wiki/Forged_from_the_Love_of_Liberty",
-      },
-      pledge: {
-        text: "I solemnly pledge to dedicate my life to the service of my God and my country. I will honour my parents, my teachers, my leaders and my elders and those in authority. I will be clean and honest in all my thoughts, my words and my deeds. I will strive in everything I do to work together with my fellowmen of every creed and race for the greater happiness of all and the honour and glory of my country.",
-        sourceName: "National Library and Information System Authority (NALIS), Government of Trinidad and Tobago",
-        sourceUrl: "https://www.nalis.gov.tt/resources/tt-content-guide/national-symbols/",
-      },
-    },
-    lastUpdated: "August 2026",
-  },
-  {
     slug: "suriname",
     name: "Suriname",
     tagline: "The only Dutch-speaking country in the Americas: a Dutch colonial capital fronting a vast, largely untouched Amazon interior.",
@@ -2680,6 +2500,186 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         a: "Suriname is highly multicultural: Hindustani, Maroon, Creole, Javanese, mixed, Indigenous, Chinese, European and more, so respect local customs and religious practices. Dutch is official, but you'll hear Sranan Tongo, Hindi, Javanese, Chinese and Indigenous languages daily; English is spoken in many tourist contexts but not universally. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide's advice on behaviour in villages and protected areas.",
       },
     ],
+    lastUpdated: "August 2026",
+  },
+  {
+    slug: "trinidad-and-tobago",
+    name: "Trinidad and Tobago",
+    tagline: "The most populous, most industrialised CARICOM state, and home of the world's biggest Carnival, calypso, soca and steelpan.",
+    overview:
+      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
+    photo: {
+      src: "/destinations/trinidad-and-tobago.jpg",
+      alt: "Pitch Lake, La Brea, Trinidad",
+      credit: "Martina Jackson, CC BY-SA 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Pitch_Lake.JPG",
+    },
+    coordinates: { lat: 10.6918, lng: -61.2225, display: "10.69°N, 61.22°W" },
+    demographics: {
+      population: {
+        value: "≈1,410,000 (CIA World Factbook, 2025 estimate) to ≈1,513,000 (UN World Population Prospects via Worldometer, 2026 estimate)",
+        sourceName: "CIA World Factbook / Worldometer",
+        sourceUrl: "https://www.worldometers.info/world-population/trinidad-and-tobago-population/",
+      },
+      areaKm2: "≈5,128 km² total: Trinidad ≈4,768 km², Tobago ≈300 km²",
+      independence: "31 August 1962, from the United Kingdom; became a republic within the Commonwealth in 1976",
+      capital: "Port of Spain, on Trinidad",
+      officialLanguages: ["English (official)", "Trinidadian and Tobagonian English Creole (widely spoken); Trinidadian Hindustani and other heritage languages spoken by some communities"],
+      currency: "Trinidad and Tobago dollar (TTD)",
+      government:
+        "Parliamentary republic within the Commonwealth. A President is head of state; a Prime Minister heads the government.",
+      medianAge: "≈39.1 years (2025 estimate)",
+      ageStructure: "0–14 years: ≈18.7%. 15–64 years: ≈67.2%. 65 years and over: ≈14.1%.",
+      ethnicComposition: {
+        value: "East Indian descent ≈35.4%, African descent ≈34.2%, mixed (other) ≈15.3%, mixed African/East Indian ≈7.7%, other ≈1.3%, unspecified ≈6.2%",
+        sourceName: "2011 census",
+      },
+      urbanizationNote:
+        "Most of the population lives on Trinidad, concentrated in and around Port of Spain and the east-west corridor through Chaguanas, San Fernando and Arima. Tobago has a much smaller, more dispersed population centred on Scarborough and the southwest coast around Crown Point.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$295–665/month outside Port of Spain's city centre (Numbeo)",
+      rentPremium1BR: "≈US$515–1,105/month in Port of Spain's city centre; Tobago's tourist zones (Crown Point, Canaan) run similarly high",
+      groceriesSingle: "≈US$220–400/month for basics; imported goods cost noticeably more than local produce",
+      inexpensiveMeal: "≈US$3–8 (doubles, roti, a plate from a \"cookshop\")",
+      midRangeMealForTwo: "≈US$30–60, more at upscale Port of Spain or Tobago resort restaurants",
+      utilities: "≈US$25–60/month for electricity without heavy AC, ≈US$60–120/month with regular AC use, plus roughly US$9–20/month water and US$5–15/month cooking gas",
+      budgetModestSingle: "≈US$1,200–1,800/month all-in",
+      budgetComfortableSingle: "≈US$1,800–2,800/month all-in",
+      notes:
+        "Electricity is genuinely cheap here relative to the rest of the Caribbean: T&TEC's residential rate runs around US$0.05–0.06/kWh, among the lowest in the world, because natural gas (Trinidad produces its own) is priced to the utility well below international market rates. That's a real, durable cost-of-living advantage over the smaller islands, not just a marketing line. The main expenses are imported goods, private healthcare and car ownership. San Fernando, Chaguanas and Arima run cheaper than Port of Spain; Tobago's tourist areas run closer to Port of Spain prices.",
+      sourceName: "Numbeo (Port of Spain)",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/in/Port-Of-Spain",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Pitch Lake",
+        description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
+      },
+      {
+        name: "Caroni Bird Sanctuary",
+        description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
+      },
+      {
+        name: "Asa Wright Nature Centre",
+        description: "A rainforest reserve and former plantation house in Trinidad's Northern Range, known for birdwatching: hummingbirds at close range and dozens of other species on its trails.",
+      },
+      {
+        name: "Fort George",
+        description: "An 1804 hilltop fort overlooking Port of Spain and the Gulf of Paria, built by enslaved labourers led by Jonas Mohammed Bath. Its cannons never fired in anger, but the view over the capital is one of the best on the island.",
+      },
+      {
+        name: "Queen's Park Savannah",
+        description: "A large city park in Port of Spain ringed by the Magnificent Seven colonial-era mansions, and the epicentre of Carnival's biggest stage shows.",
+      },
+      {
+        name: "Main Ridge Forest Reserve",
+        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere: over 10,000 acres of rainforest across Tobago's central spine, with hiking trails and dense birdlife.",
+      },
+      {
+        name: "Pigeon Point Heritage Park",
+        description: "Tobago's best-known beach, fronted by a thatched-roof jetty that's become the island's signature image, with calm, clear water.",
+      },
+      {
+        name: "Buccoo Reef & Nylon Pool",
+        description: "A protected reef system off Tobago's southwest coast, rated among the world's best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
+      },
+      {
+        name: "Argyle Falls",
+        description: "Tobago's tallest waterfall at about 54 metres, dropping across three tiers near Roxborough, with natural pools for swimming after a short rainforest walk.",
+      },
+      {
+        name: "Fort King George",
+        description: "An 18th-century fort above Scarborough, Tobago, that changed hands between the British and French several times. Now home to the Tobago Museum, with cannons and colonial-era buildings intact.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Trinidad Carnival",
+        description: "The pre-Lenten Carnival that Caribbean carnivals across the region take their cue from: soca, calypso, steelpan and elaborate costume bands filling Port of Spain for days.",
+      },
+      {
+        title: "Walking Pitch Lake",
+        description: "Guided walks across the semi-solid asphalt surface of the world's largest natural bitumen deposit, with a guide explaining the geology and the small freshwater pools that support unusual microbial life.",
+      },
+      {
+        title: "Scarlet ibis watching at Caroni Swamp",
+        description: "A sunset boat tour through mangrove channels to watch thousands of scarlet ibis return to roost, one of the most reliable big wildlife spectacles in the Caribbean.",
+      },
+      {
+        title: "Diving or snorkelling Buccoo Reef",
+        description: "Boat trips from Pigeon Point or Store Bay out to the reef and the Nylon Pool, usually combined as a half-day tour.",
+      },
+      {
+        title: "Hiking Main Ridge Forest Reserve",
+        description: "Trails through Tobago's rainforest interior, including routes to Argyle Falls, with a good chance of spotting endemic and migratory birds.",
+      },
+      {
+        title: "Doubles at dawn",
+        description: "Trinidad's street-food ritual: curried channa in fried bara, bought from a stand that's often only open in the early morning, eaten standing up.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Crab and callaloo",
+        description: "The national dish: callaloo (dasheen leaf) stewed with coconut milk, okra and crab, traditionally the centrepiece of Sunday lunch.",
+      },
+      {
+        name: "Doubles",
+        description: "Trinidad's iconic street food, not the official national dish but arguably more eaten day to day: curried chickpeas (channa) between two pieces of fried flatbread (bara), dressed with chutneys and pepper sauce.",
+      },
+      {
+        name: "Roti",
+        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato: a staple lunch across both islands, reflecting the country's large Indo-Trinidadian population.",
+      },
+      {
+        name: "Pelau",
+        description: "A one-pot rice dish with meat (often chicken), pigeon peas and coconut milk, browned with caramelised sugar: an everyday dish and a Carnival/liming staple.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Patraj Roti Shop",
+        area: "Port of Spain",
+        description: "A locally popular spot for roti and curry, best visited around 11:30am before the lunch rush.",
+      },
+      {
+        name: "George & Son Doubles and Pies",
+        area: "Woodbrook, Port of Spain",
+        description: "One of the city's well-known doubles stands, a quick, cheap classic Trini breakfast.",
+      },
+      {
+        name: "D'Lime Cafe",
+        area: "Port of Spain",
+        description: "Casual Trini fare (doubles, roti and curries) at reasonable prices in a laid-back setting.",
+      },
+      {
+        name: "Store Bay food stalls",
+        area: "Crown Point, Tobago",
+        description: "A cluster of local food stalls near the beach serving crab and dumpling, curried shrimp and other Tobagonian specialties.",
+      },
+      {
+        name: "Buccoo Bay beachside grills",
+        area: "Buccoo, Tobago",
+        description: "Casual, sea-view spots serving grilled and curried fish, crab and other local plates.",
+      },
+    ],
+    symbols: {
+      motto: "Together We Aspire, Together We Achieve",
+      anthem: {
+        title: "Forged from the Love of Liberty",
+        lyricist: "Patrick S. Castagne",
+        composer: "Patrick S. Castagne",
+        adopted: "1962, at independence (originally written as \"A Song for the Islands\" for the proposed West Indies Federation, then revised for Trinidad and Tobago)",
+        officialUrl: "https://en.wikipedia.org/wiki/Forged_from_the_Love_of_Liberty",
+      },
+      pledge: {
+        text: "I solemnly pledge to dedicate my life to the service of my God and my country. I will honour my parents, my teachers, my leaders and my elders and those in authority. I will be clean and honest in all my thoughts, my words and my deeds. I will strive in everything I do to work together with my fellowmen of every creed and race for the greater happiness of all and the honour and glory of my country.",
+        sourceName: "National Library and Information System Authority (NALIS), Government of Trinidad and Tobago",
+        sourceUrl: "https://www.nalis.gov.tt/resources/tt-content-guide/national-symbols/",
+      },
+    },
     lastUpdated: "August 2026",
   },
 ];
