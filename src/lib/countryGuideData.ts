@@ -769,6 +769,44 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // national symbols page lists only the anthem and a national prayer.
       // Left out rather than picking one of the conflicting versions.
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Belize?",
+        a: "Belize is moderate by regional standards: mainland towns are cheaper, and the cayes, especially San Pedro on Ambergris Caye, are pricier. A budget traveller can expect roughly US$80–130/day (hostel or guesthouse, local food, public transport, few tours); mid-range roughly US$180–300/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$400+/day (resort or eco-lodge, private tours, fine dining). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Belize dollar (BZD), fixed at BZ$2 to US$1. US dollars are widely accepted almost everywhere, though change may come back in BZD. Major cards work in many hotels, restaurants and larger shops, especially in tourist areas, but smaller vendors and rural spots often prefer cash. ATMs are available in Belize City, San Pedro, Caye Caulker, San Ignacio and other main towns.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 30 days and extendable, with a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with the Belize Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the country?",
+        a: "Inexpensive inter-town buses connect Belize City, San Ignacio, Dangriga and Corozal, with informal but frequent schedules on main routes. Water taxis run fast boats between Belize City, San Pedro and Caye Caulker; book ahead in high season. Small domestic airlines link Belize City with San Pedro, Caye Caulker, Placencia and some inland airstrips. Taxis operate in towns and at the airport; agree the fare in advance. Rental cars are available at the airport and in major towns; unlike most of the Eastern Caribbean, driving in Belize is on the right, and roads range from paved highways to rough gravel in rural areas.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Look for rice and beans with chicken, beef or fish (often with potato salad and plantains), fry jacks for breakfast, hudut (a Garifuna dish of mashed plantains with fish or chicken in coconut broth), and Mestizo-influenced snacks like tamales, empanadas and panades. Fresh grilled fish, conch and ceviche are common on the coast and cayes. Try local eateries in San Ignacio, cook-shops in towns, beach grills on the cayes, and market stalls in Belize City.",
+      },
+      {
+        q: "Is Belize safe for tourists?",
+        a: "Belize can be visited safely, but it has higher crime rates in some urban areas, particularly parts of Belize City. Tourist areas like San Ignacio, the cayes, Placencia and major resorts are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is the rainier, hurricane-season stretch, with lower prices and some tours possibly limited. For diving, snorkelling and cave trips with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking or cave trips, plus sunscreen, a hat, sunglasses and insect repellent (important in the jungle and in the evenings). Quick-dry clothes and a small dry bag help for boat trips and cave tubing. Bring a light rain jacket or poncho, especially in the wetter months. If you're visiting a cave, bring clothes you don't mind getting muddy; some operators require closed-toe shoes.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Belize is genuinely multicultural: Creole, Mestizo, Garifuna, Maya, Mennonite, East Indian, Chinese and more. Dress modestly in villages and churches. English is official, but you'll hear Kriol, Spanish, Garifuna and Maya languages daily; a friendly attitude goes a long way. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. Life on the cayes runs slower than on the mainland, especially in the towns.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
@@ -940,6 +978,44 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://dominica.gov.dm/about-dominica/national-symbols/national-pledge",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Dominica?",
+        a: "Dominica is moderate to affordable by Caribbean standards, especially for nature-focused travellers. A budget traveller can expect roughly US$80–120/day (guesthouse or basic hotel, local food, public transport, self-guided hikes); mid-range roughly US$150–250/day (a comfortable hotel or eco-lodge, a mix of local and nicer restaurants, guided tours); luxury US$350+/day (a high-end eco-lodge or boutique hotel, private guides, fine dining). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are often accepted in tourist areas, though change may come back in XCD. Major cards work in many hotels, larger restaurants and some shops in Roseau, but smaller vendors, markets and rural spots often prefer cash. ATMs are available in Roseau and a few other towns but limited elsewhere, so carry cash for villages and trailheads.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 21–90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Dominica Immigration Division or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Inexpensive local buses and minibuses connect Roseau with many villages and key sites, though schedules can be informal. Taxis are available at the airport, cruise port and in Roseau; agree the fare in advance. Rental cars are available at the airport and in Roseau; driving is on the left, and roads are narrow, mountainous and can be challenging, with a 4x4 recommended for the interior. Major hikes like Boiling Lake are usually done through an organised tour, since a guide is effectively required and transport is included.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Callaloo (a leafy-green dish, often with crab or saltfish), crab back (stuffed crab shells, a festive specialty), rice and peas with dumplings and stewed fish or chicken, and fresh grilled fish, lobster in season and conch. Dominica's traditional national dish is actually mountain chicken, a large frog now critically endangered and protected since a 2004 hunting ban, so it's not something to order. Try the small local restaurants and cook-shops in Roseau and Portsmouth.",
+      },
+      {
+        q: "Is Dominica safe for tourists?",
+        a: "Dominica is generally considered one of the safer Caribbean islands for tourists. Violent crime against visitors is rare; petty theft can occur, especially in crowded areas or if valuables are left unattended. Use normal precautions: don't leave bags on the beach, avoid poorly lit areas at night, and secure valuables in your accommodation. For hikes, always use a reputable guide, especially for challenging trails like Boiling Lake. Check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry season: the best weather for hiking and diving, and the busiest. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and some trails may be muddy or closed. For serious hiking and diving, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy hiking shoes with good grip, plus sunscreen, a hat, sunglasses and strong insect repellent. Bring a rain jacket or poncho and quick-dry clothes for hikes and waterfalls, and a small daypack with water, snacks and basic first aid for trails. For Boiling Lake or other strenuous hikes, lightweight long trousers and moisture-wicking shirts help, and trekking poles are worth considering.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Dominicans are generally friendly and a little reserved; a polite greeting before asking a question is appreciated. Dress is casual, with modest attire expected in churches and some villages. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides and drivers welcome. Stay on marked trails, don't litter, and follow your guide's instructions, especially in the volcanic and rainforest areas.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
@@ -1089,11 +1165,6 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Grenadian food tapas-style: oil down, callaloo soup, ginger pork and fish cakes, all in small plates.",
       },
       {
-        name: "BB's Crab Back",
-        area: "St. George's",
-        description: "Run by a well-known local chef, built around crab backs, curried goat and other Grenadian specialties.",
-      },
-      {
         name: "Umbrella's Beach Bar",
         area: "Grand Anse Beach",
         description: "A women-run beach bar serving fresh, locally-sourced seafood on the sand.",
@@ -1124,6 +1195,44 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://www.gov.gd/national-symbols",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Grenada?",
+        a: "Grenada is moderate to upper-moderate by Caribbean standards; Carriacou and Petite Martinique are quieter and can be cheaper for a simple stay. A budget traveller can expect roughly US$90–140/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$180–300/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$450+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in many hotels, restaurants and larger shops, but smaller vendors, markets and rural spots often prefer cash. ATMs are available in St. George's, Grand Anse and a few other towns, but limited on Carriacou and Petite Martinique.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Grenada Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Inexpensive local buses connect St. George's with most parishes, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in St. George's; driving is on the left, and roads are generally good but narrow and hilly. Ferries and boats run to Carriacou and Petite Martinique; check schedules ahead, as they vary.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Oil down is the national dish: salted meat or fish, callaloo, dumplings and breadfruit, cooked in coconut milk. Also look for callaloo soup, rice and peas with stewed chicken or fish and provision (root crops), and fresh grilled fish, lobster in season and conch. Try the local cook-shops and market eateries in St. George's, beachfront restaurants along Grand Anse and Lance aux Épines, and estate restaurants like Belmont.",
+      },
+      {
+        q: "Is Grenada safe for tourists?",
+        a: "Grenada is generally considered one of the safer Caribbean destinations for tourists. Violent crime against visitors is uncommon; petty theft can occur, especially on beaches or in crowded areas. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and some tours may be limited. For beach time, hiking and diving with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for waterfall hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue, and clothes you don't mind getting a bit dirty or damp if you're visiting a spice estate or hiking.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Grenadians are generally warm and polite; a friendly greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
@@ -1272,6 +1381,44 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // official-government confirmation for either. Rather than guess which
       // is correct, it's left out, same policy as Belize.
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Guyana?",
+        a: "Guyana is affordable by regional standards, especially outside Georgetown; the oil boom has pushed up some prices in the capital, but overall costs remain low compared with many Caribbean islands. A budget traveller can expect roughly US$60–100/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$120–220/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several guided tours); luxury US$300+/day (an upscale Georgetown hotel or interior eco-lodge, private guides, fine dining). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Guyanese dollar (GYD), which floats, so exchange rates move; US dollars are often quoted informally. USD is widely accepted in Georgetown's business and tourist areas, but smaller towns and rural spots usually prefer GYD. Major cards work in many hotels, larger restaurants and some shops in Georgetown, but cash is standard outside the capital and for tours. ATMs are available in Georgetown and a few larger towns, but limited or nonexistent in the interior, so carry enough cash before heading inland.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free or with a visa on arrival for short stays, often up to 30–90 days, though rules vary by nationality and some passport holders must arrange a visa in advance. You'll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Guyana's Passport, Immigration and Citizenship Office or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the country?",
+        a: "Minibuses and taxis are common in and around Georgetown and between major towns, inexpensive but often crowded. Small domestic airlines link Georgetown's Cheddi Jagan International Airport with interior airstrips like Kaieteur, Lethem and Annai, essential for reaching remote eco-lodges and the Rupununi. River boats reach many interior communities and eco-lodges, usually arranged by a tour operator. Rental cars are available in Georgetown; driving is on the left, and a 4x4 is recommended for rougher interior roads. Guided, organised tours are the norm for Kaieteur Falls, Iwokrama and Rupununi safaris, with transport, guides and permits usually included.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Cook-up rice (a one-pot rice with beans or peas, meat, coconut milk and spices), pepperpot (a slow-cooked, Amerindian-origin stew with cassareep), roti with curried chicken, goat or shrimp, metemgee (a hearty stew of root crops, coconut milk and salted meat or fish), and fresh river or sea fish, grilled or curried. Try the local cook-shops and street stalls in Georgetown, small restaurants in Linden and New Amsterdam, and the interior eco-lodges, which usually serve traditional meals.",
+      },
+      {
+        q: "Is Guyana safe for tourists?",
+        a: "Guyana can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Georgetown. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government's current travel advisory and talk to your tour operator about current conditions.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "Guyana has two dry seasons and two wet seasons rather than the single Caribbean dry/hurricane pattern. The long dry season (August–November) is often considered best overall for interior travel and wildlife; the short dry season (February–April) is also good, with more roads and trails accessible. May–July and December–January are wetter, and some roads, trails or lodges may be harder to reach or reduce operations. For Kaieteur, Iwokrama and Rupununi safaris, August–November and February–April are usually best.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, with long sleeves and trousers for jungle areas to help with insects and sun. Bring sturdy, closed-toe shoes for hiking and sandals for town or riverside, plus strong insect repellent, sunscreen, a hat and sunglasses. A rain jacket or poncho and quick-dry clothes help for boat trips and rainforest. Pack a basic first-aid kit, your personal medications and hand sanitiser, since medical facilities are limited in the interior; for Kaieteur or serious hikes, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Guyana is highly multicultural: Indo-Guyanese, Afro-Guyanese, Indigenous, mixed, Chinese, Portuguese, Syrian-Lebanese and more, so respect local customs and religious practices. English is official, but you'll hear Guyanese Creole, Hindi, Urdu, Chinese and Indigenous languages in daily life. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide's advice on behaviour in villages and protected areas.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
