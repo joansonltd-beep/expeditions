@@ -1368,6 +1368,152 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "st-kitts-and-nevis",
+    name: "St. Kitts and Nevis",
+    tagline: "The smallest sovereign state in the Americas: two volcanic islands, a UNESCO fortress, and a carnival held at Christmas instead of summer.",
+    overview:
+      "St. Kitts and Nevis is the smallest sovereign country in the Americas, by both area and population — a federation of two volcanic islands separated by a narrow strait called The Narrows. St. Kitts is the larger, more developed island, home to Brimstone Hill Fortress and the capital, Basseterre; Nevis is quieter, greener and more residential, with its own hot springs and a constitutional right to secede from the federation if it ever chooses to.",
+    photo: {
+      src: "/destinations/st-kitts-and-nevis.jpg",
+      alt: "Brimstone Hill Fortress National Park, St. Kitts",
+      credit: "Martin Falbisoner, CC BY-SA 4.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Saint_Kitts_-_Brimstone_Hill_Fortress_05.JPG",
+    },
+    coordinates: { lat: 17.2948, lng: -62.7261, display: "17.29°N, 62.73°W" },
+    demographics: {
+      population: {
+        value: "≈47,000–53,000 — one of the smallest sovereign states in the world by population",
+        sourceName: "Worldometer / World Population Review",
+        sourceUrl: "https://www.worldometers.info/world-population/saint-kitts-and-nevis-population/",
+      },
+      areaKm2: "≈269 km² — Saint Kitts ≈168 km², Nevis ≈93 km² — the smallest sovereign state in the Americas by area",
+      independence: "19 September 1983, from the United Kingdom",
+      capital: "Basseterre, on Saint Kitts",
+      officialLanguages: ["English (official)"],
+      currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
+      government:
+        "Federation and parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General. Unusually for a federation, the constitution gives Nevis a specific path to secede from St. Kitts if it chooses to.",
+      ethnicComposition: {
+        value: "African descent ≈93%, mixed ≈3%, White ≈2%, East Indian ≈1.5%, other ≈0.6%",
+        sourceName: "CIA World Factbook (2001 census, most recent available)",
+      },
+      urbanizationNote:
+        "Most people live on St. Kitts, concentrated around Basseterre. Nevis, reached by a short ferry, is smaller and more residential, centred on Charlestown.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$590–650/month outside the city centre",
+      rentPremium1BR: "≈US$700–900/month in Basseterre or Frigate Bay",
+      groceriesSingle: "≈US$270/month",
+      inexpensiveMeal: "≈US$10–18",
+      midRangeMealForTwo: "≈US$80",
+      utilities: "≈US$85–90/month for electricity, water and garbage",
+      budgetModestSingle: "≈US$1,100–1,400/month all-in",
+      budgetComfortableSingle: "≈US$1,800–2,500/month all-in",
+      notes:
+        "Numbeo's Basseterre listing is very thin — just 8 price entries from 2 contributors — so these figures lean more on relocation and expat cost-of-living guides. A monthly public transport pass runs roughly US$80.",
+      sourceName: "Global Citizen Solutions cost-of-living data, cross-checked against Numbeo",
+      sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Brimstone Hill Fortress National Park",
+        description: "A UNESCO World Heritage Site (inscribed 1999): a hilltop fortress built by British engineers and enslaved African labour, finished in 1790, with sweeping views over the Caribbean Sea and neighbouring islands.",
+      },
+      {
+        name: "The St. Kitts Scenic Railway",
+        description: "A narrow-gauge railway built in 1912–1926 to move sugar cane, now a 30-mile tourist rail journey around the island's coastline and countryside.",
+      },
+      {
+        name: "Nevis Peak",
+        description: "The dormant volcano at the centre of Nevis, often cloud-wrapped, with a demanding hike to the summit through rainforest.",
+      },
+      {
+        name: "South Friars Bay & Cockleshell Bay",
+        description: "South-coast beaches on St. Kitts — South Friars for beach-accessible snorkelling on a reef just offshore, Cockleshell for its laid-back beach bar scene, both looking across to Nevis.",
+      },
+      {
+        name: "Dieppe Bay's black sand beach",
+        description: "A volcanic black-sand beach on the north coast, where the Caribbean and Atlantic meet.",
+      },
+      {
+        name: "Charlestown, Nevis",
+        description: "Nevis's small Georgian-era capital, with historic buildings and a slower pace than Basseterre.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Sugar Mas",
+        description: "St. Kitts and Nevis's carnival, running from mid-December to early January — the only major Caribbean carnival held over Christmas and New Year rather than before Lent or in summer, ending with a Grand Parade on 1 January.",
+      },
+      {
+        title: "Riding the Scenic Railway",
+        description: "A slow loop of the island by rail, with rum punch and calypso on board, following the old sugar-cane tracks.",
+      },
+      {
+        title: "Hiking Nevis Peak",
+        description: "A steep, rope-assisted rainforest climb to the summit of Nevis's volcano.",
+      },
+      {
+        title: "A ferry day trip to Nevis",
+        description: "A short crossing of The Narrows for a quieter island, hot springs, and Charlestown's Georgian streets.",
+      },
+      {
+        title: "Snorkelling South Friars Bay",
+        description: "A reef running close and parallel to the beach, with turtles, stingrays and coral within easy swimming distance of the sand.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Stewed saltfish, spicy plantains, seasoned breadfruit and coconut dumplings",
+        description: "The current national dish, chosen by national poll in 2003 for the 20th anniversary of independence — created by Jacqueline Ryan, it replaced goat water as the official dish.",
+      },
+      {
+        name: "Goat water",
+        description: "The former national dish: a hearty goat stew with papaya, breadfruit and dumplings, seasoned with herbs and hot peppers — still widely eaten despite losing its official status.",
+      },
+      {
+        name: "Conch (lambi)",
+        description: "Conch meat, stewed or curried, common along the coast.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Ballahoo",
+        area: "Basseterre",
+        description: "Overlooking Basseterre's central square, with a wide menu from BBQ chicken wraps and sushi to West Indian curries.",
+      },
+      {
+        name: "Sprat Net",
+        area: "Basseterre",
+        description: "A casual, reasonably priced spot with long wooden benches — locals rate it for pizza as much as seafood.",
+      },
+      {
+        name: "Rosey's Art Gallery & Café",
+        area: "Basseterre",
+        description: "A relaxed café on the main square for bagels, cakes and frittatas.",
+      },
+      {
+        name: "Sunset Restaurant & The Dock",
+        area: "Frigate Bay",
+        description: "Caribbean dining with ocean views on the Frigate Bay strip.",
+      },
+    ],
+    symbols: {
+      motto: "Country Above Self",
+      anthem: {
+        title: "O Land of Beauty!",
+        lyricist: "Kenrick Georges",
+        composer: "Kenrick Georges",
+        adopted: "1983, chosen by national competition out of 45 entries, days before independence",
+      },
+      // No official National Pledge text found on the government's national
+      // symbols pages (gov.kn's certificate has also expired, blocking direct
+      // access). Left out rather than guessed.
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
