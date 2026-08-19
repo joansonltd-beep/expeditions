@@ -900,16 +900,16 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "Most people live on the main island of Grenada, in and around St. George's. Carriacou (Hillsborough its main town) lies about 40km north-east by ferry or short flight; Petite Martinique, smaller still, sits just off Carriacou.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$435/month outside St. George's and the south-coast expat corridor",
-      rentPremium1BR: "≈US$780–1,800/month in St. George's city centre or the Lance aux Epines / Grand Anse / Westerhall south-coast corridor",
-      groceriesSingle: "≈US$200–300/month",
-      inexpensiveMeal: "≈US$7–10",
-      midRangeMealForTwo: "≈US$60–80",
-      utilities: "≈US$60–150/month for electricity and water, plus roughly US$48/month for home internet",
-      budgetModestSingle: "≈US$1,000–1,500/month all-in",
-      budgetComfortableSingle: "≈US$1,800–3,000/month all-in",
+      rentTypical1BR: "≈US$435–800/month outside St. George's, or for a modest unit in town",
+      rentPremium1BR: "≈US$800–1,800/month in St. George's, Grand Anse, True Blue or the Lance aux Epines / Westerhall south-coast corridor",
+      groceriesSingle: "≈US$250–450/month",
+      inexpensiveMeal: "≈US$7–12",
+      midRangeMealForTwo: "≈US$30–80, more at upscale beachfront or resort restaurants",
+      utilities: "≈US$80–250/month for electricity (more with regular AC) plus roughly US$10–30/month water and US$50–80/month internet",
+      budgetModestSingle: "≈US$1,300–1,800/month all-in",
+      budgetComfortableSingle: "≈US$1,800–3,500/month all-in",
       notes:
-        "Numbeo has no listing for St. George's, so these figures lean on a single detailed cost-of-living source rather than a cross-checked range — treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor.",
+        "Numbeo has no listing for St. George's, so these figures come from relocation and expat cost-of-living guides rather than a single crowd-sourced dataset — treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle — a beachfront rental near Grand Anse, frequent dining and tours — can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
       asOf: "August 2026",
@@ -932,6 +932,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A rainforest park built around a crater lake, with trails from 15-minute strolls to multi-hour treks through the misty central highlands.",
       },
       {
+        name: "Seven Sisters Waterfalls",
+        description: "A series of seven connected waterfalls and natural swimming pools in Grand Etang National Park, reached by a moderate rainforest hike of about an hour each way.",
+      },
+      {
         name: "River Antoine Rum Distillery",
         description: "Operating since 1785 and still turning a water wheel — the oldest functioning water-driven distillery in the Caribbean.",
       },
@@ -944,8 +948,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Grenada's larger sister island, quieter and less developed — Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
       },
       {
-        name: "Fort George",
-        description: "An 18th-century fort overlooking St. George's harbour, with panoramic views over the capital.",
+        name: "The Carenage & Fort George",
+        description: "St. George's horseshoe-shaped historic harbour, ringed by colourful buildings and restaurants, overlooked by Fort George, an 18th-century fort with panoramic views over the capital.",
+      },
+      {
+        name: "Fort Frederick",
+        description: "A well-preserved fort completed in 1783, nicknamed the \"backward-facing fort\" since its cannons point inland rather than out to sea. It served as PRA headquarters during the 1979 revolution, and offers wide views over the Carenage from 244m up.",
       },
     ],
     experiences: [
@@ -1012,6 +1020,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "The Aquarium",
         area: "Magazine Beach",
         description: "Beachfront dining ranging from casual lunches to fine dining — grilled lobster, jerk chicken and callaloo cannelloni.",
+      },
+      {
+        name: "Belmont Estate restaurant",
+        area: "St. Patrick",
+        description: "On-site dining at the working cocoa plantation, serving local dishes alongside estate-grown chocolate and spices.",
       },
     ],
     symbols: {
@@ -1199,29 +1212,29 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       independence: "6 August 1962, from the United Kingdom",
       capital: "Kingston",
       officialLanguages: ["English (official)", "Jamaican Patois, spoken by most of the population day to day"],
-      currency: "Jamaican dollar (JMD), floating, trading at roughly J$158 to US$1",
+      currency: "Jamaican dollar (JMD), floating, trading at roughly J$158 to US$1. US dollars are sometimes accepted in tourist areas, but JMD is standard.",
       government:
         "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government. A 2022 plan to become a republic by 2025 was formally retracted in March 2025.",
       medianAge: "≈30.5 years (2023 estimate)",
       ageStructure: "0–14 years: ≈24%. 15–64 years: ≈66%. 65 years and over: ≈10%.",
       ethnicComposition: {
-        value: "Black ≈91%, mixed ≈6%, other/unknown ≈3%",
-        sourceName: "CIA World Factbook (2001 census, most recent available)",
+        value: "African ≈76%, Afro-European (mixed) ≈15%, Indian/Afro-Indian ≈3.4%, White ≈3.2%, Chinese/Afro-Chinese ≈1.2%, other ≈0.8%",
+        sourceName: "2024 estimate",
       },
       urbanizationNote:
         "The Kingston Metropolitan Area is by far the largest population centre and the country's economic and cultural hub; Montego Bay and Ocho Rios are the main tourism centres on the north coast.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$570/month outside Kingston's city centre",
-      rentPremium1BR: "≈US$965/month in Kingston's city centre",
-      groceriesSingle: "≈US$65–95/month",
+      rentTypical1BR: "≈US$350–600/month in outer Kingston (Half Way Tree, Constant Spring, Portmore) or a modest unit elsewhere",
+      rentPremium1BR: "≈US$570–1,200/month in uptown Kingston (New Kingston, Barbican) or the main tourist towns (Montego Bay, Ocho Rios, Negril), more for beachfront units",
+      groceriesSingle: "≈US$180–350/month",
       inexpensiveMeal: "≈US$10–15",
       midRangeMealForTwo: "≈US$50–100",
-      utilities: "≈US$175/month for electricity, water and garbage in a small apartment",
-      budgetModestSingle: "≈US$900–1,300/month all-in",
-      budgetComfortableSingle: "≈US$1,600–2,500/month all-in",
+      utilities: "≈US$60–300+/month for electricity, which runs notably high in Jamaica, especially with regular AC use, plus roughly US$10–25 water and US$50–80 internet",
+      budgetModestSingle: "≈US$1,200–1,800/month all-in",
+      budgetComfortableSingle: "≈US$1,800–3,000/month all-in",
       notes:
-        "Jamaica has one of the better-populated Numbeo listings in the region, so these figures rest on a reasonably sized sample rather than a handful of entries. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest.",
+        "Jamaica has one of the better-populated Numbeo listings in the region, so the rent, meal and utility figures above rest on a reasonably sized sample rather than a handful of entries — cross-checked against relocation guides, which is why groceries and the overall budget bands sit a little higher here than a Numbeo-only estimate would suggest. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle — uptown Kingston or beachfront tourist area, frequent dining, high AC use — can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Kingston-Jamaica",
       asOf: "August 2026",
@@ -1248,8 +1261,20 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A series of waterfalls and turquoise swimming holes in the hills above Ocho Rios, good for cliff jumping.",
       },
       {
-        name: "Bob Marley Museum",
-        description: "Marley's former Kingston home, now a museum covering his life and the roots of reggae.",
+        name: "Bob Marley Museum & Devon House",
+        description: "Marley's former Kingston home, now a museum on his life and the roots of reggae; nearby, Devon House is an 1881 Jamaican-Georgian mansion turned heritage site, famous for its ice cream.",
+      },
+      {
+        name: "Doctor's Cave Beach",
+        description: "A historic Montego Bay beach that grew famous in the 1920s after a British osteopath publicised its supposedly restorative waters — still one of the city's best-known beaches.",
+      },
+      {
+        name: "Blue and John Crow Mountains National Park",
+        description: "A UNESCO World Heritage Site of rainforest covering the Blue Mountains and John Crow range, with Maroon heritage sites alongside the coffee estates and hiking trails.",
+      },
+      {
+        name: "Port Royal",
+        description: "Once called \"the wickedest city on Earth\" for its pirate-haven reputation, two-thirds of it sank in a 1692 earthquake. Its archaeological landscape at the mouth of Kingston Harbour became Jamaica's second UNESCO World Heritage Site in July 2025.",
       },
     ],
     experiences: [
@@ -1272,6 +1297,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         title: "Reggae and dancehall nightlife",
         description: "Live music, sound systems and street dances, especially in Kingston — the birthplace of both genres.",
+      },
+      {
+        title: "Bamboo rafting on the Rio Grande",
+        description: "A calm, poled bamboo-raft trip down the river that runs from the Blue Mountains to the Portland coast — river rafting as a leisure activity started here, popularised by Errol Flynn in the 1950s.",
       },
     ],
     localDishes: [
@@ -1312,6 +1341,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "Moby Dick",
         area: "Kingston",
         description: "Known for curried goat and old-school Jamaican cooking.",
+      },
+      {
+        name: "Scotchies",
+        area: "Montego Bay (original), plus Ocho Rios and Kingston",
+        description: "One of Jamaica's most famous jerk centres — open-air, pimento-wood barbecue, wooden tables and barrel stools. The Montego Bay original is the one most people mean by \"Scotchies.\"",
       },
     ],
     symbols: {
