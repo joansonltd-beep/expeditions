@@ -2024,6 +2024,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://www.govt.lc/nationalpledge",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Saint Lucia?",
+        a: "Saint Lucia is moderate to high cost by Caribbean standards, especially in prime tourist areas like Rodney Bay, Soufrière and Cap Estate. A budget traveller can expect roughly US$100–150/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$200–350/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$500+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in most hotels, restaurants and larger shops, but smaller vendors, markets and rural spots often prefer cash. ATMs are available in Castries, Rodney Bay, Vieux Fort and a few other towns.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 42–90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Saint Lucia Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Inexpensive local buses connect Castries with most parishes, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in Castries; driving is on the left, and roads are generally good but narrow, steep and winding in the interior. Water taxis and boats are used for some beach hops and trips along the west coast, often arranged by hotels or tour operators.",
+      },
+      {
+        q: "What are the must-do experiences in Saint Lucia?",
+        a: "Sail or take a catamaran trip past the Pitons, soak in the Sulphur Springs mud baths near Soufrière (the \"drive-in volcano\"), hike Gros Piton with a guide for a challenging trek and panoramic views, visit Diamond Falls Botanical Gardens and its waterfalls, relax on Reduit Beach in Rodney Bay or Sugar Beach between the Pitons, and explore Castries market, cathedral and the viewpoints over the harbour.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Green fig and saltfish is the national dish: boiled unripe green bananas with flaked salted cod. Also look for bouyon (a hearty one-pot stew of meat or fish with dasheen, pumpkin, carrots and spices), roti, rice and peas with stewed chicken or fish and provision, and fresh grilled fish, lobster in season and conch. Try the market eateries and small restaurants in Castries, local cook-shops in Soufrière and other towns, and beachfront venues in Rodney Bay and around the Pitons.",
+      },
+      {
+        q: "Is Saint Lucia safe for tourists?",
+        a: "Saint Lucia is generally considered moderately safe for tourists, with most visits trouble-free. Petty theft can occur, especially on beaches, in crowded areas or at night. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Some areas outside the main tourist zones see more crime, so ask your hotel or tour operator about places to avoid, and check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and prices are lowest. For hiking the Pitons, volcano visits and beach time with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking the Pitons or waterfalls, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking Gros Piton, add lightweight long trousers, moisture-wicking shirts and a small daypack with water and snacks.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Saint Lucians are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Many people speak Kwéyòl (French Creole) alongside English; a few basic Kwéyòl or French greetings are often welcomed but not required.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
