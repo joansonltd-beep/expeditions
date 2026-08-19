@@ -97,7 +97,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
             <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
               Want the bigger picture first?{" "}
               <Link href={`/destinations/${countryGuide.slug}`} className="font-semibold text-brand hover:underline">
-                Read the {c.name} guide →
+                See the {c.name} fact sheet →
               </Link>{" "}
               — cost of living, places to see, food and more.
             </div>
