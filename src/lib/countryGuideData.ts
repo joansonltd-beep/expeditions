@@ -1,7 +1,7 @@
 // Country guides: practical orientation for each CARICOM country, covering
 // demographics, cost of living, things to see and do, food, and national
 // symbols. Built one country at a time, in alphabetical order, and researched
-// from named sources below each entry — this is not paraphrased Wikipedia,
+// from named sources below each entry; this is not paraphrased Wikipedia,
 // it is independently sourced and cited so figures can be checked and updated.
 //
 // Anthems: title/composer/adoption year only, with a link to an official
@@ -11,7 +11,7 @@
 // Pledge: many CARICOM countries don't have a distinct, publicly documented
 // "national pledge" text (as opposed to an anthem or citizenship oath). The
 // field is left out entirely for a country rather than filled with anything
-// unverified — never guess or paraphrase a pledge from memory.
+// unverified: never guess or paraphrase a pledge from memory.
 //
 // Cost of living: different source families (crowd-sourced aggregators like
 // Numbeo vs. real-estate market analysts vs. expat relocation blogs) can
@@ -38,7 +38,7 @@ export type CostOfLiving = {
   sourceUrl?: string;
   secondarySourceName?: string;
   secondarySourceUrl?: string;
-  asOf: string; // e.g. "August 2026" — cost of living data goes stale fast
+  asOf: string; // e.g. "August 2026"; cost of living data goes stale fast
 };
 
 export type PlaceToSee = { name: string; description: string };
@@ -52,7 +52,7 @@ export type Coordinates = {
   display: string; // human-readable, e.g. "17.06°N, 61.80°W"
 };
 
-// A real, appropriately-licensed photo — self-hosted under /public, never
+// A real, appropriately-licensed photo, self-hosted under /public, never
 // hotlinked. Any non-public-domain license (e.g. Creative Commons) requires
 // a visible credit line on the page, which `credit`/`creditUrl` supply.
 export type CountryPhoto = {
@@ -69,7 +69,7 @@ export type NationalSymbols = {
     composer?: string;
     lyricist?: string;
     adopted?: string;
-    officialUrl?: string; // where to listen / read about it — never lyrics on-site
+    officialUrl?: string; // where to listen / read about it, never lyrics on-site
   };
   pledge?: { text: string; sourceName: string; sourceUrl?: string };
 };
@@ -227,7 +227,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Sunday sunset at Shirley Heights",
-        description: "Steel pan and reggae over English Harbour as the sun goes down — a weekly institution, not just a tourist event.",
+        description: "Steel pan and reggae over English Harbour as the sun goes down: a weekly institution, not just a tourist event.",
       },
       {
         title: "Catamaran and snorkelling day sail",
@@ -250,7 +250,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Saltfish",
-        description: "Salt-cured cod cooked down with garlic, tomato, pepper and onion — a weekend, especially Sunday, favourite.",
+        description: "Salt-cured cod cooked down with garlic, tomato, pepper and onion: a weekend, especially Sunday, favourite.",
       },
       {
         name: "Goat water",
@@ -281,7 +281,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Beach Limerz",
         area: "Fort James Beach",
-        description: "A family-run beach bar for local dishes — curry conch, bake and saltfish, curry goat — with live steel pan.",
+        description: "A family-run beach bar for local dishes (curry conch, bake and saltfish, curry goat) with live steel pan.",
       },
       {
         name: "Trappas",
@@ -291,7 +291,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Incanto Restaurant & Lounge",
         area: "Near Nelson's Dockyard",
-        description: "Italian menu — risotto, gnocchi and lobster linguine.",
+        description: "Italian menu: risotto, gnocchi and lobster linguine.",
       },
       {
         name: "Fat Cat Coffee",
@@ -301,7 +301,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Nobu Barbuda",
         area: "Princess Diana Beach, Barbuda",
-        description: "The Caribbean's only Nobu — Japanese-Peruvian fusion on a remote beach, reachable by boat or helicopter. A splurge, not an everyday spot.",
+        description: "The Caribbean's only Nobu: Japanese-Peruvian fusion on a remote beach, reachable by boat or helicopter. A splurge, not an everyday spot.",
       },
       {
         name: "Uncle Roddy's Beach Bar & Grill",
@@ -318,7 +318,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         adopted: "1967 (retained as the national anthem at independence in 1981)",
       },
       // No distinct, publicly documented national pledge text found from an
-      // official source — only a citizenship Oath of Allegiance in a
+      // official source, only a citizenship Oath of Allegiance in a
       // different context. Left out rather than guessed or copied from an
       // unverified secondary source.
     },
@@ -329,12 +329,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Barbados",
     tagline: "The Caribbean's culinary capital: a former British colony turned republic, built around rum, reefs and Bajan cuisine.",
     overview:
-      "Barbados is the easternmost Caribbean island, a former British colony that became a parliamentary republic in 2021. It combines well-developed tourism infrastructure with deep cultural heritage — historic Bridgetown, the birthplace of rum, and a food scene often called the best in the Caribbean.",
+      "Barbados is the easternmost Caribbean island, a former British colony that became a parliamentary republic in 2021. It combines well-developed tourism infrastructure with deep cultural heritage: historic Bridgetown, the birthplace of rum, and a food scene often called the best in the Caribbean.",
     photo: {
       src: "/destinations/barbados.jpg",
-      alt: "Carlisle Bay, Barbados, with Bridgetown visible in the distance",
-      credit: "Pontificalibus, CC0, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Carlisle_Bay,_Barbados.jpg",
+      alt: "Crane Beach, Barbados",
+      credit: "Johnmartindavies, CC BY-SA 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Crane_Beach.JPG",
     },
     coordinates: { lat: 13.1939, lng: -59.5432, display: "13.19°N, 59.54°W" },
     demographics: {
@@ -369,7 +369,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,900–2,500/month all-in (modest rental, limited AC, local food)",
       budgetComfortableSingle: "≈US$3,000–4,500+/month all-in (good location, car, dining out, more AC)",
       notes:
-        "Barbados runs more expensive than most of its CARICOM neighbours, especially housing on the south and west coasts and imported goods. A public bus pass runs roughly US$25–30/month, though coverage is limited. Luxury villas and premium rentals can run well beyond US$7,000/month. Crowd-sourced sites like Numbeo show notably lower rent figures for Barbados than current rental listings and relocation guides do — the ranges above lean on the latter, since Numbeo's Barbados sample is thin.",
+        "Barbados runs more expensive than most of its CARICOM neighbours, especially housing on the south and west coasts and imported goods. A public bus pass runs roughly US$25–30/month, though coverage is limited. Luxury villas and premium rentals can run well beyond US$7,000/month. Crowd-sourced sites like Numbeo show notably lower rent figures for Barbados than current rental listings and relocation guides do; the ranges above lean on the latter, since Numbeo's Barbados sample is thin.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Bridgetown",
       secondarySourceName: "current rental listings and relocation guides (typical and popular-parish figures)",
@@ -384,7 +384,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "George Washington House",
         description:
-          "The only house outside the continental US where George Washington lived — six weeks in 1751, aged 19. Now a museum within the Garrison, with access to old tunnels.",
+          "The only house outside the continental US where George Washington lived: six weeks in 1751, aged 19. Now a museum within the Garrison, with access to old tunnels.",
       },
       {
         name: "St. Nicholas Abbey",
@@ -392,7 +392,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Carlisle Bay",
-        description: "A calm, clear bay near Bridgetown with several shipwrecks close to shore — popular for snorkelling and swimming with sea turtles.",
+        description: "A calm, clear bay near Bridgetown with several shipwrecks close to shore, popular for snorkelling and swimming with sea turtles.",
       },
       {
         name: "Crane Beach",
@@ -401,7 +401,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Bathsheba and the east coast",
         description:
-          "A rugged Atlantic coastline with the mushroom-shaped rock formations of the Soup Bowl — dramatic for photos and surfing, not for casual swimming.",
+          "A rugged Atlantic coastline with the mushroom-shaped rock formations of the Soup Bowl: dramatic for photos and surfing, not for casual swimming.",
       },
       {
         name: "Harrison's Cave",
@@ -445,7 +445,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "A night out in St. Lawrence Gap",
-        description: "The south coast's dining and nightlife strip — everything from casual bars to gourmet restaurants, near Dover Beach.",
+        description: "The south coast's dining and nightlife strip: everything from casual bars to gourmet restaurants, near Dover Beach.",
       },
     ],
     localDishes: [
@@ -456,7 +456,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Macaroni pie",
-        description: "Baked, spiced macaroni and cheese — a Bajan Sunday-table staple, not a side dish to skip.",
+        description: "Baked, spiced macaroni and cheese: a Bajan Sunday-table staple, not a side dish to skip.",
       },
       {
         name: "Fish cakes",
@@ -471,7 +471,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "The Cliff",
         area: "St. James, west coast",
-        description: "Fine dining with a Michelin-trained chef and sea views over illuminated waters — a special-occasion splurge.",
+        description: "Fine dining with a Michelin-trained chef and sea views over illuminated waters: a special-occasion splurge.",
       },
       {
         name: "The Fish Pot",
@@ -491,7 +491,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Cuz's Fish Stand",
         area: "Pebbles Beach, Bridgetown",
-        description: "A decades-old, no-frills stand famous for its fried marlin fish cutter sandwiches — one of the island's most-loved cheap eats.",
+        description: "A decades-old, no-frills stand famous for its fried marlin fish cutter sandwiches, one of the island's most-loved cheap eats.",
       },
     ],
     symbols: {
@@ -516,7 +516,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Belize",
     tagline: "The only English-speaking CARICOM country in Central America: the world's second-largest barrier reef alongside Maya ruins and rainforest.",
     overview:
-      "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It's a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland — a mix of marine and jungle that few CARICOM countries can offer.",
+      "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It's a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland, a mix of marine and jungle that few CARICOM countries can offer.",
     photo: {
       src: "/destinations/belize.jpg",
       alt: "The Great Blue Hole, a giant marine sinkhole off the coast of Belize",
@@ -530,9 +530,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "Worldometer / UN-based estimates",
         sourceUrl: "https://www.worldometers.info/world-population/belize-population/",
       },
-      areaKm2: "≈22,966 km² — much larger than any other CARICOM member except Guyana and Suriname, since Belize is mainland Central America, not an island",
+      areaKm2: "≈22,966 km² (much larger than any other CARICOM member except Guyana and Suriname, since Belize is mainland Central America, not an island)",
       independence: "21 September 1981, from the United Kingdom",
-      capital: "Belmopan — a small, purpose-built inland capital. Belize City, the former capital, remains the largest city and main commercial hub.",
+      capital: "Belmopan, a small, purpose-built inland capital. Belize City, the former capital, remains the largest city and main commercial hub.",
       officialLanguages: [
         "English (official)",
         "Spanish (widely spoken)",
@@ -543,7 +543,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       currency: "Belize dollar (BZD), fixed at BZ$2 to US$1. US dollars are widely accepted in tourist areas.",
       government:
         "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
-      medianAge: "≈27–28 years — young relative to most CARICOM members",
+      medianAge: "≈27–28 years (young relative to most CARICOM members)",
       ageStructure: "0–14 years: ≈26–28%. 15–64 years: ≈66–69%. 65 years and over: ≈5–6%.",
       ethnicComposition: {
         value: "Mestizo ≈53%, Creole ≈26%, Maya (combined groups) ≈11%, Garifuna ≈6%, East Indian ≈4%, Mennonite ≈4%, White, Asian and other small percentages",
@@ -562,7 +562,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,800/month all-in (modest rental, local food, limited AC, public transport)",
       budgetComfortableSingle: "≈US$1,800–3,500/month all-in (good location, some dining out, AC, regular transport)",
       notes:
-        "Belize is generally cheaper than the Caribbean islands, but costs vary sharply between mainland towns and the tourist cayes — a beachfront rental on Ambergris Caye or Placencia can run US$3,500–6,000+ a month all-in. Numbeo's Belize City sample is very thin (about 75 price entries from 5 contributors), so the ranges above lean more on rental listings and relocation guides. A local bus fare runs roughly US$1–3, with fuel around US$1.30–1.70 per litre.",
+        "Belize is generally cheaper than the Caribbean islands, but costs vary sharply between mainland towns and the tourist cayes: a beachfront rental on Ambergris Caye or Placencia can run US$3,500–6,000+ a month all-in. Numbeo's Belize City sample is very thin (about 75 price entries from 5 contributors), so the ranges above lean more on rental listings and relocation guides. A local bus fare runs roughly US$1–3, with fuel around US$1.30–1.70 per litre.",
       sourceName: "Numbeo (thin sample for Belize City)",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Belize-City",
       secondarySourceName: "rental listings and expat relocation guides (typical mainland and caye figures)",
@@ -575,7 +575,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Great Blue Hole",
-        description: "A giant marine sinkhole on Lighthouse Reef — a signature dive site for the certified, and a dramatic sight from a scenic flight for everyone else.",
+        description: "A giant marine sinkhole on Lighthouse Reef: a signature dive site for the certified, and a dramatic sight from a scenic flight for everyone else.",
       },
       {
         name: "Hol Chan Marine Reserve & Shark Ray Alley",
@@ -583,7 +583,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Caye Caulker",
-        description: "A laid-back island built around a \"Go Slow\" motto — golf carts instead of cars, easy snorkelling and day trips to the reef.",
+        description: "A laid-back island built around a \"Go Slow\" motto: golf carts instead of cars, easy snorkelling and day trips to the reef.",
       },
       {
         name: "Placencia & Hopkins",
@@ -591,7 +591,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Actun Tunichil Muknal (ATM Cave)",
-        description: "A sacred Maya cave with calcified skeletal remains and ceramics still in place, reached by a jungle trek and river crossings — one of Belize's best-known adventures.",
+        description: "A sacred Maya cave with calcified skeletal remains and ceramics still in place, reached by a jungle trek and river crossings, one of Belize's best-known adventures.",
       },
       {
         name: "Xunantunich",
@@ -599,7 +599,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Caracol",
-        description: "A large, remote Maya city deep in the Chiquibul Forest — a longer drive than Xunantunich, and a more adventurous ruins visit.",
+        description: "A large, remote Maya city deep in the Chiquibul Forest, a longer drive than Xunantunich, and a more adventurous ruins visit.",
       },
       {
         name: "Cockscomb Basin Wildlife Sanctuary",
@@ -609,7 +609,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Snorkelling Hol Chan and Shark Ray Alley",
-        description: "Drifting through a coral channel and swimming with nurse sharks and rays in shallow water — often the top first activity for visitors.",
+        description: "Drifting through a coral channel and swimming with nurse sharks and rays in shallow water, often the top first activity for visitors.",
       },
       {
         title: "ATM Cave expedition",
@@ -621,7 +621,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Cave tubing and jungle hikes",
-        description: "Floating through underground river systems in inner tubes, usually combined with a rainforest walk — commonly run as a day trip from San Ignacio or Belize City.",
+        description: "Floating through underground river systems in inner tubes, usually combined with a rainforest walk, commonly run as a day trip from San Ignacio or Belize City.",
       },
       {
         title: "Garifuna cultural experiences",
@@ -647,7 +647,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Panades",
-        description: "Fried corn masa turnovers filled with fish or beans — a Mestizo-influenced snack sold everywhere.",
+        description: "Fried corn masa turnovers filled with fish or beans: a Mestizo-influenced snack sold everywhere.",
       },
       {
         name: "Conch soup and ceviche",
@@ -658,12 +658,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Elvi's Kitchen",
         area: "San Pedro, Ambergris Caye",
-        description: "A San Pedro institution since 1974, from a burger window to a full seafood restaurant — Belize Tourism Board's Restaurant of the Year in 2022.",
+        description: "A San Pedro institution since 1974, from a burger window to a full seafood restaurant: Belize Tourism Board's Restaurant of the Year in 2022.",
       },
       {
         name: "Estel's Dine by the Sea",
         area: "San Pedro, Ambergris Caye",
-        description: "A family-run, beachfront spot for Belizean breakfast — fry jacks, chorizo and beans — right on the sand.",
+        description: "A family-run, beachfront spot for Belizean breakfast (fry jacks, chorizo and beans) right on the sand.",
       },
       {
         name: "The Guava Limb Restaurant & Café",
@@ -694,12 +694,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Dominica",
     tagline: "The \"Nature Isle of the Caribbean\": a mountainous, volcanic island built for hikers and divers, not beach loungers.",
     overview:
-      "Dominica is a mountainous, volcanic island of rainforest, rivers and hot springs, and the only Eastern Caribbean island still home to a Kalinago (Carib) community, the region's last pre-Columbian population. It's less developed for mass tourism than most of its neighbours and has few sandy beaches — the draw here is hiking, diving and nature, not lounging.",
+      "Dominica is a mountainous, volcanic island of rainforest, rivers and hot springs, and the only Eastern Caribbean island still home to a Kalinago (Carib) community, the region's last pre-Columbian population. It's less developed for mass tourism than most of its neighbours and has few sandy beaches: the draw here is hiking, diving and nature, not lounging.",
     photo: {
       src: "/destinations/dominica.jpg",
-      alt: "Trafalgar Falls, twin waterfalls in Morne Trois Pitons National Park, Dominica",
-      credit: "Nelro, public domain, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Trafalgar_Falls_at_Morne_Trois_Pitons_National_Park.jpg",
+      alt: "Boiling Lake, Morne Trois Pitons National Park, Dominica",
+      credit: "Bayukjdr, CC BY-SA 4.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Dominica_Boiling_Lake.jpg",
     },
     coordinates: { lat: 15.3017, lng: -61.3881, display: "15.30°N, 61.39°W" },
     demographics: {
@@ -714,7 +714,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       officialLanguages: ["English (official)", "Dominican Creole French (Kwéyòl), widely spoken"],
       currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are often accepted in tourist areas.",
       government:
-        "Parliamentary republic — one of the few CARICOM states never to retain the British monarch as head of state after independence. A President, elected by the House of Assembly, is head of state; a Prime Minister is head of government.",
+        "Parliamentary republic: one of the few CARICOM states never to retain the British monarch as head of state after independence. A President, elected by the House of Assembly, is head of state; a Prime Minister is head of government.",
       medianAge: "≈35.6 years (2023 estimate)",
       ageStructure: "0–14 years: ≈18–21%. 15–64 years: ≈66–69%. 65 years and over: ≈13–14%.",
       ethnicComposition: {
@@ -722,7 +722,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "CIA World Factbook (2011 census, most recent available)",
       },
       urbanizationNote:
-        "Most people live in and around Roseau and the southwest. Portsmouth is the second-largest town. Dominica is the only Eastern Caribbean island where a Kalinago community survived colonisation — around 3,000–3,500 people live in the Kalinago Territory on the east coast, though only a small number are considered \"pure\" Kalinago after generations of intermarriage.",
+        "Most people live in and around Roseau and the southwest. Portsmouth is the second-largest town. Dominica is the only Eastern Caribbean island where a Kalinago community survived colonisation: around 3,000–3,500 people live in the Kalinago Territory on the east coast, though only a small number are considered \"pure\" Kalinago after generations of intermarriage.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$300–600/month in Portsmouth, Calibishie, Salisbury and other towns and villages outside Roseau",
@@ -734,7 +734,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,600/month all-in (modest rental, local food, limited AC, public transport)",
       budgetComfortableSingle: "≈US$1,600–2,500/month all-in (good location, some dining out, AC, regular transport)",
       notes:
-        "Dominica is one of the more affordable Eastern Caribbean islands, with cheap local food but pricier imports and electricity. Numbeo doesn't carry data for Dominica, so these figures come from relocation and expat guides rather than a single crowd-sourced source. A premium lifestyle — luxury rental, frequent dining and tours — can run US$3,500–5,000+/month. Minibus fares run roughly US$0.50–1.50 per trip.",
+        "Dominica is one of the more affordable Eastern Caribbean islands, with cheap local food but pricier imports and electricity. Numbeo doesn't carry data for Dominica, so these figures come from relocation and expat guides rather than a single crowd-sourced source. A premium lifestyle (luxury rental, frequent dining and tours) can run US$3,500–5,000+/month. Minibus fares run roughly US$0.50–1.50 per trip.",
       sourceName: "Relocation and expat relocation guides",
       asOf: "August 2026",
     },
@@ -774,13 +774,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Kalinago Territory",
-        description: "Home to the Caribbean's last Kalinago (Carib) community, on the east coast — craft, cultural sites and coastal scenery.",
+        description: "Home to the Caribbean's last Kalinago (Carib) community, on the east coast: craft, cultural sites and coastal scenery.",
       },
     ],
     experiences: [
       {
         title: "The Boiling Lake hike",
-        description: "A full-day, guided trek through rainforest and the Valley of Desolation to the edge of the lake — one of the Caribbean's most demanding and iconic hikes.",
+        description: "A full-day, guided trek through rainforest and the Valley of Desolation to the edge of the lake, one of the Caribbean's most demanding and iconic hikes.",
       },
       {
         title: "Waterfall hikes and swims",
@@ -800,7 +800,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Hiking the Waitukubuli National Trail",
-        description: "A 185km, 14-segment trail across the whole island, the Caribbean's only long-distance hiking trail — walkable in day-length sections or end to end.",
+        description: "A 185km, 14-segment trail across the whole island, the Caribbean's only long-distance hiking trail, walkable in day-length sections or end to end.",
       },
     ],
     localDishes: [
@@ -810,7 +810,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Crab back",
-        description: "Seasoned crab meat stuffed back into the shell — a festive, flavourful local specialty.",
+        description: "Seasoned crab meat stuffed back into the shell: a festive, flavourful local specialty.",
       },
       {
         name: "Rice and peas with stewed fish or chicken",
@@ -823,7 +823,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Mountain chicken (historical note, not a recommendation)",
         description:
-          "Dominica's traditional national dish is actually a large frog (Leptodactylus fallax), not poultry. A chytrid fungus outbreak in 2002 wiped out over 80% of the wild population within 18 months, and it's now Critically Endangered — around 100 individuals remain in the wild across Dominica and Montserrat combined. Hunting has been banned since 2004. It's mentioned here for cultural context, not as something to order.",
+          "Dominica's traditional national dish is actually a large frog (Leptodactylus fallax), not poultry. A chytrid fungus outbreak in 2002 wiped out over 80% of the wild population within 18 months, and it's now Critically Endangered: around 100 individuals remain in the wild across Dominica and Montserrat combined. Hunting has been banned since 2004. It's mentioned here for cultural context, not as something to order.",
       },
     ],
     placesToEat: [
@@ -840,7 +840,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Kozy's Niche",
         area: "Roseau",
-        description: "A local favourite blending Italian and Caribbean cooking — lionfish and grilled mahi-mahi are the dishes to order.",
+        description: "A local favourite blending Italian and Caribbean cooking: lionfish and grilled mahi-mahi are the dishes to order.",
       },
     ],
     symbols: {
@@ -865,12 +865,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Grenada",
     tagline: "The \"Spice Isle\": a tri-island state built on nutmeg, and home to the world's first underwater sculpture park.",
     overview:
-      "Grenada is a tri-island state — Grenada, Carriacou and Petite Martinique — long known as the \"Spice Isle\" for the nutmeg, mace, cocoa and cinnamon grown on its slopes; nutmeg appears on the national flag. It's also a country that has rebuilt more than once: a 1979 revolution and its violent 1983 collapse brought a brief US-led intervention, and Hurricane Ivan in 2004 destroyed 90% of the island's buildings and nearly wiped out the nutmeg industry overnight. Today it's calm, green and mountainous, with diving, waterfalls and rainforest as much a draw as its beaches.",
+      "Grenada is a tri-island state (Grenada, Carriacou and Petite Martinique) long known as the \"Spice Isle\" for the nutmeg, mace, cocoa and cinnamon grown on its slopes; nutmeg appears on the national flag. It's also a country that has rebuilt more than once: a 1979 revolution and its violent 1983 collapse brought a brief US-led intervention, and Hurricane Ivan in 2004 destroyed 90% of the island's buildings and nearly wiped out the nutmeg industry overnight. Today it's calm, green and mountainous, with diving, waterfalls and rainforest as much a draw as its beaches.",
     photo: {
       src: "/destinations/grenada.jpg",
-      alt: "Underwater sculptures at the Molinere Underwater Sculpture Park, Grenada",
-      credit: "Boris Kasimov, CC BY 2.0, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Underwater_sculptures_at_Molinere_Underwater_Sculpture_Park.jpg",
+      alt: "Grand Anse Beach, Grenada",
+      credit: "Varun Kapoor, CC BY 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Grand_Anse_Beach_Grenada.jpg",
     },
     coordinates: { lat: 12.05, lng: -61.75, display: "12.05°N, 61.75°W" },
     demographics: {
@@ -879,7 +879,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "Worldometer / CIA World Factbook",
         sourceUrl: "https://www.worldometers.info/world-population/grenada-population/",
       },
-      areaKm2: "≈344 km² across three inhabited islands — Grenada (≈311 km²), Carriacou (≈34 km²) and Petite Martinique (≈2.4 km²)",
+      areaKm2: "≈344 km² across three inhabited islands: Grenada (≈311 km²), Carriacou (≈34 km²) and Petite Martinique (≈2.4 km²)",
       independence: "7 February 1974, from the United Kingdom",
       capital: "St. George's",
       officialLanguages: ["English (official)", "Grenadian Creole English and French Patois widely spoken"],
@@ -909,7 +909,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,300–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–3,500/month all-in",
       notes:
-        "Numbeo has no listing for St. George's, so these figures come from relocation and expat cost-of-living guides rather than a single crowd-sourced dataset — treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle — a beachfront rental near Grand Anse, frequent dining and tours — can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
+        "Numbeo has no listing for St. George's, so these figures come from relocation and expat cost-of-living guides rather than a single crowd-sourced dataset, so treat them a little more cautiously than other countries' figures. Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle (a beachfront rental near Grand Anse, frequent dining and tours) can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
       asOf: "August 2026",
@@ -937,7 +937,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "River Antoine Rum Distillery",
-        description: "Operating since 1785 and still turning a water wheel — the oldest functioning water-driven distillery in the Caribbean.",
+        description: "Operating since 1785 and still turning a water wheel, the oldest functioning water-driven distillery in the Caribbean.",
       },
       {
         name: "Belmont Estate",
@@ -945,7 +945,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Carriacou",
-        description: "Grenada's larger sister island, quieter and less developed — Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
+        description: "Grenada's larger sister island, quieter and less developed: Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
       },
       {
         name: "The Carenage & Fort George",
@@ -959,11 +959,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Spicemas Carnival",
-        description: "Grenada's carnival, centred on St. George's in early August after a season that builds from May — soca, costume bands and street parades.",
+        description: "Grenada's carnival, centred on St. George's in early August after a season that builds from May: soca, costume bands and street parades.",
       },
       {
         title: "Diving the Bianca C wreck",
-        description: "A 180-metre former passenger liner that sank in 1961, now one of the largest diveable shipwrecks in the Caribbean — for experienced divers only, given its depth.",
+        description: "A 180-metre former passenger liner that sank in 1961, now one of the largest diveable shipwrecks in the Caribbean, for experienced divers only given its depth.",
       },
       {
         title: "Snorkelling the Underwater Sculpture Park",
@@ -971,7 +971,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Nutmeg and spice plantation tours",
-        description: "Visits to working spice estates to see how nutmeg, mace and cocoa are grown and processed — the industry that gave Grenada its nickname.",
+        description: "Visits to working spice estates to see how nutmeg, mace and cocoa are grown and processed, the industry that gave Grenada its nickname.",
       },
       {
         title: "Carriacou Maroon & String Band Music Festival",
@@ -993,7 +993,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Lambi (conch)",
-        description: "Conch meat, marinated and tenderised with local spices — grilled, stewed, or added to a seafood oil down.",
+        description: "Conch meat, marinated and tenderised with local spices: grilled, stewed, or added to a seafood oil down.",
       },
       {
         name: "Crab back",
@@ -1004,7 +1004,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Patrick's Local Homestyle Restaurant",
         area: "St. George's",
-        description: "Grenadian food tapas-style — oil down, callaloo soup, ginger pork and fish cakes, all in small plates.",
+        description: "Grenadian food tapas-style: oil down, callaloo soup, ginger pork and fish cakes, all in small plates.",
       },
       {
         name: "BB's Crab Back",
@@ -1019,7 +1019,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "The Aquarium",
         area: "Magazine Beach",
-        description: "Beachfront dining ranging from casual lunches to fine dining — grilled lobster, jerk chicken and callaloo cannelloni.",
+        description: "Beachfront dining ranging from casual lunches to fine dining: grilled lobster, jerk chicken and callaloo cannelloni.",
       },
       {
         name: "Belmont Estate restaurant",
@@ -1049,7 +1049,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Guyana",
     tagline: "Mainland South America's only English-speaking country: a vast, largely untouched interior of rainforest, savannah and waterfalls, transformed by a recent oil boom.",
     overview:
-      "Guyana is the odd one out geographically among CARICOM's island states — mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown's real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
+      "Guyana is the odd one out geographically among CARICOM's island states: mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown's real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
     photo: {
       src: "/destinations/guyana.jpg",
       alt: "Aerial view of Kaieteur Falls, Guyana",
@@ -1059,28 +1059,28 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     coordinates: { lat: 6.8045, lng: -58.1553, display: "6.80°N, 58.16°W" },
     demographics: {
       population: {
-        value: "1,025,334 at end of 2025 — Guyana passed 1 million people for the first time, up from 956,044 a year earlier",
+        value: "1,025,334 at end of 2025 (Guyana passed 1 million people for the first time, up from 956,044 a year earlier)",
         sourceName: "Guyana Bureau of Statistics (announced July 2026, World Population Day)",
         sourceUrl: "https://kaieteurnewsonline.com/2026/07/13/guyanas-population-surpasses-1-million-chief-statistician/",
       },
-      areaKm2: "≈214,970 km² — by far the largest CARICOM member, over 80% of it rainforest",
+      areaKm2: "≈214,970 km² (by far the largest CARICOM member, over 80% of it rainforest)",
       independence: "26 May 1966, from the United Kingdom. Became a Cooperative Republic on 23 February 1970.",
       capital: "Georgetown",
       officialLanguages: ["English (official)", "Guyanese Creole, widely spoken"],
-      currency: "Guyanese dollar (GYD) — floating since 2015, trading at roughly GY$209 to US$1",
+      currency: "Guyanese dollar (GYD), floating since 2015, trading at roughly GY$209 to US$1",
       government:
         "Cooperative Republic. Unlike several smaller CARICOM states, Guyana's President is an executive head of state and head of government combined (since the 1980 constitution), not a ceremonial office.",
-      medianAge: "≈27 years — one of the younger populations in CARICOM",
+      medianAge: "≈27 years, one of the younger populations in CARICOM",
       ethnicComposition: {
         value: "East Indian ≈40%, African descent ≈29%, mixed ≈20%, Amerindian ≈10.5%, other ≈0.5%",
         sourceName: "CIA World Factbook (2012 census, most recent available)",
       },
       urbanizationNote:
-        "Most of the population lives on a narrow coastal strip, with Georgetown the largest city by far. The vast interior — savannah, rainforest, and the Rupununi region bordering Brazil — is sparsely populated, largely by Amerindian communities.",
+        "Most of the population lives on a narrow coastal strip, with Georgetown the largest city by far. The vast interior (savannah, rainforest, and the Rupununi region bordering Brazil) is sparsely populated, largely by Amerindian communities.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$300–600/month in Georgetown suburbs (Providence, Diamond, East Bank Demerara) or other towns (Linden, New Amsterdam)",
-      rentPremium1BR: "≈US$400–900/month for a standard central Georgetown unit, but specific reported cases show the top end running far higher — see notes",
+      rentPremium1BR: "≈US$400–900/month for a standard central Georgetown unit, but specific reported cases show the top end running far higher; see notes",
       groceriesSingle: "≈US$150–400/month, wide because local produce is very cheap but imports are not",
       inexpensiveMeal: "≈US$3–15",
       midRangeMealForTwo: "≈US$30–80",
@@ -1088,7 +1088,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,000–1,400/month all-in",
       budgetComfortableSingle: "≈US$1,400–2,500/month all-in",
       notes:
-        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result — one widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. Numbeo has no listing for Georgetown. A premium lifestyle — luxury rental in central Georgetown or an upscale suburb, frequent dining — can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
+        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result. One widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. Numbeo has no listing for Georgetown. A premium lifestyle (luxury rental in central Georgetown or an upscale suburb, frequent dining) can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
       sourceName: "Relocation and expat cost-of-living guides, cross-checked against real-estate reporting on the oil boom",
       asOf: "August 2026",
     },
@@ -1096,7 +1096,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Kaieteur Falls",
         description:
-          "One of the world's most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it — visitors fly in on a small plane over unbroken rainforest.",
+          "One of the world's most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it; visitors fly in on a small plane over unbroken rainforest.",
       },
       {
         name: "Iwokrama Rainforest",
@@ -1112,7 +1112,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Orinduik Falls",
-        description: "A wide, tiered waterfall on the Ireng River bordering Brazil, with warm, shallow pools over reddish jasper stone terraces — less dramatic in height than Kaieteur, more swimmable.",
+        description: "A wide, tiered waterfall on the Ireng River bordering Brazil, with warm, shallow pools over reddish jasper stone terraces: less dramatic in height than Kaieteur, more swimmable.",
       },
       {
         name: "Shell Beach",
@@ -1122,7 +1122,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Flying to Kaieteur Falls",
-        description: "A small-plane flight over rainforest canopy to reach the falls — the journey is as much the experience as the waterfall itself.",
+        description: "A small-plane flight over rainforest canopy to reach the falls, where the journey is as much the experience as the waterfall itself.",
       },
       {
         title: "The Iwokrama canopy walkway",
@@ -1134,7 +1134,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Birdwatching",
-        description: "Guyana is one of the world's most serious birding destinations — harpy eagles, macaws and hundreds of other species in largely untouched habitat.",
+        description: "Guyana is one of the world's most serious birding destinations, with harpy eagles, macaws and hundreds of other species in largely untouched habitat.",
       },
       {
         title: "Turtle watching at Shell Beach",
@@ -1148,7 +1148,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Cook-up rice",
-        description: "An everyday one-pot dish of rice and split peas cooked with meat and coconut milk — brought by enslaved West Africans, similar to Ghanaian waakye.",
+        description: "An everyday one-pot dish of rice and split peas cooked with meat and coconut milk, brought by enslaved West Africans and similar to Ghanaian waakye.",
       },
       {
         name: "Metemgee",
@@ -1156,7 +1156,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Roti and curry",
-        description: "A strong Indo-Guyanese influence on everyday eating, reflecting the country's East Indian plurality — curried chicken, goat or vegetables wrapped in roti.",
+        description: "A strong Indo-Guyanese influence on everyday eating, reflecting the country's East Indian plurality: curried chicken, goat or vegetables wrapped in roti.",
       },
     ],
     placesToEat: [
@@ -1168,7 +1168,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Aagman Indian Restaurant",
         area: "Georgetown",
-        description: "A well-regarded Indian restaurant reflecting Guyana's large Indo-Guyanese population — the paneer tikka masala is a standout.",
+        description: "A well-regarded Indian restaurant reflecting Guyana's large Indo-Guyanese population; the paneer tikka masala is a standout.",
       },
       {
         name: "Govinda's Higher Taste",
@@ -1188,7 +1188,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // Two materially different texts circulate online as Guyana's National
       // Pledge, both attributed to the same secondary source without a clean
       // official-government confirmation for either. Rather than guess which
-      // is correct, it's left out — same policy as Belize.
+      // is correct, it's left out, same policy as Belize.
     },
     lastUpdated: "August 2026",
   },
@@ -1197,7 +1197,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Jamaica",
     tagline: "The Caribbean's best-known island by far: reggae, jerk, and a coastline that runs from Blue Mountain coffee slopes to Seven Mile Beach.",
     overview:
-      "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally — reggae, Bob Marley and jerk cooking all trace back here. It's a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
+      "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally: reggae, Bob Marley and jerk cooking all trace back here. It's a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
     photo: {
       src: "/destinations/jamaica.jpg",
       alt: "Dunn's River Falls, Ocho Rios, Jamaica",
@@ -1211,7 +1211,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "Worldometer",
         sourceUrl: "https://www.worldometers.info/world-population/jamaica-population/",
       },
-      areaKm2: "≈10,990 km² — the largest English-speaking island in the Caribbean",
+      areaKm2: "≈10,990 km² (the largest English-speaking island in the Caribbean)",
       independence: "6 August 1962, from the United Kingdom",
       capital: "Kingston",
       officialLanguages: ["English (official)", "Jamaican Patois, spoken by most of the population day to day"],
@@ -1237,7 +1237,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,200–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–3,000/month all-in",
       notes:
-        "Jamaica has one of the better-populated Numbeo listings in the region, so the rent, meal and utility figures above rest on a reasonably sized sample rather than a handful of entries — cross-checked against relocation guides, which is why groceries and the overall budget bands sit a little higher here than a Numbeo-only estimate would suggest. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle — uptown Kingston or beachfront tourist area, frequent dining, high AC use — can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
+        "Jamaica has one of the better-populated Numbeo listings in the region, so the rent, meal and utility figures above rest on a reasonably sized sample rather than a handful of entries. They're also cross-checked against relocation guides, which is why groceries and the overall budget bands sit a little higher here than a Numbeo-only estimate would suggest. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle (uptown Kingston or beachfront tourist area, frequent dining, high AC use) can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Kingston-Jamaica",
       asOf: "August 2026",
@@ -1245,7 +1245,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Dunn's River Falls",
-        description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach — one of Jamaica's most-photographed sights.",
+        description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach: one of Jamaica's most-photographed sights.",
       },
       {
         name: "Blue Mountains",
@@ -1269,7 +1269,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Doctor's Cave Beach",
-        description: "A historic Montego Bay beach that grew famous in the 1920s after a British osteopath publicised its supposedly restorative waters — still one of the city's best-known beaches.",
+        description: "A historic Montego Bay beach that grew famous in the 1920s after a British osteopath publicised its supposedly restorative waters, and it's still one of the city's best-known beaches.",
       },
       {
         name: "Blue and John Crow Mountains National Park",
@@ -1283,7 +1283,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Climbing Dunn's River Falls",
-        description: "A guided, hand-in-hand climb up the terraced falls — one of the most-repeated Jamaica experiences there is.",
+        description: "A guided, hand-in-hand climb up the terraced falls, one of the most-repeated Jamaica experiences there is.",
       },
       {
         title: "Hiking Blue Mountain Peak",
@@ -1291,7 +1291,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "A jerk pit meal",
-        description: "Chicken or pork slow-grilled over pimento wood — best eaten at a roadside jerk stand, not a hotel restaurant.",
+        description: "Chicken or pork slow-grilled over pimento wood, best eaten at a roadside jerk stand, not a hotel restaurant.",
       },
       {
         title: "Cliff diving at Rick's Café",
@@ -1299,25 +1299,25 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Reggae and dancehall nightlife",
-        description: "Live music, sound systems and street dances, especially in Kingston — the birthplace of both genres.",
+        description: "Live music, sound systems and street dances, especially in Kingston, the birthplace of both genres.",
       },
       {
         title: "Bamboo rafting on the Rio Grande",
-        description: "A calm, poled bamboo-raft trip down the river that runs from the Blue Mountains to the Portland coast — river rafting as a leisure activity started here, popularised by Errol Flynn in the 1950s.",
+        description: "A calm, poled bamboo-raft trip down the river that runs from the Blue Mountains to the Portland coast. River rafting as a leisure activity started here, popularised by Errol Flynn in the 1950s.",
       },
     ],
     localDishes: [
       {
         name: "Ackee and saltfish",
-        description: "Jamaica's national dish: ackee, the national fruit, cooked with salted cod, onion and pepper — traditionally a breakfast dish, served with fried dumplings or breadfruit.",
+        description: "Jamaica's national dish: ackee, the national fruit, cooked with salted cod, onion and pepper. Traditionally a breakfast dish, served with fried dumplings or breadfruit.",
       },
       {
         name: "Jerk chicken or pork",
-        description: "Meat marinated in Scotch bonnet pepper, allspice and thyme, then slow-cooked over pimento wood — Jamaica's best-known culinary export.",
+        description: "Meat marinated in Scotch bonnet pepper, allspice and thyme, then slow-cooked over pimento wood: Jamaica's best-known culinary export.",
       },
       {
         name: "Patties",
-        description: "Flaky, turmeric-yellow pastry filled with spiced beef, chicken or vegetables — Jamaica's everyday fast food.",
+        description: "Flaky, turmeric-yellow pastry filled with spiced beef, chicken or vegetables: Jamaica's everyday fast food.",
       },
       {
         name: "Curried goat",
@@ -1328,12 +1328,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Kingston Jerk",
         area: "Kingston",
-        description: "Widely cited by locals as the city's best jerk — chicken, pork, festival and roast breadfruit off the pimento-wood grill.",
+        description: "Widely cited by locals as the city's best jerk: chicken, pork, festival and roast breadfruit off the pimento-wood grill.",
       },
       {
         name: "Sweetwood Jerk Joint",
         area: "Kingston, near Emancipation Park",
-        description: "A wide jerk menu — chicken, pork, sausage, lamb, fish and conch — with traditional pimento-wood barbecue sides.",
+        description: "A wide jerk menu (chicken, pork, sausage, lamb, fish and conch) with traditional pimento-wood barbecue sides.",
       },
       {
         name: "Gloria's",
@@ -1348,7 +1348,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Scotchies",
         area: "Montego Bay (original), plus Ocho Rios and Kingston",
-        description: "One of Jamaica's most famous jerk centres — open-air, pimento-wood barbecue, wooden tables and barrel stools. The Montego Bay original is the one most people mean by \"Scotchies.\"",
+        description: "One of Jamaica's most famous jerk centres: open-air, pimento-wood barbecue, wooden tables and barrel stools. The Montego Bay original is the one most people mean by \"Scotchies.\"",
       },
     ],
     symbols: {
@@ -1373,7 +1373,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "St. Kitts and Nevis",
     tagline: "The smallest sovereign state in the Americas: two volcanic islands, a UNESCO fortress, and a carnival held at Christmas instead of summer.",
     overview:
-      "St. Kitts and Nevis is the smallest sovereign country in the Americas, by both area and population — a federation of two volcanic islands separated by a narrow strait called The Narrows. St. Kitts is the larger, more developed island, home to Brimstone Hill Fortress and the capital, Basseterre; Nevis is quieter, greener and more residential, with its own hot springs and a constitutional right to secede from the federation if it ever chooses to.",
+      "St. Kitts and Nevis is the smallest sovereign country in the Americas, by both area and population: a federation of two volcanic islands separated by a narrow strait called The Narrows. St. Kitts is the larger, more developed island, home to Brimstone Hill Fortress and the capital, Basseterre; Nevis is quieter, greener and more residential, with its own hot springs and a constitutional right to secede from the federation if it ever chooses to.",
     photo: {
       src: "/destinations/st-kitts-and-nevis.jpg",
       alt: "Brimstone Hill Fortress National Park, St. Kitts",
@@ -1383,11 +1383,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     coordinates: { lat: 17.2948, lng: -62.7261, display: "17.29°N, 62.73°W" },
     demographics: {
       population: {
-        value: "≈47,000–53,000 — one of the smallest sovereign states in the world by population",
+        value: "≈47,000–53,000 (one of the smallest sovereign states in the world by population)",
         sourceName: "Worldometer / World Population Review",
         sourceUrl: "https://www.worldometers.info/world-population/saint-kitts-and-nevis-population/",
       },
-      areaKm2: "≈261–269 km² depending on source (Saint Kitts ≈176 km², Nevis ≈93 km²) — the smallest sovereign state in the Americas by area",
+      areaKm2: "≈261–269 km² depending on source (Saint Kitts ≈176 km², Nevis ≈93 km²), the smallest sovereign state in the Americas by area",
       independence: "19 September 1983, from the United Kingdom",
       capital: "Basseterre, on Saint Kitts",
       officialLanguages: ["English (official)"],
@@ -1413,7 +1413,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,700–2,500/month all-in",
       budgetComfortableSingle: "≈US$2,500–4,500/month all-in",
       notes:
-        "Electricity here runs notably higher than almost anywhere else in the Caribbean — St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. Numbeo's Basseterre listing is also very thin — just 8 price entries from 2 contributors — so these figures lean more on relocation and expat cost-of-living guides. A premium lifestyle — Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use — can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
+        "Electricity here runs notably higher than almost anywhere else in the Caribbean: St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. Numbeo's Basseterre listing is also very thin, just 8 price entries from 2 contributors, so these figures lean more on relocation and expat cost-of-living guides. A premium lifestyle (Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use) can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
       sourceName: "Global Citizen Solutions cost-of-living data, cross-checked against Numbeo and other relocation guides",
       sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
       asOf: "August 2026",
@@ -1441,7 +1441,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "South Friars Bay & Cockleshell Bay",
-        description: "South-coast beaches on St. Kitts — South Friars for beach-accessible snorkelling on a reef just offshore, Cockleshell for its laid-back beach bar scene, both looking across to Nevis.",
+        description: "South-coast beaches on St. Kitts: South Friars for beach-accessible snorkelling on a reef just offshore, Cockleshell for its laid-back beach bar scene, both looking across to Nevis.",
       },
       {
         name: "Dieppe Bay's black sand beach",
@@ -1449,17 +1449,17 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Pinney's Beach, Nevis",
-        description: "A long, palm-fringed beach on Nevis's west coast lined with casual bars — one of the region's classic beach settings.",
+        description: "A long, palm-fringed beach on Nevis's west coast lined with casual bars, one of the region's classic beach settings.",
       },
       {
         name: "Charlestown & the Alexander Hamilton Museum",
-        description: "Nevis's small Georgian-era capital. The Museum of Nevis History sits on the site where US Founding Father Alexander Hamilton is believed to have been born, around 1754 — historians still debate the exact year.",
+        description: "Nevis's small Georgian-era capital. The Museum of Nevis History sits on the site where US Founding Father Alexander Hamilton is believed to have been born, around 1754, though historians still debate the exact year.",
       },
     ],
     experiences: [
       {
         title: "Sugar Mas",
-        description: "St. Kitts and Nevis's carnival, running from mid-December to early January — the only major Caribbean carnival held over Christmas and New Year rather than before Lent or in summer, ending with a Grand Parade on 1 January.",
+        description: "St. Kitts and Nevis's carnival, running from mid-December to early January: the only major Caribbean carnival held over Christmas and New Year rather than before Lent or in summer, ending with a Grand Parade on 1 January.",
       },
       {
         title: "Riding the Scenic Railway",
@@ -1481,11 +1481,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Stewed saltfish, spicy plantains, seasoned breadfruit and coconut dumplings",
-        description: "The current national dish, chosen by national poll in 2003 for the 20th anniversary of independence — created by Jacqueline Ryan, it replaced goat water as the official dish.",
+        description: "The current national dish, chosen by national poll in 2003 for the 20th anniversary of independence. Created by Jacqueline Ryan, it replaced goat water as the official dish.",
       },
       {
         name: "Goat water",
-        description: "The former national dish: a hearty goat stew with papaya, breadfruit and dumplings, seasoned with herbs and hot peppers — still widely eaten despite losing its official status.",
+        description: "The former national dish: a hearty goat stew with papaya, breadfruit and dumplings, seasoned with herbs and hot peppers. Still widely eaten despite losing its official status.",
       },
       {
         name: "Conch (lambi)",
@@ -1501,7 +1501,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Sprat Net",
         area: "Basseterre",
-        description: "A casual, reasonably priced spot with long wooden benches — locals rate it for pizza as much as seafood.",
+        description: "A casual, reasonably priced spot with long wooden benches; locals rate it for pizza as much as seafood.",
       },
       {
         name: "Rosey's Art Gallery & Café",
@@ -1534,7 +1534,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Saint Lucia",
     tagline: "Home of the Pitons, a UNESCO World Heritage volcanic landmark, and a drive-in volcano you can walk right up to.",
     overview:
-      "Saint Lucia is a mountainous, volcanic island in the Eastern Caribbean, best known for the Pitons — twin rainforest-covered spires rising straight out of the sea near Soufrière — and for the geothermal activity that also produced Sulphur Springs, billed as the world's only drive-in volcano. Away from the resort corridor around Rodney Bay in the north, the island is steep, green and rural: banana farms, fishing villages, and a strong Kwéyòl (French Creole) culture alongside English.",
+      "Saint Lucia is a mountainous, volcanic island in the Eastern Caribbean, best known for the Pitons (twin rainforest-covered spires rising straight out of the sea near Soufrière) and for the geothermal activity that also produced Sulphur Springs, billed as the world's only drive-in volcano. Away from the resort corridor around Rodney Bay in the north, the island is steep, green and rural: banana farms, fishing villages, and a strong Kwéyòl (French Creole) culture alongside English.",
     photo: {
       src: "/destinations/saint-lucia.jpg",
       alt: "Gros Piton and Petit Piton, near Soufrière, Saint Lucia",
@@ -1544,7 +1544,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     coordinates: { lat: 13.9094, lng: -60.9789, display: "13.91°N, 60.98°W" },
     demographics: {
       population: {
-        value: "≈168,462 (CIA World Factbook, 2025 estimate) to ≈180,000–184,000 (UN World Population Prospects via Worldometer, 2025–2026 estimate) — the two source families diverge by roughly 7–9%",
+        value: "≈168,462 (CIA World Factbook, 2025 estimate) to ≈180,000–184,000 (UN World Population Prospects via Worldometer, 2025–2026 estimate); the two source families diverge by roughly 7–9%",
         sourceName: "CIA World Factbook / UN World Population Prospects (2024 revision), via Worldometer",
         sourceUrl: "https://www.worldometers.info/world-population/saint-lucia-population/",
       },
@@ -1555,7 +1555,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
       government:
         "Unitary parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
-      medianAge: "≈40.4 years (CIA World Factbook, 2025 estimate; male 38.4, female 40.9) — other aggregators put it lower, around 35 years",
+      medianAge: "≈40.4 years (CIA World Factbook, 2025 estimate; male 38.4, female 40.9); other aggregators put it lower, around 35 years",
       ageStructure: "0–14 years: ≈17.9%. 15–64 years: ≈66.7%. 65 years and over: ≈15.4%. (CIA World Factbook, 2025 estimate)",
       ethnicComposition: {
         value: "Black/African descent ≈85.3%, mixed ≈10.9%, Indo-Caribbean ≈2.2%, White ≈0.6%, Indigenous ≈0.6%",
@@ -1574,7 +1574,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,500–2,000/month all-in (excluding-rent estimate of ≈US$883–2,500 plus rent)",
       budgetComfortableSingle: "≈US$2,500–3,500/month all-in",
       notes:
-        "A Global Citizen Solutions \"basic utilities\" bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia's utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use — treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
+        "A Global Citizen Solutions \"basic utilities\" bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia's utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use, so treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/st-lucia-living-cost/",
       asOf: "August 2026",
@@ -1586,7 +1586,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Sulphur Springs Park",
-        description: "Billed as \"the world's only drive-in volcano\" — a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
+        description: "Billed as \"the world's only drive-in volcano\": a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
       },
       {
         name: "Diamond Falls Botanical Gardens & Mineral Baths",
@@ -1594,7 +1594,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Marigot Bay",
-        description: "A palm-fringed, near-landlocked harbour often called one of the most beautiful bays in the Caribbean — a yachting hub with hillside restaurants overlooking the water.",
+        description: "A palm-fringed, near-landlocked harbour often called one of the most beautiful bays in the Caribbean: a yachting hub with hillside restaurants overlooking the water.",
       },
       {
         name: "Pigeon Island National Landmark",
@@ -1628,15 +1628,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Gros Islet Friday night street party",
-        description: "A weekly open-air street party in the fishing village of Gros Islet — food stalls, sound systems and dancing that draws locals and visitors alike.",
+        description: "A weekly open-air street party in the fishing village of Gros Islet: food stalls, sound systems and dancing that draws locals and visitors alike.",
       },
       {
         title: "Saint Lucia Carnival",
-        description: "The island's carnival, held in July with soca, costume bands and parades through Castries — moved off the traditional pre-Lenten calendar decades ago.",
+        description: "The island's carnival, held in July with soca, costume bands and parades through Castries. Moved off the traditional pre-Lenten calendar decades ago.",
       },
       {
         title: "Diving and snorkelling Anse Chastanet reef",
-        description: "A reef starting just off the beach, with drop-offs further out — one of the more accessible reef-diving spots in the Eastern Caribbean.",
+        description: "A reef starting just off the beach, with drop-offs further out: one of the more accessible reef-diving spots in the Eastern Caribbean.",
       },
       {
         title: "Saint Lucia Jazz & Arts Festival",
@@ -1654,7 +1654,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Green fig and saltfish",
-        description: "Saint Lucia's national dish: boiled unripe green bananas (\"green figs\") with salted, flaked codfish, onions, peppers and local seasoning — rooted in 19th-century provisions of cheap bananas and imported salt cod.",
+        description: "Saint Lucia's national dish: boiled unripe green bananas (\"green figs\") with salted, flaked codfish, onions, peppers and local seasoning. Rooted in 19th-century provisions of cheap bananas and imported salt cod.",
       },
       {
         name: "Bouyon",
@@ -1673,7 +1673,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Castries Central Market (upstairs food stalls)",
         area: "Castries",
-        description: "Budget local lunches — stewed chicken or fish with rice — cooked fresh and often sold out by early afternoon.",
+        description: "Budget local lunches (stewed chicken or fish with rice), cooked fresh and often sold out by early afternoon.",
       },
       {
         name: "Flavours of the Grill",
@@ -1716,9 +1716,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "st-vincent-and-the-grenadines",
     name: "St. Vincent and the Grenadines",
-    tagline: "One volcanic mainland and 32 smaller islands and cays strung south to the Tobago Cays — one of the Caribbean's classic sailing grounds.",
+    tagline: "One volcanic mainland and 32 smaller islands and cays strung south to the Tobago Cays: one of the Caribbean's classic sailing grounds.",
     overview:
-      "St. Vincent and the Grenadines is a multi-island nation: St. Vincent itself, mountainous and volcanic with the active La Soufrière at its northern end, plus a scattered chain of smaller Grenadine islands running south — Bequia, Mustique, Canouan, Union Island and dozens of smaller cays, including the Tobago Cays marine park. St. Vincent has most of the population and everyday life; the Grenadines are quieter, sail-in territory, ranging from Bequia's fishing-village character to Mustique's private-island exclusivity.",
+      "St. Vincent and the Grenadines is a multi-island nation: St. Vincent itself, mountainous and volcanic with the active La Soufrière at its northern end, plus a scattered chain of smaller Grenadine islands running south (Bequia, Mustique, Canouan, Union Island and dozens of smaller cays, including the Tobago Cays marine park). St. Vincent has most of the population and everyday life; the Grenadines are quieter, sail-in territory, ranging from Bequia's fishing-village character to Mustique's private-island exclusivity.",
     photo: {
       src: "/destinations/st-vincent-and-the-grenadines.jpg",
       alt: "Aerial view of the Tobago Cays, St. Vincent and the Grenadines",
@@ -1732,7 +1732,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "CIA World Factbook (2024) / Worldometer (2025–2026)",
         sourceUrl: "https://www.worldometers.info/world-population/saint-vincent-and-the-grenadines-population/",
       },
-      areaKm2: "≈389 km² — St. Vincent itself ≈344 km², plus ≈45 km² spread across 32 smaller Grenadine islands and cays (Bequia ≈18 km², Canouan ≈7.6 km², Mustique ≈5.7 km², and others)",
+      areaKm2: "≈389 km² total: St. Vincent itself ≈344 km², plus ≈45 km² spread across 32 smaller Grenadine islands and cays (Bequia ≈18 km², Canouan ≈7.6 km², Mustique ≈5.7 km², and others)",
       independence: "27 October 1979, from the United Kingdom",
       capital: "Kingstown, on St. Vincent",
       officialLanguages: ["English (official)", "Vincentian Creole English (widely spoken)"],
@@ -1758,7 +1758,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$900–1,400/month all-in",
       budgetComfortableSingle: "≈US$1,400–2,800/month all-in on St. Vincent; noticeably more to live in or near the Grenadines' resort islands",
       notes:
-        "Numbeo's bundled \"basic utilities\" figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month — the higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
+        "Numbeo's bundled \"basic utilities\" figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month. The higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
       sourceName: "Numbeo (crowd-sourced) and livingcost.org",
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Saint+Vincent+And+The+Grenadines",
       asOf: "August 2026",
@@ -1766,7 +1766,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Tobago Cays Marine Park",
-        description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean's best-known sailing and snorkelling anchorages — turtles are a regular sight in the shallows.",
+        description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean's best-known sailing and snorkelling anchorages. Turtles are a regular sight in the shallows.",
       },
       {
         name: "La Soufrière",
@@ -1774,7 +1774,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "St. Vincent Botanic Gardens",
-        description: "Established in 1765, the oldest botanical garden in the Western Hemisphere, in Kingstown — home to a breadfruit tree descended from Captain Bligh's original 1793 shipment from Tahiti.",
+        description: "Established in 1765, the oldest botanical garden in the Western Hemisphere, in Kingstown. Home to a breadfruit tree descended from Captain Bligh's original 1793 shipment from Tahiti.",
       },
       {
         name: "Falls of Baleine",
@@ -1786,7 +1786,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Bequia",
-        description: "The largest of the Grenadines and a short ferry from St. Vincent, built around Port Elizabeth and Admiralty Bay — traditional boatbuilding, a whaling history, and a laid-back sailing-town feel.",
+        description: "The largest of the Grenadines and a short ferry from St. Vincent, built around Port Elizabeth and Admiralty Bay: traditional boatbuilding, a whaling history, and a laid-back sailing-town feel.",
       },
       {
         name: "Wallilabou Bay",
@@ -1802,13 +1802,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Mustique",
-        description: "A small private island in the Grenadines known for celebrity homes and an exclusive resort — day visits and boat trips are possible, though most of the island is private.",
+        description: "A small private island in the Grenadines known for celebrity homes and an exclusive resort. Day visits and boat trips are possible, though most of the island is private.",
       },
     ],
     experiences: [
       {
         title: "Sailing the Grenadines",
-        description: "One of the Caribbean's classic sailing grounds — island-hopping by yacht or charter through Bequia, Mustique, Canouan, Union Island and the Tobago Cays.",
+        description: "One of the Caribbean's classic sailing grounds: island-hopping by yacht or charter through Bequia, Mustique, Canouan, Union Island and the Tobago Cays.",
       },
       {
         title: "Hiking La Soufrière",
@@ -1824,7 +1824,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Birdwatching for the St. Vincent parrot on the Vermont Nature Trail",
-        description: "A rainforest loop trail through Grand Bonhomme Mountain in the island's interior, one of the best places to spot the St. Vincent parrot (Amazona guildingii), the endemic national bird — dawn and dusk are prime times.",
+        description: "A rainforest loop trail through Grand Bonhomme Mountain in the island's interior, one of the best places to spot the St. Vincent parrot (Amazona guildingii), the endemic national bird. Dawn and dusk are prime times.",
       },
       {
         title: "Vincy Mas",
@@ -1850,14 +1850,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Ground provisions",
-        description: "Root vegetables — dasheen, sweet potato, yam, breadfruit — typically served alongside stewed or fried fish and meat.",
+        description: "Root vegetables (dasheen, sweet potato, yam, breadfruit) typically served alongside stewed or fried fish and meat.",
       },
     ],
     placesToEat: [
       {
         name: "Vee Jay's Restaurant & Bar",
         area: "Kingstown",
-        description: "A Kingstown institution serving traditional Vincy lunchtime fare — mutton or fish stew, curried goat, roti.",
+        description: "A Kingstown institution serving traditional Vincy lunchtime fare: mutton or fish stew, curried goat, roti.",
       },
       {
         name: "Basil's Bar (Cobblestone Inn)",
@@ -1872,7 +1872,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Jack's Beach Bar",
         area: "Princess Margaret Beach, Bequia",
-        description: "A beachfront bar and grill on Bequia — grilled fish burgers, jerk pork and plantain, and cocktails on the sand.",
+        description: "A beachfront bar and grill on Bequia: grilled fish burgers, jerk pork and plantain, and cocktails on the sand.",
       },
       {
         name: "Firefly Bequia Plantation",
@@ -1902,12 +1902,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Trinidad and Tobago",
     tagline: "The most populous, most industrialised CARICOM state, and home of the world's biggest Carnival, calypso, soca and steelpan.",
     overview:
-      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island — an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
+      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
     photo: {
       src: "/destinations/trinidad-and-tobago.jpg",
-      alt: "Pigeon Point, Tobago",
-      credit: "Kp93, CC BY-SA 3.0, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg",
+      alt: "Pitch Lake, La Brea, Trinidad",
+      credit: "Martina Jackson, CC BY-SA 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Pitch_Lake.JPG",
     },
     coordinates: { lat: 10.6918, lng: -61.2225, display: "10.69°N, 61.22°W" },
     demographics: {
@@ -1916,7 +1916,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "CIA World Factbook / Worldometer",
         sourceUrl: "https://www.worldometers.info/world-population/trinidad-and-tobago-population/",
       },
-      areaKm2: "≈5,128 km² — Trinidad ≈4,768 km², Tobago ≈300 km²",
+      areaKm2: "≈5,128 km² total: Trinidad ≈4,768 km², Tobago ≈300 km²",
       independence: "31 August 1962, from the United Kingdom; became a republic within the Commonwealth in 1976",
       capital: "Port of Spain, on Trinidad",
       officialLanguages: ["English (official)", "Trinidadian and Tobagonian English Creole (widely spoken); Trinidadian Hindustani and other heritage languages spoken by some communities"],
@@ -1950,19 +1950,19 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Pitch Lake",
-        description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad — a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
+        description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
       },
       {
         name: "Caroni Bird Sanctuary",
-        description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis — the national bird — to roost, best seen by guided boat tour at sunset.",
+        description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
       },
       {
         name: "Asa Wright Nature Centre",
-        description: "A rainforest reserve and former plantation house in Trinidad's Northern Range, known for birdwatching — hummingbirds at close range and dozens of other species on its trails.",
+        description: "A rainforest reserve and former plantation house in Trinidad's Northern Range, known for birdwatching: hummingbirds at close range and dozens of other species on its trails.",
       },
       {
         name: "Fort George",
-        description: "An 1804 hilltop fort overlooking Port of Spain and the Gulf of Paria, built by enslaved labourers led by Jonas Mohammed Bath — its cannons never fired in anger, but the view over the capital is one of the best on the island.",
+        description: "An 1804 hilltop fort overlooking Port of Spain and the Gulf of Paria, built by enslaved labourers led by Jonas Mohammed Bath. Its cannons never fired in anger, but the view over the capital is one of the best on the island.",
       },
       {
         name: "Queen's Park Savannah",
@@ -1970,7 +1970,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Main Ridge Forest Reserve",
-        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere — over 10,000 acres of rainforest across Tobago's central spine, with hiking trails and dense birdlife.",
+        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere: over 10,000 acres of rainforest across Tobago's central spine, with hiking trails and dense birdlife.",
       },
       {
         name: "Pigeon Point Heritage Park",
@@ -1978,7 +1978,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Buccoo Reef & Nylon Pool",
-        description: "A protected reef system off Tobago's southwest coast — rated among the world's best reefs by Jacques Cousteau — with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
+        description: "A protected reef system off Tobago's southwest coast, rated among the world's best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
       },
       {
         name: "Argyle Falls",
@@ -1986,13 +1986,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Fort King George",
-        description: "An 18th-century fort above Scarborough, Tobago, that changed hands between the British and French several times — now home to the Tobago Museum, with cannons and colonial-era buildings intact.",
+        description: "An 18th-century fort above Scarborough, Tobago, that changed hands between the British and French several times. Now home to the Tobago Museum, with cannons and colonial-era buildings intact.",
       },
     ],
     experiences: [
       {
         title: "Trinidad Carnival",
-        description: "The pre-Lenten Carnival that Caribbean carnivals across the region take their cue from — soca, calypso, steelpan and elaborate costume bands filling Port of Spain for days.",
+        description: "The pre-Lenten Carnival that Caribbean carnivals across the region take their cue from: soca, calypso, steelpan and elaborate costume bands filling Port of Spain for days.",
       },
       {
         title: "Walking Pitch Lake",
@@ -2000,7 +2000,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Scarlet ibis watching at Caroni Swamp",
-        description: "A sunset boat tour through mangrove channels to watch thousands of scarlet ibis return to roost — one of the most reliable big wildlife spectacles in the Caribbean.",
+        description: "A sunset boat tour through mangrove channels to watch thousands of scarlet ibis return to roost, one of the most reliable big wildlife spectacles in the Caribbean.",
       },
       {
         title: "Diving or snorkelling Buccoo Reef",
@@ -2012,7 +2012,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Doubles at dawn",
-        description: "Trinidad's street-food ritual — curried channa in fried bara, bought from a stand that's often only open in the early morning, eaten standing up.",
+        description: "Trinidad's street-food ritual: curried channa in fried bara, bought from a stand that's often only open in the early morning, eaten standing up.",
       },
     ],
     localDishes: [
@@ -2026,11 +2026,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Roti",
-        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato — a staple lunch across both islands, reflecting the country's large Indo-Trinidadian population.",
+        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato: a staple lunch across both islands, reflecting the country's large Indo-Trinidadian population.",
       },
       {
         name: "Pelau",
-        description: "A one-pot rice dish with meat (often chicken), pigeon peas and coconut milk, browned with caramelised sugar — an everyday dish and a Carnival/liming staple.",
+        description: "A one-pot rice dish with meat (often chicken), pigeon peas and coconut milk, browned with caramelised sugar: an everyday dish and a Carnival/liming staple.",
       },
     ],
     placesToEat: [
@@ -2047,7 +2047,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "D'Lime Cafe",
         area: "Port of Spain",
-        description: "Casual Trini fare — doubles, roti and curries — at reasonable prices in a laid-back setting.",
+        description: "Casual Trini fare (doubles, roti and curries) at reasonable prices in a laid-back setting.",
       },
       {
         name: "Store Bay food stalls",
@@ -2074,6 +2074,172 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "National Library and Information System Authority (NALIS), Government of Trinidad and Tobago",
         sourceUrl: "https://www.nalis.gov.tt/resources/tt-content-guide/national-symbols/",
       },
+    },
+    lastUpdated: "August 2026",
+  },
+  {
+    slug: "suriname",
+    name: "Suriname",
+    tagline: "The only Dutch-speaking country in the Americas: a Dutch colonial capital fronting a vast, largely untouched Amazon interior.",
+    overview:
+      "Suriname is the odd one out among CARICOM's mostly English-speaking, mostly Commonwealth members: a former Dutch colony, independent since 1975, where Dutch is the official language and Sranan Tongo the everyday lingua franca. Its capital, Paramaribo, is a UNESCO World Heritage city of wooden Dutch colonial buildings on the Suriname River; beyond the narrow coastal strip where most people live, the country is over 90% Amazon rainforest, rivers and Maroon and Indigenous villages, among the least densely populated and most forested countries on Earth.",
+    photo: {
+      src: "/destinations/suriname.jpg",
+      alt: "Fort Zeelandia, Paramaribo, Suriname",
+      credit: "Junie609, CC BY-SA 4.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia_top_view_(photo_1)_located_at_Abraham_Crijnssenweg_1_paramaribo,_suriname.jpg",
+    },
+    coordinates: { lat: 5.852, lng: -55.2038, display: "5.85°N, 55.20°W" },
+    demographics: {
+      population: {
+        value: "≈634,000–654,000 (2025–2026 estimate)",
+        sourceName: "CIA World Factbook / Worldometer",
+        sourceUrl: "https://www.worldometers.info/world-population/suriname-population/",
+      },
+      areaKm2: "≈163,820 km² (by far the largest CARICOM country by area, though one of the smallest by population)",
+      independence: "25 November 1975, from the Netherlands",
+      capital: "Paramaribo",
+      officialLanguages: ["Dutch (official)", "Sranan Tongo (widely spoken lingua franca)", "Sarnami Hindustani, Javanese, Saramaccan and other heritage and Maroon languages also spoken"],
+      currency: "Surinamese dollar (SRD), not pegged, and has depreciated significantly against the US dollar in recent years; an IMF-backed programme has brought inflation down from double digits but the exchange rate remains volatile",
+      government:
+        "Presidential republic. The President is both head of state and head of government, elected by the National Assembly. Suriname is not a Commonwealth realm.",
+      medianAge: "≈28.9 years (Worldometer, 2026 estimate) to ≈32.3 years (CIA World Factbook, 2025 estimate), depending on source",
+      ageStructure: "0–14 years: ≈22.5%. 15–64 years: ≈70%. 65 years and over: ≈7.5%. (CIA World Factbook, 2025 estimate)",
+      ethnicComposition: {
+        value: "Hindustani (East Indian descent) ≈27.4%, Maroon ≈21.7%, Creole ≈15.7%, Javanese ≈13.7%, mixed ≈13.4%, other/unspecified ≈8.2%",
+        sourceName: "2012 census",
+      },
+      urbanizationNote:
+        "Roughly two-thirds of the population lives on the narrow coastal strip, especially in and around Paramaribo. The vast interior, most of the country's land area, is covered in rainforest and sparsely populated by Maroon communities (descended from escaped enslaved Africans) and Indigenous villages, reachable mainly by river or small aircraft.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$200–350/month outside central Paramaribo",
+      rentPremium1BR: "≈US$350–650/month in central Paramaribo, up to US$700–1,000+ for newer furnished or expat-oriented units",
+      groceriesSingle: "≈US$150–250/month for basics; local produce, rice and fish are cheap, imports cost more",
+      inexpensiveMeal: "≈US$3–8 (pom, roti, street food)",
+      midRangeMealForTwo: "≈US$16–30, more at upscale hotel or international restaurants",
+      utilities: "≈US$20–60/month for electricity without heavy AC, ≈US$60–140+/month with regular AC, plus roughly US$5–15/month water and US$2–10/month cooking gas",
+      budgetModestSingle: "≈US$800–1,200/month all-in",
+      budgetComfortableSingle: "≈US$1,200–2,500/month all-in",
+      notes:
+        "Suriname is generally the most affordable CARICOM country for rent and local food, but treat every dollar figure here as more time-sensitive than usual: the Surinamese dollar has been volatile, and prices quoted in SRD shift with the exchange rate faster than the fixed-peg Eastern Caribbean islands. Electricity comes from a mix of the Afobaka hydroelectric dam and thermal (diesel/heavy fuel oil) generation, so it isn't uniformly cheap the way hydro-only figures might suggest. Expect real bills toward the higher end of the range with regular AC use.",
+      sourceName: "Numbeo and relocation cost-of-living guides",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Suriname",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Historic Inner City of Paramaribo",
+        description: "A UNESCO World Heritage Site since 2002: a largely intact 17th-century Dutch colonial streetplan of wooden buildings along the Suriname River, blending Dutch, other European and Creole architectural styles.",
+      },
+      {
+        name: "Fort Zeelandia",
+        description: "Built in 1667 and the oldest surviving building in Paramaribo, now home to the Surinaams Museum, standing out as one of the district's few stone structures amid the wooden colonial buildings.",
+      },
+      {
+        name: "Central Suriname Nature Reserve",
+        description: "A UNESCO World Heritage Site protecting 1.6 million hectares of pristine rainforest in the interior: jaguars, giant river otters, harpy eagles and over 400 bird species, reached by boat and small aircraft.",
+      },
+      {
+        name: "Brownsberg Nature Park",
+        description: "A tabletop mountain plateau about 130km south of Paramaribo, with hiking trails, waterfalls and panoramic views over the Brokopondo Reservoir; a strong spot for birdwatching.",
+      },
+      {
+        name: "Jodensavanne",
+        description: "The ruins of a 17th-century Jewish settlement and one of the oldest synagogues in the Americas, on the Suriname River. Designated a UNESCO World Heritage Site in 2023.",
+      },
+      {
+        name: "Peperpot Nature Park",
+        description: "A former 18th-century coffee and cocoa plantation in Commewijne, across the river from Paramaribo, now a nature reserve with monkeys, sloths and over 250 bird species alongside old plantation ruins.",
+      },
+      {
+        name: "Galibi Nature Reserve",
+        description: "A coastal reserve near the mouth of the Marowijne River, among the Western Hemisphere's most important nesting sites for leatherback and other sea turtles, April to August.",
+      },
+      {
+        name: "Brokopondo Reservoir",
+        description: "A large man-made lake formed by the Afobaka Dam, surrounded by rainforest, with drowned-forest boat trips, fishing and access to Maroon river communities.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Walking Paramaribo's UNESCO historic centre",
+        description: "A self-guided or guided walk past the wooden colonial streetscape, the Presidential Palace, the Cathedral of St Peter and St Paul (one of the world's largest wooden buildings), and the Waterkant riverfront.",
+      },
+      {
+        title: "Central Suriname Nature Reserve expedition",
+        description: "Multi-day trips deep into pristine rainforest by boat and on foot, staying at eco-lodges: one of the least-visited, most intact rainforest experiences in South America.",
+      },
+      {
+        title: "River trip to a Maroon village",
+        description: "Boat trips up the Suriname or Commewijne rivers to visit Maroon communities descended from escaped enslaved Africans, with their own distinct culture, music and river-based way of life.",
+      },
+      {
+        title: "Turtle nesting at Galibi",
+        description: "Seasonal (April–August) night tours to watch leatherback and other sea turtles nest on the beaches near the Marowijne River mouth.",
+      },
+      {
+        title: "Hiking and birdwatching at Brownsberg",
+        description: "Trails through rainforest on the Brownsberg plateau to viewpoints over Brokopondo Reservoir, with strong odds of spotting toucans, macaws and other rainforest birds.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Pom",
+        description: "Suriname's best-known festive dish: grated pomtajer root baked with chicken (or fish), citrus and spices into a casserole. A Surinamese-Jewish dish now central to birthdays and celebrations across all communities. \"Without the pom, there are no birthdays,\" as the local saying goes.",
+      },
+      {
+        name: "Roti",
+        description: "Flatbread wrapped around curried chicken, goat or potato, reflecting the large Hindustani community: a staple lunch and dinner across the country.",
+      },
+      {
+        name: "Nasi goreng and bami (mie goreng)",
+        description: "Indonesian-style fried rice and fried noodles, widely eaten thanks to Suriname's large Javanese community.",
+      },
+      {
+        name: "Pindasoep",
+        description: "A peanut soup with West African roots, often served with rice, dumplings and meat.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Warung Saeri",
+        area: "Paramaribo",
+        description: "Javanese-Surinamese cooking (saoto soup, bakabana, nasi and bami), a long-running local favourite.",
+      },
+      {
+        name: "Restaurant Sarinah",
+        area: "Paramaribo",
+        description: "Traditional Indonesian and Javanese dishes including rendang and nasi rames, one of the city's best-known Indonesian restaurants.",
+      },
+      {
+        name: "De Gadri",
+        area: "Paramaribo, near Fort Zeelandia",
+        description: "Javanese and Indonesian cuisine (nasi goreng, satay, gado-gado), conveniently placed for a stop after visiting the fort.",
+      },
+      {
+        name: "Mirosso",
+        area: "Paramaribo",
+        description: "A long-established, family-run Indonesian and Javanese-Surinamese restaurant.",
+      },
+      {
+        name: "Waterkant market stalls",
+        area: "Paramaribo riverfront",
+        description: "Casual food stalls along the historic riverfront serving inexpensive local plates.",
+      },
+    ],
+    symbols: {
+      motto: "Justitia – Pietas – Fides (Latin: \"Justice, Piety, Loyalty\")",
+      anthem: {
+        title: "God zij met ons Suriname (\"God Be with Our Suriname\")",
+        composer: "Johannes Corstianus de Puy",
+        lyricist: "Cornelis Atses Hoekstra (original Dutch verse, 1893); Henri Frans de Ziel added a Sranan Tongo verse on unity in 1959",
+        adopted: "1975, at independence (music composed in 1876)",
+        officialUrl: "https://en.wikipedia.org/wiki/God_zij_met_ons_Suriname",
+      },
+      // No consistent, officially-sourced National Pledge text found for
+      // Suriname; left out rather than guessed, same policy as Belize and
+      // Guyana.
     },
     lastUpdated: "August 2026",
   },

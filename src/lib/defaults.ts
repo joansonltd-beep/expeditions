@@ -435,7 +435,7 @@ export const DEFAULT_ABOUT: AboutData = {
   sections: [
     {
       paragraphs: [
-        "The Treaty of Chaguaramas gives skilled CARICOM nationals the right to live and work in another participating member state without a work permit. Our sole mission is to make that move simple: the CSME Skills Certificate you need to apply for, the bank account and business registration you'll want once you land, and the settling-in details that are hard to research from another island. We cover the 12 CARICOM states that actually participate in CSME free movement — not every CARICOM member, since a few (like Montserrat and The Bahamas) sit outside that regime and a work permit still applies there.",
+        "The Treaty of Chaguaramas gives skilled CARICOM nationals the right to live and work in another participating member state without a work permit. Our sole mission is to make that move simple: the CSME Skills Certificate you need to apply for, the bank account and business registration you'll want once you land, and the settling-in details that are hard to research from another island. We cover the 12 CARICOM states that actually participate in CSME free movement, not every CARICOM member, since a few (like Montserrat and The Bahamas) sit outside that regime and a work permit still applies there.",
         "Expeditions With Jo is the brainchild of Joanson Baptiste James, who started it as a Trinidad travel agency and has grown it into a relocation-first service, still run with the same one-to-one attention.",
       ],
     },
@@ -445,7 +445,7 @@ export const DEFAULT_ABOUT: AboutData = {
         "CSME Skills Certificate: Step-by-step guidance on qualifying, gathering documents and applying in your destination country.",
         "Banking: Help opening a bank account in the CARICOM state you're moving to.",
         "Business setup: Registering a business and getting your documents ready, in Trinidad and Tobago or Grenada.",
-        "Country guides: What to expect once you arrive — cost of living, places to see, local food and more.",
+        "Country fact sheets: What to expect once you arrive, including cost of living, places to see, local food and more.",
       ],
     },
     {

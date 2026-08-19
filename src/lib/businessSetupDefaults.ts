@@ -1,7 +1,7 @@
 // Bundled defaults for the Business Setup page. Editable in Studio
 // (businessSetupPage document); this file is the fallback so the page always
 // renders even before seeding. The country eligibility gate itself is not
-// CMS content — it is a hard requirement enforced in the enquiry component.
+// CMS content: it is a hard requirement enforced in the enquiry component.
 
 export type BusinessSetupService = { title: string; description: string };
 

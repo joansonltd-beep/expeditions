@@ -117,7 +117,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               </div>
               <figcaption className="mt-2 text-xs text-slate-400">
                 {g.photo.alt}
-                {" — "}
+                {" · "}
                 {g.photo.creditUrl ? (
                   <a href={g.photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                     {g.photo.credit}
@@ -236,11 +236,10 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
           {hasCsmePage ? (
             <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
-              Want to move to {g.name}?{" "}
+              Want to move to {g.name}? CARICOM nationals can live and work there without a work permit.{" "}
               <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
                 See the CSME steps for {g.name} →
-              </Link>{" "}
-              — CARICOM nationals can live and work there without a work permit.
+              </Link>
             </div>
           ) : null}
         </div>
@@ -328,7 +327,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               </>
             ) : null}
             , as of {g.costOfLiving.asOf}. Cost-of-living figures are estimates that shift with the season and the
-            neighbourhood — treat them as a starting point, not a quote.
+            neighbourhood; treat them as a starting point, not a quote.
           </p>
         </div>
       </Section>

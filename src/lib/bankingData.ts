@@ -5,7 +5,7 @@
 // retail presence there. Where both operate (Barbados, Guyana), Republic Bank
 // is the one we point people to. Antigua and Barbuda has neither, so it uses
 // ACB Caribbean, the largest indigenous bank on the island. Remaining members
-// with no listed bank are omitted — see UNCOVERED below.
+// with no listed bank are omitted; see UNCOVERED below.
 //
 // Researched July 2026 from the banks' own product pages. Fees, minimums and
 // document lists change, so every island page carries a "confirm with the
@@ -251,7 +251,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     ],
   },
   // The Bahamas deliberately excluded: it's a CARICOM member but not a CSME
-  // free-movement participant, so it's out of scope for this site — same
+  // free-movement participant, so it's out of scope for this site, same
   // reasoning as Montserrat.
   {
     slug: "antigua-and-barbuda",

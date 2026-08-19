@@ -95,11 +95,10 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
           </p>
           {countryGuide ? (
             <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
-              Want the bigger picture first?{" "}
+              Want the bigger picture first? Cost of living, places to see, food and more:{" "}
               <Link href={`/destinations/${countryGuide.slug}`} className="font-semibold text-brand hover:underline">
-                See the {c.name} fact sheet →
-              </Link>{" "}
-              — cost of living, places to see, food and more.
+                see the {c.name} fact sheet →
+              </Link>
             </div>
           ) : null}
           {c.fullFreeMovement ? (
