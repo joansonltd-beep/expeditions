@@ -1595,6 +1595,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://mfaft.gov.jm/site/national-anthem-song-and-pledge/",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Jamaica?",
+        a: "Jamaica is moderate by Caribbean standards: all-inclusive resorts can be pricey, but independent travel can be quite affordable. A budget traveller can expect roughly US$70–120/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$150–280/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$400+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Jamaican dollar (JMD), which floats. USD is accepted in many tourist areas, but you'll usually get better value paying in JMD, and change often comes back in JMD. Major cards work in most hotels, larger restaurants and shops in tourist areas, but smaller vendors, cookshops and rural spots often prefer cash. ATMs are widely available in Kingston, Montego Bay, Ocho Rios, Negril and other main towns.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with Jamaica's Passport, Immigration and Citizenship Agency (PICA) or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Government and private buses connect major towns, relatively cheap but can be crowded. Route taxis and shared minibuses (\"coasters\") run on fixed routes and are cheap and common, if fast-paced and crowded. Licensed taxis, with red plates marked PP or PPV, are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and roads range from good highways to narrow, winding mountain roads, so defensive driving matters. Organised tours are common for attractions like Dunn's River Falls, Blue Mountain coffee tours and river rafting, usually including transport and a guide.",
+      },
+      {
+        q: "What are the must-do experiences in Jamaica?",
+        a: "Climb Dunn's River Falls near Ocho Rios on a guided ascent of the terraced waterfall, watch the sunset (and try cliff-jumping) at the Negril Cliffs, tour a Blue Mountains coffee estate and hike its cool-climate scenery, spend time on Seven Mile Beach in Negril or Doctor's Cave Beach in Montego Bay, visit the Bob Marley Museum and take in Kingston's reggae and dancehall culture, go bamboo rafting on the Rio Grande in Portland, and explore inland spots like YS Falls or the Blue Hole.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Jerk chicken (marinated in Scotch bonnet, pimento and herbs, then grilled or smoked over pimento wood) is Jamaica's best-known culinary export. Ackee and saltfish is the national dish, alongside rice and peas, stewed chicken or fish, curry goat, festival, fried dumplings and bammy, plus fresh grilled or fried fish and seafood. Try local cookshops, street vendors, famous jerk centres like Scotchies in Montego Bay and Ocho Rios, and beach grills in Negril and Ocho Rios.",
+      },
+      {
+        q: "Is Jamaica safe for tourists?",
+        a: "Jamaica can be visited safely, but it has higher crime rates in some areas, especially parts of Kingston and some urban neighbourhoods. Major resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar areas, don't flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds, better deals. July–October is rainier and more humid with higher hurricane risk, and prices are lowest. For beach time, hiking and cultural events with reliable weather, aim for December–April or May–June.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking in the Blue Mountains or a long walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Jamaicans are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some communities. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers, tour guides and hotel staff welcome. Reggae and dancehall are central to national identity; being open-minded and courteous about the music and culture goes a long way.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
