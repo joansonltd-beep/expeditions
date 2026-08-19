@@ -1703,7 +1703,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         lyricist: "Rev. Charles Jesse",
         composer: "Leton Felix Thomas",
         adopted: "1967, at self-government; reconfirmed as the national anthem at independence in 1979. A Kwéyòl-language version was approved in 2016",
-        officialUrl: "https://www.govt.lc/nationalanthem",
+        officialUrl: "https://en.wikipedia.org/wiki/Sons_and_Daughters_of_Saint_Lucia",
       },
       pledge: {
         text: "With God as my guide, I pledge allegiance to my country, Saint Lucia. I proclaim that I will serve my country with pride and dignity and will defend it with vigour and valour in the pursuit of excellence, justice and equality for all.",
