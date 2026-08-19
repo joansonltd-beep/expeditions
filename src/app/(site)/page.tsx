@@ -82,7 +82,7 @@ export default async function HomePage() {
       {/* RELOCATION PILLARS */}
       <Section>
         <SectionHead eyebrow={home.pillarsEyebrow} title={home.pillarsTitle} intro={home.pillarsIntro} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {home.pillars.map((p) => (
             <Link
               key={p.href}

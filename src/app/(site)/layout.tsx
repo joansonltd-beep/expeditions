@@ -13,12 +13,14 @@ const relocateLinks = [
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "Guides" },
+  { href: "/destinations", label: "Destinations" },
 ];
 const companyLinks = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
+  { href: "/survey", label: "On The Ground" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];

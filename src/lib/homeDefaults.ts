@@ -67,6 +67,12 @@ export const DEFAULT_HOME: HomeContent = {
     },
     { icon: "💰", title: "Banking", text: "Open accounts and prepare loan and credit card applications for your new home.", href: "/finance" },
     { icon: "🧭", title: "Relocation Guides", text: "Plain-language guides to certificates, documents, and getting settled.", href: "/guides" },
+    {
+      icon: "🗺️",
+      title: "Destinations",
+      text: "Cost of living, places to see, local food and what to expect in every CARICOM country we cover.",
+      href: "/destinations",
+    },
   ],
   travelEyebrow: "When you need to travel",
   travelTitle: "Getting there is the easy part",

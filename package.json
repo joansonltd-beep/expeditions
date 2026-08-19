@@ -10,7 +10,8 @@
     "seed": "node --env-file=.env.local --import tsx scripts/seed.ts",
     "resync": "node --env-file=.env.local --import tsx scripts/resync.ts",
     "resync:about": "node --env-file=.env.local --import tsx scripts/resync-about.ts",
-    "resync:services": "node --env-file=.env.local --import tsx scripts/resync-services.ts"
+    "resync:services": "node --env-file=.env.local --import tsx scripts/resync-services.ts",
+    "resync:home": "node --env-file=.env.local --import tsx scripts/resync-home.ts"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",

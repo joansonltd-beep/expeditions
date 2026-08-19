@@ -1,38 +1,79 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
-import SurveyForm from "@/components/SurveyForm";
-import { CSME_COUNTRIES } from "@/lib/csmeData";
 
 export const metadata: Metadata = {
-  title: "CARICOM Salary Survey",
+  title: "On The Ground",
   description:
-    "An anonymous survey of salaries across the 12 CARICOM countries with CSME free movement: job title, industry, experience, education and gross monthly pay. No name or email collected.",
-  keywords: [
-    "CARICOM salary survey",
-    "Caribbean salary survey",
-    "average salary Trinidad and Tobago",
-    "average salary Jamaica",
-    "Caribbean pay by industry",
-  ],
+    "Anonymous, crowdsourced surveys on what people actually earn and pay across CARICOM: salaries and utility costs, country by country. No name or email collected.",
+  keywords: ["CARICOM salary survey", "Caribbean utility costs", "Caribbean cost of living data", "On The Ground survey"],
   alternates: { canonical: "/survey" },
 };
 
-export default function SurveyPage() {
-  const countries = CSME_COUNTRIES.map((c) => c.name);
+const SURVEYS = [
+  {
+    href: "/survey/salary",
+    icon: "banknote" as const,
+    title: "Salary Survey",
+    text: "Job title, industry, experience, education and gross monthly pay, country by country.",
+  },
+  {
+    href: "/survey/utilities",
+    icon: "banknote" as const,
+    title: "Utility Cost Survey",
+    text: "What people actually pay for electricity, water, internet, mobile, cable and more, by household size and country.",
+  },
+];
 
+// TODO: replace with each survey's published Google Sheet "view" link once
+// available, then this whole section can render unconditionally.
+const RESULTS_LINKS: { label: string; href: string }[] = [];
+
+export default function SurveyHubPage() {
   return (
     <>
       <PageHeader
         icon={<Icon name="banknote" className="h-12 w-12 text-brand" />}
-        title="CARICOM Salary Survey"
-        crumb="Salary Survey"
-        intro="Help build a clearer picture of what people actually earn across CARICOM. This survey is completely anonymous: no name or email is collected, and responses are used only in aggregate."
+        title="On The Ground"
+        crumb="On The Ground"
+        intro="Real numbers from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
       />
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <SurveyForm countries={countries} />
+        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+          {SURVEYS.map((s) => (
+            <Link
+              key={s.href}
+              href={s.href}
+              className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="mb-3.5 grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand">
+                <Icon name={s.icon} className="h-5 w-5" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{s.text}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-brand">Take the survey →</span>
+            </Link>
+          ))}
         </div>
+        {RESULTS_LINKS.length ? (
+          <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
+            <p className="text-sm font-semibold text-slate-900">See what's been shared so far</p>
+            <div className="mt-3 flex flex-wrap justify-center gap-4">
+              {RESULTS_LINKS.map((r) => (
+                <a
+                  key={r.href}
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-brand hover:underline"
+                >
+                  {r.label} →
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </Section>
     </>
   );

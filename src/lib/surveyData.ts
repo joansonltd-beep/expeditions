@@ -1,7 +1,8 @@
-// Data for the CARICOM salary survey (/survey). Fully anonymous: no name or
+// Data for the "On The Ground" survey hub (/survey): the CARICOM salary
+// survey and the utility cost survey. Both are fully anonymous, no name or
 // email is collected. Country options are the 12 CSME free-movement
 // countries this site already covers, kept in one place (csmeData.ts) so
-// the survey's country list can't drift from the rest of the site.
+// the surveys' country lists can't drift from the rest of the site.
 
 export const SURVEY_INDUSTRIES = [
   "Accounting & Auditing",
@@ -47,3 +48,16 @@ export const COMMISSION_OPTIONS = ["Fully commission based", "Commission with a 
 export const EMPLOYER_TYPE_OPTIONS = ["Private sector", "Government", "Self-employed", "Other"] as const;
 
 export const PAY_FREQUENCY_OPTIONS = ["Monthly", "Every Two Weeks", "Weekly", "10th and 25th", "Other"] as const;
+
+// --- utilities survey -----------------------------------------------------
+
+export const UTILITY_TYPES = [
+  "Electricity",
+  "Water",
+  "Internet",
+  "Mobile Phone",
+  "Cable/TV",
+  "Cooking Gas/LPG",
+  "Garbage/Waste Collection",
+  "Other",
+] as const;

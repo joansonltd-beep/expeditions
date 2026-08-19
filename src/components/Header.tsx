@@ -8,13 +8,19 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string };
 
-const RELOCATE: NavItem[] = [
+const BUSINESS: NavItem[] = [
+  { href: "/business-setup", label: "Business Setup" },
+  { href: "/finance", label: "Banking" },
+  { href: "/guides", label: "Guides" },
+  { href: "/insurance", label: "Insurance" },
+];
+
+const PERSONAL: NavItem[] = [
   { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
   { href: "/business-setup", label: "Business Setup" },
   { href: "/finance", label: "Banking" },
-  { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "Guides" },
-  { href: "/destinations", label: "Destinations" },
+  { href: "/insurance", label: "Insurance" },
 ];
 
 const TRAVEL: NavItem[] = [
@@ -27,10 +33,18 @@ const TRAVEL: NavItem[] = [
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
+const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
+
 const AFTER: NavItem[] = [
-  { href: "/survey", label: "Salary Survey" },
+  { href: "/survey", label: "On The Ground" },
   { href: "/about", label: "About" },
 ];
+
+// Deduped for the mobile flat list, since Business and Personal intentionally
+// share several items (same link reached from two different starting points).
+const MOBILE_LINKS: NavItem[] = Array.from(
+  new Map([...MAIN, ...BUSINESS, ...PERSONAL, DESTINATIONS, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
+);
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
@@ -91,7 +105,11 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               {l.label}
             </Link>
           ))}
-          <Dropdown label="Relocate" items={RELOCATE} />
+          <Dropdown label="Business" items={BUSINESS} />
+          <Dropdown label="Personal" items={PERSONAL} />
+          <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
+            {DESTINATIONS.label}
+          </Link>
           <Dropdown label="Travel" items={TRAVEL} />
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} className={linkClass(l.href)}>
@@ -126,7 +144,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       {open ? (
         <div className="border-t border-slate-200 bg-white px-5 py-4 lg:hidden">
           <div className="flex flex-col gap-1">
-            {[...MAIN, ...RELOCATE, ...TRAVEL, ...AFTER].map((l) => (
+            {MOBILE_LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
