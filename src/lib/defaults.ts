@@ -431,34 +431,43 @@ export type AboutData = {
 };
 
 export const DEFAULT_ABOUT: AboutData = {
-  intro: "Expeditions With Jo is the brainchild of Joanson Baptiste James.",
+  intro: "Expeditions With Jo helps CARICOM citizens move between member states to work, under the free movement provisions of the Treaty of Chaguaramas.",
   sections: [
     {
       paragraphs: [
-        "Our sole mission is to make life easier for people travelling to Trinidad for Canadian visa appointments, heading abroad for short trips, or handling important financial matters right here in Trinidad and Tobago or in the wider Caribbean. We offer support you can rely on, keeping things simple and clear.",
+        "The Treaty of Chaguaramas gives skilled CARICOM nationals the right to live and work in another participating member state without a work permit. Our sole mission is to make that move simple: the CSME Skills Certificate you need to apply for, the bank account and business registration you'll want once you land, and the settling-in details that are hard to research from another island. We cover the 12 CARICOM states that actually participate in CSME free movement — not every CARICOM member, since a few (like Montserrat and The Bahamas) sit outside that regime and a work permit still applies there.",
+        "Founded by Joanson Baptiste James, Expeditions With Jo started as a Trinidad travel agency and has grown into a relocation-first service, still run with the same one-to-one attention.",
       ],
     },
     {
-      heading: "Travel & visa support",
+      heading: "Relocation support",
       bullets: [
-        "Flights: Affordable one-way or round-trip options",
-        "Accommodation: Comfortable, safe places to stay",
-        "Transportation: Reliable rides for airports, visa appointments, and getting around town",
-        "Visa help: Assistance with booking appointments and coordinating your visit",
+        "CSME Skills Certificate: Step-by-step guidance on qualifying, gathering documents and applying in your destination country.",
+        "Banking: Help opening a bank account in the CARICOM state you're moving to.",
+        "Business setup: Registering a business and getting your documents ready, in Trinidad and Tobago or Grenada.",
+        "Country guides: What to expect once you arrive — cost of living, places to see, local food and more.",
       ],
     },
     {
-      heading: "Financial services (Trinidad & Tobago only)",
+      heading: "Travel support",
       bullets: [
-        "Business Registration & Account Opening (Paid Service): Guidance through registering your business and getting your documents ready to open a bank account.",
-        "Loans & Credit Cards (Free Service): Help organising and preparing applications for personal loans, car loans, mortgages, and credit cards so they are ready to submit.",
-        "Insurance (Free Consultation): Free insurance consultations covering life, health, income protection, and retirement planning.",
+        "Flights: Affordable one-way or round-trip options for your move or a scouting trip beforehand.",
+        "Accommodation: Comfortable, safe places to stay while you get settled.",
+        "Transfers: Reliable rides for airports and getting around a new city.",
+        "Canadian visa help: Step-by-step support for CARICOM citizens applying from Trinidad.",
       ],
-      note: "All loan, credit card, and account applications are processed through First Citizens Bank. All insurance consultations and products are provided through Guardian Life of the Caribbean.",
+    },
+    {
+      heading: "Also available (Trinidad & Tobago)",
+      bullets: [
+        "Loans & Credit Cards (Free Service): Help preparing applications for personal loans, car loans, mortgages and credit cards.",
+        "Insurance (Free Consultation): Consultations covering life, health, income protection and retirement planning.",
+      ],
+      note: "Loan, credit card and account applications are processed through First Citizens Bank. Insurance consultations and products are provided through Guardian Life of the Caribbean.",
     },
     {
       paragraphs: [
-        "Whether it is travel, visas, or financial matters, Expeditions With Jo is here to make the process smoother and easier, every step of the way.",
+        "Whether you're applying for your CSME Skills Certificate, opening a bank account in a new country, or just need a flight booked, Expeditions With Jo is here to make the move easier, every step of the way.",
       ],
     },
   ],

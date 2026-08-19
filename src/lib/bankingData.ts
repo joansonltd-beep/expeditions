@@ -250,23 +250,9 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       "Banking here is conducted in Dutch as well as English. Ask whether your documents need a translation.",
     ],
   },
-  {
-    slug: "the-bahamas",
-    name: "The Bahamas",
-    bank: "scotia",
-    bankName: "Scotiabank (Bahamas) Limited",
-    bankUrl: "https://bs.scotiabank.com",
-    accountName: "Electronic Access Account",
-    accountUrl: "https://bs.scotiabank.com/personal/chequing-and-savings/electronic-access-account.html",
-    currency: "BSD",
-    phone: "242-356-1697/8/9",
-    notes: [
-      "The monthly fee is $8.80, including the 10% VAT. That covers unlimited self-service banking and five branch or cheque transactions a month.",
-      "Beyond those five: $4.40 at a branch, $4.40 per cheque, and $2.20 per ATM withdrawal after the first two each month. Point-of-sale purchases are free.",
-      "The account pays no interest and there is no balance you need to keep to waive the fee. Statements are quarterly.",
-      "Ask what you need to deposit to open the account when you call. It is the one figure Scotiabank keeps off its published schedule.",
-    ],
-  },
+  // The Bahamas deliberately excluded: it's a CARICOM member but not a CSME
+  // free-movement participant, so it's out of scope for this site — same
+  // reasoning as Montserrat.
   {
     slug: "antigua-and-barbuda",
     name: "Antigua and Barbuda",
@@ -324,10 +310,6 @@ export const UNCOVERED: { name: string; reason: string }[] = [
   {
     name: "Haiti",
     reason: "Scotiabank left in 2017, selling to Unibank. Republic Bank does not operate here.",
-  },
-  {
-    name: "Montserrat",
-    reason: "Neither bank has a branch. Banking is handled by the Bank of Montserrat and the local credit union.",
   },
 ];
 

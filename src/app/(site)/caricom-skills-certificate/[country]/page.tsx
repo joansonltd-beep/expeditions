@@ -16,9 +16,14 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   const c = CSME_COUNTRIES.find((x) => x.slug === country);
   if (!c) return { title: "CARICOM Skills Certificate" };
   return {
-    title: `CARICOM Skills Certificate in ${c.name} (CSME)`,
-    description: `How to apply for a CARICOM Skills Certificate (CSME) in ${c.name} so you can live and work anywhere in CARICOM: where to apply (${c.authority}), who qualifies, the documents, the fee and the steps.`,
+    title: `CSME Steps for ${c.name}: How to Apply for a CARICOM Skills Certificate`,
+    description: `Want to move to ${c.name}? Here are the exact CSME steps for ${c.name}: where to apply (${c.authority}), who qualifies, the documents, the fee, and how to get a CARICOM Skills Certificate so you can live and work there.`,
     keywords: [
+      `CSME steps ${c.name}`,
+      `CSME steps in ${c.name}`,
+      `how to move to ${c.name}`,
+      `I want to move to ${c.name}`,
+      `move to ${c.name} from Trinidad`,
       `CARICOM skills certificate ${c.name}`,
       `CARICOM skill certificate ${c.name}`,
       `CSME skills certificate ${c.name}`,
@@ -44,10 +49,25 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
   const hasCountryDocs = Boolean(d?.documents);
   const others = CSME_COUNTRIES.filter((x) => x.slug !== c.slug);
   const countryGuide = getCountryGuide(c.slug);
+
+  // Country-specific FAQ pair, generated from real data on this page (not
+  // generic boilerplate), so it answers "CSME steps in X" / "move to X"
+  // searches with something actually true and useful.
+  const countryFaqs = [
+    {
+      q: `What are the CSME steps in ${c.name}?`,
+      a: `There are ${steps.length} main steps to get a CARICOM Skills Certificate in ${c.name}, starting with confirming you're in one of the 12 approved categories and ending with using your certificate to live and work abroad. Apply through ${c.authority}. ${c.fee ? `The fee is ${c.fee}` : `Confirm the current fee with ${c.authority}`}. The full step-by-step guide is above on this page.`,
+    },
+    {
+      q: `How do I move to ${c.name} as a CARICOM national?`,
+      a: `The CARICOM Skills Certificate (CSME) is the main route for CARICOM nationals to live and work in ${c.name} without a work permit.${c.fullFreeMovement ? ` ${c.name} also has full free movement with Barbados, Belize, Dominica and St. Vincent and the Grenadines, so nationals of those countries don't need the certificate.` : ""} Apply through ${c.authority}, then use the certificate at the border for an initial entry stamp.${countryGuide ? ` See our ${c.name} guide for cost of living, places to live and what to expect once you're there.` : ""}`,
+    },
+  ];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: CSME_FAQS.map((f) => ({
+    mainEntity: [...countryFaqs, ...CSME_FAQS].map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -235,8 +255,21 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
         </div>
       </Section>
 
-      {/* OTHER COUNTRIES */}
+      {/* COUNTRY-SPECIFIC FAQ */}
       <Section alt>
+        <SectionHead eyebrow="FAQ" title={`Moving to ${c.name}: common questions`} />
+        <div className="mx-auto grid max-w-3xl gap-5">
+          {countryFaqs.map((f, i) => (
+            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">{f.q}</h3>
+              <p className="mt-2 text-sm text-slate-600">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* OTHER COUNTRIES */}
+      <Section>
         <SectionHead eyebrow="Other countries" title="CARICOM Skills Certificate in other countries" />
         <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
           {others.map((o) => (
@@ -252,7 +285,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
       </Section>
 
       {/* CTA */}
-      <Section>
+      <Section alt>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Travelling for your application?</h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-500">

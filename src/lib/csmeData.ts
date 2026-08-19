@@ -510,41 +510,9 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       ],
     },
   },
-  {
-    slug: "montserrat",
-    name: "Montserrat",
-    authority: "Labour Department / Office of the Premier",
-    howTo:
-      "Contact the Government of Montserrat's Labour Department before doing anything else. Montserrat participates in the CSME only partially, so the usual free movement of skills does not fully apply.",
-    detail: {
-      steps: [
-        {
-          title: "Understand Montserrat's special position",
-          text: "Montserrat is a British Overseas Territory and only a partial participant in the CSME. The free movement of skills regime does not fully apply, and a work permit is generally still required to work there.",
-        },
-        {
-          title: "Contact the Labour Department",
-          text: "Call or write to the Labour Department in Brades to explain your situation, whether you are a Montserratian seeking a certificate or a CARICOM national wanting to work in Montserrat. They will tell you the current process, documents and any fee.",
-        },
-        {
-          title: "Gather the standard package",
-          text: "Have the standard CSME documents ready: passport, birth certificate, qualification, police certificate, marriage certificate if applicable, and passport photos, with originals and copies.",
-          tips: [
-            "Police Certificates of Character are typically valid for only six months from issue.",
-          ],
-        },
-        {
-          title: "Follow the Department's guidance",
-          text: "Submit whatever the Labour Department asks for and confirm the fee at that point, since none is published.",
-        },
-        USE_IT_ABROAD,
-      ],
-      notes: [
-        "Montserrat is only a partial participant in the CSME, so the free movement of skills does not fully apply and a work permit is generally still required.",
-        "No fee or document checklist is published. Confirm everything with the Labour Department directly.",
-      ],
-    },
-  },
+  // Montserrat deliberately excluded: it's a British Overseas Territory and
+  // only a partial CSME participant, so the free movement of skills this
+  // site is built around does not fully apply there.
   {
     slug: "st-kitts-and-nevis",
     name: "St. Kitts and Nevis",

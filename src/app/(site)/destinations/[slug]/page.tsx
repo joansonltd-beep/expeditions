@@ -17,12 +17,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const g = getCountryGuide(slug);
   if (!g) return { title: "Caribbean Country Guide" };
   return {
-    title: `${g.name} Travel & Relocation Guide`,
-    description: `What to expect in ${g.name}: cost of living, places to see, things to do, where to eat, demographics and national symbols.`,
+    title: `Moving to ${g.name}: Cost of Living & Relocation Guide`,
+    description: `Thinking "I want to move to ${g.name}"? Here's what to expect: cost of living, places to see, things to do, where to eat, demographics and national symbols, plus how to apply for a CSME Skills Certificate.`,
     keywords: [
+      `I want to move to ${g.name}`,
+      `move to ${g.name}`,
+      `moving to ${g.name}`,
+      `moving to ${g.name} from Trinidad`,
+      `relocate to ${g.name}`,
       `cost of living in ${g.name}`,
       `things to do in ${g.name}`,
-      `moving to ${g.name}`,
       `${g.name} demographics`,
       `${g.name} national anthem`,
       `places to visit in ${g.name}`,
@@ -54,13 +58,35 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       : {}),
   };
 
+  const moveToFaqs = [
+    { q: `What's it like to move to ${g.name}?`, a: g.overview },
+    ...(hasCsmePage
+      ? [
+          {
+            q: `How do I move to ${g.name} as a CARICOM national?`,
+            a: `The CARICOM Skills Certificate (CSME) is the main route to live and work in ${g.name} without a work permit. See the CSME steps for ${g.name} for the full application process.`,
+          },
+        ]
+      : []),
+  ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: moveToFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
         icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
-        title={g.name}
+        title={`Moving to ${g.name}`}
         crumb={g.name}
         intro={g.tagline}
       />
@@ -207,10 +233,11 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
           {hasCsmePage ? (
             <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
-              Planning to live and work in {g.name}?{" "}
+              Want to move to {g.name}?{" "}
               <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
-                See how to apply for a CARICOM Skills Certificate in {g.name} →
-              </Link>
+                See the CSME steps for {g.name} →
+              </Link>{" "}
+              — CARICOM nationals can live and work there without a work permit.
             </div>
           ) : null}
         </div>
@@ -402,6 +429,26 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <p className="mt-2 whitespace-pre-line text-slate-600">{g.symbols.pledge.text}</p>
               <p className="mt-3 text-xs text-slate-400">Source: {g.symbols.pledge.sourceName}</p>
             </div>
+          ) : null}
+        </div>
+      </Section>
+
+      {/* MOVE-TO FAQ */}
+      <Section alt>
+        <SectionHead eyebrow="FAQ" title={`Moving to ${g.name}: common questions`} />
+        <div className="mx-auto grid max-w-3xl gap-5">
+          {moveToFaqs.map((f, i) => (
+            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-semibold text-slate-900">{f.q}</h3>
+              <p className="mt-2 text-sm text-slate-600">{f.a}</p>
+            </div>
+          ))}
+          {hasCsmePage ? (
+            <p className="text-sm text-slate-500">
+              <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
+                See the exact CSME steps for {g.name} →
+              </Link>
+            </p>
           ) : null}
         </div>
       </Section>

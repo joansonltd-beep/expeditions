@@ -57,8 +57,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         "Dominica",
         "Belize",
         "Suriname",
-        "The Bahamas",
-        "Montserrat",
       ].map((name) => ({ "@type": "Country", name })),
       "Worldwide",
     ],
