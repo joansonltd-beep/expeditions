@@ -1176,6 +1176,161 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "jamaica",
+    name: "Jamaica",
+    tagline: "The Caribbean's best-known island by far: reggae, jerk, and a coastline that runs from Blue Mountain coffee slopes to Seven Mile Beach.",
+    overview:
+      "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally — reggae, Bob Marley and jerk cooking all trace back here. It's a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
+    photo: {
+      src: "/destinations/jamaica.jpg",
+      alt: "Dunn's River Falls, Ocho Rios, Jamaica",
+      credit: "Don Ramey Logan, CC BY-SA 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_wide_Photo_Don_Ramey_Logan.jpg",
+    },
+    coordinates: { lat: 17.997, lng: -76.7936, display: "18.00°N, 76.79°W" },
+    demographics: {
+      population: {
+        value: "≈2.83–2.84 million (2025–2026 estimate)",
+        sourceName: "Worldometer",
+        sourceUrl: "https://www.worldometers.info/world-population/jamaica-population/",
+      },
+      areaKm2: "≈10,990 km² — the largest English-speaking island in the Caribbean",
+      independence: "6 August 1962, from the United Kingdom",
+      capital: "Kingston",
+      officialLanguages: ["English (official)", "Jamaican Patois, spoken by most of the population day to day"],
+      currency: "Jamaican dollar (JMD), floating, trading at roughly J$158 to US$1",
+      government:
+        "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government. A 2022 plan to become a republic by 2025 was formally retracted in March 2025.",
+      medianAge: "≈30.5 years (2023 estimate)",
+      ageStructure: "0–14 years: ≈24%. 15–64 years: ≈66%. 65 years and over: ≈10%.",
+      ethnicComposition: {
+        value: "Black ≈91%, mixed ≈6%, other/unknown ≈3%",
+        sourceName: "CIA World Factbook (2001 census, most recent available)",
+      },
+      urbanizationNote:
+        "The Kingston Metropolitan Area is by far the largest population centre and the country's economic and cultural hub; Montego Bay and Ocho Rios are the main tourism centres on the north coast.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$570/month outside Kingston's city centre",
+      rentPremium1BR: "≈US$965/month in Kingston's city centre",
+      groceriesSingle: "≈US$65–95/month",
+      inexpensiveMeal: "≈US$10–15",
+      midRangeMealForTwo: "≈US$50–100",
+      utilities: "≈US$175/month for electricity, water and garbage in a small apartment",
+      budgetModestSingle: "≈US$900–1,300/month all-in",
+      budgetComfortableSingle: "≈US$1,600–2,500/month all-in",
+      notes:
+        "Jamaica has one of the better-populated Numbeo listings in the region, so these figures rest on a reasonably sized sample rather than a handful of entries. Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest.",
+      sourceName: "Numbeo",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/in/Kingston-Jamaica",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Dunn's River Falls",
+        description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach — one of Jamaica's most-photographed sights.",
+      },
+      {
+        name: "Blue Mountains",
+        description: "Jamaica's highest range, home to Blue Mountain Peak (2,256m) and the coffee estates that grow the world-famous Blue Mountain coffee, most of it exported to Japan.",
+      },
+      {
+        name: "Negril and Seven Mile Beach",
+        description: "A long stretch of white sand on the west coast, with the Negril cliffs at its southern end used for cliff diving and sunset watching.",
+      },
+      {
+        name: "YS Falls",
+        description: "A quieter, less crowded set of seven waterfalls on the south coast, in St. Elizabeth Parish.",
+      },
+      {
+        name: "Ocho Rios' Blue Hole",
+        description: "A series of waterfalls and turquoise swimming holes in the hills above Ocho Rios, good for cliff jumping.",
+      },
+      {
+        name: "Bob Marley Museum",
+        description: "Marley's former Kingston home, now a museum covering his life and the roots of reggae.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Climbing Dunn's River Falls",
+        description: "A guided, hand-in-hand climb up the terraced falls — one of the most-repeated Jamaica experiences there is.",
+      },
+      {
+        title: "Hiking Blue Mountain Peak",
+        description: "A pre-dawn hike to the summit for sunrise views stretching across both the north and south coasts, with a coffee tour on the way.",
+      },
+      {
+        title: "A jerk pit meal",
+        description: "Chicken or pork slow-grilled over pimento wood — best eaten at a roadside jerk stand, not a hotel restaurant.",
+      },
+      {
+        title: "Cliff diving at Rick's Café",
+        description: "A Negril institution: sunset drinks and cliff jumps from platforms up to 35 feet above the water.",
+      },
+      {
+        title: "Reggae and dancehall nightlife",
+        description: "Live music, sound systems and street dances, especially in Kingston — the birthplace of both genres.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Ackee and saltfish",
+        description: "Jamaica's national dish: ackee, the national fruit, cooked with salted cod, onion and pepper — traditionally a breakfast dish, served with fried dumplings or breadfruit.",
+      },
+      {
+        name: "Jerk chicken or pork",
+        description: "Meat marinated in Scotch bonnet pepper, allspice and thyme, then slow-cooked over pimento wood — Jamaica's best-known culinary export.",
+      },
+      {
+        name: "Patties",
+        description: "Flaky, turmeric-yellow pastry filled with spiced beef, chicken or vegetables — Jamaica's everyday fast food.",
+      },
+      {
+        name: "Curried goat",
+        description: "A slow-cooked curry, usually served with rice and peas, common at gatherings and celebrations.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Kingston Jerk",
+        area: "Kingston",
+        description: "Widely cited by locals as the city's best jerk — chicken, pork, festival and roast breadfruit off the pimento-wood grill.",
+      },
+      {
+        name: "Sweetwood Jerk Joint",
+        area: "Kingston, near Emancipation Park",
+        description: "A wide jerk menu — chicken, pork, sausage, lamb, fish and conch — with traditional pimento-wood barbecue sides.",
+      },
+      {
+        name: "Gloria's",
+        area: "Kingston",
+        description: "A long-standing favourite for seafood.",
+      },
+      {
+        name: "Moby Dick",
+        area: "Kingston",
+        description: "Known for curried goat and old-school Jamaican cooking.",
+      },
+    ],
+    symbols: {
+      motto: "Out of Many, One People",
+      anthem: {
+        title: "Jamaica, Land We Love",
+        lyricist: "Hugh Sherlock",
+        composer: "Robert Lightbourne (arranged by Mapletoft Poulle)",
+        adopted: "1962, at independence",
+        officialUrl: "https://jis.gov.jm/information/anthem-pledge/",
+      },
+      pledge: {
+        text: "Before God and all mankind, I pledge the love and loyalty of my heart, the wisdom and courage of my mind, the strength and vigor of my body in the service of my fellow citizens, I promise to stand up for Justice, Brotherhood and Peace, to work diligently and creatively, to think generously and honestly, so that Jamaica may, under God, increase in beauty, fellowship and prosperity, and play her part in advancing the welfare of the whole human race.",
+        sourceName: "Jamaica Information Service and Ministry of Foreign Affairs and Foreign Trade (mfaft.gov.jm)",
+        sourceUrl: "https://mfaft.gov.jm/site/national-anthem-song-and-pledge/",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
