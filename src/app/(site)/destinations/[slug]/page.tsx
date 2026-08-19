@@ -40,8 +40,10 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const g = getCountryGuide(slug);
   if (!g) notFound();
 
-  const hasCsmePage = CSME_COUNTRIES.some((c) => c.slug === g.slug);
+  const csmeCountry = CSME_COUNTRIES.find((c) => c.slug === g.slug);
+  const hasCsmePage = Boolean(csmeCountry);
   const others = COUNTRY_GUIDES.filter((x) => x.slug !== g.slug);
+  const fullFreeMovementNames = CSME_COUNTRIES.filter((c) => c.fullFreeMovement).map((c) => c.name);
 
   const googleMapsUrl = g.coordinates
     ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}`
@@ -59,18 +61,21 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   };
 
   const moveToFaqs = [
-    {
-      q: `What's it like to move to ${g.name}?`,
-      a: `${g.name}'s capital is ${g.demographics.capital}. This page covers the cost of living, best places to see, local food, and what to expect on the ground before you make the move.`,
-    },
     ...(hasCsmePage
       ? [
           {
             q: `How do I move to ${g.name} as a CARICOM national?`,
             a: `The CARICOM Skills Certificate (CSME) is the main route to live and work in ${g.name} without a work permit. See the CSME steps for ${g.name} for the full application process.`,
           },
+          {
+            q: "Do all CARICOM nationals need the certificate, or is there full free movement?",
+            a: csmeCountry?.fullFreeMovement
+              ? `${g.name} is one of four CARICOM countries with full free movement between themselves: ${fullFreeMovementNames.join(", ")}. Nationals of those four can live and work in ${g.name} without a CSME Skills Certificate. Everyone else moving to ${g.name} still needs the certificate.`
+              : `No. Four CARICOM countries have gone further than the standard CSME certificate and implemented full free movement between themselves: ${fullFreeMovementNames.join(", ")}. Nationals of those four can work in each other's countries without a certificate. Everyone else, including anyone moving to or from ${g.name}, still applies for the CSME Skills Certificate.`,
+          },
         ]
       : []),
+    ...(g.visitorFaq ?? []),
   ];
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -435,25 +440,42 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         </div>
       </Section>
 
-      {/* MOVE-TO FAQ */}
-      <Section alt>
-        <SectionHead eyebrow="FAQ" title={`Moving to ${g.name}: common questions`} />
-        <div className="mx-auto grid max-w-3xl gap-5">
-          {moveToFaqs.map((f, i) => (
-            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 className="font-semibold text-slate-900">{f.q}</h3>
-              <p className="mt-2 text-sm text-slate-600">{f.a}</p>
+      {/* FAQ */}
+      {moveToFaqs.length ? (
+        <Section alt>
+          <SectionHead eyebrow="FAQ" title={`${g.name}: frequently asked questions`} />
+          <div className="mx-auto max-w-3xl">
+            <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+              {moveToFaqs.map((f, i) => (
+                <details key={i} className="group px-6 py-4 open:pb-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900 marker:content-none">
+                    {f.q}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-open:rotate-180"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.a}</p>
+                </details>
+              ))}
             </div>
-          ))}
-          {hasCsmePage ? (
-            <p className="text-sm text-slate-500">
-              <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
-                See the exact CSME steps for {g.name} →
-              </Link>
-            </p>
-          ) : null}
-        </div>
-      </Section>
+            {hasCsmePage ? (
+              <p className="mt-5 text-sm text-slate-500">
+                <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
+                  See the exact CSME steps for {g.name} →
+                </Link>
+              </p>
+            ) : null}
+          </div>
+        </Section>
+      ) : null}
 
       {/* OTHER COUNTRIES */}
       {others.length ? (

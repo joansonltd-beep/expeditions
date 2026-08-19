@@ -45,6 +45,7 @@ export type PlaceToSee = { name: string; description: string };
 export type Experience = { title: string; description: string };
 export type PlaceToEat = { name: string; description: string; area?: string };
 export type LocalDish = { name: string; description: string };
+export type VisitorFaqEntry = { q: string; a: string };
 
 export type Coordinates = {
   lat: number;
@@ -103,6 +104,7 @@ export type CountryGuide = {
   localDishes?: LocalDish[];
   placesToEat: PlaceToEat[];
   symbols: NationalSymbols;
+  visitorFaq?: VisitorFaqEntry[];
   lastUpdated: string;
 };
 
@@ -322,6 +324,44 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       // different context. Left out rather than guessed or copied from an
       // unverified secondary source.
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Antigua and Barbuda?",
+        a: "Antigua is mid-to-upper range for the Eastern Caribbean. A budget traveller can expect roughly US$100–150/day (guesthouse, local food, limited tours); mid-range roughly US$200–350/day (a 3–4 star hotel or Airbnb, a mix of local and nicer restaurants, a few tours); luxury US$500+/day (resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in most hotels, restaurants and larger shops, but smaller vendors and markets often prefer cash. ATMs are available in St. John's, major resorts and some villages; let your bank know you're travelling first.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, usually up to 30–90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Antigua and Barbuda Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available in St. John's and at the airport; driving is on the left, and roads are generally good but narrow and hilly in places. Local buses connect St. John's with many villages cheaply, though schedules are informal. Water taxis and ferries run for beach hops and trips to Barbuda.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Fungee and pepperpot is the national dish: a cornmeal-and-okra side (fungee) with a spiced stew (pepperpot) of spinach, eggplant, peas and meat. Also look for saltfish (a Sunday favourite), goat water, fresh grilled fish, lobster and conch, and bakes with saltfish or cheese as a street snack. Try the St. John's Public Market or the beach bars around English Harbour and Jolly Harbour.",
+      },
+      {
+        q: "Is Antigua and Barbuda safe for tourists?",
+        a: "Most visits are trouble-free. Use normal precautions: don't leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft is the main risk, especially in crowded areas. Check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds. July–October is the rainier, cheaper, hurricane-season stretch. For reliable sun, aim for December–April; for a better deal with decent weather, May–June or November.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and breezy boat trips. Bring something a little more modest if you'll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "A friendly \"good morning\" or \"good afternoon\" before asking a question is expected and appreciated. Dress is generally casual, but modest attire is expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, and small tips for taxi drivers and tour guides are welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
@@ -509,6 +549,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceUrl: "https://www.gov.bb/Visit-Barbados/national-pledge",
       },
     },
+    visitorFaq: [
+      {
+        q: "How much does it cost to visit Barbados?",
+        a: "Barbados is a premium Caribbean destination, priced higher than many smaller islands. A budget traveller can expect roughly US$120–180/day (guesthouse or budget hotel, local food, limited tours); mid-range roughly US$250–400/day (a 3–4 star hotel or nice Airbnb, a mix of local and nicer restaurants, several tours); luxury US$600+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent.",
+      },
+      {
+        q: "What is the currency and do I need cash?",
+        a: "The currency is the Barbadian dollar (BBD), fixed at BBD 2 to US$1. US dollars are widely accepted in tourist areas, though change may come back in BBD. Major cards work in most hotels, restaurants and larger shops, but smaller vendors and markets often prefer cash. ATMs are widely available in Bridgetown, the south coast and other tourist areas.",
+      },
+      {
+        q: "Do I need a visa to visit as a tourist?",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with the Barbados Immigration Department or your nearest embassy before travelling.",
+      },
+      {
+        q: "How do I get around the island?",
+        a: "Government and private buses cover most of the island cheaply and fairly reliably. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in major towns; driving is on the left, and roads are generally good but narrower in rural areas. Route taxis and shared vans run along main routes and cost less than a private taxi.",
+      },
+      {
+        q: "What are the must-do experiences in Barbados?",
+        a: "Swim with sea turtles and snorkel shipwrecks on a catamaran cruise from Bridgetown or the south coast, walk historic Bridgetown and the Garrison (a UNESCO World Heritage Site) and George Washington House, tour St. Nicholas Abbey's plantation house and rum distillery, relax on Crane Beach or the south-coast beaches, catch the Oistins Fish Fry on a Friday night, and tour a rum distillery such as Mount Gay, Foursquare or St. Nicholas Abbey.",
+      },
+      {
+        q: "What local food should I try?",
+        a: "Cou-cou and flying fish is the national dish. Also look for macaroni pie, fish cakes, pudding and souse (a traditional Saturday dish), and fresh grilled fish, lobster and conch. The Oistins Fish Market and Fish Fry, south-coast beachfront grills, and local cookshops in Bridgetown and other towns are good places to start.",
+      },
+      {
+        q: "Is Barbados safe for tourists?",
+        a: "Barbados is generally considered one of the safer Caribbean destinations for tourists. Use normal precautions: don't leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft can occur, especially in crowded areas and at night. Check your government's current travel advisory before you go.",
+      },
+      {
+        q: "What is the best time to visit?",
+        a: "December to April is the dry, sunny, busiest and most expensive stretch. May–June and November are shoulder season: good weather, fewer crowds. July–October is the rainier, cheaper, hurricane-season stretch. Many visitors choose May–June or November for the best mix of weather and value.",
+      },
+      {
+        q: "What should I pack?",
+        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and evening breezes. Bring something a little more modest if you'll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
+      },
+      {
+        q: "Any cultural tips I should know?",
+        a: "Barbadians (\"Bajans\") value good manners; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, and small tips for taxi drivers and tour guides are welcome. Friday night at Oistins Fish Fry draws a crowd, so expect music, noise and a lively atmosphere.",
+      },
+    ],
     lastUpdated: "August 2026",
   },
   {
