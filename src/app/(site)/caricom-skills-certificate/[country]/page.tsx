@@ -60,7 +60,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
     },
     {
       q: `How do I move to ${c.name} as a CARICOM national?`,
-      a: `The CARICOM Skills Certificate (CSME) is the main route for CARICOM nationals to live and work in ${c.name} without a work permit.${c.fullFreeMovement ? ` ${c.name} also has full free movement with Barbados, Belize, Dominica and St. Vincent and the Grenadines, so nationals of those countries don't need the certificate.` : ""} Apply through ${c.authority}, then use the certificate at the border for an initial entry stamp.${countryGuide ? ` See our ${c.name} guide for cost of living, places to live and what to expect once you're there.` : ""}`,
+      a: `The CARICOM Skills Certificate (CSME) is the main route for CARICOM nationals to live and work in ${c.name} without a work permit.${c.fullFreeMovement ? ` ${c.name} also has full free movement with Barbados, Belize, Dominica and St. Vincent and the Grenadines, so nationals of those countries don't need the certificate.` : ""} Apply through ${c.authority}, then use the certificate at the border for an initial entry stamp.${countryGuide ? ` See our ${c.name} fact sheet for cost of living, places to live and what to expect once you're there.` : ""}`,
     },
   ];
 

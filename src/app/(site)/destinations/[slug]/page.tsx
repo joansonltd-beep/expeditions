@@ -59,7 +59,10 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   };
 
   const moveToFaqs = [
-    { q: `What's it like to move to ${g.name}?`, a: g.overview },
+    {
+      q: `What's it like to move to ${g.name}?`,
+      a: `${g.name}'s capital is ${g.demographics.capital}. This page covers the cost of living, best places to see, local food, and what to expect on the ground before you make the move.`,
+    },
     ...(hasCsmePage
       ? [
           {
