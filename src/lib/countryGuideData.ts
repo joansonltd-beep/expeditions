@@ -1528,6 +1528,182 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "saint-lucia",
+    name: "Saint Lucia",
+    tagline: "Home of the Pitons, a UNESCO World Heritage volcanic landmark, and a drive-in volcano you can walk right up to.",
+    overview:
+      "Saint Lucia is a mountainous, volcanic island in the Eastern Caribbean, best known for the Pitons — twin rainforest-covered spires rising straight out of the sea near Soufrière — and for the geothermal activity that also produced Sulphur Springs, billed as the world's only drive-in volcano. Away from the resort corridor around Rodney Bay in the north, the island is steep, green and rural: banana farms, fishing villages, and a strong Kwéyòl (French Creole) culture alongside English.",
+    photo: {
+      src: "/destinations/saint-lucia.jpg",
+      alt: "Gros Piton and Petit Piton, near Soufrière, Saint Lucia",
+      credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:Gros_Piton_and_Petit_Piton_in_Saint_Lucia.JPG",
+    },
+    coordinates: { lat: 13.9094, lng: -60.9789, display: "13.91°N, 60.98°W" },
+    demographics: {
+      population: {
+        value: "≈180,000–184,000 (2025–2026 estimate)",
+        sourceName: "UN World Population Prospects (2024 revision), via Worldometer",
+        sourceUrl: "https://www.worldometers.info/world-population/saint-lucia-population/",
+      },
+      areaKm2: "≈617 km²",
+      independence: "22 February 1979, from the United Kingdom",
+      capital: "Castries",
+      officialLanguages: ["English (official)", "Saint Lucian French Creole / Kwéyòl (widely spoken; a Kwéyòl version of the anthem was approved in 2016)"],
+      currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
+      government:
+        "Unitary parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
+      medianAge: "≈33.1 years (2021 census figure) to ≈35.1 years (2026 estimate), depending on source",
+      ageStructure: "0–14 years: ≈24.1%. 15–64 years: ≈67.3%. 65 years and over: ≈8.6%.",
+      ethnicComposition: {
+        value: "Black/African descent ≈85.3%, mixed ≈10.9%, Indo-Caribbean ≈2.2%, White ≈0.6%, Indigenous ≈0.6%",
+        sourceName: "2010 census",
+      },
+      urbanizationNote:
+        "Nearly 40% of the population lives in and around Castries in the north. The rest is spread across smaller towns and villages, including Soufrière and Vieux Fort in the south, with a mountainous, forested interior that stays sparsely populated.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$325–510/month outside Castries city centre",
+      rentPremium1BR: "≈US$510–1,200/month in Castries city centre, Rodney Bay or Gros Islet",
+      groceriesSingle: "≈US$200–350/month for basics (rice, bread, chicken, beef, eggs, local produce)",
+      inexpensiveMeal: "≈US$7–10",
+      midRangeMealForTwo: "≈US$55, more at beachfront or resort restaurants in Rodney Bay",
+      utilities: "≈US$115/month for electricity, water, heating/cooling and garbage collection on an 85m² apartment, plus roughly US$43/month internet",
+      budgetModestSingle: "≈US$1,500–2,000/month all-in (excluding-rent estimate of ≈US$883–2,500 plus rent)",
+      budgetComfortableSingle: "≈US$2,500–3,500/month all-in",
+      notes:
+        "Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
+      sourceName: "Global Citizen Solutions cost-of-living data",
+      sourceUrl: "https://www.globalcitizensolutions.com/st-lucia-living-cost/",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "The Pitons (Gros Piton & Petit Piton)",
+        description: "Twin volcanic spires rising directly from the sea near Soufrière, a UNESCO World Heritage Site since 2004 and the island's defining landmark.",
+      },
+      {
+        name: "Sulphur Springs Park",
+        description: "Billed as \"the world's only drive-in volcano\" — a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
+      },
+      {
+        name: "Diamond Falls Botanical Gardens & Mineral Baths",
+        description: "A waterfall stained mineral colours by sulphur and other minerals, set in botanical gardens with warm mineral baths originally built for French troops in 1784.",
+      },
+      {
+        name: "Marigot Bay",
+        description: "A palm-fringed, near-landlocked harbour often called one of the most beautiful bays in the Caribbean — a yachting hub with hillside restaurants overlooking the water.",
+      },
+      {
+        name: "Pigeon Island National Landmark",
+        description: "A former island, now connected to the mainland by a causeway, with 18th-century British fort ruins, hiking trails and beaches near Rodney Bay.",
+      },
+      {
+        name: "Tet Paul Nature Trail",
+        description: "A short, steep community-run trail above Soufrière with some of the best panoramic Piton views on the island, plus local history and plant life along the way.",
+      },
+      {
+        name: "Anse Chastanet & Anse Mamin",
+        description: "A pair of beaches near Soufrière backed by rainforest and reef, popular for snorkelling and diving right off the sand.",
+      },
+      {
+        name: "Castries Central Market",
+        description: "The capital's market, with a produce floor downstairs and a local-food floor upstairs serving stewed chicken, fish and other everyday Saint Lucian lunches.",
+      },
+      {
+        name: "Toraille Waterfall",
+        description: "An easily reached waterfall near Soufrière set in a garden, with a plunge pool for swimming.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Gros Piton hike",
+        description: "A demanding but non-technical climb (roughly 3 hours up) with a certified local guide, required by park rules, up the taller of the two Pitons.",
+      },
+      {
+        title: "Gros Islet Friday night street party",
+        description: "A weekly open-air street party in the fishing village of Gros Islet — food stalls, sound systems and dancing that draws locals and visitors alike.",
+      },
+      {
+        title: "Saint Lucia Carnival",
+        description: "The island's carnival, held in July with soca, costume bands and parades through Castries — moved off the traditional pre-Lenten calendar decades ago.",
+      },
+      {
+        title: "Diving and snorkelling Anse Chastanet reef",
+        description: "A reef starting just off the beach, with drop-offs further out — one of the more accessible reef-diving spots in the Eastern Caribbean.",
+      },
+      {
+        title: "Saint Lucia Jazz & Arts Festival",
+        description: "An annual music festival, usually held around May, that has drawn major international jazz and R&B acts to venues across the island for decades.",
+      },
+      {
+        title: "Sailing or a catamaran trip to the Pitons",
+        description: "A popular way to see the Pitons and Soufrière coastline from the water, often combined with snorkelling stops.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Green fig and saltfish",
+        description: "Saint Lucia's national dish: boiled unripe green bananas (\"green figs\") with salted, flaked codfish, onions, peppers and local seasoning — rooted in 19th-century provisions of cheap bananas and imported salt cod.",
+      },
+      {
+        name: "Bouyon",
+        description: "A hearty one-pot soup of root vegetables, dumplings and meat (often pig tail, salted beef or chicken), similar to dishes found across the French Creole Caribbean.",
+      },
+      {
+        name: "Accra (saltfish fritters)",
+        description: "Deep-fried saltfish fritters, a common street-food and breakfast snack.",
+      },
+      {
+        name: "Lambi (conch)",
+        description: "Conch meat, curried, stewed or grilled, popular along the coast.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Castries Central Market (upstairs food stalls)",
+        area: "Castries",
+        description: "Budget local lunches — stewed chicken or fish with rice — cooked fresh and often sold out by early afternoon.",
+      },
+      {
+        name: "Flavours of the Grill",
+        area: "Gros Islet",
+        description: "Local seafood and meat grilled to order, including shrimp in coconut curry, curried goat and green fig pie.",
+      },
+      {
+        name: "Jacques Waterfront Dining",
+        area: "Rodney Bay",
+        description: "Caribbean flavours with a French twist, on the water in Rodney Bay.",
+      },
+      {
+        name: "Pink Plantation House",
+        area: "Castries (Morne Fortune)",
+        description: "French and Creole fusion in a restored plantation house overlooking Castries, known for lamb rack and grilled catch of the day.",
+      },
+      {
+        name: "Spinnakers Beach Bar & Carvery",
+        area: "Reduit Beach, Rodney Bay",
+        description: "A relaxed beach bar with local and seafood dishes and views toward Pigeon Island.",
+      },
+    ],
+    symbols: {
+      motto: "The Land, The People, The Light",
+      anthem: {
+        title: "Sons and Daughters of Saint Lucia",
+        lyricist: "Rev. Charles Jesse",
+        composer: "Leton Felix Thomas",
+        adopted: "1967, at self-government; reconfirmed as the national anthem at independence in 1979. A Kwéyòl-language version was approved in 2016",
+        officialUrl: "https://www.govt.lc/nationalanthem",
+      },
+      pledge: {
+        text: "With God as my guide, I pledge allegiance to my country, Saint Lucia. I proclaim that I will serve my country with pride and dignity and will defend it with vigour and valour in the pursuit of excellence, justice and equality for all.",
+        sourceName: "Government of Saint Lucia (govt.lc)",
+        sourceUrl: "https://www.govt.lc/nationalpledge",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
