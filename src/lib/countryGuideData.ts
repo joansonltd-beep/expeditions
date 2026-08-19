@@ -1712,6 +1712,190 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     lastUpdated: "August 2026",
   },
+  {
+    slug: "st-vincent-and-the-grenadines",
+    name: "St. Vincent and the Grenadines",
+    tagline: "One volcanic mainland and 32 smaller islands and cays strung south to the Tobago Cays — one of the Caribbean's classic sailing grounds.",
+    overview:
+      "St. Vincent and the Grenadines is a multi-island nation: St. Vincent itself, mountainous and volcanic with the active La Soufrière at its northern end, plus a scattered chain of smaller Grenadine islands running south — Bequia, Mustique, Canouan, Union Island and dozens of smaller cays, including the Tobago Cays marine park. St. Vincent has most of the population and everyday life; the Grenadines are quieter, sail-in territory, ranging from Bequia's fishing-village character to Mustique's private-island exclusivity.",
+    photo: {
+      src: "/destinations/st-vincent-and-the-grenadines.jpg",
+      alt: "Aerial view of the Tobago Cays, St. Vincent and the Grenadines",
+      credit: "Iain Grant, CC BY-SA 3.0, via Wikimedia Commons",
+      creditUrl: "https://commons.wikimedia.org/wiki/File:TobagoCaysAerial.jpg",
+    },
+    coordinates: { lat: 13.16, lng: -61.2248, display: "13.16°N, 61.22°W" },
+    demographics: {
+      population: {
+        value: "≈99,200–100,650 (2024–2026 estimate)",
+        sourceName: "CIA World Factbook (2024) / Worldometer (2025–2026)",
+        sourceUrl: "https://www.worldometers.info/world-population/saint-vincent-and-the-grenadines-population/",
+      },
+      areaKm2: "≈389 km² — St. Vincent itself ≈344 km², plus ≈45 km² spread across 32 smaller Grenadine islands and cays (Bequia ≈18 km², Canouan ≈7.6 km², Mustique ≈5.7 km², and others)",
+      independence: "27 October 1979, from the United Kingdom",
+      capital: "Kingstown, on St. Vincent",
+      officialLanguages: ["English (official)", "Vincentian Creole English (widely spoken)"],
+      currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
+      government:
+        "Parliamentary constitutional monarchy within the Commonwealth. King Charles III is head of state, represented locally by a Governor-General; a Prime Minister heads the government.",
+      medianAge: "≈34.7 years (Worldometer, 2026 estimate) to ≈38.1 years (CIA World Factbook, 2024 estimate), depending on source",
+      ageStructure: "0–14 years: ≈18.8%. 15–64 years: ≈68.2%. 65 years and over: ≈13%.",
+      ethnicComposition: {
+        value: "African descent ≈71.2%, mixed ≈23%, Indigenous (Carib) ≈3%, European ≈1.5%, East Indian ≈1.1%, other ≈0.2%",
+        sourceName: "2012 census",
+      },
+      urbanizationNote:
+        "Most people live on St. Vincent, concentrated in and around Kingstown. Bequia, a short ferry away, is the largest and most populous of the Grenadines; the rest of the chain (Mustique, Canouan, Union Island, Palm Island, Petit St. Vincent and many smaller uninhabited cays) has only a fraction of the country's population between them.",
+    },
+    costOfLiving: {
+      rentTypical1BR: "≈US$296/month outside Kingstown city centre (EC$800, Numbeo)",
+      rentPremium1BR: "≈US$407/month in Kingstown city centre (EC$1,100, Numbeo); rentals on Bequia, Mustique or Canouan run well above this",
+      groceriesSingle: "≈US$250–475/month depending on source and how much is imported versus local produce",
+      inexpensiveMeal: "≈US$6 (EC$15)",
+      midRangeMealForTwo: "≈US$61 (EC$165, 3-course), more in the Grenadines' resort restaurants",
+      utilities: "≈US$45–120/month for electricity alone without heavy AC use, ≈US$120–210+/month with regular AC, plus roughly US$7–20/month water and US$30–65/month internet",
+      budgetModestSingle: "≈US$900–1,400/month all-in",
+      budgetComfortableSingle: "≈US$1,400–2,800/month all-in on St. Vincent; noticeably more to live in or near the Grenadines' resort islands",
+      notes:
+        "Numbeo's bundled \"basic utilities\" figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month — the higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
+      sourceName: "Numbeo (crowd-sourced) and livingcost.org",
+      sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Saint+Vincent+And+The+Grenadines",
+      asOf: "August 2026",
+    },
+    placesToSee: [
+      {
+        name: "Tobago Cays Marine Park",
+        description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean's best-known sailing and snorkelling anchorages — turtles are a regular sight in the shallows.",
+      },
+      {
+        name: "La Soufrière",
+        description: "St. Vincent's active volcano at the island's northern end, last erupting explosively in April 2021. A demanding hiking trail leads to the crater rim when conditions allow.",
+      },
+      {
+        name: "St. Vincent Botanic Gardens",
+        description: "Established in 1765, the oldest botanical garden in the Western Hemisphere, in Kingstown — home to a breadfruit tree descended from Captain Bligh's original 1793 shipment from Tahiti.",
+      },
+      {
+        name: "Falls of Baleine",
+        description: "A waterfall on St. Vincent's remote northern coast, reachable only by boat, tumbling into a rocky pool a short walk from the beach landing.",
+      },
+      {
+        name: "Dark View Falls",
+        description: "Twin waterfalls with natural swimming pools, reached by a short trail and a bamboo bridge inside La Soufrière National Park.",
+      },
+      {
+        name: "Bequia",
+        description: "The largest of the Grenadines and a short ferry from St. Vincent, built around Port Elizabeth and Admiralty Bay — traditional boatbuilding, a whaling history, and a laid-back sailing-town feel.",
+      },
+      {
+        name: "Wallilabou Bay",
+        description: "A quiet bay on St. Vincent's west coast used as a filming location for Pirates of the Caribbean, with some of the set dressing still standing.",
+      },
+      {
+        name: "Owia Salt Pond",
+        description: "A natural tidal swimming pool cut into volcanic rock on St. Vincent's northeastern coast, protected from the Atlantic swell by a rock barrier.",
+      },
+      {
+        name: "Fort Charlotte",
+        description: "An 18th-century hilltop fort overlooking Kingstown and its harbour, with old cannons and wide coastal views.",
+      },
+      {
+        name: "Mustique",
+        description: "A small private island in the Grenadines known for celebrity homes and an exclusive resort — day visits and boat trips are possible, though most of the island is private.",
+      },
+    ],
+    experiences: [
+      {
+        title: "Sailing the Grenadines",
+        description: "One of the Caribbean's classic sailing grounds — island-hopping by yacht or charter through Bequia, Mustique, Canouan, Union Island and the Tobago Cays.",
+      },
+      {
+        title: "Hiking La Soufrière",
+        description: "A challenging trail to the crater rim of St. Vincent's active volcano, best done with a local guide and only when conditions permit.",
+      },
+      {
+        title: "Diving and snorkelling the Tobago Cays",
+        description: "Clear, shallow water around the Cays with sea turtles, reef fish and coral, accessible by day trip or as part of a sailing charter.",
+      },
+      {
+        title: "Bequia Easter Regatta",
+        description: "A multi-day sailing regatta and festival held over the Easter weekend, drawing yachts and visitors from across the region.",
+      },
+      {
+        title: "Birdwatching for the St. Vincent parrot on the Vermont Nature Trail",
+        description: "A rainforest loop trail through Grand Bonhomme Mountain in the island's interior, one of the best places to spot the St. Vincent parrot (Amazona guildingii), the endemic national bird — dawn and dusk are prime times.",
+      },
+      {
+        title: "Vincy Mas",
+        description: "St. Vincent and the Grenadines' carnival, held in late June/early July with soca, costume bands (mas) and parades through Kingstown.",
+      },
+    ],
+    localDishes: [
+      {
+        name: "Roasted breadfruit and fried jackfish",
+        description: "The national dish: breadfruit roasted over charcoal or wood until soft, served with pan-fried, well-seasoned jackfish (a small local fish). Breadfruit itself arrived on St. Vincent via Captain Bligh in 1793.",
+      },
+      {
+        name: "Callaloo soup",
+        description: "A soup built on callaloo (dasheen leaf), common across the Eastern Caribbean and a staple of Vincentian cooking.",
+      },
+      {
+        name: "Bouyon",
+        description: "A hearty one-pot stew of meat or fish with ground provisions and vegetables, also common across the French Creole-influenced Eastern Caribbean.",
+      },
+      {
+        name: "Roti",
+        description: "Flatbread wrapped around curried chicken, goat or vegetables, reflecting Indo-Caribbean influence.",
+      },
+      {
+        name: "Ground provisions",
+        description: "Root vegetables — dasheen, sweet potato, yam, breadfruit — typically served alongside stewed or fried fish and meat.",
+      },
+    ],
+    placesToEat: [
+      {
+        name: "Vee Jay's Restaurant & Bar",
+        area: "Kingstown",
+        description: "A Kingstown institution serving traditional Vincy lunchtime fare — mutton or fish stew, curried goat, roti.",
+      },
+      {
+        name: "Basil's Bar (Cobblestone Inn)",
+        area: "Kingstown",
+        description: "Local Caribbean dishes with international touches, in the historic Cobblestone Inn building.",
+      },
+      {
+        name: "Flow Wine Bar and Kitchen",
+        area: "Kingstown",
+        description: "Fresh fish and pasta in a more upscale setting, with live music on some nights.",
+      },
+      {
+        name: "Jack's Beach Bar",
+        area: "Princess Margaret Beach, Bequia",
+        description: "A beachfront bar and grill on Bequia — grilled fish burgers, jerk pork and plantain, and cocktails on the sand.",
+      },
+      {
+        name: "Firefly Bequia Plantation",
+        area: "Bequia",
+        description: "Dining at a small plantation-turned-guesthouse on Bequia, with garden and hillside views over Admiralty Bay.",
+      },
+    ],
+    symbols: {
+      motto: "Pax et Justitia (Latin: \"Peace and Justice\")",
+      anthem: {
+        title: "Saint Vincent, Land So Beautiful",
+        lyricist: "Phyllis Joyce McClean Punnett",
+        composer: "Joel Bertram Miguel",
+        adopted: "1979, at independence (written and first performed in 1967)",
+        officialUrl: "https://www.indexmundi.com/saint_vincent_and_the_grenadines/national_anthem.html",
+      },
+      pledge: {
+        text: "Land of my birth I pledge to thee, my loyalty and devotion, in all I think or say or do.",
+        sourceName: "Government of St. Vincent and the Grenadines, Ministry of Foreign Affairs (foreign.gov.vc)",
+        sourceUrl: "https://foreign.gov.vc/foreign/index.php/the-national-pledge",
+      },
+    },
+    lastUpdated: "August 2026",
+  },
 ];
 
 export function getCountryGuide(slug: string): CountryGuide | undefined {
