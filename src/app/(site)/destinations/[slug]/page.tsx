@@ -45,6 +45,11 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const others = COUNTRY_GUIDES.filter((x) => x.slug !== g.slug);
   const fullFreeMovementNames = CSME_COUNTRIES.filter((c) => c.fullFreeMovement).map((c) => c.name);
 
+  // Sections after "Moving here" alternate background, so when that section
+  // is absent (country not yet covered), flip every later Section's alt so
+  // the light/dark rhythm still lines up.
+  const flip = Boolean(g.movingHere);
+
   const googleMapsUrl = g.coordinates
     ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}`
     : undefined;
@@ -337,8 +342,78 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         </div>
       </Section>
 
+      {/* MOVING HERE */}
+      {g.movingHere ? (
+        <Section>
+          <SectionHead eyebrow="Relocating" title={`Moving to ${g.name}`} intro="Visas, healthcare, taxes and where people settle, for anyone actually planning the move." />
+          <div className="mx-auto max-w-3xl space-y-6">
+            <div className="rounded-xl border border-slate-200 bg-white p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Visa and work permit</p>
+              <p className="mt-2 text-slate-600">{g.movingHere.visaWorkPermit}</p>
+            </div>
+            {g.movingHere.residency ? (
+              <div className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Permanent residency</p>
+                <p className="mt-2 text-slate-600">{g.movingHere.residency}</p>
+              </div>
+            ) : null}
+            <div className="rounded-xl border border-slate-200 bg-white p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Healthcare</p>
+              <p className="mt-2 text-slate-600">{g.movingHere.healthcare}</p>
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Taxes</p>
+              <p className="mt-2 text-slate-600">{g.movingHere.taxes}</p>
+            </div>
+            {g.movingHere.areas.length ? (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Where people settle</p>
+                <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                  {g.movingHere.areas.map((a) => (
+                    <div key={a.name} className="rounded-xl border border-slate-200 bg-white p-5">
+                      <p className="font-semibold text-slate-900">{a.name}</p>
+                      <p className="mt-1 text-sm text-slate-600">{a.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+            {g.movingHere.notes ? <p className="text-sm text-slate-600">{g.movingHere.notes}</p> : null}
+            <p className="text-xs text-slate-400">
+              Sources:{" "}
+              {g.movingHere.sourceUrl ? (
+                <a href={g.movingHere.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
+                  {g.movingHere.sourceName}
+                </a>
+              ) : (
+                g.movingHere.sourceName
+              )}
+              {g.movingHere.secondarySourceName ? (
+                <>
+                  {" and "}
+                  {g.movingHere.secondarySourceUrl ? (
+                    <a
+                      href={g.movingHere.secondarySourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand hover:underline"
+                    >
+                      {g.movingHere.secondarySourceName}
+                    </a>
+                  ) : (
+                    g.movingHere.secondarySourceName
+                  )}
+                </>
+              ) : null}
+              , as of {g.movingHere.asOf}. Visa, residency and tax rules change: confirm current requirements with the
+              relevant government agency before acting on them.
+            </p>
+          </div>
+        </Section>
+      ) : null}
+
       {/* PLACES TO SEE */}
-      <Section>
+      <Section alt={flip}>
         <SectionHead eyebrow="See" title="Places to see" />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToSee.map((p, i) => (
@@ -351,7 +426,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       </Section>
 
       {/* EXPERIENCES */}
-      <Section alt>
+      <Section alt={!flip}>
         <SectionHead eyebrow="Do" title="Experiences to have" />
         <div className="mx-auto grid max-w-3xl gap-5">
           {g.experiences.map((e, i) => (
@@ -370,7 +445,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
       {/* LOCAL DISHES */}
       {g.localDishes?.length ? (
-        <Section>
+        <Section alt={flip}>
           <SectionHead eyebrow="Eat" title="Local dishes to try" />
           <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
             {g.localDishes.map((d, i) => (
@@ -384,7 +459,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       ) : null}
 
       {/* PLACES TO EAT */}
-      <Section alt>
+      <Section alt={!flip}>
         <SectionHead eyebrow="Eat" title="Best places to eat" />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToEat.map((p, i) => (
@@ -400,7 +475,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       </Section>
 
       {/* NATIONAL SYMBOLS */}
-      <Section>
+      <Section alt={flip}>
         <SectionHead eyebrow="National symbols" title="Anthem, motto and pledge" />
         <div className="mx-auto max-w-3xl space-y-5">
           {g.symbols.motto ? (
@@ -442,7 +517,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
       {/* FAQ */}
       {moveToFaqs.length ? (
-        <Section alt>
+        <Section alt={!flip}>
           <SectionHead eyebrow="FAQ" title={`${g.name}: frequently asked questions`} />
           <div className="mx-auto max-w-3xl">
             <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
@@ -479,7 +554,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
       {/* OTHER COUNTRIES */}
       {others.length ? (
-        <Section>
+        <Section alt={flip}>
           <SectionHead eyebrow="More countries" title="Other country fact sheets" />
           <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
             {others.map((o) => (

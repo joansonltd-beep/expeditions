@@ -44,7 +44,7 @@ export type HomeContent = {
 
 export const DEFAULT_HOME: HomeContent = {
   heroStats: [
-    { value: "13 states", label: "CSME free movement" },
+    { value: "12 countries", label: "CSME free movement" },
     { value: "Step by step", label: "paperwork guidance" },
     { value: "One team", label: "for the whole move" },
   ],
@@ -118,8 +118,8 @@ export const DEFAULT_HOME: HomeContent = {
     { icon: "📍", title: "Caribbean roots", text: "Based in Trinidad and Tobago, serving movers across all of CARICOM." },
     { icon: "✅", title: "Done right the first time", text: "We guide you through applications and paperwork so nothing gets bounced back." },
   ],
-  testimonialsEyebrow: "What movers say",
-  testimonialsTitle: "Trusted by people relocating across CARICOM",
+  testimonialsEyebrow: "Where are you moving?",
+  testimonialsTitle: "Choose your destination",
   contactEyebrow: "Get started",
   contactTitle: "Tell us about your move",
   contactIntro:

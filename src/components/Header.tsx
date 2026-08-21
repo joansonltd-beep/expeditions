@@ -123,7 +123,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             href="/#contact"
             className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark sm:inline-flex"
           >
-            Get started
+            Plan My Move
           </Link>
           <button
             className="flex h-11 w-11 items-center justify-center lg:hidden"

@@ -46,6 +46,21 @@ export type Experience = { title: string; description: string };
 export type PlaceToEat = { name: string; description: string; area?: string };
 export type LocalDish = { name: string; description: string };
 export type VisitorFaqEntry = { q: string; a: string };
+export type MovingHereArea = { name: string; description: string };
+
+export type MovingHere = {
+  visaWorkPermit: string; // entry, work permits, and the CSME route for CARICOM nationals
+  residency?: string;
+  healthcare: string;
+  taxes: string;
+  areas: MovingHereArea[]; // neighbourhoods/towns worth knowing for someone relocating, not just visiting
+  notes?: string;
+  sourceName: string;
+  sourceUrl?: string;
+  secondarySourceName?: string;
+  secondarySourceUrl?: string;
+  asOf: string;
+};
 
 export type Coordinates = {
   lat: number;
@@ -99,6 +114,7 @@ export type CountryGuide = {
   coordinates?: Coordinates;
   demographics: Demographics;
   costOfLiving: CostOfLiving;
+  movingHere?: MovingHere;
   placesToSee: PlaceToSee[];
   experiences: Experience[];
   localDishes?: LocalDish[];
@@ -1469,6 +1485,50 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "Local wages are low relative to these costs, so day-to-day prices for residents can feel more expensive than the raw dollar figures suggest. A premium lifestyle (uptown Kingston or beachfront tourist area, frequent dining, high AC use) can run US$3,500–6,000+/month. Local route-taxi fares run roughly US$1–3 per trip.",
       sourceName: "Numbeo",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Kingston-Jamaica",
+      asOf: "August 2026",
+    },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals can enter visa-free and apply for a CARICOM Skills Certificate (the CSME route) to live and work in Jamaica without a work permit; see the CSME steps for Jamaica for the application process. Non-CARICOM nationals need an employer-sponsored work permit from the Ministry of Labour and Social Security before starting work in Jamaica; permits are tied to a specific job and employer and are generally renewed annually.",
+      residency:
+        "Permanent residence is available after 3 or more continuous years of employment in Jamaica, through marriage to a Jamaican national, as a dependant of an existing permanent resident, or through a retirement category for those with sufficient pension or investment income. Applications go through the Passport, Immigration and Citizenship Agency (PICA) and are usually decided within 3 to 6 months.",
+      healthcare:
+        "Public hospitals and health centres are free at the point of use for residents but can mean long waits, and are often better resourced for emergencies than routine care. Most movers carry private health insurance, roughly US$150-500/month for solid coverage, and use private facilities such as Andrews Memorial Hospital in Kingston or private clinics in Montego Bay. Confirm what a home-country or employer policy actually covers on the island before relying on it.",
+      taxes:
+        "Jamaica taxes residents on worldwide income and non-residents only on Jamaica-sourced income, with the tax year running 1 April to 31 March. The annual tax-free threshold rises each April, sitting at roughly JMD 1.9 million for the 2026/2027 year; income above that is taxed at 25% up to JMD 6 million a year and 30% above that, while non-residents get no tax-free threshold and pay a flat 25% from the first dollar. Anyone earning income in Jamaica needs a Taxpayer Registration Number (TRN). US citizens remain subject to US filing requirements wherever they live, so check the Foreign Earned Income Exclusion and Foreign Tax Credit with a tax professional.",
+      areas: [
+        {
+          name: "Kingston",
+          description:
+            "The capital and the country's business and cultural hub. New Kingston and Barbican suit professionals; Cherry Gardens, Norbrook and Liguanea are established, relatively secure neighbourhoods, at a price premium over the rest of the city.",
+        },
+        {
+          name: "Montego Bay",
+          description:
+            "Jamaica's second city and main north-coast hub, popular with remote workers and retirees; Ironshore and Rose Hall offer gated communities close to Sangster International Airport.",
+        },
+        {
+          name: "Mandeville",
+          description:
+            "A hill town at roughly 600m elevation with a noticeably cooler climate than the coast. A long-standing favourite with returning-resident Jamaicans and retirees, and generally cheaper than Kingston or Montego Bay.",
+        },
+        {
+          name: "Ocho Rios and Negril",
+          description:
+            "North and west coast towns built around tourism, with ocean-view rentals around White River (Ocho Rios) and near Seven Mile Beach (Negril); more resort-paced than the cities, and geared toward shorter lets as well as long-term living.",
+        },
+        {
+          name: "Portmore and Spanish Town",
+          description:
+            "Commuter towns just outside Kingston with more affordable housing for people working in the capital, at the cost of a longer commute.",
+        },
+      ],
+      notes:
+        "Work permit and residency rules change, so confirm current requirements directly with PICA or Jamaica's Ministry of Labour and Social Security before making plans around them.",
+      sourceName: "Passport, Immigration and Citizenship Agency (PICA) and PwC Tax Summaries",
+      sourceUrl: "https://www.pica.gov.jm/immigration/permanent-residence",
+      secondarySourceName: "Expat.com",
+      secondarySourceUrl: "https://www.expat.com/en/guide/central-america/jamaica/",
       asOf: "August 2026",
     },
     placesToSee: [

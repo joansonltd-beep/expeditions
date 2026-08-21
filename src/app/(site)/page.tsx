@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getSiteSettings, getServices, getTestimonials, getHomeContent } from "@/lib/siteData";
+import { getSiteSettings, getServices, getHomeContent } from "@/lib/siteData";
 import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import { Icon, serviceIcon, pillarIcon, WHY_ICONS } from "@/components/icons";
+import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
 // Title and description come from the root layout; this page only needs to
 // claim its own canonical URL.
@@ -13,12 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [settings, services, testimonials, home] = await Promise.all([
-    getSiteSettings(),
-    getServices(),
-    getTestimonials(),
-    getHomeContent(),
-  ]);
+  const [settings, services, home] = await Promise.all([getSiteSettings(), getServices(), getHomeContent()]);
+  const destinations = [...COUNTRY_GUIDES].sort((a, b) => a.name.localeCompare(b.name));
   const travel = services.filter((s) => s.category === "travel" || s.category === "visa");
   const finance = services.find((s) => s.slug === "finance");
   const localCards = [
@@ -58,7 +55,7 @@ export default async function HomePage() {
             <p className="mt-5 max-w-xl text-lg text-white/85">{settings.heroSubcopy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#contact" className={btnPrimary}>
-                Start my move
+                Plan My Move
               </Link>
               <Link
                 href="/caricom-skills-certificate"
@@ -105,7 +102,7 @@ export default async function HomePage() {
             <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
           </div>
           <Link href="#contact" className={`${btnPrimary} shrink-0`}>
-            Plan my move
+            Plan My Move
           </Link>
         </div>
       </Section>
@@ -136,7 +133,7 @@ export default async function HomePage() {
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{home.bundleTitle}</h2>
             <p className="mt-3 max-w-xl text-white/85">{home.bundleText}</p>
             <Link href="#contact" className={`${btnAccent} mt-7`}>
-              Get my relocation plan
+              Plan My Move
             </Link>
           </div>
         </Container>
@@ -203,21 +200,25 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
+      {/* DESTINATIONS */}
       <Section alt>
-        <SectionHead eyebrow={home.testimonialsEyebrow} title={home.testimonialsTitle} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-7">
-              <div className="mb-3 tracking-widest text-amber-400">★★★★★</div>
-              <p className="italic text-slate-600">&ldquo;{t.quote}&rdquo;</p>
-              <p className="mt-4 text-sm font-semibold text-slate-900">
-                {t.person}
-                <span className="block font-normal text-slate-500">{t.context}</span>
-              </p>
-            </div>
+        <SectionHead eyebrow={home.testimonialsEyebrow} title={home.testimonialsTitle} intro="Cost of living, CSME steps and what to expect, country by country." />
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {destinations.map((g) => (
+            <Link
+              key={g.slug}
+              href={`/destinations/${g.slug}`}
+              className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-md"
+            >
+              {g.name}
+            </Link>
           ))}
         </div>
+        <p className="mt-6 text-center">
+          <Link href="/destinations" className="text-sm font-semibold text-brand hover:underline">
+            See all country fact sheets →
+          </Link>
+        </p>
       </Section>
 
       {/* CONTACT */}
