@@ -182,7 +182,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "CARICOM nationals can enter visa-free and apply for a CARICOM Skills Certificate (the CSME route) to live and work in Antigua and Barbuda without a work permit; see the CSME steps for Antigua and Barbuda for the application process. Non-CARICOM nationals commonly get a visa-free stay of up to 180 days as visitors, but need a work permit, arranged through a local employer, before taking up employment.",
+        "CARICOM nationals can enter visa-free and apply for a CARICOM Skills Certificate (the CSME route) to live and work in Antigua and Barbuda without a work permit; see the CSME steps for Antigua and Barbuda for the application process. Antigua and Barbuda is also one of six OECS member states with full free movement among themselves (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines): citizens of those countries can settle here indefinitely and work without a permit at all. Non-CARICOM nationals commonly get a visa-free stay of up to 180 days as visitors, but need a work permit, arranged through a local employer, before taking up employment.",
       residency:
         "Antigua and Barbuda also runs an investment-based Permanent Residence programme, open to people who can show a minimum annual income of US$100,000 and pay a flat annual tax of US$20,000, with a minimum physical presence of only around 30 days a year, plus a separate Citizenship by Investment programme typically processed in 3 to 6 months. Both are aimed at people buying tax residency or a second passport, not the standard route for someone moving here to work.",
       healthcare:
@@ -995,7 +995,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "Dominica is one of the four CARICOM countries with full free movement: nationals of Dominica, Barbados, Belize and St. Vincent and the Grenadines can move to and work in each other's countries without any extra application. Other CARICOM nationals go through the CSME Skills Certificate instead; see the CSME steps for Dominica for that process. Non-CARICOM visitors typically get a few weeks to a few months visa-free depending on nationality, and everyone must file Dominica's online ED (embarkation/disembarkation) card before arrival. A non-CARICOM national taking up a job needs a work permit tied to a specific employer, who has to show the role couldn't reasonably be filled locally.",
+        "Dominica is one of the four CARICOM countries with full free movement: nationals of Dominica, Barbados, Belize and St. Vincent and the Grenadines can move to and work in each other's countries without any extra application. Dominica is also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also settle and work here without a permit. Other CARICOM nationals go through the CSME Skills Certificate instead; see the CSME steps for Dominica for that process. Non-CARICOM visitors typically get a few weeks to a few months visa-free depending on nationality, and everyone must file Dominica's online ED (embarkation/disembarkation) card before arrival. A non-CARICOM national taking up a job needs a work permit tied to a specific employer, who has to show the role couldn't reasonably be filled locally.",
       residency:
         "A one-year, renewable Temporary Residence Permit is open to people who can show they can support themselves and either own or rent property on the island. Dominica also runs a well-known Citizenship by Investment programme: a non-refundable contribution to the Economic Diversification Fund starting at US$200,000 for a single applicant, or a qualifying real estate purchase from US$200,000 held for several years, with decisions typically taking 3 to 6 months.",
       healthcare:
@@ -1250,7 +1250,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "CARICOM nationals need the CSME Skills Certificate to live and work in Grenada without a work permit; see the CSME steps for Grenada for the process. Visitors from a large number of countries get a visa-free stay of up to 3 months, but anyone taking up a job needs a Work Permit before starting, valid for a year and renewed annually through the employer.",
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Grenada without a work permit; see the CSME steps for Grenada for the process. Grenada is also one of six OECS member states with full free movement among themselves (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines): citizens of those countries can settle here indefinitely and work without a permit at all. Visitors from a large number of other countries get a visa-free stay of up to 3 months, but anyone outside those groups taking up a job needs a Work Permit before starting, valid for a year and renewed annually through the employer.",
       residency:
         "Grenada also runs a Citizenship by Investment programme: a non-refundable contribution to the National Transformation Fund starting at US$235,000, or a qualifying real estate purchase from US$270,000 held for a set period, with decisions usually taking 4 to 6 months. Grenada is the only Caribbean CBI country whose citizenship comes with US E-2 investor visa eligibility, on top of visa-free access to a wide range of other countries.",
       healthcare:
@@ -1996,7 +1996,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "CARICOM nationals need the CSME Skills Certificate to live and work in St. Kitts and Nevis without a work permit; see the CSME steps for St. Kitts and Nevis for the process. Visitors from more than 120 countries can enter without a visa, though since May 2025 most arrivals also need an Electronic Travel Authorisation (eTA) beforehand, costing around US$17 for a single 90-day entry. Non-CARICOM nationals taking up a job still need a standard work permit tied to a local employer.",
+        "CARICOM nationals need the CSME Skills Certificate to live and work in St. Kitts and Nevis without a work permit; see the CSME steps for St. Kitts and Nevis for the process. St. Kitts and Nevis is also one of six OECS member states with full free movement among themselves (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines): citizens of those countries can settle here indefinitely and work without a permit at all. Visitors from more than 120 other countries can enter without a visa, though since May 2025 most arrivals also need an Electronic Travel Authorisation (eTA) beforehand, costing around US$17 for a single 90-day entry. Non-CARICOM nationals taking up a job still need a standard work permit tied to a local employer.",
       residency:
         "St. Kitts and Nevis runs the Caribbean's oldest Citizenship by Investment programme, going back to 1984: a Sustainable Island State Contribution starting at US$250,000 for a family of up to four, or a real estate purchase from US$325,000 for a condo share up to US$600,000 for a single-family home, held for at least 7 years. Both routes now include a mandatory interview for the main applicant and any dependants aged 16 or older, and are typically decided within 4 to 6 months.",
       healthcare:
@@ -2237,6 +2237,45 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "A Global Citizen Solutions \"basic utilities\" bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia's utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use, so treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/st-lucia-living-cost/",
+      asOf: "August 2026",
+    },
+    movingHere: {
+      visaWorkPermit:
+        "Saint Lucia is one of six OECS member states with full free movement among themselves (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines): citizens of those six can settle in Saint Lucia indefinitely and work there without a permit. Other CARICOM nationals still need the CSME Skills Certificate; see the CSME steps for Saint Lucia for that process. Citizens of many other countries can enter visa-free for up to 42 days, but anyone outside those two groups needs a work permit arranged before starting a job.",
+      residency:
+        "Saint Lucia runs a Citizenship by Investment programme: a non-refundable contribution to the National Economic Fund from US$240,000, a real estate purchase from US$300,000, government bonds from US$300,000, or a qualifying business investment from US$1,000,000, though recent backlogs have pushed processing out to 10 to 12 months. Outside that programme, permanent residence generally follows two years of continuous, lawfully maintained status, with naturalisation possible after a further 7 years as a permanent resident.",
+      healthcare:
+        "Owen King EU Hospital in Castries, with around 120 beds, is the main public hospital; St. Jude Hospital in the south has been under reconstruction. Tapion Hospital is the leading private option, with round-the-clock emergency care. International health insurance is standard for movers, with premiums for older applicants (65 and up) starting around US$150/month.",
+      taxes:
+        "People who don't count as Saint Lucia tax residents pay no local tax on worldwide income, capital gains, dividends or inheritance. Tax residents face a progressive scale: nothing on the first XCD 10,000 a year, 10% on the next band up to XCD 20,000, and 30% above that, though a 2025 budget measure removed tax on pension income entirely. VAT runs 12.5% generally, 10% for accommodation and telecoms.",
+      areas: [
+        {
+          name: "Rodney Bay",
+          description:
+            "The island's biggest concentration of long-term movers, built around a marina and Reduit Beach with the most restaurant choice, though prices run above the island average.",
+        },
+        {
+          name: "Cap Estate",
+          description: "An upscale, gated area near a golf course and the International School of Saint Lucia.",
+        },
+        {
+          name: "Castries",
+          description:
+            "The capital, close to government offices and the main hospital, with rents generally running 20-30% below Rodney Bay.",
+        },
+        {
+          name: "Marigot Bay",
+          description: "A scenic, sheltered bay with its own marina, though public transport and school choice are both limited nearby.",
+        },
+        {
+          name: "Soufrière",
+          description: "Closest to the Pitons and more affordable, at the cost of being further from specialist healthcare and schools.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/saint-lucia/",
+      secondarySourceName: "OECS (Free Movement of Persons Regime, official)",
+      secondarySourceUrl: "https://oecs.int/en/free-movement-of-persons-in-the-eastern-caribbean",
       asOf: "August 2026",
     },
     placesToSee: [
