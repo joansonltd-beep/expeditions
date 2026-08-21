@@ -1500,6 +1500,50 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceName: "Relocation and expat cost-of-living guides, and real-estate reporting on the oil boom",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Guyana without a work permit; see the CSME steps for Guyana for the process. Visitors from North America, the UK, Ireland and much of Western Europe typically get a 90-day visa-free stay, but working requires a work permit sponsored by a Guyanese employer through the Ministry of Home Affairs, usually approved within one to four weeks for a fee of roughly US$140, and valid for up to three years at a time.",
+      residency:
+        "Permanent residence generally becomes available after somewhere around 3 to 5 years of continuous, lawful residence, alongside proof of financial stability, a clean police record and evidence of ties to the country. The exact timeline is described a little differently across sources, so confirm current requirements with the Ministry of Home Affairs before planning around them.",
+      healthcare:
+        "Public healthcare is free or low-cost but often short-staffed and short on supplies. A private clinic consultation runs roughly US$24-70, more for a specialist or an emergency, and anything serious is often better handled outside the country, in Trinidad, Barbados or the US, which is why international health insurance with medical evacuation cover is standard for movers here.",
+      taxes:
+        "Guyana taxes residents on worldwide income. As of 2026, the tax-free personal allowance is GY$1,680,000 a year (or one-third of income, whichever is greater), with a 25% rate on chargeable income up to GY$3,360,000 a year and 35% above that. The Guyana Revenue Authority updates these thresholds periodically, most recently at the start of 2026.",
+      areas: [
+        {
+          name: "Bel Air and Queenstown",
+          description: "Established, well-off Georgetown neighbourhoods with a strong diplomatic and professional presence.",
+        },
+        {
+          name: "Lamaha Gardens",
+          description: "A slightly elevated Georgetown neighbourhood valued for coping better with heavy rain than lower-lying parts of the city.",
+        },
+        {
+          name: "Subryanville and Kitty",
+          description: "Waterfront Georgetown neighbourhoods with a younger professional crowd.",
+        },
+        {
+          name: "Prashad Nagar and Campbellville",
+          description: "Convenient, mid-to-upper income Georgetown neighbourhoods.",
+        },
+        {
+          name: "East Coast Demerara (Versailles, Republic Park, Continental Park)",
+          description: "Gated compounds just outside the city, popular with oil-and-gas sector families.",
+        },
+        {
+          name: "Linden and New Amsterdam",
+          description:
+            "Secondary towns, Linden built around bauxite mining and New Amsterdam a river port with colonial-era architecture, with far fewer movers and less infrastructure built out for newcomers.",
+        },
+      ],
+      notes:
+        "Georgetown's oil-boom-driven rents have climbed sharply in the neighbourhoods movers favour most, so treat any rental figure as a starting point and check current listings rather than relying on older estimates.",
+      sourceName: "592Hub and Jarnias Cyril relocation guides",
+      sourceUrl: "https://www.jarniascyril.com/expatriation/install-guyana-expat-complete-guide/",
+      secondarySourceName: "Guyana Revenue Authority (official income tax rates)",
+      secondarySourceUrl: "https://gra.gov.gy/income-tax-rates-threshold/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Kaieteur Falls",
