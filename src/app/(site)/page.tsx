@@ -37,13 +37,24 @@ export default async function HomePage() {
       <section className="relative isolate flex min-h-[68vh] items-center overflow-hidden sm:min-h-[80vh]">
         <Image
           src="/photos/hero.jpg"
-          alt="Looking out over a misty island landscape"
+          alt="Pigeon Point, Tobago: a thatched-roof jetty over turquoise Caribbean water"
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/80" />
+        <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/50">
+          Pigeon Point, Tobago ·{" "}
+          <a
+            href="https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            Kp93, CC BY-SA 3.0, via Wikimedia Commons
+          </a>
+        </p>
         <Container className="relative z-10 py-24 sm:py-28">
           <div className="max-w-2xl text-white">
             <span className="inline-flex rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-inset ring-white/25 backdrop-blur">
