@@ -3012,6 +3012,42 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Port-Of-Spain",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Trinidad and Tobago without a work permit; see the CSME steps for Trinidad and Tobago for the process. Citizens of the EU, UK, US and Canada, among others, can enter visa-free for up to 90 days, but taking up a job needs a work permit applied for through the TTBizLink platform, with the employer first showing no suitably qualified local candidate is available. A standard permit costs TTD 1,000 and can run for up to 3 years, though processing commonly takes 2 to 6 months, so it's worth starting the paperwork well ahead of any planned start date.",
+      residency: "Permanent residence is available after 5 years of continuous, legal residence in the country.",
+      healthcare:
+        "Public healthcare is free to all residents, with 5 regional hospitals and more than 100 health posts around the country. A private GP visit runs roughly TTD 300-600 and a specialist TTD 500-1,200; local health insurance plans typically cost TTD 2,000-4,000 a month.",
+      taxes:
+        "Trinidad and Tobago taxes residents (anyone present 183 days or more in a calendar year) on worldwide income, with a personal allowance of TTD 90,000 a year before tax applies, then a two-tier system: 25% on chargeable income up to TTD 1 million and 30% above that. There's no inheritance, gift or capital gains tax on property sales. VAT sits at 12.5%, and property tax runs roughly 1-3% depending on location.",
+      areas: [
+        {
+          name: "Port of Spain and its suburbs (Maraval, St. Ann's, Cascade, Goodwood Park, Westmoorings)",
+          description:
+            "The capital and its most established residential areas for movers, home to the International School of Port of Spain. Three-bedroom houses run roughly TTD 8,000-15,000/month.",
+        },
+        {
+          name: "Chaguanas",
+          description:
+            "A fast-growing central town about 30 minutes from Port of Spain outside peak traffic. Three-bedroom houses run roughly TTD 6,000-10,000/month.",
+        },
+        {
+          name: "San Fernando",
+          description:
+            "The southern economic centre, close to the island's oil and gas installations, with fewer international school options. Three-bedroom houses run roughly TTD 5,500-9,000/month.",
+        },
+        {
+          name: "Tobago (Crown Point and around)",
+          description:
+            "A slower-paced, tourism-oriented island best known for attracting retirees. Two-bedroom houses run roughly TTD 4,000-6,000/month.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/south-america/trinidad-and-tobago/",
+      secondarySourceName: "PwC Tax Summaries (Trinidad and Tobago)",
+      secondarySourceUrl: "https://taxsummaries.pwc.com/trinidad-and-tobago/individual/taxes-on-personal-income",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Pitch Lake",
