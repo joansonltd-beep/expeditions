@@ -44,7 +44,7 @@ export type HomeContent = {
 
 export const DEFAULT_HOME: HomeContent = {
   heroStats: [
-    { value: "12 countries", label: "CSME free movement" },
+    { value: "12 states", label: "CSME free movement" },
     { value: "Step by step", label: "paperwork guidance" },
     { value: "One team", label: "for the whole move" },
   ],
