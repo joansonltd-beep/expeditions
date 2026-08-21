@@ -740,6 +740,51 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       secondarySourceName: "rental listings and expat relocation guides (typical mainland and caye figures)",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "Belize is one of the four CARICOM countries that have moved past the standard CSME certificate to full free movement: nationals of Belize, Barbados, Dominica and St. Vincent and the Grenadines can settle and work in each other's countries without any extra application. Other CARICOM nationals still need the CSME Skills Certificate; see the CSME steps for Belize for that process. Most non-CARICOM visitors get 30 to 90 days visa-free depending on nationality, but taking up a job requires a work permit sponsored by a Belizean employer, applied for through the Immigration Department.",
+      residency:
+        "Temporary residency suits people moving for work, family or retirement, and calls for proof of income plus a background check; a year on that status opens the door to permanent residency once further financial and background paperwork clears. Belize also runs a dedicated retirement route, the Qualified Retired Persons (QRP) programme: anyone 40 or older with at least US$2,000 a month (US$24,000 a year) coming in from outside the country can apply, and the only presence requirement is 30 consecutive days a year in Belize. QRP status also comes with duty-free import allowances for personal belongings.",
+      healthcare:
+        "Public clinics and hospitals handle emergencies well, and having English-speaking staff is a real advantage for newly arrived movers, but routine and specialist care thins out once you're away from Belize City. Anything more involved than a standard hospital stay often means travelling to Mexico, Guatemala or the US, so most movers pair local coverage with a policy that includes medical evacuation. Dial 911 for emergencies.",
+      taxes:
+        "Individual income above an exempt band of roughly BZ$26,000-29,000 a year is taxed at a flat 25%; the exact threshold shifts slightly depending on the source, so check the current figure with the Belize Tax Service before budgeting around it. QRP retirees get a further break, since approved retirement income brought in from abroad isn't taxed locally.",
+      areas: [
+        {
+          name: "Belize City",
+          description:
+            "The country's largest city and commercial hub, with the main hospitals, schools and international airport, even though Belmopan is the capital.",
+        },
+        {
+          name: "Ambergris Caye (San Pedro)",
+          description:
+            "The busiest and most developed of the cayes, with the largest concentration of long-term movers, dive operators and restaurants.",
+        },
+        {
+          name: "Caye Caulker",
+          description:
+            "A quieter island a short boat ride from Ambergris Caye, with a slower pace that suits retirees and remote workers who want less going on.",
+        },
+        {
+          name: "Placencia",
+          description: "A laid-back peninsula village on the southern mainland coast with a long-established community of movers.",
+        },
+        {
+          name: "San Ignacio",
+          description:
+            "An inland Cayo District town near the Guatemalan border, used as a base for rainforest and Maya-ruin trips, and generally cheaper than the coast.",
+        },
+        {
+          name: "Corozal",
+          description: "A northern town close to the Mexican border, popular with retirees for its lower cost of living.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/belize/",
+      secondarySourceName: "Belize Tourism Board (QRP programme, official)",
+      secondarySourceUrl: "https://www.belizetourismboard.org/programs-events/retirement-program/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Belize Barrier Reef",
