@@ -993,6 +993,47 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceName: "Relocation and expat relocation guides",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "Dominica is one of the four CARICOM countries with full free movement: nationals of Dominica, Barbados, Belize and St. Vincent and the Grenadines can move to and work in each other's countries without any extra application. Other CARICOM nationals go through the CSME Skills Certificate instead; see the CSME steps for Dominica for that process. Non-CARICOM visitors typically get a few weeks to a few months visa-free depending on nationality, and everyone must file Dominica's online ED (embarkation/disembarkation) card before arrival. A non-CARICOM national taking up a job needs a work permit tied to a specific employer, who has to show the role couldn't reasonably be filled locally.",
+      residency:
+        "A one-year, renewable Temporary Residence Permit is open to people who can show they can support themselves and either own or rent property on the island. Dominica also runs a well-known Citizenship by Investment programme: a non-refundable contribution to the Economic Diversification Fund starting at US$200,000 for a single applicant, or a qualifying real estate purchase from US$200,000 held for several years, with decisions typically taking 3 to 6 months.",
+      healthcare:
+        "Princess Margaret Hospital in Roseau, with around 200 beds, is the country's main hospital; care at public facilities is free or heavily subsidised for residents, and a specialist visit at a private clinic runs roughly US$50-150. Specialist and complex treatment is limited on-island, so serious cases are often referred to Martinique, Barbados or Trinidad, which is why most movers carry international health insurance, roughly US$100-500/month, that includes medical evacuation.",
+      taxes:
+        "Dominica taxes residents only on income sourced in Dominica; foreign income generally stays untaxed as long as it isn't remitted onto the island, and tax residency itself only kicks in once someone spends more than 183 days a year there. There's no capital gains, wealth or inheritance tax, and no withholding tax on dividends or interest paid to non-residents. VAT runs at 15% generally, dropping to 10% for hotels and tourism services.",
+      areas: [
+        {
+          name: "Roseau",
+          description:
+            "The capital and largest town, with roughly 14,700 people and the best access to schools, healthcare and other services. Three-bedroom rentals run roughly US$740-1,300/month.",
+        },
+        {
+          name: "Portsmouth",
+          description:
+            "A livelier, younger town in the north, home to Ross University's medical school. Rentals run roughly US$450-925/month, about 20 minutes from the airport.",
+        },
+        {
+          name: "Marigot",
+          description:
+            "A quiet east-coast village and one of the cheapest places to rent, roughly US$185-445/month, though services nearby are limited.",
+        },
+        {
+          name: "Scotts Head",
+          description: "A south-coast diving hub about 30 minutes from Roseau, with rentals ranging roughly US$300-1,480/month.",
+        },
+        {
+          name: "Kalinago Territory",
+          description:
+            "The east-coast home of the indigenous Kalinago people, offering a distinct cultural setting rather than a typical base for movers, with more basic infrastructure.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/dominica/",
+      secondarySourceName: "Global Citizen Solutions (Economic Diversification Fund guide)",
+      secondarySourceUrl: "https://www.globalcitizensolutions.com/dominica-economic-diversification-fund/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Boiling Lake",
