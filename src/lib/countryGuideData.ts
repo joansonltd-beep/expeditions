@@ -468,6 +468,43 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       secondarySourceName: "current rental listings and relocation guides (typical and popular-parish figures)",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "Barbados is one of the four CARICOM countries with full free movement: nationals of Barbados, Belize, Dominica and St. Vincent and the Grenadines can live and work in each other's countries without a CSME Skills Certificate. Other CARICOM nationals still apply for the CSME Skills Certificate; see the CSME steps for Barbados for the process. Non-CARICOM nationals can enter visa-free for up to 6 months as visitors but need an employer-sponsored work permit for local employment, or can apply for the Barbados Welcome Stamp, a renewable 12-month visa for people working remotely for an employer outside Barbados.",
+      residency:
+        "The Welcome Stamp requires proof of at least US$50,000 in income over the visa year, an application fee of US$2,000 for an individual (US$3,000 for a family), and comes with an exemption from Barbados income tax on that foreign income for the visa's term; it does not permit local employment. Standard permanent residence is available after 5 years of continuous residence, and citizenship after 7 years for Commonwealth nationals. A Special Entry and Reside Permit (SERP) exists for retirees over 60 and high-net-worth individuals with substantial income and assets.",
+      healthcare:
+        "Queen Elizabeth Hospital (QEH) in Bridgetown is the main public hospital, backed by six polyclinics for primary care, funded partly through National Insurance Scheme contributions. Private GP visits run roughly BBD 75-150 and specialists BBD 150-300; international health insurance, required for the Welcome Stamp, typically runs US$150-500/month depending on age and coverage.",
+      taxes:
+        "Barbados taxes residents on worldwide income on a progressive scale: the first roughly BBD 25,000 a year is tax-exempt, then rates rise through 17.5% and 28.5% to 33.5% on income above BBD 60,000 a year, with a further exemption for people over 60. VAT is 17.5% on most goods and services. Welcome Stamp holders pay no Barbados tax on the foreign income that qualified them for the visa, but still pay VAT on local purchases.",
+      areas: [
+        {
+          name: "Bridgetown",
+          description:
+            "The capital and commercial centre. Two-bedroom apartments on the edges of town run roughly BBD 2,500-4,000/month.",
+        },
+        {
+          name: "The Platinum Coast (Holetown, Speightstown)",
+          description:
+            "The well-known west-coast strip, popular with longer-term movers and retirees. Apartment rents start around BBD 5,000/month and go well beyond that for villas.",
+        },
+        {
+          name: "The south coast (St. Lawrence Gap, Hastings, Worthing, Oistins)",
+          description:
+            "A livelier, more affordable strip mixing apartments, nightlife and the working fishing village at Oistins. Two-to-three-bedroom houses run roughly BBD 2,000-5,000/month.",
+        },
+        {
+          name: "The interior and east coast",
+          description:
+            "Quieter parishes away from the tourist coasts, generally the most affordable option, with spacious houses from around BBD 1,500-3,500/month.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/barbados/",
+      secondarySourceName: "Barbados Welcome Stamp (official, via Visit Barbados)",
+      secondarySourceUrl: "https://visitbarbados.org/barbados-welcome-stamp",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Historic Bridgetown and its Garrison",
