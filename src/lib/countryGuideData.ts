@@ -2504,6 +2504,43 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Saint+Vincent+And+The+Grenadines",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "St. Vincent and the Grenadines is one of the four CARICOM countries with full free movement: nationals of St. Vincent and the Grenadines, Barbados, Belize and Dominica can settle and work in each other's countries without any extra application. It's also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also live and work here without a permit. Other CARICOM nationals still go through the CSME Skills Certificate; see the CSME steps for St. Vincent and the Grenadines for that process. Most other visitors get a month visa-free, extendable, while CARICOM nationals and British passport holders commonly get 6 months. Anyone staying longer than a year, or working outside the free-movement groups above, applies for a temporary residence permit through the Office of the Prime Minister, showing either financial means or a local job.",
+      residency:
+        "There's no fixed-price citizenship or residence-by-investment scheme here like some neighbouring islands run; longer stays go through the temporary residence process above. The government instead promotes business investment through Invest SVG, which offers import duty exemptions and tax holidays for priority sectors.",
+      healthcare:
+        "Milton Cato Memorial Hospital in Kingstown is the main public hospital, with a new, World Bank-funded facility under construction in Arnos Vale. Complex cases are often referred to Queen Elizabeth Hospital in Barbados, roughly a two-hour flight away, or to Trinidad. International private health insurance, typically US$200-600/month for a healthy adult including medical evacuation, is standard for movers.",
+      taxes:
+        "Following a 2025 reform, income above an annual exemption of XCD 25,000 is taxed progressively: 10% on the first band to XCD 5,000, 20% up to XCD 10,000, and 30% above that. Residents are taxed only on income actually received in St. Vincent and the Grenadines, and there's no capital gains, inheritance, gift or offshore-dividend withholding tax. VAT runs 16% generally, 10% for hospitality.",
+      areas: [
+        {
+          name: "Kingstown and its outskirts (Villa, Indian Bay, Arnos Vale, Calliaqua)",
+          description:
+            "The capital's more residential surrounding neighbourhoods, the most popular base for movers. Two-bedroom apartments run roughly US$800-2,000/month.",
+        },
+        {
+          name: "The leeward (west) coast of the mainland",
+          description: "Quieter and more rural, popular with retirees and remote workers. Rentals run roughly US$600-1,500/month.",
+        },
+        {
+          name: "Bequia",
+          description:
+            "The second-largest island, a short ferry ride from Kingstown, with the territory's most established outside community and its own international school. Villa rentals run roughly US$1,500-3,500/month.",
+        },
+        {
+          name: "Canouan",
+          description: "A high-end development with its own international airport and a Mandarin Oriental resort, aimed at the top of the market.",
+        },
+        {
+          name: "Union Island",
+          description: "A more basic, budget-friendly alternative among the Grenadines. Rentals run roughly US$800-2,000/month.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/saint-vincent-and-the-grenadines/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Tobago Cays Marine Park",
