@@ -1248,6 +1248,47 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Grenada without a work permit; see the CSME steps for Grenada for the process. Visitors from a large number of countries get a visa-free stay of up to 3 months, but anyone taking up a job needs a Work Permit before starting, valid for a year and renewed annually through the employer.",
+      residency:
+        "Grenada also runs a Citizenship by Investment programme: a non-refundable contribution to the National Transformation Fund starting at US$235,000, or a qualifying real estate purchase from US$270,000 held for a set period, with decisions usually taking 4 to 6 months. Grenada is the only Caribbean CBI country whose citizenship comes with US E-2 investor visa eligibility, on top of visa-free access to a wide range of other countries.",
+      healthcare:
+        "General Hospital in St. George's is the main public facility, though specialist care is limited and more complex cases are often referred to Barbados, Trinidad or the US. A May 2025 partnership with New York's Mount Sinai Health System is meant to build up specialist capacity locally over time. Most movers carry private insurance, from roughly US$150-300/month for a basic plan up to US$500-800/month for comprehensive cover with medical evacuation.",
+      taxes:
+        "Grenada taxes residents on Grenada-sourced income once someone has spent more than 183 days a year on the island; foreign income generally stays untaxed. Local income is taxed in bands: nothing on the first EC$24,000 a year, 10% up to EC$36,000, and 28% above that. There's no capital gains, inheritance, estate or wealth tax, and VAT runs 15% generally, 10% for tourism and hospitality.",
+      areas: [
+        {
+          name: "St. George's",
+          description:
+            "The capital, urban and convenient for services rather than beach-focused. Two-bedroom apartments run roughly EC$1,200-2,000/month.",
+        },
+        {
+          name: "Grand Anse",
+          description:
+            "The main base for movers, next to its well-known stretch of beach, with the island's densest cluster of restaurants and services. Two-bedroom apartments run roughly EC$2,000-3,500/month.",
+        },
+        {
+          name: "True Blue",
+          description:
+            "A family-oriented area near the International School of Grenada. Three-bedroom houses run roughly EC$3,000-5,000/month.",
+        },
+        {
+          name: "Lance aux Épines",
+          description:
+            "An upscale southern peninsula with marina facilities. Three-bedroom villas run roughly EC$5,000-10,000/month.",
+        },
+        {
+          name: "Morne Rouge and the north (Sauteurs and nearby villages)",
+          description: "Quieter and 20-30% cheaper than the south-coast corridor, at the cost of fewer nearby services.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/grenada/",
+      secondarySourceName: "Henley & Partners (Grenada Citizenship by Investment)",
+      secondarySourceUrl: "https://www.henleyglobal.com/citizenship-investment/grenada",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Molinere Underwater Sculpture Park",
