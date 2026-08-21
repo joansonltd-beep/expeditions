@@ -198,17 +198,17 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "Jolly Harbour",
           description:
-            "A purpose-built marina resort community with a 700-berth marina, golf course and private security, popular with North American and European movers. Two-bedroom condos run roughly US$1,500-2,500/month.",
+            "A planned resort community built around a 700-berth marina, with a golf course and its own private security, drawing plenty of North American and European movers. Two-bedroom condos run roughly US$1,500-2,500/month.",
         },
         {
           name: "English Harbour and Falmouth Harbour",
           description:
-            "Historic sailing hubs around the UNESCO-listed Nelson's Dockyard, more upscale and pricier than Jolly Harbour, and popular with the sailing community.",
+            "The island's sailing heartland, home to the UNESCO-listed Nelson's Dockyard and a magnet for the yachting crowd. Costs generally run higher here than in Jolly Harbour.",
         },
         {
           name: "Five Islands Village",
           description:
-            "A more affordable option near the airport with good beach access. Two- to three-bedroom houses run roughly US$900-1,500/month.",
+            "A cheaper alternative close to the airport, with easy beach access. Two- to three-bedroom houses run roughly US$900-1,500/month.",
         },
       ],
       sourceName: "Expat.com",
