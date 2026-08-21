@@ -1994,6 +1994,48 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals need the CSME Skills Certificate to live and work in St. Kitts and Nevis without a work permit; see the CSME steps for St. Kitts and Nevis for the process. Visitors from more than 120 countries can enter without a visa, though since May 2025 most arrivals also need an Electronic Travel Authorisation (eTA) beforehand, costing around US$17 for a single 90-day entry. Non-CARICOM nationals taking up a job still need a standard work permit tied to a local employer.",
+      residency:
+        "St. Kitts and Nevis runs the Caribbean's oldest Citizenship by Investment programme, going back to 1984: a Sustainable Island State Contribution starting at US$250,000 for a family of up to four, or a real estate purchase from US$325,000 for a condo share up to US$600,000 for a single-family home, held for at least 7 years. Both routes now include a mandatory interview for the main applicant and any dependants aged 16 or older, and are typically decided within 4 to 6 months.",
+      healthcare:
+        "Joseph N. France General Hospital in Basseterre is the main public hospital on St. Kitts, with Alexandra Hospital serving Nevis. International health insurance with medical evacuation cover is strongly recommended, typically US$1,500-5,000 a year, since flying out a serious case to Barbados or the US can otherwise cost US$15,000-50,000 out of pocket.",
+      taxes:
+        "St. Kitts and Nevis has charged no personal income tax since 1980, on local or worldwide income, with no capital gains, inheritance or wealth tax either. VAT sits at 17%, temporarily reduced to 13% for part of 2025, and corporate tax runs 33% standard, dropping to 25% for manufacturing and 20% for tourism businesses.",
+      areas: [
+        {
+          name: "Basseterre",
+          description: "The capital, home to roughly 15,500 people. One-bedroom rentals run roughly EC$1,350-2,700/month (US$500-1,000).",
+        },
+        {
+          name: "Frigate Bay",
+          description:
+            "The island's best-known base for movers. Three-bedroom apartments run roughly EC$5,400-8,100/month, with villas well beyond that.",
+        },
+        {
+          name: "The Southeast Peninsula",
+          description: "A newer, upmarket strip aimed more at buyers than renters, with condos starting around US$400,000 to purchase.",
+        },
+        {
+          name: "Bird Rock and Fortlands",
+          description: "A mid-range residential option. Three-bedroom homes run roughly EC$4,050-6,750/month.",
+        },
+        {
+          name: "Charlestown (Nevis)",
+          description: "The sister island's main town, quieter and more local in feel. One-bedroom rentals run roughly EC$1,215-2,430/month.",
+        },
+        {
+          name: "Pinney's Beach (Nevis)",
+          description: "A beachfront stretch on Nevis, with oceanview villas from around EC$8,100/month.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/saint-kitts-and-nevis/",
+      secondarySourceName: "St. Kitts and Nevis Citizenship by Investment Unit (official)",
+      secondarySourceUrl: "https://ciu.gov.kn/sustainable-island-state-contribution/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Brimstone Hill Fortress National Park",
