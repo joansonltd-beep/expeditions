@@ -180,6 +180,43 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       secondarySourceUrl: "https://thelatinvestor.com/blogs/news/antigua-rents",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals can enter visa-free and apply for a CARICOM Skills Certificate (the CSME route) to live and work in Antigua and Barbuda without a work permit; see the CSME steps for Antigua and Barbuda for the application process. Non-CARICOM nationals commonly get a visa-free stay of up to 180 days as visitors, but need a work permit, arranged through a local employer, before taking up employment.",
+      residency:
+        "Antigua and Barbuda also runs an investment-based Permanent Residence programme, open to people who can show a minimum annual income of US$100,000 and pay a flat annual tax of US$20,000, with a minimum physical presence of only around 30 days a year, plus a separate Citizenship by Investment programme typically processed in 3 to 6 months. Both are aimed at people buying tax residency or a second passport, not the standard route for someone moving here to work.",
+      healthcare:
+        "Mount St. John's Medical Centre in St. John's is the main public hospital. Most movers carry private health insurance, roughly US$240-390/month for local coverage or US$400-800/month for an international plan, and use private clinics for routine care. For serious or specialist treatment, medical evacuation to Miami (about 3 hours by air) or Barbados is common, so it's worth checking what a policy covers for evacuation.",
+      taxes:
+        "Antigua and Barbuda has charged no personal income tax on residents since April 2016, covering wages, business, pension and investment income alike, with no capital gains, inheritance or wealth tax either. The tax most residents notice day to day is the Antigua and Barbuda Sales Tax (ABST), a 15% consumption tax added to most goods and services.",
+      areas: [
+        {
+          name: "Saint John's",
+          description:
+            "The capital, with roughly 22,000 people and most government offices, banks and medical facilities on the island. Two-bedroom apartments run roughly US$800-1,200/month.",
+        },
+        {
+          name: "Jolly Harbour",
+          description:
+            "A purpose-built marina resort community with a 700-berth marina, golf course and private security, popular with North American and European movers. Two-bedroom condos run roughly US$1,500-2,500/month.",
+        },
+        {
+          name: "English Harbour and Falmouth Harbour",
+          description:
+            "Historic sailing hubs around the UNESCO-listed Nelson's Dockyard, more upscale and pricier than Jolly Harbour, and popular with the sailing community.",
+        },
+        {
+          name: "Five Islands Village",
+          description:
+            "A more affordable option near the airport with good beach access. Two- to three-bedroom houses run roughly US$900-1,500/month.",
+        },
+      ],
+      sourceName: "Expat.com",
+      sourceUrl: "https://www.expat.com/en/guide/central-america/antigua-and-barbuda/",
+      secondarySourceName: "Caribbean Journal",
+      secondarySourceUrl: "https://www.caribjournal.com/2016/04/10/this-caribbean-country-just-abolished-income-tax/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Nelson's Dockyard",
