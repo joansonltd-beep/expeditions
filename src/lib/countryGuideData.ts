@@ -2767,6 +2767,43 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Suriname",
       asOf: "August 2026",
     },
+    movingHere: {
+      visaWorkPermit:
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Suriname without a work permit; see the CSME steps for Suriname for the process. Most other visitors get a 90-day visa-free entry after paying an online entry fee of roughly US$50, but working requires an employer-sponsored work permit, which typically takes 6 to 10 weeks to process alongside a separate residence visa.",
+      residency:
+        "Longer stays go through a multi-step process: a Temporary Authorisation of Stay arranged before departure, then a temporary visa, then a local residence permit application, with fairly heavy documentation, legalised civil records, a police clearance and a medical certificate among them. Permanent residency, and eventually naturalisation, becomes possible after around 5 years of regular residence.",
+      healthcare:
+        "Academic Hospital Paramaribo (AZP) is the main public hospital, alongside private options such as Diakonessenhuis. Malaria risk is limited to the interior, but dengue and chikungunya circulate more widely, and medication stock-outs do happen, so movers on regular prescriptions should bring an extended supply. International health insurance with medical evacuation cover is strongly recommended, since specialist care thins out once you're away from Paramaribo.",
+      taxes:
+        "Suriname taxes residents on worldwide income and non-residents only on Suriname-sourced income, on a progressive scale with five bands running from 0% up to 38% at the top. Bracket thresholds get adjusted periodically, so check the current figures with the Suriname Tax Service before budgeting around them.",
+      areas: [
+        {
+          name: "North Paramaribo",
+          description: "An affluent, spacious part of the capital, with parks and larger homes.",
+        },
+        {
+          name: "South Paramaribo",
+          description: "A busier, more commercial part of the city.",
+        },
+        {
+          name: "Rainville",
+          description: "A residential neighbourhood along the river.",
+        },
+        {
+          name: "Kwatta, Livorno and Beekhuizen",
+          description: "Quieter, more family-oriented neighbourhoods further from the centre.",
+        },
+        {
+          name: "Blauwgrond",
+          description: "Known locally for its food scene and nightlife.",
+        },
+      ],
+      notes:
+        "Dutch is the language of government, schools and most local employers, so movers who don't speak it will find the job market and the paperwork considerably harder going.",
+      sourceName: "Jarnias Cyril relocation guide",
+      sourceUrl: "https://www.jarniascyril.com/expatriation/moving-to-suriname-as-an-expat-complete-guide/",
+      asOf: "August 2026",
+    },
     placesToSee: [
       {
         name: "Historic Inner City of Paramaribo",
