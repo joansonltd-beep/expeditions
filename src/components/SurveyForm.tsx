@@ -35,7 +35,9 @@ export default function SurveyForm({ countries }: { countries: string[] }) {
   const [form, setForm] = useState<FormState>(initial);
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
-  const currency = CURRENCY_BY_COUNTRY[form.country]?.code ?? "your local currency";
+  const currencyInfo = CURRENCY_BY_COUNTRY[form.country];
+  const currency = currencyInfo?.code ?? "your local currency";
+  const currencySymbol = currencyInfo?.symbol ?? "$";
 
   const set =
     (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -155,17 +157,22 @@ export default function SurveyForm({ countries }: { countries: string[] }) {
           <span className="mt-0.5 block text-xs font-normal text-slate-500">
             If commission based, please use your base salary. Answer in your own country&apos;s currency, not USD.
           </span>
-          <input
-            required
-            type="number"
-            min={1}
-            step="any"
-            inputMode="decimal"
-            value={form.monthlySalaryLocal}
-            onChange={set("monthlySalaryLocal")}
-            className={`mt-1.5 ${field}`}
-            placeholder="e.g. 2500"
-          />
+          <span className="relative mt-1.5 block">
+            <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-500">
+              {currencySymbol}
+            </span>
+            <input
+              required
+              type="number"
+              min={1}
+              step="any"
+              inputMode="decimal"
+              value={form.monthlySalaryLocal}
+              onChange={set("monthlySalaryLocal")}
+              className={`${field} pl-14`}
+              placeholder="e.g. 2500"
+            />
+          </span>
         </label>
 
         <label className="block text-sm font-semibold text-slate-900">

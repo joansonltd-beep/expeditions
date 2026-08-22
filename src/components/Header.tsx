@@ -12,7 +12,7 @@ const SETUP: NavItem[] = [
   { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
   { href: "/business-setup", label: "Business Setup" },
   { href: "/finance", label: "Banking" },
-  { href: "/guides", label: "Guides" },
+  { href: "/guides", label: "General Guides" },
   { href: "/insurance", label: "Insurance" },
 ];
 

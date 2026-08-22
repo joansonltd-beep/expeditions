@@ -128,10 +128,19 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     currency: "TTD",
     minOpening: "TT$100",
     alsoHas: "Scotiabank",
+    documents: [
+      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver's permit without a nationality statement needs a second, supporting ID. Dual nationals bring ID for each nationality",
+      "A recent utility bill for proof of address (with an authorisation letter if it isn't in your name); if you are not yet resident, a utility bill from the last three months, or a lease agreement or landlord's letter instead",
+      "Proof of income: a job letter and a pay stub from the last three months if employed; audited financials for the last three years, management accounts, or a Statement of Affairs and Statement of Income and Expenditure if self-employed. A start-up provides an opening balance sheet and cash flow projections",
+    ],
+    nonResidentDocuments: [
+      "A banking reference from your current overseas institution (waived if you've already been legally resident for 5+ years)",
+      "Your work permit or, for students, a letter of enrolment, where applicable",
+    ],
     notes: [
       "No monthly service charge, and you get three free in-branch debits a month. Go over that and a flat TT$18 monthly fee applies.",
       "Free transactions at Republic's Blue Machines (ABMs), with a TT$5,000 daily limit, and free LINX point-of-sale purchases up to TT$10,000 a day.",
-      "Balances of TT$500 or more earn 0.25% interest.",
+      "Balances of TT$500 or more earn 0.25% interest, paid on the last working day of the month.",
     ],
   },
   {
@@ -172,12 +181,17 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     alsoHas: "Scotiabank",
     keyRequirement:
       "You need a TIN Certificate to open a bank account in Guyana, and that includes foreign nationals working there. Sort it out before you go to the branch.",
+    documents: [
+      "One valid ID: a passport, a Guyana identification card, or a Guyana e-Identification card",
+      "Proof of address: a utility bill (electricity, water or landline) issued within the last eight months, a longer window than most of the region allows",
+      "Proof of income: a job letter or payslip if employed; an income and expenditure statement if self-employed",
+      "Your TIN Certificate, required of every applicant including foreign nationals",
+    ],
+    nonResidentDocuments: ["A banker's reference, subject to the bank's conditions"],
     notes: [
-      "No monthly maintenance fee and no restrictions on deposits or withdrawals. ATM and point-of-sale transactions are free.",
+      "No monthly maintenance fee and no restrictions on deposits or withdrawals. ATM, point-of-sale and mobile banking (RepublicMobile) transactions are free; the first in-branch withdrawal each month is free, and further ones cost G$300 each.",
       "Interest is only calculated on a minimum monthly balance of G$25,000 and over, paid on the last day of the month. The current rate is 0.082%.",
-      "Daily withdrawal limits are G$700,000 in total: G$200,000 at ATMs and G$500,000 online and at point of sale.",
-      "Your proof of address must be a utility bill issued within the last eight months, which is a longer window than most of the region allows.",
-      "Foreign nationals also need a banker's reference, and conditions apply.",
+      "Daily limits total G$700,000: G$200,000 at ATMs and G$500,000 online and at point of sale, with a G$75,000 contactless limit.",
     ],
   },
   {
@@ -189,7 +203,16 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     accountName: "e-Free",
     accountUrl: "https://republicgrenada.com/personal/e-free",
     currency: "XCD",
-    minOpening: "EC$25",
+    minOpening: "EC$1",
+    documents: [
+      "One valid photo ID: a passport, national ID card, or driver's permit (must not be expired)",
+      "Proof of address: a utility bill, or the bank's confirmation-of-address form if the bill isn't in your name",
+      "Proof of income: a job letter and a copy of your contract if employed; up-to-date financial statements or tax returns if self-employed",
+    ],
+    notes: [
+      "No monthly maintenance fee, and no interest paid on the balance. An activity fee of EC$11.50 a month applies only if you use branch teller services.",
+      "Non-resident applicants need extra documents that the bank does not publish online. Call the branch on 1-473-444-2265 before you apply.",
+    ],
   },
   {
     slug: "dominica",
@@ -258,9 +281,14 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     accountUrl: "https://republicbanksr.com/personal/e-free",
     currency: "SRD",
     minOpening: "SRD 25",
+    documents: [
+      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver's licence without a nationality statement needs a second, supporting ID (national ID, passport or nationality certificate). Dual nationals bring ID for each nationality",
+      "A recent utility bill, plus an authorisation letter if it isn't in your name",
+      "A job letter and pay slip. A reference letter may also be asked for, depending on your situation",
+    ],
     notes: [
-      "No monthly maintenance fee, a free OneCard for 24-hour ATM and point-of-sale access, and monthly e-statements.",
-      "If your utility bill is not in your name, bring an authorisation letter from the person it belongs to, along with a job letter or payslip.",
+      "No monthly maintenance fee. One free in-branch debit a month; further ones cost SRD 75 plus 10% VAT. ATM withdrawals cost SRD 11 each, but point-of-sale transactions are free up to SRD 100,000 a day.",
+      "Balances of SRD 500,000 or more earn 0.25% interest, paid on the last working day of the month.",
       "Banking here is conducted in Dutch as well as English. Ask whether your documents need a translation.",
     ],
   },

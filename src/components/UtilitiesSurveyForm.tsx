@@ -19,7 +19,9 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
   const [amounts, setAmounts] = useState<Amounts>(initialAmounts);
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
-  const currency = CURRENCY_BY_COUNTRY[country]?.code ?? "your local currency";
+  const currencyInfo = CURRENCY_BY_COUNTRY[country];
+  const currency = currencyInfo?.code ?? "your local currency";
+  const currencySymbol = currencyInfo?.symbol ?? "$";
 
   const toggleUtility = (u: UtilityType) => {
     setUtilities((prev) => (prev.includes(u) ? prev.filter((x) => x !== u) : [...prev, u]));
@@ -118,17 +120,22 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
             {utilities.map((u) => (
               <label key={u} className="block text-sm font-semibold text-slate-900">
                 {u}
-                <input
-                  required
-                  type="number"
-                  min={0}
-                  step="any"
-                  inputMode="decimal"
-                  value={amounts[u]}
-                  onChange={setAmount(u)}
-                  className={`mt-1.5 ${field} bg-white`}
-                  placeholder="e.g. 80"
-                />
+                <span className="relative mt-1.5 block">
+                  <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-500">
+                    {currencySymbol}
+                  </span>
+                  <input
+                    required
+                    type="number"
+                    min={0}
+                    step="any"
+                    inputMode="decimal"
+                    value={amounts[u]}
+                    onChange={setAmount(u)}
+                    className={`${field} bg-white pl-14`}
+                    placeholder="e.g. 80"
+                  />
+                </span>
               </label>
             ))}
           </div>

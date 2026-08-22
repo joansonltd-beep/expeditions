@@ -213,76 +213,81 @@ export const DEFAULT_ARTICLES: Article[] = [
     ],
   },
   {
-    slug: "booking-cheap-flights-from-trinidad",
-    title: "Booking Cheaper Flights from Trinidad: A Travel Agent's Tips",
+    slug: "csme-categories-explained",
+    title: "CSME Skills Certificate: The 12 Approved Categories Explained",
     excerpt:
-      "Simple ways to find better value on flights out of Trinidad and Tobago, and when it helps to book through a travel agent.",
-    publishedAt: "2025-02-21",
+      "Only these 12 categories of CARICOM national qualify for a Skills Certificate. Here's what each one covers and what you'll need to prove you fit it.",
+    publishedAt: "2026-07-20",
     body: [
       {
         paragraphs: [
-          "Flights are often the biggest cost of a trip. A few habits can make a real difference to what you pay, whether you are heading to Canada, the US, or elsewhere in the Caribbean.",
+          "The CSME Skills Certificate isn't open to every CARICOM national who wants to work on another island: it's limited to 12 approved categories of skilled worker, set by CARICOM Heads of Government. If your work doesn't fall into one of these, the certificate route isn't available to you, though other routes (covered below) might still apply.",
         ],
       },
       {
-        heading: "A few things that help",
+        heading: "The 12 categories",
         bullets: [
-          "Be flexible with your dates where you can, mid-week often costs less",
-          "Book ahead for busy periods like Carnival and the holidays",
-          "Compare round-trip against two one-way fares",
-          "Watch baggage rules, a cheap fare can cost more once bags are added",
-          "Travel light when the trip is short",
+          "University graduates (now includes associate degrees, two A-levels or CAPE)",
+          "Artistes",
+          "Musicians",
+          "Media workers",
+          "Sportspersons",
+          "Nurses",
+          "Teachers",
+          "Artisans, with a CARICOM Vocational Qualification (CVQ) Level 2",
+          "Holders of associate degrees",
+          "Domestic workers, with a CVQ Level 2",
+          "Agricultural workers",
+          "Private security officers",
         ],
       },
       {
-        heading: "When booking through us is worth it",
+        heading: "What you'll need to prove your category",
         paragraphs: [
-          "We look across options to find fares that fit your schedule and budget, handle the details like baggage and special requests, and stay reachable before and during your trip. For seniors, families, or anyone who would rather not deal with the back and forth, that support is the real value.",
+          "University graduates and associate degree holders provide the actual degree or diploma certificate, not a transcript or a letter confirming enrolment. Artisans and domestic workers need a CARICOM Vocational Qualification at Level 2, issued by a recognised body in their home country. Nurses and teachers typically need their professional registration or licence alongside their qualification. Artistes, musicians, media workers and sportspersons usually support their application with evidence of their professional work: portfolios, contracts, or membership in a relevant professional body.",
+          "Requirements vary a little by country and by the specific office processing your application, so confirm exactly what's expected with the designated authority in the country you're applying through before you gather documents.",
         ],
-        note: "Tell us where you want to go and your budget, and we will put together options.",
+      },
+      {
+        heading: "If your work doesn't fit a category",
+        paragraphs: [
+          "Two other routes exist. If you're self-employed, the Right of Establishment under the Treaty of Chaguaramas lets CARICOM nationals set up and run a business in another member state without a Skills Certificate at all, since it's a separate treaty right covering business activity rather than employment. And if you're a national of Barbados, Belize, Dominica or St. Vincent and the Grenadines moving to one of the other three, full free movement means you don't need a certificate or a category either way.",
+        ],
+        note: "See the CSME Skills Certificate steps for your specific country for the exact office, fee and documents.",
       },
     ],
   },
   {
-    slug: "planning-your-first-caribbean-cruise",
-    title: "Planning Your First Caribbean Cruise",
+    slug: "full-free-movement-vs-csme-certificate",
+    title: "Full Free Movement vs the CSME Certificate: What's the Difference",
     excerpt:
-      "New to cruising? Here is how to choose the right Caribbean cruise and what to expect on board your first sailing.",
-    publishedAt: "2026-01-16",
+      "Barbados, Belize, Dominica and St. Vincent and the Grenadines skipped the certificate step for each other. Here's what that means, and why everyone else moving within CARICOM still needs one.",
+    publishedAt: "2026-08-10",
     body: [
       {
         paragraphs: [
-          "A cruise is one of the easiest ways to see several places on one trip. You unpack once, settle in, and wake up somewhere new. If it is your first time, a little planning goes a long way.",
+          "Every CARICOM country covered on this site recognises the CSME Skills Certificate, but a handful of countries have gone further and dropped the certificate requirement between themselves entirely. Knowing which group you're in changes what you actually need to do before you move.",
         ],
       },
       {
-        heading: "Choosing the right cruise",
-        bullets: [
-          "Decide how long you want to be away, from a few nights to a week or more",
-          "Look at the ports, the islands and stops you most want to see",
-          "Match the cruise line to your style, family friendly, lively or relaxed",
-          "Set a budget and check what is included before you book",
-        ],
-      },
-      {
-        heading: "What is usually included",
+        heading: "The four full free-movement countries",
         paragraphs: [
-          "Your cabin, main meals and most onboard entertainment are typically included. Drinks packages, specialty dining, shore excursions and tips are often extra, so it helps to know before you go.",
+          "As of 1 October 2025, nationals of Barbados, Belize, Dominica and St. Vincent and the Grenadines can live and work in any of those four countries without a CSME Skills Certificate or a work permit, regardless of what category of work they do. This is a step beyond standard CSME: it doesn't matter whether your job is one of the 12 approved categories, since no certificate is needed at all between these four.",
+          "Moving between any of these four and a country outside the group still requires the standard route: the CSME Skills Certificate if you qualify under one of the 12 categories, or a work permit if you don't.",
         ],
       },
       {
-        heading: "Tips for first-time cruisers",
-        bullets: [
-          "Arrive in the port city the day before to avoid travel stress",
-          "Pack a small day bag for your first few hours on board",
-          "Book popular shore excursions early",
-        ],
-      },
-      {
-        heading: "How we help",
+        heading: "The separate OECS free movement arrangement",
         paragraphs: [
-          "We give honest advice on cruise lines and itineraries that fit your style and budget, handle the booking, and support you before, during and after your trip.",
+          "A different, overlapping group exists under the Organisation of Eastern Caribbean States (OECS): Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines. Citizens of these six can also live in any of the other five indefinitely and work without a permit, under a 2011 OECS protocol that predates and is legally separate from the CSME free-movement group above. Dominica and St. Vincent and the Grenadines happen to sit in both groups, which is where the two regimes are easiest to mix up.",
         ],
+      },
+      {
+        heading: "Everyone else: apply for the certificate",
+        paragraphs: [
+          "If neither group applies to your move, the CSME Skills Certificate is the route: confirm you fall into one of the 12 approved categories, then apply through the designated authority in your home country or your destination.",
+        ],
+        note: "See the CSME Skills Certificate steps for your specific country to check which group applies to your move.",
       },
     ],
   },

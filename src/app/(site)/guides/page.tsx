@@ -4,9 +4,9 @@ import { getArticles } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "CARICOM, Travel & Visa Guides",
+  title: "General Guides",
   description:
-    "Practical guides for the Caribbean: how to apply for a CSME Skills Certificate so you can work on another island, Canadian visas from Trinidad, booking flights, and travelling from the Caribbean.",
+    "Practical guides for CARICOM nationals: how to apply for a CSME Skills Certificate so you can work on another island, plus travel guides like Canadian visas from Trinidad and booking flights.",
   keywords: [
     "CARICOM guides",
     "how to work in another Caribbean country",
@@ -32,9 +32,9 @@ export default async function GuidesPage() {
     <>
       <PageHeader
         icon="📚"
-        title="Guides"
+        title="General Guides"
         crumb="Guides"
-        intro="Practical guides on Canadian visas, flights and travelling from the Caribbean."
+        intro="Step-by-step guides for moving and working within CARICOM, plus practical guides for Canadian visa applicants travelling through Trinidad."
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5">

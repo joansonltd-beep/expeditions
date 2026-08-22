@@ -12,7 +12,7 @@ const relocateLinks = [
   { href: "/business-setup", label: "Business Setup" },
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
-  { href: "/guides", label: "Guides" },
+  { href: "/guides", label: "General Guides" },
   { href: "/destinations", label: "Destinations" },
 ];
 const companyLinks = [
