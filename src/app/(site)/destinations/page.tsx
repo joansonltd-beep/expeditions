@@ -5,11 +5,11 @@ import { Icon } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
 export const metadata: Metadata = {
-  title: "Caribbean Country Fact Sheets",
+  title: "CARICOM Countries at a Glance",
   description:
-    "What to expect in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols. Added one country at a time.",
+    "What to expect in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols.",
   keywords: [
-    "Caribbean country fact sheets",
+    "CARICOM countries at a glance",
     "cost of living in the Caribbean",
     "things to do in the Caribbean",
     "moving to the Caribbean",
@@ -25,9 +25,9 @@ export default function DestinationsPage() {
     <>
       <PageHeader
         icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
-        title="Caribbean Country Fact Sheets"
+        title="CARICOM Countries at a Glance"
         crumb="Destinations"
-        intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols. We're adding countries one at a time, in alphabetical order."
+        intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols."
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5">
@@ -39,12 +39,9 @@ export default function DestinationsPage() {
             >
               <h2 className="text-xl font-semibold text-slate-900">{g.name}</h2>
               <p className="mt-2 text-slate-600">{g.tagline}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">View fact sheet →</span>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">View at a glance →</span>
             </Link>
           ))}
-          <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-7 text-center text-sm text-slate-500">
-            More CARICOM countries are being added, alphabetically.
-          </div>
         </div>
       </Section>
     </>

@@ -15,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const g = getCountryGuide(slug);
-  if (!g) return { title: "Caribbean Country Fact Sheet" };
+  if (!g) return { title: "Caribbean Country at a Glance" };
   return {
     title: `Moving to ${g.name}: Cost of Living & Relocation Facts`,
     description: `Thinking "I want to move to ${g.name}"? Here's what to expect: cost of living, places to see, things to do, where to eat, demographics and national symbols, plus how to apply for a CSME Skills Certificate.`,
@@ -109,7 +109,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <div className="mx-auto max-w-3xl">
           <p className="text-sm">
             <Link href="/destinations" className="font-semibold text-brand hover:underline">
-              ← All country fact sheets
+              ← All countries at a glance
             </Link>
           </p>
 
@@ -555,7 +555,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       {/* OTHER COUNTRIES */}
       {others.length ? (
         <Section alt={flip}>
-          <SectionHead eyebrow="More countries" title="Other country fact sheets" />
+          <SectionHead eyebrow="More countries" title="Other countries at a glance" />
           <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
             {others.map((o) => (
               <Link

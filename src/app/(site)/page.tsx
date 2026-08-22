@@ -227,7 +227,7 @@ export default async function HomePage() {
         </div>
         <p className="mt-6 text-center">
           <Link href="/destinations" className="text-sm font-semibold text-brand hover:underline">
-            See all country fact sheets →
+            See all countries at a glance →
           </Link>
         </p>
       </Section>
