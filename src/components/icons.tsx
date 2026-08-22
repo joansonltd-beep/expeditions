@@ -245,6 +245,10 @@ export function pillarIcon(href: string): IconName {
 // Icons for the "why book with us" cards, in default content order.
 export const WHY_ICONS: IconName[] = ["users", "message", "tag", "heart", "pin", "check"];
 
+// Icons for the homepage "how it works" steps, in default content order:
+// tell us your move, get your roadmap, paperwork handled, settle in.
+export const STEP_ICONS: IconName[] = ["message", "compass", "passport", "home"];
+
 // Icons for the business setup service cards, in default content order.
 export const BUSINESS_SETUP_ICONS: IconName[] = ["building", "landmark", "calculator", "share", "globe", "creditCard"];
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getSiteSettings, getServices, getHomeContent } from "@/lib/siteData";
 import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
-import { Icon, serviceIcon, pillarIcon, WHY_ICONS } from "@/components/icons";
+import { Icon, serviceIcon, pillarIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
 // Title and description come from the root layout; this page only needs to
@@ -124,7 +124,9 @@ export default async function HomePage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {home.steps.map((s, i) => (
             <div key={i}>
-              <div className="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-brand text-lg font-bold text-white">{i + 1}</div>
+              <div className="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-brand text-white">
+                <Icon name={STEP_ICONS[i] ?? "check"} className="h-5 w-5" />
+              </div>
               <h3 className="font-semibold text-slate-900">{s.title}</h3>
               <p className="mt-2 text-sm text-slate-500">{s.text}</p>
             </div>
