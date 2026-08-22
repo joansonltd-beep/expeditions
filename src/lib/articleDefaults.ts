@@ -8,6 +8,7 @@ export type Article = {
   excerpt: string;
   publishedAt: string; // YYYY-MM-DD
   body: ContentSection[];
+  keywords?: string[];
 };
 
 const VISA_DISCLAIMER =
@@ -218,6 +219,13 @@ export const DEFAULT_ARTICLES: Article[] = [
     excerpt:
       "Only these 12 categories of CARICOM national qualify for a Skills Certificate. Here's what each one covers and what you'll need to prove you fit it.",
     publishedAt: "2026-07-20",
+    keywords: [
+      "CSME Skills Certificate categories",
+      "who qualifies for CSME Skills Certificate",
+      "CARICOM skilled national categories",
+      "CSME categories explained",
+      "CARICOM Vocational Qualification CVQ",
+    ],
     body: [
       {
         paragraphs: [
@@ -263,6 +271,13 @@ export const DEFAULT_ARTICLES: Article[] = [
     excerpt:
       "Barbados, Belize, Dominica and St. Vincent and the Grenadines skipped the certificate step for each other. Here's what that means, and why everyone else moving within CARICOM still needs one.",
     publishedAt: "2026-08-10",
+    keywords: [
+      "CARICOM full free movement countries",
+      "OECS free movement",
+      "CSME vs full free movement",
+      "move from Jamaica to Barbados",
+      "CARICOM Skills Certificate not needed",
+    ],
     body: [
       {
         paragraphs: [

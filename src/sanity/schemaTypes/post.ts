@@ -27,6 +27,13 @@ export const post = defineType({
       type: "array",
       of: [{ type: "contentSection" }],
     }),
+    defineField({
+      name: "keywords",
+      title: "SEO keywords",
+      description: "Search phrases this guide should rank for. Shown in page metadata, not on the page itself.",
+      type: "array",
+      of: [{ type: "string" }],
+    }),
   ],
   orderings: [{ title: "Newest", name: "newest", by: [{ field: "publishedAt", direction: "desc" }] }],
   preview: { select: { title: "title", subtitle: "publishedAt" } },

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArticle, getArticles } from "@/lib/siteData";
+import { getArticle, getArticles, getSiteSettings } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
 import ContentSections from "@/components/ContentSections";
 import CtaButtons from "@/components/CtaButtons";
@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: a.title,
     description: a.excerpt,
+    keywords: a.keywords,
     alternates: { canonical: `/guides/${a.slug}` },
     openGraph: { title: a.title, description: a.excerpt, type: "article" },
   };
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const a = await getArticle(slug);
+  const [a, settings] = await Promise.all([getArticle(slug), getSiteSettings()]);
   if (!a) notFound();
 
   const jsonLd = {
@@ -33,6 +34,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     "@type": "Article",
     headline: a.title,
     description: a.excerpt,
+    keywords: a.keywords?.join(", "),
     datePublished: a.publishedAt || undefined,
     url: `${SITE_URL}/guides/${a.slug}`,
     image: `${SITE_URL}/og.png`,
@@ -48,7 +50,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={a.body} />
           <div className="mt-10 border-t border-slate-200 pt-8">
-            <CtaButtons message={`Hi Jo, I read your guide "${a.title}" and have a question.`} />
+            <h2 className="text-lg font-bold text-slate-900">Need help with any of this?</h2>
+            <p className="mt-2 text-slate-600">
+              We walk CARICOM nationals through this process every day. Reach out on WhatsApp, chat, or email{" "}
+              <a href={`mailto:${settings.generalEmail}`} className="font-semibold text-brand hover:underline">
+                {settings.generalEmail}
+              </a>{" "}
+              and we&apos;ll help you through it.
+            </p>
+            <div className="mt-4">
+              <CtaButtons message={`Hi Jo, I read your guide "${a.title}" and have a question.`} />
+            </div>
           </div>
         </div>
       </Section>

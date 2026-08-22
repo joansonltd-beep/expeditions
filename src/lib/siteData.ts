@@ -85,7 +85,7 @@ const BUSINESS_SETUP_QUERY = `*[_type == "businessSetupPage"][0]{
   eligibilityTitle, eligibilityIntro, ineligibleMessage
 }`;
 const ARTICLES_QUERY = `*[_type == "post" && defined(slug.current)]|order(publishedAt desc){
-  "slug": slug.current, title, excerpt, publishedAt, body
+  "slug": slug.current, title, excerpt, publishedAt, body, keywords
 }`;
 
 // Cache CMS reads for a minute; edits show up shortly after publishing.

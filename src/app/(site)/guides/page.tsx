@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getArticles } from "@/lib/siteData";
+import { getArticles, getSiteSettings } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
+import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
   title: "General Guides",
@@ -27,7 +28,7 @@ function formatDate(d: string) {
 }
 
 export default async function GuidesPage() {
-  const articles = await getArticles();
+  const [articles, settings] = await Promise.all([getArticles(), getSiteSettings()]);
   return (
     <>
       <PageHeader
@@ -62,6 +63,19 @@ export default async function GuidesPage() {
               <span className="mt-3 inline-block text-sm font-semibold text-brand">Read guide →</span>
             </Link>
           ))}
+        </div>
+        <div className="mx-auto mt-10 max-w-3xl border-t border-slate-200 pt-8">
+          <h2 className="text-lg font-bold text-slate-900">Don&apos;t see what you need?</h2>
+          <p className="mt-2 text-slate-600">
+            Reach out on WhatsApp, chat, or email{" "}
+            <a href={`mailto:${settings.generalEmail}`} className="font-semibold text-brand hover:underline">
+              {settings.generalEmail}
+            </a>{" "}
+            and we&apos;ll walk you through your specific move.
+          </p>
+          <div className="mt-4">
+            <CtaButtons message="Hi Jo, I have a question that's not covered in your guides." />
+          </div>
         </div>
       </Section>
     </>
