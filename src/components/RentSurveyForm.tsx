@@ -9,6 +9,7 @@ import {
   RENT_DURATION_OPTIONS,
   RENT_INCREASE_OPTIONS,
   RENT_REASONABLE_OPTIONS,
+  CURRENCY_BY_COUNTRY,
 } from "@/lib/surveyData";
 import { btnPrimary } from "@/components/ui";
 
@@ -20,7 +21,7 @@ type IncludedOption = (typeof RENT_INCLUDED_OPTIONS)[number];
 const initial = {
   country: "",
   propertyType: "",
-  monthlyRentUsd: "",
+  monthlyRentLocal: "",
   occupants: "",
   furnished: "",
   areaType: "",
@@ -37,6 +38,7 @@ export default function RentSurveyForm({ countries }: { countries: string[] }) {
   const [included, setIncluded] = useState<IncludedOption[]>([]);
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const currency = CURRENCY_BY_COUNTRY[form.country]?.code ?? "your local currency";
 
   const set =
     (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -113,15 +115,16 @@ export default function RentSurveyForm({ countries }: { countries: string[] }) {
         </label>
 
         <label className="block text-sm font-semibold text-slate-900">
-          3. How much do you pay in rent per month in USD?
+          3. How much do you pay in rent per month, in {currency}?
+          <span className="mt-0.5 block text-xs font-normal text-slate-500">Answer in your own country&apos;s currency, not USD.</span>
           <input
             required
             type="number"
             min={1}
             step="any"
             inputMode="decimal"
-            value={form.monthlyRentUsd}
-            onChange={set("monthlyRentUsd")}
+            value={form.monthlyRentLocal}
+            onChange={set("monthlyRentLocal")}
             className={`mt-1.5 ${field}`}
             placeholder="e.g. 900"
           />

@@ -4,16 +4,17 @@
 // Fully anonymous: no name, email or IP is included in the forwarded payload.
 
 import { CSME_COUNTRIES } from "@/lib/csmeData";
-import { UTILITY_TYPES } from "@/lib/surveyData";
+import { UTILITY_TYPES, CURRENCY_BY_COUNTRY } from "@/lib/surveyData";
 
 const COUNTRIES = CSME_COUNTRIES.map((c) => c.name);
 type UtilityType = (typeof UTILITY_TYPES)[number];
 
 type UtilitiesPayload = {
   country: string;
+  currency: string;
   householdSize: string;
   utilities: UtilityType[];
-  amounts: Record<UtilityType, string>;
+  amounts: Record<UtilityType, number | "">;
 };
 
 function isNonEmptyString(v: unknown): v is string {
@@ -38,18 +39,24 @@ function validate(body: unknown): { ok: true; data: UtilitiesPayload } | { ok: f
   if (utilities.length !== b.utilities.length) return { ok: false, error: "Invalid utility selection." };
 
   const rawAmounts = typeof b.amounts === "object" && b.amounts !== null ? (b.amounts as Record<string, unknown>) : {};
-  const amounts = {} as Record<UtilityType, string>;
+  const amounts = {} as Record<UtilityType, number | "">;
   for (const u of UTILITY_TYPES) amounts[u] = "";
 
   for (const u of utilities) {
     const v = Number(rawAmounts[u]);
     if (!Number.isFinite(v) || v < 0) return { ok: false, error: `Enter a valid amount for ${u}.` };
-    amounts[u] = String(v);
+    amounts[u] = v;
   }
 
   return {
     ok: true,
-    data: { country: b.country, householdSize: String(householdSize), utilities, amounts },
+    data: {
+      country: b.country,
+      currency: CURRENCY_BY_COUNTRY[b.country]?.code ?? "",
+      householdSize: String(householdSize),
+      utilities,
+      amounts,
+    },
   };
 }
 

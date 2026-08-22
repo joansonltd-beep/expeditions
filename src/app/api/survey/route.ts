@@ -11,6 +11,7 @@ import {
   COMMISSION_OPTIONS,
   EMPLOYER_TYPE_OPTIONS,
   PAY_FREQUENCY_OPTIONS,
+  CURRENCY_BY_COUNTRY,
 } from "@/lib/surveyData";
 
 const COUNTRIES = CSME_COUNTRIES.map((c) => c.name);
@@ -22,7 +23,8 @@ type SurveyPayload = {
   experience: string;
   education: string;
   commission: string;
-  monthlySalaryUsd: string;
+  monthlySalaryLocal: number;
+  currency: string;
   employerType: string;
   payFrequency: string;
   additionalIncome: string;
@@ -51,7 +53,8 @@ function validate(body: unknown): { ok: true; data: SurveyPayload } | { ok: fals
   if (!isNonEmptyString(b.commission) || !(COMMISSION_OPTIONS as readonly string[]).includes(b.commission)) {
     return { ok: false, error: "Select a commission option." };
   }
-  if (!isNonEmptyString(b.monthlySalaryUsd) || Number.isNaN(Number(b.monthlySalaryUsd)) || Number(b.monthlySalaryUsd) <= 0) {
+  const monthlySalaryLocal = Number(b.monthlySalaryLocal);
+  if (!Number.isFinite(monthlySalaryLocal) || monthlySalaryLocal <= 0) {
     return { ok: false, error: "Enter a valid monthly salary." };
   }
   if (!isNonEmptyString(b.employerType) || !(EMPLOYER_TYPE_OPTIONS as readonly string[]).includes(b.employerType)) {
@@ -71,7 +74,8 @@ function validate(body: unknown): { ok: true; data: SurveyPayload } | { ok: fals
       experience: b.experience,
       education: b.education,
       commission: b.commission,
-      monthlySalaryUsd: String(Number(b.monthlySalaryUsd)),
+      monthlySalaryLocal,
+      currency: CURRENCY_BY_COUNTRY[b.country]?.code ?? "",
       employerType: b.employerType,
       payFrequency: b.payFrequency,
       additionalIncome: b.additionalIncome,

@@ -8,6 +8,7 @@ import {
   COMMISSION_OPTIONS,
   EMPLOYER_TYPE_OPTIONS,
   PAY_FREQUENCY_OPTIONS,
+  CURRENCY_BY_COUNTRY,
 } from "@/lib/surveyData";
 import { btnPrimary } from "@/components/ui";
 
@@ -21,7 +22,7 @@ const initial = {
   experience: "",
   education: "",
   commission: "",
-  monthlySalaryUsd: "",
+  monthlySalaryLocal: "",
   employerType: "",
   payFrequency: "",
   additionalIncome: "",
@@ -34,6 +35,7 @@ export default function SurveyForm({ countries }: { countries: string[] }) {
   const [form, setForm] = useState<FormState>(initial);
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const currency = CURRENCY_BY_COUNTRY[form.country]?.code ?? "your local currency";
 
   const set =
     (k: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -149,16 +151,18 @@ export default function SurveyForm({ countries }: { countries: string[] }) {
         </label>
 
         <label className="block text-sm font-semibold text-slate-900">
-          7. What is your gross monthly salary in USD, before taxes and deductions?
-          <span className="mt-0.5 block text-xs font-normal text-slate-500">If commission based, please use your base salary.</span>
+          7. What is your gross monthly salary in {currency}, before taxes and deductions?
+          <span className="mt-0.5 block text-xs font-normal text-slate-500">
+            If commission based, please use your base salary. Answer in your own country&apos;s currency, not USD.
+          </span>
           <input
             required
             type="number"
             min={1}
             step="any"
             inputMode="decimal"
-            value={form.monthlySalaryUsd}
-            onChange={set("monthlySalaryUsd")}
+            value={form.monthlySalaryLocal}
+            onChange={set("monthlySalaryLocal")}
             className={`mt-1.5 ${field}`}
             placeholder="e.g. 2500"
           />

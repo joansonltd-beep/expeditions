@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { UTILITY_TYPES } from "@/lib/surveyData";
+import { UTILITY_TYPES, CURRENCY_BY_COUNTRY } from "@/lib/surveyData";
 import { btnPrimary } from "@/components/ui";
 
 const field =
@@ -19,6 +19,7 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
   const [amounts, setAmounts] = useState<Amounts>(initialAmounts);
   const [status, setStatus] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const currency = CURRENCY_BY_COUNTRY[country]?.code ?? "your local currency";
 
   const toggleUtility = (u: UtilityType) => {
     setUtilities((prev) => (prev.includes(u) ? prev.filter((x) => x !== u) : [...prev, u]));
@@ -112,7 +113,8 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
 
         {utilities.length ? (
           <div className="grid gap-4 rounded-2xl border border-dashed border-brand/40 bg-brand-soft p-5">
-            <p className="text-sm font-semibold text-slate-900">How much do you typically pay per month, in USD?</p>
+            <p className="text-sm font-semibold text-slate-900">How much do you typically pay per month, in {currency}?</p>
+            <p className="-mt-2 text-xs font-normal text-slate-500">Answer in your own country&apos;s currency, not USD.</p>
             {utilities.map((u) => (
               <label key={u} className="block text-sm font-semibold text-slate-900">
                 {u}

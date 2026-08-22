@@ -102,3 +102,25 @@ export const RENT_DURATION_OPTIONS = ["Less than 1 year", "1–2 years", "3–5 
 export const RENT_INCREASE_OPTIONS = ["Within the last year", "1–2 years ago", "3+ years ago", "It has never increased", "Not sure"] as const;
 
 export const RENT_REASONABLE_OPTIONS = ["Yes", "No", "Unsure"] as const;
+
+// --- currency ---------------------------------------------------------------
+
+// ISO 4217 code for each survey country, keyed by the exact country name used
+// in the survey dropdowns (CSME_COUNTRIES[].name). fixedRate is "local units
+// per 1 USD" for the Eastern Caribbean dollar and other currency-board pegs;
+// left undefined for currencies that float, so the collection sheet looks up
+// a live rate instead.
+export const CURRENCY_BY_COUNTRY: Record<string, { code: string; fixedRate?: number }> = {
+  "Antigua and Barbuda": { code: "XCD", fixedRate: 2.7 },
+  Barbados: { code: "BBD", fixedRate: 2.0 },
+  Belize: { code: "BZD", fixedRate: 2.0 },
+  Dominica: { code: "XCD", fixedRate: 2.7 },
+  Grenada: { code: "XCD", fixedRate: 2.7 },
+  Guyana: { code: "GYD" },
+  Jamaica: { code: "JMD" },
+  "St. Kitts and Nevis": { code: "XCD", fixedRate: 2.7 },
+  "Saint Lucia": { code: "XCD", fixedRate: 2.7 },
+  "St. Vincent and the Grenadines": { code: "XCD", fixedRate: 2.7 },
+  Suriname: { code: "SRD" },
+  "Trinidad and Tobago": { code: "TTD" },
+};

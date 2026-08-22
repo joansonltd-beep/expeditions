@@ -12,6 +12,7 @@ import {
   RENT_DURATION_OPTIONS,
   RENT_INCREASE_OPTIONS,
   RENT_REASONABLE_OPTIONS,
+  CURRENCY_BY_COUNTRY,
 } from "@/lib/surveyData";
 
 const COUNTRIES = CSME_COUNTRIES.map((c) => c.name);
@@ -19,7 +20,8 @@ const COUNTRIES = CSME_COUNTRIES.map((c) => c.name);
 type RentPayload = {
   country: string;
   propertyType: string;
-  monthlyRentUsd: string;
+  monthlyRentLocal: number;
+  currency: string;
   included: string[];
   occupants: string;
   furnished: string;
@@ -42,7 +44,7 @@ function validate(body: unknown): { ok: true; data: RentPayload } | { ok: false;
   if (!isNonEmptyString(b.propertyType) || !(RENT_PROPERTY_TYPES as readonly string[]).includes(b.propertyType)) {
     return { ok: false, error: "Select a valid property type." };
   }
-  const rent = Number(b.monthlyRentUsd);
+  const rent = Number(b.monthlyRentLocal);
   if (!Number.isFinite(rent) || rent <= 0) return { ok: false, error: "Enter a valid monthly rent." };
 
   if (!Array.isArray(b.included) || b.included.length === 0) {
@@ -78,7 +80,8 @@ function validate(body: unknown): { ok: true; data: RentPayload } | { ok: false;
     data: {
       country: b.country,
       propertyType: b.propertyType,
-      monthlyRentUsd: String(rent),
+      monthlyRentLocal: rent,
+      currency: CURRENCY_BY_COUNTRY[b.country]?.code ?? "",
       included,
       occupants: String(occupants),
       furnished: b.furnished,
