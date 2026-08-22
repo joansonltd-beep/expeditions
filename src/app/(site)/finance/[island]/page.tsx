@@ -40,8 +40,8 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
   if (!i) notFound();
 
   const isTrinidad = i.slug === TRINIDAD;
-  const documents = BANK_DOCUMENTS[i.bank];
-  const nonResidentDocs = BANK_NONRESIDENT_DOCUMENTS[i.bank];
+  const documents = i.documents ?? BANK_DOCUMENTS[i.bank];
+  const nonResidentDocs = i.nonResidentDocuments ?? BANK_NONRESIDENT_DOCUMENTS[i.bank];
   const others = BANKING_ISLANDS.filter((x) => x.slug !== i.slug);
 
   // Trinidad-only: our First Citizens loan/credit-card/business-registration

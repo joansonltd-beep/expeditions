@@ -46,6 +46,12 @@ export type BankingIsland = {
   // recommend. Shown up front so it is read before any bank-specific detail.
   keyRequirement?: string;
   notes?: string[];
+  // Island-specific document lists, sourced from that island's own bank page,
+  // overriding the generic BANK_DOCUMENTS[bank] / BANK_NONRESIDENT_DOCUMENTS[bank]
+  // fallback below. Use these whenever an island's own page differs from the
+  // regional default (different local agencies, a longer or shorter list, etc).
+  documents?: string[];
+  nonResidentDocuments?: string[];
 };
 
 // What each bank asks for. Individual islands can add to this via `notes`.
@@ -139,10 +145,18 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     currency: "BBD",
     minOpening: "BDS$100",
     alsoHas: "Scotiabank",
+    documents: [
+      "One of the following: a National ID card, a passport, or a driver's licence (a driver's licence is only accepted alongside another form of valid photo ID)",
+      "Proof of address dated within the last three months: a utility bill (excluding cell phone bills), another bank's statement (excluding credit union or other financial-institution statements), an official government or tax document such as correspondence from the BRA or NIS, or a rental agreement or contract from your landlord. If the bill isn't in your name, Republic Bank will provide an authorisation letter for the bill-holder to complete",
+      "Proof of income: if employed, a job letter or your most recent pay slip. If self-employed, up-to-date audited financial statements for the last three years, or a Statement of Affairs and a Statement of Income and Expenditure. A start-up entity (in operation less than three years) provides an opening balance sheet and cash flow projections for three years instead",
+    ],
+    nonResidentDocuments: [
+      "A foreign banker's reference, or a bank statement from the last three months",
+      "If self-employed, a utility bill confirming your permanent foreign address",
+      "A work permit, CARICOM Skills Certificate, or other official document granting permission to work. Students provide a missionary permit, student visa, or a letter of enrolment or acceptance from a Barbados educational institution instead",
+    ],
     notes: [
-      "No monthly maintenance fee. You get a free OneCard Visa Debit for 24-hour ABM and point-of-sale access, a pocket wallet to protect it, and monthly e-statements.",
-      "A driver's licence is only accepted alongside a second form of valid photo ID. A National ID card or passport works on its own.",
-      "Your address verification must be a utility bill no older than three months, and a cell phone bill will not be accepted. A bank statement also works.",
+      "Republic Bank markets e-Free around banking free, easy and convenient through RepublicOnline and its Blue Machine ABMs rather than in-branch: no monthly maintenance fee, plus a free OneCard Visa Debit for 24-hour ABM and point-of-sale access, a pocket wallet to protect it, and monthly e-statements.",
     ],
   },
   {
