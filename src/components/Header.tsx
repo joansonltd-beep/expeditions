@@ -8,14 +8,7 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string };
 
-const BUSINESS: NavItem[] = [
-  { href: "/business-setup", label: "Business Setup" },
-  { href: "/finance", label: "Banking" },
-  { href: "/guides", label: "Guides" },
-  { href: "/insurance", label: "Insurance" },
-];
-
-const PERSONAL: NavItem[] = [
+const SETUP: NavItem[] = [
   { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
   { href: "/business-setup", label: "Business Setup" },
   { href: "/finance", label: "Banking" },
@@ -40,10 +33,8 @@ const AFTER: NavItem[] = [
   { href: "/about", label: "About" },
 ];
 
-// Deduped for the mobile flat list, since Business and Personal intentionally
-// share several items (same link reached from two different starting points).
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, ...BUSINESS, ...PERSONAL, DESTINATIONS, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
+  new Map([...MAIN, ...SETUP, DESTINATIONS, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -105,8 +96,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               {l.label}
             </Link>
           ))}
-          <Dropdown label="Business" items={BUSINESS} />
-          <Dropdown label="Personal" items={PERSONAL} />
+          <Dropdown label="Set Up" items={SETUP} />
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
