@@ -8,11 +8,12 @@ import BusinessSetupEnquiry from "@/components/BusinessSetupEnquiry";
 export const metadata: Metadata = {
   title: "Business Setup",
   description:
-    "Business registration, bank account, accounting, social media, website and payment processing setup for small businesses in Trinidad and Tobago and Grenada. Plus how CARICOM's Right of Establishment lets you set up a business on another island.",
+    "Business registration, bank account, accounting, social media, website and payment processing setup for small businesses in Trinidad and Tobago, Jamaica and Grenada. Plus how CARICOM's Right of Establishment lets you set up a business on another island.",
   keywords: [
     "CARICOM right of establishment",
     "start a business in another CARICOM country",
     "register a business Trinidad and Tobago",
+    "register a business Jamaica",
     "register a business Grenada",
     "CARICOM service provider registration",
     "self-employed CARICOM national",

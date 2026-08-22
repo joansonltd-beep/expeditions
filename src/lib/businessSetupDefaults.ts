@@ -67,10 +67,10 @@ export const DEFAULT_BUSINESS_SETUP: BusinessSetupPage = {
     "The Right of Establishment is a treaty right, not an automatic approval. Member states still apply their own registration requirements, so confirm what your destination asks for before you commit to a move.",
   comingSoonTitle: "More countries coming soon",
   comingSoonText:
-    "Business setup is available today in Trinidad and Tobago and Grenada. We are working through the company registry, tax and banking requirements for the rest of CARICOM one country at a time, and will open each up as it is ready. Tell us where you are headed and we will let you know as soon as yours goes live.",
+    "Business setup is available today in Trinidad and Tobago, Jamaica and Grenada. We are working through the company registry, tax and banking requirements for the rest of CARICOM one country at a time, and will open each up as it is ready. Tell us where you are headed and we will let you know as soon as yours goes live.",
   eligibilityTitle: "Where are you based?",
   eligibilityIntro:
-    "This service is currently available only to citizens and residents of Trinidad and Tobago and Grenada. Select your country to continue.",
+    "This service is currently available only to citizens and residents of Trinidad and Tobago, Jamaica and Grenada. Select your country to continue.",
   ineligibleMessage:
-    "Sorry, business setup support is currently only available to citizens and residents of Trinidad and Tobago and Grenada. We hope to expand to more countries soon. In the meantime, take a look at our travel and finance services, or message us on WhatsApp with any questions.",
+    "Sorry, business setup support is currently only available to citizens and residents of Trinidad and Tobago, Jamaica and Grenada. We hope to expand to more countries soon. In the meantime, take a look at our travel and finance services, or message us on WhatsApp with any questions.",
 };

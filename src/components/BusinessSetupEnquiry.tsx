@@ -5,16 +5,17 @@ import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvide
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
 
 // Hard eligibility gate: business setup is only offered to citizens/residents
-// of Trinidad & Tobago and Grenada. The enquiry form only renders once one of
-// these is selected; any other choice explains why it is unavailable instead
-// of silently hiding the option.
+// of Trinidad & Tobago, Jamaica and Grenada. The enquiry form only renders
+// once one of these is selected; any other choice explains why it is
+// unavailable instead of silently hiding the option.
 const COUNTRIES = [
   { value: "", label: "Select your country" },
   { value: "tt", label: "Trinidad and Tobago" },
+  { value: "jm", label: "Jamaica" },
   { value: "gd", label: "Grenada" },
   { value: "other", label: "Somewhere else" },
 ];
-const ELIGIBLE = new Set(["tt", "gd"]);
+const ELIGIBLE = new Set(["tt", "jm", "gd"]);
 
 const field =
   "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";

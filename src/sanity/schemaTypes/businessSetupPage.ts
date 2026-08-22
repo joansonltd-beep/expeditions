@@ -1,7 +1,7 @@
 import { defineType, defineField } from "sanity";
 
-// Singleton: the Business Setup page. The Trinidad & Tobago / Grenada
-// eligibility gate is enforced in code, not editable here.
+// Singleton: the Business Setup page. The Trinidad & Tobago / Jamaica /
+// Grenada eligibility gate is enforced in code, not editable here.
 export const businessSetupPage = defineType({
   name: "businessSetupPage",
   title: "Business setup page",

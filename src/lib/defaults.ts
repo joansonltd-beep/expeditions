@@ -439,7 +439,7 @@ export const DEFAULT_ABOUT: AboutData = {
       bullets: [
         "CSME Skills Certificate: Step-by-step guidance on qualifying, gathering documents and applying in your destination country.",
         "Banking: Help opening a bank account in the CARICOM state you're moving to.",
-        "Business setup: Registering a business and getting your documents ready, in Trinidad and Tobago or Grenada.",
+        "Business setup: Registering a business and getting your documents ready, in Trinidad and Tobago, Jamaica or Grenada.",
         "Countries at a glance: What to expect once you arrive, including cost of living, places to see, local food and more.",
       ],
     },
