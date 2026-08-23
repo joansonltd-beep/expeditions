@@ -53,6 +53,12 @@ export default function GettingStartedPage() {
         title="Come Work"
         crumb="Come Work"
         intro="Ready to relocate? Everything you need to set up your move within CARICOM, in one place."
+        photo={{
+          src: "/photos/heroes/port-of-spain.jpg",
+          alt: "West Port of Spain and downtown, Trinidad and Tobago",
+          credit: "Christianwelsh, public domain, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Port_of_Spain_Trinidad.jpg",
+        }}
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">

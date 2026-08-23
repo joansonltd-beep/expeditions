@@ -37,6 +37,12 @@ export default async function StudyPage() {
         title="Come Study"
         crumb="Come Study"
         intro="Thinking about studying somewhere else in CARICOM? Here's what actually applies, and where we can still help."
+        photo={{
+          src: "/photos/heroes/uwi-st-augustine.jpg",
+          alt: "University of the West Indies campus, St. Augustine, Trinidad and Tobago",
+          credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_St._Augustine_UWI_CampusFXD.jpg",
+        }}
       />
 
       {/* CSME DOESN'T COVER THIS */}

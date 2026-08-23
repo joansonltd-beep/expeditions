@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
 
 // Shared button class strings, so links and buttons look identical everywhere.
 export const btn =
@@ -88,13 +90,56 @@ export function PageHeader({
   intro,
   crumb,
   image,
+  photo,
 }: {
   icon?: React.ReactNode;
   title: string;
   intro?: string;
   crumb: string;
   image?: React.ReactNode;
+  photo?: { src: string; alt: string; credit?: string; creditUrl?: string };
 }) {
+  if (photo) {
+    return (
+      <div className="relative isolate -mt-[70px] overflow-hidden pt-[70px]">
+        <PhotoHeroDeclare />
+        <Image src={photo.src} alt={photo.alt} fill priority sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/55 to-slate-950/80" />
+        {photo.credit ? (
+          <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/50">
+            {photo.creditUrl ? (
+              <a href={photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {photo.credit}
+              </a>
+            ) : (
+              photo.credit
+            )}
+          </p>
+        ) : null}
+        <Container className="relative py-20 sm:py-24">
+          <p className="mb-4 text-sm text-white/70">
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>{" "}
+            / {crumb}
+          </p>
+          <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
+            <div>
+              {icon ? (
+                <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-white text-brand shadow-md ring-1 ring-white/40">
+                  {icon}
+                </div>
+              ) : null}
+              <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
+              {intro ? <p className="mt-4 max-w-2xl text-lg text-white/85">{intro}</p> : null}
+            </div>
+            {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
+          </div>
+        </Container>
+      </div>
+    );
+  }
+
   return (
     <div className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-brand-soft/70 via-brand-soft/20 to-transparent">
       <div

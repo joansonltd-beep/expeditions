@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSiteClient } from "@/components/SiteSettingsProvider";
+import { useHeaderTransparentCapable } from "@/components/HeaderTheme";
 
 // Header height in px, kept in sync with the h-[70px] nav row below. Used to
 // pull the homepage hero up underneath the header so it can go transparent.
@@ -34,38 +35,59 @@ export default function Header({ businessName, logoUrl }: { businessName: string
   const [scrolled, setScrolled] = useState(false);
   const { chatbotUrl } = useSiteClient();
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
-  // Only the homepage has a hero photo to go transparent over; every other
-  // page is solid from the start since there's nothing but light content
-  // behind the header there.
-  const transparent = isHome && !scrolled;
+  // Pages that render a full-bleed dark photo behind the header declare it
+  // via useDeclarePhotoHero(); only those pages get a transparent header.
+  const photoHero = useHeaderTransparentCapable();
+  const transparent = photoHero && !scrolled;
+
+  // Reset scroll state on navigation so a page loaded already-scrolled (or a
+  // client-side route change) doesn't leave a stale transparent/solid state.
+  useEffect(() => {
+    setScrolled(window.scrollY > 40);
+  }, [pathname]);
 
   useEffect(() => {
-    if (!isHome) return;
+    if (!photoHero) return;
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
+  }, [photoHero]);
 
   const linkClass = (href: string) =>
-    `text-sm font-medium transition hover:text-white ${isActive(href) ? "text-white" : "text-white/70"}`;
+    `text-sm font-medium transition ${
+      transparent
+        ? `hover:text-white ${isActive(href) ? "text-white" : "text-white/70"}`
+        : `hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`
+    }`;
 
   return (
     <header
       className={`sticky top-0 z-40 transition-colors duration-300 ${
-        transparent ? "bg-transparent shadow-none" : "bg-brand-dark shadow-md"
+        transparent ? "bg-transparent shadow-none" : "bg-white/90 shadow-md backdrop-blur-xl"
       }`}
     >
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
-        <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-white">
+        <Link
+          href="/"
+          className={`flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight transition-colors ${
+            transparent ? "text-white" : "text-slate-900"
+          }`}
+        >
           {logoUrl ? (
             <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
           ) : (
             <>
-              <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain invert" priority />
+              <Image
+                src="/mark.png"
+                alt=""
+                width={36}
+                height={36}
+                className={`h-9 w-9 object-contain transition-[filter] ${transparent ? "invert" : ""}`}
+                priority
+              />
               {businessName}
             </>
           )}
@@ -100,7 +122,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         <div className="flex items-center gap-3">
           <Link
             href="/#contact"
-            className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-dark shadow-sm transition hover:bg-white/90 sm:inline-flex"
+            className={`hidden rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition sm:inline-flex ${
+              transparent ? "bg-white text-brand-dark hover:bg-white/90" : "bg-brand text-white hover:bg-brand-dark"
+            }`}
           >
             Plan My Move
           </Link>
@@ -111,9 +135,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             onClick={() => setOpen((o) => !o)}
           >
             <span className="block space-y-[5px]">
-              <span className="block h-0.5 w-6 rounded bg-white" />
-              <span className="block h-0.5 w-6 rounded bg-white" />
-              <span className="block h-0.5 w-6 rounded bg-white" />
+              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
+              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
+              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
             </span>
           </button>
         </div>

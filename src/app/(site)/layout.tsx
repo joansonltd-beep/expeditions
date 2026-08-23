@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Floats from "@/components/Floats";
 import SocialLinks from "@/components/SocialLinks";
 import { SiteSettingsProvider } from "@/components/SiteSettingsProvider";
+import { HeaderThemeProvider } from "@/components/HeaderTheme";
 import { getSiteSettings } from "@/lib/siteData";
 import { SITE_URL } from "@/lib/siteUrl";
 
@@ -86,6 +87,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         generalEmail: settings.generalEmail,
       }}
     >
+      <HeaderThemeProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <a
         href="#main"
@@ -181,6 +183,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
 
         <Floats />
       </div>
+      </HeaderThemeProvider>
     </SiteSettingsProvider>
   );
 }
