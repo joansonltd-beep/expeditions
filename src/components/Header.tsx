@@ -32,17 +32,17 @@ export default function Header({ businessName, logoUrl }: { businessName: string
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   const linkClass = (href: string) =>
-    `text-sm font-medium transition hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`;
+    `text-sm font-medium transition hover:text-white ${isActive(href) ? "text-white" : "text-white/70"}`;
 
   return (
-    <header className="sticky top-0 z-40 bg-white/80 shadow-[0_1px_0_0_rgba(15,23,42,0.06),0_8px_24px_-12px_rgba(15,23,42,0.15)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 bg-brand-dark shadow-md">
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
-        <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-slate-900">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-white">
           {logoUrl ? (
             <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
           ) : (
             <>
-              <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain" priority />
+              <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain invert" priority />
               {businessName}
             </>
           )}
@@ -77,7 +77,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         <div className="flex items-center gap-3">
           <Link
             href="/#contact"
-            className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark sm:inline-flex"
+            className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-dark shadow-sm transition hover:bg-white/90 sm:inline-flex"
           >
             Plan My Move
           </Link>
@@ -88,9 +88,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             onClick={() => setOpen((o) => !o)}
           >
             <span className="block space-y-[5px]">
-              <span className="block h-0.5 w-6 rounded bg-slate-900" />
-              <span className="block h-0.5 w-6 rounded bg-slate-900" />
-              <span className="block h-0.5 w-6 rounded bg-slate-900" />
+              <span className="block h-0.5 w-6 rounded bg-white" />
+              <span className="block h-0.5 w-6 rounded bg-white" />
+              <span className="block h-0.5 w-6 rounded bg-white" />
             </span>
           </button>
         </div>
