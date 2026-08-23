@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSiteClient } from "@/components/SiteSettingsProvider";
 
-type NavItem = { href: string; label: string };
+type NavItem = { href: string; label: string; title?: string };
 
 const GETTING_STARTED: NavItem = { href: "/getting-started", label: "Getting Started" };
 
@@ -22,7 +22,7 @@ const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
 
 const AFTER: NavItem[] = [
-  { href: "/survey", label: "On The Ground" },
+  { href: "/survey", label: "SRU", title: "Salaries, Rent and Utilities" },
   { href: "/about", label: "About" },
 ];
 
@@ -97,7 +97,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           </Link>
           <Dropdown label="Getting There" items={TRAVEL} />
           {AFTER.map((l) => (
-            <Link key={l.href} href={l.href} className={linkClass(l.href)}>
+            <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
             </Link>
           ))}
@@ -137,6 +137,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
                 className="rounded-lg px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
               >
                 {l.label}
+                {l.title ? <span className="ml-1.5 font-normal text-slate-400">({l.title})</span> : null}
               </Link>
             ))}
             {chatbotUrl ? (

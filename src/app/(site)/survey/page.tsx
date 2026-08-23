@@ -4,15 +4,15 @@ import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "On The Ground",
+  title: "SRU: Salaries, Rent and Utilities",
   description:
-    "Anonymous, crowdsourced surveys on what people actually earn and pay across CARICOM: salaries, utility costs and rent, country by country. No name or email collected.",
+    "Anonymous, crowdsourced surveys on what people actually earn and pay across CARICOM: salaries, rent and utility costs, country by country. No name or email collected.",
   keywords: [
     "CARICOM salary survey",
     "Caribbean utility costs",
     "Caribbean rent survey",
     "Caribbean cost of living data",
-    "On The Ground survey",
+    "SRU survey",
   ],
   alternates: { canonical: "/survey" },
 };
@@ -50,9 +50,9 @@ export default function SurveyHubPage() {
     <>
       <PageHeader
         icon={<Icon name="banknote" className="h-12 w-12 text-brand" />}
-        title="On The Ground"
-        crumb="On The Ground"
-        intro="Real numbers from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
+        title="SRU: Salaries, Rent and Utilities"
+        crumb="SRU"
+        intro="Real numbers on Salaries, Rent and Utilities from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
       />
       <Section>
         <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">

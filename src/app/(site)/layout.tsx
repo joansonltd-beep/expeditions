@@ -20,7 +20,7 @@ const companyLinks = [
   { href: "/accommodations", label: "Accommodations" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
-  { href: "/survey", label: "On The Ground" },
+  { href: "/survey", label: "SRU", title: "Salaries, Rent and Utilities" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];
@@ -131,7 +131,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
               <ul className="grid gap-2.5 text-sm">
                 {companyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-slate-400 hover:text-white">
+                    <Link href={l.href} title={l.title} className="text-slate-400 hover:text-white">
                       {l.label}
                     </Link>
                   </li>

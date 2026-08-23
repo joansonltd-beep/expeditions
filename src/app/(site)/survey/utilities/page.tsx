@@ -34,7 +34,7 @@ export default function UtilitiesSurveyPage() {
         <div className="mx-auto max-w-2xl">
           <p className="mb-6 text-sm">
             <Link href="/survey" className="font-semibold text-brand hover:underline">
-              ← On The Ground
+              ← SRU
             </Link>
           </p>
           <UtilitiesSurveyForm countries={countries} />
