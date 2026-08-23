@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getSiteSettings, getServices, getHomeContent } from "@/lib/siteData";
-import { Section, SectionHead, Eyebrow, CheckList, Container, btn, btnPrimary, btnAccent } from "@/components/ui";
+import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import RotatingHero from "@/components/RotatingHero";
 import { Icon, serviceIcon, pillarIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
@@ -47,12 +47,6 @@ export default async function HomePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#contact" className={btnPrimary}>
                 Plan My Move
-              </Link>
-              <Link
-                href="/caricom-skills-certificate"
-                className={`${btn} border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20 focus-visible:ring-white`}
-              >
-                CSME Skills Certificate
               </Link>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">

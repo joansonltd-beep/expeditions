@@ -48,7 +48,7 @@ export const DEFAULT_HOME: HomeContent = {
     { value: "Step by step", label: "paperwork guidance" },
     { value: "One contact", label: "for the whole move" },
   ],
-  pillarsEyebrow: "Come Live",
+  pillarsEyebrow: "Come Work",
   pillarsTitle: "Everything for your move in one place",
   pillarsIntro:
     "From the CSME Skills Certificate that lets you live and work on another island to the bank account and business you will need once you land, we handle the details.",

@@ -9,8 +9,8 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 type NavItem = { href: string; label: string; title?: string };
 
 const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Come See", title: "Travel within CARICOM" };
-const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Live", title: "Relocating within CARICOM" };
-const STUDY: NavItem = { href: "/study", label: "Study" };
+const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Work", title: "Relocating within CARICOM" };
+const STUDY: NavItem = { href: "/study", label: "Come Study", title: "Studying within CARICOM" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
@@ -35,8 +35,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
     `text-sm font-medium transition hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`;
 
   return (
-    <header className="sticky top-3 z-40 px-3 sm:top-4 sm:px-4">
-      <nav className="mx-auto flex h-[64px] max-w-6xl items-center justify-between gap-4 rounded-2xl border border-slate-200/70 bg-white/75 px-5 shadow-lg shadow-slate-900/[0.06] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 bg-white/80 shadow-[0_1px_0_0_rgba(15,23,42,0.06),0_8px_24px_-12px_rgba(15,23,42,0.15)] backdrop-blur-xl">
+      <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-slate-900">
           {logoUrl ? (
             <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
@@ -64,7 +64,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           <Link href={COME_LIVE_WITH_ME.href} title={COME_LIVE_WITH_ME.title} className={linkClass(COME_LIVE_WITH_ME.href)}>
             {COME_LIVE_WITH_ME.label}
           </Link>
-          <Link href={STUDY.href} className={linkClass(STUDY.href)}>
+          <Link href={STUDY.href} title={STUDY.title} className={linkClass(STUDY.href)}>
             {STUDY.label}
           </Link>
           {AFTER.map((l) => (
@@ -98,7 +98,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
       {/* mobile menu */}
       {open ? (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-slate-200/70 bg-white/95 px-5 py-4 shadow-lg shadow-slate-900/[0.06] backdrop-blur-xl lg:hidden">
+        <div className="border-t border-slate-200/70 bg-white/95 px-5 py-4 backdrop-blur-xl lg:hidden">
           <div className="flex flex-col gap-1">
             {MOBILE_LINKS.map((l) => (
               <Link
