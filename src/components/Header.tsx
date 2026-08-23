@@ -9,6 +9,7 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 type NavItem = { href: string; label: string; title?: string };
 
 const GETTING_STARTED: NavItem = { href: "/getting-started", label: "Getting Started" };
+const STUDY: NavItem = { href: "/study", label: "Study" };
 const GETTING_THERE: NavItem = { href: "/getting-there", label: "Getting There" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
@@ -21,7 +22,7 @@ const AFTER: NavItem[] = [
 ];
 
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, GETTING_THERE, ...AFTER].map((l) => [l.href, l])).values()
+  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, STUDY, GETTING_THERE, ...AFTER].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -59,6 +60,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           </Link>
           <Link href={GETTING_STARTED.href} className={linkClass(GETTING_STARTED.href)}>
             {GETTING_STARTED.label}
+          </Link>
+          <Link href={STUDY.href} className={linkClass(STUDY.href)}>
+            {STUDY.label}
           </Link>
           <Link href={GETTING_THERE.href} className={linkClass(GETTING_THERE.href)}>
             {GETTING_THERE.label}
