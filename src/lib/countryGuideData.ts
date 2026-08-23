@@ -1783,26 +1783,62 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "Kaieteur Falls",
         description:
           "One of the world's most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it; visitors fly in on a small plane over unbroken rainforest.",
+        photo: {
+          src: "/destinations/guyana.jpg",
+          alt: "Aerial view of Kaieteur Falls, Guyana",
+          credit: "Amanda (amanderson), CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Kaieteur_Falls_Aerial_01.jpg",
+        },
       },
       {
         name: "Iwokrama Rainforest",
         description: "A protected wilderness known for jaguars, giant river otters and over 500 bird species, with a high canopy walkway through the treetops.",
+        photo: {
+          src: "/places/guyana/iwokrama.jpg",
+          alt: "Iwokrama Rainforest, Guyana",
+          credit: "M M, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Iwokrama_Rainforest,_Guyana_(12179003713).jpg",
+        },
       },
       {
         name: "Rupununi Savannah",
         description: "Open savannah and working cattle ranches near the Brazilian border, for horseback riding, river safaris and wildlife tracking rather than beaches.",
+        photo: {
+          src: "/places/guyana/rupununi-savannah.jpg",
+          alt: "Rupununi Savannah, Guyana",
+          credit: "Treez44est, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Rupununi_Savannah.jpg",
+        },
       },
       {
         name: "Georgetown's colonial architecture & Stabroek Market",
         description: "18th- and 19th-century wooden buildings and the seawall protecting the below-sea-level capital, plus Stabroek Market, a landmark iron-and-steel market building with a clock tower, open since 1881.",
+        photo: {
+          src: "/places/guyana/stabroek-market.jpg",
+          alt: "Stabroek Market, Georgetown, Guyana",
+          credit: "John Cray, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Stabroek_Market_Georgetown_Guyana.jpg",
+        },
       },
       {
         name: "Orinduik Falls",
         description: "A wide, tiered waterfall on the Ireng River bordering Brazil, with warm, shallow pools over reddish jasper stone terraces: less dramatic in height than Kaieteur, more swimmable.",
+        photo: {
+          src: "/places/guyana/orinduik-falls.jpg",
+          alt: "Orinduik Falls, Guyana",
+          credit: "Merlinthewizard, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Orinduik_Falls_Sept_2007.JPG",
+        },
       },
       {
         name: "Shell Beach",
         description: "One of only four major nesting sites in the world for the endangered leatherback sea turtle, on the remote north-west coast, with nesting season running March to August.",
+        photo: {
+          src: "/places/guyana/shell-beach.jpg",
+          alt: "Shell Beach, Guyana",
+          credit: "Marco Farouk Basir, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Coconut_Trees_on_the_Shell_Beach_-_panoramio.jpg",
+        },
       },
     ],
     experiences: [
