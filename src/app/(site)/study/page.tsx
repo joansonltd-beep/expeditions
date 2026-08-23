@@ -26,6 +26,91 @@ const UWI_CAMPUSES = [
   { name: "Open Campus", country: "Online, region-wide" },
 ];
 
+const NATIONAL_INSTITUTIONS: { country: string; schools: { name: string; note: string }[] }[] = [
+  {
+    country: "Antigua and Barbuda",
+    schools: [
+      { name: "American University of Antigua (AUA)", note: "MD and a Bachelor of Science in Health and Human Sciences." },
+      { name: "University of Health Sciences Antigua (UHSA)", note: "MD and a Bachelor of Science in Nursing." },
+    ],
+  },
+  {
+    country: "Barbados",
+    schools: [
+      { name: "Ross University School of Medicine", note: "MD; relocated from Dominica to Bridgetown in 2019." },
+      { name: "American University of Integrative Sciences (AUIS)", note: "Medical school with undergraduate pre-med pathways." },
+    ],
+  },
+  {
+    country: "Belize",
+    schools: [
+      { name: "University of Belize", note: "The national public university, with bachelor's degrees across sciences, business, education, agriculture and nursing." },
+      { name: "Galen University", note: "A private university with bachelor's degrees in business, accounting, education, computer science and social science." },
+    ],
+  },
+  {
+    country: "Dominica",
+    schools: [
+      { name: "Dominica State College", note: "The national public college, chartered to award bachelor's degrees across arts, sciences and technical education." },
+      { name: "All Saints University", note: "MD, plus bachelor's degrees in nursing and medical/diagnostic imaging." },
+    ],
+  },
+  {
+    country: "Grenada",
+    schools: [
+      { name: "St. George's University (SGU)", note: "Best known for medicine and veterinary medicine, but its School of Arts and Sciences also offers bachelor's degrees in business, biology, psychology, IT, nursing and more." },
+    ],
+  },
+  {
+    country: "Guyana",
+    schools: [
+      { name: "University of Guyana", note: "The national public university, with the region's widest bachelor's degree range across nine faculties: agriculture, medicine, engineering, education, social sciences and more." },
+    ],
+  },
+  {
+    country: "Jamaica",
+    schools: [
+      { name: "University of Technology, Jamaica (UTech)", note: "A public university with bachelor's and graduate degrees in engineering, business, science, technology and architecture." },
+      { name: "Northern Caribbean University (NCU)", note: "A private Seventh-day Adventist university with bachelor's degrees across sciences, humanities, business and education." },
+      { name: "The Mico University College", note: "Long focused on teacher training, now offering bachelor's degrees across a wider range of disciplines too." },
+    ],
+  },
+  {
+    country: "St. Kitts and Nevis",
+    schools: [
+      { name: "University of Medicine and Health Sciences (UMHS)", note: "MD, based in Basseterre." },
+      { name: "Windsor University School of Medicine", note: "MD, based in Cayon." },
+      { name: "Ross University School of Veterinary Medicine", note: "Doctor of Veterinary Medicine (DVM), based in Basseterre." },
+    ],
+  },
+  {
+    country: "Saint Lucia",
+    schools: [
+      { name: "American International Medical University (AIMU)", note: "MD and nursing degrees, based in Gros Islet." },
+      { name: "Monroe College, Saint Lucia campus", note: "Bachelor's degrees in business, hospitality management and information technology." },
+    ],
+  },
+  {
+    country: "St. Vincent and the Grenadines",
+    schools: [
+      { name: "American University of St. Vincent School of Medicine (AUS)", note: "MD, plus bachelor's degrees in nursing, health sciences, accounting and IT/cybersecurity." },
+    ],
+  },
+  {
+    country: "Suriname",
+    schools: [
+      { name: "Anton de Kom University of Suriname", note: "The national public university (instruction in Dutch), with bachelor's degrees across medicine, law, engineering, economics, education and the sciences." },
+    ],
+  },
+  {
+    country: "Trinidad and Tobago",
+    schools: [
+      { name: "University of Trinidad and Tobago (UTT)", note: "A public university with bachelor's degrees across engineering, technology, business, education and the arts." },
+      { name: "University of the Southern Caribbean (USC)", note: "A private Seventh-day Adventist university with bachelor's degrees across business, science and the arts." },
+    ],
+  },
+];
+
 export default async function StudyPage() {
   const settings = await getSiteSettings();
   return (
@@ -81,8 +166,46 @@ export default async function StudyPage() {
         </div>
       </Section>
 
-      {/* WHAT A STUDENT VISA USUALLY ASKS FOR */}
+      {/* OTHER UNIVERSITIES BY COUNTRY */}
       <Section>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-2xl font-bold text-slate-900">Beyond UWI: other universities and colleges, country by country</h2>
+          <p className="mt-3 text-slate-600">
+            Every one of our destination countries also has at least one national college or university, and several
+            host private universities of their own, some serving mainly international students. A number of the
+            smaller islands are known for hosting offshore medical schools, degree-granting institutions that also
+            usually offer bachelor's degrees in nursing and other health sciences alongside the MD.
+          </p>
+          <div className="mt-6 space-y-6">
+            {NATIONAL_INSTITUTIONS.map((c) => (
+              <div key={c.country}>
+                <h3 className="font-semibold text-slate-900">{c.country}</h3>
+                <ul className="mt-2 space-y-2">
+                  {c.schools.map((s) => (
+                    <li key={s.name} className="flex gap-2 text-sm text-slate-600">
+                      <span aria-hidden="true" className="mt-0.5 text-brand">
+                        •
+                      </span>
+                      <span>
+                        <span className="font-medium text-slate-800">{s.name}:</span> {s.note}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-slate-500">
+            This list covers degree-granting institutions (bachelor's level and up) in the countries we cover.
+            Accreditation, tuition and admission requirements vary widely, especially at the private and offshore
+            medical schools, so confirm current accreditation status and licensing pathways directly with the
+            institution before applying.
+          </p>
+        </div>
+      </Section>
+
+      {/* WHAT A STUDENT VISA USUALLY ASKS FOR */}
+      <Section alt>
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-slate-900">What's usually asked for</h2>
           <p className="mt-3 text-slate-600">
@@ -113,7 +236,7 @@ export default async function StudyPage() {
       </Section>
 
       {/* HOW WE HELP */}
-      <Section alt>
+      <Section>
         <div className="mx-auto max-w-3xl">
           <SectionHead
             eyebrow="Where we come in"
