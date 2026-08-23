@@ -54,6 +54,14 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const googleMapsUrl = g.coordinates
     ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}`
     : undefined;
+  const googleMapsEmbedUrl = g.coordinates
+    ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}&z=8&output=embed`
+    : undefined;
+  const placeSlug = (name: string) =>
+    name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
   const placeJsonLd = {
     "@context": "https://schema.org",
@@ -427,9 +435,35 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       {/* PLACES TO SEE */}
       <Section alt={flip}>
         <SectionHead eyebrow="See" title="Places to see" />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto max-w-3xl">
+          {googleMapsEmbedUrl ? (
+            <>
+              <div className="overflow-hidden rounded-2xl border border-slate-200">
+                <iframe
+                  src={googleMapsEmbedUrl}
+                  title={`Map of ${g.name}`}
+                  className="aspect-video w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {g.placesToSee.map((p, i) => (
+                  <a
+                    key={i}
+                    href={`#${placeSlug(p.name)}`}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-brand hover:text-brand"
+                  >
+                    {p.name}
+                  </a>
+                ))}
+              </div>
+            </>
+          ) : null}
+        </div>
+        <div className="mx-auto mt-6 grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToSee.map((p, i) => (
-            <div key={i} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <div key={i} id={placeSlug(p.name)} className="scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white">
               {p.photo ? (
                 <div className="relative aspect-[16/9] w-full">
                   <Image src={p.photo.src} alt={p.photo.alt} fill sizes="(max-width: 768px) 100vw, 384px" className="object-cover" />
