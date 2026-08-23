@@ -2050,14 +2050,32 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Dunn's River Falls",
         description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach: one of Jamaica's most-photographed sights.",
+        photo: {
+          src: "/destinations/jamaica.jpg",
+          alt: "Dunn's River Falls, Ocho Rios, Jamaica",
+          credit: "Don Ramey Logan, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_wide_Photo_Don_Ramey_Logan.jpg",
+        },
       },
       {
         name: "Blue Mountains",
         description: "Jamaica's highest range, home to Blue Mountain Peak (2,256m) and the coffee estates that grow the world-famous Blue Mountain coffee, most of it exported to Japan.",
+        photo: {
+          src: "/places/jamaica/blue-mountains.jpg",
+          alt: "The Blue Mountains, Jamaica",
+          credit: "Wolmadrian, public domain, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Blue_Mountains,_Jamaica.jpg",
+        },
       },
       {
         name: "Negril and Seven Mile Beach",
         description: "A long stretch of white sand on the west coast, with the Negril cliffs at its southern end used for cliff diving and sunset watching.",
+        photo: {
+          src: "/places/jamaica/negril.jpg",
+          alt: "Negril Beach, Jamaica",
+          credit: "Gustavo.kunst, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Negril.jpg",
+        },
       },
       {
         name: "YS Falls",
@@ -2070,6 +2088,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Bob Marley Museum & Devon House",
         description: "Marley's former Kingston home, now a museum on his life and the roots of reggae; nearby, Devon House is an 1881 Jamaican-Georgian mansion turned heritage site, famous for its ice cream.",
+        photo: {
+          src: "/places/jamaica/bob-marley-museum.jpg",
+          alt: "The Bob Marley Museum courtyard, Hope Road, Kingston, Jamaica",
+          credit: "Hitachi-Hu, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Hope_Road_Jamaika2.jpg",
+        },
       },
       {
         name: "Doctor's Cave Beach",
@@ -2082,6 +2106,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Port Royal",
         description: "Once called \"the wickedest city on Earth\" for its pirate-haven reputation, two-thirds of it sank in a 1692 earthquake. Its archaeological landscape at the mouth of Kingston Harbour became Jamaica's second UNESCO World Heritage Site in July 2025.",
+        photo: {
+          src: "/places/jamaica/port-royal.jpg",
+          alt: "Port Royal, Jamaica",
+          credit: "Raychristofer, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Port_Royal_Jamaica.JPG",
+        },
       },
     ],
     experiences: [
