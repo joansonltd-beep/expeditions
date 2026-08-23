@@ -8,9 +8,9 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string; title?: string };
 
-const GETTING_STARTED: NavItem = { href: "/getting-started", label: "Getting Started" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Come See Me", title: "Travel within CARICOM" };
+const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Live with Me", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Study" };
-const GETTING_THERE: NavItem = { href: "/getting-there", label: "Getting There" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
@@ -22,7 +22,7 @@ const AFTER: NavItem[] = [
 ];
 
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, STUDY, GETTING_THERE, ...AFTER].map((l) => [l.href, l])).values()
+  new Map([...MAIN, DESTINATIONS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -58,14 +58,14 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
-          <Link href={GETTING_STARTED.href} className={linkClass(GETTING_STARTED.href)}>
-            {GETTING_STARTED.label}
+          <Link href={COME_SEE_ME.href} title={COME_SEE_ME.title} className={linkClass(COME_SEE_ME.href)}>
+            {COME_SEE_ME.label}
+          </Link>
+          <Link href={COME_LIVE_WITH_ME.href} title={COME_LIVE_WITH_ME.title} className={linkClass(COME_LIVE_WITH_ME.href)}>
+            {COME_LIVE_WITH_ME.label}
           </Link>
           <Link href={STUDY.href} className={linkClass(STUDY.href)}>
             {STUDY.label}
-          </Link>
-          <Link href={GETTING_THERE.href} className={linkClass(GETTING_THERE.href)}>
-            {GETTING_THERE.label}
           </Link>
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>

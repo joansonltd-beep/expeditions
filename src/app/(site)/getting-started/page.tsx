@@ -4,7 +4,7 @@ import { Section, PageHeader } from "@/components/ui";
 import { Icon, pillarIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Getting Started",
+  title: "Come Live with Me: Relocating Within CARICOM",
   description:
     "Everything you need to set up your move within CARICOM: the CSME Skills Certificate, registering a business, opening a bank account, insurance, and step-by-step guides.",
   keywords: [
@@ -50,9 +50,9 @@ export default function GettingStartedPage() {
     <>
       <PageHeader
         icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
-        title="Getting Started"
-        crumb="Getting Started"
-        intro="Everything you need to set up your move within CARICOM, in one place."
+        title="Come Live with Me"
+        crumb="Come Live with Me"
+        intro="Ready to relocate? Everything you need to set up your move within CARICOM, in one place."
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">

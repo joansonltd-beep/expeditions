@@ -66,6 +66,7 @@ export type Coordinates = {
   lat: number;
   lng: number;
   display: string; // human-readable, e.g. "17.06°N, 61.80°W"
+  zoom?: number; // map embed zoom level, tuned per country so the default view frames just that country
 };
 
 // A real, appropriately-licensed photo, self-hosted under /public, never
@@ -137,7 +138,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Dr. Thomas Liptak, CC BY 4.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_English_Harbour_Nelson's_Dockyard_2.jpg",
     },
-    coordinates: { lat: 17.0608, lng: -61.7964, display: "17.06°N, 61.80°W" },
+    coordinates: { lat: 17.0608, lng: -61.7964, display: "17.06°N, 61.80°W", zoom: 10 },
     demographics: {
       population: {
         value: "≈94,200 (2025 estimate; some sources put it as high as ≈105,000)",
@@ -477,7 +478,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Johnmartindavies, CC BY-SA 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Crane_Beach.JPG",
     },
-    coordinates: { lat: 13.1939, lng: -59.5432, display: "13.19°N, 59.54°W" },
+    coordinates: { lat: 13.1939, lng: -59.5432, display: "13.19°N, 59.54°W", zoom: 11 },
     demographics: {
       population: {
         value: "≈282,000–283,000 (2025–2026 estimate)",
@@ -803,7 +804,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "The TerraMar Project, CC BY 2.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Belize_Blue_Hole_(TMP)_(16912331906).jpg",
     },
-    coordinates: { lat: 17.1899, lng: -88.4977, display: "17.19°N, 88.50°W" },
+    coordinates: { lat: 17.1899, lng: -88.4977, display: "17.19°N, 88.50°W", zoom: 8 },
     demographics: {
       population: {
         value: "≈422,000–429,000 (2025–2026 estimate)",
@@ -1106,7 +1107,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Bayukjdr, CC BY-SA 4.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Dominica_Boiling_Lake.jpg",
     },
-    coordinates: { lat: 15.3017, lng: -61.3881, display: "15.30°N, 61.39°W" },
+    coordinates: { lat: 15.3017, lng: -61.3881, display: "15.30°N, 61.39°W", zoom: 11 },
     demographics: {
       population: {
         value: "≈65,500–66,000 (2025–2026 estimate)",
@@ -1398,7 +1399,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Varun Kapoor, CC BY 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Grand_Anse_Beach_Grenada.jpg",
     },
-    coordinates: { lat: 12.05, lng: -61.75, display: "12.05°N, 61.75°W" },
+    coordinates: { lat: 12.05, lng: -61.75, display: "12.05°N, 61.75°W", zoom: 11 },
     demographics: {
       population: {
         value: "≈114,000–117,000 (2024–2025 estimate)",
@@ -1698,7 +1699,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Amanda (amanderson), CC BY 2.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Kaieteur_Falls_Aerial_01.jpg",
     },
-    coordinates: { lat: 6.8045, lng: -58.1553, display: "6.80°N, 58.16°W" },
+    coordinates: { lat: 6.8045, lng: -58.1553, display: "6.80°N, 58.16°W", zoom: 6 },
     demographics: {
       population: {
         value: "1,025,334 at end of 2025 (Guyana passed 1 million people for the first time, up from 956,044 a year earlier)",
@@ -1964,7 +1965,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Don Ramey Logan, CC BY-SA 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_wide_Photo_Don_Ramey_Logan.jpg",
     },
-    coordinates: { lat: 17.997, lng: -76.7936, display: "18.00°N, 76.79°W" },
+    coordinates: { lat: 17.997, lng: -76.7936, display: "18.00°N, 76.79°W", zoom: 9 },
     demographics: {
       population: {
         value: "≈2.83–2.84 million (2025–2026 estimate)",
@@ -2256,7 +2257,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Martin Falbisoner, CC BY-SA 4.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Saint_Kitts_-_Brimstone_Hill_Fortress_05.JPG",
     },
-    coordinates: { lat: 17.2948, lng: -62.7261, display: "17.29°N, 62.73°W" },
+    coordinates: { lat: 17.2948, lng: -62.7261, display: "17.29°N, 62.73°W", zoom: 12 },
     demographics: {
       population: {
         value: "≈47,000–53,000 (one of the smallest sovereign states in the world by population)",
@@ -2531,7 +2532,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Gros_Piton_and_Petit_Piton_in_Saint_Lucia.JPG",
     },
-    coordinates: { lat: 13.9094, lng: -60.9789, display: "13.91°N, 60.98°W" },
+    coordinates: { lat: 13.9094, lng: -60.9789, display: "13.91°N, 60.98°W", zoom: 11 },
     demographics: {
       population: {
         value: "≈168,462 (CIA World Factbook, 2025 estimate) to ≈180,000–184,000 (UN World Population Prospects via Worldometer, 2025–2026 estimate); the two source families diverge by roughly 7–9%",
@@ -2850,7 +2851,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Iain Grant, CC BY-SA 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:TobagoCaysAerial.jpg",
     },
-    coordinates: { lat: 13.16, lng: -61.2248, display: "13.16°N, 61.22°W" },
+    coordinates: { lat: 13.16, lng: -61.2248, display: "13.16°N, 61.22°W", zoom: 9 },
     demographics: {
       population: {
         value: "≈99,200–100,650 (2024–2026 estimate)",
@@ -3149,7 +3150,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Junie609, CC BY-SA 4.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia_top_view_(photo_1)_located_at_Abraham_Crijnssenweg_1_paramaribo,_suriname.jpg",
     },
-    coordinates: { lat: 5.852, lng: -55.2038, display: "5.85°N, 55.20°W" },
+    coordinates: { lat: 5.852, lng: -55.2038, display: "5.85°N, 55.20°W", zoom: 7 },
     demographics: {
       population: {
         value: "≈634,000–654,000 (2025–2026 estimate)",
@@ -3430,7 +3431,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       credit: "Martina Jackson, CC BY-SA 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Pitch_Lake.JPG",
     },
-    coordinates: { lat: 10.6918, lng: -61.2225, display: "10.69°N, 61.22°W" },
+    coordinates: { lat: 10.6918, lng: -61.2225, display: "10.69°N, 61.22°W", zoom: 9 },
     demographics: {
       population: {
         value: "≈1,410,000 (CIA World Factbook, 2025 estimate) to ≈1,513,000 (UN World Population Prospects via Worldometer, 2026 estimate)",
