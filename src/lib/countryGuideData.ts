@@ -2929,10 +2929,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Tobago Cays Marine Park",
         description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean's best-known sailing and snorkelling anchorages. Turtles are a regular sight in the shallows.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/tobago-cays.jpg",
+          alt: "Aerial view of Tobago Cays Marine Park, St. Vincent and the Grenadines",
+          credit: "Iain Grant, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:TobagoCaysAerial.jpg",
+        },
       },
       {
         name: "La Soufrière",
         description: "St. Vincent's active volcano at the island's northern end, last erupting explosively in April 2021. A demanding hiking trail leads to the crater rim when conditions allow.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/la-soufriere.jpg",
+          alt: "La Soufrière volcano, St. Vincent",
+          credit: "Acp~commonswiki, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Soufriere.jpg",
+        },
       },
       {
         name: "St. Vincent Botanic Gardens",
@@ -2949,10 +2961,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Bequia",
         description: "The largest of the Grenadines and a short ferry from St. Vincent, built around Port Elizabeth and Admiralty Bay: traditional boatbuilding, a whaling history, and a laid-back sailing-town feel.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/bequia-admiralty-bay.jpg",
+          alt: "Port Elizabeth on Admiralty Bay, Bequia",
+          credit: "David Stanley, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Admiralty_Bay_on_Bequia,_Saint_Vincent_and_the_Grenadines_(47354377411).jpg",
+        },
       },
       {
         name: "Wallilabou Bay",
         description: "A quiet bay on St. Vincent's west coast used as a filming location for Pirates of the Caribbean, with some of the set dressing still standing.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/wallilabou-bay.jpg",
+          alt: "Wallilabou Bay, St. Vincent",
+          credit: "Waielbi, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Saint-Vincent_Wallilabou_Bay.jpg",
+        },
       },
       {
         name: "Owia Salt Pond",
@@ -2961,10 +2985,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Fort Charlotte",
         description: "An 18th-century hilltop fort overlooking Kingstown and its harbour, with old cannons and wide coastal views.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/fort-charlotte.jpg",
+          alt: "View over Kingstown from Fort Charlotte, St. Vincent",
+          credit: "giggel, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_-_Looking_north_from_Fort_Charlotte_-_panoramio.jpg",
+        },
       },
       {
         name: "Mustique",
         description: "A small private island in the Grenadines known for celebrity homes and an exclusive resort. Day visits and boat trips are possible, though most of the island is private.",
+        photo: {
+          src: "/places/st-vincent-and-the-grenadines/mustique-macaroni-bay.jpg",
+          alt: "Macaroni Bay, Mustique",
+          credit: "Jason Pratt, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Macaroni_Bay,_Mustique_-_panoramio.jpg",
+        },
       },
     ],
     experiences: [
