@@ -897,22 +897,52 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Belize Barrier Reef",
         description: "The second-largest barrier reef in the world and a UNESCO World Heritage Site, running the length of the coast and around dozens of cayes.",
+        photo: {
+          src: "/places/belize/barrier-reef.jpg",
+          alt: "Aerial view of the Belize Barrier Reef",
+          credit: "Ian Morton, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Belize_Barrier_Reef_Aerial_Looking_North.jpg",
+        },
       },
       {
         name: "Great Blue Hole",
         description: "A giant marine sinkhole on Lighthouse Reef: a signature dive site for the certified, and a dramatic sight from a scenic flight for everyone else.",
+        photo: {
+          src: "/destinations/belize.jpg",
+          alt: "The Great Blue Hole, a giant marine sinkhole off the coast of Belize",
+          credit: "The TerraMar Project, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Belize_Blue_Hole_(TMP)_(16912331906).jpg",
+        },
       },
       {
         name: "Hol Chan Marine Reserve & Shark Ray Alley",
         description: "A protected reef channel near San Pedro thick with fish, turtles and rays, next to a shallow sandbar where you can swim with nurse sharks and stingrays.",
+        photo: {
+          src: "/places/belize/hol-chan.jpg",
+          alt: "A green sea turtle in Hol Chan Marine Reserve, Belize",
+          credit: "Nikdahl, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:GreenSeaTurtle-HolChanMarineReserve-Belize.JPG",
+        },
       },
       {
         name: "Caye Caulker",
         description: "A laid-back island built around a \"Go Slow\" motto: golf carts instead of cars, easy snorkelling and day trips to the reef.",
+        photo: {
+          src: "/places/belize/caye-caulker.jpg",
+          alt: "\"The Split\", Caye Caulker, Belize",
+          credit: "Steven Zwerink, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:%22The_Split%22,_Caye_Caulker,_Belize.jpg",
+        },
       },
       {
         name: "Placencia & Hopkins",
         description: "Southern coastal villages with beaches, reef access, and Garifuna cultural heritage.",
+        photo: {
+          src: "/places/belize/placencia.jpg",
+          alt: "Placencia Lagoon, Belize",
+          credit: "Jan Pešula, CC0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Placencia_Lagoon_Belize.JPG",
+        },
       },
       {
         name: "Actun Tunichil Muknal (ATM Cave)",
@@ -921,10 +951,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Xunantunich",
         description: "A major Maya site near San Ignacio, with the climbable \"El Castillo\" pyramid and views into Guatemala.",
+        photo: {
+          src: "/places/belize/xunantunich.jpg",
+          alt: "El Castillo, Xunantunich, Belize",
+          credit: "Thomas Shahan, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Xunantunich_-_Belize.jpg",
+        },
       },
       {
         name: "Caracol",
         description: "A large, remote Maya city deep in the Chiquibul Forest, a longer drive than Xunantunich, and a more adventurous ruins visit.",
+        photo: {
+          src: "/places/belize/caracol.jpg",
+          alt: "Caana, the tallest structure at Caracol, Belize",
+          credit: "Dennis Jarvis, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Caana_Caracol.jpg",
+        },
       },
       {
         name: "Cockscomb Basin Wildlife Sanctuary",
