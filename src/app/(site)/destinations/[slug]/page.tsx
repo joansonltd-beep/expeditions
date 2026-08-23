@@ -55,7 +55,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
     ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}`
     : undefined;
   const googleMapsEmbedUrl = g.coordinates
-    ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}&z=${g.coordinates.zoom ?? 9}&output=embed`
+    ? `https://www.google.com/maps?q=${g.coordinates.lat},${g.coordinates.lng}&z=8&output=embed`
     : undefined;
   const placeSlug = (name: string) =>
     name
