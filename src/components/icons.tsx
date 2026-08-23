@@ -26,7 +26,8 @@ export type IconName =
   | "calculator"
   | "share"
   | "globe"
-  | "creditCard";
+  | "creditCard"
+  | "graduationCap";
 
 const PATHS: Record<IconName, ReactNode> = {
   plane: (
@@ -154,6 +155,13 @@ const PATHS: Record<IconName, ReactNode> = {
       <polygon points="12 2 20 7 4 7" />
     </>
   ),
+  graduationCap: (
+    <>
+      <path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z" />
+      <path d="M22 10.5v6" />
+      <path d="M6 12.5V17a6 3 0 0 0 12 0v-4.5" />
+    </>
+  ),
   calculator: (
     <>
       <rect width="16" height="20" x="4" y="2" rx="2" />
@@ -239,6 +247,7 @@ export function pillarIcon(href: string): IconName {
   if (href.includes("finance")) return "banknote";
   if (href.includes("visa")) return "passport";
   if (href.includes("guides")) return "compass";
+  if (href.includes("study")) return "graduationCap";
   return "compass";
 }
 

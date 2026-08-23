@@ -6,12 +6,13 @@ import { Icon, pillarIcon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Getting Started",
   description:
-    "Everything you need to set up your move within CARICOM: the CSME Skills Certificate, registering a business, opening a bank account, insurance, and step-by-step guides.",
+    "Everything you need to set up your move within CARICOM: the CSME Skills Certificate, registering a business, opening a bank account, studying in another CARICOM country, insurance, and step-by-step guides.",
   keywords: [
     "how to move to CARICOM",
     "CSME Skills Certificate",
     "CARICOM business setup",
     "CARICOM banking",
+    "studying in another CARICOM country",
     "moving to another CARICOM country checklist",
   ],
   alternates: { canonical: "/getting-started" },
@@ -22,6 +23,11 @@ const ITEMS = [
     href: "/caricom-skills-certificate",
     title: "CSME Skills Certificate",
     text: "Country-by-country guidance to the certificate that lets CARICOM nationals live and work on another member state.",
+  },
+  {
+    href: "/study",
+    title: "Studying in CARICOM",
+    text: "Thinking about studying in another CARICOM country, including a University of the West Indies campus outside your own? Here's what actually applies.",
   },
   {
     href: "/business-setup",

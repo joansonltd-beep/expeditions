@@ -8,9 +8,11 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
+    "/getting-started",
     "/caricom-skills-certificate",
     "/business-setup",
     "/finance",
+    "/study",
     "/guides",
     "/destinations",
     "/flights",
