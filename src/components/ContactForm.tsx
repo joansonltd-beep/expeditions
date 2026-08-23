@@ -8,7 +8,6 @@ const SERVICES = [
   "Flights",
   "Accommodation",
   "Transfers",
-  "Cruises",
   "Bundle (flight + stay + transfers)",
   "Travel visa",
   "Insurance consultation",

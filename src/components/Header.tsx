@@ -8,18 +8,11 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string };
 
-const SETUP: NavItem[] = [
-  { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
-  { href: "/business-setup", label: "Business Setup" },
-  { href: "/finance", label: "Banking" },
-  { href: "/guides", label: "General Guides" },
-  { href: "/insurance", label: "Insurance" },
-];
+const GETTING_STARTED: NavItem = { href: "/getting-started", label: "Getting Started" };
 
 const TRAVEL: NavItem[] = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
-  { href: "/cruises", label: "Cruises" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
 ];
@@ -34,7 +27,7 @@ const AFTER: NavItem[] = [
 ];
 
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, ...SETUP, DESTINATIONS, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
+  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -96,11 +89,13 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               {l.label}
             </Link>
           ))}
-          <Dropdown label="Set Up" items={SETUP} />
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
-          <Dropdown label="Travel" items={TRAVEL} />
+          <Link href={GETTING_STARTED.href} className={linkClass(GETTING_STARTED.href)}>
+            {GETTING_STARTED.label}
+          </Link>
+          <Dropdown label="Getting There" items={TRAVEL} />
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} className={linkClass(l.href)}>
               {l.label}

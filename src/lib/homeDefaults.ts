@@ -46,7 +46,7 @@ export const DEFAULT_HOME: HomeContent = {
   heroStats: [
     { value: "12 states", label: "CSME free movement" },
     { value: "Step by step", label: "paperwork guidance" },
-    { value: "One team", label: "for the whole move" },
+    { value: "One contact", label: "for the whole move" },
   ],
   pillarsEyebrow: "How we help you move",
   pillarsTitle: "Everything for your move in one place",
@@ -111,7 +111,7 @@ export const DEFAULT_HOME: HomeContent = {
   whyEyebrow: "Why move with us",
   whyTitle: "One contact for the whole move",
   why: [
-    { icon: "🤝", title: "One team, one plan", text: "Certificate, banking and business setup handled together, so nothing falls through the gaps." },
+    { icon: "🤝", title: "One contact, one plan", text: "Certificate, banking and business setup handled together, so nothing falls through the gaps." },
     { icon: "💬", title: "Real support", text: "Clear updates and someone to talk to before, during and after your move." },
     { icon: "🗺️", title: "Country-specific guidance", text: "Requirements, fees and offices for each CARICOM member state, not generic advice." },
     { icon: "👪", title: "Families welcome", text: "Moving with a spouse, children or elderly relatives? We plan around the whole household." },

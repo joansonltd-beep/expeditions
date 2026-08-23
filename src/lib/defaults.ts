@@ -168,41 +168,6 @@ export const DEFAULT_SERVICES: Service[] = [
     primaryLink: { label: "Book your transfers", href: "https://www.book-online-transfers.com/en/expeditionswithjo" },
   },
   {
-    slug: "cruises",
-    title: "Cruises",
-    icon: "🚢",
-    scope: "Worldwide",
-    category: "travel",
-    order: 4,
-    shortBlurb:
-      "Honest advice on cruise lines and itineraries for a Caribbean trip, with booking handled end to end.",
-    cardFeatures: ["Itinerary and cruise line advice", "First-time cruiser guidance", "Support before, during and after"],
-    intro:
-      "Relocation is the main thing we do, but if you also want to see the Caribbean by cruise, we can plan and book that too.",
-    body: [
-      {
-        heading: "Why a cruise",
-        paragraphs: ["A cruise covers several islands without separate flights or hotels for each one:"],
-        bullets: [
-          "Caribbean beaches by day, fine dining by night",
-          "Island hopping without worrying about multiple flights or hotels",
-          "Onboard activities for families, couples, or solo travellers",
-        ],
-      },
-      {
-        heading: "What we do for you",
-        paragraphs: ["From picking a line to the day you disembark, you will get:"],
-        bullets: [
-          "Honest advice on cruise lines and itineraries that match your budget",
-          "Smooth booking and travel coordination",
-          "Tips and guidance for first-time cruisers",
-          "Support before, during, and after your trip",
-        ],
-      },
-    ],
-    primaryLink: null,
-  },
-  {
     slug: "travel-visas",
     title: "Travel Visas",
     icon: "🛂",
