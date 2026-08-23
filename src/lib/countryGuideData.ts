@@ -3228,14 +3228,32 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Historic Inner City of Paramaribo",
         description: "A UNESCO World Heritage Site since 2002: a largely intact 17th-century Dutch colonial streetplan of wooden buildings along the Suriname River, blending Dutch, other European and Creole architectural styles.",
+        photo: {
+          src: "/places/suriname/paramaribo-waterkant.jpg",
+          alt: "Waterkant, Paramaribo, with its UNESCO heritage buildings",
+          credit: "Rafaeljantz, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Waterkant_Paramaribo_with_the_Unesco_Heritage_Buildings.jpg",
+        },
       },
       {
         name: "Fort Zeelandia",
         description: "Built in 1667 and the oldest surviving building in Paramaribo, now home to the Surinaams Museum, standing out as one of the district's few stone structures amid the wooden colonial buildings.",
+        photo: {
+          src: "/destinations/suriname.jpg",
+          alt: "Fort Zeelandia, Paramaribo, Suriname",
+          credit: "Junie609, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_Zeelandia_top_view_(photo_1)_located_at_Abraham_Crijnssenweg_1_paramaribo,_suriname.jpg",
+        },
       },
       {
         name: "Central Suriname Nature Reserve",
         description: "A UNESCO World Heritage Site protecting 1.6 million hectares of pristine rainforest in the interior: jaguars, giant river otters, harpy eagles and over 400 bird species, reached by boat and small aircraft.",
+        photo: {
+          src: "/places/suriname/voltzberg.jpg",
+          alt: "Voltzberg mountain top, Central Suriname Nature Reserve",
+          credit: "Jan Willem Broekema, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Voltzberg_Mountain_top.jpg",
+        },
       },
       {
         name: "Brownsberg Nature Park",
@@ -3244,10 +3262,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Jodensavanne",
         description: "The ruins of a 17th-century Jewish settlement and one of the oldest synagogues in the Americas, on the Suriname River. Designated a UNESCO World Heritage Site in 2023.",
+        photo: {
+          src: "/places/suriname/jodensavanne.jpg",
+          alt: "Ruins of the Beraha VeSalom synagogue at Jodensavanne, Suriname",
+          credit: "Stephen Fokké, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Ruins_of_Beraha_VeSalom_synagogue_at_Jodensavanne-district_Para,_Stephen_Fokk%C3%A9,_2022.jpg",
+        },
       },
       {
         name: "Peperpot Nature Park",
         description: "A former 18th-century coffee and cocoa plantation in Commewijne, across the river from Paramaribo, now a nature reserve with monkeys, sloths and over 250 bird species alongside old plantation ruins.",
+        photo: {
+          src: "/places/suriname/peperpot.jpg",
+          alt: "The director's house at Peperpot plantation, Suriname",
+          credit: "Pauline van Till, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Directeurshuis_plantage_Peperpot.JPG",
+        },
       },
       {
         name: "Galibi Nature Reserve",
@@ -3256,6 +3286,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Brokopondo Reservoir",
         description: "A large man-made lake formed by the Afobaka Dam, surrounded by rainforest, with drowned-forest boat trips, fishing and access to Maroon river communities.",
+        photo: {
+          src: "/places/suriname/brokopondo-reservoir.jpg",
+          alt: "Brokopondo Reservoir, Suriname",
+          credit: "Mark Ahsmann, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Brokopondo_reservoir_14.JPG",
+        },
       },
     ],
     experiences: [
