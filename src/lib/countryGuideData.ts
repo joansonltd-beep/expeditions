@@ -2340,22 +2340,52 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Brimstone Hill Fortress National Park",
         description: "A UNESCO World Heritage Site (inscribed 1999): a hilltop fortress built by British engineers and enslaved African labour, finished in 1790, with sweeping views over the Caribbean Sea and neighbouring islands.",
+        photo: {
+          src: "/destinations/st-kitts-and-nevis.jpg",
+          alt: "Brimstone Hill Fortress National Park, St. Kitts",
+          credit: "Martin Falbisoner, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Saint_Kitts_-_Brimstone_Hill_Fortress_05.JPG",
+        },
       },
       {
         name: "The St. Kitts Scenic Railway",
         description: "A narrow-gauge railway built in 1912–1926 to move sugar cane, now a 30-mile tourist rail journey around the island's coastline and countryside.",
+        photo: {
+          src: "/places/st-kitts-and-nevis/scenic-railway.jpg",
+          alt: "St. Kitts Scenic Railway train",
+          credit: "David Stanley, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St._Kitts_Scenic_Railway_(49939619506).jpg",
+        },
       },
       {
         name: "Romney Manor",
         description: "A 17th-century plantation estate, once owned by ancestors of Thomas Jefferson, with six acres of botanical gardens built around a Saman tree estimated at over 350 years old.",
+        photo: {
+          src: "/places/st-kitts-and-nevis/romney-manor.jpg",
+          alt: "Romney Manor botanical garden, St. Kitts",
+          credit: "giggel, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Karibik,_St._Kitts_-_Romney_manor_-_Botanical_Garden_-_panoramio.jpg",
+        },
       },
       {
         name: "Timothy Hill",
         description: "A viewpoint on St. Kitts's south-east peninsula where the Atlantic and Caribbean sides of the island are both visible at once.",
+        photo: {
+          src: "/places/st-kitts-and-nevis/timothy-hill-frigate-bay.jpg",
+          alt: "Frigate Bay viewed from Timothy Hill, St. Kitts",
+          credit: "Dr. Thomas Liptak, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St._Kitts_Basseterre_Frigate_Bay.jpg",
+        },
       },
       {
         name: "Nevis Peak",
         description: "The dormant volcano at the centre of Nevis, often cloud-wrapped, with a demanding hike to the summit through rainforest.",
+        photo: {
+          src: "/places/st-kitts-and-nevis/nevis-peak.jpg",
+          alt: "Nevis Peak, the extinct volcano at the centre of Nevis",
+          credit: "David Broad, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Nevis_Peak,_3232_ft_elevation_extinct_volcano,_Nevis_-_panoramio_(1).jpg",
+        },
       },
       {
         name: "South Friars Bay & Cockleshell Bay",
