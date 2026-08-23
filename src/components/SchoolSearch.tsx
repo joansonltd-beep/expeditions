@@ -13,7 +13,16 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
       .map((c) => ({
         ...c,
         schools: c.schools.filter((s) => {
-          const haystack = [s.name, s.note, s.affiliation ?? "", ...s.programs, c.country].join(" ").toLowerCase();
+          const haystack = [
+            s.name,
+            s.note,
+            s.affiliation ?? "",
+            s.public ? "public government state" : "",
+            ...s.programs,
+            c.country,
+          ]
+            .join(" ")
+            .toLowerCase();
           return haystack.includes(q);
         }),
       }))
@@ -25,7 +34,7 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
   return (
     <div>
       <label htmlFor="school-search" className="sr-only">
-        Search by course of study, religious affiliation, school or country
+        Search by course of study, religious affiliation, government/public status, school or country
       </label>
       <div className="relative">
         <input
@@ -33,7 +42,7 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search a course of study (e.g. accounting), affiliation (e.g. adventist), school or country…"
+          placeholder="Search a course (e.g. accounting), affiliation (e.g. adventist), public/government, school or country…"
           className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
         />
         {query ? (
@@ -79,15 +88,24 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
                       : {s.note}
                     </span>
                   </div>
+                  {s.public || s.affiliation ? (
+                    <div className="mt-1.5 ml-4 flex flex-wrap gap-1.5">
+                      {s.public ? (
+                        <span className="rounded-full bg-brand-soft px-2 py-0.5 text-xs font-medium text-brand">
+                          Government / public
+                        </span>
+                      ) : null}
+                      {s.affiliation ? (
+                        <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-slate-700">
+                          {s.affiliation}
+                        </span>
+                      ) : null}
+                    </div>
+                  ) : null}
                   <div className="mt-1.5 ml-4 flex flex-wrap items-center gap-1.5">
                     <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                       Courses offered:
                     </span>
-                    {s.affiliation ? (
-                      <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-slate-700">
-                        {s.affiliation}
-                      </span>
-                    ) : null}
                     {s.programs.map((p) => (
                       <span key={p} className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">
                         {p}

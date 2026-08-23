@@ -4,6 +4,7 @@ export type School = {
   note: string;
   programs: string[];
   affiliation?: string;
+  public?: boolean;
 };
 
 export type CountrySchools = { country: string; schools: School[] };
@@ -51,6 +52,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://ub.edu.bz",
         note: "The national public university, with bachelor's degrees across its four faculties: Education and Arts, Health Sciences, Management and Social Sciences, and Science and Technology.",
         programs: ["Education", "Health Sciences", "Nursing", "Business", "Management", "Social Sciences", "Science", "Technology"],
+        public: true,
       },
       {
         name: "Galen University",
@@ -68,6 +70,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://dsc.edu.dm",
         note: "The national public college, chartered to award bachelor's degrees across arts, sciences and technical education, including a BSN and a BA in English.",
         programs: ["Nursing", "English", "Arts", "Business", "Hospitality", "Tourism", "Natural Sciences", "Social Sciences", "Technical Education"],
+        public: true,
       },
       {
         name: "All Saints University",
@@ -96,6 +99,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://www.uog.edu.gy",
         note: "The national public university, with bachelor's degrees across nine faculties: agriculture and forestry, medicine, engineering, education, social sciences and more.",
         programs: ["Agriculture", "Forestry", "Medicine", "Engineering", "Education", "Social Sciences", "Natural Sciences", "Environmental Studies", "Business", "Entrepreneurship"],
+        public: true,
       },
     ],
   },
@@ -107,6 +111,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://www.utech.edu.jm",
         note: "A public university with bachelor's and graduate degrees across engineering, business, computing, architecture, pharmacy and law.",
         programs: ["Engineering", "Business", "Computing", "Information Technology", "Architecture", "Pharmacy", "Law"],
+        public: true,
       },
       {
         name: "Northern Caribbean University (NCU)",
@@ -120,6 +125,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://themico.edu.jm",
         note: "Long focused on teacher training; offers Bachelor of Education degrees in primary, early childhood, special and physical education, plus other disciplines.",
         programs: ["Education", "Primary Education", "Early Childhood Education", "Special Education", "Physical Education"],
+        public: true,
       },
     ],
   },
@@ -182,6 +188,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://www.uvs.edu",
         note: "The national public university (instruction in Dutch), with bachelor's degrees across six faculties: medicine, law, engineering, economics, education and the sciences.",
         programs: ["Medicine", "Law", "Engineering", "Economics", "Education", "Science"],
+        public: true,
       },
     ],
   },
@@ -193,6 +200,7 @@ export const NATIONAL_INSTITUTIONS: CountrySchools[] = [
         url: "https://utt.edu.tt",
         note: "A public university with bachelor's degrees across engineering, technology, business, education and the arts.",
         programs: ["Engineering", "Technology", "Business", "Education", "Arts", "Fine Arts", "Agriculture"],
+        public: true,
       },
       {
         name: "University of the Southern Caribbean (USC)",
