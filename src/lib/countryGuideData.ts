@@ -558,44 +558,104 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "Historic Bridgetown and its Garrison",
         description:
           "A UNESCO World Heritage Site since 2011: colonial architecture, the careenage waterfront, and the Garrison Savannah, once a British military headquarters.",
+        photo: {
+          src: "/places/barbados/bridgetown-garrison.jpg",
+          alt: "The Cathedral Church of Saint Michael and All Angels, part of Historic Bridgetown and its Garrison, Barbados",
+          credit: "Sachiko Haraguchi / UNESCO, CC BY-SA 3.0 IGO, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Historic_Bridgetown_and_its_Garrison-115165.jpg",
+        },
       },
       {
         name: "George Washington House",
         description:
           "The only house outside the continental US where George Washington lived: six weeks in 1751, aged 19. Now a museum within the Garrison, with access to old tunnels.",
+        photo: {
+          src: "/places/barbados/george-washington-house.jpg",
+          alt: "George Washington House, Barbados",
+          credit: "Jerrye and Roy Klotz, MD, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:GEORGE_WASHINGTON_HOUSE_-_BARBADOS.jpg",
+        },
       },
       {
         name: "St. Nicholas Abbey",
         description: "A well-preserved 1658 plantation house with its own rum distillery, gardens and a heritage railway.",
+        photo: {
+          src: "/places/barbados/st-nicholas-abbey.jpg",
+          alt: "St. Nicholas Abbey, Barbados",
+          credit: "Thinkheritage, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St_Nicholas_Abbey,_Barbados.jpg",
+        },
       },
       {
         name: "Carlisle Bay",
         description: "A calm, clear bay near Bridgetown with several shipwrecks close to shore, popular for snorkelling and swimming with sea turtles.",
+        photo: {
+          src: "/places/barbados/carlisle-bay.jpg",
+          alt: "Carlisle Bay, Barbados",
+          credit: "P. Hughes, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Carlisle_Bay_-_Barbados.jpg",
+        },
       },
       {
         name: "Crane Beach",
         description: "Pink-tinged sand below 80-foot cliffs on the southeast coast, regularly ranked among the world's best beaches.",
+        photo: {
+          src: "/destinations/barbados.jpg",
+          alt: "Crane Beach, Barbados",
+          credit: "Johnmartindavies, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Crane_Beach.JPG",
+        },
       },
       {
         name: "Bathsheba and the east coast",
         description:
           "A rugged Atlantic coastline with the mushroom-shaped rock formations of the Soup Bowl: dramatic for photos and surfing, not for casual swimming.",
+        photo: {
+          src: "/places/barbados/bathsheba.jpg",
+          alt: "Bathsheba Rock, St. Joseph Parish, Barbados",
+          credit: "Jerrye and Roy Klotz, MD, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:BATHSHEBA_ROCK_-_ST._JOSEPH_PARISH_-_BARBADOS.jpg",
+        },
       },
       {
         name: "Harrison's Cave",
         description: "A large limestone cave system with guided tram tours past stalactites, streams and underground chambers.",
+        photo: {
+          src: "/places/barbados/harrisons-cave.jpg",
+          alt: "Inside Harrison's Cave, Barbados",
+          credit: "Berit, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Golden_water,_Harrisons_Cave_(6832478562).jpg",
+        },
       },
       {
         name: "Animal Flower Cave",
         description: "A sea cave on the north coast with a natural swimming pool and panoramic Atlantic views.",
+        photo: {
+          src: "/places/barbados/animal-flower-cave.jpg",
+          alt: "View from the Animal Flower Cave, Barbados",
+          credit: "Berit, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:View_from_The_Animal_Flower_Cave,_Barbados_(6807814333).jpg",
+        },
       },
       {
         name: "Welchman Hall Gully & Andromeda Botanic Gardens",
         description: "A collapsed-cave tropical gully with monkeys and old-growth vegetation, and a coastal botanic garden in Bathsheba with over 500 plant species.",
+        photo: {
+          src: "/places/barbados/andromeda-gardens.jpg",
+          alt: "Andromeda Botanic Gardens, Barbados",
+          credit: "Postdlf, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Andromeda_Botanical_Gardens_04.jpg",
+        },
       },
       {
         name: "Barbados Wildlife Reserve",
         description: "A mahogany-wood reserve in St. Peter where Barbados's green monkeys roam free, best seen at the 11am and 2:30pm feedings.",
+        photo: {
+          src: "/places/barbados/wildlife-reserve.jpg",
+          alt: "A green monkey in Barbados",
+          credit: "Mike's Birds, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:African_Green_Monkey_from_Barbados_(4449731705).jpg",
+        },
       },
     ],
     experiences: [
