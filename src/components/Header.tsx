@@ -9,13 +9,7 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 type NavItem = { href: string; label: string; title?: string };
 
 const GETTING_STARTED: NavItem = { href: "/getting-started", label: "Getting Started" };
-
-const TRAVEL: NavItem[] = [
-  { href: "/flights", label: "Flights" },
-  { href: "/accommodations", label: "Accommodations" },
-  { href: "/transfers", label: "Transfers" },
-  { href: "/travel-visas", label: "Travel Visas" },
-];
+const GETTING_THERE: NavItem = { href: "/getting-there", label: "Getting There" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
@@ -27,7 +21,7 @@ const AFTER: NavItem[] = [
 ];
 
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, ...TRAVEL, ...AFTER].map((l) => [l.href, l])).values()
+  new Map([...MAIN, DESTINATIONS, GETTING_STARTED, GETTING_THERE, ...AFTER].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -38,35 +32,6 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
   const linkClass = (href: string) =>
     `text-sm font-medium transition hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`;
-
-  const Dropdown = ({ label, items }: { label: string; items: NavItem[] }) => {
-    const anyActive = items.some((l) => isActive(l.href));
-    return (
-      <div className="group relative">
-        <button
-          className={`flex items-center gap-1 text-sm font-medium transition hover:text-brand ${anyActive ? "text-brand" : "text-slate-600"}`}
-        >
-          {label}
-          <svg className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path d="M5.5 7.5 10 12l4.5-4.5" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
-          </svg>
-        </button>
-        <div className="invisible absolute left-1/2 top-full z-10 w-56 -translate-x-1/2 translate-y-2 rounded-2xl border border-slate-200 bg-white p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-1 group-hover:opacity-100">
-          {items.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`block rounded-lg px-3.5 py-2.5 text-sm transition hover:bg-brand-soft hover:text-brand ${
-                isActive(l.href) ? "text-brand" : "text-slate-600"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/85 backdrop-blur">
@@ -95,7 +60,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           <Link href={GETTING_STARTED.href} className={linkClass(GETTING_STARTED.href)}>
             {GETTING_STARTED.label}
           </Link>
-          <Dropdown label="Getting There" items={TRAVEL} />
+          <Link href={GETTING_THERE.href} className={linkClass(GETTING_THERE.href)}>
+            {GETTING_THERE.label}
+          </Link>
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
