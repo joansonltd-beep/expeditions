@@ -10,7 +10,6 @@ import {
   DEFAULT_SERVICES,
   DEFAULT_PACKAGES,
   DEFAULT_ADDONS,
-  DEFAULT_STAY,
   DEFAULT_TESTIMONIALS,
   DEFAULT_ABOUT,
   DEFAULT_POLICIES,
@@ -19,7 +18,6 @@ import {
   type ServiceCategory,
   type Package,
   type AddOn,
-  type Stay,
   type Testimonial,
   type AboutData,
   type PoliciesData,
@@ -39,7 +37,6 @@ export type {
   ServiceCategory,
   Package,
   AddOn,
-  Stay,
   Testimonial,
   AboutData,
   PoliciesData,
@@ -63,7 +60,6 @@ const SERVICES_QUERY = `*[_type == "service"]|order(order asc){
 }`;
 const PACKAGES_QUERY = `*[_type == "package"]|order(order asc){ name, priceUsd, features, featured, order }`;
 const ADDONS_QUERY = `*[_type == "addOn"]|order(order asc){ title, usdPrice, amountText, trinidadOnly, order }`;
-const STAY_QUERY = `*[_type == "stay"][0]{ name, tagline, description, tags, features }`;
 const TESTIMONIALS_QUERY = `*[_type == "testimonial"]|order(order asc){ quote, person, context }`;
 const ABOUT_QUERY = `*[_type == "aboutContent"][0]{ intro, sections }`;
 const POLICIES_QUERY = `*[_type == "policiesContent"][0]{ intro, sections }`;
@@ -143,11 +139,6 @@ export async function getPackages(): Promise<Package[]> {
 export async function getAddOns(): Promise<AddOn[]> {
   const res = await query<AddOn[]>(ADDONS_QUERY);
   return res?.length ? res : DEFAULT_ADDONS;
-}
-
-export async function getStay(): Promise<Stay> {
-  const res = await query<Partial<Stay>>(STAY_QUERY);
-  return res ? { ...DEFAULT_STAY, ...stripNulls(res) } : DEFAULT_STAY;
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {

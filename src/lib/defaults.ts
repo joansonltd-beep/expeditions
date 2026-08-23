@@ -123,15 +123,14 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "travel",
     order: 2,
     shortBlurb:
-      "Hotels, Airbnb and short-stay apartments while you settle in or scout your new island, including our own room in Trinidad.",
-    cardFeatures: ["Hotel and guesthouse bookings", "Airbnb and vacation rentals", "A Likkle Rest by Jo from $30 USD"],
+      "Hotels, Airbnb and short-stay apartments while you settle in or scout your new island.",
+    cardFeatures: ["Hotel and guesthouse bookings", "Airbnb and vacation rentals", "Best available prices"],
     intro:
       "Need somewhere to stay while you settle in, or for a scouting trip before you move? We help you find and book the right accommodation, whether it is a hotel, an Airbnb, or a short-stay apartment.",
     body: [
       {
         paragraphs: [
           "We work with a range of options to match your comfort, location, and budget needs, whether you are staying a few nights while you get your bearings or a few weeks while your certificate and bank account come through.",
-          "For those settling in or visiting Trinidad, we personally offer a private Airbnb room through Expeditions With Jo (see below), available as one of several options based on your preferences, and the cheapest option available on the island.",
         ],
         note: "For more information, send an email with your itinerary to stays@expeditionswithjo.com or use the chat button.",
       },
@@ -162,7 +161,7 @@ export const DEFAULT_SERVICES: Service[] = [
           "Airport pickups and drop-offs",
           "Door-to-door service, no long taxi lines",
         ],
-        note: "Local Trinidad transfers, including airport pick up and drop off for guests at A Likkle Rest by Jo, are available for $5 USD each.",
+        note: "Local Trinidad transfers, including airport pick up and drop off, are available for $5 USD each.",
       },
     ],
     primaryLink: { label: "Book your transfers", href: "https://www.book-online-transfers.com/en/expeditionswithjo" },
@@ -338,29 +337,6 @@ export const DEFAULT_ADDONS: AddOn[] = [
   { title: "Business Stamp", usdPrice: 50, order: 6 },
   { title: "Website setup", usdPrice: 250, order: 7 },
 ];
-
-// --- featured stay ------------------------------------------------------
-export type Stay = {
-  name: string;
-  tagline: string;
-  description: string;
-  tags: string[];
-  features: string[];
-};
-
-export const DEFAULT_STAY: Stay = {
-  name: "A Likkle Rest by Jo",
-  tagline: "Our own stay in Trinidad",
-  description:
-    "Owned and managed by us, A Likkle Rest by Jo offers a clean, cozy space to unwind. Located in a quiet, convenient area, it is the perfect spot to refresh, recharge, and feel at home, even if just for a night. Simple comfort. Easy booking. A likkle rest, just when you need it.",
-  tags: ["Single or double occupancy", "Private room, queen bed", "Free Wi-Fi & breakfast nook", "Quiet, secure neighbourhood"],
-  features: [
-    "5-minute walk to major malls, restaurants and points of interest",
-    "Under 10 minutes' drive to the airport, perfect for layovers and visa appointments",
-    "$30 USD a night, the cheapest option available",
-    "Airport pick up and drop off for just $5 USD each",
-  ],
-};
 
 // --- testimonials -------------------------------------------------------
 export type Testimonial = { quote: string; person: string; context: string };

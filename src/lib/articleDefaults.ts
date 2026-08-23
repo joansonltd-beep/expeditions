@@ -306,13 +306,13 @@ export const DEFAULT_ARTICLES: Article[] = [
       {
         heading: "Stay close to the airport and your appointment",
         paragraphs: [
-          "We offer our own room, A Likkle Rest by Jo, in a quiet, convenient area under ten minutes from the airport and a short walk from malls and restaurants. It is a clean, comfortable place to rest before or after your appointment, at $30 USD a night, the cheapest option on the island.",
+          "We help you find and book a clean, comfortable, affordable place to stay close to the airport, so you are not spending your visit crossing the island. Send us your dates and we will line up an option that fits your budget.",
         ],
       },
       {
         heading: "Sort your transfers",
         paragraphs: [
-          "Airport pick up and drop off for guests is just $5 USD each way, so you do not have to worry about finding a ride when you land or when it is time to head home.",
+          "Local Trinidad airport pick up and drop off is just $5 USD each way, so you do not have to worry about finding a ride when you land or when it is time to head home.",
         ],
       },
       {

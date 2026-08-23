@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
 
@@ -117,19 +116,8 @@ export function PageHeader({
           </p>
         ) : null}
         <Container className="relative py-20 sm:py-24">
-          <p className="mb-4 text-sm text-white/70">
-            <Link href="/" className="hover:text-white">
-              Home
-            </Link>{" "}
-            / {crumb}
-          </p>
           <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
             <div>
-              {icon ? (
-                <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-white text-brand shadow-md ring-1 ring-white/40">
-                  {icon}
-                </div>
-              ) : null}
               <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
               {intro ? <p className="mt-4 max-w-2xl text-lg text-white/85">{intro}</p> : null}
             </div>
@@ -151,12 +139,6 @@ export function PageHeader({
         className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-accent-soft blur-3xl"
       />
       <Container className="relative py-14 sm:py-16">
-        <p className="mb-4 text-sm text-slate-500">
-          <Link href="/" className="hover:text-brand">
-            Home
-          </Link>{" "}
-          / {crumb}
-        </p>
         <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
           <div>
             {icon ? (

@@ -18,7 +18,6 @@ import {
   DEFAULT_SERVICES,
   DEFAULT_PACKAGES,
   DEFAULT_ADDONS,
-  DEFAULT_STAY,
   DEFAULT_TESTIMONIALS,
   DEFAULT_ABOUT,
   DEFAULT_POLICIES,
@@ -97,16 +96,6 @@ async function run() {
     sections: DEFAULT_POLICIES.sections.map((s, i) => ({ _type: "contentSection", _key: `pol-${i}`, ...s })),
   });
 
-  tx.createOrReplace({
-    _id: "stay",
-    _type: "stay",
-    name: DEFAULT_STAY.name,
-    tagline: DEFAULT_STAY.tagline,
-    description: DEFAULT_STAY.description,
-    tags: DEFAULT_STAY.tags,
-    features: DEFAULT_STAY.features,
-  });
-
   DEFAULT_SERVICES.forEach((s) => {
     tx.createOrReplace({
       _id: `service-${s.slug}`,
@@ -155,7 +144,7 @@ async function run() {
 
   await tx.commit();
   console.log(
-    "Resync complete (createOrReplace): settings, about, policies, stay, business setup, services, packages, add-ons, testimonials."
+    "Resync complete (createOrReplace): settings, about, policies, business setup, services, packages, add-ons, testimonials."
   );
 }
 
