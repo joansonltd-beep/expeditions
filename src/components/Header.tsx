@@ -8,8 +8,8 @@ import { useSiteClient } from "@/components/SiteSettingsProvider";
 
 type NavItem = { href: string; label: string; title?: string };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Come See Me", title: "Travel within CARICOM" };
-const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Live with Me", title: "Relocating within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Come See", title: "Travel within CARICOM" };
+const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Live", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Study" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];

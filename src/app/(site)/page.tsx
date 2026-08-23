@@ -158,7 +158,7 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* TRAVEL — "Come See Me": the travel-agency side, alongside relocation */}
+      {/* TRAVEL — "Come See": the travel-agency side, alongside relocation */}
       <Section alt>
         <SectionHead eyebrow={home.travelEyebrow} title={home.travelTitle} intro={home.travelIntro} />
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
@@ -177,7 +177,7 @@ export default async function HomePage() {
         </div>
         <p className="mt-8 text-center">
           <Link href="/getting-there" className="text-sm font-semibold text-brand hover:underline">
-            See the full Come See Me page →
+            See the full Come See page →
           </Link>
         </p>
       </Section>
