@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSiteClient } from "@/components/SiteSettingsProvider";
+
+// Header height in px, kept in sync with the h-[70px] nav row below. Used to
+// pull the homepage hero up underneath the header so it can go transparent.
+export const HEADER_HEIGHT = 70;
 
 type NavItem = { href: string; label: string; title?: string };
 
@@ -27,15 +31,34 @@ const MOBILE_LINKS: NavItem[] = Array.from(
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { chatbotUrl } = useSiteClient();
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+
+  // Only the homepage has a hero photo to go transparent over; every other
+  // page is solid from the start since there's nothing but light content
+  // behind the header there.
+  const transparent = isHome && !scrolled;
+
+  useEffect(() => {
+    if (!isHome) return;
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
 
   const linkClass = (href: string) =>
     `text-sm font-medium transition hover:text-white ${isActive(href) ? "text-white" : "text-white/70"}`;
 
   return (
-    <header className="sticky top-0 z-40 bg-brand-dark shadow-md">
+    <header
+      className={`sticky top-0 z-40 transition-colors duration-300 ${
+        transparent ? "bg-transparent shadow-none" : "bg-brand-dark shadow-md"
+      }`}
+    >
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-white">
           {logoUrl ? (

@@ -34,8 +34,9 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* HERO — full-bleed photo with dark overlay */}
-      <section className="relative isolate flex min-h-[68vh] items-center overflow-hidden sm:min-h-[80vh]">
+      {/* HERO — full-bleed photo with dark overlay. Pulled up by the header's
+          height so the transparent header sits directly on the photo. */}
+      <section className="relative isolate -mt-[70px] flex min-h-[68vh] items-center overflow-hidden pt-[70px] sm:min-h-[80vh]">
         <RotatingHero />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/80" />
         <Container className="relative z-10 py-24 sm:py-28">
