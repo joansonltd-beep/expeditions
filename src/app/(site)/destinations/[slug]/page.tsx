@@ -111,6 +111,19 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         title={`Moving to ${g.name}`}
         crumb={g.name}
         intro={g.tagline}
+        image={
+          googleMapsEmbedUrl ? (
+            <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+              <iframe
+                src={googleMapsEmbedUrl}
+                title={`Map of ${g.name}`}
+                className="aspect-square w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          ) : undefined
+        }
       />
 
       {/* OVERVIEW + DEMOGRAPHICS */}

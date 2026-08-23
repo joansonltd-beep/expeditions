@@ -84,11 +84,13 @@ export function PageHeader({
   title,
   intro,
   crumb,
+  image,
 }: {
   icon?: React.ReactNode;
   title: string;
   intro?: string;
   crumb: string;
+  image?: React.ReactNode;
 }) {
   return (
     <div className="border-b border-slate-200 bg-gradient-to-b from-brand-soft/60 to-transparent">
@@ -99,9 +101,14 @@ export function PageHeader({
           </Link>{" "}
           / {crumb}
         </p>
-        {icon ? <div className="mb-3 text-4xl">{icon}</div> : null}
-        <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
-        {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
+        <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
+          <div>
+            {icon ? <div className="mb-3 text-4xl">{icon}</div> : null}
+            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
+            {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
+          </div>
+          {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
+        </div>
       </Container>
     </div>
   );
