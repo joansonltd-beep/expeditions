@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
 export const metadata: Metadata = {
@@ -30,6 +31,9 @@ export default function DestinationsPage() {
         intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols."
       />
       <Section>
+        <div className="mx-auto mb-6 max-w-3xl">
+          <RandomDestinationLink slugs={countries.map((g) => g.slug)} />
+        </div>
         <div className="mx-auto grid max-w-3xl gap-5">
           {countries.map((g) => (
             <Link

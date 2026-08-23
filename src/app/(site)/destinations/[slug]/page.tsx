@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES, getCountryGuide } from "@/lib/countryGuideData";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -635,6 +636,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <Section alt={flip}>
           <SectionHead eyebrow="More countries" title="Other countries at a glance" />
           <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
+            <RandomDestinationLink slugs={others.map((o) => o.slug)} />
             {others.map((o) => (
               <Link
                 key={o.slug}
