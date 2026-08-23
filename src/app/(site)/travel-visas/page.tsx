@@ -4,10 +4,11 @@ import { getService } from "@/lib/siteData";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Canadian Visa Help from Trinidad",
+  title: "Free Canadian Visa Help from Trinidad",
   description:
-    "Step-by-step Canadian visa help from Trinidad for Grenadian, Jamaican and CARICOM citizens: application forms, biometrics appointments in Port of Spain, and document review. US visas coming soon.",
+    "Free, step-by-step Canadian visa help from Trinidad for Grenadian, Jamaican and CARICOM citizens: application forms, biometrics appointments in Port of Spain, and document review, at no cost. US visas coming soon.",
   keywords: [
+    "free Canadian visa help",
     "Canadian visa from Trinidad",
     "Canadian visa Grenada",
     "Canadian visa Jamaica",
@@ -53,6 +54,14 @@ const faq = {
       acceptedAnswer: {
         "@type": "Answer",
         text: "US visa support is coming soon. Contact us and we will let you know when it is available.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Canadian visa assistance free?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All of our Canadian visa assistance, from application form guidance to booking your biometrics appointment, is completely free. The only fees involved are the Canadian government's own visa and biometrics fees, paid directly to IRCC.",
       },
     },
   ],

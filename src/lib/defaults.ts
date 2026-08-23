@@ -175,10 +175,10 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "visa",
     order: 5,
     shortBlurb:
-      "Step-by-step help with the Canadian visa process from Trinidad, especially for Grenadian applicants.",
-    cardFeatures: ["Application form guidance", "Biometrics in Port of Spain", "US visas coming soon"],
+      "Free, step-by-step help with the Canadian visa process from Trinidad, especially for Grenadian applicants.",
+    cardFeatures: ["100% free assistance", "Application form guidance", "Biometrics in Port of Spain", "US visas coming soon"],
     intro:
-      "We guide CARICOM citizens, especially Grenadians, through every step of the Canadian visa process from Trinidad.",
+      "We guide CARICOM citizens, especially Grenadians, through every step of the Canadian visa process from Trinidad, completely free of charge.",
     body: [
       {
         heading: "How we help",
@@ -188,7 +188,7 @@ export const DEFAULT_SERVICES: Service[] = [
           "Document review and approval guidance",
           "Answers to frequently asked questions for Grenadian applicants",
         ],
-        note: "US visas coming soon.",
+        note: "This assistance is completely free. You only ever pay the Canadian government's own visa and biometrics fees directly to IRCC; we never charge for our help. US visas coming soon.",
       },
     ],
     primaryLink: null,
