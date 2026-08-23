@@ -79,7 +79,10 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
                       : {s.note}
                     </span>
                   </div>
-                  <div className="mt-1.5 ml-4 flex flex-wrap gap-1.5">
+                  <div className="mt-1.5 ml-4 flex flex-wrap items-center gap-1.5">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                      Courses offered:
+                    </span>
                     {s.affiliation ? (
                       <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-slate-700">
                         {s.affiliation}
