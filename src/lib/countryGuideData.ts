@@ -1485,14 +1485,32 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Molinere Underwater Sculpture Park",
         description: "The world's first underwater sculpture park (opened 2006), with more than 80 submerged works by Jason deCaires Taylor slowly becoming an artificial reef.",
+        photo: {
+          src: "/places/grenada/molinere.jpg",
+          alt: "Underwater sculptures at Molinere Underwater Sculpture Park, Grenada",
+          credit: "Boris Kasimov, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Underwater_sculptures_at_Molinere_Underwater_Sculpture_Park.jpg",
+        },
       },
       {
         name: "Grand Anse Beach",
         description: "Grenada's best-known beach: two miles of soft white sand, calm water, and restaurants and bars along the shore.",
+        photo: {
+          src: "/destinations/grenada.jpg",
+          alt: "Grand Anse Beach, Grenada",
+          credit: "Varun Kapoor, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Grand_Anse_Beach_Grenada.jpg",
+        },
       },
       {
         name: "Annandale Falls",
         description: "An easily reached waterfall in lush tropical grounds, good for swimming and photos.",
+        photo: {
+          src: "/places/grenada/annandale-falls.jpg",
+          alt: "Annandale Falls, Grenada",
+          credit: "Billwaa, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Annandale_Waterfalls.jpg",
+        },
       },
       {
         name: "Grand Etang National Park",
@@ -1509,18 +1527,42 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Belmont Estate",
         description: "A 17th-century plantation turned working organic cocoa farm, with tours through the chocolate-making process.",
+        photo: {
+          src: "/places/grenada/belmont-estate.jpg",
+          alt: "Belmont Estate, St. Patrick's, Grenada",
+          credit: "Dpursoo, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Belmont_Estate,_St_Patrick's,_Grenada_1.JPG",
+        },
       },
       {
         name: "Carriacou",
         description: "Grenada's larger sister island, quieter and less developed: Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
+        photo: {
+          src: "/places/grenada/carriacou.jpg",
+          alt: "Hillsborough, Carriacou",
+          credit: "Public domain / GFDL, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Hillsborough_Carriacou.jpg",
+        },
       },
       {
         name: "The Carenage & Fort George",
         description: "St. George's horseshoe-shaped historic harbour, ringed by colourful buildings and restaurants, overlooked by Fort George, an 18th-century fort with panoramic views over the capital.",
+        photo: {
+          src: "/places/grenada/carenage.jpg",
+          alt: "The Carenage, St. George's, Grenada",
+          credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
+        },
       },
       {
         name: "Fort Frederick",
         description: "A well-preserved fort completed in 1783, nicknamed the \"backward-facing fort\" since its cannons point inland rather than out to sea. It served as PRA headquarters during the 1979 revolution, and offers wide views over the Carenage from 244m up.",
+        photo: {
+          src: "/places/grenada/fort-frederick.jpg",
+          alt: "Fort Frederick, Grenada",
+          credit: "David Stanley, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_Frederick,_Grenada_(40001365693).jpg",
+        },
       },
     ],
     experiences: [
