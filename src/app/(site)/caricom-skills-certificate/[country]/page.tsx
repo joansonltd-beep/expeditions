@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   if (!c) return { title: "CARICOM Skills Certificate" };
   return {
     title: `CSME Steps for ${c.name}: How to Apply for a CARICOM Skills Certificate`,
-    description: `Want to move to ${c.name}? Here are the exact CSME steps for ${c.name}: where to apply (${c.authority}), who qualifies, the documents, the fee, and how to get a CARICOM Skills Certificate so you can live and work there.`,
+    description: `We can help you move to ${c.name}. Here are the exact CSME steps for ${c.name}: where to apply (${c.authority}), who qualifies, the documents, the fee, and how to get a CARICOM Skills Certificate so you can live and work there.`,
     keywords: [
       `CSME steps ${c.name}`,
       `CSME steps in ${c.name}`,
@@ -82,7 +82,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
         icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
         title={`CARICOM Skills Certificate in ${c.name}`}
         crumb={c.name}
-        intro={`How to apply for a CARICOM Skills Certificate (also called the CSME Skills Certificate) in ${c.name}, with the office to apply to, who qualifies, and what you need.`}
+        intro={`We can help you apply for a CARICOM Skills Certificate (also called the CSME Skills Certificate) in ${c.name}: the office to apply to, who qualifies, and what you need.`}
       />
 
       {/* WHERE TO APPLY */}
@@ -193,7 +193,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-slate-900">Who can apply</h2>
           <p className="mt-2 text-slate-600">
-            You can apply if you are a CARICOM national in one of the 12 approved categories of skilled workers:
+            We can help if you are a CARICOM national in one of the 12 approved categories of skilled workers:
           </p>
           <CheckList items={CSME_CATEGORIES} className="mt-4" />
         </div>

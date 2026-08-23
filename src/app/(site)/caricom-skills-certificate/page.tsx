@@ -8,7 +8,7 @@ import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES 
 export const metadata: Metadata = {
   title: "CARICOM Skills Certificate (CSME): How to Work in Another Caribbean Country",
   description:
-    "How to get a CARICOM Skills Certificate (CSME) and work in another Caribbean country without a work permit. The eligible categories, the documents, the fees, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
+    "We can help you get a CARICOM Skills Certificate (CSME) and work in another Caribbean country without a work permit. The eligible categories, the documents, the fees, the steps, and the exact office to apply to in every CARICOM country, from Trinidad and Jamaica to Grenada, Guyana, Barbados and more.",
   keywords: [
     "CARICOM skills certificate",
     "CARICOM skill certificate",
@@ -49,7 +49,7 @@ export default function CsmePage() {
         icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
         title="CARICOM Skills Certificate (CSME): How to Apply"
         crumb="Guides"
-        intro="A clear guide to the CARICOM Skills Certificate, also called the CSME Skills Certificate, with the steps and the exact office to apply to in each CARICOM country. Pick your country below."
+        intro="We can help you get a CARICOM Skills Certificate, also called the CSME Skills Certificate: the steps and the exact office to apply to in each CARICOM country. Pick your country below."
       />
 
       {/* WHAT IT IS */}
@@ -69,7 +69,7 @@ export default function CsmePage() {
 
           <h2 className="mt-10 text-2xl font-bold text-slate-900">Who can apply</h2>
           <p className="mt-2 text-slate-600">
-            You can apply if you are a CARICOM national in one of the 12 approved categories of skilled workers:
+            We can help if you are a CARICOM national in one of the 12 approved categories of skilled workers:
           </p>
           <CheckList items={CSME_CATEGORIES} className="mt-4" />
         </div>
