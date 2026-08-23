@@ -5,6 +5,7 @@ import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
 import FinancePricing from "@/components/FinancePricing";
+import CtaButtons from "@/components/CtaButtons";
 import { getService, getPackages, getAddOns } from "@/lib/siteData";
 import { BANKING_ISLANDS, BANK_LABEL, BANK_DOCUMENTS, BANK_NONRESIDENT_DOCUMENTS } from "@/lib/bankingData";
 
@@ -192,6 +193,18 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
           <div className="mt-8 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
             This is guidance, and banks change their fees and document lists. Confirm the current requirements with{" "}
             {i.bankName} before you travel to a branch.
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 className="text-lg font-semibold text-slate-900">We can handle this for you</h3>
+            <p className="mt-2 text-slate-600">
+              Gathering documents, opening the account and everything else needed for a successful move to{" "}
+              {i.name}, from your visa or CSME certificate to flights, housing and banking, is exactly what we do
+              every day. Reach out and we'll walk you through it.
+            </p>
+            <div className="mt-4">
+              <CtaButtons message={`Hi Jo, I'd like help opening a bank account and relocating to ${i.name}.`} />
+            </div>
           </div>
         </div>
       </Section>

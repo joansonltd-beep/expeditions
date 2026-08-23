@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import CtaButtons from "@/components/CtaButtons";
 import { COUNTRY_GUIDES, getCountryGuide } from "@/lib/countryGuideData";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -408,6 +409,17 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               , as of {g.movingHere.asOf}. Visa, residency and tax rules change: confirm current requirements with the
               relevant government agency before acting on them.
             </p>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="text-lg font-semibold text-slate-900">We can handle this for you</h3>
+              <p className="mt-2 text-slate-600">
+                Visa or CSME paperwork, banking, housing, flights and everything else needed for a successful move to{" "}
+                {g.name}: this is exactly what we do every day. Reach out and we'll walk you through every step.
+              </p>
+              <div className="mt-4">
+                <CtaButtons message={`Hi Jo, I'd like help relocating to ${g.name}.`} />
+              </div>
+            </div>
           </div>
         </Section>
       ) : null}

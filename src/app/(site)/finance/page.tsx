@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Section, PageHeader } from "@/components/ui";
+import { Section, PageHeader, SectionHead } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import BankingPicker from "@/components/BankingPicker";
+import CtaButtons from "@/components/CtaButtons";
 import { BANKING_ISLANDS } from "@/lib/bankingData";
 
 export const metadata: Metadata = {
@@ -35,6 +36,19 @@ export default function BankingHubPage() {
       <Section>
         <div className="mx-auto max-w-3xl">
           <BankingPicker islands={BANKING_ISLANDS} />
+        </div>
+      </Section>
+
+      {/* WE HANDLE THIS */}
+      <Section alt>
+        <div className="mx-auto max-w-3xl">
+          <SectionHead
+            eyebrow="Every step, one contact"
+            title="We can handle this and everything else"
+            intro="Banking is one piece of the move. From your visa or CSME certificate, to flights, housing and getting your account opened, we handle every step of a successful relocation."
+            center={false}
+          />
+          <CtaButtons message="Hi Jo, I'd like help opening a bank account and relocating." />
         </div>
       </Section>
     </>

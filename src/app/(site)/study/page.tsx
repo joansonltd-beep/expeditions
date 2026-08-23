@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Section, PageHeader, SectionHead } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import SchoolSearch from "@/components/SchoolSearch";
 import { getSiteSettings } from "@/lib/siteData";
+import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
 
 export const metadata: Metadata = {
   title: "Studying in Another CARICOM Country",
@@ -19,96 +21,11 @@ export const metadata: Metadata = {
 };
 
 const UWI_CAMPUSES = [
-  { name: "Mona", country: "Jamaica" },
-  { name: "St. Augustine", country: "Trinidad and Tobago" },
-  { name: "Cave Hill", country: "Barbados" },
-  { name: "Five Islands", country: "Antigua and Barbuda" },
-  { name: "Open Campus", country: "Online, region-wide" },
-];
-
-const NATIONAL_INSTITUTIONS: { country: string; schools: { name: string; note: string }[] }[] = [
-  {
-    country: "Antigua and Barbuda",
-    schools: [
-      { name: "American University of Antigua (AUA)", note: "MD and a Bachelor of Science in Health and Human Sciences." },
-      { name: "University of Health Sciences Antigua (UHSA)", note: "MD and a Bachelor of Science in Nursing." },
-    ],
-  },
-  {
-    country: "Barbados",
-    schools: [
-      { name: "Ross University School of Medicine", note: "MD; relocated from Dominica to Bridgetown in 2019." },
-      { name: "American University of Integrative Sciences (AUIS)", note: "Medical school with undergraduate pre-med pathways." },
-    ],
-  },
-  {
-    country: "Belize",
-    schools: [
-      { name: "University of Belize", note: "The national public university, with bachelor's degrees across sciences, business, education, agriculture and nursing." },
-      { name: "Galen University", note: "A private university with bachelor's degrees in business, accounting, education, computer science and social science." },
-    ],
-  },
-  {
-    country: "Dominica",
-    schools: [
-      { name: "Dominica State College", note: "The national public college, chartered to award bachelor's degrees across arts, sciences and technical education." },
-      { name: "All Saints University", note: "MD, plus bachelor's degrees in nursing and medical/diagnostic imaging." },
-    ],
-  },
-  {
-    country: "Grenada",
-    schools: [
-      { name: "St. George's University (SGU)", note: "Best known for medicine and veterinary medicine, but its School of Arts and Sciences also offers bachelor's degrees in business, biology, psychology, IT, nursing and more." },
-    ],
-  },
-  {
-    country: "Guyana",
-    schools: [
-      { name: "University of Guyana", note: "The national public university, with the region's widest bachelor's degree range across nine faculties: agriculture, medicine, engineering, education, social sciences and more." },
-    ],
-  },
-  {
-    country: "Jamaica",
-    schools: [
-      { name: "University of Technology, Jamaica (UTech)", note: "A public university with bachelor's and graduate degrees in engineering, business, science, technology and architecture." },
-      { name: "Northern Caribbean University (NCU)", note: "A private Seventh-day Adventist university with bachelor's degrees across sciences, humanities, business and education." },
-      { name: "The Mico University College", note: "Long focused on teacher training, now offering bachelor's degrees across a wider range of disciplines too." },
-    ],
-  },
-  {
-    country: "St. Kitts and Nevis",
-    schools: [
-      { name: "University of Medicine and Health Sciences (UMHS)", note: "MD, based in Basseterre." },
-      { name: "Windsor University School of Medicine", note: "MD, based in Cayon." },
-      { name: "Ross University School of Veterinary Medicine", note: "Doctor of Veterinary Medicine (DVM), based in Basseterre." },
-    ],
-  },
-  {
-    country: "Saint Lucia",
-    schools: [
-      { name: "American International Medical University (AIMU)", note: "MD and nursing degrees, based in Gros Islet." },
-      { name: "Monroe College, Saint Lucia campus", note: "Bachelor's degrees in business, hospitality management and information technology." },
-    ],
-  },
-  {
-    country: "St. Vincent and the Grenadines",
-    schools: [
-      { name: "American University of St. Vincent School of Medicine (AUS)", note: "MD, plus bachelor's degrees in nursing, health sciences, accounting and IT/cybersecurity." },
-    ],
-  },
-  {
-    country: "Suriname",
-    schools: [
-      { name: "Anton de Kom University of Suriname", note: "The national public university (instruction in Dutch), with bachelor's degrees across medicine, law, engineering, economics, education and the sciences." },
-    ],
-  },
-  {
-    country: "Trinidad and Tobago",
-    schools: [
-      { name: "University of Trinidad and Tobago (UTT)", note: "A public university with bachelor's degrees across engineering, technology, business, education and the arts." },
-      { name: "University of the Southern Caribbean (USC)", note: "A private Seventh-day Adventist university with bachelor's degrees across business, science and the arts." },
-    ],
-  },
+  { name: "Mona", country: "Jamaica", url: "https://www.mona.uwi.edu" },
+  { name: "St. Augustine", country: "Trinidad and Tobago", url: "https://sta.uwi.edu" },
+  { name: "Cave Hill", country: "Barbados", url: "https://www.cavehill.uwi.edu" },
+  { name: "Five Islands", country: "Antigua and Barbuda", url: "https://fiveislands.uwi.edu" },
+  { name: "Open Campus", country: "Online, region-wide", url: "https://www.open.uwi.edu" },
 ];
 
 export default async function StudyPage() {
@@ -151,10 +68,16 @@ export default async function StudyPage() {
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {UWI_CAMPUSES.map((c) => (
-              <div key={c.name} className="rounded-xl border border-slate-200 bg-white px-4 py-3">
-                <p className="font-semibold text-slate-900">{c.name}</p>
+              <a
+                key={c.name}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-brand"
+              >
+                <p className="font-semibold text-slate-900">{c.name} ↗</p>
                 <p className="text-sm text-slate-600">{c.country}</p>
-              </div>
+              </a>
             ))}
           </div>
           <p className="mt-4 text-slate-600">
@@ -176,24 +99,8 @@ export default async function StudyPage() {
             smaller islands are known for hosting offshore medical schools, degree-granting institutions that also
             usually offer bachelor's degrees in nursing and other health sciences alongside the MD.
           </p>
-          <div className="mt-6 space-y-6">
-            {NATIONAL_INSTITUTIONS.map((c) => (
-              <div key={c.country}>
-                <h3 className="font-semibold text-slate-900">{c.country}</h3>
-                <ul className="mt-2 space-y-2">
-                  {c.schools.map((s) => (
-                    <li key={s.name} className="flex gap-2 text-sm text-slate-600">
-                      <span aria-hidden="true" className="mt-0.5 text-brand">
-                        •
-                      </span>
-                      <span>
-                        <span className="font-medium text-slate-800">{s.name}:</span> {s.note}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="mt-6">
+            <SchoolSearch institutions={NATIONAL_INSTITUTIONS} />
           </div>
           <p className="mt-6 text-sm text-slate-500">
             This list covers degree-granting institutions (bachelor's level and up) in the countries we cover.
@@ -235,20 +142,22 @@ export default async function StudyPage() {
         </div>
       </Section>
 
-      {/* HOW WE HELP */}
+      {/* WE HANDLE APPLICATION THROUGH FIRST SEMESTER */}
       <Section>
         <div className="mx-auto max-w-3xl">
           <SectionHead
-            eyebrow="Where we come in"
-            title="We can still help around the edges"
-            intro="The visa or permit itself has to go through the destination country directly, but the rest of the move is exactly what we do every day."
+            eyebrow="Every step, one contact"
+            title="From application to your first semester, we can help"
+            intro="Whichever school on this page you choose, you don't have to coordinate it all yourself. We help get you prepared and ready to go, from the application itself through to being settled in for your first semester."
             center={false}
           />
           <ul className="mt-2 space-y-2">
             {[
+              "Working through the school's application, required documents and admission timeline",
+              "The student visa or permit process with the destination country's immigration authority",
               "Cost of living, banking and what to expect once you land, country by country",
               "Opening a bank account once you arrive, so you're not relying on cash or a foreign card",
-              "Flights, a place to stay for your first few weeks, and airport transfers",
+              "Flights, housing for your first few weeks (or your first semester), and airport transfers",
             ].map((item) => (
               <li key={item} className="flex gap-2 text-sm text-slate-600">
                 <span aria-hidden="true" className="mt-0.5 text-brand">
@@ -264,14 +173,15 @@ export default async function StudyPage() {
           </p>
           <div className="mt-6 border-t border-slate-200 pt-6">
             <p className="text-slate-600">
-              Have a question about studying in another CARICOM country? Reach out on WhatsApp, chat, or email{" "}
+              Have a question about studying in another CARICOM country, or ready to get started on an application?
+              Reach out on WhatsApp, chat, or email{" "}
               <a href={`mailto:${settings.generalEmail}`} className="font-semibold text-brand hover:underline">
                 {settings.generalEmail}
               </a>
               .
             </p>
             <div className="mt-4">
-              <CtaButtons message="Hi Jo, I have a question about studying in another CARICOM country." />
+              <CtaButtons message="Hi Jo, I'd like help preparing to study in another CARICOM country." />
             </div>
           </div>
         </div>
