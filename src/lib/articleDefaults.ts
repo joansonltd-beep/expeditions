@@ -16,6 +16,63 @@ const VISA_DISCLAIMER =
 
 export const DEFAULT_ARTICLES: Article[] = [
   {
+    slug: "jamaica-permanent-residence-guide",
+    title: "How to Apply for Permanent Residence in Jamaica",
+    excerpt:
+      "Permanent residence in Jamaica goes through PICA, has to be applied for in person in Jamaica, and costs J$100,000. Here's the full document checklist and what to expect.",
+    publishedAt: "2026-08-23",
+    keywords: [
+      "Jamaica permanent residence",
+      "PICA permanent residence application",
+      "how to apply for permanent residence Jamaica",
+      "Jamaica permanent residence documents",
+      "Jamaica permanent residence fee",
+    ],
+    body: [
+      {
+        paragraphs: [
+          "Permanent residence is a separate track from the CSME Skills Certificate: where CSME is specifically for CARICOM nationals in one of 12 approved work categories, permanent residence through the Passport, Immigration and Citizenship Agency (PICA) is open to anyone who fits one of its categories, CARICOM national or not, and grants a more settled status. The application has to be made in person in Jamaica. It can't be submitted through the Jamaican High Commission or a Consulate abroad.",
+        ],
+      },
+      {
+        heading: "Who can apply, and under which category",
+        bullets: [
+          "Employment: at least 3 years of continuous employment in Jamaica",
+          "Retirement",
+          "Marriage to a Jamaican citizen",
+          "Dependent of someone who already holds permanent residence",
+          "Previous Unconditional Landing holders, by virtue of a prior marriage",
+        ],
+      },
+      {
+        heading: "Documents you'll need",
+        bullets: [
+          "A valid passport with at least 6 months left on it",
+          "Your original birth certificate",
+          "If married, your marriage certificate (officially translated if it isn't in English), plus details of your spouse, children and any other dependents",
+          "A medical certificate confirming good health, officially translated if needed",
+          "A police certificate from your country of residence, such as a UK DBS/Criminal Record check, officially translated if needed",
+          "Two identical passport-sized photographs, certified in Jamaica by a bank manager or Justice of the Peace",
+          "Evidence of your financial status: bank accounts, property you own, or business and other investments",
+          "A letter explaining your reasons for seeking permanent residence, plus two reference letters from reputable Jamaican nationals or acquaintances, all addressed to the Chief Immigration Officer at PICA",
+        ],
+      },
+      {
+        heading: "The fee, the interview, and how long it takes",
+        paragraphs: [
+          "The application fee is J$100,000, payable to PICA and non-refundable. As part of the approval process, every applicant is interviewed by PICA's Investigation and Surveillance Unit. Processing typically takes 3 to 6 months from submission.",
+        ],
+      },
+      {
+        heading: "If you're a CARICOM national",
+        paragraphs: [
+          "If your work falls into one of the 12 approved CSME categories, the CSME Skills Certificate is usually the faster route to living and working in Jamaica, and it doesn't carry this fee or in-person-only restriction. Permanent residence is worth considering once you want a more settled status than the certificate gives you, or if your situation fits one of the categories above instead.",
+        ],
+        note: "See the CSME Skills Certificate steps for Jamaica, or Jamaica at a glance for cost of living and what to expect once you're there.",
+      },
+    ],
+  },
+  {
     slug: "canadian-visa-from-trinidad",
     title: "How to Apply for a Canadian Visa from Trinidad",
     excerpt:
