@@ -16,6 +16,60 @@ const VISA_DISCLAIMER =
 
 export const DEFAULT_ARTICLES: Article[] = [
   {
+    slug: "belize-permanent-residence-guide",
+    title: "How to Apply for Permanent Residence in Belize",
+    excerpt:
+      "A year of legal residence, no more than 14 days away in total, a clean record and proof you can support yourself. Here's what Belize's Department of Immigration actually asks for.",
+    publishedAt: "2026-08-23",
+    keywords: [
+      "Belize permanent residence",
+      "how to apply for permanent residence Belize",
+      "Belize immigration permanent residence requirements",
+      "Belize residence documents",
+      "moving to Belize permanently",
+    ],
+    body: [
+      {
+        paragraphs: [
+          "Belize's permanent residence is separate from the CSME Skills Certificate: CSME covers CARICOM nationals in one of 12 approved work categories, while permanent residence through the Department of Immigration and Nationality Services is open to anyone who meets its requirements, CARICOM national or not, and grants a more settled status than a work permit.",
+        ],
+      },
+      {
+        heading: "The core requirements",
+        bullets: [
+          "At least 1 year of legal residence in Belize before you submit your application",
+          "No more than 14 days spent outside Belize in total during that year",
+          "No conviction anywhere carrying a possible sentence of 12 months or more, without a free pardon",
+          "Proof you have been, and will continue to be, financially able to support yourself",
+        ],
+        note: "There's a separate route for people who entered Belize as minors (under 16): they may qualify after 10 years of residence, legal or otherwise.",
+      },
+      {
+        heading: "Documents you'll need",
+        bullets: [
+          "Your passport, showing an arrival stamp dated at least a year before you apply",
+          "A medical exam (the Residence Medical Examination Form), completed by a licensed medical practitioner in Belize, not one from your home country",
+          "Two photographs",
+          "Bank statements, from a local bank, a foreign bank, or both, showing you can support yourself",
+          "A police record",
+        ],
+      },
+      {
+        heading: "The process and the fee",
+        paragraphs: [
+          "Approval takes at least 3 months, and includes both an immigration interview and a police interview. The fee depends on your nationality, so confirm the current amount for your country with the Department of Immigration before you apply. While your application is pending, you'll typically need to keep renewing a temporary extension so your stay in Belize stays legal in the meantime.",
+        ],
+      },
+      {
+        heading: "If you're a CARICOM national",
+        paragraphs: [
+          "If your work falls into one of the 12 approved CSME categories, the CSME Skills Certificate gets you working in Belize faster, without the year of prior residence or the fee. Belize is also one of four CARICOM countries with full free movement, so nationals of Barbados, Dominica and St. Vincent and the Grenadines can skip both routes entirely.",
+        ],
+        note: "See the CSME Skills Certificate steps for Belize, or Belize at a glance for cost of living and what to expect once you're there.",
+      },
+    ],
+  },
+  {
     slug: "jamaica-permanent-residence-guide",
     title: "How to Apply for Permanent Residence in Jamaica",
     excerpt:
