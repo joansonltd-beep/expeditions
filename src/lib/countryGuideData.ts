@@ -2612,22 +2612,52 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "The Pitons (Gros Piton & Petit Piton)",
         description: "Twin volcanic spires rising directly from the sea near Soufrière, a UNESCO World Heritage Site since 2004 and the island's defining landmark.",
+        photo: {
+          src: "/places/saint-lucia/pitons.jpg",
+          alt: "Gros Piton and Petit Piton behind Soufrière, Saint Lucia",
+          credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Gros_Piton_and_Petit_Piton_in_Saint_Lucia.JPG",
+        },
       },
       {
         name: "Sulphur Springs Park",
         description: "Billed as \"the world's only drive-in volcano\": a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
+        photo: {
+          src: "/places/saint-lucia/sulphur-springs.jpg",
+          alt: "Sulphur Springs geothermal area near Soufrière, Saint Lucia",
+          credit: "Gordon Leggett, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:17-04-07_106_Sulphur_Springs,_Saint_Lucia.jpg",
+        },
       },
       {
         name: "Diamond Falls Botanical Gardens & Mineral Baths",
         description: "A waterfall stained mineral colours by sulphur and other minerals, set in botanical gardens with warm mineral baths originally built for French troops in 1784.",
+        photo: {
+          src: "/places/saint-lucia/diamond-falls.jpg",
+          alt: "Diamond Falls, Diamond Botanical Gardens, Soufrière, Saint Lucia",
+          credit: "XeresNelro, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Diamond_Falls,_Diamond_Botanical_Gardens,_Soufriere,_Saint_Lucia.jpg",
+        },
       },
       {
         name: "Marigot Bay",
         description: "A palm-fringed, near-landlocked harbour often called one of the most beautiful bays in the Caribbean: a yachting hub with hillside restaurants overlooking the water.",
+        photo: {
+          src: "/places/saint-lucia/marigot-bay.jpg",
+          alt: "Marigot Bay, Saint Lucia",
+          credit: "Charles J. Sharp, CC BY 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Marigot_Bay,_St._Lucia.jpg",
+        },
       },
       {
         name: "Pigeon Island National Landmark",
         description: "A former island, now connected to the mainland by a causeway, with 18th-century British fort ruins, hiking trails and beaches near Rodney Bay.",
+        photo: {
+          src: "/places/saint-lucia/pigeon-island.jpg",
+          alt: "Pigeon Island National Landmark, Saint Lucia",
+          credit: "P. Hughes, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St._Lucia_-_Pigeon_Island.jpg",
+        },
       },
       {
         name: "Tet Paul Nature Trail",
@@ -2636,18 +2666,42 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Sugar Beach",
         description: "A white-sand beach nestled directly between Gros Piton and Petit Piton, among the most photographed spots in the Caribbean.",
+        photo: {
+          src: "/places/saint-lucia/sugar-beach.jpg",
+          alt: "Sugar Beach between the Pitons, Saint Lucia",
+          credit: "Prayitno, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Sugar_Beach_Viceroy_Resort_(24140868861).jpg",
+        },
       },
       {
         name: "Anse Chastanet, Anse Mamin & Anse Cochon",
         description: "A trio of beaches near Soufrière backed by rainforest and reef, popular for snorkelling and diving right off the sand.",
+        photo: {
+          src: "/places/saint-lucia/anse-chastanet.jpg",
+          alt: "Anse Chastanet beach, Saint Lucia",
+          credit: "XeresNelro, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Anse_Chastanet,_St._Lucia.jpg",
+        },
       },
       {
         name: "Castries Central Market",
         description: "The capital's market, with a produce floor downstairs and a local-food floor upstairs serving stewed chicken, fish and other everyday Saint Lucian lunches.",
+        photo: {
+          src: "/places/saint-lucia/castries-market.jpg",
+          alt: "Castries Market, Saint Lucia",
+          credit: "Gene93k, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Castries_Market_from_Jeremie_Street.JPG",
+        },
       },
       {
         name: "Toraille Waterfall",
         description: "An easily reached waterfall near Soufrière set in a garden, with a plunge pool for swimming.",
+        photo: {
+          src: "/places/saint-lucia/toraille-waterfall.jpg",
+          alt: "Toraille Waterfall, Saint Lucia",
+          credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Toraille_Waterfall.JPG",
+        },
       },
     ],
     experiences: [
