@@ -41,7 +41,7 @@ export type CostOfLiving = {
   asOf: string; // e.g. "August 2026"; cost of living data goes stale fast
 };
 
-export type PlaceToSee = { name: string; description: string };
+export type PlaceToSee = { name: string; description: string; photo?: CountryPhoto };
 export type Experience = { title: string; description: string };
 export type PlaceToEat = { name: string; description: string; area?: string };
 export type LocalDish = { name: string; description: string };
@@ -222,29 +222,65 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "Nelson's Dockyard",
         description:
           "A UNESCO World Heritage site in English Harbour and the world's only continuously working Georgian-era dockyard, with a museum, restaurants and historic naval buildings.",
+        photo: {
+          src: "/destinations/antigua-and-barbuda.jpg",
+          alt: "Nelson's Dockyard, English Harbour, Antigua",
+          credit: "Dr. Thomas Liptak, CC BY 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_English_Harbour_Nelson's_Dockyard_2.jpg",
+        },
       },
       {
         name: "Shirley Heights",
         description:
           "A hilltop lookout with panoramic views over English Harbour, best known for its Sunday evening steel-band and sunset party.",
+        photo: {
+          src: "/places/antigua-and-barbuda/shirley-heights.jpg",
+          alt: "View over English Harbour from Shirley Heights, Antigua",
+          credit: "MicP, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_Shirley_Heights.JPG",
+        },
       },
       {
         name: "Devil's Bridge",
         description:
           "A natural limestone arch at Indian Town National Park, carved by the Atlantic. At high tide, waves force geysers of water through blowholes in the rock.",
+        photo: {
+          src: "/places/antigua-and-barbuda/devils-bridge.jpg",
+          alt: "Devil's Bridge, Antigua",
+          credit: "John Honsberger, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Devils_Bridge,_Antigua.JPG",
+        },
       },
       {
         name: "Betty's Hope",
         description: "Antigua's first full-scale sugar plantation, with a restored working windmill and a visitor centre on its history.",
+        photo: {
+          src: "/places/antigua-and-barbuda/bettys-hope.jpg",
+          alt: "The restored windmill at Betty's Hope, Antigua",
+          credit: "Ragingwhitebuffalo, public domain, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Bettyshope.JPG",
+        },
       },
       {
         name: "Half Moon Bay",
         description:
           "A long, crescent-shaped beach on the southeastern coast: calmer water at one end, real surf at the other.",
+        photo: {
+          src: "/places/antigua-and-barbuda/half-moon-bay.jpg",
+          alt: "Half Moon Bay, Antigua",
+          credit: "Dario Item, CC0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Half_Moon_Bay_Antigua_and_Barbuda.jpg",
+        },
       },
       {
         name: "Jolly Beach & Jolly Harbour",
         description: "A popular white-sand beach next to a marina and residential complex with restaurants, shops and water sports.",
+        photo: {
+          src: "/places/antigua-and-barbuda/jolly-harbour.jpg",
+          alt: "Jolly Harbour, Antigua",
+          credit: "David Stanley, CC BY 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Jolly_Harbour.jpg",
+        },
       },
       {
         name: "Stingray City",
@@ -253,10 +289,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "St. John's Public Market",
         description: "The capital's market, liveliest on Saturdays, for local produce, spices and street food.",
+        photo: {
+          src: "/places/antigua-and-barbuda/st-johns-public-market.jpg",
+          alt: "St. John's Public Market, Antigua (historical photograph)",
+          credit: "Public domain, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:St._Johns_-_Public_Market.jpg",
+        },
       },
       {
         name: "Fort James & Fort Barrington",
         description: "Two 18th-century forts guarding either side of St. John's Harbour, both an easy walk with coastal views.",
+        photo: {
+          src: "/places/antigua-and-barbuda/fort-james.jpg",
+          alt: "Fort James, Antigua",
+          credit: "Jerrye and Roy Klotz, MD, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:FORT_JAMES,_ST._JOHN'S,_ANTIGUA.jpg",
+        },
       },
       {
         name: "Frigate Bird Sanctuary, Barbuda",

@@ -417,9 +417,28 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <SectionHead eyebrow="See" title="Places to see" />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToSee.map((p, i) => (
-            <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 className="font-semibold text-slate-900">{p.name}</h3>
-              <p className="mt-2 text-sm text-slate-600">{p.description}</p>
+            <div key={i} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+              {p.photo ? (
+                <div className="relative aspect-[16/9] w-full">
+                  <Image src={p.photo.src} alt={p.photo.alt} fill sizes="(max-width: 768px) 100vw, 384px" className="object-cover" />
+                </div>
+              ) : null}
+              <div className="p-6">
+                <h3 className="font-semibold text-slate-900">{p.name}</h3>
+                <p className="mt-2 text-sm text-slate-600">{p.description}</p>
+                {p.photo ? (
+                  <p className="mt-3 text-xs text-slate-400">
+                    Photo:{" "}
+                    {p.photo.creditUrl ? (
+                      <a href={p.photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        {p.photo.credit}
+                      </a>
+                    ) : (
+                      p.photo.credit
+                    )}
+                  </p>
+                ) : null}
+              </div>
             </div>
           ))}
         </div>
