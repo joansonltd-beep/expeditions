@@ -40,10 +40,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/80" />
         <Container className="relative z-10 py-24 sm:py-28">
           <div className="max-w-2xl text-white">
-            <span className="inline-flex rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-inset ring-white/25 backdrop-blur">
-              {settings.heroEyebrow}
-            </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+            <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
               {settings.heroHeadline}
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/85">{settings.heroSubcopy}</p>
