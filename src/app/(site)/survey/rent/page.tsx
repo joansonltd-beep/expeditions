@@ -25,7 +25,7 @@ export default function RentSurveyPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="home" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="home" className="h-7 w-7 text-brand" />}
         title="Caribbean Rent Survey"
         crumb="Rent Survey"
         intro="Help build a clearer picture of what rent actually costs across CARICOM. This survey is completely anonymous: no name or email is collected, and responses are used only in aggregate."

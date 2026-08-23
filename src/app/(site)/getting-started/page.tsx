@@ -49,7 +49,7 @@ export default function GettingStartedPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title="Come Live"
         crumb="Come Live"
         intro="Ready to relocate? Everything you need to set up your move within CARICOM, in one place."

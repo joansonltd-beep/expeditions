@@ -25,7 +25,7 @@ export default function SalarySurveyPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="banknote" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="banknote" className="h-7 w-7 text-brand" />}
         title="CARICOM Salary Survey"
         crumb="Salary Survey"
         intro="Help build a clearer picture of what people actually earn across CARICOM. This survey is completely anonymous: no name or email is collected, and responses are used only in aggregate."

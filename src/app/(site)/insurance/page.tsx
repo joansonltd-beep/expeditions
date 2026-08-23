@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Section, PageHeader, btnPrimary, btnGhost } from "@/components/ui";
+import { Icon } from "@/components/icons";
 import { getInsurancePage } from "@/lib/siteData";
 
 export const metadata: Metadata = {
@@ -17,7 +18,12 @@ export default async function InsurancePage() {
   const p = await getInsurancePage();
   return (
     <>
-      <PageHeader icon="🛡️" title={p.title} crumb="Insurance" intro={p.intro} />
+      <PageHeader
+        icon={<Icon name="shield" className="h-7 w-7 text-brand" />}
+        title={p.title}
+        crumb="Insurance"
+        intro={p.intro}
+      />
 
       <Section>
         <div className="mx-auto max-w-3xl text-center">

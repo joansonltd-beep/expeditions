@@ -22,9 +22,11 @@
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  /* Keep green dominant: a single soft green wash on white, no red in the field. */
+  /* Keep green dominant: soft green + a whisper of warm sand, no red in the field. */
   background:
     radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 90%, transparent), transparent 60%),
+    radial-gradient(1000px 560px at -10% 55%, color-mix(in srgb, var(--color-brand-soft) 70%, transparent), transparent 65%),
+    radial-gradient(800px 500px at 105% 95%, color-mix(in srgb, #fef3c7 55%, transparent), transparent 60%),
     #ffffff;
   background-attachment: fixed;
 }

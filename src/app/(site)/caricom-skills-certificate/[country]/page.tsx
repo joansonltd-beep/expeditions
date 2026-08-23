@@ -79,7 +79,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
-        icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
+        icon={<CaribbeanGlobe className="h-9 w-9 text-brand" />}
         title={`CARICOM Skills Certificate in ${c.name}`}
         crumb={c.name}
         intro={`We can help you apply for a CARICOM Skills Certificate (also called the CSME Skills Certificate) in ${c.name}: the office to apply to, who qualifies, and what you need.`}

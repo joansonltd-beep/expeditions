@@ -24,7 +24,10 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={`${alt ? "bg-slate-50" : ""} py-16 sm:py-20 ${className}`}>
+    <section
+      id={id}
+      className={`${alt ? "border-y border-slate-200/70 bg-slate-50/80" : ""} py-16 sm:py-20 ${className}`}
+    >
       <Container>{children}</Container>
     </section>
   );
@@ -93,8 +96,16 @@ export function PageHeader({
   image?: React.ReactNode;
 }) {
   return (
-    <div className="border-b border-slate-200 bg-gradient-to-b from-brand-soft/60 to-transparent">
-      <Container className="py-14 sm:py-16">
+    <div className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-brand-soft/70 via-brand-soft/20 to-transparent">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 -top-32 h-72 w-72 rounded-full bg-brand-light/25 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-accent-soft blur-3xl"
+      />
+      <Container className="relative py-14 sm:py-16">
         <p className="mb-4 text-sm text-slate-500">
           <Link href="/" className="hover:text-brand">
             Home
@@ -103,7 +114,11 @@ export function PageHeader({
         </p>
         <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
           <div>
-            {icon ? <div className="mb-3 text-4xl">{icon}</div> : null}
+            {icon ? (
+              <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-white text-brand shadow-md ring-1 ring-slate-200/80">
+                {icon}
+              </div>
+            ) : null}
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
             {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
           </div>

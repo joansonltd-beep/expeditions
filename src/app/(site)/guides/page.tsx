@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getArticles, getSiteSettings } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
+import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default async function GuidesPage() {
   return (
     <>
       <PageHeader
-        icon="📚"
+        icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title="General Guides"
         crumb="Guides"
         intro="Step-by-step guides for moving and working within CARICOM, plus practical guides for Canadian visa applicants travelling through Trinidad."

@@ -26,7 +26,12 @@ export default async function BusinessSetupPage() {
 
   return (
     <>
-      <PageHeader icon="🏢" title={p.title} crumb="Business Setup" intro={p.intro} />
+      <PageHeader
+        icon={<Icon name="building" className="h-7 w-7 text-brand" />}
+        title={p.title}
+        crumb="Business Setup"
+        intro={p.intro}
+      />
 
       <Section>
         <SectionHead

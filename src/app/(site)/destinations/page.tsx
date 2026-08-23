@@ -25,7 +25,7 @@ export default function DestinationsPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title="CARICOM Countries at a Glance"
         crumb="Destinations"
         intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols."

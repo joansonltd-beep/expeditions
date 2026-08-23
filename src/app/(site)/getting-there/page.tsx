@@ -50,7 +50,7 @@ export default function GettingTherePage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="plane" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="plane" className="h-7 w-7 text-brand" />}
         title="Come See"
         crumb="Come See"
         intro="Not moving, just visiting? We're a full travel agency for trips within CARICOM too: flights, stays, transfers and travel visas for vacations, family visits and business trips."

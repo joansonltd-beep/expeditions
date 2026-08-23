@@ -26,7 +26,7 @@ export default function BankingHubPage() {
   return (
     <>
       <PageHeader
-        icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
+        icon={<CaribbeanGlobe className="h-9 w-9 text-brand" />}
         title="Open a bank account on your new island"
         crumb="Banking"
         intro="A local bank account is usually the first thing you need after you move, and it is the thing that unlocks everything else: your salary, your rent, your bills. Choose your island to see which bank to go to and exactly what to bring."

@@ -108,7 +108,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
-        icon={<Icon name="compass" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title={`Moving to ${g.name}`}
         crumb={g.name}
         intro={g.tagline}

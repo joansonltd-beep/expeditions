@@ -24,7 +24,7 @@ export default async function AboutPage() {
   const about = await getAbout();
   return (
     <>
-      <PageHeader icon={<Icon name="users" className="h-10 w-10 text-brand" />} title="About Us" intro={about.intro} crumb="About Us" />
+      <PageHeader icon={<Icon name="users" className="h-7 w-7 text-brand" />} title="About Us" intro={about.intro} crumb="About Us" />
       <Section>
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={about.sections} />

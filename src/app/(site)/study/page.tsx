@@ -33,7 +33,7 @@ export default async function StudyPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="graduationCap" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="graduationCap" className="h-7 w-7 text-brand" />}
         title="Studying in Another CARICOM Country"
         crumb="Study"
         intro="Thinking about studying somewhere else in CARICOM? Here's what actually applies, and where we can still help."

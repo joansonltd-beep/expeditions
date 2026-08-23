@@ -49,7 +49,7 @@ export default function SurveyHubPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="banknote" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="banknote" className="h-7 w-7 text-brand" />}
         title="SRU: Salaries, Rent and Utilities"
         crumb="SRU"
         intro="Real numbers on Salaries, Rent and Utilities from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."

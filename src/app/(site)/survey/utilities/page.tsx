@@ -25,7 +25,7 @@ export default function UtilitiesSurveyPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="banknote" className="h-12 w-12 text-brand" />}
+        icon={<Icon name="banknote" className="h-7 w-7 text-brand" />}
         title="CARICOM Utility Cost Survey"
         crumb="Utility Cost Survey"
         intro="Help build a clearer picture of what utilities actually cost across CARICOM. This survey is completely anonymous: no name or email is collected, and responses are used only in aggregate."

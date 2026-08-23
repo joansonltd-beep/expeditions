@@ -35,8 +35,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
     `text-sm font-medium transition hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/85 backdrop-blur">
-      <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
+    <header className="sticky top-3 z-40 px-3 sm:top-4 sm:px-4">
+      <nav className="mx-auto flex h-[64px] max-w-6xl items-center justify-between gap-4 rounded-2xl border border-slate-200/70 bg-white/75 px-5 shadow-lg shadow-slate-900/[0.06] backdrop-blur-xl">
         <Link href="/" className="flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight text-slate-900">
           {logoUrl ? (
             <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
@@ -98,7 +98,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
       {/* mobile menu */}
       {open ? (
-        <div className="border-t border-slate-200 bg-white px-5 py-4 lg:hidden">
+        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-slate-200/70 bg-white/95 px-5 py-4 shadow-lg shadow-slate-900/[0.06] backdrop-blur-xl lg:hidden">
           <div className="flex flex-col gap-1">
             {MOBILE_LINKS.map((l) => (
               <Link

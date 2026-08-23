@@ -1,5 +1,6 @@
 import type { Service } from "@/lib/defaults";
 import { Container, Section, PageHeader } from "@/components/ui";
+import { Icon, serviceIcon } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
 import CtaButtons from "@/components/CtaButtons";
 
@@ -18,7 +19,12 @@ export default function ServicePage({
 }) {
   return (
     <>
-      <PageHeader icon={service.icon} title={service.title} intro={service.intro} crumb={service.title} />
+      <PageHeader
+        icon={<Icon name={serviceIcon(service.slug)} className="h-7 w-7 text-brand" />}
+        title={service.title}
+        intro={service.intro}
+        crumb={service.title}
+      />
 
       <Section>
         <div className="mx-auto max-w-3xl">

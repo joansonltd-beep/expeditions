@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArticle, getArticles, getSiteSettings } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
+import { Icon } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
 import CtaButtons from "@/components/CtaButtons";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -45,7 +46,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <PageHeader icon="📖" title={a.title} crumb="Guides" intro={a.excerpt} />
+      <PageHeader
+        icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
+        title={a.title}
+        crumb="Guides"
+        intro={a.excerpt}
+      />
       <Section>
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={a.body} />

@@ -46,7 +46,7 @@ export default function CsmePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <PageHeader
-        icon={<CaribbeanGlobe className="h-12 w-12 text-brand" />}
+        icon={<CaribbeanGlobe className="h-9 w-9 text-brand" />}
         title="CARICOM Skills Certificate (CSME): How to Apply"
         crumb="Guides"
         intro="We can help you get a CARICOM Skills Certificate, also called the CSME Skills Certificate: the steps and the exact office to apply to in each CARICOM country. Pick your country below."
