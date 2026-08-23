@@ -1189,18 +1189,42 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         name: "Boiling Lake",
         description:
           "The world's second-largest thermally active lake, a churning, mist-covered crater in Morne Trois Pitons National Park (a UNESCO World Heritage Site), reachable only by a strenuous 6–8 hour round-trip hike.",
+        photo: {
+          src: "/destinations/dominica.jpg",
+          alt: "Boiling Lake, Morne Trois Pitons National Park, Dominica",
+          credit: "Bayukjdr, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Dominica_Boiling_Lake.jpg",
+        },
       },
       {
         name: "Valley of Desolation",
         description: "Surreal volcanic terrain of sulphur vents, steaming mud pools and hot streams, crossed on the way to Boiling Lake.",
+        photo: {
+          src: "/places/dominica/valley-of-desolation.jpg",
+          alt: "Fumaroles in the Valley of Desolation, Dominica",
+          credit: "XeresNelro, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Furmaholes,_Valley_of_Desolation,_Dominica.jpg",
+        },
       },
       {
         name: "Trafalgar Falls",
         description: "Twin waterfalls (\"Mother\" and \"Father\") near Wotten Waven, among the easiest of Dominica's falls to reach, with swimmable lower pools.",
+        photo: {
+          src: "/places/dominica/trafalgar-falls.jpg",
+          alt: "Trafalgar Falls, Dominica",
+          credit: "Cheguemanu, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Chutes_de_Trafalgar.jpg",
+        },
       },
       {
         name: "Emerald Pool",
         description: "A forest-fringed pool and waterfall near Morne Trois Pitons, reached by a short, well-maintained trail.",
+        photo: {
+          src: "/places/dominica/emerald-pool.jpg",
+          alt: "Emerald Pool, Dominica",
+          credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Emerald_Pool_Dominica.JPG",
+        },
       },
       {
         name: "Ti Tou Gorge & Wotten Waven hot springs",
@@ -1213,14 +1237,32 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Indian River",
         description: "A calm, mangrove-lined river near Portsmouth, explored by rowed boat tour (no motors allowed).",
+        photo: {
+          src: "/places/dominica/indian-river.jpg",
+          alt: "Indian River, Portsmouth, Dominica",
+          credit: "Cowbell Solo, CC BY-SA 2.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Indian_River_in_Portsmouth,_Dominica.jpg",
+        },
       },
       {
         name: "Cabrits National Park & Fort Shirley",
         description: "An 18th-century British garrison on a former volcanic islet near Portsmouth, now a national park with coastal hiking trails.",
+        photo: {
+          src: "/places/dominica/fort-shirley.jpg",
+          alt: "Fort Shirley, Cabrits National Park, Dominica",
+          credit: "Leahtaylor9, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_Shirley,_Portsmouth,_Domininca.JPG",
+        },
       },
       {
         name: "Kalinago Territory",
         description: "Home to the Caribbean's last Kalinago (Carib) community, on the east coast: craft, cultural sites and coastal scenery.",
+        photo: {
+          src: "/places/dominica/kalinago-territory.jpg",
+          alt: "Kalinago Territory, Dominica",
+          credit: "Hans Hillewaert, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Carib_Territory_(Dominica).jpg",
+        },
       },
     ],
     experiences: [
