@@ -3508,10 +3508,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Pitch Lake",
         description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
+        photo: {
+          src: "/destinations/trinidad-and-tobago.jpg",
+          alt: "Pitch Lake, La Brea, Trinidad",
+          credit: "Martina Jackson, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Pitch_Lake.JPG",
+        },
       },
       {
         name: "Caroni Bird Sanctuary",
         description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
+        photo: {
+          src: "/places/trinidad-and-tobago/caroni-scarlet-ibis.jpg",
+          alt: "Scarlet ibis roosting at Caroni Swamp, Trinidad",
+          credit: "Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Scarlet_ibis_(Eudocimus_ruber)_roosting.jpg",
+        },
       },
       {
         name: "Asa Wright Nature Centre",
@@ -3520,10 +3532,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Fort George",
         description: "An 1804 hilltop fort overlooking Port of Spain and the Gulf of Paria, built by enslaved labourers led by Jonas Mohammed Bath. Its cannons never fired in anger, but the view over the capital is one of the best on the island.",
+        photo: {
+          src: "/places/trinidad-and-tobago/fort-george.jpg",
+          alt: "Fort George overlooking Port of Spain, Trinidad",
+          credit: "John Cray, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Fort_George,_Port_of_Spain_view,_Trinidad_and_Tobago.jpg",
+        },
       },
       {
         name: "Queen's Park Savannah",
         description: "A large city park in Port of Spain ringed by the Magnificent Seven colonial-era mansions, and the epicentre of Carnival's biggest stage shows.",
+        photo: {
+          src: "/places/trinidad-and-tobago/queens-park-savannah.jpg",
+          alt: "Queen's Royal College, one of the Magnificent Seven mansions by Queen's Park Savannah, Port of Spain",
+          credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_PoS_M7-1_Queen's_Royal_College.jpg",
+        },
       },
       {
         name: "Main Ridge Forest Reserve",
@@ -3532,10 +3556,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Pigeon Point Heritage Park",
         description: "Tobago's best-known beach, fronted by a thatched-roof jetty that's become the island's signature image, with calm, clear water.",
+        photo: {
+          src: "/places/trinidad-and-tobago/pigeon-point.jpg",
+          alt: "Pigeon Point beach, Tobago",
+          credit: "Kp93, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg",
+        },
       },
       {
         name: "Buccoo Reef & Nylon Pool",
         description: "A protected reef system off Tobago's southwest coast, rated among the world's best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
+        photo: {
+          src: "/places/trinidad-and-tobago/buccoo-reef.jpg",
+          alt: "Shallow waters of the Buccoo Reef Complex, Tobago",
+          credit: "WhatsupDarren, CC BY-SA 4.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:Shallow_waters.jpg",
+        },
       },
       {
         name: "Argyle Falls",
@@ -3544,6 +3580,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Fort King George",
         description: "An 18th-century fort above Scarborough, Tobago, that changed hands between the British and French several times. Now home to the Tobago Museum, with cannons and colonial-era buildings intact.",
+        photo: {
+          src: "/places/trinidad-and-tobago/fort-king-george.jpg",
+          alt: "Cannons at Fort King George, Scarborough, Tobago",
+          credit: "Bgabel, CC BY-SA 3.0, via Wikimedia Commons",
+          creditUrl: "https://commons.wikimedia.org/wiki/File:TOBAGO-fort-king-george-kanonen.jpg",
+        },
       },
     ],
     experiences: [
