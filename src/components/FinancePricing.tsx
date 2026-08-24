@@ -64,7 +64,7 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
                 p.featured ? "border-brand shadow-md" : "border-slate-200"
               }`}
             >
-              {/* Price header (green; solid for the featured tier) */}
+              {/* Price header (brand blue; solid for the featured tier) */}
               <div className={`relative p-7 ${p.featured ? "bg-brand text-white" : "bg-brand-soft"}`}>
                 {p.featured ? (
                   <span className="absolute right-6 top-6 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ring-inset ring-white/30">

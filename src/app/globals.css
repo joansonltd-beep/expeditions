@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 /*
-  Expeditions With Jo palette: green primary, dominant, with a red/coral accent
-  used sparingly (CTAs and small highlights only). Green and red are never
-  combined on one element or as adjacent same-size blocks, for colorblind
-  readability. Retune the whole site from this single @theme block.
+  Expeditions With Jo palette: blue primary, pulled from caricom.org (nav bar
+  #007acc, headings #1a4087), dominant, with a red/coral accent used sparingly
+  (CTAs and small highlights only). Retune the whole site from this single
+  @theme block.
 */
 @theme {
-  --color-brand: #16a34a;        /* green-600 — primary */
-  --color-brand-dark: #15803d;   /* green-700 — hover/pressed */
-  --color-brand-light: #22c55e;  /* green-500 */
-  --color-brand-soft: #f0fdf4;   /* green-50 — soft tint background */
+  --color-brand: #007acc;        /* CARICOM nav blue — primary */
+  --color-brand-dark: #1a4087;   /* CARICOM heading navy — hover/pressed */
+  --color-brand-light: #1b98e0;  /* CARICOM bright accent blue */
+  --color-brand-soft: #eaf4fb;   /* soft blue tint background */
   --color-accent: #e11d48;       /* rose-600 — sparing accent only */
   --color-accent-dark: #be123c;  /* rose-700 */
   --color-accent-soft: #fff1f2;  /* rose-50 */
@@ -22,7 +22,7 @@
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  /* Keep green dominant: soft green + a whisper of warm sand, no red in the field. */
+  /* Keep blue dominant: soft blue + a whisper of warm sand, no red in the field. */
   background:
     radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 90%, transparent), transparent 60%),
     radial-gradient(1000px 560px at -10% 55%, color-mix(in srgb, var(--color-brand-soft) 70%, transparent), transparent 65%),

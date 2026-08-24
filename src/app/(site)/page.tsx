@@ -111,10 +111,10 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* RELOCATION PLAN — dark deep-green full-photo band (red accent CTA used sparingly) */}
+      {/* RELOCATION PLAN — dark navy full-photo band (red accent CTA used sparingly) */}
       <section className="relative isolate overflow-hidden">
         <Image src="/photos/band.jpg" alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/75 to-green-950/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/75 to-blue-950/85" />
         <Container className="relative z-10 py-20 sm:py-28">
           <div className="max-w-2xl text-white">
             <span className="inline-flex rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-inset ring-white/25 backdrop-blur">
