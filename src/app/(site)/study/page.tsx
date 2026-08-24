@@ -32,7 +32,9 @@ const UWI_CAMPUSES = [
 // photo could actually be found. Several institutions (SGU, University of
 // Guyana, UWI Five Islands, and most of the offshore medical schools) don't
 // have a usable free campus photo on Wikimedia Commons, so they're left out
-// rather than guessed.
+// rather than guessed. UWI Cave Hill is also left out: the only Commons
+// photos of it are a single low-res (640x480) 2010 phone-camera batch, none
+// of which hold up full-bleed.
 const SCHOOL_PHOTOS: HeroPhoto[] = [
   {
     src: "/photos/heroes/uwi-st-augustine.jpg",
@@ -45,12 +47,6 @@ const SCHOOL_PHOTOS: HeroPhoto[] = [
     alt: "The chapel at UWI Mona campus, Jamaica",
     credit: "Sti2, CC BY-SA 3.0, via Wikimedia Commons",
     creditUrl: "https://commons.wikimedia.org/wiki/File:Chapel_Mona_Campus_UWI.jpg",
-  },
-  {
-    src: "/photos/heroes/schools/uwi-cave-hill.jpg",
-    alt: "UWI Cave Hill campus, Barbados",
-    credit: "CaribDigita, public domain, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:University_of_the_West_Indies,_Barbados-1.jpg",
   },
   {
     src: "/photos/heroes/schools/university-of-belize.jpg",

@@ -4,18 +4,16 @@ import { Section, PageHeader, type HeroPhoto } from "@/components/ui";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
+// Jamaica's Norman Manley Airport is left out: the only freely licensed photo
+// on Commons is a low-resolution 500x320 file, and the other candidates are
+// either disaster-cleanup or crash photos, or an obstructed, weather-hazed
+// tarmac shot through a terminal window. None of them read well full-bleed.
 const AIRPORT_PHOTOS: HeroPhoto[] = [
   {
     src: "/photos/heroes/airports/trinidad-piarco.jpg",
     alt: "Piarco International Airport, Trinidad",
     credit: "Chris Fitzpatrick, CC BY-SA 4.0, via Wikimedia Commons",
     creditUrl: "https://commons.wikimedia.org/wiki/File:Piarco_International_Airport_Atrium.jpg",
-  },
-  {
-    src: "/photos/heroes/airports/jamaica-norman-manley.jpg",
-    alt: "Norman Manley International Airport, Kingston, Jamaica",
-    credit: "Wolmadrian, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Norman_Manley_International_Airport.jpg",
   },
   {
     src: "/photos/heroes/airports/barbados-grantley-adams.jpg",

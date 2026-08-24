@@ -25,8 +25,8 @@ const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
   {
     src: "/photos/heroes/business/georgetown.jpg",
     alt: "Georgetown City Hall, Georgetown, Guyana",
-    credit: "JukoFF, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Georgetown_City_Hall,_Georgetown,_Guyana.jpg",
+    credit: "Dan Sloan, CC BY-SA 2.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:City_Hall_-_Georgetown,_Guyana_(22872153024).jpg",
   },
   {
     src: "/photos/heroes/business/castries.jpg",
