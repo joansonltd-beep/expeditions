@@ -86,9 +86,9 @@ export default function DestinationsPage() {
   return (
     <>
       <PageHeader
-        title="CARI-GO to one of these CARICOM Countries with Free Movement*"
+        title="CARI-GO to one of these CARICOM Countries"
         crumb="Where are we Going?"
-        intro="Twelve CARICOM countries, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
+        intro="Twelve CARICOM countries with Free Movement*, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
         footnote="* Free movement is the right CARICOM nationals have to live and work in another member state without a work permit, established under the CSME (CARICOM Single Market and Economy) by the Revised Treaty of Chaguaramas. These 12 states currently participate: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don't currently take part."
         photos={AIRPORT_PHOTOS}
       />
