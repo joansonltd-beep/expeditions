@@ -13,30 +13,43 @@ export const HEADER_HEIGHT = 70;
 
 type NavItem = { href: string; label: string; title?: string; static?: boolean };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title: "Travel within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit,", title: "Travel within CARICOM" };
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
-// Relabeled "CARICOM" and moved to the end of the nav so the whole row
-// reads as one sentence: "Let's: Go Visit  Go Work  Go Study  In  CARICOM".
+// Relabeled "CARICOM" so the whole row reads as one sentence:
+// "Let's: Go Visit,  Go Work  or  Go Study  In  a  CARICOM  Country!".
 const DESTINATIONS: NavItem = { href: "/destinations", label: "CARICOM" };
 
 // Plain, unclickable words sitting in the nav so it reads as a sentence.
 // Not links — just there.
 const LETS: NavItem = { href: "#lets", label: "Let's:", static: true };
+const OR: NavItem = { href: "#or", label: "or", static: true };
 const IN: NavItem = { href: "#in", label: "In", static: true };
+const A: NavItem = { href: "#a", label: "a", static: true };
+const COUNTRY: NavItem = { href: "#country", label: "Country!", static: true };
 
 // "Reports" is no longer its own nav link: it lives under the CARICOM
 // (destinations) page instead, but /survey itself is still a normal,
 // directly shareable page — just not in the top nav.
-const AFTER: NavItem[] = [{ href: "/about", label: "About" }];
+const AFTER: NavItem[] = [{ href: "/about", label: "About Us" }];
 
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
   new Map(
-    [LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, IN, DESTINATIONS, ...AFTER].map((l) => [l.href, l])
+    [LETS, COME_SEE_ME, COME_LIVE_WITH_ME, OR, STUDY, IN, A, DESTINATIONS, COUNTRY, ...AFTER].map((l) => [l.href, l])
   ).values()
 );
+
+// One of the plain, unclickable sentence words (LETS, OR, IN, A, COUNTRY) in
+// the desktop nav row.
+function StaticWord({ item, transparent }: { item: NavItem; transparent: boolean }) {
+  return (
+    <span aria-hidden="true" className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}>
+      {item.label}
+    </span>
+  );
+}
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
@@ -103,30 +116,23 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
         {/* desktop nav */}
         <div className="hidden items-center gap-7 lg:flex">
-          <span
-            aria-hidden="true"
-            className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}
-          >
-            {LETS.label}
-          </span>
+          <StaticWord item={LETS} transparent={transparent} />
           <Link href={COME_SEE_ME.href} title={COME_SEE_ME.title} className={linkClass(COME_SEE_ME.href)}>
             {COME_SEE_ME.label}
           </Link>
           <Link href={COME_LIVE_WITH_ME.href} title={COME_LIVE_WITH_ME.title} className={linkClass(COME_LIVE_WITH_ME.href)}>
             {COME_LIVE_WITH_ME.label}
           </Link>
+          <StaticWord item={OR} transparent={transparent} />
           <Link href={STUDY.href} title={STUDY.title} className={linkClass(STUDY.href)}>
             {STUDY.label}
           </Link>
-          <span
-            aria-hidden="true"
-            className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}
-          >
-            {IN.label}
-          </span>
+          <StaticWord item={IN} transparent={transparent} />
+          <StaticWord item={A} transparent={transparent} />
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
+          <StaticWord item={COUNTRY} transparent={transparent} />
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
