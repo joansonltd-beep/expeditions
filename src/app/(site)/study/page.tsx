@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Section, PageHeader, SectionHead } from "@/components/ui";
+import { Section, PageHeader, SectionHead, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import SchoolSearch from "@/components/SchoolSearch";
@@ -28,6 +28,44 @@ const UWI_CAMPUSES = [
   { name: "Open Campus", country: "Online, region-wide", url: "https://www.open.uwi.edu" },
 ];
 
+// Campus photos for schools on this page where a verified, freely licensed
+// photo could actually be found. Several institutions (SGU, University of
+// Guyana, UWI Five Islands, and most of the offshore medical schools) don't
+// have a usable free campus photo on Wikimedia Commons, so they're left out
+// rather than guessed.
+const SCHOOL_PHOTOS: HeroPhoto[] = [
+  {
+    src: "/photos/heroes/uwi-st-augustine.jpg",
+    alt: "University of the West Indies campus, St. Augustine, Trinidad and Tobago",
+    credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_St._Augustine_UWI_CampusFXD.jpg",
+  },
+  {
+    src: "/photos/heroes/schools/uwi-mona.jpg",
+    alt: "The chapel at UWI Mona campus, Jamaica",
+    credit: "Sti2, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Chapel_Mona_Campus_UWI.jpg",
+  },
+  {
+    src: "/photos/heroes/schools/uwi-cave-hill.jpg",
+    alt: "UWI Cave Hill campus, Barbados",
+    credit: "CaribDigita, public domain, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:University_of_the_West_Indies,_Barbados-1.jpg",
+  },
+  {
+    src: "/photos/heroes/schools/university-of-belize.jpg",
+    alt: "University of Belize, Central Campus",
+    credit: "Josh Gross, CC BY 2.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:University_of_Belize,_Central_Campus.jpg",
+  },
+  {
+    src: "/photos/heroes/schools/utt-san-fernando.jpg",
+    alt: "University of Trinidad and Tobago, San Fernando campus",
+    credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:T%26T_San_Fernando_UTT_Campus_1.jpg",
+  },
+];
+
 export default async function StudyPage() {
   const settings = await getSiteSettings();
   return (
@@ -37,12 +75,7 @@ export default async function StudyPage() {
         title="Come Study"
         crumb="Come Study"
         intro="Thinking about studying somewhere else in CARICOM? Here's what actually applies, and where we can still help."
-        photo={{
-          src: "/photos/heroes/uwi-st-augustine.jpg",
-          alt: "University of the West Indies campus, St. Augustine, Trinidad and Tobago",
-          credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
-          creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_St._Augustine_UWI_CampusFXD.jpg",
-        }}
+        photos={SCHOOL_PHOTOS}
       />
 
       {/* CSME DOESN'T COVER THIS */}

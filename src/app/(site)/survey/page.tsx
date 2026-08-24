@@ -49,10 +49,17 @@ export default function SurveyHubPage() {
   return (
     <>
       <PageHeader
-        icon={<Icon name="banknote" className="h-7 w-7 text-brand" />}
-        title="SRU: Salaries, Rent and Utilities"
+        title="Cost of Living"
         crumb="SRU"
         intro="Real numbers on Salaries, Rent and Utilities from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
+        photos={[
+          {
+            src: "/places/saint-lucia/castries-market.jpg",
+            alt: "Castries Market, Saint Lucia",
+            credit: "Gene93k, CC BY-SA 3.0, via Wikimedia Commons",
+            creditUrl: "https://commons.wikimedia.org/wiki/File:Castries_Market_from_Jeremie_Street.JPG",
+          },
+        ]}
       />
       <Section>
         <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">

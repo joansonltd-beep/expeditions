@@ -1,7 +1,82 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader } from "@/components/ui";
+import { Section, PageHeader, type HeroPhoto } from "@/components/ui";
 import { Icon, pillarIcon } from "@/components/icons";
+
+const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
+  {
+    src: "/photos/heroes/port-of-spain.jpg",
+    alt: "West Port of Spain and downtown, Trinidad and Tobago",
+    credit: "Christianwelsh, public domain, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Port_of_Spain_Trinidad.jpg",
+  },
+  {
+    src: "/photos/heroes/business/kingston.jpg",
+    alt: "New Kingston, Jamaica's business district",
+    credit: "Wolmadrian, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:New_Kingston,_Jamaica_II.JPG",
+  },
+  {
+    src: "/photos/heroes/business/bridgetown.jpg",
+    alt: "Bridgetown, Barbados, with the Central Bank of Barbados",
+    credit: "Acp~commonswiki, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Bridgetown2.jpg",
+  },
+  {
+    src: "/photos/heroes/business/georgetown.jpg",
+    alt: "Georgetown City Hall, Georgetown, Guyana",
+    credit: "JukoFF, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Georgetown_City_Hall,_Georgetown,_Guyana.jpg",
+  },
+  {
+    src: "/photos/heroes/business/castries.jpg",
+    alt: "Castries, the capital and business hub of Saint Lucia",
+    credit: "Luboš Holič, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Castries_City,_Saint_Lucia_-_panoramio.jpg",
+  },
+  {
+    src: "/photos/heroes/business/st-georges.jpg",
+    alt: "The Carenage, St. George's, Grenada",
+    credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
+  },
+  {
+    src: "/photos/heroes/business/st-johns.jpg",
+    alt: "Port of St. John's, Antigua and Barbuda",
+    credit: "Matt H. Wade, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Port_of_St._Johns_Antigua.jpg",
+  },
+  {
+    src: "/photos/heroes/business/basseterre.jpg",
+    alt: "The Berkeley Memorial at The Circus, Basseterre, St. Kitts",
+    credit: "P. Hughes, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Basseterre_-_Memorial_Clocktower.jpg",
+  },
+  {
+    src: "/photos/heroes/business/roseau.jpg",
+    alt: "The Bayfront, Roseau, Dominica",
+    credit: "giggel, CC BY 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Dominica,_Karibik_-_Universal_Elegance-The_Muslim_Store_-_Bayfront_-_panoramio.jpg",
+  },
+  {
+    src: "/photos/heroes/business/kingstown.jpg",
+    alt: "Kingstown, the capital and commercial centre of St. Vincent and the Grenadines",
+    credit: "ctsnow, CC BY 2.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Kingstown_Saint_Vincent.jpg",
+  },
+  {
+    src: "/photos/heroes/business/belize-city.jpg",
+    alt: "Belize City Hall, Belize City, Belize",
+    credit: "Padraic Ryan, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Belize_City_Hall.jpg",
+  },
+  {
+    src: "/places/suriname/paramaribo-waterkant.jpg",
+    alt: "Waterkant, Paramaribo, Suriname",
+    credit: "Rafaeljantz, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Waterkant_Paramaribo_with_the_Unesco_Heritage_Buildings.jpg",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Come Work: Relocating Within CARICOM",
@@ -53,12 +128,7 @@ export default function GettingStartedPage() {
         title="Come Work"
         crumb="Come Work"
         intro="Ready to relocate? Everything you need to set up your move within CARICOM, in one place."
-        photo={{
-          src: "/photos/heroes/port-of-spain.jpg",
-          alt: "West Port of Spain and downtown, Trinidad and Tobago",
-          credit: "Christianwelsh, public domain, via Wikimedia Commons",
-          creditUrl: "https://commons.wikimedia.org/wiki/File:Port_of_Spain_Trinidad.jpg",
-        }}
+        photos={BUSINESS_CENTER_PHOTOS}
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">

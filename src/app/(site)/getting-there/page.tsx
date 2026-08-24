@@ -54,12 +54,14 @@ export default function GettingTherePage() {
         title="Come See"
         crumb="Come See"
         intro="Not moving, just visiting? We're a full travel agency for trips within CARICOM too: flights, stays, transfers and travel visas for vacations, family visits and business trips."
-        photo={{
-          src: "/photos/hero.jpg",
-          alt: "Pigeon Point, Tobago: a thatched-roof jetty over turquoise Caribbean water",
-          credit: "Kp93, CC BY-SA 3.0, via Wikimedia Commons",
-          creditUrl: "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg",
-        }}
+        photos={[
+          {
+            src: "/photos/hero.jpg",
+            alt: "Pigeon Point, Tobago: a thatched-roof jetty over turquoise Caribbean water",
+            credit: "Kp93, CC BY-SA 3.0, via Wikimedia Commons",
+            creditUrl: "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg",
+          },
+        ]}
       />
       <Section>
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">

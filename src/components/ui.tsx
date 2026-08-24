@@ -1,5 +1,6 @@
-import Image from "next/image";
-import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
+import RotatingPhotoBg, { type HeroPhoto } from "@/components/RotatingPhotoBg";
+
+export type { HeroPhoto };
 
 // Shared button class strings, so links and buttons look identical everywhere.
 export const btn =
@@ -89,32 +90,20 @@ export function PageHeader({
   intro,
   crumb,
   image,
-  photo,
+  photos,
 }: {
   icon?: React.ReactNode;
   title: string;
   intro?: string;
   crumb: string;
   image?: React.ReactNode;
-  photo?: { src: string; alt: string; credit?: string; creditUrl?: string };
+  photos?: HeroPhoto[];
 }) {
-  if (photo) {
+  if (photos?.length) {
     return (
       <div className="relative isolate -mt-[70px] overflow-hidden pt-[70px]">
-        <PhotoHeroDeclare />
-        <Image src={photo.src} alt={photo.alt} fill priority sizes="100vw" className="object-cover" />
+        <RotatingPhotoBg photos={photos} />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/55 to-slate-950/80" />
-        {photo.credit ? (
-          <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/50">
-            {photo.creditUrl ? (
-              <a href={photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                {photo.credit}
-              </a>
-            ) : (
-              photo.credit
-            )}
-          </p>
-        ) : null}
         <Container className="relative py-20 sm:py-24">
           <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
             <div>
