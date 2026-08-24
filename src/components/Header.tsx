@@ -3,9 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { League_Spartan } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useSiteClient } from "@/components/SiteSettingsProvider";
 import { useHeaderTransparentCapable } from "@/components/HeaderTheme";
+
+const leagueSpartan = League_Spartan({ subsets: ["latin"], weight: "300" });
 
 // Header height in px, kept in sync with the h-[70px] nav row below. Used to
 // pull the homepage hero up underneath the header so it can go transparent.
@@ -75,27 +78,31 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       }`}
     >
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
-        <Link
-          href="/"
-          className={`flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight transition-colors ${
-            transparent ? "text-white" : "text-slate-900"
-          }`}
-        >
-          {logoUrl ? (
-            <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
-          ) : (
-            <>
-              <Image
-                src="/mark.png"
-                alt=""
-                width={36}
-                height={36}
-                className={`h-9 w-9 object-contain transition-[filter] ${transparent ? "invert" : ""}`}
-                priority
-              />
-              {businessName}
-            </>
-          )}
+        <Link href="/" className={`flex shrink-0 flex-col transition-colors ${transparent ? "text-white" : "text-slate-900"}`}>
+          <span className="flex items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight">
+            {logoUrl ? (
+              <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
+            ) : (
+              <>
+                <Image
+                  src="/mark.png"
+                  alt=""
+                  width={36}
+                  height={36}
+                  className={`h-9 w-9 object-contain transition-[filter] ${transparent ? "invert" : ""}`}
+                  priority
+                />
+                {businessName}
+              </>
+            )}
+          </span>
+          <span
+            className={`${leagueSpartan.className} text-[10px] font-light uppercase tracking-[0.25em] ${
+              transparent ? "text-white/60" : "text-slate-400"
+            }`}
+          >
+            Let&apos;s go!
+          </span>
         </Link>
 
         {/* desktop nav */}
