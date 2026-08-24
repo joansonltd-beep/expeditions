@@ -54,7 +54,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   youtubeUrl: null,
   xUrl: null,
   heroEyebrow: "CARICOM-to-CARICOM relocation",
-  heroHeadline: "Moving to another CARICOM country? We handle the hard parts.",
+  heroHeadline: "Moving to another CARICOM country? Let's go, together.",
   heroSubcopy:
     "Expeditions With Jo helps CARICOM nationals relocate between member states: CSME Skills Certificates, bank accounts, business setup and settling-in support, with flights and stays arranged whenever the move calls for them.",
   paymentNote:
