@@ -101,14 +101,14 @@ export function PageHeader({
 }) {
   if (photos?.length) {
     return (
-      <div className="relative isolate -mt-[70px] overflow-hidden pt-[70px]">
+      <div className="relative isolate -mt-[70px] flex min-h-[420px] flex-col overflow-hidden pt-[70px] sm:min-h-[520px]">
         <RotatingPhotoBg photos={photos} />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/55 to-slate-950/80" />
-        <Container className="relative py-20 sm:py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/35 to-slate-950/80" />
+        <Container className="relative mt-auto py-10 sm:py-12">
           <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
             <div>
-              <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h1>
-              {intro ? <p className="mt-4 max-w-2xl text-lg text-white/85">{intro}</p> : null}
+              <h1 className="max-w-3xl text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h1>
+              {intro ? <p className="mt-3 max-w-2xl text-base text-white/85">{intro}</p> : null}
             </div>
             {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
           </div>
