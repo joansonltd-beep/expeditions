@@ -90,7 +90,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         transparent ? "bg-transparent shadow-none" : "bg-white/90 shadow-md backdrop-blur-xl"
       }`}
     >
-      <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
+      <nav className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-5">
         <Link
           href="/"
           className={`flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight transition-colors ${

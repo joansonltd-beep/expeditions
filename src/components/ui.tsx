@@ -10,8 +10,13 @@ export const btnGhost = `${btn} border border-slate-200 bg-white text-slate-900 
 export const btnAccent = `${btn} bg-accent text-white hover:brightness-95 focus-visible:ring-accent`;
 export const btnWhatsapp = `${btn} bg-whatsapp text-white hover:brightness-95 focus-visible:ring-whatsapp`;
 
+// max-w-[1400px] instead of the tighter max-w-6xl (1152px): on a very wide or
+// zoomed-out viewport, a narrower cap leaves the whole page looking like a
+// small centered island with huge empty margins. Text blocks inside sections
+// already nest their own tighter max-w-3xl/2xl wrapper, so this only widens
+// grids/backgrounds, not paragraph line length.
 export function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <div className={`mx-auto w-full max-w-6xl px-5 ${className}`}>{children}</div>;
+  return <div className={`mx-auto w-full max-w-[1400px] px-5 ${className}`}>{children}</div>;
 }
 
 export function Section({

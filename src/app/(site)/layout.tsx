@@ -106,7 +106,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         </main>
 
         <footer className="bg-slate-900 text-slate-300">
-          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto grid max-w-[1400px] gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="flex items-center gap-2.5 text-lg font-extrabold text-white">
                 <Image src="/mark.png" alt="" width={36} height={36} className="h-9 w-9 object-contain brightness-0 invert" />
@@ -172,7 +172,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
           </div>
           <div className="border-t border-white/10">
-            <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-5 py-6 text-xs text-slate-500">
+            <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-2 px-5 py-6 text-xs text-slate-500">
               <span>
                 © {year} {settings.businessName}. All rights reserved.
               </span>
