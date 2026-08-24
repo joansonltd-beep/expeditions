@@ -49,9 +49,9 @@ const AIRPORT_PHOTOS: HeroPhoto[] = [
   },
   {
     src: "/photos/heroes/airports/dominica-douglas-charles.jpg",
-    alt: "Douglas-Charles Airport, Dominica",
-    credit: "Russell Watkins/DFID, CC BY 2.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Main_terminal_building_of_Douglas%E2%80%93Charles_Airport_on_the_Caribbean_island_of_Dominica.jpg",
+    alt: "Gate 1, Douglas-Charles Airport, Dominica",
+    credit: "DOMDCF, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:American_Eagle_-_Gate_1.jpg",
   },
   {
     src: "/photos/heroes/airports/saint-lucia-hewanorra.jpg",
