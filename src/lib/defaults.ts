@@ -54,9 +54,9 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   youtubeUrl: null,
   xUrl: null,
   heroEyebrow: "CARICOM-to-CARICOM relocation",
-  heroHeadline: "Want to explore, work or study in another CARICOM country? Let's go, together.",
+  heroHeadline: "Want to work or study in another CARICOM country? Let's go, together.",
   heroSubcopy:
-    "Expeditions With Jo helps CARICOM nationals move between member states: whether to live, work or study, we will work with you step by step to make the idea a reality.",
+    "Expeditions With Jo helps CARICOM nationals move between member states: whether to live, work or study, we will work with you step by step to make the idea a reality. Just want to visit instead? We arrange that too.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:

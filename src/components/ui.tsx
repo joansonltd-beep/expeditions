@@ -88,6 +88,7 @@ export function PageHeader({
   icon,
   title,
   intro,
+  footnote,
   crumb,
   image,
   photos,
@@ -95,6 +96,7 @@ export function PageHeader({
   icon?: React.ReactNode;
   title: string;
   intro?: string;
+  footnote?: string;
   crumb: string;
   image?: React.ReactNode;
   photos?: HeroPhoto[];
@@ -109,6 +111,7 @@ export function PageHeader({
             <div>
               <h1 className="max-w-3xl text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h1>
               {intro ? <p className="mt-3 max-w-2xl text-base text-white/85">{intro}</p> : null}
+              {footnote ? <p className="mt-2 max-w-2xl text-sm text-white/65">{footnote}</p> : null}
             </div>
             {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
           </div>
@@ -137,6 +140,7 @@ export function PageHeader({
             ) : null}
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
             {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
+            {footnote ? <p className="mt-2 max-w-2xl text-sm text-slate-500">{footnote}</p> : null}
           </div>
           {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
         </div>

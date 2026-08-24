@@ -108,6 +108,10 @@ export default async function TravelVisasPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <ServicePage
         service={service}
+        title="Leaving CARICOM?"
+        intro="We guide CARICOM citizens, especially Grenadians, through every step of the US and Canadian visa process from Trinidad.*"
+        footnote="* The Canadian visa process is completely free. You only ever pay the Canadian government's own visa and biometrics fees, directly to IRCC."
+        ctaSubject="Travel Visas"
         ctaTitle="Need to travel for your appointment?"
         ctaText="Whether it's Port of Spain for a Canadian visa or Bridgetown for a US visa, we can sort your flights, a place to stay, and transfers too."
       >

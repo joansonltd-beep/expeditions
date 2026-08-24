@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, type HeroPhoto } from "@/components/ui";
-import { Icon, pillarIcon } from "@/components/icons";
+import { Icon } from "@/components/icons";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
   {
@@ -148,18 +148,15 @@ export default function GettingStartedPage() {
           intro="Got a job lined up on another island, or hunting for one? This is what turns the offer into an actual move."
           center={false}
         />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-6">
           {EMPLOYMENT_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+              className="group block border-b border-slate-200 pb-6 last:border-0 last:pb-0"
             >
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
-                <Icon name={pillarIcon(item.href)} className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
-              <p className="mt-2 text-slate-600">{item.text}</p>
+              <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
+              <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
             </Link>
           ))}
@@ -173,18 +170,15 @@ export default function GettingStartedPage() {
           intro="Setting up your own business instead of taking a job? A different right, and a different set of paperwork, applies."
           center={false}
         />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-6">
           {SELF_EMPLOYED_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+              className="group block border-b border-slate-200 pb-6 last:border-0 last:pb-0"
             >
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
-                <Icon name={pillarIcon(item.href)} className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
-              <p className="mt-2 text-slate-600">{item.text}</p>
+              <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
+              <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
             </Link>
           ))}
@@ -193,18 +187,15 @@ export default function GettingStartedPage() {
 
       <Section>
         <SectionHead eyebrow="Also useful" title="More resources" center={false} />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-6">
           {OTHER_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+              className="group block border-b border-slate-200 pb-6 last:border-0 last:pb-0"
             >
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
-                <Icon name={pillarIcon(item.href)} className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
-              <p className="mt-2 text-slate-600">{item.text}</p>
+              <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
+              <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
             </Link>
           ))}
