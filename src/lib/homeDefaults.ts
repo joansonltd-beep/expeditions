@@ -82,9 +82,9 @@ export const DEFAULT_HOME: HomeContent = {
   notSureText:
     "Tell us which island you are moving from and where you are headed. We will map out the paperwork, timelines and costs for you.",
   bundleEyebrow: "Relocation plan",
-  bundleTitle: "Certificate, bank account and business setup, one plan",
+  bundleTitle: "Moving from one CARICOM country to another?",
   bundleText:
-    "We coordinate your CSME application, bank account and business registration ourselves, in the right order, so you're not the one chasing three different offices to make one move happen.",
+    "We handle the paperwork behind your move ourselves, in the right order, so you're not the one chasing down every office involved.",
   localEyebrow: "Settling in",
   localTitle: "Insurance and banking for your new home",
   localIntro: "Based in Trinidad and Tobago and ready to help you put down roots on your new island.",
