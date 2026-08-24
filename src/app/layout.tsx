@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
   title: {
-    default: "CARICOM Relocation Specialists | Expeditions With Jo",
+    default: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
     template: "%s · Expeditions With Jo",
   },
   description:
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "CARICOM Relocation Specialists | Expeditions With Jo",
+    title: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
     description:
       "Move between CARICOM islands with confidence: CSME Skills Certificates, bank accounts, business setup and settling-in support, plus travel when you need it.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Expeditions With Jo — CARICOM relocation services" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CARICOM Relocation Specialists | Expeditions With Jo",
+    title: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
     description: "CSME Skills Certificates, banking, business setup and settling-in support for moves between CARICOM islands.",
     images: ["/og.png"],
   },
