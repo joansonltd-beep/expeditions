@@ -17,11 +17,14 @@ const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title:
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
-const DESTINATIONS: NavItem = { href: "/destinations", label: "Where are we Going?" };
+// Relabeled "CARICOM" and moved to the end of the nav so the whole row
+// reads as one sentence: "Let's: Go Visit  Go Work  Go Study  In  CARICOM".
+const DESTINATIONS: NavItem = { href: "/destinations", label: "CARICOM" };
 
-// A plain, unclickable word sitting in the nav so "Let's" reads straight into
-// "Go Visit / Go Work / Go Study" beside it. Not a link — just there.
+// Plain, unclickable words sitting in the nav so it reads as a sentence.
+// Not links — just there.
 const LETS: NavItem = { href: "#lets", label: "Let's:", static: true };
+const IN: NavItem = { href: "#in", label: "In", static: true };
 
 const AFTER: NavItem[] = [
   { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
@@ -31,7 +34,7 @@ const AFTER: NavItem[] = [
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
   new Map(
-    [DESTINATIONS, LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])
+    [LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, IN, DESTINATIONS, ...AFTER].map((l) => [l.href, l])
   ).values()
 );
 
@@ -100,9 +103,6 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
         {/* desktop nav */}
         <div className="hidden items-center gap-7 lg:flex">
-          <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
-            {DESTINATIONS.label}
-          </Link>
           <span
             aria-hidden="true"
             className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}
@@ -117,6 +117,15 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           </Link>
           <Link href={STUDY.href} title={STUDY.title} className={linkClass(STUDY.href)}>
             {STUDY.label}
+          </Link>
+          <span
+            aria-hidden="true"
+            className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}
+          >
+            {IN.label}
+          </span>
+          <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
+            {DESTINATIONS.label}
           </Link>
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
