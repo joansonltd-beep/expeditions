@@ -18,12 +18,12 @@ const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work",
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
 // Relabeled "CARICOM" so the whole row reads as one sentence:
-// "Let's: Go Visit,  Go Work  or  Go Study  In  a  CARICOM  Country!".
+// "Let's Go Visit,  Go Work  or  Go Study  In  a  CARICOM  Country!".
 const DESTINATIONS: NavItem = { href: "/destinations", label: "CARICOM" };
 
 // Plain, unclickable words sitting in the nav so it reads as a sentence.
 // Not links — just there.
-const LETS: NavItem = { href: "#lets", label: "Let's:", static: true };
+const LETS: NavItem = { href: "#lets", label: "Let's", static: true };
 const OR: NavItem = { href: "#or", label: "or", static: true };
 const IN: NavItem = { href: "#in", label: "In", static: true };
 const A: NavItem = { href: "#a", label: "a", static: true };

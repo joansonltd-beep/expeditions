@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { getSiteSettings, getServices, getHomeContent } from "@/lib/siteData";
 import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAccent } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
@@ -111,10 +110,9 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* RELOCATION PLAN — dark navy full-photo band (red accent CTA used sparingly) */}
+      {/* RELOCATION PLAN — same rotating hero photos as the top hero, no color overlay */}
       <section className="relative isolate overflow-hidden">
-        <Image src="/photos/band.jpg" alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/75 to-blue-950/85" />
+        <RotatingHero />
         <Container className="relative z-10 py-20 sm:py-28">
           <div className="max-w-2xl text-white">
             <span className="inline-flex rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-inset ring-white/25 backdrop-blur">
