@@ -8,6 +8,8 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 // on Commons is a low-resolution 500x320 file, and the other candidates are
 // either disaster-cleanup or crash photos, or an obstructed, weather-hazed
 // tarmac shot through a terminal window. None of them read well full-bleed.
+// St. Kitts's Bradshaw Airport is left out too: Commons only has one usable
+// terminal photo (soft/blurry when blown up) plus an unrelated statue photo.
 const AIRPORT_PHOTOS: HeroPhoto[] = [
   {
     src: "/photos/heroes/airports/trinidad-piarco.jpg",
@@ -54,14 +56,8 @@ const AIRPORT_PHOTOS: HeroPhoto[] = [
   {
     src: "/photos/heroes/airports/saint-lucia-hewanorra.jpg",
     alt: "Hewanorra International Airport, Saint Lucia",
-    credit: "Zidane hadeed, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Hewanorra_International_Airport_Terminal_Building.jpg",
-  },
-  {
-    src: "/photos/heroes/airports/st-kitts-bradshaw.jpg",
-    alt: "Robert L. Bradshaw International Airport, St. Kitts",
-    credit: "Sunnya343, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:St._Kitts_Airport_Terminal_from_side.jpg",
+    credit: "ImagePerson, public domain (CC0), via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Hewanorra_Airport_St_Lucia_1094.jpg",
   },
   {
     src: "/photos/heroes/airports/st-vincent-argyle.jpg",
