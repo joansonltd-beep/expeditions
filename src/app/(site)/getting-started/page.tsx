@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, type HeroPhoto } from "@/components/ui";
 import { Icon, pillarIcon } from "@/components/icons";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
@@ -92,22 +92,33 @@ export const metadata: Metadata = {
   alternates: { canonical: "/getting-started" },
 };
 
-const ITEMS = [
+const EMPLOYMENT_ITEMS = [
   {
     href: "/caricom-skills-certificate",
     title: "CSME Skills Certificate",
     text: "Country-by-country guidance to the certificate that lets CARICOM nationals live and work on another member state.",
   },
   {
+    href: "/finance",
+    title: "Personal Banking",
+    text: "Open a personal bank account on your new island, plus prepare loan and credit card applications.",
+  },
+];
+
+const SELF_EMPLOYED_ITEMS = [
+  {
     href: "/business-setup",
     title: "Business Setup",
-    text: "Register your business on your new island, from name search to a ready-to-use business bank account.",
+    text: "Register your business under CARICOM's Right of Establishment, from name search to a ready-to-use business bank account.",
   },
   {
-    href: "/finance",
-    title: "Banking",
-    text: "Open accounts and prepare loan and credit card applications for your new home.",
+    href: "/finance#business",
+    title: "Business Banking",
+    text: "What banks in Trinidad and Tobago, Jamaica and Grenada actually ask for to open a business account, verified from their own pages.",
   },
+];
+
+const OTHER_ITEMS = [
   {
     href: "/guides",
     title: "General Guides",
@@ -131,8 +142,59 @@ export default function GettingStartedPage() {
         photos={BUSINESS_CENTER_PHOTOS}
       />
       <Section>
+        <SectionHead
+          eyebrow="Taking a job"
+          title="Regular employment"
+          intro="Moving to work for an employer on another CARICOM island? Here's what applies."
+          center={false}
+        />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
-          {ITEMS.map((item) => (
+          {EMPLOYMENT_ITEMS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
+                <Icon name={pillarIcon(item.href)} className="h-6 w-6" />
+              </div>
+              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
+              <p className="mt-2 text-slate-600">{item.text}</p>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
+        <SectionHead
+          eyebrow="Working for yourself"
+          title="Self-employed & business owners"
+          intro="Setting up your own business instead of taking a job? A different right, and a different set of paperwork, applies."
+          center={false}
+        />
+        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+          {SELF_EMPLOYED_ITEMS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
+                <Icon name={pillarIcon(item.href)} className="h-6 w-6" />
+              </div>
+              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
+              <p className="mt-2 text-slate-600">{item.text}</p>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead eyebrow="Also useful" title="More resources" center={false} />
+        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+          {OTHER_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
