@@ -17,8 +17,6 @@ const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title:
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
-const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
-
 const DESTINATIONS: NavItem = { href: "/destinations", label: "Where are we Going?" };
 
 // A plain, unclickable word sitting in the nav so "Let's" reads straight into
@@ -30,9 +28,10 @@ const AFTER: NavItem[] = [
   { href: "/about", label: "About" },
 ];
 
+// No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
   new Map(
-    [...MAIN, DESTINATIONS, LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])
+    [DESTINATIONS, LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])
   ).values()
 );
 
@@ -101,11 +100,6 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
         {/* desktop nav */}
         <div className="hidden items-center gap-7 lg:flex">
-          {MAIN.map((l) => (
-            <Link key={l.href} href={l.href} className={linkClass(l.href)}>
-              {l.label}
-            </Link>
-          ))}
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
