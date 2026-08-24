@@ -54,7 +54,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   youtubeUrl: null,
   xUrl: null,
   heroEyebrow: "CARICOM-to-CARICOM relocation",
-  heroHeadline: "Moving to another CARICOM country? Let's go, together.",
+  heroHeadline: "Want to explore, work or study in another CARICOM country? Let's go, together.",
   heroSubcopy:
     "Expeditions With Jo helps CARICOM nationals move between member states: whether to live, work or study, we will work with you step by step to make the idea a reality.",
   paymentNote:
