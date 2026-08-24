@@ -100,8 +100,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             )}
           </span>
           <span
-            className={`${leagueSpartan.className} text-xs font-light uppercase tracking-[0.25em] ${
-              transparent ? "text-white" : "text-slate-400"
+            className={`${leagueSpartan.className} text-base font-light uppercase tracking-[0.12em] ${
+              transparent ? "text-white" : "text-slate-500"
             }`}
           >
             Let&apos;s go!
