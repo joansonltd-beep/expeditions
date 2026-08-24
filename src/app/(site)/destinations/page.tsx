@@ -86,10 +86,10 @@ export default function DestinationsPage() {
   return (
     <>
       <PageHeader
-        title="Where are we Going?"
+        title="CARI-GO to one of these CARICOM Countries with Free Movement*"
         crumb="Where are we Going?"
         intro="Twelve CARICOM countries, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
-        footnote="CARICOM here means the 12 member states that take part in the CARICOM Single Market and Economy (CSME) under the Revised Treaty of Chaguaramas. The Bahamas, Haiti and Montserrat are CARICOM members too, but don't currently participate in CSME."
+        footnote="* Free movement is the right CARICOM nationals have to live and work in another member state without a work permit, established under the CSME (CARICOM Single Market and Economy) by the Revised Treaty of Chaguaramas. These 12 states currently participate: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don't currently take part."
         photos={AIRPORT_PHOTOS}
       />
       <Section>
