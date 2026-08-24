@@ -89,7 +89,6 @@ export default function DestinationsPage() {
         title="CARI-GO to one of these CARICOM Countries"
         crumb="Where are we Going?"
         intro="Twelve CARICOM countries with Free Movement*, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
-        footnote="* Free movement is the right CARICOM nationals have to live and work in another member state without a work permit, established under the CSME (CARICOM Single Market and Economy) by the Revised Treaty of Chaguaramas. These 12 states currently participate: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don't currently take part."
         photos={AIRPORT_PHOTOS}
       />
       <Section>
@@ -109,6 +108,14 @@ export default function DestinationsPage() {
             </Link>
           ))}
         </div>
+        <p className="mx-auto mt-6 max-w-3xl text-sm text-slate-500">
+          * Free movement is the right CARICOM nationals have to live and work in another member state without a work
+          permit, established under the CSME (CARICOM Single Market and Economy) by the Revised Treaty of
+          Chaguaramas. These 12 states currently participate: Antigua and Barbuda, Barbados, Belize, Dominica,
+          Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and
+          Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don&apos;t currently
+          take part.
+        </p>
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
           <p className="text-sm font-semibold text-slate-900">Curious what people actually earn and pay?</p>
           <p className="mt-1 text-sm text-slate-500">
