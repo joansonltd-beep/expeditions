@@ -53,7 +53,8 @@ export default function GettingTherePage() {
         icon={<Icon name="plane" className="h-7 w-7 text-brand" />}
         title="Go Visit"
         crumb="Go Visit"
-        intro="Not moving, just visiting? We're a full travel agency for trips within CARICOM too: flights, stays, transfers and travel visas for vacations, family visits and business trips."
+        intro="Want to see what it's like before moving? We're a full travel agency for trips within CARICOM too: flights, stays, transfers and travel visas for vacations, family visits and business trips."
+        footnote="But remember, come see me and come live with me are two very different things!"
         photos={[
           {
             src: "/photos/hero.jpg",
