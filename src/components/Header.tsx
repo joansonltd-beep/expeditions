@@ -26,10 +26,10 @@ const DESTINATIONS: NavItem = { href: "/destinations", label: "CARICOM" };
 const LETS: NavItem = { href: "#lets", label: "Let's:", static: true };
 const IN: NavItem = { href: "#in", label: "In", static: true };
 
-const AFTER: NavItem[] = [
-  { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
-  { href: "/about", label: "About" },
-];
+// "Reports" is no longer its own nav link: it lives under the CARICOM
+// (destinations) page instead, but /survey itself is still a normal,
+// directly shareable page — just not in the top nav.
+const AFTER: NavItem[] = [{ href: "/about", label: "About" }];
 
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(

@@ -8,20 +8,22 @@ import { HeaderThemeProvider } from "@/components/HeaderTheme";
 import { getSiteSettings } from "@/lib/siteData";
 import { SITE_URL } from "@/lib/siteUrl";
 
-const relocateLinks = [
+type FooterLink = { href: string; label: string; title?: string };
+
+const relocateLinks: FooterLink[] = [
   { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
   { href: "/business-setup", label: "Business Setup" },
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "General Guides" },
   { href: "/destinations", label: "Where are we Going?" },
+  { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
 ];
-const companyLinks = [
+const companyLinks: FooterLink[] = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
-  { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];

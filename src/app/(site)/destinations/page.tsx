@@ -109,6 +109,15 @@ export default function DestinationsPage() {
             </Link>
           ))}
         </div>
+        <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
+          <p className="text-sm font-semibold text-slate-900">Curious what people actually earn and pay?</p>
+          <p className="mt-1 text-sm text-slate-500">
+            Anonymous, crowdsourced salary, rent and utility reports, country by country.
+          </p>
+          <Link href="/survey" className="mt-3 inline-block text-sm font-semibold text-brand hover:underline">
+            See the Reports →
+          </Link>
+        </div>
       </Section>
     </>
   );
