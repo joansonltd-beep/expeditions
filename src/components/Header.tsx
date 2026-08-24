@@ -21,7 +21,7 @@ const DESTINATIONS: NavItem = { href: "/destinations", label: "Where are we Goin
 
 // A plain, unclickable word sitting in the nav so "Let's" reads straight into
 // "Go Visit / Go Work / Go Study" beside it. Not a link — just there.
-const LETS: NavItem = { href: "#lets", label: "Let's", static: true };
+const LETS: NavItem = { href: "#lets", label: "Let's:", static: true };
 
 const AFTER: NavItem[] = [
   { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
