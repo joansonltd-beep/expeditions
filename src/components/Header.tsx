@@ -80,7 +80,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
         <Link
           href="/"
-          className={`flex shrink-0 flex-col items-center transition-colors ${transparent ? "text-white" : "text-slate-900"}`}
+          className={`flex shrink-0 flex-col items-end transition-colors ${transparent ? "text-white" : "text-slate-900"}`}
         >
           <span className="flex items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight">
             {logoUrl ? (
@@ -104,7 +104,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               transparent ? "text-white" : "text-slate-500"
             }`}
           >
-            Let&apos;s go!
+            Lewwe Go!
           </span>
         </Link>
 
