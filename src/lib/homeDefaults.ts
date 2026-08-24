@@ -69,12 +69,12 @@ export const DEFAULT_HOME: HomeContent = {
     { icon: "🧭", title: "Relocation Guides", text: "Plain-language guides to certificates, documents, and getting settled.", href: "/guides" },
     {
       icon: "🗺️",
-      title: "Go Where",
+      title: "Where are we Going?",
       text: "Cost of living, places to see, local food and what to expect in every CARICOM country we cover.",
       href: "/destinations",
     },
   ],
-  travelEyebrow: "Go See",
+  travelEyebrow: "Go Visit",
   travelTitle: "Just visiting? We can arrange that too",
   travelIntro:
     "We're a full travel agency as well as a relocation service. Whether you're moving or just planning a trip within CARICOM, we arrange flights, stays, transfers and travel visas.",

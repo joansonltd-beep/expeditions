@@ -11,23 +11,29 @@ import { useHeaderTransparentCapable } from "@/components/HeaderTheme";
 // pull the homepage hero up underneath the header so it can go transparent.
 export const HEADER_HEIGHT = 70;
 
-type NavItem = { href: string; label: string; title?: string };
+type NavItem = { href: string; label: string; title?: string; static?: boolean };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go See", title: "Travel within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title: "Travel within CARICOM" };
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
-const DESTINATIONS: NavItem = { href: "/destinations", label: "Go Where" };
+const DESTINATIONS: NavItem = { href: "/destinations", label: "Where are we Going?" };
+
+// A plain, unclickable word sitting in the nav so "Let's" reads straight into
+// "Go Visit / Go Work / Go Study" beside it. Not a link — just there.
+const LETS: NavItem = { href: "#lets", label: "Let's", static: true };
 
 const AFTER: NavItem[] = [
-  { href: "/survey", label: "SRU", title: "Salaries, Rent and Utilities" },
+  { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
   { href: "/about", label: "About" },
 ];
 
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map([...MAIN, DESTINATIONS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])).values()
+  new Map(
+    [...MAIN, DESTINATIONS, LETS, COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, ...AFTER].map((l) => [l.href, l])
+  ).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -103,6 +109,12 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
+          <span
+            aria-hidden="true"
+            className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}
+          >
+            {LETS.label}
+          </span>
           <Link href={COME_SEE_ME.href} title={COME_SEE_ME.title} className={linkClass(COME_SEE_ME.href)}>
             {COME_SEE_ME.label}
           </Link>
@@ -147,17 +159,23 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       {open ? (
         <div className="border-t border-slate-200/70 bg-white/95 px-5 py-4 backdrop-blur-xl lg:hidden">
           <div className="flex flex-col gap-1">
-            {MOBILE_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
-              >
-                {l.label}
-                {l.title ? <span className="ml-1.5 font-normal text-slate-400">({l.title})</span> : null}
-              </Link>
-            ))}
+            {MOBILE_LINKS.map((l) =>
+              l.static ? (
+                <span key={l.href} aria-hidden="true" className="select-none px-2 py-2.5 text-sm font-medium text-slate-400">
+                  {l.label}
+                </span>
+              ) : (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                >
+                  {l.label}
+                  {l.title ? <span className="ml-1.5 font-normal text-slate-400">({l.title})</span> : null}
+                </Link>
+              )
+            )}
             {chatbotUrl ? (
               <a
                 href={chatbotUrl}

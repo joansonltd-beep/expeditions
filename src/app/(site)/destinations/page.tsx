@@ -86,8 +86,8 @@ export default function DestinationsPage() {
   return (
     <>
       <PageHeader
-        title="Go Where"
-        crumb="Go Where"
+        title="Where are we Going?"
+        crumb="Where are we Going?"
         intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols."
         photos={AIRPORT_PHOTOS}
       />

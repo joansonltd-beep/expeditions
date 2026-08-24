@@ -14,14 +14,14 @@ const relocateLinks = [
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "General Guides" },
-  { href: "/destinations", label: "Go Where" },
+  { href: "/destinations", label: "Where are we Going?" },
 ];
 const companyLinks = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodations" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
-  { href: "/survey", label: "SRU", title: "Salaries, Rent and Utilities" },
+  { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];

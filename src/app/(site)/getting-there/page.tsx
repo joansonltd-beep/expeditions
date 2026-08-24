@@ -4,7 +4,7 @@ import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Go See: Travel Within CARICOM",
+  title: "Go Visit: Travel Within CARICOM",
   description:
     "Not moving, just visiting? We're a full travel agency for trips within CARICOM: flights, accommodations, transfers and travel visas for vacations, family visits and business trips.",
   keywords: [
@@ -51,8 +51,8 @@ export default function GettingTherePage() {
     <>
       <PageHeader
         icon={<Icon name="plane" className="h-7 w-7 text-brand" />}
-        title="Go See"
-        crumb="Go See"
+        title="Go Visit"
+        crumb="Go Visit"
         intro="Not moving, just visiting? We're a full travel agency for trips within CARICOM too: flights, stays, transfers and travel visas for vacations, family visits and business trips."
         photos={[
           {

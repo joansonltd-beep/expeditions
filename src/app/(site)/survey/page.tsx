@@ -50,7 +50,7 @@ export default function SurveyHubPage() {
     <>
       <PageHeader
         title="Cost of Living"
-        crumb="SRU"
+        crumb="Reports"
         intro="Real numbers on Salaries, Rent and Utilities from people actually living and working across CARICOM, crowdsourced and fully anonymous. No name or email is ever collected, and every response is used only in aggregate."
         photos={[
           {
