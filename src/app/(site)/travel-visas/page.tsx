@@ -109,7 +109,7 @@ export default async function TravelVisasPage() {
       <ServicePage
         service={service}
         title="Leaving CARICOM?"
-        intro="We guide CARICOM citizens, especially Grenadians, through every step of the US and Canadian visa process from Trinidad.*"
+        intro="We guide CARICOM citizens, especially Grenadians, through every step of the US and Canadian visa process.*"
         footnote="* The Canadian visa process is completely free. You only ever pay the Canadian government's own visa and biometrics fees, directly to IRCC."
         ctaSubject="Travel Visas"
         ctaTitle="Need to travel for your appointment?"
