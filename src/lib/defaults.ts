@@ -56,7 +56,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   heroEyebrow: "CARICOM-to-CARICOM relocation",
   heroHeadline: "Moving to another CARICOM country? Let's go, together.",
   heroSubcopy:
-    "Expeditions With Jo helps CARICOM nationals relocate between member states: CSME Skills Certificates, bank accounts, business setup and settling-in support, with flights and stays arranged whenever the move calls for them.",
+    "Expeditions With Jo helps CARICOM nationals move between member states: whether to live, work or study, we will work with you step by step to make the idea a reality.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:
