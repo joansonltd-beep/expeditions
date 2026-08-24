@@ -89,6 +89,7 @@ export default function DestinationsPage() {
         title="Where are we Going?"
         crumb="Where are we Going?"
         intro="Twelve CARICOM countries, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
+        footnote="CARICOM here means the 12 member states that take part in the CARICOM Single Market and Economy (CSME) under the Revised Treaty of Chaguaramas. The Bahamas, Haiti and Montserrat are CARICOM members too, but don't currently participate in CSME."
         photos={AIRPORT_PHOTOS}
       />
       <Section>
