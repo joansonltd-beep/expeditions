@@ -14,7 +14,7 @@ const relocateLinks = [
   { href: "/finance", label: "Banking" },
   { href: "/insurance", label: "Insurance" },
   { href: "/guides", label: "General Guides" },
-  { href: "/destinations", label: "Destinations" },
+  { href: "/destinations", label: "Go Where" },
 ];
 const companyLinks = [
   { href: "/flights", label: "Flights" },

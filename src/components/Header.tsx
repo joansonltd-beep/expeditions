@@ -13,13 +13,13 @@ export const HEADER_HEIGHT = 70;
 
 type NavItem = { href: string; label: string; title?: string };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Come See", title: "Travel within CARICOM" };
-const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Come Work", title: "Relocating within CARICOM" };
-const STUDY: NavItem = { href: "/study", label: "Come Study", title: "Studying within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go See", title: "Travel within CARICOM" };
+const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
+const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
 
 const MAIN: NavItem[] = [{ href: "/", label: "Home" }];
 
-const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
+const DESTINATIONS: NavItem = { href: "/destinations", label: "Go Where" };
 
 const AFTER: NavItem[] = [
   { href: "/survey", label: "SRU", title: "Salaries, Rent and Utilities" },

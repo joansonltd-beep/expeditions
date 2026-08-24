@@ -48,7 +48,7 @@ export const DEFAULT_HOME: HomeContent = {
     { value: "Step by step", label: "paperwork guidance" },
     { value: "One contact", label: "for the whole move" },
   ],
-  pillarsEyebrow: "Come Work",
+  pillarsEyebrow: "Go Work",
   pillarsTitle: "Everything for your move in one place",
   pillarsIntro:
     "From the CSME Skills Certificate that lets you live and work on another island to the bank account and business you will need once you land, we handle the details.",
@@ -69,12 +69,12 @@ export const DEFAULT_HOME: HomeContent = {
     { icon: "🧭", title: "Relocation Guides", text: "Plain-language guides to certificates, documents, and getting settled.", href: "/guides" },
     {
       icon: "🗺️",
-      title: "Destinations",
+      title: "Go Where",
       text: "Cost of living, places to see, local food and what to expect in every CARICOM country we cover.",
       href: "/destinations",
     },
   ],
-  travelEyebrow: "Come See",
+  travelEyebrow: "Go See",
   travelTitle: "Just visiting? We can arrange that too",
   travelIntro:
     "We're a full travel agency as well as a relocation service. Whether you're moving or just planning a trip within CARICOM, we arrange flights, stays, transfers and travel visas.",

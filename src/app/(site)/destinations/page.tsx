@@ -94,7 +94,7 @@ export default function DestinationsPage() {
     <>
       <PageHeader
         title="CARICOM Countries at a Glance"
-        crumb="Destinations"
+        crumb="Go Where"
         intro="What to expect on the ground in each CARICOM country: cost of living, places to see, things to do, where to eat, and national symbols."
         photos={AIRPORT_PHOTOS}
       />
