@@ -12,9 +12,9 @@ const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
   },
   {
     src: "/photos/heroes/business/kingston.jpg",
-    alt: "New Kingston, Jamaica's business district",
-    credit: "Wolmadrian, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:New_Kingston,_Jamaica_II.JPG",
+    alt: "International Seabed Authority headquarters, New Kingston, Jamaica",
+    credit: "James A.R. McFarlane, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:ISA_Headquaters.jpg",
   },
   {
     src: "/photos/heroes/business/bridgetown.jpg",
