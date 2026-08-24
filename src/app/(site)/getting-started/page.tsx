@@ -145,7 +145,7 @@ export default function GettingStartedPage() {
         <SectionHead
           eyebrow="Taking a job"
           title="Regular employment"
-          intro="Moving to work for an employer on another CARICOM island? Here's what applies."
+          intro="Got a job lined up on another island, or hunting for one? This is what turns the offer into an actual move."
           center={false}
         />
         <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">

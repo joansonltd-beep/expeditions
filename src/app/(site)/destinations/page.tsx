@@ -10,19 +10,12 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 // tarmac shot through a terminal window. None of them read well full-bleed.
 // St. Kitts's Bradshaw Airport is left out too: Commons only has one usable
 // terminal photo (soft/blurry when blown up) plus an unrelated statue photo.
+// Trinidad (Piarco) and Barbados (Grantley Adams) are left out as well: the
+// only photos available don't clearly read as "airport" on their own (an
+// atrium interior with no signage or planes in frame, and an exterior canopy
+// shot with the airport name cropped off) even though they're sharp and
+// otherwise usable.
 const AIRPORT_PHOTOS: HeroPhoto[] = [
-  {
-    src: "/photos/heroes/airports/trinidad-piarco.jpg",
-    alt: "Piarco International Airport, Trinidad",
-    credit: "Chris Fitzpatrick, CC BY-SA 4.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Piarco_International_Airport_Atrium.jpg",
-  },
-  {
-    src: "/photos/heroes/airports/barbados-grantley-adams.jpg",
-    alt: "Grantley Adams International Airport, Barbados",
-    credit: "CaribDigita, public domain, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Sir_Grantley_Adams_Int_Airport,_Barbados-01.jpg",
-  },
   {
     src: "/photos/heroes/airports/antigua-vc-bird.jpg",
     alt: "V.C. Bird International Airport, Antigua",
