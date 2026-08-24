@@ -42,7 +42,7 @@ const ITEMS = [
     href: "/travel-visas",
     icon: "passport" as const,
     title: "Travel Visas",
-    text: "Free, step-by-step support for CARICOM citizens applying for a Canadian visa from Trinidad, plus where to go for a US visa.",
+    text: "Free, step-by-step support for CARICOM citizens applying for a Canadian visa, plus where to go for a US visa.",
   },
 ];
 
