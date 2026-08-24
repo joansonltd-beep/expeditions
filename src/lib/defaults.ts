@@ -187,7 +187,7 @@ export const DEFAULT_SERVICES: Service[] = [
           "Document review and approval guidance",
           "Answers to frequently asked questions for Grenadian applicants",
         ],
-        note: "This assistance is completely free. You only ever pay the Canadian government's own visa and biometrics fees directly to IRCC; we never charge for our help. US visas coming soon.",
+        note: "This assistance is completely free. You only ever pay the Canadian government's own visa and biometrics fees directly to IRCC; we never charge for our help.",
       },
     ],
     primaryLink: null,
