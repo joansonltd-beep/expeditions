@@ -78,7 +78,10 @@ export default function Header({ businessName, logoUrl }: { businessName: string
       }`}
     >
       <nav className="mx-auto flex h-[70px] max-w-6xl items-center justify-between gap-4 px-5">
-        <Link href="/" className={`flex shrink-0 flex-col transition-colors ${transparent ? "text-white" : "text-slate-900"}`}>
+        <Link
+          href="/"
+          className={`flex shrink-0 flex-col items-center transition-colors ${transparent ? "text-white" : "text-slate-900"}`}
+        >
           <span className="flex items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight">
             {logoUrl ? (
               <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
@@ -97,8 +100,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             )}
           </span>
           <span
-            className={`${leagueSpartan.className} text-[10px] font-light uppercase tracking-[0.25em] ${
-              transparent ? "text-white/60" : "text-slate-400"
+            className={`${leagueSpartan.className} text-xs font-light uppercase tracking-[0.25em] ${
+              transparent ? "text-white" : "text-slate-400"
             }`}
           >
             Let&apos;s go!
