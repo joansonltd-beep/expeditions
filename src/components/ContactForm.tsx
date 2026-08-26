@@ -40,8 +40,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg shadow-slate-900/5 sm:p-8">
-      <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-brand">Trip planner</p>
-      <p className="mb-6 text-xl font-bold text-slate-900">Start your enquiry</p>
+      <p className="mb-6 text-xl font-bold text-slate-900">Enquiry</p>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-semibold text-slate-900">
           Name
