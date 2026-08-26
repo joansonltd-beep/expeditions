@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
   {
@@ -165,6 +166,18 @@ export default function GettingStartedPage() {
 
       <Section alt>
         <SectionHead
+          eyebrow="Job seekers"
+          title="Looking for work in another CARICOM country?"
+          intro="Tell us what you're looking for and we'll be in touch about openings that match, no need to have an offer lined up first."
+          center={false}
+        />
+        <div className="mx-auto max-w-2xl">
+          <JobSeekerEnquiry />
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead
           eyebrow="Working for yourself"
           title="Self-employed & business owners"
           intro="Setting up your own business instead of taking a job? A different right, and a different set of paperwork, applies."
@@ -185,7 +198,7 @@ export default function GettingStartedPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section alt>
         <SectionHead eyebrow="Also useful" title="More resources" center={false} />
         <div className="mx-auto grid max-w-4xl gap-6">
           {OTHER_ITEMS.map((item) => (
