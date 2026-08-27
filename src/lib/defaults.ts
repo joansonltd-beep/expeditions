@@ -39,7 +39,7 @@ export type SiteSettings = {
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   businessName: "Expeditions With Jo",
-  tagline: "CARICOM Relocation & Settlement",
+  tagline: "CARICOM Mobility Support",
   whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "8687236644").replace(/\D/g, ""),
   chatbotUrl: "https://chatbot-c359f6.zapier.app",
   generalEmail: "info@expeditionswithjo.com",
@@ -53,19 +53,37 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   tiktokUrl: null,
   youtubeUrl: null,
   xUrl: null,
-  heroEyebrow: "CARICOM-to-CARICOM relocation",
-  heroHeadline: "Want to work or study in another CARICOM country? Let's go, together.",
+  heroEyebrow: "CARICOM mobility support",
+  heroHeadline: "Visit, work or study in another CARICOM country with a clear plan.",
   heroSubcopy:
-    "Expeditions With Jo helps CARICOM nationals move between member states: whether to live, work or study, we will work with you step by step to make the idea a reality. Just want to visit instead? We arrange that too.",
+    "Expeditions With Jo helps CARICOM citizens understand the requirements, prepare the right information, arrange travel, and manage practical details for their next step.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:
-    "Relocation support for CARICOM nationals moving between member states: CSME Skills Certificates, banking, business setup and settling-in help, with travel arranged when you need it.",
+    "CARICOM mobility support for citizens visiting, working or studying in another member state. We make the requirements, documents, travel and practical arrangements easier to understand.",
   logoUrl: null,
 };
 
 // --- services -----------------------------------------------------------
 export type ServiceCategory = "travel" | "local" | "visa";
+
+export type ServiceFaq = { q: string; a: string };
+
+// The standard blocks every important service page carries, so a visitor can
+// see who it is for, what they get, what they have to supply, and where our
+// responsibility stops and a third party's decision begins. All optional: a
+// page renders only the blocks that are filled in.
+export type ServiceDetail = {
+  whoFor?: string[];
+  included?: string[];
+  youProvide?: string[];
+  notControlled?: string[];
+  process?: string[];
+  feesNote?: string;
+  faqs?: ServiceFaq[];
+  disclaimer?: string;
+  related?: LinkRef[];
+};
 
 export type Service = {
   slug: string;
@@ -79,6 +97,7 @@ export type Service = {
   intro: string; // sub-page hero subcopy
   body: ContentSection[];
   primaryLink: LinkRef | null; // service-specific CTA (booking url, request email)
+  detail?: ServiceDetail;
 };
 
 export const DEFAULT_SERVICES: Service[] = [
@@ -114,6 +133,62 @@ export const DEFAULT_SERVICES: Service[] = [
       },
     ],
     primaryLink: { label: "Flight request", href: "mailto:flights@expeditionswithjo.com?subject=Flight%20Request" },
+    detail: {
+      whoFor: [
+        "Anyone visiting another CARICOM country for a holiday, a family visit or business",
+        "People travelling to start work after a Skills Certificate is issued",
+        "Students travelling to begin a course, and family travelling with them",
+        "Anyone making a scouting trip before committing to a longer stay",
+      ],
+      included: [
+        "Options matched to your dates, budget and baggage needs",
+        "Booking and confirmation handled for you",
+        "Guidance on baggage allowances and special airline requests",
+        "Support for seniors and travellers needing extra assistance",
+        "WhatsApp updates before and during your journey",
+      ],
+      youProvide: [
+        "Names exactly as they appear on the passports being travelled on",
+        "Travel dates, or the range you are flexible across",
+        "Departure and destination cities",
+        "Your budget, and any airline or routing preference",
+      ],
+      notControlled: [
+        "Airline fares, which change constantly and are set by the airline",
+        "Seat availability and schedule changes, delays or cancellations",
+        "Whether you are admitted at the border on arrival",
+        "Airline decisions on baggage, upgrades or special assistance requests",
+      ],
+      process: [
+        "Send your dates and destination by WhatsApp or email.",
+        "We come back with options and what each one costs.",
+        "You choose, and we confirm the booking.",
+        "You receive your itinerary and confirmations.",
+      ],
+      feesNote:
+        "Any service charge is confirmed to you in writing before you commit. You always see the fare before booking.",
+      faqs: [
+        {
+          q: "Can you get a cheaper fare than booking myself?",
+          a: "Sometimes, and sometimes not. We look for the best value across the options for your dates rather than promising to beat any particular price. If booking direct is cheaper for your trip, we will tell you.",
+        },
+        {
+          q: "Do you book flights outside CARICOM?",
+          a: "Yes. Flight booking is worldwide, even though the rest of what we do is focused on CARICOM.",
+        },
+        {
+          q: "What if my flight is cancelled or delayed?",
+          a: "Tell us and we will help you work through the airline's options. The airline sets what it will offer, and any rebooking or refund is its decision under its own conditions of carriage.",
+        },
+      ],
+      disclaimer:
+        "A booked flight is not permission to enter a country. Entry, visas and length of stay are decided by the immigration authority of the country you are travelling to.",
+      related: [
+        { label: "Accommodation", href: "/accommodations" },
+        { label: "Airport transfers", href: "/transfers" },
+        { label: "Go Visit", href: "/getting-there" },
+      ],
+    },
   },
   {
     slug: "accommodations",
@@ -136,6 +211,57 @@ export const DEFAULT_SERVICES: Service[] = [
       },
     ],
     primaryLink: { label: "Email your itinerary", href: "mailto:stays@expeditionswithjo.com" },
+    detail: {
+      whoFor: [
+        "Visitors who want somewhere booked before they land",
+        "People arriving to start work and needing a base while they find a longer-term home",
+        "Students needing somewhere for the first few weeks or a first semester",
+        "Anyone on a scouting trip before committing to a move",
+      ],
+      included: [
+        "Hotel, guesthouse, Airbnb and short-stay apartment options",
+        "Choices matched to your location, comfort level and budget",
+        "Booking and confirmation handled for you",
+        "Advice on which areas suit your purpose and how to get around from them",
+      ],
+      youProvide: [
+        "Your dates and the town or area you need to be near",
+        "How many people are staying, and their ages if children are travelling",
+        "Your nightly or total budget",
+        "Anything you need in the property, such as a kitchen, wifi or step-free access",
+      ],
+      notControlled: [
+        "Availability and nightly rates, which are set by the property or platform",
+        "Property standards, cleanliness and the accuracy of a host's listing",
+        "Cancellation terms, which belong to the property or platform",
+        "Whether a landlord or host accepts a particular guest or booking",
+      ],
+      process: [
+        "Email your itinerary to stays@expeditionswithjo.com or message us on WhatsApp.",
+        "We come back with options and what each one costs.",
+        "You choose, and we confirm the booking.",
+        "You receive your confirmation and check-in details.",
+      ],
+      feesNote:
+        "Any service charge is confirmed in writing before you commit. You always see the nightly rate and the total before booking.",
+      faqs: [
+        {
+          q: "Can you find me a long-term rental or an apartment to live in?",
+          a: "We arrange short-stay accommodation, which is what most people need while they get settled. We can research options and point you in the right direction for a longer lease, but we are not a letting agency and we do not sign tenancies on your behalf.",
+        },
+        {
+          q: "Can I book somewhere before I know whether my certificate or visa comes through?",
+          a: "You can, but think about the cancellation terms first. We will flag which options are refundable so you are not locked into dates that may move.",
+        },
+      ],
+      disclaimer:
+        "Bookings are made with third-party properties and platforms under their terms. Their cancellation and refund policies apply, not ours.",
+      related: [
+        { label: "Flights", href: "/flights" },
+        { label: "Airport transfers", href: "/transfers" },
+        { label: "Country guides", href: "/destinations" },
+      ],
+    },
   },
   {
     slug: "transfers",
@@ -165,6 +291,53 @@ export const DEFAULT_SERVICES: Service[] = [
       },
     ],
     primaryLink: { label: "Book your transfers", href: "https://www.book-online-transfers.com/en/expeditionswithjo" },
+    detail: {
+      whoFor: [
+        "Anyone landing somewhere unfamiliar who would rather not negotiate a taxi on arrival",
+        "Families arriving with luggage, children or elderly relatives",
+        "Students arriving for the start of a course",
+        "Visitors needing local rides around Trinidad",
+      ],
+      included: [
+        "Pre-booked, English-speaking drivers through Welcome Pickups in over 100 cities",
+        "Airport pickups and drop-offs, door to door",
+        "A driver waiting for you rather than a taxi queue",
+        "Local Trinidad airport pickup and drop-off",
+      ],
+      youProvide: [
+        "Your flight number and arrival time",
+        "The exact address you are going to",
+        "How many passengers and how many bags",
+        "Any child seat or accessibility requirement",
+      ],
+      notControlled: [
+        "Traffic, weather and road conditions",
+        "Driver allocation and vehicle type, which the transfer operator assigns",
+        "Delays caused by immigration or baggage reclaim at the airport",
+        "Welcome Pickups' own cancellation and refund terms",
+      ],
+      process: [
+        "Book directly through our Welcome Pickups link, or send us your flight details.",
+        "You receive a confirmation with your driver's details.",
+        "Your driver meets you in arrivals and takes you to your address.",
+      ],
+      feesNote:
+        "Local Trinidad transfers, including airport pickup and drop-off, are $5 USD each. International transfer prices are shown on the booking link before you pay.",
+      faqs: [
+        {
+          q: "What happens if my flight is delayed?",
+          a: "Transfers are tracked against your flight number, which is why we ask for it. Give us the flight number rather than just the landing time and the driver adjusts to the actual arrival.",
+        },
+        {
+          q: "Is this available everywhere in CARICOM?",
+          a: "Welcome Pickups covers over 100 cities worldwide, but not every island. Tell us your destination and we will confirm whether it is covered before you rely on it.",
+        },
+      ],
+      related: [
+        { label: "Flights", href: "/flights" },
+        { label: "Accommodation", href: "/accommodations" },
+      ],
+    },
   },
   {
     slug: "travel-visas",
@@ -174,23 +347,81 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "visa",
     order: 5,
     shortBlurb:
-      "Free, step-by-step help with the Canadian visa process from Trinidad, especially for Grenadian applicants.",
-    cardFeatures: ["100% free assistance", "Application form guidance", "Biometrics in Port of Spain", "US visas coming soon"],
+      "Free, step-by-step help with the Canadian visa process from Trinidad, open to all CARICOM citizens.",
+    cardFeatures: ["Free assistance", "Application form guidance", "Biometrics in Port of Spain", "US visas coming soon"],
     intro:
-      "We guide CARICOM citizens, especially Grenadians, through every step of the Canadian visa process from Trinidad, completely free of charge.",
+      "We guide CARICOM citizens through every step of the Canadian visa application process from Trinidad, completely free of charge.",
     body: [
       {
         heading: "How we help",
         bullets: [
           "Step-by-step help with visa application forms",
           "Booking biometrics appointments in Port of Spain",
-          "Document review and approval guidance",
-          "Answers to frequently asked questions for Grenadian applicants",
+          "Reviewing your documents before you submit them",
+          "Answering the questions CARICOM applicants ask most often",
         ],
         note: "This assistance is completely free. You only ever pay the Canadian government's own visa and biometrics fees directly to IRCC; we never charge for our help.",
       },
     ],
     primaryLink: null,
+    detail: {
+      whoFor: [
+        "CARICOM citizens applying for a Canadian visitor visa from Trinidad",
+        "Applicants who find the online forms and document lists hard to work through",
+        "Anyone who wants a second pair of eyes on a file before submitting it",
+      ],
+      included: [
+        "Walking through the application form question by question",
+        "Explaining which supporting documents are being asked for and why",
+        "Help booking a biometrics appointment in Port of Spain",
+        "A review of your document set before you submit",
+      ],
+      youProvide: [
+        "Your own accurate information and genuine supporting documents",
+        "Your passport details, shared securely once we are in touch rather than through this website",
+        "The government fees, paid directly to IRCC by you",
+        "Attendance at your own biometrics appointment",
+      ],
+      notControlled: [
+        "Whether a visa is granted or refused, which is decided solely by IRCC",
+        "How long IRCC takes to process an application",
+        "IRCC fees, forms and requirements, which can change at any time",
+        "Appointment availability at the biometrics centre",
+      ],
+      process: [
+        "Message us on WhatsApp and tell us what you are applying for.",
+        "We go through the form and the document list with you.",
+        "You gather your documents and we review them before submission.",
+        "You submit, pay IRCC directly, and attend biometrics.",
+        "IRCC decides.",
+      ],
+      feesNote:
+        "We charge nothing for this service. The only money you pay is the Canadian government's own visa and biometrics fees, paid by you directly to IRCC.",
+      faqs: [
+        {
+          q: "Is this really free?",
+          a: "Yes. We do not charge for Canadian visa guidance. Anyone asking you to pay us for it is not us.",
+        },
+        {
+          q: "Can you guarantee my visa will be approved?",
+          a: "No, and nobody can. IRCC decides every application on its own merits. What we can do is help you submit a complete, accurate, well-prepared application.",
+        },
+        {
+          q: "Do you help with US visas?",
+          a: "Not yet. We can tell you where to go for the current process in the meantime.",
+        },
+        {
+          q: "Is this only for Grenadian applicants?",
+          a: "No. It is open to CARICOM citizens generally. Grenadian applicants were simply the first group we worked with.",
+        },
+      ],
+      disclaimer:
+        "We are not immigration lawyers or licensed immigration consultants, and nothing here is legal advice. We help you understand and prepare your own application. Always confirm current requirements with IRCC directly.",
+      related: [
+        { label: "Flights", href: "/flights" },
+        { label: "CARICOM Skills Certificate", href: "/caricom-skills-certificate" },
+      ],
+    },
   },
   {
     slug: "insurance",
@@ -259,6 +490,61 @@ export const DEFAULT_SERVICES: Service[] = [
       },
     ],
     primaryLink: null,
+    detail: {
+      whoFor: [
+        "People arriving in a new CARICOM country who need a local account",
+        "Anyone in Trinidad and Tobago preparing a loan or credit card application",
+        "New business owners who need a business account opened",
+      ],
+      included: [
+        "Telling you which bank to approach on your island and exactly what to bring",
+        "Checking your documents against the bank's own published requirements",
+        "Preparing loan and credit card applications so they are complete before you submit",
+        "Business registration and getting your documents ready for a business account",
+      ],
+      youProvide: [
+        "Valid identification and proof of address in the form the bank asks for",
+        "Proof of income or employment where the product requires it",
+        "Your own accurate financial information",
+        "Attendance in person where the bank requires it",
+      ],
+      notControlled: [
+        "Whether the bank opens an account for you",
+        "Whether a loan or credit card application is approved, and on what terms",
+        "The bank's interest rates, fees and processing times",
+        "Changes a bank makes to its own document requirements",
+      ],
+      process: [
+        "Tell us which country you are in and what you need.",
+        "We confirm the bank, the product and the document checklist.",
+        "You gather the documents and we check them before you go.",
+        "You attend the bank and submit.",
+        "The bank decides.",
+      ],
+      feesNote:
+        "Loan and credit card application help is free. Business registration and account opening is a paid service with published packages, priced on this page.",
+      faqs: [
+        {
+          q: "Can you open an account for me before I arrive?",
+          a: "No. Banks require you to attend in person and to hold valid local identification or immigration status. What we can do is make sure you walk in with everything they will ask for.",
+        },
+        {
+          q: "Will I definitely be approved for a loan?",
+          a: "No. Approval is the bank's decision, based on its own criteria. We help you submit a complete and properly prepared application, which is a different thing from a guaranteed outcome.",
+        },
+        {
+          q: "Do you need my bank details or passwords?",
+          a: "Never. We will not ask for account passwords, PINs or online banking credentials, and you should not send them to us or anyone else.",
+        },
+      ],
+      disclaimer:
+        "Loan, credit card and account applications are processed through the bank itself. We are not a bank, a lender or a licensed financial adviser, and nothing here is financial advice.",
+      related: [
+        { label: "Business setup", href: "/business-setup" },
+        { label: "Country guides", href: "/destinations" },
+        { label: "CARICOM Skills Certificate", href: "/caricom-skills-certificate" },
+      ],
+    },
   },
 ];
 
@@ -341,23 +627,11 @@ export const DEFAULT_ADDONS: AddOn[] = [
 // --- testimonials -------------------------------------------------------
 export type Testimonial = { quote: string; person: string; context: string };
 
-export const DEFAULT_TESTIMONIALS: Testimonial[] = [
-  {
-    quote: "Jo walked me through my CSME Skills Certificate step by step. I knew exactly what to submit and what it would cost before I ever left home.",
-    person: "Sample client",
-    context: "Moved from Grenada to Trinidad",
-  },
-  {
-    quote: "Bank account, business name, everything was ready when I landed. Settling in felt like a checklist, not a scramble.",
-    person: "Sample client",
-    context: "New business in Trinidad",
-  },
-  {
-    quote: "They sorted the paperwork for the move and still found us affordable flights and a place to stay while we searched for a home.",
-    person: "Sample client",
-    context: "Family relocation",
-  },
-];
+// Deliberately empty. The site renders no testimonial section at all until real
+// client quotes are added in Studio, so nothing invented or placeholder can
+// ever appear. Add each one with a real first name and last initial, plus the
+// destination or service it relates to, and only with the client's permission.
+export const DEFAULT_TESTIMONIALS: Testimonial[] = [];
 
 // --- about --------------------------------------------------------------
 export type AboutData = {
@@ -367,44 +641,51 @@ export type AboutData = {
 
 export const DEFAULT_ABOUT: AboutData = {
   intro:
-    "Expeditions With Jo is the brainchild of Joanson Baptiste James, who started it as a Trinidad travel agency and has grown it into a relocation-first service helping CARICOM citizens move between member states to work, under the free movement provisions of the Treaty of Chaguaramas.",
+    "Expeditions With Jo helps CARICOM citizens visit, work or study in another CARICOM country. It is run by Joanson Baptiste James from Trinidad and Tobago, and it started as a travel agency before growing into the wider mobility support it offers today.",
   sections: [
     {
+      heading: "Who runs it",
       paragraphs: [
-        "The Treaty of Chaguaramas gives skilled CARICOM nationals the right to live and work in another participating member state without a work permit. Our sole mission is to make that move simple: the CSME Skills Certificate you need to apply for, the bank account and business registration you'll want once you land, and the settling-in details that are hard to research from another island. We cover the 12 CARICOM states that actually participate in CSME free movement, not every CARICOM member, since a few (like Montserrat and The Bahamas) sit outside that regime and a work permit still applies there.",
-        "It's still run with the same one-to-one attention it started with.",
+        "Joanson Baptiste James started Expeditions With Jo as a Trinidad travel agency. Working with clients who were not simply holidaying, but trying to take up a job, join family or begin a course on another island, made it clear that the hard part was rarely the flight. It was working out what the destination actually required, in what order, and from which office.",
+        "The business grew around that problem. It is still run with the same one-to-one attention it started with, and you deal with Jo directly rather than a call centre.",
       ],
     },
     {
-      heading: "Relocation support",
+      heading: "The three journeys we support",
       bullets: [
-        "CSME Skills Certificate: Step-by-step guidance on qualifying, gathering documents and applying in your destination country.",
-        "Banking: Help opening a bank account in the CARICOM state you're moving to.",
-        "Business setup: Registering a business and getting your documents ready, in Trinidad and Tobago, Jamaica or Grenada.",
-        "Countries at a glance: What to expect once you arrive, including cost of living, places to see, local food and more.",
+        "Visiting another CARICOM country: travel requirements, flights, accommodation, transfers and preparing for arrival.",
+        "Working in another CARICOM country: the CARICOM Skills Certificate pathway, document requirements, the destination process, and the travel around it.",
+        "Studying in another CARICOM country: researching institutions, organising documents, and handling travel, accommodation and arrival.",
       ],
+      note: "Supporting services such as flights, accommodation, transfers, banking help and Canadian visa guidance sit inside these journeys rather than standing on their own.",
     },
     {
-      heading: "Travel support",
-      bullets: [
-        "Flights: Affordable one-way or round-trip options for your move or a scouting trip beforehand.",
-        "Accommodation: Comfortable, safe places to stay while you get settled.",
-        "Transfers: Reliable rides for airports and getting around a new city.",
-        "Canadian visa help: Step-by-step support for CARICOM citizens applying from Trinidad.",
-      ],
-    },
-    {
-      heading: "Also available (Trinidad & Tobago)",
-      bullets: [
-        "Loans & Credit Cards (Free Service): Help preparing applications for personal loans, car loans, mortgages and credit cards.",
-        "Insurance (Free Consultation): Consultations covering life, health, income protection and retirement planning.",
-      ],
-      note: "Loan, credit card and account applications are processed through First Citizens Bank. Insurance consultations and products are provided through Guardian Life of the Caribbean.",
-    },
-    {
+      heading: "Countries we cover",
       paragraphs: [
-        "Whether you're applying for your CSME Skills Certificate, opening a bank account in a new country, or just need a flight booked, Expeditions With Jo is here to make the move easier, every step of the way.",
+        "We work across CARICOM, with the deepest country-by-country detail for the 12 states that participate in CSME free movement of skills. A few CARICOM members sit outside that regime, including The Bahamas, and Montserrat participates only partially, so a work permit still applies there. Where a country falls outside what we know well, we will say so rather than guess.",
       ],
+    },
+    {
+      heading: "Guidance, coordination, and what we do not decide",
+      paragraphs: [
+        "It matters that this is clear, so here it is plainly.",
+      ],
+      bullets: [
+        "Guidance means explaining what a process involves, which documents are asked for, and where to go.",
+        "Coordination means arranging the practical parts ourselves: flights, accommodation, transfers, appointments and checklists.",
+        "Decisions are not ours. A Skills Certificate, a visa, a place on a course, a job offer, a bank account or a tenancy is granted or refused by the government office, school, employer, bank or landlord involved.",
+      ],
+      note: "We never promise an outcome that someone else controls, and you should be cautious of anyone in this field who does.",
+    },
+    {
+      heading: "Working with us",
+      bullets: [
+        "Getting in touch: WhatsApp or a call on 868-723-6644, email info@expeditionswithjo.com, or the enquiry form on the home page.",
+        "Response time: we aim to reply within one business day. Messages sent over a weekend or a public holiday are usually answered the next working day.",
+        "Documents: do not send passport numbers, bank details or other sensitive information through the website form, by public social media message, or by unencrypted email. Once you are in touch we will explain how to share documents securely.",
+        "Payment, cancellation and refunds: the terms that apply to bookings and paid services are set out in full on our Policies page.",
+      ],
+      note: "Loan, credit card and account applications are processed through First Citizens Bank. Insurance consultations and products are provided through Guardian Life of the Caribbean, now handled at joansonbjames.com.",
     },
   ],
 };

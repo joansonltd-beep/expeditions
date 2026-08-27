@@ -80,7 +80,7 @@ export default function SurveyHubPage() {
         </div>
         {RESULTS_LINKS.length ? (
           <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
-            <p className="text-sm font-semibold text-slate-900">See what's been shared so far</p>
+            <p className="text-sm font-semibold text-slate-900">See what&rsquo;s been shared so far</p>
             <div className="mt-3 flex flex-wrap justify-center gap-4">
               {RESULTS_LINKS.map((r) => (
                 <a

@@ -90,14 +90,14 @@ export default function BankingHubPage() {
                     rel="noopener noreferrer"
                     className="mt-4 inline-block text-sm font-semibold text-brand hover:underline"
                   >
-                    See {c.bankName}'s own page →
+                    See {c.bankName}&rsquo;s own page →
                   </a>
                 </div>
               </details>
             ))}
           </div>
           <p className="mt-5 text-sm text-slate-500">
-            Requirements come straight from each bank's own page and can change, and branches sometimes ask for more
+            Requirements come straight from each bank&rsquo;s own page and can change, and branches sometimes ask for more
             than their website lists, so confirm before you go in. If you would rather not chase this down yourself,{" "}
             <Link href="/business-setup" className="font-semibold text-brand hover:underline">
               our Business Setup service

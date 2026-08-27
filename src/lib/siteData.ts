@@ -56,7 +56,7 @@ const SETTINGS_QUERY = `*[_type == "siteSettings"][0]{
 }`;
 const SERVICES_QUERY = `*[_type == "service"]|order(order asc){
   "slug": slug.current, title, icon, scope, category, order,
-  shortBlurb, cardFeatures, intro, body, primaryLink
+  shortBlurb, cardFeatures, intro, body, primaryLink, detail
 }`;
 const PACKAGES_QUERY = `*[_type == "package"]|order(order asc){ name, priceUsd, features, featured, order }`;
 const ADDONS_QUERY = `*[_type == "addOn"]|order(order asc){ title, usdPrice, amountText, trinidadOnly, order }`;
@@ -64,13 +64,16 @@ const TESTIMONIALS_QUERY = `*[_type == "testimonial"]|order(order asc){ quote, p
 const ABOUT_QUERY = `*[_type == "aboutContent"][0]{ intro, sections }`;
 const POLICIES_QUERY = `*[_type == "policiesContent"][0]{ intro, sections }`;
 const HOME_QUERY = `*[_type == "homeContent"][0]{
-  heroStats, pillarsEyebrow, pillarsTitle, pillarsIntro, pillars,
-  travelEyebrow, travelTitle, travelIntro, notSureTitle, notSureText,
-  bundleEyebrow, bundleTitle, bundleText,
-  localEyebrow, localTitle, localIntro, localMoved,
-  howEyebrow, howTitle, howIntro, steps,
+  heroStats, heroTrustNote,
+  journeysEyebrow, journeysTitle, journeysIntro, journeys, journeysNote,
+  howEyebrow, howTitle, howIntro, steps, howNote,
+  csmeEyebrow, csmeTitle, csmeText,
+  studyEyebrow, studyTitle, studyText,
+  supportEyebrow, supportTitle, supportIntro, pillars,
+  notSureTitle, notSureText, localMoved,
   whyEyebrow, whyTitle, why,
   testimonialsEyebrow, testimonialsTitle,
+  faqEyebrow, faqTitle, faqs,
   contactEyebrow, contactTitle, contactIntro, gallery
 }`;
 const INSURANCE_QUERY = `*[_type == "insurancePage"][0]{ title, intro, body, bookNote, bookLabel, visitLabel }`;
@@ -122,7 +125,13 @@ export async function getSiteSettings(): Promise<SiteSettings> {
 
 export async function getServices(category?: ServiceCategory): Promise<Service[]> {
   const res = await query<Service[]>(SERVICES_QUERY);
-  const all = res?.length ? res : DEFAULT_SERVICES;
+  // The "detail" blocks (who it's for, what we don't control, FAQs) were added
+  // to the code before Sanity had them. Fall back to the bundled detail for a
+  // service whose CMS document has none, so the disclaimers and expectations
+  // still render rather than silently disappearing.
+  const all = res?.length
+    ? res.map((s) => (s.detail ? s : { ...s, detail: DEFAULT_SERVICES.find((d) => d.slug === s.slug)?.detail }))
+    : DEFAULT_SERVICES;
   return category ? all.filter((s) => s.category === category) : all;
 }
 
@@ -141,9 +150,20 @@ export async function getAddOns(): Promise<AddOn[]> {
   return res?.length ? res : DEFAULT_ADDONS;
 }
 
+// Placeholder attributions that must never reach a visitor. The home page
+// renders testimonials whenever any exist, so a stray seed document left in the
+// CMS would otherwise publish an invented client quote. Filtering here means
+// the site cannot show a fake testimonial even if one is sitting in Sanity.
+const PLACEHOLDER_PERSON = /\b(sample|placeholder|example|test|lorem|anon|client name|your name)\b/i;
+
+function isRealTestimonial(t: Testimonial): boolean {
+  return Boolean(t?.quote?.trim()) && Boolean(t?.person?.trim()) && !PLACEHOLDER_PERSON.test(t.person);
+}
+
 export async function getTestimonials(): Promise<Testimonial[]> {
   const res = await query<Testimonial[]>(TESTIMONIALS_QUERY);
-  return res?.length ? res : DEFAULT_TESTIMONIALS;
+  const all = res?.length ? res : DEFAULT_TESTIMONIALS;
+  return all.filter(isRealTestimonial);
 }
 
 export async function getAbout(): Promise<AboutData> {

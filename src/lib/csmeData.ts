@@ -3,6 +3,27 @@
 // forms (July 2026). Rules and fees change, so each country page carries a
 // "confirm with the official source" note. Edit here to update.
 
+// When this reference data was last checked against the official sources.
+// Month precision: `iso` is the first of that month purely so the date can be
+// expressed in a <time> element. Update BOTH values whenever the country data,
+// fees or processing times below are reviewed.
+export const CSME_LAST_UPDATED = { display: "July 2026", iso: "2026-07-01" };
+
+// Region-wide official sources. Country-specific links live on each country
+// entry as officialUrl / formUrl.
+export const CSME_OFFICIAL_SOURCES: { label: string; href: string; note: string }[] = [
+  {
+    label: "CARICOM: Free Movement of Skills",
+    href: "https://caricom.org/free-movement-of-skills/",
+    note: "The Secretariat's own overview of the regime and the approved categories.",
+  },
+  {
+    label: "CARICOM Single Market and Economy (CSME)",
+    href: "https://caricom.org/caricom-single-market-and-economy-csme/",
+    note: "Background on what the CSME covers, including the Treaty of Chaguaramas.",
+  },
+];
+
 export type CsmeStep = { title: string; text: string; tips?: string[] };
 
 // Per-country detail. Anything omitted falls back to the general guidance
@@ -119,6 +140,14 @@ export const CSME_FAQS: { q: string; a: string }[] = [
   {
     q: "How long does it take and does it expire?",
     a: "Processing usually takes about 3 to 6 weeks, though some countries take 6 to 8 weeks. The certificate does not have an expiry date.",
+  },
+  {
+    q: "Can Expeditions With Jo guarantee my certificate will be approved?",
+    a: "No. The certificate is issued or refused by the designated government office in the country you apply to, and no third party can influence that. We help you understand the process, check your documents against the published requirements, and submit a complete application. Be wary of anyone who promises you an approval.",
+  },
+  {
+    q: "Does the Skills Certificate let me study in another CARICOM country?",
+    a: "No. Free movement of skills is about the right to work. A student normally needs the destination country's own student visa or permit, applied for separately through that country's immigration authority.",
   },
   {
     q: "Do I still need a Skills Certificate after full free movement started?",

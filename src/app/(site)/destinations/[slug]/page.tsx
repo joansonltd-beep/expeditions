@@ -436,7 +436,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <h3 className="text-lg font-semibold text-slate-900">We can handle this for you</h3>
               <p className="mt-2 text-slate-600">
                 Visa or CSME paperwork, banking, housing, flights and everything else needed for a successful move to{" "}
-                {g.name}: this is exactly what we do every day. Reach out and we'll walk you through every step.
+                {g.name}: this is exactly what we do every day. Reach out and we&rsquo;ll walk you through every step.
               </p>
               <div className="mt-4">
                 <CtaButtons message={`Hi Jo, I'd like help relocating to ${g.name}.`} />

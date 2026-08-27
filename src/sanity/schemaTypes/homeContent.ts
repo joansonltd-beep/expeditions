@@ -8,6 +8,14 @@ const head = (prefix: string, label: string, hasIntro = true) => [
     : []),
 ];
 
+// A photo band with a short pitch and nothing else: used for the Skills
+// Certificate and Study features on the home page.
+const band = (prefix: string, label: string) => [
+  defineField({ name: `${prefix}Eyebrow`, title: `${label} — small label`, type: "string", group: "sections" }),
+  defineField({ name: `${prefix}Title`, title: `${label} — heading`, type: "string", group: "sections" }),
+  defineField({ name: `${prefix}Text`, title: `${label} — text`, type: "text", rows: 3, group: "sections" }),
+];
+
 // Singleton: all the editable text on the home page.
 export const homeContent = defineType({
   name: "homeContent",
@@ -36,6 +44,15 @@ export const homeContent = defineType({
       ],
     }),
     defineField({
+      name: "heroTrustNote",
+      title: "Hero trust note (under the buttons)",
+      description:
+        "Sets expectations about what we do and what governments, schools and employers decide. Keep this honest and do not promise an outcome.",
+      type: "text",
+      rows: 3,
+      group: "hero",
+    }),
+    defineField({
       name: "gallery",
       title: "Rotating tiles",
       type: "array",
@@ -52,44 +69,33 @@ export const homeContent = defineType({
       ],
     }),
 
-    ...head("pillars", "What we do"),
+    ...head("journeys", "Visit / Work / Study section"),
     defineField({
-      name: "pillars",
-      title: "What we do — cards",
+      name: "journeys",
+      title: "The three journeys — cards",
+      description: "Visit, Work and Study. These are the primary paths through the site.",
       type: "array",
       group: "lists",
       of: [
         {
           type: "object",
           fields: [
-            { name: "icon", title: "Emoji", type: "string" },
             { name: "title", title: "Title", type: "string" },
-            { name: "text", title: "Text", type: "text", rows: 2 },
-            { name: "href", title: "Links to (page path, e.g. /flights)", type: "string" },
+            { name: "text", title: "Text", type: "text", rows: 3 },
+            { name: "cta", title: "Button label", type: "string" },
+            { name: "href", title: "Links to (page path, e.g. /study)", type: "string" },
           ],
           preview: { select: { title: "title", subtitle: "text" } },
         },
       ],
     }),
-
-    ...head("travel", "Travel section"),
-    defineField({ name: "notSureTitle", title: "“Not sure where to start” — title", type: "string", group: "lists" }),
-    defineField({ name: "notSureText", title: "“Not sure where to start” — text", type: "text", rows: 2, group: "lists" }),
-
-    ...head("bundle", "Bundle banner"),
-
-    ...head("local", "Local services section"),
     defineField({
-      name: "localMoved",
-      title: "Insurance “moved” card",
-      type: "object",
+      name: "journeysNote",
+      title: "Visit / Work / Study — small print",
+      description: "The note explaining that requirements vary and authorities make the decisions.",
+      type: "text",
+      rows: 3,
       group: "lists",
-      fields: [
-        { name: "scope", title: "Small label", type: "string" },
-        { name: "title", title: "Title", type: "string" },
-        { name: "blurb", title: "Text", type: "text", rows: 3 },
-        { name: "features", title: "Bullet points", type: "array", of: [{ type: "string" }] },
-      ],
     }),
 
     ...head("how", "How it works section"),
@@ -109,11 +115,55 @@ export const homeContent = defineType({
         },
       ],
     }),
+    defineField({
+      name: "howNote",
+      title: "How it works — what we do not decide",
+      type: "text",
+      rows: 3,
+      group: "lists",
+    }),
 
-    ...head("why", "Why book with us", false),
+    ...band("csme", "Skills Certificate feature"),
+    ...band("study", "Study feature"),
+
+    ...head("support", "Supporting services section"),
+    defineField({
+      name: "pillars",
+      title: "Supporting services — cards",
+      type: "array",
+      group: "lists",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "icon", title: "Emoji", type: "string" },
+            { name: "title", title: "Title", type: "string" },
+            { name: "text", title: "Text", type: "text", rows: 2 },
+            { name: "href", title: "Links to (page path, e.g. /flights)", type: "string" },
+          ],
+          preview: { select: { title: "title", subtitle: "text" } },
+        },
+      ],
+    }),
+    defineField({ name: "notSureTitle", title: "“Not sure where to start” — title", type: "string", group: "lists" }),
+    defineField({ name: "notSureText", title: "“Not sure where to start” — text", type: "text", rows: 2, group: "lists" }),
+    defineField({
+      name: "localMoved",
+      title: "Insurance “moved” card",
+      type: "object",
+      group: "lists",
+      fields: [
+        { name: "scope", title: "Small label", type: "string" },
+        { name: "title", title: "Title", type: "string" },
+        { name: "blurb", title: "Text", type: "text", rows: 3 },
+        { name: "features", title: "Bullet points", type: "array", of: [{ type: "string" }] },
+      ],
+    }),
+
+    ...head("why", "Why work with Jo", false),
     defineField({
       name: "why",
-      title: "Why book with us — cards",
+      title: "Why work with Jo — cards",
       type: "array",
       group: "lists",
       of: [
@@ -129,7 +179,28 @@ export const homeContent = defineType({
       ],
     }),
 
-    ...head("testimonials", "Testimonials section", false),
+    ...head("testimonials", "Destinations section", false),
+
+    ...head("faq", "FAQ section", false),
+    defineField({
+      name: "faqs",
+      title: "FAQ — questions and answers",
+      description:
+        "These are published as structured data for search engines, so keep the answers accurate and never promise an approval or an outcome.",
+      type: "array",
+      group: "lists",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "q", title: "Question", type: "string" },
+            { name: "a", title: "Answer", type: "text", rows: 3 },
+          ],
+          preview: { select: { title: "q", subtitle: "a" } },
+        },
+      ],
+    }),
+
     ...head("contact", "Contact section"),
   ],
   preview: { prepare: () => ({ title: "Home content" }) },

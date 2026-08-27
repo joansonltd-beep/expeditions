@@ -239,6 +239,14 @@ export function serviceIcon(slug: string): IconName {
   }
 }
 
+// Map one of the three home-page journeys (visit / work / study) to an icon.
+export function journeyIcon(href: string): IconName {
+  if (href.includes("getting-there")) return "plane";
+  if (href.includes("getting-started")) return "briefcase";
+  if (href.includes("study")) return "graduationCap";
+  return "compass";
+}
+
 // Map a home pillar (by its link) to an icon.
 export function pillarIcon(href: string): IconName {
   if (href.includes("skills-certificate")) return "passport";

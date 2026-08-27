@@ -83,7 +83,7 @@ export default function JobSeekerEnquiry() {
 
       <div className="mt-4">
         <div className="flex items-center justify-between">
-          <span className="block text-sm font-semibold text-slate-900">Countries you're open to</span>
+          <span className="block text-sm font-semibold text-slate-900">Countries you&rsquo;re open to</span>
           <button type="button" onClick={toggleAll} className="text-xs font-semibold text-brand hover:underline">
             {allSelected ? "Clear all" : "Select all"}
           </button>

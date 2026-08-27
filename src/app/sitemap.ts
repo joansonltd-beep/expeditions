@@ -18,6 +18,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/getting-there",
     "/flights",
     "/accommodations",
+    // "/transfers" is deliberately absent: next.config.ts redirects it straight
+    // to the Welcome Pickups booking site, and a redirecting URL should not be
+    // advertised in a sitemap.
     "/travel-visas",
     "/insurance",
     "/survey",
@@ -37,6 +40,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // so it and its country pages rank above the supporting travel pages.
   const priorityFor = (path: string) => {
     if (path === "") return 1;
+    // The three journeys the site is built around rank directly under the home
+    // page, with the Skills Certificate guide alongside them as the main search
+    // entry point.
+    if (path === "/getting-there" || path === "/getting-started" || path === "/study") return 0.9;
     if (path === "/caricom-skills-certificate") return 0.9;
     if (path.startsWith("/caricom-skills-certificate/")) return 0.8;
     if (path === "/business-setup" || path === "/finance" || path === "/guides" || path === "/destinations") return 0.8;

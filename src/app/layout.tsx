@@ -20,25 +20,27 @@ export const metadata: Metadata = {
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
   title: {
-    default: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
+    default: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
     template: "%s · Expeditions With Jo",
   },
   description:
-    "CARICOM relocation specialists. Step-by-step CSME Skills Certificate help so you can live and work on another island, plus bank accounts, business setup, and travel arranged when your move needs it.",
+    "Practical support for CARICOM citizens who want to visit, work, or study in another CARICOM country, including document guidance, travel planning, accommodation, transfers, and settling-in assistance.",
   keywords: [
     "CARICOM",
-    "CARICOM relocation",
-    "Caribbean relocation services",
-    "jobs in the Caribbean",
-    "work in the Caribbean",
-    "live and work in the Caribbean",
-    "move to another Caribbean island",
+    "CARICOM mobility",
+    "visit another CARICOM country",
+    "work in another CARICOM country",
+    "study in another CARICOM country",
+    "CARICOM Skills Certificate",
     "CSME Skills Certificate",
     "CSME free movement",
     "CARICOM Skills Certificate application",
     "work in CARICOM without a work permit",
-    "relocate to Trinidad and Tobago",
-    "relocate to Grenada",
+    "jobs in the Caribbean",
+    "studying in the Caribbean",
+    "CARICOM student visa",
+    "University of the West Indies regional students",
+    "Caribbean travel planning",
     "open bank account Trinidad",
     "register business Trinidad and Tobago",
   ],
@@ -47,15 +49,23 @@ export const metadata: Metadata = {
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
+    title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
     description:
-      "Move between CARICOM islands with confidence: CSME Skills Certificates, bank accounts, business setup and settling-in support, plus travel when you need it.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Expeditions With Jo — CARICOM relocation services" }],
+      "Expeditions With Jo helps CARICOM citizens visit, work, or study across the Caribbean by making the requirements, documents, travel, and practical arrangements easier to understand.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Expeditions With Jo, CARICOM mobility support for visiting, working and studying",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CARICOM Relocation and Exploration Specialist | Expeditions With Jo",
-    description: "CSME Skills Certificates, banking, business setup and settling-in support for moves between CARICOM islands.",
+    title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
+    description:
+      "Support for CARICOM citizens visiting, working or studying in another CARICOM country: requirements, documents, travel and practical arrangements.",
     images: ["/og.png"],
   },
 };

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getSiteSettings, getServices, getHomeContent } from "@/lib/siteData";
-import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAccent } from "@/components/ui";
+import { getSiteSettings, getServices, getHomeContent, getTestimonials } from "@/lib/siteData";
+import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAccent, btnWhatsapp } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import RotatingHero from "@/components/RotatingHero";
 import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
-import { Icon, serviceIcon, pillarIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
+import { Icon, serviceIcon, pillarIcon, journeyIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
 // Title and description come from the root layout; this page only needs to
@@ -15,7 +15,12 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [settings, services, home] = await Promise.all([getSiteSettings(), getServices(), getHomeContent()]);
+  const [settings, services, home, testimonials] = await Promise.all([
+    getSiteSettings(),
+    getServices(),
+    getHomeContent(),
+    getTestimonials(),
+  ]);
   const destinations = [...COUNTRY_GUIDES].sort((a, b) => a.name.localeCompare(b.name));
   const travel = services.filter((s) => s.category === "travel" || s.category === "visa");
   const finance = services.find((s) => s.slug === "finance");
@@ -30,32 +35,58 @@ export default async function HomePage() {
     },
     ...(finance ? [finance] : []),
   ];
-  const waHref = `https://wa.me/${settings.whatsappNumber.replace(/\D/g, "")}`;
+  const digits = settings.whatsappNumber.replace(/\D/g, "");
+  const waHref = `https://wa.me/${digits}`;
+  const waHero = `${waHref}?text=${encodeURIComponent(
+    "Hi Jo, I'd like help with a CARICOM journey (visit, work or study)."
+  )}`;
+
+  // Published so search engines can surface these answers directly. Built from
+  // the same content the page renders, so the two can never drift apart.
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: home.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
 
   return (
     <>
+      {home.faqs.length ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      ) : null}
+
       {/* HERO — full-bleed photo with dark overlay. Pulled up by the header's
           height so the transparent header sits directly on the photo. */}
       <section className="relative isolate -mt-[70px] flex min-h-[68vh] items-center overflow-hidden pt-[70px] sm:min-h-[80vh]">
         <PhotoHeroDeclare />
         <RotatingHero />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/50 to-slate-950/85" />
         <Container className="relative z-10 py-24 sm:py-28">
           <div className="max-w-2xl text-white">
             <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
               {settings.heroHeadline}
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-white/85">{settings.heroSubcopy}</p>
+            <p className="mt-5 max-w-xl text-lg text-white/90">{settings.heroSubcopy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#contact" className={btnPrimary}>
-                Plan My Move
+                Start my CARICOM journey
               </Link>
+              <a href={waHero} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
+                Chat with Jo on WhatsApp
+              </a>
             </div>
+            {home.heroTrustNote ? (
+              <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/75">{home.heroTrustNote}</p>
+            ) : null}
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
               {home.heroStats.map((st, i) => (
                 <div key={i} className={i > 0 ? "sm:border-l sm:border-white/20 sm:pl-8" : ""}>
                   <div className="text-lg font-extrabold uppercase tracking-wide text-white sm:text-xl">{st.value}</div>
-                  <div className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/65">{st.label}</div>
+                  <div className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/70">{st.label}</div>
                 </div>
               ))}
             </div>
@@ -63,74 +94,151 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* RELOCATION PILLARS */}
+      {/* THE THREE JOURNEYS — visit, work, study */}
       <Section>
-        <SectionHead eyebrow={home.pillarsEyebrow} title={home.pillarsTitle} intro={home.pillarsIntro} />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {home.pillars.map((p) => (
+        <SectionHead eyebrow={home.journeysEyebrow} title={home.journeysTitle} intro={home.journeysIntro} />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {home.journeys.map((j) => (
             <Link
-              key={p.href}
-              href={p.href}
-              className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-transparent hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              key={j.href}
+              href={j.href}
+              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:border-brand hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
               <div className="mb-4 grid h-13 w-13 place-items-center rounded-2xl bg-brand-soft text-brand">
-                <Icon name={pillarIcon(p.href)} className="h-6 w-6" />
+                <Icon name={journeyIcon(j.href)} className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
-              <p className="mt-2 text-sm text-slate-500">{p.text}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <h3 className="text-xl font-semibold text-slate-900">{j.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{j.text}</p>
+              <span className="mt-5 inline-block text-sm font-semibold text-brand group-hover:underline">
+                {j.cta} →
+              </span>
             </Link>
           ))}
         </div>
-        {/* Plan-my-move CTA */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-3xl border border-dashed border-brand/40 bg-brand-soft p-7 sm:flex-row sm:items-center">
-          <div>
-            <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
-            <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
-          </div>
-          <Link href="#contact" className={`${btnPrimary} shrink-0`}>
-            Plan My Move
-          </Link>
-        </div>
+        {home.journeysNote ? (
+          <p className="mx-auto mt-8 max-w-3xl rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
+            {home.journeysNote}
+          </p>
+        ) : null}
       </Section>
 
       {/* HOW IT WORKS */}
       <Section alt>
         <SectionHead eyebrow={home.howEyebrow} title={home.howTitle} intro={home.howIntro} />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {home.steps.map((s, i) => (
-            <div key={i}>
+            <li key={i}>
               <div className="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-brand text-white">
                 <Icon name={STEP_ICONS[i] ?? "check"} className="h-5 w-5" />
               </div>
-              <h3 className="font-semibold text-slate-900">{s.title}</h3>
-              <p className="mt-2 text-sm text-slate-500">{s.text}</p>
-            </div>
+              <h3 className="font-semibold text-slate-900">
+                <span className="text-brand">{i + 1}.</span> {s.title}
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">{s.text}</p>
+            </li>
           ))}
-        </div>
+        </ol>
+        {home.howNote ? (
+          <p className="mx-auto mt-10 max-w-3xl rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
+            {home.howNote}
+          </p>
+        ) : null}
       </Section>
 
-      {/* RELOCATION PLAN — same rotating hero photos as the top hero, no color overlay */}
+      {/* SKILLS CERTIFICATE FEATURE */}
       <section className="relative isolate overflow-hidden">
         <RotatingHero />
+        <div className="absolute inset-0 bg-slate-950/45" />
         <Container className="relative z-10 py-20 sm:py-28">
           <div className="max-w-2xl text-white">
             <span className="inline-flex rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider ring-1 ring-inset ring-white/25 backdrop-blur">
-              {home.bundleEyebrow}
+              {home.csmeEyebrow}
             </span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{home.bundleTitle}</h2>
-            <p className="mt-3 max-w-xl text-white/85">{home.bundleText}</p>
-            <Link href="#contact" className={`${btnAccent} mt-7`}>
-              Plan My Move
-            </Link>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">{home.csmeTitle}</h2>
+            <p className="mt-3 max-w-xl text-white/90">{home.csmeText}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/caricom-skills-certificate" className={btnAccent}>
+                Read the Skills Certificate guide
+              </Link>
+              <Link href="/getting-started" className={`${btnPrimary} bg-white/15 backdrop-blur hover:bg-white/25`}>
+                See the whole work pathway
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* SETTLING IN */}
+      {/* STUDY FEATURE */}
       <Section>
-        <SectionHead eyebrow={home.localEyebrow} title={home.localTitle} intro={home.localIntro} />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+          <div>
+            <Eyebrow>{home.studyEyebrow}</Eyebrow>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{home.studyTitle}</h2>
+            <p className="mt-4 text-slate-600">{home.studyText}</p>
+            <Link href="/study" className={`${btnPrimary} mt-7`}>
+              Plan my study journey
+            </Link>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-7">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-brand">What we help with</h3>
+            <CheckList
+              className="mt-4 text-sm"
+              items={[
+                "Researching institutions and what they ask for",
+                "Organising the documents you need to gather",
+                "The student visa or permit process, country by country",
+                "Flights, first-semester housing and airport transfers",
+                "Opening a bank account once you arrive",
+              ]}
+            />
+            <p className="mt-5 text-sm text-slate-600">
+              Admission and immigration decisions are made by the school and the destination country, not by us.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* SUPPORTING SERVICES */}
+      <Section alt>
+        <SectionHead eyebrow={home.supportEyebrow} title={home.supportTitle} intro={home.supportIntro} />
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {home.pillars.map((p) => (
+            <Link
+              key={p.href}
+              href={p.href}
+              className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            >
+              <div className="mb-4 grid h-13 w-13 place-items-center rounded-2xl bg-brand-soft text-brand">
+                <Icon name={pillarIcon(p.href)} className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{p.text}</p>
+              <span className="mt-4 inline-block text-sm font-semibold text-brand">Learn more →</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Travel arrangements: the practical layer under every journey */}
+        <h3 className="mt-14 text-center text-sm font-semibold uppercase tracking-wider text-slate-600">
+          Travel arrangements
+        </h3>
+        <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-6">
+          {travel.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/${s.slug}`}
+              className="group flex w-20 flex-col items-center gap-2 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            >
+              <span className="grid h-16 w-16 place-items-center rounded-full bg-white text-brand shadow-sm ring-1 ring-slate-200 transition group-hover:bg-brand group-hover:text-white group-hover:ring-brand group-hover:shadow-md">
+                <Icon name={serviceIcon(s.slug)} className="h-7 w-7" />
+              </span>
+              <span className="text-center text-xs font-semibold text-slate-700 group-hover:text-brand">{s.title}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Settling in */}
+        <div className="mx-auto mt-14 grid max-w-3xl gap-5 sm:grid-cols-2">
           {localCards.map((s) => (
             <Link
               key={s.slug}
@@ -151,30 +259,17 @@ export default async function HomePage() {
             </Link>
           ))}
         </div>
-      </Section>
 
-      {/* TRAVEL — "Go Visit": the travel-agency side, alongside relocation */}
-      <Section alt>
-        <SectionHead eyebrow={home.travelEyebrow} title={home.travelTitle} intro={home.travelIntro} />
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-6">
-          {travel.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/${s.slug}`}
-              className="group flex w-20 flex-col items-center gap-2 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-            >
-              <span className="grid h-16 w-16 place-items-center rounded-full bg-white text-brand shadow-sm ring-1 ring-slate-200 transition group-hover:bg-brand group-hover:text-white group-hover:ring-brand group-hover:shadow-md">
-                <Icon name={serviceIcon(s.slug)} className="h-7 w-7" />
-              </span>
-              <span className="text-center text-xs font-semibold text-slate-700 group-hover:text-brand">{s.title}</span>
-            </Link>
-          ))}
-        </div>
-        <p className="mt-8 text-center">
-          <Link href="/getting-there" className="text-sm font-semibold text-brand hover:underline">
-            See the full Go Visit page →
+        {/* Not sure where to start */}
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-3xl border border-dashed border-brand/40 bg-brand-soft p-7 sm:flex-row sm:items-center">
+          <div>
+            <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
+            <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
+          </div>
+          <Link href="#contact" className={`${btnPrimary} shrink-0`}>
+            Start my CARICOM journey
           </Link>
-        </p>
+        </div>
       </Section>
 
       {/* WHY */}
@@ -187,21 +282,49 @@ export default async function HomePage() {
                 <Icon name={WHY_ICONS[i % WHY_ICONS.length]} className="h-5 w-5" />
               </div>
               <h3 className="font-semibold text-slate-900">{w.title}</h3>
-              <p className="mt-2 text-sm text-slate-500">{w.text}</p>
+              <p className="mt-2 text-sm text-slate-600">{w.text}</p>
             </div>
           ))}
         </div>
+        <p className="mt-8 text-center text-sm text-slate-600">
+          <Link href="/about" className="font-semibold text-brand hover:underline">
+            More about Jo and how we work →
+          </Link>
+        </p>
       </Section>
 
+      {/* TESTIMONIALS — renders only when real client quotes exist. Never
+          populated with placeholder or invented text. */}
+      {testimonials.length ? (
+        <Section alt>
+          <SectionHead eyebrow="In their words" title="What clients say" />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((t, i) => (
+              <figure key={i} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-7">
+                <blockquote className="text-slate-700">“{t.quote}”</blockquote>
+                <figcaption className="mt-4 text-sm">
+                  <span className="font-semibold text-slate-900">{t.person}</span>
+                  {t.context ? <span className="block text-slate-600">{t.context}</span> : null}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
       {/* DESTINATIONS */}
-      <Section alt>
-        <SectionHead eyebrow={home.testimonialsEyebrow} title={home.testimonialsTitle} intro="Cost of living, CSME steps and what to expect, country by country." />
+      <Section alt={!testimonials.length}>
+        <SectionHead
+          eyebrow={home.testimonialsEyebrow}
+          title={home.testimonialsTitle}
+          intro="Cost of living, requirements and what to expect, country by country."
+        />
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {destinations.map((g) => (
             <Link
               key={g.slug}
               href={`/destinations/${g.slug}`}
-              className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-md"
+              className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
             >
               {g.name}
             </Link>
@@ -214,13 +337,38 @@ export default async function HomePage() {
         </p>
       </Section>
 
+      {/* FAQ */}
+      {home.faqs.length ? (
+        <Section>
+          <SectionHead eyebrow={home.faqEyebrow} title={home.faqTitle} />
+          <div className="mx-auto grid max-w-3xl gap-4">
+            {home.faqs.map((f, i) => (
+              <details
+                key={i}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 open:shadow-sm"
+              >
+                <summary className="cursor-pointer list-none font-semibold text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                  <span className="flex items-start justify-between gap-4">
+                    {f.q}
+                    <span aria-hidden="true" className="mt-1 shrink-0 text-brand transition group-open:rotate-45">
+                      +
+                    </span>
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm text-slate-600">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
       {/* CONTACT */}
-      <Section id="contact">
+      <Section id="contact" alt>
         <div className="grid gap-12 lg:grid-cols-[.9fr_1.1fr]">
           <div>
             <Eyebrow>{home.contactEyebrow}</Eyebrow>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{home.contactTitle}</h2>
-            <p className="mt-4 text-slate-500">{home.contactIntro}</p>
+            <p className="mt-4 text-slate-600">{home.contactIntro}</p>
             <ul className="mt-6 grid gap-3 text-sm font-medium text-slate-900">
               <li className="flex items-center gap-2.5">
                 <Icon name="message" className="h-4 w-4 shrink-0 text-brand" />
@@ -240,6 +388,34 @@ export default async function HomePage() {
                   <a href={settings.chatbotUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand">Chat with us online</a>
                 </li>
               ) : null}
+            </ul>
+            <p className="mt-6 text-sm text-slate-600">
+              We aim to reply within one business day. Messages sent over a weekend or public holiday are usually
+              answered the next working day.
+            </p>
+
+            {/* Straight to WhatsApp, already knowing which journey you're on */}
+            <h3 className="mt-8 text-sm font-semibold uppercase tracking-wider text-slate-600">
+              Or start on WhatsApp
+            </h3>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {[
+                { label: "Visiting", msg: "Hi Jo, I'd like help visiting another CARICOM country." },
+                { label: "Working", msg: "Hi Jo, I'd like help working in another CARICOM country." },
+                { label: "Studying", msg: "Hi Jo, I'd like help studying in another CARICOM country." },
+                { label: "Skills Certificate", msg: "Hi Jo, I'd like help with the CARICOM Skills Certificate." },
+              ].map((o) => (
+                <li key={o.label}>
+                  <a
+                    href={`${waHref}?text=${encodeURIComponent(o.msg)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-whatsapp hover:text-whatsapp focus:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp focus-visible:ring-offset-2"
+                  >
+                    {o.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <ContactForm />

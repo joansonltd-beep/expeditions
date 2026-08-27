@@ -145,7 +145,7 @@ export default async function TravelVisasPage() {
               </p>
               <p className="mt-3 text-slate-600">
                 Some of these islands have limited local touchpoints for American citizen services, like passport
-                renewals for US citizens, but none of them handle visa applications. If you're applying for a US
+                renewals for US citizens, but none of them handle visa applications. If you&rsquo;re applying for a US
                 visa from Grenada or any of the other five, your interview happens in Barbados, in person.
               </p>
               <div className="mt-6 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">

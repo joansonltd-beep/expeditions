@@ -200,7 +200,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             <p className="mt-2 text-slate-600">
               Gathering documents, opening the account and everything else needed for a successful move to{" "}
               {i.name}, from your visa or CSME certificate to flights, housing and banking, is exactly what we do
-              every day. Reach out and we'll walk you through it.
+              every day. Reach out and we&rsquo;ll walk you through it.
             </p>
             <div className="mt-4">
               <CtaButtons message={`Hi Jo, I'd like help opening a bank account and relocating to ${i.name}.`} />

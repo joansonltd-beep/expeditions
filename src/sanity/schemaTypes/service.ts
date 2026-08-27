@@ -71,6 +71,52 @@ export const service = defineType({
       description: "A service-specific button, e.g. a booking link or request email.",
       type: "linkRef",
     }),
+    defineField({
+      name: "detail",
+      title: "Page detail (expectations, process, FAQs)",
+      description:
+        "The standard blocks every service page carries. Leave a block empty to hide it. Be honest in “What we do not control”: it is what stops a customer expecting an outcome we cannot deliver.",
+      type: "object",
+      options: { collapsible: true, collapsed: true },
+      fields: [
+        { name: "whoFor", title: "Who this is for", type: "array", of: [{ type: "string" }] },
+        { name: "included", title: "What is included", type: "array", of: [{ type: "string" }] },
+        { name: "youProvide", title: "What the customer provides", type: "array", of: [{ type: "string" }] },
+        {
+          name: "notControlled",
+          title: "What we do not control",
+          description: "Decisions and outcomes that belong to a government office, school, employer, bank or supplier.",
+          type: "array",
+          of: [{ type: "string" }],
+        },
+        {
+          name: "process",
+          title: "From enquiry to done",
+          description: "Ordered steps, one per line.",
+          type: "array",
+          of: [{ type: "string" }],
+        },
+        { name: "feesNote", title: "Fees", type: "text", rows: 3 },
+        {
+          name: "faqs",
+          title: "FAQs",
+          description: "Published as structured data. Never promise an approval or an outcome in an answer.",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                { name: "q", title: "Question", type: "string" },
+                { name: "a", title: "Answer", type: "text", rows: 3 },
+              ],
+              preview: { select: { title: "q", subtitle: "a" } },
+            },
+          ],
+        },
+        { name: "disclaimer", title: "Disclaimer", type: "text", rows: 3 },
+        { name: "related", title: "Related pages", type: "array", of: [{ type: "linkRef" }] },
+      ],
+    }),
   ],
   orderings: [{ title: "Order", name: "orderAsc", by: [{ field: "order", direction: "asc" }] }],
   preview: {

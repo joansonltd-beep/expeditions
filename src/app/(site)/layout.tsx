@@ -10,20 +10,26 @@ import { SITE_URL } from "@/lib/siteUrl";
 
 type FooterLink = { href: string; label: string; title?: string };
 
-const relocateLinks: FooterLink[] = [
-  { href: "/caricom-skills-certificate", label: "CSME Skills Certificate" },
-  { href: "/business-setup", label: "Business Setup" },
-  { href: "/finance", label: "Banking" },
-  { href: "/insurance", label: "Insurance" },
+// The three journeys the site is built around, plus the reference pages that
+// support them. The header is a fixed sentence and never changes, so the footer
+// is where everything else stays reachable.
+const journeyLinks: FooterLink[] = [
+  { href: "/getting-there", label: "Go Visit", title: "Visiting another CARICOM country" },
+  { href: "/getting-started", label: "Go Work", title: "Working in another CARICOM country" },
+  { href: "/study", label: "Go Study", title: "Studying in another CARICOM country" },
+  { href: "/caricom-skills-certificate", label: "CARICOM Skills Certificate" },
+  { href: "/destinations", label: "Country Guides" },
   { href: "/guides", label: "General Guides" },
-  { href: "/destinations", label: "Where are we Going?" },
   { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
 ];
 const companyLinks: FooterLink[] = [
   { href: "/flights", label: "Flights" },
-  { href: "/accommodations", label: "Accommodations" },
+  { href: "/accommodations", label: "Accommodation" },
   { href: "/transfers", label: "Transfers" },
   { href: "/travel-visas", label: "Travel Visas" },
+  { href: "/finance", label: "Banking" },
+  { href: "/business-setup", label: "Business Setup" },
+  { href: "/insurance", label: "Insurance" },
   { href: "/about", label: "About Us" },
   { href: "/policies", label: "Policies" },
 ];
@@ -66,16 +72,18 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       "Worldwide",
     ],
     knowsAbout: [
-      "CARICOM inter-island relocation",
-      "CSME Skills Certificate applications",
+      "Visiting another CARICOM country",
+      "Working in another CARICOM country",
+      "Studying in another CARICOM country",
+      "CARICOM Skills Certificate applications",
       "CARICOM free movement of skilled nationals",
       "Working in another Caribbean country without a work permit",
+      "Student visa and permit requirements across CARICOM",
       "Jobs and employment across CARICOM",
       "CARICOM Right of Establishment",
       "Business registration in Trinidad and Tobago",
       "Bank account opening across CARICOM",
-      "Caribbean travel agency services",
-      "Flight, cruise, accommodation and airport transfer booking",
+      "Flight, accommodation and airport transfer booking",
       "Canadian visa applications from Trinidad",
     ],
     sameAs: [settings.facebookUrl, settings.instagramUrl].filter(Boolean),
@@ -118,11 +126,11 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Relocation</h4>
+              <h4 className="mb-3.5 text-sm font-semibold text-white">Visit, Work &amp; Study</h4>
               <ul className="grid gap-2.5 text-sm">
-                {relocateLinks.map((l) => (
+                {journeyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-slate-400 hover:text-white">
+                    <Link href={l.href} title={l.title} className="text-slate-300 hover:text-white">
                       {l.label}
                     </Link>
                   </li>
@@ -131,11 +139,11 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Travel &amp; Company</h4>
+              <h4 className="mb-3.5 text-sm font-semibold text-white">Services &amp; Company</h4>
               <ul className="grid gap-2.5 text-sm">
                 {companyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} title={l.title} className="text-slate-400 hover:text-white">
+                    <Link href={l.href} title={l.title} className="text-slate-300 hover:text-white">
                       {l.label}
                     </Link>
                   </li>
