@@ -35,7 +35,7 @@ function whenLabel(daysAway: number): string {
 }
 
 function headline(day: IndependenceDay, daysAway: number, years: number): string {
-  if (daysAway === 0) return `${day.name} is ${years} today`;
+  if (daysAway === 0) return `Happy Independence Day, ${day.name}`;
   if (daysAway < 0) return `${day.name} marked ${years} years of independence`;
   return `${day.name} turns ${years} on ${formatDayMonth(day)}`;
 }
@@ -86,9 +86,9 @@ export default function IndependenceBanner({ compact = false }: { compact?: bool
               {headline(day, daysAway, years)}
             </h2>
             <p className="mt-2 max-w-2xl text-slate-600">
-              Independence from {day.from} on {formatDayMonth(day)} {day.year}.
-              {skinned ? " We are based in Trinidad and Tobago, and the site is wearing the national colours while the celebrations run." : null}
-              {day.note ? ` ${day.note}` : null}
+              {daysAway === 0 ? `${years} years ` : null}
+              Independent from {day.from} since {formatDayMonth(day)} {day.year}.
+              {skinned ? " The site is wearing the national colours while the celebrations run." : null}
             </p>
             <Link href={href} className="mt-4 inline-block text-sm font-semibold text-brand hover:underline">
               Read the {day.name} country guide →

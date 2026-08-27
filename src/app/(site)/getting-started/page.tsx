@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, btnPrimary, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import JobOfferEnquiry from "@/components/JobOfferEnquiry";
 import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
@@ -252,9 +253,12 @@ export default function GettingStartedPage() {
         <SectionHead
           eyebrow="Taking a job"
           title="Regular employment"
-          intro="Got a job lined up on another island, or hunting for one? This is what turns the offer into an actual move."
+          intro="Got a job lined up on another island, or hunting for one? Fill this in to find out what you need to turn the offer into an actual move."
           center={false}
         />
+        <div className="mx-auto mb-14 max-w-2xl">
+          <JobOfferEnquiry />
+        </div>
         <div className="mx-auto grid max-w-4xl gap-6">
           {EMPLOYMENT_ITEMS.map((item) => (
             <Link
