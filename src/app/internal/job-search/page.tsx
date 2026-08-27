@@ -6,13 +6,12 @@
 // Custom Search JSON API: the JSON API is closed to new customers ahead of
 // its Jan 2027 shutdown, so a from-scratch API key can never get real access
 // no matter how it's configured. The embed widget is a separate, still fully
-// available product that needs no API key, just the engine ID (cx) below,
-// which is a public identifier, not a secret.
+// available product that needs no API key, just the engine ID (cx), which is
+// a public identifier, not a secret. See JobSearchWidget for why it's loaded
+// via explicit render rather than Google's default auto-scanning embed.
 
 import type { Metadata } from "next";
-import Script from "next/script";
-
-const GOOGLE_CSE_ID = "f7dd1fa29b9fe48c6";
+import JobSearchWidget from "@/components/internal/JobSearchWidget";
 
 export const metadata: Metadata = {
   title: "Job Search",
@@ -29,8 +28,9 @@ export default function InternalJobSearchPage() {
         outside that list shows up.
       </p>
 
-      <div className="mt-6 gcse-search" />
-      <Script async src={`https://cse.google.com/cse.js?cx=${GOOGLE_CSE_ID}`} strategy="afterInteractive" />
+      <div className="mt-6">
+        <JobSearchWidget />
+      </div>
     </div>
   );
 }
