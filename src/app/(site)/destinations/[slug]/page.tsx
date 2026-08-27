@@ -8,6 +8,7 @@ import CtaButtons from "@/components/CtaButtons";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES, getCountryGuide } from "@/lib/countryGuideData";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { independenceFor, formatDayMonth, daysUntil, anniversaryYears } from "@/lib/independenceData";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export function generateStaticParams() {
@@ -19,16 +20,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const g = getCountryGuide(slug);
   if (!g) return { title: "Caribbean Country at a Glance" };
   return {
-    title: `Moving to ${g.name}: Cost of Living & Relocation Facts`,
-    description: `Thinking "I want to move to ${g.name}"? Here's what to expect: cost of living, places to see, things to do, where to eat, demographics and national symbols, plus how to apply for a CSME Skills Certificate.`,
+    title: `${g.name}: Cost of Living, Visiting, Working & Studying`,
+    description: `Planning to visit, work or study in ${g.name}? Cost of living, places to see, things to do, where to eat, demographics, independence day and national symbols, plus how to apply for a CARICOM Skills Certificate.`,
     keywords: [
-      `I want to move to ${g.name}`,
+      `visit ${g.name}`,
+      `work in ${g.name}`,
+      `study in ${g.name}`,
       `move to ${g.name}`,
-      `moving to ${g.name}`,
       `moving to ${g.name} from Trinidad`,
-      `relocate to ${g.name}`,
       `cost of living in ${g.name}`,
       `things to do in ${g.name}`,
+      `${g.name} independence day`,
       `${g.name} demographics`,
       `${g.name} national anthem`,
       `places to visit in ${g.name}`,
@@ -41,6 +43,12 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const { slug } = await params;
   const g = getCountryGuide(slug);
   if (!g) notFound();
+
+  // Structured twin of demographics.independence, so the page can show when the
+  // anniversary next falls rather than only the historical date.
+  const independence = independenceFor(g.slug);
+  const daysAway = independence ? daysUntil(independence) : 0;
+  const anniversary = independence ? anniversaryYears(independence) : 0;
 
   const csmeCountry = CSME_COUNTRIES.find((c) => c.slug === g.slug);
   const hasCsmePage = Boolean(csmeCountry);
@@ -195,8 +203,17 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             ) : null}
             {g.demographics.independence ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Independence</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Independence</p>
                 <p className="mt-1 text-slate-700">{g.demographics.independence}</p>
+                {independence ? (
+                  <p className="mt-1.5 text-sm text-slate-600">
+                    Independence Day falls on{" "}
+                    <strong className="font-semibold text-slate-900">{formatDayMonth(independence)}</strong> each year.{" "}
+                    {daysAway === 0
+                      ? `Being marked today, ${anniversary} years on.`
+                      : `Next marked ${daysAway === 1 ? "tomorrow" : `in ${daysAway} days`}, ${anniversary} years on.`}
+                  </p>
+                ) : null}
               </div>
             ) : null}
             {g.coordinates ? (

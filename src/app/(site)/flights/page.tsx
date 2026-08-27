@@ -4,9 +4,9 @@ import { getService } from "@/lib/siteData";
 import ServicePage from "@/components/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Book Flights for Your CARICOM Move",
+  title: "Book Flights Across CARICOM",
   description:
-    "Book affordable, reliable flights for your move between CARICOM islands, a scouting trip beforehand, or a visit home. Inter-island CARICOM routes, one-way or round-trip, baggage help, itinerary planning and support before and during your trip.",
+    "Book affordable, reliable flights for visiting, working or studying in another CARICOM country, a scouting trip beforehand, or a visit home. Inter-island CARICOM routes, one-way or round-trip, baggage help, itinerary planning and support before and during your trip.",
   keywords: [
     "book flights Trinidad",
     "Caribbean flights",

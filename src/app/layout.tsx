@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/siteUrl";
+import { currentFlagTheme } from "@/lib/independenceData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,9 +76,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Around a CARICOM country's independence day the site wears that country's
+  // flag colours. The palette swap lives in globals.css under
+  // [data-theme="..."]; this only decides whether one is on. Pages revalidate
+  // every 60s (the Sanity fetch in the site layout sets that), so the skin
+  // appears and clears on its own without a redeploy.
+  const flagTheme = currentFlagTheme();
+
   return (
     <html
       lang="en"
+      data-theme={flagTheme ?? undefined}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full text-slate-900">{children}</body>

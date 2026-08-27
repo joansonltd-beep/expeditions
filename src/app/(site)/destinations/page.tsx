@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader, type HeroPhoto } from "@/components/ui";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
+import { CARICOM_INDEPENDENCE, formatDayMonth, daysUntil, anniversaryYears } from "@/lib/independenceData";
 
 // Jamaica's Norman Manley Airport is left out: the only freely licensed photo
 // on Commons is a low-resolution 500x320 file, and the other candidates are
@@ -82,6 +83,11 @@ export const metadata: Metadata = {
 
 export default function DestinationsPage() {
   const countries = [...COUNTRY_GUIDES].sort((a, b) => a.name.localeCompare(b.name));
+  const upcoming = CARICOM_INDEPENDENCE.map((day) => ({
+    day,
+    away: daysUntil(day),
+    years: anniversaryYears(day),
+  })).sort((a, b) => a.away - b.away);
 
   return (
     <>
@@ -116,6 +122,38 @@ export default function DestinationsPage() {
           Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don&apos;t currently
           take part.
         </p>
+        {/* Independence days, soonest first from today, so the one coming up
+            is at the top rather than buried in a calendar-order list. */}
+        <div className="mx-auto mt-14 max-w-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900">Independence days</h2>
+          <p className="mt-2 text-slate-600">
+            Every country covered here is a sovereign state with its own independence day. Listed by whichever comes
+            round next.
+          </p>
+          <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+            {upcoming.map(({ day, away, years }) => (
+              <li key={day.slug}>
+                <Link
+                  href={`/destinations/${day.slug}`}
+                  className="flex items-baseline justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                >
+                  <span>
+                    <span className="block text-sm font-semibold text-slate-900">{day.name}</span>
+                    <span className="block text-xs text-slate-600">
+                      independent since {day.year} · {away === 0 ? `${years} today` : `turns ${years}`}
+                    </span>
+                  </span>
+                  <span
+                    className={`shrink-0 text-sm font-semibold ${away === 0 ? "text-brand" : "text-slate-700"}`}
+                  >
+                    {formatDayMonth(day)}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
           <p className="text-sm font-semibold text-slate-900">Curious what people actually earn and pay?</p>
           <p className="mt-1 text-sm text-slate-500">

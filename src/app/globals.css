@@ -15,6 +15,7 @@
   --color-accent-dark: #be123c;  /* rose-700 */
   --color-accent-soft: #fff1f2;  /* rose-50 */
   --color-whatsapp: #25d366;
+  --color-field-warm: #fef3c7;   /* amber wash in the page background */
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -26,9 +27,37 @@ body {
   background:
     radial-gradient(900px 480px at 85% -8%, color-mix(in srgb, var(--color-brand-soft) 90%, transparent), transparent 60%),
     radial-gradient(1000px 560px at -10% 55%, color-mix(in srgb, var(--color-brand-soft) 70%, transparent), transparent 65%),
-    radial-gradient(800px 500px at 105% 95%, color-mix(in srgb, #fef3c7 55%, transparent), transparent 60%),
+    radial-gradient(800px 500px at 105% 95%, color-mix(in srgb, var(--color-field-warm) 55%, transparent), transparent 60%),
     #ffffff;
   background-attachment: fixed;
+}
+
+/*
+  National-day skins.
+
+  Tailwind v4 compiles bg-brand, text-accent and friends to var(--color-brand)
+  etc., so redefining those variables under a data-theme selector re-skins the
+  entire site without touching a single component. src/lib/independenceData.ts
+  decides when one is active and the root layout stamps the attribute.
+
+  Only add a palette here after checking it against white for AA contrast.
+*/
+
+/* Trinidad and Tobago: red, black and white, for Independence Day on 31 August.
+   #ce1126 gives 5.7:1 against white, so it is safe for body text and buttons;
+   #8f0c1a (9.4:1) carries the hover state. Black appears via the accent slot
+   and the banner rather than as the button hover, which keeps hovers reading
+   as hovers rather than as a colour change. */
+[data-theme="tt"] {
+  --color-brand: #ce1126;
+  --color-brand-dark: #8f0c1a;
+  --color-brand-light: #e63950;
+  --color-brand-soft: #fdeef1;
+  --color-accent: #141414;
+  --color-accent-dark: #000000;
+  --color-accent-soft: #f2f2f3;
+  /* The warm sand wash reads as muddy next to flag red; go clean instead. */
+  --color-field-warm: #ffffff;
 }
 
 /* Hero flip gallery: a tile that rotates out and the next tile rotates in. */

@@ -5,6 +5,7 @@ import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAcc
 import ContactForm from "@/components/ContactForm";
 import RotatingHero from "@/components/RotatingHero";
 import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
+import IndependenceBanner from "@/components/IndependenceBanner";
 import { Icon, serviceIcon, pillarIcon, journeyIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
@@ -67,6 +68,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-slate-950/50 to-slate-950/85" />
         <Container className="relative z-10 py-24 sm:py-28">
           <div className="max-w-2xl text-white">
+            <IndependenceBanner compact />
             <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
               {settings.heroHeadline}
             </h1>
@@ -93,6 +95,9 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
+
+      {/* NATIONAL DAY — renders only in the run-up to a CARICOM independence day */}
+      <IndependenceBanner />
 
       {/* THE THREE JOURNEYS — visit, work, study */}
       <Section>
