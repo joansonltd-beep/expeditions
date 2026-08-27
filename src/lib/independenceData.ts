@@ -165,13 +165,18 @@ export function currentIndependence(now: Date = new Date()): { day: Independence
 // day. Only countries with a palette that has been checked for contrast get
 // one; everything else keeps the usual CARICOM blue. Add a country here only
 // after verifying its colours pass AA against white.
-export const FLAG_THEMES: Record<string, string> = {
-  "trinidad-and-tobago": "tt",
+//
+// `colours` is how the palette is named in the banner copy, so it has to read
+// naturally in a sentence and match the theme block in globals.css.
+export type FlagTheme = { theme: string; colours: string };
+
+export const FLAG_THEMES: Record<string, FlagTheme> = {
+  "trinidad-and-tobago": { theme: "tt", colours: "red, black, and white" },
 };
 
 /** The flag theme to apply right now, or null for the normal palette. */
 export function currentFlagTheme(now: Date = new Date()): string | null {
   const current = currentIndependence(now);
   if (!current) return null;
-  return FLAG_THEMES[current.day.slug] ?? null;
+  return FLAG_THEMES[current.day.slug]?.theme ?? null;
 }

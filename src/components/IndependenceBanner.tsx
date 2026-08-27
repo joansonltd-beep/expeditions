@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Container } from "@/components/ui";
-import { currentIndependence, formatDayMonth, FLAG_THEMES, type IndependenceDay } from "@/lib/independenceData";
+import { Container, btnPrimary } from "@/components/ui";
+import { currentIndependence, formatDayMonth, FLAG_THEMES } from "@/lib/independenceData";
 
 // Simple, accurate flag marks for the countries we currently skin the site for.
 // Drawn inline rather than using an emoji flag, because emoji flags do not
@@ -24,22 +24,6 @@ function FlagMark({ slug, className = "" }: { slug: string; className?: string }
   return null;
 }
 
-// "in 4 days" / "today" / "yesterday", from the signed day offset that
-// currentIndependence() returns (negative means it has just passed).
-function whenLabel(daysAway: number): string {
-  if (daysAway === 0) return "today";
-  if (daysAway === 1) return "tomorrow";
-  if (daysAway === -1) return "yesterday";
-  if (daysAway < 0) return `${Math.abs(daysAway)} days ago`;
-  return `in ${daysAway} days`;
-}
-
-function headline(day: IndependenceDay, daysAway: number, years: number): string {
-  if (daysAway === 0) return `Happy Independence Day, ${day.name}`;
-  if (daysAway < 0) return `${day.name} marked ${years} years of independence`;
-  return `${day.name} turns ${years} on ${formatDayMonth(day)}`;
-}
-
 /**
  * Marks whichever CARICOM independence day is closest, during the run-up window
  * set in independenceData.ts. Renders nothing the rest of the year.
@@ -51,10 +35,10 @@ export default function IndependenceBanner({ compact = false }: { compact?: bool
   const current = currentIndependence();
   if (!current) return null;
 
-  const { day, daysAway, years } = current;
+  const { day } = current;
   const href = `/destinations/${day.slug}`;
   // Only claim the site has changed colour when it actually has.
-  const skinned = Boolean(FLAG_THEMES[day.slug]);
+  const flag = FLAG_THEMES[day.slug];
 
   if (compact) {
     return (
@@ -63,36 +47,47 @@ export default function IndependenceBanner({ compact = false }: { compact?: bool
         className="mb-5 inline-flex items-center gap-2.5 rounded-full bg-white/15 py-1.5 pl-1.5 pr-4 text-sm font-semibold text-white ring-1 ring-inset ring-white/30 backdrop-blur transition hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         <FlagMark slug={day.slug} className="h-5 w-[33px] shrink-0 rounded-[3px]" />
-        <span>
-          {day.name} Independence Day, {whenLabel(daysAway)}
-        </span>
+        <span>Happy Independence {day.name}</span>
       </Link>
     );
   }
 
   return (
     <section aria-labelledby="independence-heading" className="border-y border-slate-200 bg-white">
-      <Container className="py-10 sm:py-12">
-        <div className="flex flex-col items-start gap-7 sm:flex-row sm:items-center sm:gap-9">
+      <Container className="py-12 sm:py-16">
+        <div className="flex flex-col items-start gap-7 sm:flex-row sm:gap-10">
           <FlagMark
             slug={day.slug}
             className="h-16 w-[107px] shrink-0 rounded-md shadow-md ring-1 ring-slate-900/10 sm:h-20 sm:w-[133px]"
           />
           <div className="flex-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-              Independence Day, {formatDayMonth(day)} {day.year}
+              Independence Day · {formatDayMonth(day)}
             </p>
             <h2 id="independence-heading" className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-              {headline(day, daysAway, years)}
+              Celebrating {day.name}&rsquo;s Independence
             </h2>
-            <p className="mt-2 max-w-2xl text-slate-600">
-              {daysAway === 0 ? `${years} years ` : null}
-              Independent from {day.from} since {formatDayMonth(day)} {day.year}.
-              {skinned ? " The site is wearing the national colours while the celebrations run." : null}
+            <p className="mt-3 max-w-2xl text-slate-600">
+              {day.name} gained independence from {day.from} on {formatDayMonth(day)} {day.year}.
             </p>
-            <Link href={href} className="mt-4 inline-block text-sm font-semibold text-brand hover:underline">
-              Read the {day.name} country guide →
-            </Link>
+            {flag ? (
+              <p className="mt-3 max-w-2xl text-slate-600">
+                As we celebrate the nation&rsquo;s independence, our website is proudly dressed in the national colours
+                of {flag.colours}.
+              </p>
+            ) : null}
+            <p className="mt-3 max-w-2xl text-slate-600">
+              From {day.name} to opportunities across CARICOM, Expeditions With Jo helps CARICOM citizens make their
+              next move, with support to visit, work, or study with a clear plan.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link href="/#contact" className={btnPrimary}>
+                Start your CARICOM journey
+              </Link>
+              <Link href={href} className="text-sm font-semibold text-brand hover:underline">
+                Read the {day.name} country guide →
+              </Link>
+            </div>
           </div>
         </div>
       </Container>
