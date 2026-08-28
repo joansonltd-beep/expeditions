@@ -4,11 +4,12 @@ import { getArticles, getSiteSettings } from "@/lib/siteData";
 import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import GuideCta from "@/components/GuideCta";
 
 export const metadata: Metadata = {
-  title: "General Guides",
+  title: "CARICOM Move Basics: Free Guides",
   description:
-    "Practical guides for CARICOM nationals: how to apply for a CSME Skills Certificate so you can work on another island, plus travel guides like Canadian visas from Trinidad and booking flights.",
+    "Free, general guides for CARICOM nationals visiting, working or studying in another CARICOM country: how the CSME Skills Certificate works, plus travel guides like Canadian visas from Trinidad and booking flights.",
   keywords: [
     "CARICOM guides",
     "how to work in another Caribbean country",
@@ -34,11 +35,19 @@ export default async function GuidesPage() {
     <>
       <PageHeader
         icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
-        title="General Guides"
+        title="CARICOM Move Basics"
         crumb="Guides"
-        intro="Step-by-step guides for moving and working within CARICOM, plus practical guides for Canadian visa applicants travelling through Trinidad."
+        intro="Start with the basics. Explore general information about CARICOM movement, documents, destinations and the practical steps involved in planning your journey."
+        footnote="Free to read, no sign-up. These are the foundations, not a substitute for advice on your own situation."
       />
       <Section>
+        <p className="mx-auto mb-8 max-w-3xl rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
+          These guides provide general information. Your exact requirements may depend on your nationality,
+          destination, purpose of travel, occupation, documents and timeline.
+        </p>
+        <div className="mx-auto mb-10 max-w-3xl">
+          <GuideCta />
+        </div>
         <div className="mx-auto grid max-w-3xl gap-5">
           {/* CSME certificate guide — the only entry point into the country picker flow */}
           <Link

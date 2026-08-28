@@ -8,10 +8,12 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 // What the visitor wants to do. These mirror the three journeys the site is
 // built around, plus the certificate people most often ask about by name.
 const PURPOSES = [
+  "Move Planning Consultation",
+  "CSME Skills Certificate Assistance",
+  "Complete Relocation Package",
   "Visit another CARICOM country",
   "Work in another CARICOM country",
   "Study in another CARICOM country",
-  "CARICOM Skills Certificate support",
   "Not sure yet",
 ];
 

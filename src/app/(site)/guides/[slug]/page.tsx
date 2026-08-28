@@ -5,6 +5,7 @@ import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
 import CtaButtons from "@/components/CtaButtons";
+import GuideCta from "@/components/GuideCta";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export async function generateStaticParams() {
@@ -55,6 +56,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <Section>
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={a.body} />
+
+          <p className="mt-10 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
+            This guide provides general information. Your exact requirements may depend on your nationality,
+            destination, purpose of travel, occupation, documents and timeline.
+          </p>
+
+          <GuideCta className="mt-6" />
+
           <div className="mt-10 border-t border-slate-200 pt-8">
             <h2 className="text-lg font-bold text-slate-900">Need help with any of this?</h2>
             <p className="mt-2 text-slate-600">

@@ -19,6 +19,9 @@ export type HomeContent = {
   journeysIntro: string;
   journeys: HomeJourney[];
   journeysNote: string;
+  ladderEyebrow: string;
+  ladderTitle: string;
+  ladderIntro: string;
   howEyebrow: string;
   howTitle: string;
   howIntro: string;
@@ -89,6 +92,13 @@ export const DEFAULT_HOME: HomeContent = {
   journeysNote:
     "Requirements vary by country, institution, nationality, and purpose. We help you understand the process and prepare for the next step. Admission, work authorisation, immigration, and government decisions are made by the relevant authorities.",
 
+  // The paid service ladder. The tiers themselves live in src/lib/serviceTiers.ts,
+  // deliberately in code rather than the CMS; only these headings are editable.
+  ladderEyebrow: "Working with us",
+  ladderTitle: "Choose the support that fits your journey",
+  ladderIntro:
+    "Whether you need a clear plan, help preparing for work in another CARICOM country, or support coordinating the wider move, we can help you choose the right next step.",
+
   howEyebrow: "How it works",
   howTitle: "How Expeditions With Jo helps",
   howIntro: "Four steps, with someone to talk to at each one.",
@@ -148,8 +158,8 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       icon: "🧭",
-      title: "Guides",
-      text: "Plain-language guides to certificates, documents, and getting settled.",
+      title: "CARICOM Move Basics",
+      text: "Free, plain-language guides to certificates, documents and the practical steps involved.",
       href: "/guides",
     },
     {

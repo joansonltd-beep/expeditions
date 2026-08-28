@@ -98,6 +98,8 @@ export const homeContent = defineType({
       group: "lists",
     }),
 
+    ...head("ladder", "Service ladder section"),
+
     ...head("how", "How it works section"),
     defineField({
       name: "steps",

@@ -185,8 +185,8 @@ const SELF_EMPLOYED_ITEMS = [
 const OTHER_ITEMS = [
   {
     href: "/guides",
-    title: "General Guides",
-    text: "Plain-language guides to certificates, documents, and getting settled.",
+    title: "CARICOM Move Basics",
+    text: "Free, plain-language guides to certificates, documents and the practical steps involved.",
   },
   {
     href: "/insurance",

@@ -8,6 +8,7 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
+    "/services",
     "/getting-started",
     "/caricom-skills-certificate",
     "/business-setup",
@@ -44,6 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // page, with the Skills Certificate guide alongside them as the main search
     // entry point.
     if (path === "/getting-there" || path === "/getting-started" || path === "/study") return 0.9;
+    if (path === "/services") return 0.9;
     if (path === "/caricom-skills-certificate") return 0.9;
     if (path.startsWith("/caricom-skills-certificate/")) return 0.8;
     if (path === "/business-setup" || path === "/finance" || path === "/guides" || path === "/destinations") return 0.8;

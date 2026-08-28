@@ -19,10 +19,11 @@ const journeyLinks: FooterLink[] = [
   { href: "/study", label: "Go Study", title: "Studying in another CARICOM country" },
   { href: "/caricom-skills-certificate", label: "CARICOM Skills Certificate" },
   { href: "/destinations", label: "Country Guides" },
-  { href: "/guides", label: "General Guides" },
+  { href: "/guides", label: "CARICOM Move Basics", title: "Free guides" },
   { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
 ];
 const companyLinks: FooterLink[] = [
+  { href: "/services", label: "Our Services", title: "Consultation, certificate assistance and full support" },
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodation" },
   { href: "/transfers", label: "Transfers" },

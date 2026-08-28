@@ -66,6 +66,7 @@ const POLICIES_QUERY = `*[_type == "policiesContent"][0]{ intro, sections }`;
 const HOME_QUERY = `*[_type == "homeContent"][0]{
   heroStats, heroTrustNote,
   journeysEyebrow, journeysTitle, journeysIntro, journeys, journeysNote,
+  ladderEyebrow, ladderTitle, ladderIntro,
   howEyebrow, howTitle, howIntro, steps, howNote,
   csmeEyebrow, csmeTitle, csmeText,
   studyEyebrow, studyTitle, studyText,

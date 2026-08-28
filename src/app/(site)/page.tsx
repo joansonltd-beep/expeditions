@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getSiteSettings, getServices, getHomeContent, getTestimonials } from "@/lib/siteData";
-import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnAccent, btnWhatsapp } from "@/components/ui";
+import { Section, SectionHead, Eyebrow, CheckList, Container, btnPrimary, btnGhost, btnAccent, btnWhatsapp } from "@/components/ui";
 import ContactForm from "@/components/ContactForm";
 import RotatingHero from "@/components/RotatingHero";
 import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
 import IndependenceBanner from "@/components/IndependenceBanner";
+import ServiceDisclaimer from "@/components/ServiceDisclaimer";
+import { SERVICE_TIERS, JOURNEY_STAGES } from "@/lib/serviceTiers";
 import { Icon, serviceIcon, pillarIcon, journeyIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
@@ -75,7 +77,10 @@ export default async function HomePage() {
             <p className="mt-5 max-w-xl text-lg text-white/90">{settings.heroSubcopy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#contact" className={btnPrimary}>
-                Start my CARICOM journey
+                Book a Move Planning Consultation
+              </Link>
+              <Link href="/services" className={`${btnGhost} bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur hover:bg-white/20 hover:text-white`}>
+                See how we can help
               </Link>
               <a href={waHero} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
                 Chat with Jo on WhatsApp
@@ -127,8 +132,48 @@ export default async function HomePage() {
         ) : null}
       </Section>
 
-      {/* HOW IT WORKS */}
+      {/* SERVICE LADDER — the three paid levels of support, plus a compact
+          "where are you in your journey" row so both questions (what do you
+          want to do / how ready are you) get answered without two sections. */}
       <Section alt>
+        <SectionHead eyebrow={home.ladderEyebrow} title={home.ladderTitle} intro={home.ladderIntro} />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {SERVICE_TIERS.map((tier) => (
+            <Link
+              key={tier.id}
+              href={`/services#${tier.id}`}
+              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:border-brand hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            >
+              <h3 className="text-xl font-semibold text-slate-900">{tier.title}</h3>
+              <p className="mt-2 flex-1 text-sm text-slate-600">{tier.cardText}</p>
+              <span className="mt-5 inline-block text-sm font-semibold text-brand group-hover:underline">
+                {tier.cardCta} →
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-7 sm:p-8">
+          <h3 className="text-lg font-bold text-slate-900">Where are you in your journey?</h3>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+            {JOURNEY_STAGES.map((s) => (
+              <li key={s.href}>
+                <Link
+                  href={s.href}
+                  className="group block rounded-xl border border-slate-200 px-5 py-4 transition hover:border-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                >
+                  <span className="block font-semibold text-slate-900">&ldquo;{s.label}&rdquo;</span>
+                  <span className="mt-2 block text-sm font-semibold text-brand group-hover:underline">{s.cta} →</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ServiceDisclaimer className="mt-7" />
+        </div>
+      </Section>
+
+      {/* HOW IT WORKS */}
+      <Section>
         <SectionHead eyebrow={home.howEyebrow} title={home.howTitle} intro={home.howIntro} />
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {home.steps.map((s, i) => (
