@@ -75,7 +75,7 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
                 <div className={`mt-1 text-3xl font-extrabold ${p.featured ? "text-white" : "text-slate-900"}`}>
                   {formatLocal(total, country)}
                 </div>
-                <p className={`mt-1 text-sm ${p.featured ? "text-white/80" : "text-slate-500"}`}>
+                <p className={`mt-1 text-sm ${p.featured ? "text-white/80" : "text-slate-600"}`}>
                   50% upfront ({formatLocal(half, country)}), balance on completion
                 </p>
               </div>

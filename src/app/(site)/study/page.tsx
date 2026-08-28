@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import WeHandleIt from "@/components/WeHandleIt";
 import SchoolSearch from "@/components/SchoolSearch";
 import { getSiteSettings } from "@/lib/siteData";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
@@ -220,7 +221,7 @@ export default async function StudyPage() {
           <div className="mt-6">
             <SchoolSearch institutions={NATIONAL_INSTITUTIONS} />
           </div>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-600">
             This list covers degree-granting institutions (bachelor&rsquo;s level and up) in the countries we cover.
             Accreditation, tuition and admission requirements vary widely, especially at the private and offshore
             medical schools, so confirm current accreditation status and licensing pathways directly with the
@@ -253,7 +254,7 @@ export default async function StudyPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm text-slate-500">
+          <p className="mt-4 text-sm text-slate-600">
             Treat this as a starting point, not a checklist to rely on: confirm the exact requirements with the
             destination country&rsquo;s immigration authority and the school before you apply.
           </p>
@@ -337,6 +338,8 @@ export default async function StudyPage() {
             Please do not send passport numbers, bank details or other sensitive information by website form or public
             message. Once we are talking, we will explain how to share documents securely.
           </p>
+
+          <WeHandleIt what="the preparation for your studies abroad" className="mt-8" />
         </div>
       </Section>
 

@@ -128,10 +128,12 @@ export function anniversaryYears(d: IndependenceDay, now: Date = new Date()): nu
   return (passedThisYear ? t.year + 1 : t.year) - d.year;
 }
 
-// How long before the day the site starts marking it, and how long after the
-// celebration banner stays up.
+// How long before the day the site starts marking it, and how long after.
+// TRAIL_DAYS is 0 so the celebration ends with the day itself: Trinidad and
+// Tobago's runs to the end of 31 August and the site is back to normal on
+// 1 September, in Atlantic Standard Time.
 export const LEAD_DAYS = 10;
-export const TRAIL_DAYS = 1;
+export const TRAIL_DAYS = 0;
 
 /**
  * The anniversary the site should currently be marking, if any: the soonest one

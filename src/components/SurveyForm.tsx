@@ -154,11 +154,11 @@ export default function SurveyForm({ countries }: { countries: string[] }) {
 
         <label className="block text-sm font-semibold text-slate-900">
           7. What is your gross monthly salary in {currency}, before taxes and deductions?
-          <span className="mt-0.5 block text-xs font-normal text-slate-500">
+          <span className="mt-0.5 block text-xs font-normal text-slate-600">
             If commission based, please use your base salary. Answer in your own country&apos;s currency, not USD.
           </span>
           <span className="relative mt-1.5 block">
-            <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-500">
+            <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-600">
               {currencySymbol}
             </span>
             <input

@@ -114,13 +114,12 @@ export default function DestinationsPage() {
             </Link>
           ))}
         </div>
-        <p className="mx-auto mt-6 max-w-3xl text-sm text-slate-500">
+        <p className="mx-auto mt-6 max-w-3xl text-sm text-slate-600">
           * Free movement is the right CARICOM nationals have to live and work in another member state without a work
           permit, established under the CSME (CARICOM Single Market and Economy) by the Revised Treaty of
           Chaguaramas. These 12 states currently participate: Antigua and Barbuda, Barbados, Belize, Dominica,
           Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and
-          Trinidad and Tobago. The Bahamas, Haiti and Montserrat are CARICOM members too, but don&apos;t currently
-          take part.
+          Trinidad and Tobago.
         </p>
         {/* Independence days, soonest first from today, so the one coming up
             is at the top rather than buried in a calendar-order list. */}
@@ -156,7 +155,7 @@ export default function DestinationsPage() {
 
         <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
           <p className="text-sm font-semibold text-slate-900">Curious what people actually earn and pay?</p>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-slate-600">
             Anonymous, crowdsourced salary, rent and utility reports, country by country.
           </p>
           <Link href="/survey" className="mt-3 inline-block text-sm font-semibold text-brand hover:underline">

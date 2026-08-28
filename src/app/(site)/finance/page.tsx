@@ -55,7 +55,7 @@ export default function BankingHubPage() {
               <details key={c.slug} className="group rounded-2xl border border-slate-200 bg-white p-6 open:shadow-sm">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
                   <span>
-                    {c.name} <span className="font-normal text-slate-500">— {c.bankName}</span>
+                    {c.name} <span className="font-normal text-slate-600">— {c.bankName}</span>
                   </span>
                   <span className="text-brand transition group-open:rotate-180">▾</span>
                 </summary>
@@ -74,13 +74,13 @@ export default function BankingHubPage() {
                     ))}
                   </ul>
                   {c.minOpening ? (
-                    <p className="mt-3 text-sm text-slate-500">
+                    <p className="mt-3 text-sm text-slate-600">
                       <span className="font-semibold text-slate-700">Minimum opening: </span>
                       {c.minOpening}
                     </p>
                   ) : null}
                   {c.notes?.map((n, i) => (
-                    <p key={i} className="mt-2 text-sm text-slate-500">
+                    <p key={i} className="mt-2 text-sm text-slate-600">
                       {n}
                     </p>
                   ))}
@@ -96,7 +96,7 @@ export default function BankingHubPage() {
               </details>
             ))}
           </div>
-          <p className="mt-5 text-sm text-slate-500">
+          <p className="mt-5 text-sm text-slate-600">
             Requirements come straight from each bank&rsquo;s own page and can change, and branches sometimes ask for more
             than their website lists, so confirm before you go in. If you would rather not chase this down yourself,{" "}
             <Link href="/business-setup" className="font-semibold text-brand hover:underline">

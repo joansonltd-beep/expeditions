@@ -118,9 +118,9 @@ export default function RentSurveyForm({ countries }: { countries: string[] }) {
 
         <label className="block text-sm font-semibold text-slate-900">
           3. How much do you pay in rent per month, in {currency}?
-          <span className="mt-0.5 block text-xs font-normal text-slate-500">Answer in your own country&apos;s currency, not USD.</span>
+          <span className="mt-0.5 block text-xs font-normal text-slate-600">Answer in your own country&apos;s currency, not USD.</span>
           <span className="relative mt-1.5 block">
-            <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-500">
+            <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-600">
               {currencySymbol}
             </span>
             <input
@@ -139,7 +139,7 @@ export default function RentSurveyForm({ countries }: { countries: string[] }) {
 
         <fieldset className="block text-sm font-semibold text-slate-900">
           4. Does your rent include any utilities or other services?
-          <span className="mt-0.5 block text-xs font-normal text-slate-500">Select all that apply.</span>
+          <span className="mt-0.5 block text-xs font-normal text-slate-600">Select all that apply.</span>
           <div className="mt-2 grid gap-2 sm:grid-cols-2">
             {RENT_INCLUDED_OPTIONS.map((o) => (
               <label key={o} className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm font-normal text-slate-700">

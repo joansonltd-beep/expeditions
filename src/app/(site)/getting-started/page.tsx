@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, btnPrimary, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import WeHandleIt from "@/components/WeHandleIt";
 import JobOfferEnquiry from "@/components/JobOfferEnquiry";
 import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 
@@ -220,6 +221,9 @@ export default function GettingStartedPage() {
           <Link href="/caricom-skills-certificate" className={`${btnPrimary} mt-6`}>
             Read the Skills Certificate guide
           </Link>
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl">
+          <WeHandleIt what="the Skills Certificate and the paperwork around your move" />
         </div>
       </Section>
 

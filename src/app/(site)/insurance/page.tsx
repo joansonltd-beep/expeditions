@@ -29,7 +29,7 @@ export default async function InsurancePage() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg text-slate-600">{p.body}</p>
 
-          <p className="mt-3 text-slate-500">{p.bookNote}</p>
+          <p className="mt-3 text-slate-600">{p.bookNote}</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a href={BOOK} target="_blank" rel="noopener noreferrer" className={btnPrimary}>
               {p.bookLabel}

@@ -4,6 +4,7 @@ import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import CsmePicker from "@/components/CsmePicker";
 import CtaButtons from "@/components/CtaButtons";
+import WeHandleIt from "@/components/WeHandleIt";
 import {
   CSME_CATEGORIES,
   CSME_DOCUMENTS,
@@ -137,10 +138,7 @@ export default function CsmePage() {
         />
         <div className="mx-auto max-w-3xl">
           <CsmePicker countries={CSME_COUNTRIES} />
-          <p className="mt-6 text-sm text-slate-500">
-            The Bahamas is a CARICOM member but is not part of the CSME free movement regime, so the Skills Certificate
-            does not apply there. Haiti&rsquo;s participation is limited.
-          </p>
+          <WeHandleIt what="your Skills Certificate application" className="mt-8" />
         </div>
       </Section>
 

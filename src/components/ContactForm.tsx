@@ -22,7 +22,7 @@ const COUNTRY_OPTIONS = [...COUNTRY_GUIDES].map((c) => c.name).sort((a, b) => a.
 // Inputs keep focus:outline-none but replace it with a visible focus-visible ring
 // (plus a brand border) so keyboard focus is always clear.
 const field =
-  "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-500 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
+  "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-600 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 const labelClass = "block text-sm font-semibold text-slate-900";
 
 // Static-friendly enquiry form: builds a prefilled email on submit. Works on

@@ -662,7 +662,7 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "Countries we cover",
       paragraphs: [
-        "We work across CARICOM, with the deepest country-by-country detail for the 12 states that participate in CSME free movement of skills. A few CARICOM members sit outside that regime, including The Bahamas, and Montserrat participates only partially, so a work permit still applies there. Where a country falls outside what we know well, we will say so rather than guess.",
+        "We work across CARICOM, with the deepest country-by-country detail for the 12 states that participate in CSME free movement of skills: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago. Tell us where you are headed and we will tell you what applies.",
       ],
     },
     {

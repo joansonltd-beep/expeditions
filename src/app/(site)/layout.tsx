@@ -122,7 +122,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
               </div>
               <p className="mt-4 max-w-xs text-sm text-slate-400">{settings.footerBlurb}</p>
               <SocialLinks settings={settings} className="mt-4" />
-              <p className="mt-4 text-xs text-slate-500">{settings.paymentNote}</p>
+              <p className="mt-4 text-xs text-slate-400">{settings.paymentNote}</p>
             </div>
 
             <div>
@@ -180,7 +180,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
           </div>
           <div className="border-t border-white/10">
-            <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-2 px-5 py-6 text-xs text-slate-500">
+            <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-2 px-5 py-6 text-xs text-slate-400">
               <span>
                 © {year} {settings.businessName}. All rights reserved.
               </span>

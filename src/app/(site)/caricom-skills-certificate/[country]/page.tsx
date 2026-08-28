@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
+import WeHandleIt from "@/components/WeHandleIt";
 import { CSME_CATEGORIES, CSME_DOCUMENTS, CSME_STEPS, CSME_FAQS, CSME_COUNTRIES } from "@/lib/csmeData";
 import { getCountryGuide } from "@/lib/countryGuideData";
 
@@ -215,7 +216,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
                   {s.tips?.length ? (
                     <ul className="mt-2 space-y-1.5">
                       {s.tips.map((t, j) => (
-                        <li key={j} className="flex gap-2 text-sm text-slate-500">
+                        <li key={j} className="flex gap-2 text-sm text-slate-600">
                           <span aria-hidden="true" className="mt-0.5 shrink-0 text-brand">
                             •
                           </span>
@@ -251,6 +252,8 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
           <div className="mt-8 rounded-xl border-l-4 border-brand bg-brand-soft px-4 py-3 text-sm text-slate-700">
             This is guidance and the rules and fees change. Always confirm the current requirements with {c.authority}.
           </div>
+
+          <WeHandleIt what={`your Skills Certificate application in ${c.name}`} className="mt-8" />
         </div>
       </Section>
 
@@ -287,7 +290,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
       <Section alt>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Travelling for your application?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-slate-500">
+          <p className="mx-auto mt-3 max-w-xl text-slate-600">
             If you need to travel to another CARICOM country for your application or to start work, we can sort your
             flights, a place to stay and your transfers in one booking.
           </p>

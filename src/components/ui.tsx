@@ -63,7 +63,7 @@ export function SectionHead({
     <div className={`${center ? "mx-auto text-center" : ""} mb-12 max-w-2xl`}>
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
       <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
-      {intro ? <p className="mt-3 text-lg text-slate-500">{intro}</p> : null}
+      {intro ? <p className="mt-3 text-lg text-slate-600">{intro}</p> : null}
     </div>
   );
 }
@@ -145,7 +145,7 @@ export function PageHeader({
             ) : null}
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
             {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
-            {footnote ? <p className="mt-2 max-w-2xl text-sm text-slate-500">{footnote}</p> : null}
+            {footnote ? <p className="mt-2 max-w-2xl text-sm text-slate-600">{footnote}</p> : null}
           </div>
           {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
         </div>

@@ -58,7 +58,7 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
       </div>
 
       {query ? (
-        <p className="mt-3 text-sm text-slate-500">
+        <p className="mt-3 text-sm text-slate-600">
           {resultCount === 0
             ? "No schools match that search."
             : `${resultCount} school${resultCount === 1 ? "" : "s"} match "${query}".`}

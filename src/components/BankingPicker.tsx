@@ -19,7 +19,7 @@ export default function BankingPicker({ islands }: { islands: BankingIsland[] })
       <label htmlFor="banking-island" className="block text-sm font-semibold uppercase tracking-wide text-brand">
         Choose your island
       </label>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-600">
         Pick where you are opening the account to see which bank to go to and exactly what to bring.
       </p>
       <div className="mt-4 flex flex-col gap-3 sm:flex-row">

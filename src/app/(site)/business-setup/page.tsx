@@ -49,7 +49,7 @@ export default async function BusinessSetupPage() {
                 <Icon name={BUSINESS_SETUP_ICONS[i % BUSINESS_SETUP_ICONS.length]} className="h-6 w-6" />
               </div>
               <h3 className="text-lg font-semibold text-slate-900">{s.title}</h3>
-              <p className="mt-2 text-sm text-slate-500">{s.description}</p>
+              <p className="mt-2 text-sm text-slate-600">{s.description}</p>
             </div>
           ))}
         </div>

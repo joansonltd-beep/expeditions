@@ -203,7 +203,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             ) : null}
             {g.demographics.independence ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Independence</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">Independence</p>
                 <p className="mt-1 text-slate-700">{g.demographics.independence}</p>
                 {independence ? (
                   <p className="mt-1.5 text-sm text-slate-600">
@@ -638,7 +638,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               ))}
             </div>
             {hasCsmePage ? (
-              <p className="mt-5 text-sm text-slate-500">
+              <p className="mt-5 text-sm text-slate-600">
                 <Link href={`/caricom-skills-certificate/${g.slug}`} className="font-semibold text-brand hover:underline">
                   See the exact CSME steps for {g.name} →
                 </Link>

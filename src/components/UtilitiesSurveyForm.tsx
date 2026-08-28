@@ -97,7 +97,7 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
 
         <fieldset className="block text-sm font-semibold text-slate-900">
           Which of the following utilities/services do you personally pay for?
-          <span className="mt-0.5 block text-xs font-normal text-slate-500">Select all that apply.</span>
+          <span className="mt-0.5 block text-xs font-normal text-slate-600">Select all that apply.</span>
           <div className="mt-2 grid gap-2 sm:grid-cols-2">
             {UTILITY_TYPES.map((u) => (
               <label key={u} className="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm font-normal text-slate-700">
@@ -116,12 +116,12 @@ export default function UtilitiesSurveyForm({ countries }: { countries: string[]
         {utilities.length ? (
           <div className="grid gap-4 rounded-2xl border border-dashed border-brand/40 bg-brand-soft p-5">
             <p className="text-sm font-semibold text-slate-900">How much do you typically pay per month, in {currency}?</p>
-            <p className="-mt-2 text-xs font-normal text-slate-500">Answer in your own country&apos;s currency, not USD.</p>
+            <p className="-mt-2 text-xs font-normal text-slate-600">Answer in your own country&apos;s currency, not USD.</p>
             {utilities.map((u) => (
               <label key={u} className="block text-sm font-semibold text-slate-900">
                 {u}
                 <span className="relative mt-1.5 block">
-                  <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-500">
+                  <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-slate-600">
                     {currencySymbol}
                   </span>
                   <input

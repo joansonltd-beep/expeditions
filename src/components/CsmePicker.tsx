@@ -19,7 +19,7 @@ export default function CsmePicker({ countries }: { countries: CsmeCountry[] }) 
       <label htmlFor="csme-country" className="block text-sm font-semibold uppercase tracking-wide text-brand">
         Choose your country
       </label>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-600">
         Pick where you live (or where you want to work) to see the exact steps and office for that country.
       </p>
       <div className="mt-4 flex flex-col gap-3 sm:flex-row">

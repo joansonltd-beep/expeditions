@@ -53,11 +53,39 @@ body {
   --color-brand-dark: #8f0c1a;
   --color-brand-light: #e63950;
   --color-brand-soft: #fdeef1;
-  --color-accent: #141414;
-  --color-accent-dark: #000000;
-  --color-accent-soft: #f2f2f3;
+  /* Every button goes red for the celebration, the WhatsApp green included. */
+  --color-accent: #ce1126;
+  --color-accent-dark: #8f0c1a;
+  --color-accent-soft: #f4f4f5;
+  --color-whatsapp: #ce1126;
   /* The warm sand wash reads as muddy next to flag red; go clean instead. */
   --color-field-warm: #ffffff;
+}
+
+/*
+  The flag itself, behind the whole page: red field with a white-edged black
+  band running corner to corner, fixed so it reads as one flag rather than
+  repeating down the page.
+
+  Held at low saturation on purpose. Most sections have no background of their
+  own, so body text sits directly on this; at full strength the red would drop
+  slate-900 body copy well below AA. The tints here keep every text surface
+  above 12:1.
+*/
+[data-theme="tt"] body {
+  background:
+    linear-gradient(
+      118deg,
+      transparent 0 39%,
+      color-mix(in srgb, #ffffff 88%, transparent) 39% 44.5%,
+      color-mix(in srgb, #141414 13%, transparent) 44.5% 57%,
+      color-mix(in srgb, #ffffff 88%, transparent) 57% 62.5%,
+      transparent 62.5% 100%
+    ),
+    color-mix(in srgb, #ce1126 9%, #ffffff);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Hero flip gallery: a tile that rotates out and the next tile rotates in. */

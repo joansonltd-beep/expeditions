@@ -23,7 +23,7 @@ export default function InternalJobSearchPage() {
     <div className="mx-auto max-w-2xl px-5 py-12">
       <p className="text-xs font-semibold uppercase tracking-wider text-brand">Internal tool</p>
       <h1 className="mt-2 text-2xl font-bold text-slate-900">CARICOM Job Search</h1>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-slate-600">
         Searches a curated list of job boards, government portals and newspaper classifieds across CARICOM. Nothing
         outside that list shows up.
       </p>
