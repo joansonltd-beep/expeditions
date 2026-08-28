@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Section, PageHeader, SectionHead } from "@/components/ui";
+import { Section, PageHeader, SectionHead, btnPrimary, btnGhost } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
@@ -647,6 +647,32 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
           </div>
         </Section>
       ) : null}
+
+      {/* PLAN MY MOVE — the closing action on every country page */}
+      <Section alt={!flip}>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Thinking about moving to {g.name}?</h2>
+          <p className="mx-auto mt-3 max-w-xl text-slate-600">
+            Let us help you plan the next step. Tell us where you are coming from, why you are going and roughly when,
+            and we will come back with what your situation actually calls for.
+          </p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <Link href="/plan-my-move" className={btnPrimary}>
+              Plan My Move
+            </Link>
+            {hasCsmePage ? (
+              <Link href={`/caricom-skills-certificate/${g.slug}`} className={btnGhost}>
+                Ask About CSME
+              </Link>
+            ) : null}
+          </div>
+          <p className="mx-auto mt-7 max-w-xl border-t border-slate-200 pt-5 text-sm text-slate-600">
+            Last reviewed {g.lastUpdated}. Cost of living figures, rents, fees and office details change, and the
+            figures here are drawn from the named sources on this page rather than being guaranteed prices. Confirm
+            anything you are relying on before you act on it.
+          </p>
+        </div>
+      </Section>
 
       {/* OTHER COUNTRIES */}
       {others.length ? (

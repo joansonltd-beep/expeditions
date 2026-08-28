@@ -136,7 +136,7 @@ export const DEFAULT_HOME: HomeContent = {
   supportEyebrow: "Supporting services",
   supportTitle: "The practical pieces, whichever journey you are on",
   supportIntro:
-    "These sit underneath the visit, work and study journeys rather than standing on their own. Use as many or as few as you need.",
+    "Depending on your needs, your relocation support may also include travel arrangements, banking guidance, business setup assistance, accommodation and practical settling-in support. These sit underneath the visit, work and study journeys rather than standing on their own.",
   pillars: [
     {
       icon: "📜",
@@ -184,33 +184,36 @@ export const DEFAULT_HOME: HomeContent = {
     ],
   },
 
+  // Only claims the business can actually stand behind. No client numbers,
+  // years in business, partnerships, accreditations or review scores: none of
+  // those are verified, so none of them appear.
   whyEyebrow: "Why work with Jo",
-  whyTitle: "One contact for the whole journey",
+  whyTitle: "Why people choose Expeditions With Jo",
   why: [
     {
+      icon: "🗺️",
+      title: "CARICOM-focused",
+      text: "This is the region we work in, not one destination on a long list. The guidance is built around CARICOM movement.",
+    },
+    {
       icon: "🤝",
-      title: "One contact, one plan",
+      title: "One point of contact",
       text: "Requirements, documents and travel handled together, so nothing falls through the gaps between offices.",
     },
     {
-      icon: "💬",
-      title: "Real support",
-      text: "Clear updates and someone to talk to before you go, while you are arranging things, and after you land.",
-    },
-    {
-      icon: "🗺️",
-      title: "Country-specific guidance",
-      text: "Requirements, fees and offices for each CARICOM member state, drawn from the official sources, not generic advice.",
-    },
-    {
-      icon: "👪",
-      title: "Families welcome",
-      text: "Travelling with a spouse, children or elderly relatives? We plan around the whole household.",
-    },
-    {
       icon: "📍",
-      title: "Caribbean roots",
-      text: "Based in Trinidad and Tobago, working with CARICOM nationals across the region.",
+      title: "Country-specific information",
+      text: "Requirements, fees and offices for each member state, drawn from the official sources rather than generic advice.",
+    },
+    {
+      icon: "💬",
+      title: "Support before and after travel",
+      text: "Someone to talk to while you are preparing, and still there once you have landed and questions come up.",
+    },
+    {
+      icon: "🧭",
+      title: "Help understanding the next step",
+      text: "Most people arrive unsure what comes first. We work out where you are and what actually has to happen next.",
     },
     {
       icon: "✅",

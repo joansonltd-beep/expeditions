@@ -80,7 +80,7 @@ export default async function HomePage() {
                 Book a Move Planning Consultation
               </Link>
               <Link href="/services" className={`${btnGhost} bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur hover:bg-white/20 hover:text-white`}>
-                See how we can help
+                Explore Our Services
               </Link>
               <a href={waHero} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
                 Chat with Jo on WhatsApp
@@ -263,7 +263,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{p.text}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <span className="mt-4 inline-block text-sm font-semibold text-brand">See how this helps →</span>
             </Link>
           ))}
         </div>
@@ -316,8 +316,8 @@ export default async function HomePage() {
             <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
           </div>
-          <Link href="#contact" className={`${btnPrimary} shrink-0`}>
-            Start my CARICOM journey
+          <Link href="/plan-my-move" className={`${btnPrimary} shrink-0`}>
+            Plan My Move
           </Link>
         </div>
       </Section>

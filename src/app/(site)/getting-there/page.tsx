@@ -150,7 +150,7 @@ export default function GettingTherePage() {
               </div>
               <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
               <p className="mt-2 text-slate-600">{item.text}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">See what is involved →</span>
             </Link>
           ))}
         </div>

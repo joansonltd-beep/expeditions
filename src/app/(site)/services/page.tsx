@@ -9,7 +9,7 @@ import { SERVICE_TIERS, JOURNEY_STAGES } from "@/lib/serviceTiers";
 export const metadata: Metadata = {
   title: "Our Services: Consultation, Skills Certificate Assistance and Full Support",
   description:
-    "Three levels of support for CARICOM nationals visiting, working or studying in another CARICOM country: a Move Planning Consultation, CSME Skills Certificate assistance, or a coordinated Complete Relocation Package.",
+    "Three levels of support for CARICOM nationals visiting, working or studying in another CARICOM country: a Move Planning Consultation, CSME Skills Certificate assistance, or coordinated Complete Relocation Support.",
   keywords: [
     "CARICOM move planning consultation",
     "CSME Skills Certificate assistance",

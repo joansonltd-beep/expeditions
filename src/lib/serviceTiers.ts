@@ -74,7 +74,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
   },
   {
     id: "complete-package",
-    title: "Complete Relocation Package",
+    title: "Complete Relocation Support",
     cardText:
       "Need support with more than one part of the move? We can help coordinate planning, paperwork guidance, travel, banking and settling-in support where applicable.",
     cardCta: "Explore the Full Package",
@@ -93,7 +93,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Immigration, admission, banking or tenancy decisions, all of which belong to the relevant authority or provider.",
       "Third-party costs such as flights, accommodation and government fees, which are separate from our service fee.",
     ],
-    waMessage: "Hi Jo, I'd like to talk about the Complete Relocation Package.",
+    waMessage: "Hi Jo, I'd like to talk about Complete Relocation Support.",
   },
 ];
 

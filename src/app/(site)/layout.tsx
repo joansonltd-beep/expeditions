@@ -23,6 +23,7 @@ const journeyLinks: FooterLink[] = [
   { href: "/survey", label: "Reports", title: "Salaries, Rent and Utilities" },
 ];
 const companyLinks: FooterLink[] = [
+  { href: "/plan-my-move", label: "Plan My Move", title: "Start a relocation enquiry" },
   { href: "/services", label: "Our Services", title: "Consultation, certificate assistance and full support" },
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodation" },

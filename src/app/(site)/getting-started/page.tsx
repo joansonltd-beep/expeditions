@@ -272,7 +272,7 @@ export default function GettingStartedPage() {
             >
               <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
               <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">See what is involved →</span>
             </Link>
           ))}
         </div>
@@ -306,7 +306,7 @@ export default function GettingStartedPage() {
             >
               <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
               <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">See what is involved →</span>
             </Link>
           ))}
         </div>
@@ -323,7 +323,7 @@ export default function GettingStartedPage() {
             >
               <h2 className="text-2xl font-semibold text-slate-900 group-hover:text-brand">{item.title}</h2>
               <p className="mt-2 max-w-2xl text-slate-600">{item.text}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">Learn more →</span>
+              <span className="mt-3 inline-block text-sm font-semibold text-brand">See what is involved →</span>
             </Link>
           ))}
         </div>

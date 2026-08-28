@@ -10,7 +10,7 @@ import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 const PURPOSES = [
   "Move Planning Consultation",
   "CSME Skills Certificate Assistance",
-  "Complete Relocation Package",
+  "Complete Relocation Support",
   "Visit another CARICOM country",
   "Work in another CARICOM country",
   "Study in another CARICOM country",
