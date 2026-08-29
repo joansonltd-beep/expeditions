@@ -684,6 +684,12 @@ export const DEFAULT_ABOUT: AboutData = {
       ],
     },
     {
+      heading: "Our vision",
+      paragraphs: [
+        "A Caribbean Community connected enough that deciding to visit, work or study in another member state is no harder than travelling inside your own country. The right to move is already ours under the Treaty.",
+      ],
+    },
+    {
       heading: "Getting in touch",
       bullets: [
         "WhatsApp or call 868-723-6644, or email info@expeditionswithjo.com.",
