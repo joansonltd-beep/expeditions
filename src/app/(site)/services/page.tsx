@@ -5,6 +5,7 @@ import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import ServiceDisclaimer from "@/components/ServiceDisclaimer";
 import { SERVICE_TIERS, JOURNEY_STAGES } from "@/lib/serviceTiers";
+import { getHomeContent } from "@/lib/siteData";
 
 export const metadata: Metadata = {
   title: "Our Services: Consultation, Skills Certificate Assistance and Full Support",
@@ -23,9 +24,27 @@ export const metadata: Metadata = {
 // Icons per tier, in order: a conversation, the certificate, the whole journey.
 const TIER_ICONS = ["message", "passport", "compass"] as const;
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  // The FAQs moved here from the home page, which is now an introduction
+  // rather than a catalogue. The structured data comes with them: FAQPage
+  // markup has to describe questions visible on the same page.
+  const home = await getHomeContent();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: home.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
+      {home.faqs.length ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      ) : null}
+
       <PageHeader
         icon={<Icon name="briefcase" className="h-7 w-7 text-brand" />}
         title="How much help do you want?"
@@ -149,6 +168,24 @@ export default function ServicesPage() {
         </div>
       </Section>
 
+      {/* FAQ, moved here from the home page */}
+      {home.faqs.length ? (
+        <Section>
+          <div className="mx-auto max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{home.faqEyebrow}</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{home.faqTitle}</h2>
+            <dl className="mt-9">
+              {home.faqs.map((f, i) => (
+                <div key={i} className="border-t border-navy/12 py-6 last:border-b">
+                  <dt className="font-semibold text-navy">{f.q}</dt>
+                  <dd className="mt-2 text-navy/70">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </Section>
+      ) : null}
+
       {/* CTA */}
       <Section alt>
         <div className="mx-auto max-w-2xl text-center">
@@ -158,7 +195,7 @@ export default function ServicesPage() {
             which of these actually applies, or whether the guides are enough for now.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Link href="/#contact" className={btnPrimary}>
+            <Link href="/plan-my-move" className={btnPrimary}>
               Book a Move Planning Consultation
             </Link>
             <Link href="/guides" className={btnGhost}>

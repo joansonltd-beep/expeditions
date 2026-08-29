@@ -40,7 +40,7 @@ export default function CtaButtons({
         </a>
       ) : null}
       {showContact ? (
-        <Link href="/#contact" className={btnGhost}>
+        <Link href="/plan-my-move" className={btnGhost}>
           Send an enquiry
         </Link>
       ) : null}

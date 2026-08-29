@@ -81,7 +81,7 @@ export default function IndependenceBanner({ compact = false }: { compact?: bool
               next move, with support to visit, work, or study with a clear plan.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Link href="/#contact" className={btnPrimary}>
+              <Link href="/plan-my-move" className={btnPrimary}>
                 Start your CARICOM journey
               </Link>
               <Link href={href} className="text-sm font-semibold text-brand hover:underline">

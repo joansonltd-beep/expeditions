@@ -15,12 +15,16 @@ export default function ProcessTimeline({
   intro,
   steps,
   note,
+  footer,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   steps: ProcessStep[];
   note?: string;
+  // Anything that belongs with the process rather than in a section of its
+  // own: the home page uses it for the three ways to work with Jo.
+  footer?: React.ReactNode;
 }) {
   return (
     <section className="bg-sand py-16 sm:py-24">
@@ -56,6 +60,7 @@ export default function ProcessTimeline({
         </ol>
 
         {note ? <p className="mt-12 max-w-3xl border-l-2 border-accent pl-5 text-navy/70">{note}</p> : null}
+        {footer ? <div className="mt-10">{footer}</div> : null}
       </Container>
     </section>
   );
