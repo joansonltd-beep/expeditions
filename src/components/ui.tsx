@@ -24,17 +24,17 @@ function Breadcrumbs({ crumb, onDark = false }: { crumb: string; onDark?: boolea
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="Breadcrumb" className="mb-4">
-        <ol className={`flex flex-wrap items-center gap-2 text-sm ${onDark ? "text-white/75" : "text-slate-600"}`}>
+        <ol className={`flex flex-wrap items-center gap-2 text-sm ${onDark ? "text-white/75" : "text-navy/60"}`}>
           <li>
             <Link href="/" className={onDark ? "hover:text-white hover:underline" : "hover:text-brand hover:underline"}>
               Home
             </Link>
           </li>
-          <li aria-hidden="true" className={onDark ? "text-white/45" : "text-slate-400"}>
+          <li aria-hidden="true" className={onDark ? "text-white/45" : "text-navy/35"}>
             /
           </li>
           <li>
-            <span className={onDark ? "font-medium text-white" : "font-medium text-slate-900"} aria-current="page">
+            <span className={onDark ? "font-medium text-white" : "font-medium text-navy"} aria-current="page">
               {crumb}
             </span>
           </li>
@@ -47,8 +47,8 @@ function Breadcrumbs({ crumb, onDark = false }: { crumb: string; onDark?: boolea
 // Shared button class strings, so links and buttons look identical everywhere.
 export const btn =
   "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
-export const btnPrimary = `${btn} bg-brand text-white shadow-sm hover:bg-brand-dark focus-visible:ring-brand`;
-export const btnGhost = `${btn} border border-slate-200 bg-white text-slate-900 hover:border-brand hover:text-brand focus-visible:ring-brand`;
+export const btnPrimary = `${btn} bg-brand text-white hover:bg-brand-dark focus-visible:ring-brand`;
+export const btnGhost = `${btn} border border-navy/25 bg-transparent text-navy hover:border-brand hover:text-brand focus-visible:ring-brand`;
 export const btnAccent = `${btn} bg-accent text-white hover:brightness-95 focus-visible:ring-accent`;
 export const btnWhatsapp = `${btn} bg-whatsapp text-white hover:brightness-95 focus-visible:ring-whatsapp`;
 
@@ -75,7 +75,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`${alt ? "border-y border-slate-200/70 bg-slate-50/80" : ""} py-16 sm:py-20 ${className}`}
+      className={`${alt ? "border-y border-navy/10 bg-sand" : "bg-cream"} py-16 sm:py-24 ${className}`}
     >
       <Container>{children}</Container>
     </section>
@@ -84,9 +84,7 @@ export function Section({
 
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block rounded-full bg-brand-soft px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
-      {children}
-    </span>
+    <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent">{children}</span>
   );
 }
 
@@ -104,8 +102,8 @@ export function SectionHead({
   return (
     <div className={`${center ? "mx-auto text-center" : ""} mb-12 max-w-2xl`}>
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-      <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
-      {intro ? <p className="mt-3 text-lg text-slate-600">{intro}</p> : null}
+      <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{title}</h2>
+      {intro ? <p className="mt-3 text-lg text-navy/70">{intro}</p> : null}
     </div>
   );
 }
@@ -115,7 +113,7 @@ export function CheckList({ items, className = "" }: { items: string[]; classNam
   return (
     <ul className={`grid gap-2.5 ${className}`}>
       {items.map((item, i) => (
-        <li key={i} className="relative pl-7 text-slate-600">
+        <li key={i} className="relative pl-7 text-navy/75">
           <svg
             className="absolute left-0 top-1 h-4 w-4 text-brand"
             viewBox="0 0 20 20"
@@ -150,9 +148,10 @@ export function PageHeader({
 }) {
   if (photos?.length) {
     return (
-      <div className="relative isolate -mt-[70px] flex min-h-[420px] flex-col overflow-hidden pt-[70px] sm:min-h-[520px]">
+      <div className="relative isolate -mt-[70px] flex min-h-[420px] flex-col overflow-hidden bg-navy pt-[70px] sm:min-h-[480px]">
         <RotatingPhotoBg photos={photos} />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/35 to-slate-950/80" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-navy/25" />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy/70 to-transparent" />
         <Container className="relative mt-auto py-10 sm:py-12">
           <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
             <div>
@@ -169,27 +168,19 @@ export function PageHeader({
   }
 
   return (
-    <div className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-brand-soft/70 via-brand-soft/20 to-transparent">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-32 h-72 w-72 rounded-full bg-brand-light/25 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-20 bottom-0 h-56 w-56 rounded-full bg-accent-soft blur-3xl"
-      />
+    <div className="relative overflow-hidden border-b border-navy/10 bg-sand">
       <Container className="relative py-14 sm:py-16">
         <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
           <div>
             <Breadcrumbs crumb={crumb} />
             {icon ? (
-              <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-white text-brand shadow-md ring-1 ring-slate-200/80">
+              <div className="mb-4 grid h-13 w-13 place-items-center rounded-lg bg-cream text-brand ring-1 ring-navy/12">
                 {icon}
               </div>
             ) : null}
-            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{title}</h1>
-            {intro ? <p className="mt-4 max-w-2xl text-lg text-slate-600">{intro}</p> : null}
-            {footnote ? <p className="mt-2 max-w-2xl text-sm text-slate-600">{footnote}</p> : null}
+            <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-navy sm:text-4xl">{title}</h1>
+            {intro ? <p className="mt-4 max-w-2xl text-lg text-navy/75">{intro}</p> : null}
+            {footnote ? <p className="mt-2 max-w-2xl text-sm text-navy/55">{footnote}</p> : null}
           </div>
           {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
         </div>

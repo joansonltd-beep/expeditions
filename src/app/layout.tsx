@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Fraunces } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/siteUrl";
 import { currentFlagTheme } from "@/lib/independenceData";
@@ -9,9 +9,13 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// One display face, one body face. Fraunces carries warmth without tipping
+// into decorative; the soft optical axis keeps it friendly at large sizes.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -87,7 +91,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme={flagTheme ?? undefined}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full text-slate-900">{children}</body>
     </html>

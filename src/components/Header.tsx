@@ -54,7 +54,12 @@ function StaticWord({ item, transparent }: { item: NavItem; transparent: boolean
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { chatbotUrl } = useSiteClient();
+  const { chatbotUrl, whatsappNumber } = useSiteClient();
+  // Header WhatsApp link. The nav sentence and logo are untouched; this
+  // replaces the old "Plan My Move" button in the same slot.
+  const waHeader = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(
+    "Hi Jo, I have a question about moving within CARICOM."
+  )}`;
   const pathname = usePathname();
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
@@ -140,15 +145,27 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/#contact"
-            className={`hidden rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition sm:inline-flex ${
+        <div className="flex items-center gap-4">
+          {/* Phone, so there is always a non-digital way to reach Jo. Hidden on
+              the narrowest screens where the WhatsApp button does the job. */}
+          <a
+            href="tel:+18687236644"
+            className={`hidden text-sm font-medium transition md:inline ${
+              transparent ? "text-white/80 hover:text-white" : "text-slate-600 hover:text-brand"
+            }`}
+          >
+            868-723-6644
+          </a>
+          <a
+            href={waHeader}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hidden rounded-full px-5 py-2.5 text-sm font-semibold transition sm:inline-flex ${
               transparent ? "bg-white text-brand-dark hover:bg-white/90" : "bg-brand text-white hover:bg-brand-dark"
             }`}
           >
-            Plan My Move
-          </Link>
+            WhatsApp Jo
+          </a>
           <button
             className="flex h-11 w-11 items-center justify-center lg:hidden"
             aria-label="Toggle menu"
