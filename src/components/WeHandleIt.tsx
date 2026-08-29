@@ -24,13 +24,13 @@ export default function WeHandleIt({
     >
       <h3 className="text-lg font-bold text-slate-900">You don&rsquo;t have to do this yourself</h3>
       <p className="mt-2 text-slate-700">
-        Expeditions With Jo can handle {what} for you, start to finish. We work out what your country and your
-        destination actually require, get the paperwork in order, and keep the whole thing moving, so you are not the
-        one chasing offices, re-reading forms and guessing what comes next. It saves you the time and the energy.
+        I can handle {what} for you. I work out what your country and your destination actually ask for, get the
+        paperwork in order, and keep it moving, so you are not the one chasing offices and re-reading forms to figure
+        out what happens next.
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
-        <Link href="/#contact" className="text-sm font-semibold text-brand hover:underline">
-          Start your CARICOM journey →
+        <Link href="/plan-my-move" className="text-sm font-semibold text-brand hover:underline">
+          Tell Jo about my plans →
         </Link>
         <a href="tel:+18687236644" className="text-sm font-semibold text-slate-700 hover:text-brand">
           Or call 868-723-6644

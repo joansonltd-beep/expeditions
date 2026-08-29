@@ -60,96 +60,96 @@ export const DEFAULT_HOME: HomeContent = {
   // Keep these SHORT. They sit in a max-w-2xl column and must stay on one row:
   // roughly 12 characters for a value and 20 for a label.
   heroStats: [
-    { value: "3 journeys", label: "visit, work or study" },
+    { value: "Visit, work, study", label: "the three routes" },
     { value: "12 states", label: "CSME free movement" },
-    { value: "One contact", label: "start to arrival" },
+    { value: "One person", label: "start to arrival" },
   ],
   heroTrustNote:
-    "Practical guidance and coordination for your CARICOM journey. Final decisions are made by the relevant government offices, schools, employers, and service providers.",
+    "We explain the process and organise the arrangements. The offices, schools, employers and banks make their own decisions.",
 
-  journeysEyebrow: "Where do you want to go?",
-  journeysTitle: "Start with what you want to do",
+  journeysEyebrow: "Start here",
+  journeysTitle: "Why are you going?",
   journeysIntro:
-    "Every CARICOM journey begins with one of these. Pick the one that fits and we will show you what it actually involves.",
+    "Visiting, working and studying are three different processes with three different sets of rules. Pick the one that fits you.",
   journeys: [
     {
       title: "I want to visit",
-      text: "Plan your visit with help understanding travel requirements, arranging flights and accommodation, and preparing for arrival.",
-      cta: "Plan my visit",
+      text: "A holiday, family, or a short work trip. We check what your passport needs for that country, then sort the flights and somewhere to stay.",
+      cta: "See what visiting involves",
       href: "/getting-there",
     },
     {
       title: "I want to work",
-      text: "Understand the CARICOM Skills Certificate pathway, document requirements, destination process, and travel arrangements.",
-      cta: "Explore the work pathway",
+      text: "This usually starts with the Skills Certificate. We work out whether it applies to you, what your destination asks for, and what to do first.",
+      cta: "See what working involves",
       href: "/getting-started",
     },
     {
       title: "I want to study",
-      text: "Prepare for study in another CARICOM country with support for research, documentation, travel, accommodation, and practical arrival arrangements.",
-      cta: "Plan my study journey",
+      text: "Free movement does not cover study, so this is a different process. We help with the school, the permit, and getting you there.",
+      cta: "See what studying involves",
       href: "/study",
     },
   ],
   journeysNote:
-    "Requirements vary by country, institution, nationality, and purpose. We help you understand the process and prepare for the next step. Admission, work authorisation, immigration, and government decisions are made by the relevant authorities.",
+    "What applies to you depends on your passport, where you are going and why. Two people on the same flight can face completely different requirements.",
 
   // The paid service ladder. The tiers themselves live in src/lib/serviceTiers.ts,
   // deliberately in code rather than the CMS; only these headings are editable.
-  ladderEyebrow: "Working with us",
-  ladderTitle: "Choose the support that fits your journey",
+  ladderEyebrow: "Working with me",
+  ladderTitle: "How much help do you want?",
   ladderIntro:
-    "Whether you need a clear plan, help preparing for work in another CARICOM country, or support coordinating the wider move, we can help you choose the right next step.",
+    "Some people only need to know what to check first. Others want the whole thing organised for them. Both are fine, and you can start small.",
 
   howEyebrow: "How it works",
-  howTitle: "How Expeditions With Jo helps",
-  howIntro: "Four steps, with someone to talk to at each one.",
+  howTitle: "What working with me looks like",
+  howIntro: "No mystery to it.",
   steps: [
     {
-      title: "Tell us your goal",
-      text: "Visit, work, study, or prepare for a new opportunity in another CARICOM country.",
+      title: "You tell me the plan",
+      text: "Where you are, where you want to go, and why. That is usually enough to start.",
     },
     {
-      title: "Understand your pathway",
-      text: "We help identify the relevant requirements, documents, offices, schools, employers, and next steps.",
+      title: "I tell you what applies",
+      text: "Which route fits your situation, which office handles it, and what they will ask you for.",
     },
     {
-      title: "Arrange the practical details",
-      text: "This may include flights, accommodation, transfers, travel insurance, banking support, or other available services.",
+      title: "We get it organised",
+      text: "Papers in order, flights booked, somewhere to stay, transfers arranged. As much or as little as you want.",
     },
     {
-      title: "Prepare for your journey",
-      text: "Receive a clearer plan and practical checklist for travel, work, or study.",
+      title: "You go",
+      text: "With a checklist you can actually follow, and my number if something comes up.",
     },
   ],
   howNote:
-    "What we provide is guidance, preparation and coordination. Approval of a certificate, a visa, a place on a course, a job, an account or a tenancy rests with the government office, school, employer, bank or landlord involved.",
+    "I prepare and organise. Approving a certificate, a visa, a course place, a job, an account or a tenancy is not mine to do, and I will never tell you otherwise.",
 
   csmeEyebrow: "Working in another CARICOM country",
-  csmeTitle: "The CARICOM Skills Certificate, explained country by country",
+  csmeTitle: "The Skills Certificate, country by country",
   csmeText:
-    "The Skills Certificate is what lets an eligible skilled CARICOM national work in another member state without a work permit. We set out who can apply, which documents each country asks for, where to submit, and what the office decides.",
+    "This is the document that lets an eligible skilled CARICOM national work in another member state without a work permit. Our guide covers who can apply and which office handles it, wherever you are.",
 
   studyEyebrow: "Studying in another CARICOM country",
-  studyTitle: "Studying abroad in the region works differently",
+  studyTitle: "Studying works differently to working",
   studyText:
-    "Free movement covers work, not study, so a student needs the destination country's own student visa or permit. We help you research institutions, organise documents, and handle travel, accommodation and arrival.",
+    "People are often surprised by this one. Free movement covers work, not study, so a student still needs the destination country's own student visa or permit. We help you sort that out along with the travel and somewhere to live.",
 
   supportEyebrow: "Supporting services",
-  supportTitle: "The practical pieces, whichever journey you are on",
+  supportTitle: "The rest of it",
   supportIntro:
-    "Depending on your needs, your relocation support may also include travel arrangements, banking guidance, business setup assistance, accommodation and practical settling-in support. These sit underneath the visit, work and study journeys rather than standing on their own.",
+    "Flights, somewhere to stay, transfers, banking, setting up a business. You may need all of it or none of it. It depends on where you are going and why.",
   pillars: [
     {
       icon: "📜",
       title: "CARICOM Skills Certificate",
-      text: "Country-by-country guidance to the certificate that lets eligible CARICOM nationals work in another member state.",
+      text: "The document that lets an eligible CARICOM national work in another member state without a work permit.",
       href: "/caricom-skills-certificate",
     },
     {
       icon: "🏢",
       title: "Business Setup",
-      text: "Register a business in your destination country, from name search to the documents a business bank account needs.",
+      text: "Registering a business where you are going, from the name search to what the bank will want to see.",
       href: "/business-setup",
     },
     {
@@ -169,13 +169,13 @@ export const DEFAULT_HOME: HomeContent = {
     {
       icon: "🗺️",
       title: "Country Guides",
-      text: "Cost of living, places to see, local food and what to expect in every CARICOM country we cover.",
+      text: "What it costs to live there, what there is to see, and what to expect when you land.",
       href: "/destinations",
     },
   ],
-  notSureTitle: "Not sure which of the three fits you?",
+  notSureTitle: "Not sure which one you are?",
   notSureText:
-    "Tell us where you are, where you are thinking of going, and what you want to do when you get there. We will map out the requirements, timelines and costs.",
+    "Tell Jo where you are now and where you are thinking of going. We will tell you what applies and what to sort out first.",
   localMoved: {
     scope: "Now at joansonbjames.com",
     title: "Insurance",
@@ -191,38 +191,33 @@ export const DEFAULT_HOME: HomeContent = {
   // Only claims the business can actually stand behind. No client numbers,
   // years in business, partnerships, accreditations or review scores: none of
   // those are verified, so none of them appear.
-  whyEyebrow: "Why work with Jo",
-  whyTitle: "Why people choose Expeditions With Jo",
+  whyEyebrow: "Why people call",
+  whyTitle: "Why people work with me",
   why: [
     {
       icon: "🗺️",
-      title: "CARICOM-focused",
-      text: "This is the region we work in, not one destination on a long list. The guidance is built around CARICOM movement.",
+      title: "CARICOM is all I do",
+      text: "Not one destination on a long list. This region is the whole business.",
     },
     {
       icon: "🤝",
-      title: "One point of contact",
-      text: "Requirements, documents and travel handled together, so nothing falls through the gaps between offices.",
+      title: "You deal with one person",
+      text: "Papers, flights and arrival all sit with me, so nothing gets lost between offices.",
     },
     {
       icon: "📍",
-      title: "Country-specific information",
-      text: "Requirements, fees and offices for each member state, drawn from the official sources rather than generic advice.",
+      title: "Country by country",
+      text: "What each member state asks for, taken from the official sources rather than what worked for somebody else.",
     },
     {
       icon: "💬",
-      title: "Support before and after travel",
-      text: "Someone to talk to while you are preparing, and still there once you have landed and questions come up.",
-    },
-    {
-      icon: "🧭",
-      title: "Help understanding the next step",
-      text: "Most people arrive unsure what comes first. We work out where you are and what actually has to happen next.",
+      title: "Still there after you land",
+      text: "Most questions turn up in the first month, not before you go.",
     },
     {
       icon: "✅",
-      title: "Honest about limits",
-      text: "We tell you plainly what we can arrange and what only a government office, school or employer can decide.",
+      title: "Straight answers",
+      text: "Including when the answer is that I cannot help, or that you do not need me for this one.",
     },
   ],
 
@@ -233,39 +228,31 @@ export const DEFAULT_HOME: HomeContent = {
   faqTitle: "Common questions",
   faqs: [
     {
-      q: "Who is Expeditions With Jo for?",
-      a: "CARICOM citizens who want to visit, work or study in another CARICOM country. We help you understand what your destination requires, prepare your information, and arrange the practical side of getting there.",
+      q: "Can you guarantee I get the certificate, the visa or the job?",
+      a: "No, and be careful of anyone who says they can. Those decisions sit with the government office, the school or the employer. What I can do is make sure what you hand in is complete and in the right order.",
     },
     {
-      q: "Can you guarantee I will get a Skills Certificate, a visa, a job or a place on a course?",
-      a: "No. Those decisions belong to the relevant government office, school, employer or other authority, and no one outside those bodies can promise an outcome. What we do is help you understand the process, prepare properly, and arrange the travel and practical details around it.",
+      q: "Do I need a Skills Certificate just to visit?",
+      a: "No. The Skills Certificate is about working in another member state. Visiting is a different process, and studying is different again. Tell me which one you are planning and I will point you at the right requirements.",
     },
     {
-      q: "Do I need a CARICOM Skills Certificate just to visit?",
-      a: "No. The Skills Certificate relates to working in another member state. Visiting another CARICOM country is a different process, and studying is different again. Tell us which one you are planning and we will point you to the right requirements.",
-    },
-    {
-      q: "Does free movement cover studying in another CARICOM country?",
-      a: "No. CSME free movement and the Skills Certificate are about the right to work. A student normally has to apply to the destination country's own immigration authority for a student visa or permit, separately from anything CSME covers.",
-    },
-    {
-      q: "Do you only handle travel bookings?",
-      a: "Flights, accommodation and transfers are part of what we arrange, but they sit inside the bigger journey. Most people come to us because they want to understand the requirements first, then have the travel handled once the plan is clear.",
+      q: "Does free movement cover studying?",
+      a: "No, and this catches people out. Free movement is about the right to work. A student normally still has to apply to the destination country's own immigration authority for a student visa or permit.",
     },
     {
       q: "What does it cost?",
-      a: "It depends on what you need. Some services, including Canadian visa guidance and loan or card application help, carry no charge from us. Business registration and setup are paid services with published packages. Ask on WhatsApp or through the enquiry form and we will tell you what applies before you commit to anything.",
+      a: "Depends what you need. Canadian visa guidance and help preparing a loan or card application carry no charge from me. Business registration is a paid service with prices on its page. For anything else, ask and I will tell you before you commit to anything.",
     },
     {
-      q: "How do I send documents securely?",
-      a: "Not through the website. Do not put passport numbers, bank details or other sensitive information in the enquiry form. Once you get in touch we will explain how to share documents securely.",
+      q: "How do I send you documents?",
+      a: "Not through this website. Do not put passport numbers or bank details in any form here. Once we are talking I will tell you how to send them safely.",
     },
   ],
 
-  contactEyebrow: "Get started",
-  contactTitle: "Tell us about your CARICOM journey",
+  contactEyebrow: "Get in touch",
+  contactTitle: "Tell Jo about your plans",
   contactIntro:
-    "Fill in the form and we will come back with a clear picture of what your plan involves. Prefer to talk now? Message us on WhatsApp or use the chat.",
+    "Fill in the form and I will come back to you, usually within a business day. If you would rather just talk, WhatsApp is quickest.",
   gallery: [
     { emoji: "🧭", label: "Visit" },
     { emoji: "📜", label: "Work" },

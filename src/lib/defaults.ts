@@ -39,7 +39,7 @@ export type SiteSettings = {
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   businessName: "Expeditions With Jo",
-  tagline: "CARICOM Mobility Support",
+  tagline: "Getting from one CARICOM country to another",
   whatsappNumber: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "8687236644").replace(/\D/g, ""),
   chatbotUrl: "https://chatbot-c359f6.zapier.app",
   generalEmail: "info@expeditionswithjo.com",
@@ -53,14 +53,14 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   tiktokUrl: null,
   youtubeUrl: null,
   xUrl: null,
-  heroEyebrow: "CARICOM mobility support",
-  heroHeadline: "Visit, work or study in another CARICOM country with a clear plan.",
+  heroEyebrow: "Moving around CARICOM",
+  heroHeadline: "Thinking about working, studying or visiting another CARICOM country?",
   heroSubcopy:
-    "Get country-specific guidance, document checklists, travel coordination, and practical support from your first question to your arrival.",
+    "Tell Jo where you are starting and where you want to go. We will help you work out what to check first, and organise the flights, papers and arrival details around it.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:
-    "CARICOM mobility support for citizens visiting, working or studying in another member state. We make the requirements, documents, travel and practical arrangements easier to understand.",
+    "Help for CARICOM citizens working out how to visit, work or study in another CARICOM country, and getting the paperwork and travel organised once they know.",
   logoUrl: null,
 };
 
@@ -641,51 +641,55 @@ export type AboutData = {
 
 export const DEFAULT_ABOUT: AboutData = {
   intro:
-    "Expeditions With Jo helps CARICOM citizens visit, work or study in another CARICOM country. It is run by Joanson Baptiste James from Trinidad and Tobago, and it started as a travel agency before growing into the wider mobility support it offers today.",
+    "I am Joanson Baptiste James. I started this as a travel agency in Trinidad, and it turned into something else because of the questions people kept asking me.",
   sections: [
     {
-      heading: "Who runs it",
+      heading: "How this started",
       paragraphs: [
-        "Joanson Baptiste James started Expeditions With Jo as a Trinidad travel agency. Working with clients who were not simply holidaying, but trying to take up a job, join family or begin a course on another island, made it clear that the hard part was rarely the flight. It was working out what the destination actually required, in what order, and from which office.",
-        "The business grew around that problem. It is still run with the same one-to-one attention it started with, and you deal with Jo directly rather than a call centre.",
+        "I was booking travel. Flights, hotels, transfers, the usual. What I noticed was that a lot of my customers were not going on holiday. They were going to take up a job, or join family, or start a course, and the flight was the easy part of it.",
+        "The hard part was everything around the flight. Which office do I go to. What papers do they want. Do I do this one before or after that one. Why did I get one answer last week and a different answer today. I found I was answering those questions more often than I was booking flights, so I built the business around them instead.",
       ],
     },
     {
-      heading: "The three journeys we support",
-      bullets: [
-        "Visiting another CARICOM country: travel requirements, flights, accommodation, transfers and preparing for arrival.",
-        "Working in another CARICOM country: the CARICOM Skills Certificate pathway, document requirements, the destination process, and the travel around it.",
-        "Studying in another CARICOM country: researching institutions, organising documents, and handling travel, accommodation and arrival.",
-      ],
-      note: "Supporting services such as flights, accommodation, transfers, banking help and Canadian visa guidance sit inside these journeys rather than standing on their own.",
-    },
-    {
-      heading: "Countries we cover",
+      heading: "Who this is for",
       paragraphs: [
-        "We work across CARICOM, with the deepest country-by-country detail for the 12 states that participate in CSME free movement of skills: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago. Tell us where you are headed and we will tell you what applies.",
-      ],
-    },
-    {
-      heading: "Guidance, coordination, and what we do not decide",
-      paragraphs: [
-        "It matters that this is clear, so here it is plainly.",
+        "Most people who contact me are somewhere in one of these situations.",
       ],
       bullets: [
-        "Guidance means explaining what a process involves, which documents are asked for, and where to go.",
-        "Coordination means arranging the practical parts ourselves: flights, accommodation, transfers, appointments and checklists.",
-        "Decisions are not ours. A Skills Certificate, a visa, a place on a course, a job offer, a bank account or a tenancy is granted or refused by the government office, school, employer, bank or landlord involved.",
+        "You have a job offer in another CARICOM country and you are not sure what has to happen before you can take it up.",
+        "You have been accepted on a course, or you are still choosing one, and the visa and the travel are now the problem.",
+        "Somebody told you to get a Skills Certificate and you do not know what that is or where to apply.",
+        "You are going to see family, or going for a short trip, and you would rather someone else handled the arrangements.",
+        "You started the process yourself, got stuck, and want someone to untangle it.",
       ],
-      note: "We never promise an outcome that someone else controls, and you should be cautious of anyone in this field who does.",
     },
     {
-      heading: "Working with us",
-      bullets: [
-        "Getting in touch: WhatsApp or a call on 868-723-6644, email info@expeditionswithjo.com, or the enquiry form on the home page.",
-        "Response time: we aim to reply within one business day. Messages sent over a weekend or a public holiday are usually answered the next working day.",
-        "Documents: do not send passport numbers, bank details or other sensitive information through the website form, by public social media message, or by unencrypted email. Once you are in touch we will explain how to share documents securely.",
-        "Payment, cancellation and refunds: the terms that apply to bookings and paid services are set out in full on our Policies page.",
+      heading: "What I actually do",
+      paragraphs: [
+        "Two things, and it helps to keep them separate in your head.",
       ],
-      note: "Loan, credit card and account applications are processed through First Citizens Bank. Insurance consultations and products are provided through Guardian Life of the Caribbean, now handled at joansonbjames.com.",
+      bullets: [
+        "I explain the process. What your destination asks for, which office handles it, what order things go in, and where people usually come unstuck.",
+        "I organise the parts that are mine to organise. Flights, somewhere to stay, transfers, appointments, and the checklist you work from.",
+      ],
+      note: "Where I do not know something, I will tell you that rather than guess. The countries I know best are the twelve CARICOM states in the CSME free movement regime: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago.",
+    },
+    {
+      heading: "What I do not decide",
+      paragraphs: [
+        "A Skills Certificate, a visa, a place on a course, a job, a bank account, a tenancy. None of those are mine to give. They belong to the office, school, employer, bank or landlord you are dealing with, and no one outside those rooms can promise you an answer.",
+        "So I will not tell you that you will be approved. I will tell you what they ask for, help you put it together properly, and be straight with you about what I think your chances look like. If anyone in this line of work promises you an outcome, walk away.",
+      ],
+    },
+    {
+      heading: "Getting in touch",
+      bullets: [
+        "WhatsApp or call 868-723-6644, or email info@expeditionswithjo.com.",
+        "I aim to answer within one business day. Weekends and public holidays usually roll to the next working day.",
+        "Please do not send passport numbers or bank details through the website, by social media, or by ordinary email. Once we are talking I will tell you how to send documents safely.",
+        "Payment, cancellation and refund terms are on the Policies page.",
+      ],
+      note: "Loans, credit cards and account applications go through First Citizens Bank. Insurance moved to its own site and is handled at joansonbjames.com, in partnership with Guardian Life of the Caribbean.",
     },
   ],
 };

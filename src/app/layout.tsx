@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Expeditions With Jo",
   },
   description:
-    "Practical support for CARICOM citizens who want to visit, work, or study in another CARICOM country, including document guidance, travel planning, accommodation, transfers, and settling-in assistance.",
+    "Help for CARICOM citizens working out how to visit, work or study in another CARICOM country: what each destination asks for, which office handles it, and getting the papers and travel organised.",
   keywords: [
     "CARICOM",
     "CARICOM mobility",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
     description:
-      "Expeditions With Jo helps CARICOM citizens visit, work, or study across the Caribbean by making the requirements, documents, travel, and practical arrangements easier to understand.",
+      "Tell Jo where you are starting and where you want to go. We work out what your destination asks for and organise the papers, flights and arrival around it.",
     images: [
       {
         url: "/og.png",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
     description:
-      "Support for CARICOM citizens visiting, working or studying in another CARICOM country: requirements, documents, travel and practical arrangements.",
+      "Working out how to visit, work or study in another CARICOM country, and getting it organised once you know.",
     images: ["/og.png"],
   },
 };

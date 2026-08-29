@@ -28,10 +28,10 @@ export default function ServicesPage() {
     <>
       <PageHeader
         icon={<Icon name="briefcase" className="h-7 w-7 text-brand" />}
-        title="Choose the support that fits your journey"
+        title="How much help do you want?"
         crumb="Services"
-        intro="Whether you need a clear plan, help preparing for work in another CARICOM country, or support coordinating the wider move, we can help you choose the right next step."
-        footnote="Not sure which one applies to you? Start with a consultation and we will tell you honestly."
+        intro="Some people only need to know what to check first. Others want the whole thing organised. Both are fine, and you can start small."
+        footnote="Not sure which one you need? Start with a consultation and I will tell you straight, including if the free guides are enough."
       />
 
       {/* THE THREE TIERS */}
@@ -131,8 +131,8 @@ export default function ServicesPage() {
       <Section>
         <SectionHead
           eyebrow="Still deciding?"
-          title="Where are you in your journey?"
-          intro="Pick whichever sounds most like you and we will point you at the right starting place."
+          title="Where are you up to?"
+          intro="Pick whichever sounds most like you."
         />
         <div className="grid gap-5 lg:grid-cols-3">
           {JOURNEY_STAGES.map((s) => (
@@ -154,8 +154,8 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Not sure which one you need?</h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">
-            That is exactly what the consultation is for. Tell us where you are and where you want to go, and we will
-            tell you which of these actually applies, or whether the free guides are enough for now.
+            That is what the consultation is for. Tell me where you are and where you want to go, and I will tell you
+            which of these actually applies, or whether the guides are enough for now.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link href="/#contact" className={btnPrimary}>

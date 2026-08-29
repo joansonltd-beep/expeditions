@@ -7,7 +7,9 @@ import RotatingHero from "@/components/RotatingHero";
 import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
 import IndependenceBanner from "@/components/IndependenceBanner";
 import ServiceDisclaimer from "@/components/ServiceDisclaimer";
+import ProofPlaceholder from "@/components/ProofPlaceholder";
 import { SERVICE_TIERS, JOURNEY_STAGES } from "@/lib/serviceTiers";
+import { WHO_THIS_IS_FOR, WE_DO, THEY_DECIDE } from "@/lib/homeCopy";
 import { Icon, serviceIcon, pillarIcon, journeyIcon, WHY_ICONS, STEP_ICONS } from "@/components/icons";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 
@@ -41,7 +43,7 @@ export default async function HomePage() {
   const digits = settings.whatsappNumber.replace(/\D/g, "");
   const waHref = `https://wa.me/${digits}`;
   const waHero = `${waHref}?text=${encodeURIComponent(
-    "Hi Jo, I'd like help with a CARICOM journey (visit, work or study)."
+    "Hi Jo, I'm thinking about another CARICOM country. Can you help?"
   )}`;
 
   // Published so search engines can surface these answers directly. Built from
@@ -77,7 +79,7 @@ export default async function HomePage() {
             <p className="mt-5 max-w-xl text-lg text-white/90">{settings.heroSubcopy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/find-my-pathway" className={btnPrimary}>
-                Find my pathway
+                Work out what I need to do first
               </Link>
               <Link
                 href="/services#consultation"
@@ -86,7 +88,7 @@ export default async function HomePage() {
                 Book a Move Planning Consultation
               </Link>
               <a href={waHero} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
-                Chat with Jo on WhatsApp
+                Chat on WhatsApp
               </a>
             </div>
             {home.heroTrustNote ? (
@@ -135,10 +137,35 @@ export default async function HomePage() {
         ) : null}
       </Section>
 
-      {/* SERVICE LADDER — the three paid levels of support, plus a compact
-          "where are you in your journey" row so both questions (what do you
-          want to do / how ready are you) get answered without two sections. */}
+      {/* WHO THIS IS FOR — the situations people actually arrive with, in
+          their own words, rather than an abstract audience description. */}
       <Section alt>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Who this is for</h2>
+          <p className="mt-3 text-lg text-slate-600">
+            Most people who get in touch are somewhere in one of these.
+          </p>
+          <ul className="mt-7 grid gap-4">
+            {WHO_THIS_IS_FOR.map((item) => (
+              <li key={item} className="rounded-2xl border border-slate-200 bg-white px-6 py-5 text-slate-700">
+                &ldquo;{item}&rdquo;
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-slate-600">
+            Sound familiar?{" "}
+            <Link href="/plan-my-move" className="font-semibold text-brand hover:underline">
+              Tell Jo about your plans
+            </Link>{" "}
+            and we will pick it up from wherever you are.
+          </p>
+        </div>
+      </Section>
+
+      {/* SERVICE LADDER — the three paid levels of support, plus a compact
+          "where are you up to" row so both questions (what do you want to do /
+          how ready are you) get answered without two sections. */}
+      <Section>
         <SectionHead eyebrow={home.ladderEyebrow} title={home.ladderTitle} intro={home.ladderIntro} />
         <div className="grid gap-5 lg:grid-cols-3">
           {SERVICE_TIERS.map((tier) => (
@@ -157,7 +184,7 @@ export default async function HomePage() {
         </div>
 
         <div className="mt-12 rounded-3xl border border-slate-200 bg-white p-7 sm:p-8">
-          <h3 className="text-lg font-bold text-slate-900">Where are you in your journey?</h3>
+          <h3 className="text-lg font-bold text-slate-900">Where are you up to?</h3>
           <ul className="mt-4 grid gap-4 sm:grid-cols-3">
             {JOURNEY_STAGES.map((s) => (
               <li key={s.href}>
@@ -173,6 +200,33 @@ export default async function HomePage() {
           </ul>
           <ServiceDisclaimer className="mt-7" />
         </div>
+      </Section>
+
+      {/* WHAT WE DECIDE AND WHAT WE DO NOT — the clearest way to set
+          expectations, and the most important block on the page legally. */}
+      <Section alt>
+        <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border border-slate-200 bg-white p-7">
+            <h2 className="text-xl font-bold text-slate-900">What I do</h2>
+            <CheckList items={WE_DO} className="mt-4 text-sm" />
+          </div>
+          <div className="rounded-2xl border border-accent/40 bg-accent-soft/50 p-7">
+            <h2 className="text-xl font-bold text-slate-900">What I do not decide</h2>
+            <ul className="mt-4 grid gap-2.5">
+              {THEY_DECIDE.map((item) => (
+                <li key={item} className="relative pl-6 text-sm text-slate-700">
+                  <span aria-hidden="true" className="absolute left-0 top-0 text-accent">
+                    •
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <p className="mx-auto mt-6 max-w-4xl text-sm text-slate-600">
+          If anyone in this line of work promises you a certificate, a visa or a job, walk away.
+        </p>
       </Section>
 
       {/* HOW IT WORKS */}
@@ -229,7 +283,7 @@ export default async function HomePage() {
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">{home.studyTitle}</h2>
             <p className="mt-4 text-slate-600">{home.studyText}</p>
             <Link href="/study" className={`${btnPrimary} mt-7`}>
-              Plan my study journey
+              See what studying involves
             </Link>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-7">
@@ -319,11 +373,11 @@ export default async function HomePage() {
             <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
             <p className="mt-2 max-w-2xl text-sm font-medium text-slate-700">
-              Get a personalised document plan, estimated timeline and practical next steps for your destination.
+              You get a document list built around your situation, a realistic timeline, and what to do first.
             </p>
           </div>
           <Link href="/plan-my-move" className={`${btnPrimary} shrink-0`}>
-            Plan My Move
+            Tell Jo about my plans
           </Link>
         </div>
       </Section>
@@ -344,10 +398,13 @@ export default async function HomePage() {
         </div>
         <p className="mt-8 text-center text-sm text-slate-600">
           <Link href="/about" className="font-semibold text-brand hover:underline">
-            More about Jo and how we work →
+            More about Jo →
           </Link>
         </p>
       </Section>
+
+      {/* Marker for where real proof goes. Renders nothing in production. */}
+      <ProofPlaceholder />
 
       {/* TESTIMONIALS — renders only when real client quotes exist. Never
           populated with placeholder or invented text. */}

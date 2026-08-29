@@ -28,17 +28,17 @@ export type ServiceTier = {
 // Shared across every service section. Kept in one place so the wording cannot
 // drift between pages.
 export const SERVICE_DISCLAIMER =
-  "Government requirements, processing times and fees may vary by country and may change. Our service fee is separate from any government or third-party fee. We provide guidance and practical support, but final decisions are made by the relevant authorities.";
+  "Requirements, processing times and fees are set by each country and change without much warning. Our fee is separate from any government or third-party fee. We prepare and organise; the authorities decide.";
 
 export const SERVICE_TIERS: ServiceTier[] = [
   {
     id: "consultation",
     title: "Move Planning Consultation",
     cardText:
-      "Not sure where to begin? We review your nationality, destination, purpose, documents and timeline, then recommend the right next step for your journey.",
+      "Not sure where to begin? We go through your passport, your destination, why you are going and what you already hold, then tell you what to sort out first.",
     cardCta: "Book a Consultation",
     intro:
-      "The starting point, and the right choice if you are not yet sure which pathway applies to you. We go through your situation together and you come away knowing what your next step actually is.",
+      "Start here if you are not sure which route applies to you. We talk it through and you leave knowing what to do first, and roughly what the whole thing involves.",
     whoFor: [
       "Anyone who knows they want to move but not where to start",
       "People weighing up two or three destinations against each other",
@@ -83,10 +83,10 @@ export const SERVICE_TIERS: ServiceTier[] = [
     id: "skills-certificate",
     title: "CSME Skills Certificate Assistance",
     cardText:
-      "Planning to work in another CARICOM country? Get guidance on eligibility, documents, application preparation and the next steps in the process.",
+      "Planning to work in another CARICOM country? Help working out whether you qualify, what to gather, and getting the application right before it goes in.",
     cardCta: "Get Certificate Assistance",
     intro:
-      "For people whose next step is working in another CARICOM country. The Skills Certificate is what lets an eligible skilled CARICOM national work in another member state without a work permit, and this is hands-on support through preparing that application.",
+      "For people going to work. The Skills Certificate is what lets an eligible skilled CARICOM national work in another member state without a work permit, and this is hands-on help getting that application together.",
     includes: [
       "Working out which of the approved categories fits your qualification",
       "A document checklist built around your category and your destination",
@@ -106,10 +106,10 @@ export const SERVICE_TIERS: ServiceTier[] = [
     id: "complete-package",
     title: "Complete Relocation Support",
     cardText:
-      "Need support with more than one part of the move? We can help coordinate planning, paperwork guidance, travel, banking and settling-in support where applicable.",
+      "Several things to line up at once? We handle the papers, the flights, somewhere to stay and the first weeks on the ground, in an order that works.",
     cardCta: "Explore the Full Package",
     intro:
-      "For people with several moving parts to line up at once. Rather than handling the paperwork in one place and the travel in another, this coordinates the pieces that apply to your situation so they happen in a sensible order.",
+      "For when there is a lot going on at once. Rather than chasing the paperwork in one place and the travel in another, I keep the pieces that apply to you moving in the right order.",
     includes: [
       "Everything in the Move Planning Consultation",
       "Document preparation support across the steps that apply to you",
@@ -131,26 +131,26 @@ export function tierById(id: string): ServiceTier | undefined {
   return SERVICE_TIERS.find((t) => t.id === id);
 }
 
-// "Where are you in your journey?" Maps how ready someone is onto the right
-// destination, which is a different question from visit / work / study.
+// "Where are you up to?" Maps how ready someone is onto the right destination,
+// which is a different question from visit / work / study.
 export type JourneyStage = { label: string; text: string; href: string; cta: string };
 
 export const JOURNEY_STAGES: JourneyStage[] = [
   {
     label: "I am still researching",
-    text: "Start with the free guides and get a feel for what your journey involves.",
+    text: "Read up first and get a feel for what you are dealing with.",
     href: "/guides",
     cta: "Read the Free Guides",
   },
   {
     label: "I have a job offer",
-    text: "Work through the Skills Certificate and the paperwork that turns an offer into a move.",
+    text: "The Skills Certificate and the paperwork that turns an offer into an actual move.",
     href: "/services#skills-certificate",
     cta: "Get Certificate Assistance",
   },
   {
     label: "I want help planning everything",
-    text: "Have the planning, paperwork, travel and arrival coordinated together.",
+    text: "Papers, flights and arrival handled together rather than piece by piece.",
     href: "/services#complete-package",
     cta: "Explore the Full Package",
   },
