@@ -646,7 +646,7 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "I have done this myself",
       paragraphs: [
-        "I am Grenadian. I moved to Trinidad first and went through their painstaking process, then more recently I moved to Jamaica. So you would be dealing with someone who knows beyond theory what the process involves, and who knows how to avoid the pitfalls and the delays, especially the unnecessary administrative ones.",
+        "I am Grenadian. I moved to Trinidad in 2020 and went through their painstaking process, then moved again to Jamaica in 2025. So you would be dealing with someone who knows beyond theory what the process involves, and who knows how to avoid the pitfalls and the delays, especially the unnecessary administrative ones.",
         "To be clear about that last part: I cannot speed up or override anybody's process. What I can do is make sure the only waiting you do is the waiting that is built in, rather than extra weeks caused by something missing or wrong in your application.",
         "Travelling is the easy part. As a former travel agency owner I can handle that side for you without any fuss: airfare, ground transfers and accommodation. My services tend to be cheaper than other travel agencies. It was so frustrating going through the rest of it myself that I decided to start doing it for other people.",
         "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",

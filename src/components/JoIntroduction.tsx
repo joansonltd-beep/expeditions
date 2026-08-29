@@ -39,8 +39,8 @@ export default function JoIntroduction() {
             </h2>
             <div className="mt-5 space-y-4 text-lg leading-relaxed text-navy/75">
               <p>
-                So as you can tell from my photo, I am Grenadian. I moved to Trinidad first and went through their
-                painstaking process, then more recently I moved to Jamaica.
+                So as you can tell from my photo, I am Grenadian. I moved to Trinidad in 2020 and went through their
+                painstaking process, then moved again to Jamaica in 2025.
               </p>
               <p>
                 You would be dealing with someone who knows beyond theory what the process involves, and who knows how
