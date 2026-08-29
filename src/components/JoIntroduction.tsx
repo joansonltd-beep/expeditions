@@ -39,19 +39,29 @@ export default function JoIntroduction() {
             </h2>
             <div className="mt-5 space-y-4 text-lg leading-relaxed text-navy/75">
               <p>
-                Grenada to Trinidad, then Trinidad to Jamaica. So when you ask me which office to go to, what papers
-                they want, or whether this step has to happen before that one, you are asking someone who has already
-                had to work it out for himself.
+                So as you can tell from my photo, I am Grenadian. I moved to Trinidad first and went through their
+                painstaking process, then more recently I moved to Jamaica.
               </p>
               <p>
-                I did it twice, and it was so frustrating going through it that I decided to start doing it for other
-                people.
+                You would be dealing with someone who knows beyond theory what the process involves, and who knows how
+                to avoid the pitfalls and the delays, especially the unnecessary administrative ones.
+                <a href="#admin-delays" className="ml-0.5 align-super text-sm text-brand hover:underline">
+                  *
+                </a>
               </p>
-              <p className="text-base text-navy/65">
-                I ran a travel agency too, so flights, hotels and transfers were never the difficult part. The difficult
-                part was always everything around them.
+              <p>
+                Travelling is the easy part. As a former travel agency owner I can handle that side for you without any
+                fuss: airfare, ground transfers and accommodation.
               </p>
             </div>
+
+            {/* The asterisk. Says plainly what "avoiding delays" does and does
+                not mean, so it cannot be read as a promise to jump a queue. */}
+            <p id="admin-delays" className="mt-5 border-l-2 border-navy/15 pl-5 text-base text-navy/65">
+              <span aria-hidden="true" className="text-brand">*</span> To be clear about that: I cannot speed up or
+              override anybody&rsquo;s process. What I can do is make sure the only waiting you do is the waiting that
+              is built in, rather than extra weeks caused by something missing or wrong in your application.
+            </p>
 
             <JoNote className="mt-8">
               Tell me where you are starting and where you want to go. I will help you work out what to check first.

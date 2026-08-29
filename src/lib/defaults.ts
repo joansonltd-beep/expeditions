@@ -646,8 +646,9 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "I have done this myself",
       paragraphs: [
-        "Grenada to Trinidad first, then Trinidad to Jamaica. Different rules each time, and offices that did not always agree with each other. So when you ask me which office to go to, or whether this step has to happen before that one, you are asking someone who has already had to work it out the hard way.",
-        "The travel was the easy bit. It was the paperwork around it that took the time, and it was so frustrating going through it that I decided to start doing it for other people.",
+        "I am Grenadian. I moved to Trinidad first and went through their painstaking process, then more recently I moved to Jamaica. So you would be dealing with someone who knows beyond theory what the process involves, and who knows how to avoid the pitfalls and the delays, especially the unnecessary administrative ones.",
+        "To be clear about that last part: I cannot speed up or override anybody's process. What I can do is make sure the only waiting you do is the waiting that is built in, rather than extra weeks caused by something missing or wrong in your application.",
+        "Travelling is the easy part. As a former travel agency owner I can handle that side for you without any fuss: airfare, ground transfers and accommodation. It was so frustrating going through the rest of it myself that I decided to start doing it for other people.",
         "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",
       ],
     },
