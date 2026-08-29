@@ -653,8 +653,8 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Thinking about moving to {g.name}?</h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">
-            Let us help you plan the next step. Tell us where you are coming from, why you are going and roughly when,
-            and we will come back with what your situation actually calls for.
+            Let us help you plan the next step. Get a personalised document plan, estimated timeline and practical next
+            steps for your destination.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link href="/plan-my-move" className={btnPrimary}>

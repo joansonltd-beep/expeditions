@@ -123,10 +123,12 @@ async function run() {
   console.log(`\nservices — set detail on ${withDetail.length}:`);
   for (const s of withDetail) console.log(`  service-${s.slug}`);
 
-  // Only the travel-visas copy actually changed; the rest of the service body
-  // text is untouched so any Studio edits survive.
-  const visas = DEFAULT_SERVICES.find((s) => s.slug === "travel-visas");
-  console.log("\nservices — set copy on service-travel-visas: shortBlurb, cardFeatures, intro, body");
+  // Services whose visible copy changed in code and needs pushing. Everything
+  // not listed here keeps whatever is in Studio, so unrelated edits survive.
+  const COPY_SLUGS = ["travel-visas", "finance"];
+  const copyServices = DEFAULT_SERVICES.filter((s) => COPY_SLUGS.includes(s.slug));
+  console.log(`\nservices — set copy (shortBlurb, cardFeatures, intro, body) on ${copyServices.length}:`);
+  for (const s of copyServices) console.log(`  service-${s.slug}`);
 
   const placeholders = await client.fetch<{ _id: string; person: string }[]>(
     `*[_type == "testimonial" && person match "Sample*"]{_id, person}`
@@ -164,13 +166,13 @@ async function run() {
     );
   }
 
-  if (visas) {
-    tx.patch("service-travel-visas", (p) =>
+  for (const s of copyServices) {
+    tx.patch(`service-${s.slug}`, (p) =>
       p.set({
-        shortBlurb: visas.shortBlurb,
-        cardFeatures: visas.cardFeatures,
-        intro: visas.intro,
-        body: visas.body.map((b, i) => ({ _type: "contentSection", _key: `travel-visas-${i}`, ...b })),
+        shortBlurb: s.shortBlurb,
+        cardFeatures: s.cardFeatures,
+        intro: s.intro,
+        body: s.body.map((b, i) => ({ _type: "contentSection", _key: `${s.slug}-${i}`, ...b })),
       })
     );
   }

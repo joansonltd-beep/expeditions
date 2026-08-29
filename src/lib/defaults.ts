@@ -463,14 +463,14 @@ export const DEFAULT_SERVICES: Service[] = [
     category: "local",
     order: 7,
     shortBlurb:
-      "Open a local bank account on your new island. We tell you which bank to use and exactly what to bring.",
+      "Guidance on preparing to open a local bank account, including the documents and practical steps that may apply to your move.",
     cardFeatures: [
       "Republic Bank e-Free and Scotiabank accounts",
       "Document checklist for your island",
       "Loans, credit cards and business registration in Trinidad",
     ],
     intro:
-      "A local bank account is the first thing you need after you move. We tell you which bank to go to on your island and exactly what to bring.",
+      "A local bank account is usually the first thing you need after you arrive. We give you guidance on preparing to open one, including the documents and practical steps that may apply to your move.",
     body: [
       {
         heading: "Loans & Credit Card Applications (Free)",
@@ -497,7 +497,7 @@ export const DEFAULT_SERVICES: Service[] = [
         "New business owners who need a business account opened",
       ],
       included: [
-        "Telling you which bank to approach on your island and exactly what to bring",
+        "Guidance on preparing to open a local account, including the documents and practical steps that may apply to you",
         "Checking your documents against the bank's own published requirements",
         "Preparing loan and credit card applications so they are complete before you submit",
         "Business registration and getting your documents ready for a business account",

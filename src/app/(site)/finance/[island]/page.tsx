@@ -57,7 +57,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
         icon={<CaribbeanGlobe className="h-9 w-9 text-brand" />}
         title={`Open a bank account in ${i.name}`}
         crumb={i.name}
-        intro={`Which bank to use in ${i.name}, the account to ask for, and exactly what to bring to the branch.`}
+        intro={`Guidance on preparing to open a local bank account in ${i.name}, including the documents and practical steps that may apply to your move.`}
       />
 
       {/* THE BANK */}

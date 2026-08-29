@@ -62,7 +62,7 @@ export default function PlanMyMovePage() {
         icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title="Plan My Move"
         crumb="Plan My Move"
-        intro="One move. One plan. One point of contact. Tell us where you are going and why, and we will come back with the right next step."
+        intro="Get a personalised document plan, estimated timeline and practical next steps for your destination."
         footnote="This is an initial enquiry rather than a finished plan, and there is no charge for asking."
       />
 

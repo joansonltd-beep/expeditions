@@ -263,7 +263,7 @@ export default async function HomePage() {
               </div>
               <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{p.text}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-brand">See how this helps →</span>
+              <span className="mt-4 inline-block text-sm font-semibold text-brand">{p.cta ?? "See how this helps"} →</span>
             </Link>
           ))}
         </div>
@@ -315,6 +315,9 @@ export default async function HomePage() {
           <div>
             <h3 className="text-lg font-bold text-slate-900">{home.notSureTitle}</h3>
             <p className="mt-1 max-w-2xl text-sm text-slate-600">{home.notSureText}</p>
+            <p className="mt-2 max-w-2xl text-sm font-medium text-slate-700">
+              Get a personalised document plan, estimated timeline and practical next steps for your destination.
+            </p>
           </div>
           <Link href="/plan-my-move" className={`${btnPrimary} shrink-0`}>
             Plan My Move

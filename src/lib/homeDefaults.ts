@@ -4,7 +4,9 @@
 
 export type HomeStat = { value: string; label: string };
 export type HomeJourney = { title: string; text: string; cta: string; href: string };
-export type HomePillar = { icon: string; title: string; text: string; href: string };
+// `cta` overrides the card's default link text, for cards where a specific
+// action reads better than a generic one.
+export type HomePillar = { icon: string; title: string; text: string; href: string; cta?: string };
 export type HomeStep = { title: string; text: string };
 export type HomeWhy = { icon: string; title: string; text: string };
 export type HomeFaq = { q: string; a: string };
@@ -153,14 +155,16 @@ export const DEFAULT_HOME: HomeContent = {
     {
       icon: "💰",
       title: "Banking",
-      text: "Which bank to approach on your island and exactly what to bring, plus help preparing loan and card applications.",
+      text: "Guidance on preparing to open a local bank account, including the documents and practical steps that may apply to your move.",
       href: "/finance",
+      cta: "See how we help",
     },
     {
       icon: "🧭",
       title: "CARICOM Move Basics",
-      text: "Free, plain-language guides to certificates, documents and the practical steps involved.",
+      text: "Understand the main steps, common requirements and key considerations before planning a move. For a plan built around your destination and circumstances, get personalised support.",
       href: "/guides",
+      cta: "Explore Move Basics",
     },
     {
       icon: "🗺️",

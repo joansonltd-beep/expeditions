@@ -20,7 +20,7 @@ export default function BankingPicker({ islands }: { islands: BankingIsland[] })
         Choose your island
       </label>
       <p className="mt-1 text-sm text-slate-600">
-        Pick where you are opening the account to see which bank to go to and exactly what to bring.
+        Pick where you are opening the account for guidance on preparing to open one there.
       </p>
       <div className="mt-4 flex flex-col gap-3 sm:flex-row">
         <select

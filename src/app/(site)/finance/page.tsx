@@ -10,7 +10,7 @@ import { BUSINESS_BANKING_COUNTRIES } from "@/lib/businessBankingData";
 export const metadata: Metadata = {
   title: "Open a Bank Account in the Caribbean",
   description:
-    "How to open a basic bank account when you move to another CARICOM island: which bank to use on each island, the documents you need, and the minimum opening deposit. Republic Bank e-Free, Scotiabank Electronic Access and NCB On-The-Go accounts.",
+    "Guidance on preparing to open a local bank account after a move within CARICOM, including the documents and practical steps that may apply, plus help preparing loan and credit card applications.",
   keywords: [
     "open bank account Caribbean",
     "open bank account CARICOM",
@@ -31,7 +31,7 @@ export default function BankingHubPage() {
         icon={<CaribbeanGlobe className="h-9 w-9 text-brand" />}
         title="Open a bank account on your new island"
         crumb="Banking"
-        intro="A local bank account is usually the first thing you need after you move, and it is the thing that unlocks everything else: your salary, your rent, your bills. Choose your island to see which bank to go to and exactly what to bring."
+        intro="A local bank account is usually the first thing you need after you move, and it is the thing that unlocks everything else: your salary, your rent, your bills. Choose your island for guidance on preparing to open an account there."
       />
 
       {/* PICKER */}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, SectionHead, CheckList, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
@@ -340,6 +340,27 @@ export default async function StudyPage() {
           </p>
 
           <WeHandleIt what="the preparation for your studies abroad" className="mt-8" />
+
+          <div className="mt-6 rounded-2xl border border-brand/30 bg-brand-soft p-6 sm:p-7">
+            <h3 className="text-lg font-bold text-slate-900">
+              Planning to study in another CARICOM country?
+            </h3>
+            <p className="mt-2 text-slate-700">
+              Get guidance for your move, travel and settling-in arrangements. We work through what your destination
+              and your institution ask for, then handle the practical side around it.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/plan-my-move" className={btnPrimary}>
+                Plan My Move
+              </Link>
+              <Link href="/services" className={btnGhost}>
+                Explore Our Services
+              </Link>
+            </div>
+            <p className="mt-4 text-sm text-slate-600">
+              Get a personalised document plan, estimated timeline and practical next steps for your destination.
+            </p>
+          </div>
         </div>
       </Section>
 
