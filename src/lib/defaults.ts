@@ -684,6 +684,12 @@ export const DEFAULT_ABOUT: AboutData = {
       ],
     },
     {
+      heading: "Our mission",
+      paragraphs: [
+        "To guide CARICOM citizens through Move Planning Consultations, assist with CSME Skills Certificate applications, and coordinate travel and relocation from start to finish. Regional professionals, students and families deserve to reach life-changing opportunities across CARICOM without administrative confusion and border anxiety holding them back.",
+      ],
+    },
+    {
       heading: "Our vision",
       paragraphs: [
         "A Caribbean Community connected enough that deciding to visit, work or study in another member state is no harder than travelling inside your own country. The right to move is already ours under the Treaty.",
