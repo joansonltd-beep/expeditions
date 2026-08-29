@@ -26,25 +26,35 @@ export default async function AboutPage() {
   const [about, settings] = await Promise.all([getAbout(), getSiteSettings()]);
   return (
     <>
+      {/* St. George's behind, Jo in front. The page opens by saying he is
+          Grenadian, so the header shows where that is. The Carenage rather
+          than a beach: it is a working harbour and recognisably Grenada. */}
       <PageHeader
-        icon={<Icon name="users" className="h-7 w-7 text-brand" />}
         title="About Us"
         intro={about.intro}
         crumb="About Us"
+        photos={[
+          {
+            src: "/places/grenada/carenage.jpg",
+            alt: "The Carenage, the horseshoe harbour at St. George's, Grenada",
+            credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
+            creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
+          },
+        ]}
         image={
-          <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5">
+          <figure className="max-w-[210px] overflow-hidden rounded-lg bg-cream ring-1 ring-white/25 lg:ml-auto">
             <Image
               src="/photos/jo.jpg"
               alt="Joanson Baptiste James, who runs Expeditions With Jo"
               width={1200}
               height={1597}
-              sizes="(min-width: 1024px) 340px, 100vw"
+              sizes="(min-width: 1024px) 280px, 60vw"
               className="h-auto w-full object-cover"
               priority
             />
-            <figcaption className="px-5 py-4">
-              <span className="block font-semibold text-slate-900">Joanson Baptiste James</span>
-              <span className="block text-sm text-slate-600">Founder, Expeditions With Jo</span>
+            <figcaption className="px-4 py-3">
+              <span className="block text-sm font-semibold text-navy">Joanson Baptiste James</span>
+              <span className="block text-xs text-navy/65">Founder, Expeditions With Jo</span>
             </figcaption>
           </figure>
         }
