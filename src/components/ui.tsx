@@ -148,7 +148,7 @@ export function PageHeader({
 }) {
   if (photos?.length) {
     return (
-      <div className="relative isolate -mt-[70px] flex min-h-[420px] flex-col overflow-hidden bg-navy pt-[70px] sm:min-h-[480px]">
+      <div className="relative isolate flex min-h-[360px] flex-col overflow-hidden bg-navy sm:min-h-[420px]">
         <RotatingPhotoBg photos={photos} />
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-navy/25" />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy/70 to-transparent" />

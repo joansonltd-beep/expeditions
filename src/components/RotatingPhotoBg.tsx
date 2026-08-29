@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useDeclarePhotoHero } from "@/components/HeaderTheme";
 
 export type HeroPhoto = { src: string; alt: string; credit?: string; creditUrl?: string };
 
@@ -11,7 +10,6 @@ export type HeroPhoto = { src: string; alt: string; credit?: string; creditUrl?:
 // just renders statically. Always declares itself as a photo hero so the
 // header can go transparent over it.
 export default function RotatingPhotoBg({ photos, intervalMs = 6000 }: { photos: HeroPhoto[]; intervalMs?: number }) {
-  useDeclarePhotoHero();
   const [i, setI] = useState(0);
 
   useEffect(() => {

@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSiteClient } from "@/components/SiteSettingsProvider";
-import { useHeaderTransparentCapable } from "@/components/HeaderTheme";
+import { track } from "@/lib/analytics";
 
-// Header height in px, kept in sync with the h-[70px] nav row below. Used to
-// pull the homepage hero up underneath the header so it can go transparent.
-export const HEADER_HEIGHT = 70;
+// Header height in px at rest. The announcement strip above it is separate and
+// is not sticky, so it scrolls away while the header itself stays.
+export const HEADER_HEIGHT = 72;
 
 type NavItem = { href: string; label: string; title?: string; static?: boolean };
 
@@ -41,11 +41,10 @@ const MOBILE_LINKS: NavItem[] = Array.from(
   ).values()
 );
 
-// One of the plain, unclickable sentence words (LETS, OR, IN, A, COUNTRY) in
-// the desktop nav row.
-function StaticWord({ item, transparent }: { item: NavItem; transparent: boolean }) {
+// One of the plain, unclickable sentence words (LETS, OR, IN, A, COUNTRY).
+function StaticWord({ item }: { item: NavItem }) {
   return (
-    <span aria-hidden="true" className={`select-none text-sm font-medium ${transparent ? "text-white/50" : "text-slate-400"}`}>
+    <span aria-hidden="true" className="select-none text-sm font-medium text-navy/45">
       {item.label}
     </span>
   );
@@ -54,56 +53,51 @@ function StaticWord({ item, transparent }: { item: NavItem; transparent: boolean
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { chatbotUrl, whatsappNumber } = useSiteClient();
-  // Header WhatsApp link. The nav sentence and logo are untouched; this
-  // replaces the old "Plan My Move" button in the same slot.
-  const waHeader = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(
-    "Hi Jo, I have a question about moving within CARICOM."
-  )}`;
+  const { whatsappNumber } = useSiteClient();
   const pathname = usePathname();
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
-  // Pages that render a full-bleed dark photo behind the header declare it
-  // via useDeclarePhotoHero(); only those pages get a transparent header.
-  const photoHero = useHeaderTransparentCapable();
-  const transparent = photoHero && !scrolled;
+  const waHeader = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(
+    "Hi Jo, I have a question about moving within CARICOM."
+  )}`;
 
-  // Reset scroll state on navigation so a page loaded already-scrolled (or a
-  // client-side route change) doesn't leave a stale transparent/solid state.
+  // Only used to tighten the header slightly once you start scrolling. The
+  // header is always solid now, so nothing depends on this for legibility.
   useEffect(() => {
-    setScrolled(window.scrollY > 40);
-  }, [pathname]);
-
-  useEffect(() => {
-    if (!photoHero) return;
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [photoHero]);
+  }, []);
+
+  // Close the drawer on navigation, and let Escape close it.
+  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const linkClass = (href: string) =>
-    `text-sm font-medium transition ${
-      transparent
-        ? `hover:text-white ${isActive(href) ? "text-white" : "text-white/70"}`
-        : `hover:text-brand ${isActive(href) ? "text-brand" : "text-slate-600"}`
-    }`;
+    `text-sm font-medium transition hover:text-brand ${isActive(href) ? "text-accent" : "text-navy/80"}`;
 
   return (
-    <header
-      className={`sticky top-0 z-40 transition-colors duration-300 ${
-        transparent ? "bg-transparent shadow-none" : "bg-white/90 shadow-md backdrop-blur-xl"
-      }`}
-    >
-      <nav className="mx-auto flex h-[70px] max-w-[1400px] items-center justify-between gap-4 px-5">
+    <header className="sticky top-0 z-40 border-b border-navy/10 bg-cream/95 backdrop-blur-md">
+      <nav
+        aria-label="Main"
+        className={`mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 transition-[height] duration-200 ${
+          scrolled ? "h-[60px]" : "h-[72px]"
+        }`}
+      >
         <Link
           href="/"
-          className={`flex shrink-0 items-center gap-2.5 text-[1.05rem] font-extrabold tracking-tight transition-colors ${
-            transparent ? "text-white" : "text-slate-900"
-          }`}
+          className="flex shrink-0 items-center gap-2.5 text-[1.02rem] font-extrabold tracking-tight text-navy transition-colors hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           {logoUrl ? (
-            <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-9 w-auto" priority />
+            <Image src={logoUrl} alt={businessName} width={150} height={40} className="h-8 w-auto" priority />
           ) : (
             <>
               <Image
@@ -111,33 +105,33 @@ export default function Header({ businessName, logoUrl }: { businessName: string
                 alt=""
                 width={36}
                 height={36}
-                className={`h-9 w-9 object-contain transition-[filter] ${transparent ? "invert" : ""}`}
+                className={`w-auto object-contain transition-[height] ${scrolled ? "h-7" : "h-8"}`}
                 priority
               />
-              {businessName}
+              <span className="hidden sm:inline">{businessName}</span>
             </>
           )}
         </Link>
 
-        {/* desktop nav */}
-        <div className="hidden items-center gap-7 lg:flex">
-          <StaticWord item={LETS} transparent={transparent} />
+        {/* desktop nav: the sentence, unchanged in wording and order */}
+        <div className="hidden items-center gap-6 lg:flex">
+          <StaticWord item={LETS} />
           <Link href={COME_SEE_ME.href} title={COME_SEE_ME.title} className={linkClass(COME_SEE_ME.href)}>
             {COME_SEE_ME.label}
           </Link>
           <Link href={COME_LIVE_WITH_ME.href} title={COME_LIVE_WITH_ME.title} className={linkClass(COME_LIVE_WITH_ME.href)}>
             {COME_LIVE_WITH_ME.label}
           </Link>
-          <StaticWord item={OR} transparent={transparent} />
+          <StaticWord item={OR} />
           <Link href={STUDY.href} title={STUDY.title} className={linkClass(STUDY.href)}>
             {STUDY.label}
           </Link>
-          <StaticWord item={IN} transparent={transparent} />
-          <StaticWord item={A} transparent={transparent} />
+          <StaticWord item={IN} />
+          <StaticWord item={A} />
           <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
             {DESTINATIONS.label}
           </Link>
-          <StaticWord item={COUNTRY} transparent={transparent} />
+          <StaticWord item={COUNTRY} />
           {AFTER.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
@@ -146,13 +140,10 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Phone, so there is always a non-digital way to reach Jo. Hidden on
-              the narrowest screens where the WhatsApp button does the job. */}
           <a
             href="tel:+18687236644"
-            className={`hidden text-sm font-medium transition md:inline ${
-              transparent ? "text-white/80 hover:text-white" : "text-slate-600 hover:text-brand"
-            }`}
+            onClick={() => track("phone_click", { location: "header" })}
+            className="hidden text-sm font-medium text-navy/70 transition hover:text-brand md:inline"
           >
             868-723-6644
           </a>
@@ -160,34 +151,34 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             href={waHeader}
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden rounded-full px-5 py-2.5 text-sm font-semibold transition sm:inline-flex ${
-              transparent ? "bg-white text-brand-dark hover:bg-white/90" : "bg-brand text-white hover:bg-brand-dark"
-            }`}
+            onClick={() => track("whatsapp_click", { location: "header" })}
+            className="hidden rounded-full bg-[#ce1126] px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ce1126] focus-visible:ring-offset-2 sm:inline-flex"
           >
             WhatsApp Jo
           </a>
           <button
-            className="flex h-11 w-11 items-center justify-center lg:hidden"
-            aria-label="Toggle menu"
+            className="flex h-11 w-11 items-center justify-center text-navy lg:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((o) => !o)}
           >
             <span className="block space-y-[5px]">
-              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
-              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
-              <span className={`block h-0.5 w-6 rounded transition-colors ${transparent ? "bg-white" : "bg-slate-900"}`} />
+              <span className={`block h-0.5 w-6 rounded bg-navy transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+              <span className={`block h-0.5 w-6 rounded bg-navy transition ${open ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-6 rounded bg-navy transition ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
             </span>
           </button>
         </div>
       </nav>
 
-      {/* mobile menu */}
+      {/* mobile menu: same sentence, same order, same wording */}
       {open ? (
-        <div className="border-t border-slate-200/70 bg-white/95 px-5 py-4 backdrop-blur-xl lg:hidden">
-          <div className="flex flex-col gap-1">
+        <div id="mobile-menu" className="border-t border-navy/10 bg-cream px-5 pb-5 pt-3 lg:hidden">
+          <div className="flex flex-col">
             {MOBILE_LINKS.map((l) =>
               l.static ? (
-                <span key={l.href} aria-hidden="true" className="select-none px-2 py-2.5 text-sm font-medium text-slate-400">
+                <span key={l.href} aria-hidden="true" className="select-none px-2 py-2 text-sm font-medium text-navy/45">
                   {l.label}
                 </span>
               ) : (
@@ -195,23 +186,34 @@ export default function Header({ businessName, logoUrl }: { businessName: string
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  className={`rounded px-2 py-2.5 text-base font-medium transition hover:bg-sand ${
+                    isActive(l.href) ? "text-accent" : "text-navy"
+                  }`}
                 >
                   {l.label}
-                  {l.title ? <span className="ml-1.5 font-normal text-slate-400">({l.title})</span> : null}
+                  {l.title ? <span className="ml-1.5 text-sm font-normal text-navy/50">({l.title})</span> : null}
                 </Link>
               )
             )}
-            {chatbotUrl ? (
-              <a
-                href={chatbotUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg px-2 py-2.5 text-sm font-medium text-brand hover:bg-slate-50"
-              >
-                Chat with us
-              </a>
-            ) : null}
+          </div>
+
+          <div className="mt-4 flex flex-col gap-2.5 border-t border-navy/10 pt-4">
+            <a
+              href={waHeader}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("whatsapp_click", { location: "header-mobile" })}
+              className="inline-flex items-center justify-center rounded-full bg-[#ce1126] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95"
+            >
+              WhatsApp Jo
+            </a>
+            <a
+              href="tel:+18687236644"
+              onClick={() => track("phone_click", { location: "header-mobile" })}
+              className="text-center text-sm font-medium text-navy/70 hover:text-brand"
+            >
+              Call 868-723-6644
+            </a>
           </div>
         </div>
       ) : null}

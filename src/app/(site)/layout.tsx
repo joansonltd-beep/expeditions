@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import AnnouncementStrip from "@/components/AnnouncementStrip";
 import Floats from "@/components/Floats";
 import SocialLinks from "@/components/SocialLinks";
 import { SiteSettingsProvider } from "@/components/SiteSettingsProvider";
-import { HeaderThemeProvider } from "@/components/HeaderTheme";
 import { getSiteSettings } from "@/lib/siteData";
 import { SITE_URL } from "@/lib/siteUrl";
 
@@ -99,7 +99,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         generalEmail: settings.generalEmail,
       }}
     >
-      <HeaderThemeProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <a
         href="#main"
@@ -109,6 +108,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       </a>
 
       <div className="flex min-h-full flex-col">
+        <AnnouncementStrip />
         <Header businessName={settings.businessName} logoUrl={settings.logoUrl} />
 
         <main id="main" className="flex-1">
@@ -195,7 +195,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
 
         <Floats />
       </div>
-      </HeaderThemeProvider>
     </SiteSettingsProvider>
   );
 }

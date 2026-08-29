@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container, btnPrimary } from "@/components/ui";
 import RotatingHero from "@/components/RotatingHero";
-import PhotoHeroDeclare from "@/components/PhotoHeroDeclare";
 import IndependenceBanner from "@/components/IndependenceBanner";
 
 /**
@@ -26,8 +25,7 @@ export default function HeroSection({
   trustNote?: string;
 }) {
   return (
-    <section className="relative isolate -mt-[70px] flex min-h-[34rem] items-end overflow-hidden bg-navy pt-[70px] sm:min-h-[42rem]">
-      <PhotoHeroDeclare />
+    <section className="relative isolate flex min-h-[30rem] items-end overflow-hidden bg-navy sm:min-h-[38rem]">
       <RotatingHero />
 
       {/* Directional scrim: heavy at the left where the words sit, clearing
