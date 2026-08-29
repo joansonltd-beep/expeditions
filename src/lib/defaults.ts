@@ -641,13 +641,14 @@ export type AboutData = {
 
 export const DEFAULT_ABOUT: AboutData = {
   intro:
-    "I am Joanson Baptiste James. I started this as a travel agency in Trinidad, and it turned into something else because of the questions people kept asking me.",
+    "I am Joanson Baptiste James. I moved from Grenada to Trinidad, then from Trinidad to Jamaica, and I started this because of how much harder those moves were than they needed to be.",
   sections: [
     {
-      heading: "How this started",
+      heading: "I have done this myself",
       paragraphs: [
-        "I was booking travel. Flights, hotels, transfers, the usual. What I noticed was that a lot of my customers were not going on holiday. They were going to take up a job, or join family, or start a course, and the flight was the easy part of it.",
-        "The hard part was everything around the flight. Which office do I go to. What papers do they want. Do I do this one before or after that one. Why did I get one answer last week and a different answer today. I found I was answering those questions more often than I was booking flights, so I built the business around them instead.",
+        "Grenada to Trinidad first, then Trinidad to Jamaica. Two moves, two sets of rules, two different offices telling me two different things. So when you ask me which office to go to, what papers they want, or whether this step has to happen before that one, you are asking someone who has already had to work it out the hard way.",
+        "The frustrating part was never the travel. It was that nobody hands you a list. You find out what was needed after you needed it, you make the same trip into town twice, and the answer you got last week is not the answer you get today. Going through that twice was enough to make me want to spare other people some of it.",
+        "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",
       ],
     },
     {
@@ -672,7 +673,7 @@ export const DEFAULT_ABOUT: AboutData = {
         "I explain the process. What your destination asks for, which office handles it, what order things go in, and where people usually come unstuck.",
         "I organise the parts that are mine to organise. Flights, somewhere to stay, transfers, appointments, and the checklist you work from.",
       ],
-      note: "Where I do not know something, I will tell you that rather than guess. The countries I know best are the twelve CARICOM states in the CSME free movement regime: Antigua and Barbuda, Barbados, Belize, Dominica, Grenada, Guyana, Jamaica, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, Suriname, and Trinidad and Tobago.",
+      note: "Grenada, Trinidad and Tobago and Jamaica I know first hand, because I have moved between them. The rest of the twelve CSME states I know from the work: Antigua and Barbuda, Barbados, Belize, Dominica, Guyana, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, and Suriname. Where I do not know something, I will tell you that rather than guess.",
     },
     {
       heading: "What I do not decide",

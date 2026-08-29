@@ -35,18 +35,21 @@ export default function JoIntroduction() {
           <div className="lg:pt-4">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">The person you deal with</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              I started out booking flights
+              I have made this move myself
             </h2>
             <div className="mt-5 space-y-4 text-lg leading-relaxed text-navy/75">
               <p>
-                Travel agency in Trinidad. Flights, hotels, transfers, the usual. What I noticed was that a good number
-                of my customers were not going on holiday. They were going to take up a job, or join family, or start a
-                course, and the flight was the easy part of it.
+                Grenada to Trinidad, then Trinidad to Jamaica. So when you ask me which office to go to, what papers
+                they want, or whether this step has to happen before that one, you are asking someone who has already
+                had to work it out for himself.
               </p>
               <p>
-                The hard part was everything around the flight. Which office do I go to. What papers do they want. Do I
-                do this one before or after that one. I was answering those questions more often than I was booking
-                flights, so I built the business around them instead.
+                Nobody hands you a list. You find out what was needed after you needed it, and you make the trip twice.
+                It was frustrating enough going through it that I started doing it for other people.
+              </p>
+              <p className="text-base text-navy/65">
+                I ran a travel agency too, so flights, hotels and transfers were never the difficult part. The difficult
+                part was always everything around them.
               </p>
             </div>
 
