@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container, btnPrimary } from "@/components/ui";
 import JoNote from "@/components/JoNote";
+import ClientTicker from "@/components/ClientTicker";
 
 /**
  * Jo, near the top of the page, so the business reads as a person before it
@@ -66,7 +67,9 @@ export default function JoIntroduction() {
               is built in, rather than extra weeks caused by something missing or wrong in your application.
             </p>
 
-            <JoNote className="mt-8">
+            <ClientTicker className="mt-9" />
+
+            <JoNote className="mt-9">
               Tell me where you are starting and where you want to go. I will help you work out what to check first.
             </JoNote>
 
