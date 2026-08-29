@@ -56,7 +56,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   heroEyebrow: "CARICOM mobility support",
   heroHeadline: "Visit, work or study in another CARICOM country with a clear plan.",
   heroSubcopy:
-    "Expeditions With Jo helps CARICOM nationals understand the practical steps involved in visiting, working or studying in another CARICOM country. From planning and document guidance to travel and settling-in support, we help you take the next step with confidence.",
+    "Get country-specific guidance, document checklists, travel coordination, and practical support from your first question to your arrival.",
   paymentNote:
     "Secure payments via Fygaro and First Citizens Bank. Visa and Mastercard accepted.",
   footerBlurb:

@@ -1,6 +1,48 @@
+import Link from "next/link";
 import RotatingPhotoBg, { type HeroPhoto } from "@/components/RotatingPhotoBg";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export type { HeroPhoto };
+
+/**
+ * Home > current page. The `crumb` prop had been accepted by PageHeader and
+ * quietly dropped, so nothing rendered and search engines saw no trail.
+ *
+ * Renders the visible trail and the matching BreadcrumbList structured data
+ * together, from one source, so the two cannot drift apart.
+ */
+function Breadcrumbs({ crumb, onDark = false }: { crumb: string; onDark?: boolean }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: crumb },
+    ],
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <nav aria-label="Breadcrumb" className="mb-4">
+        <ol className={`flex flex-wrap items-center gap-2 text-sm ${onDark ? "text-white/75" : "text-slate-600"}`}>
+          <li>
+            <Link href="/" className={onDark ? "hover:text-white hover:underline" : "hover:text-brand hover:underline"}>
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true" className={onDark ? "text-white/45" : "text-slate-400"}>
+            /
+          </li>
+          <li>
+            <span className={onDark ? "font-medium text-white" : "font-medium text-slate-900"} aria-current="page">
+              {crumb}
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </>
+  );
+}
 
 // Shared button class strings, so links and buttons look identical everywhere.
 export const btn =
@@ -114,6 +156,7 @@ export function PageHeader({
         <Container className="relative mt-auto py-10 sm:py-12">
           <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
             <div>
+              <Breadcrumbs crumb={crumb} onDark />
               <h1 className="max-w-3xl text-2xl font-bold tracking-tight text-white sm:text-3xl">{title}</h1>
               {intro ? <p className="mt-3 max-w-2xl text-base text-white/85">{intro}</p> : null}
               {footnote ? <p className="mt-2 max-w-2xl text-sm text-white/65">{footnote}</p> : null}
@@ -138,6 +181,7 @@ export function PageHeader({
       <Container className="relative py-14 sm:py-16">
         <div className={image ? "flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between" : undefined}>
           <div>
+            <Breadcrumbs crumb={crumb} />
             {icon ? (
               <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-white text-brand shadow-md ring-1 ring-slate-200/80">
                 {icon}

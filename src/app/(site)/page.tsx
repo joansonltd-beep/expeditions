@@ -76,11 +76,14 @@ export default async function HomePage() {
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/90">{settings.heroSubcopy}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="#contact" className={btnPrimary}>
-                Book a Move Planning Consultation
+              <Link href="/find-my-pathway" className={btnPrimary}>
+                Find my pathway
               </Link>
-              <Link href="/services" className={`${btnGhost} bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur hover:bg-white/20 hover:text-white`}>
-                Explore Our Services
+              <Link
+                href="/services#consultation"
+                className={`${btnGhost} bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur hover:bg-white/20 hover:text-white`}
+              >
+                Book a Move Planning Consultation
               </Link>
               <a href={waHero} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
                 Chat with Jo on WhatsApp

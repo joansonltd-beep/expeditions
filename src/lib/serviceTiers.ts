@@ -15,6 +15,11 @@ export type ServiceTier = {
   cardText: string; // short version, home page card
   cardCta: string; // button label on the home page card
   intro: string; // longer version, /services
+  whoFor?: string[]; // who this tier suits
+  reviews?: string[]; // what we look at during it
+  youReceive?: string[]; // what the customer walks away with
+  duration?: string | null; // null renders the "to be confirmed" placeholder
+  price?: string | null; // null renders the "to be confirmed" placeholder
   includes: string[];
   notIncluded: string[];
   waMessage: string; // prefilled WhatsApp opener naming this tier
@@ -34,6 +39,31 @@ export const SERVICE_TIERS: ServiceTier[] = [
     cardCta: "Book a Consultation",
     intro:
       "The starting point, and the right choice if you are not yet sure which pathway applies to you. We go through your situation together and you come away knowing what your next step actually is.",
+    whoFor: [
+      "Anyone who knows they want to move but not where to start",
+      "People weighing up two or three destinations against each other",
+      "Anyone told to 'get a Skills Certificate' who is not sure it applies to them",
+      "People who have started, got stuck, and want someone to untangle it",
+    ],
+    reviews: [
+      "Your nationality and the passport you will travel on",
+      "Where you are now and where you want to go",
+      "Whether you are visiting, working, studying or moving for good",
+      "Your occupation or field of study, where it affects the pathway",
+      "Which documents you already hold and which you still need",
+      "The timeframe you are working to, and whether it is realistic",
+    ],
+    youReceive: [
+      "A clear answer on which pathway applies to your situation",
+      "A document checklist built around your circumstances, not a generic one",
+      "The order the steps have to happen in, and which ones gate the others",
+      "The offices, schools or employers you will be dealing with",
+      "An honest view of what is achievable in your timeframe",
+    ],
+    // Not published on the site until Joanson confirms them. Fill both in and
+    // they render in place of the "to be confirmed" note on /services.
+    duration: null,
+    price: null,
     includes: [
       "Reviewing your circumstances: nationality, destination, purpose and timeline",
       "Identifying which pathway applies to you, whether that is visiting, working or studying",
