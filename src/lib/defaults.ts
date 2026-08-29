@@ -646,7 +646,7 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "I have done this myself",
       paragraphs: [
-        "I am Grenadian. I moved to Trinidad in 2020 and went through their painstaking process, then moved again to Jamaica in 2025. So you would be dealing with someone who knows beyond theory what the process involves, and who knows how to avoid the pitfalls and the delays, especially the unnecessary administrative ones.",
+        "I am Grenadian. I moved to Trinidad in 2020 and went through their painstaking process, then moved again to Jamaica in 2025. Before deciding either time, I worked through what all twelve CSME countries require, so I was choosing where to go rather than guessing. So you would be dealing with someone who knows beyond theory what the process involves, and who knows how to avoid the pitfalls and the delays, especially the unnecessary administrative ones.",
         "To be clear about that last part: I cannot speed up or override anybody's process. What I can do is make sure the only waiting you do is the waiting that is built in, rather than extra weeks caused by something missing or wrong in your application.",
         "Travelling is the easy part. As a former travel agency owner I can handle that side for you without any fuss: airfare, ground transfers and accommodation. My services tend to be cheaper than other travel agencies. It was so frustrating going through the rest of it myself that I decided to start doing it for other people.",
         "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",
@@ -674,7 +674,7 @@ export const DEFAULT_ABOUT: AboutData = {
         "I explain the process. What your destination asks for, which office handles it, what order things go in, and where people usually come unstuck.",
         "I organise the parts that are mine to organise. Flights, somewhere to stay, transfers, appointments, and the checklist you work from.",
       ],
-      note: "Grenada, Trinidad and Tobago and Jamaica I know first hand, because I have moved between them. The rest of the twelve CSME states I know from the work: Antigua and Barbuda, Barbados, Belize, Dominica, Guyana, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, and Suriname. Where I do not know something, I will tell you that rather than guess.",
+      note: "Grenada, Trinidad and Tobago and Jamaica I know first hand, because I have moved between them. The other nine I researched properly when I was working out where to go: Antigua and Barbuda, Barbados, Belize, Dominica, Guyana, St. Kitts and Nevis, Saint Lucia, St. Vincent and the Grenadines, and Suriname. Where something has changed since and I am not certain, I will tell you that rather than guess.",
     },
     {
       heading: "What I do not decide",
