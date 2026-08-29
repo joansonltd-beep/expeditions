@@ -28,7 +28,7 @@ export default function DestinationPreview() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Where people go</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Country guides</h2>
             <p className="mt-3 text-lg text-cream/70">
-              What it costs to live there, what to expect when you land, and how the paperwork works.
+              What it costs to live there, and what to expect once you land.
             </p>
           </div>
           <Link href="/destinations" className="font-semibold text-cream underline-offset-4 hover:underline">

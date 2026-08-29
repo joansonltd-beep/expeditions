@@ -26,7 +26,7 @@ export default function GuideCta({ className = "" }: { className?: string }) {
         </Link>
       </div>
       <p className="mt-4 text-sm text-slate-600">
-        You get a document list built around your situation, a realistic timeline, and what to do first.
+        You get a document list built around your situation, and an honest view of how long it will take.
       </p>
     </div>
   );

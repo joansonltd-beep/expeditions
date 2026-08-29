@@ -33,7 +33,7 @@ export default function SurveyPage() {
       <PageHeader
         title="Cost of Living"
         crumb="Reports"
-        intro="Real numbers on salaries, rent and utilities from people actually living and working across CARICOM. Crowdsourced, fully anonymous, and used only in aggregate."
+        intro="Real numbers from people actually living and working across CARICOM. Nothing is linked back to you, and it is only ever used in aggregate."
         footnote="One survey, three parts. Answer whichever you can, skip the rest."
         photos={[
           {

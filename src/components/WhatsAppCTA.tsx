@@ -16,7 +16,7 @@ import { track } from "@/lib/analytics";
  */
 export default function WhatsAppCTA({
   title = "Tell Jo where you are starting",
-  text = "Send a message with where you are, where you want to go and roughly when. I will come back to you, usually within a business day.",
+  text = "Send a message with where you are and where you want to go. I will come back to you, usually within a business day.",
   message = "Hi Jo, I'm thinking about another CARICOM country. Can you help?",
   location = "footer-cta",
 }: {

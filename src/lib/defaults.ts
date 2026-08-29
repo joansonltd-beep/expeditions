@@ -646,8 +646,8 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "I have done this myself",
       paragraphs: [
-        "Grenada to Trinidad first, then Trinidad to Jamaica. Two moves, two sets of rules, two different offices telling me two different things. So when you ask me which office to go to, what papers they want, or whether this step has to happen before that one, you are asking someone who has already had to work it out the hard way.",
-        "The frustrating part was never the travel. It was that nobody hands you a list. You find out what was needed after you needed it, you make the same trip into town twice, and the answer you got last week is not the answer you get today. Going through that twice was enough to make me want to spare other people some of it.",
+        "Grenada to Trinidad first, then Trinidad to Jamaica. Different rules each time, and offices that did not always agree with each other. So when you ask me which office to go to, or whether this step has to happen before that one, you are asking someone who has already had to work it out the hard way.",
+        "The travel was the easy bit. It was the paperwork around it that took the time, and it was so frustrating going through it that I decided to start doing it for other people.",
         "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",
       ],
     },

@@ -44,8 +44,8 @@ export default function JoIntroduction() {
                 had to work it out for himself.
               </p>
               <p>
-                Nobody hands you a list. You find out what was needed after you needed it, and you make the trip twice.
-                It was frustrating enough going through it that I started doing it for other people.
+                I did it twice, and it was so frustrating going through it that I decided to start doing it for other
+                people.
               </p>
               <p className="text-base text-navy/65">
                 I ran a travel agency too, so flights, hotels and transfers were never the difficult part. The difficult

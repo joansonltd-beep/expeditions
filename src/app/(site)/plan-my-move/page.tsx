@@ -26,22 +26,22 @@ const STAGES: { icon: IconName; title: string; text: string }[] = [
   {
     icon: "globe",
     title: "Decide where to go",
-    text: "Weigh up the countries against cost of living, work, study options and what you actually want from the move.",
+    text: "Weigh the countries against cost of living and what you actually want out of the move.",
   },
   {
     icon: "compass",
     title: "Understand your requirements",
-    text: "Work out what your nationality, destination and purpose call for, and which of them apply to you.",
+    text: "Work out what your passport and your destination actually call for.",
   },
   {
     icon: "passport",
     title: "Prepare CSME or other documents",
-    text: "Guidance on the documents your pathway needs, in what order, and a review before anything is submitted.",
+    text: "The documents your route needs, in the right order, checked before anything goes in.",
   },
   {
     icon: "banknote",
     title: "Plan banking, business or housing needs",
-    text: "Which bank to approach and what to bring, business registration where it applies, and where to look for somewhere to live.",
+    text: "Which bank to approach and what they will want to see. Business registration if that is your route.",
   },
   {
     icon: "plane",
@@ -51,7 +51,7 @@ const STAGES: { icon: IconName; title: string; text: string }[] = [
   {
     icon: "home",
     title: "Arrive and begin settling in",
-    text: "An arrival checklist, the practical first steps on the ground, and someone to call when something comes up.",
+    text: "A checklist for the first weeks, and someone to call when something comes up.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function PlanMyMovePage() {
         icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
         title="Plan My Move"
         crumb="Plan My Move"
-        intro="Get a personalised document plan, estimated timeline and practical next steps for your destination."
+        intro="Tell me where you are starting and where you want to go, and I will tell you what your situation actually needs."
         footnote="This is an initial enquiry rather than a finished plan, and there is no charge for asking."
       />
 
@@ -70,7 +70,7 @@ export default function PlanMyMovePage() {
       <Section>
         <SectionHead
           eyebrow="The journey"
-          title="One move. One plan. One point of contact."
+          title="From the first question to the day you land"
           intro="Most people arrive somewhere in the middle of this. Tell us where you are and we will pick it up from there."
         />
         <ol className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">

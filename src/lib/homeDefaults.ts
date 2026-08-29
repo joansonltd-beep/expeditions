@@ -70,7 +70,7 @@ export const DEFAULT_HOME: HomeContent = {
   journeysEyebrow: "Start here",
   journeysTitle: "Why are you going?",
   journeysIntro:
-    "Visiting, working and studying are three different processes with three different sets of rules. Pick the one that fits you.",
+    "Visiting, working and studying each follow a different process, with different rules. Pick the one that fits you.",
   journeys: [
     {
       title: "I want to visit",
@@ -107,11 +107,11 @@ export const DEFAULT_HOME: HomeContent = {
   steps: [
     {
       title: "You tell me the plan",
-      text: "Where you are, where you want to go, and why. That is usually enough to start.",
+      text: "Where you are, where you want to go, and why. Usually enough to start.",
     },
     {
       title: "I tell you what applies",
-      text: "Which route fits your situation, which office handles it, and what they will ask you for.",
+      text: "Which route fits your situation, and what the office handling it will ask you for.",
     },
     {
       title: "We get it organised",
@@ -162,14 +162,14 @@ export const DEFAULT_HOME: HomeContent = {
     {
       icon: "🧭",
       title: "CARICOM Move Basics",
-      text: "Understand the main steps, common requirements and key considerations before planning a move. For a plan built around your destination and circumstances, get personalised support.",
+      text: "The general picture of how a move works, free to read. For what your own situation needs, ask me.",
       href: "/guides",
       cta: "Explore Move Basics",
     },
     {
       icon: "🗺️",
       title: "Country Guides",
-      text: "What it costs to live there, what there is to see, and what to expect when you land.",
+      text: "What it costs to live there, and what to expect once you land.",
       href: "/destinations",
     },
   ],
