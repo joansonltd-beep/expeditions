@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
         destination: "/caricom-skills-certificate",
         permanent: true,
       },
+      // The three cost-of-living surveys became one form on /survey. These
+      // paths were indexed and linked, so they redirect rather than 404.
+      { source: "/survey/salary", destination: "/survey", permanent: true },
+      { source: "/survey/rent", destination: "/survey", permanent: true },
+      { source: "/survey/utilities", destination: "/survey", permanent: true },
     ];
   },
 };
