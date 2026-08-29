@@ -123,7 +123,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
   ],
   howNote:
-    "I prepare and organise. Approving a certificate, a visa, a course place, a job, an account or a tenancy is not mine to do, and I will never tell you otherwise.",
+    "I help you get your documents in order, put the application together, and once something is approved, carry it out. What I cannot do is approve it. A CSME certificate, a travel visa, a place at a school, a bank account, a tenancy: each one is somebody else's decision, and nobody outside those offices can promise you an answer.",
 
   csmeEyebrow: "Working in another CARICOM country",
   csmeTitle: "The Skills Certificate, country by country",
