@@ -51,7 +51,8 @@ export default function JoIntroduction() {
               </p>
               <p>
                 Travelling is the easy part. As a former travel agency owner I can handle that side for you without any
-                fuss: airfare, ground transfers and accommodation.
+                fuss: airfare, ground transfers and accommodation. My services tend to be cheaper than other travel
+                agencies.
               </p>
             </div>
 
