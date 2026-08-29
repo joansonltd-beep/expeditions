@@ -39,6 +39,14 @@ export default async function HomePage() {
       {/* 1. The person, before the service */}
       <JoIntroduction />
 
+      {/* 2. Trust before the visitor is asked to sort themselves. Moved above
+             segmentation: someone decides whether to trust you before they
+             decide which box they are in. */}
+      <TrustBoundaries />
+
+      {/* 3. Somewhere to look while still exploring, before any commitment */}
+      <DestinationPreview />
+
       {/* 2. The three routes, as an editorial list rather than three cards */}
       <PathwaySelector
         eyebrow={home.journeysEyebrow}
@@ -81,12 +89,6 @@ export default async function HomePage() {
 
       {/* 5. A real situation, or a marker for where one goes */}
       <CaseExample />
-
-      {/* 5. Where our part stops. Stated once on this page, not repeated. */}
-      <TrustBoundaries />
-
-      {/* 6. Where people go */}
-      <DestinationPreview />
 
       {/* 7. The guides, laid out like an article page */}
       <EditorialGuideFeature articles={articles} />
