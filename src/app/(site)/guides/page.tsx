@@ -9,14 +9,13 @@ import GuideCta from "@/components/GuideCta";
 export const metadata: Metadata = {
   title: "CARICOM Move Basics: Free Guides",
   description:
-    "Free, general guides for CARICOM nationals visiting, working or studying in another CARICOM country: how the CSME Skills Certificate works, plus travel guides like Canadian visas from Trinidad and booking flights.",
+    "Free, general guides for CARICOM nationals visiting, working or studying in another CARICOM country: how the CSME Skills Certificate works, what full free movement changed, and how permanent residence works in Belize and Jamaica.",
   keywords: [
     "CARICOM guides",
     "how to work in another Caribbean country",
     "jobs in the Caribbean",
     "CSME Skills Certificate guide",
     "Caribbean travel guides",
-    "Canadian visa from Trinidad",
   ],
   alternates: { canonical: "/guides" },
 };

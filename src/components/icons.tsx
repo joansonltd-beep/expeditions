@@ -228,8 +228,6 @@ export function serviceIcon(slug: string): IconName {
       return "car";
     case "cruises":
       return "ship";
-    case "travel-visas":
-      return "passport";
     case "insurance":
       return "shield";
     case "finance":
@@ -253,7 +251,6 @@ export function pillarIcon(href: string): IconName {
   if (href.includes("business-setup")) return "building";
   if (href.includes("insurance")) return "shield";
   if (href.includes("finance")) return "banknote";
-  if (href.includes("visa")) return "passport";
   if (href.includes("guides")) return "compass";
   if (href.includes("study")) return "graduationCap";
   return "compass";

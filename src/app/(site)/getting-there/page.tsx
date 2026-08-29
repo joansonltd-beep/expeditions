@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import PricingBlock from "@/components/PricingBlock";
+import { VISIT_PRICING } from "@/lib/journeyPricing";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -12,7 +14,6 @@ export const metadata: Metadata = {
     "visit another CARICOM country",
     "travel within CARICOM",
     "flights to the Caribbean",
-    "Caribbean travel visas",
     "airport transfers Trinidad",
     "Caribbean accommodations",
     "trip to Trinidad",
@@ -38,12 +39,6 @@ const ITEMS = [
     icon: "car" as const,
     title: "Transfers",
     text: "Reliable rides from the airport and for getting around while you're visiting.",
-  },
-  {
-    href: "/travel-visas",
-    icon: "passport" as const,
-    title: "Travel Visas",
-    text: "Free, step-by-step support for CARICOM citizens applying for a Canadian visa, plus where to go for a US visa.",
   },
 ];
 
@@ -207,6 +202,8 @@ export default function GettingTherePage() {
           </ol>
         </div>
       </Section>
+
+      <PricingBlock pricing={VISIT_PRICING} />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about visiting" />

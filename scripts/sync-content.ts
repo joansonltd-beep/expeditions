@@ -125,10 +125,21 @@ async function run() {
 
   // Services whose visible copy changed in code and needs pushing. Everything
   // not listed here keeps whatever is in Studio, so unrelated edits survive.
-  const COPY_SLUGS = ["travel-visas", "finance"];
+  const COPY_SLUGS = ["finance"];
   const copyServices = DEFAULT_SERVICES.filter((s) => COPY_SLUGS.includes(s.slug));
   console.log(`\nservices — set copy (shortBlurb, cardFeatures, intro, body) on ${copyServices.length}:`);
   for (const s of copyServices) console.log(`  service-${s.slug}`);
+
+  // Services removed from the code. Sanity overrides code, so deleting the
+  // entry in defaults.ts is not enough on its own: the document has to go too,
+  // or the card keeps rendering.
+  const RETIRED_SERVICE_SLUGS = ["travel-visas"];
+  const retired = await client.fetch<{ _id: string; title: string }[]>(
+    `*[_type == "service" && slug.current in $slugs]{_id, title}`,
+    { slugs: RETIRED_SERVICE_SLUGS }
+  );
+  console.log(`\nservices — delete ${retired.length} retired document(s):`);
+  for (const s of retired) console.log(`  ${s._id} (${s.title})`);
 
   const placeholders = await client.fetch<{ _id: string; person: string }[]>(
     `*[_type == "testimonial" && person match "Sample*"]{_id, person}`
@@ -177,6 +188,7 @@ async function run() {
     );
   }
 
+  for (const s of retired) tx.delete(s._id);
   for (const t of placeholders) tx.delete(t._id);
 
   await tx.commit();

@@ -24,7 +24,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // "/transfers" is deliberately absent: next.config.ts redirects it straight
     // to the Welcome Pickups booking site, and a redirecting URL should not be
     // advertised in a sitemap.
-    "/travel-visas",
     "/insurance",
     "/survey",
     "/about",

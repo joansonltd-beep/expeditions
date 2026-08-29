@@ -28,7 +28,6 @@ const companyLinks: FooterLink[] = [
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodation" },
   { href: "/transfers", label: "Transfers" },
-  { href: "/travel-visas", label: "Travel Visas" },
   { href: "/finance", label: "Banking" },
   { href: "/business-setup", label: "Business Setup" },
   { href: "/insurance", label: "Insurance" },
@@ -86,7 +85,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       "Business registration in Trinidad and Tobago",
       "Bank account opening across CARICOM",
       "Flight, accommodation and airport transfer booking",
-      "Canadian visa applications from Trinidad",
     ],
     sameAs: [settings.facebookUrl, settings.instagramUrl].filter(Boolean),
   };

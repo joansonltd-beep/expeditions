@@ -124,7 +124,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Updates and someone to talk to as things progress",
     ],
     notIncluded: [
-      "Job placement or recruitment. We do not place people in jobs or guarantee employment.",
+      "A guarantee of employment. Job searching and applications are part of the work, but nobody can make an employer hire you.",
       "Immigration, admission, banking or tenancy decisions, all of which belong to the relevant authority or provider.",
       "Third-party costs such as flights, accommodation and government fees, which are separate from our service fee.",
     ],

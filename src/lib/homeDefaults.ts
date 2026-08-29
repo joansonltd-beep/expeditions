@@ -123,7 +123,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
   ],
   howNote:
-    "I help you get your documents in order, put the application together, and once something is approved, carry it out. What I cannot do is approve it. A CSME certificate, a travel visa, a place at a school, a bank account, a tenancy: each one is somebody else's decision, and nobody outside those offices can promise you an answer.",
+    "I help you get your documents in order, put the application together, and once something is approved, carry it out. What I cannot do is approve it. A CSME certificate, a student permit, a place at a school, a bank account, a tenancy: each one is somebody else's decision, and nobody outside those offices can promise you an answer.",
 
   csmeEyebrow: "Working in another CARICOM country",
   csmeTitle: "The Skills Certificate, country by country",
@@ -241,7 +241,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "What does it cost?",
-      a: "Depends what you need. Canadian visa guidance and help preparing a loan or card application carry no charge from me. Business registration is a paid service with prices on its page. For anything else, ask and I will tell you before you commit to anything.",
+      a: "Depends on the route. Visiting is free to plan. Working starts at $100 and studying at $150, both depending on how much is already sorted. Business registration has its own prices. Ask and I will tell you before you commit to anything.",
     },
     {
       q: "How do I send you documents?",
