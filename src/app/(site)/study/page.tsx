@@ -6,8 +6,7 @@ import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
 import SchoolSearch from "@/components/SchoolSearch";
 import { getSiteSettings } from "@/lib/siteData";
-import PricingBlock from "@/components/PricingBlock";
-import { STUDY_PRICING } from "@/lib/journeyPricing";
+import FreeConsultationBlock from "@/components/FreeConsultationBlock";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
 
 export const metadata: Metadata = {
@@ -366,8 +365,9 @@ export default async function StudyPage() {
         </div>
       </Section>
 
+      <FreeConsultationBlock text="Tell us the school and country you're considering, and we'll walk through what applies to you and what it involves. That first conversation costs nothing." />
+
       {/* FAQ */}
-      <PricingBlock pricing={STUDY_PRICING} />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about studying in CARICOM" />

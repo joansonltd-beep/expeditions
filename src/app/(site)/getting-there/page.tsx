@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
-import PricingBlock from "@/components/PricingBlock";
-import { VISIT_PRICING } from "@/lib/journeyPricing";
+import FreeConsultationBlock from "@/components/FreeConsultationBlock";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -203,7 +202,7 @@ export default function GettingTherePage() {
         </div>
       </Section>
 
-      <PricingBlock pricing={VISIT_PRICING} />
+      <FreeConsultationBlock text="Tell us where you're going and we'll walk through what your destination asks of visitors, and what a trip like this involves. That first conversation costs nothing." />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about visiting" />
@@ -228,7 +227,7 @@ export default function GettingTherePage() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-slate-900">Plan my visit</h2>
           <p className="mt-3 text-slate-600">
-            Tell us where you want to go and when, and we will come back with what it involves and what it costs.
+            Tell us where you want to go and when, and we will come back with what it involves.
           </p>
           <div className="mt-6">
             <CtaButtons message="Hi Jo, I'd like help visiting another CARICOM country." />

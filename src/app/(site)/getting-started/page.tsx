@@ -5,8 +5,7 @@ import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
 import JobOfferEnquiry from "@/components/JobOfferEnquiry";
-import PricingBlock from "@/components/PricingBlock";
-import { WORK_PRICING } from "@/lib/journeyPricing";
+import FreeConsultationBlock from "@/components/FreeConsultationBlock";
 import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
@@ -331,7 +330,7 @@ export default function GettingStartedPage() {
         </div>
       </Section>
 
-      <PricingBlock pricing={WORK_PRICING} />
+      <FreeConsultationBlock text="Tell us your qualification and where you want to work, and we'll walk through what applies to you and what it involves. That first conversation costs nothing." />
 
       <Section>
         <SectionHead eyebrow="FAQ" title="Common questions about working in CARICOM" />
