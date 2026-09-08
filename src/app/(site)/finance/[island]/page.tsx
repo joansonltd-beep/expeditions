@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { CaribbeanGlobe } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
-import FinancePricing from "@/components/FinancePricing";
+import FinancePackages from "@/components/FinancePackages";
+import FreeConsultationBlock from "@/components/FreeConsultationBlock";
 import CtaButtons from "@/components/CtaButtons";
 import { getService, getPackages, getAddOns } from "@/lib/siteData";
 import { BANKING_ISLANDS, BANK_LABEL, BANK_DOCUMENTS, BANK_NONRESIDENT_DOCUMENTS } from "@/lib/bankingData";
@@ -228,10 +229,15 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             <SectionHead
               eyebrow="Packages"
               title="Business setup packages"
-              intro="Select your country to see pricing in your local currency. Each package is 50% upfront, with the balance on completion."
+              intro="Select your country to see what each package covers where you are. Book a free consultation and we will scope what you actually need."
             />
-            <FinancePricing packages={packages} addOns={addOns} />
+            <FinancePackages
+              packages={packages.map(({ name, features, featured }) => ({ name, features, featured }))}
+              addOns={addOns.map(({ title, trinidadOnly }) => ({ title, trinidadOnly }))}
+            />
           </Section>
+
+          <FreeConsultationBlock text="Tell us what your business needs and we'll work out which of these applies and what it involves. That first conversation costs nothing." />
         </>
       ) : null}
 

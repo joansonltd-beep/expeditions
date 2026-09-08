@@ -1,6 +1,7 @@
 import { defineType, defineField } from "sanity";
 
-// A pricing package, shown on the Banking page (business registration tiers).
+// A business registration tier, shown on the Banking page. The name and the
+// "what's included" list are published; the price is not.
 export const packageType = defineType({
   name: "package",
   title: "Package",
@@ -11,7 +12,7 @@ export const packageType = defineType({
       name: "priceUsd",
       title: "Price (USD)",
       type: "number",
-      description: "Base price in US dollars. Converted and displayed in TTD or XCD depending on the country the visitor selects.",
+      description: "NOT SHOWN ON THE SITE. The site publishes no prices and offers a free consultation instead. Kept so the figure is not lost if pricing is reinstated.",
       validation: (r) => r.required(),
     }),
     defineField({

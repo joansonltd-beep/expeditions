@@ -50,7 +50,7 @@ export default async function ServicesPage() {
         title="How much help do you want?"
         crumb="Services"
         intro="Some people only need to know what to check first. Others want the whole thing organised. Both are fine, and you can start small."
-        footnote="Not sure which one you need? Start with a consultation and I will tell you straight, including if the free guides are enough."
+        footnote="Not sure which one you need? Start with a free consultation and I will tell you straight, including if the free guides are enough."
       />
 
       {/* THE THREE TIERS */}
@@ -92,22 +92,14 @@ export default async function ServicesPage() {
               </>
             ) : null}
 
-            {/* Length and price render only once they are real. Until then this
-                says so plainly rather than showing an invented figure. */}
-            {tier.duration !== undefined || tier.price !== undefined ? (
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">How long it takes</p>
-                  <p className="mt-1 font-semibold text-slate-900">
-                    {tier.duration ?? "To be confirmed. Ask us and we will tell you."}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">Price</p>
-                  <p className="mt-1 font-semibold text-slate-900">
-                    {tier.price ?? "Request a quote. We confirm any fee in writing before you commit."}
-                  </p>
-                </div>
+            {/* Length renders only once it is real. Until then this says so
+                plainly rather than showing an invented figure. */}
+            {tier.duration !== undefined ? (
+              <div className="mt-8 rounded-xl border border-slate-200 bg-white px-5 py-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">How long it takes</p>
+                <p className="mt-1 font-semibold text-slate-900">
+                  {tier.duration ?? "To be confirmed. Ask us and we will tell you."}
+                </p>
               </div>
             ) : null}
 
@@ -191,12 +183,12 @@ export default async function ServicesPage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Not sure which one you need?</h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">
-            That is what the consultation is for. Tell me where you are and where you want to go, and I will tell you
-            which of these actually applies, or whether the guides are enough for now.
+            That is what the free consultation is for. Tell me where you are and where you want to go, and I will tell
+            you which of these actually applies, or whether the guides are enough for now.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link href="/plan-my-move" className={btnPrimary}>
-              Book a Move Planning Consultation
+              Book a free consultation
             </Link>
             <Link href="/guides" className={btnGhost}>
               Read the Free Guides

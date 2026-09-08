@@ -241,7 +241,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "What does it cost?",
-      a: "Depends on the route. Visiting is free to plan. Working starts at $100 and studying at $150, both depending on how much is already sorted. Business registration has its own prices. Ask and I will tell you before you commit to anything.",
+      a: "The first conversation costs nothing, whichever route you are on. Tell me what you are planning and I will go through what it involves, and what any of it would cost, before you commit to anything.",
     },
     {
       q: "How do I send you documents?",

@@ -51,7 +51,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     logo: `${SITE_URL}/icon.png`,
     telephone: `+${settings.whatsappNumber.replace(/\D/g, "")}`,
     email: settings.generalEmail,
-    priceRange: "$$",
     address: { "@type": "PostalAddress", addressCountry: "TT", addressRegion: "Trinidad and Tobago" },
     areaServed: [
       { "@type": "Place", name: "CARICOM" },

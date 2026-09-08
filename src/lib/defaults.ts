@@ -465,10 +465,13 @@ export const DEFAULT_SERVICES: Service[] = [
 ];
 
 // --- finance packages ---------------------------------------------------
-// Prices are set in USD and converted to TTD or XCD (rounded up to the
-// nearest 100) depending on the country the visitor selects. Trinidad-only
-// inclusions (LLC + BIR registration) are appended in the Professional card
-// at render time rather than stored here, since they never apply to Grenada.
+// Trinidad-only inclusions (LLC + BIR registration) are appended in the
+// Professional card at render time rather than stored here, since they never
+// apply to Grenada.
+//
+// priceUsd is NOT rendered. The site publishes no prices and offers a free
+// consultation instead; the figures stay here, and in the matching Sanity
+// field, so they are not lost if pricing is reinstated.
 export type Package = {
   name: string;
   priceUsd: number;
@@ -519,9 +522,9 @@ export const DEFAULT_PACKAGES: Package[] = [
 ];
 
 // --- finance add-ons ------------------------------------------------------
-// Either usdPrice (converted + rounded up to the nearest 100 in the visitor's
-// currency) or amountText (an existing figure shown as-is, just tagged with
-// TTD/XCD) is set, never both.
+// Only the title is rendered. usdPrice and amountText are retained, unread,
+// for the same reason as Package.priceUsd above: no price is published while
+// the offer is a free consultation.
 export type AddOn = {
   title: string;
   usdPrice?: number;

@@ -1,8 +1,7 @@
 import { defineType, defineField } from "sanity";
 
-// A la carte add-on shown below the Finance packages. Either give it a
-// usdPrice (converted + rounded up to the local currency) or an amountText
-// (an existing figure that is shown as-is, just tagged with TTD/XCD).
+// A la carte add-on listed below the Finance packages. Only the title is
+// published; the price fields are kept but not shown.
 export const addOn = defineType({
   name: "addOn",
   title: "Finance add-on",
@@ -13,13 +12,13 @@ export const addOn = defineType({
       name: "usdPrice",
       title: "Price to convert (USD)",
       type: "number",
-      description: "Use this for a clean USD figure that should be converted to TTD/XCD and rounded up to the nearest 100.",
+      description: "NOT SHOWN ON THE SITE. The site publishes no prices and offers a free consultation instead. Kept so the figure is not lost if pricing is reinstated.",
     }),
     defineField({
       name: "amountText",
       title: "Amount text (shown as-is)",
       type: "string",
-      description: 'Use this for a figure that should NOT be converted, e.g. "$200" or "1-10 $200, 11-100 $300, 101+ $300". The site appends TTD or XCD automatically.',
+      description: 'NOT SHOWN ON THE SITE, same as the field above. A figure written out as-is, e.g. "$200" or "1-10 $200, 11-100 $300, 101+ $300".',
     }),
     defineField({
       name: "trinidadOnly",

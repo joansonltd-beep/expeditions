@@ -1,17 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import type { Package, AddOn } from "@/lib/siteData";
 import { CheckList } from "@/components/ui";
 import CtaButtons from "@/components/CtaButtons";
-import {
-  type SetupCountry,
-  COUNTRY_LABELS,
-  formatUsdConverted,
-  formatLocal,
-  convertUsd,
-  currencyTag,
-} from "@/lib/currency";
+
+// Only the fields actually rendered. This is a client component, so whatever
+// it is handed is serialised into the page source: taking the full Package
+// and AddOn objects would publish priceUsd/amountText in the HTML even though
+// nothing draws them.
+export type PackageCard = { name: string; features: string[]; featured: boolean };
+export type AddOnItem = { title: string; trinidadOnly?: boolean };
+
+// Which country the business is based in changes what is actually done, not a
+// figure: Trinidad gets the LLC + BIR line, and some add-ons are Trinidad only.
+type SetupCountry = "tt" | "gd";
+
+const COUNTRY_LABELS: Record<SetupCountry, string> = {
+  tt: "Trinidad and Tobago",
+  gd: "Grenada",
+};
 
 const COUNTRIES: SetupCountry[] = ["tt", "gd"];
 
@@ -27,7 +34,7 @@ function registrationFeature(country: SetupCountry): string {
     : "Company registration guidance for your business structure (Limited Liability Company registration is only available in Trinidad and Tobago)";
 }
 
-export default function FinancePricing({ packages, addOns }: { packages: Package[]; addOns: AddOn[] }) {
+export default function FinancePackages({ packages, addOns }: { packages: PackageCard[]; addOns: AddOnItem[] }) {
   const [country, setCountry] = useState<SetupCountry>("tt");
 
   const visibleAddOns = addOns.filter((a) => !a.trinidadOnly || country === "tt");
@@ -51,8 +58,6 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
 
       <div className="grid gap-6 lg:grid-cols-3">
         {packages.map((p) => {
-          const total = convertUsd(p.priceUsd, country);
-          const half = total / 2;
           const features =
             p.name === "Professional"
               ? [p.features[0], registrationFeature(country), ...p.features.slice(1)]
@@ -64,20 +69,13 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
                 p.featured ? "border-brand shadow-md" : "border-slate-200"
               }`}
             >
-              {/* Price header (brand blue; solid for the featured tier) */}
               <div className={`relative p-7 ${p.featured ? "bg-brand text-white" : "bg-brand-soft"}`}>
                 {p.featured ? (
                   <span className="absolute right-6 top-6 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide ring-1 ring-inset ring-white/30">
                     Most popular
                   </span>
                 ) : null}
-                <h3 className={`text-lg font-semibold ${p.featured ? "text-white" : "text-slate-900"}`}>{p.name}</h3>
-                <div className={`mt-1 text-3xl font-extrabold ${p.featured ? "text-white" : "text-slate-900"}`}>
-                  {formatLocal(total, country)}
-                </div>
-                <p className={`mt-1 text-sm ${p.featured ? "text-white/80" : "text-slate-600"}`}>
-                  50% upfront ({formatLocal(half, country)}), balance on completion
-                </p>
+                <h3 className={`text-2xl font-bold ${p.featured ? "text-white" : "text-slate-900"}`}>{p.name}</h3>
               </div>
               <div className="flex flex-1 flex-col p-7">
                 <CheckList items={features} className="text-sm" />
@@ -94,14 +92,8 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
         <h3 className="text-lg font-semibold text-slate-900">Add-on services</h3>
         <ul className="mt-4 grid gap-3 text-sm text-slate-600">
           {visibleAddOns.map((a) => (
-            <li
-              key={a.title}
-              className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-slate-100 pb-3 last:border-0 last:pb-0"
-            >
-              <span>{a.title}</span>
-              <span className="shrink-0 font-medium text-slate-900">
-                {a.usdPrice != null ? formatUsdConverted(a.usdPrice, country) : `${a.amountText} ${currencyTag(country)}`}
-              </span>
+            <li key={a.title} className="border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+              {a.title}
             </li>
           ))}
         </ul>

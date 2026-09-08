@@ -5,9 +5,8 @@
 // not cover, and the line between guidance and a decision made by a government
 // office, should change through a reviewed edit rather than a quick CMS tweak.
 //
-// NO PRICES. None are published anywhere on the site, and none should be added
-// here without Joanson confirming the actual figures. Every CTA asks for a
-// conversation instead.
+// NO PRICES. The site publishes none anywhere: the offer is a free
+// consultation, and every CTA asks for that conversation instead.
 
 export type ServiceTier = {
   id: string; // anchor on /services
@@ -19,7 +18,6 @@ export type ServiceTier = {
   reviews?: string[]; // what we look at during it
   youReceive?: string[]; // what the customer walks away with
   duration?: string | null; // null renders the "to be confirmed" placeholder
-  price?: string | null; // null renders the "to be confirmed" placeholder
   includes: string[];
   notIncluded: string[];
   waMessage: string; // prefilled WhatsApp opener naming this tier
@@ -28,7 +26,7 @@ export type ServiceTier = {
 // Shared across every service section. Kept in one place so the wording cannot
 // drift between pages.
 export const SERVICE_DISCLAIMER =
-  "Requirements, processing times and fees are set by each country and change without much warning. Our fee is separate from any government or third-party fee. We prepare and organise; the authorities decide.";
+  "Requirements, processing times and fees are set by each country and change without much warning. Government and third-party fees are paid directly by you. We prepare and organise; the authorities decide.";
 
 export const SERVICE_TIERS: ServiceTier[] = [
   {
@@ -60,12 +58,9 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "The offices, schools or employers you will be dealing with",
       "An honest view of what is achievable in your timeframe",
     ],
-    // TODO(Joanson): real figures. Until then /services shows a "to be
-    // confirmed" note rather than an invented number. Fill both in and the
-    // placeholder is replaced automatically. Example: duration: "About 45
-    // minutes", price: "From $150 USD".
+    // TODO(Joanson): real length. Until then /services shows a "to be
+    // confirmed" note. Example: duration: "About 45 minutes".
     duration: null,
-    price: null,
     includes: [
       "Reviewing your circumstances: nationality, destination, purpose and timeline",
       "Identifying which pathway applies to you, whether that is visiting, working or studying",
@@ -102,9 +97,8 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Any guarantee of eligibility, processing time or outcome.",
       "The government's own application fee, which you pay directly to them.",
     ],
-    // TODO(Joanson): real figures for certificate assistance.
+    // TODO(Joanson): real length for certificate assistance.
     duration: null,
-    price: null,
     waMessage: "Hi Jo, I'd like help with a CSME Skills Certificate application.",
   },
   {
@@ -126,12 +120,11 @@ export const SERVICE_TIERS: ServiceTier[] = [
     notIncluded: [
       "A guarantee of employment. Job searching and applications are part of the work, but nobody can make an employer hire you.",
       "Immigration, admission, banking or tenancy decisions, all of which belong to the relevant authority or provider.",
-      "Third-party costs such as flights, accommodation and government fees, which are separate from our service fee.",
+      "Third-party costs such as flights, accommodation and government fees, which you pay directly.",
     ],
-    // TODO(Joanson): real figures. This one likely varies by scope, so a
-    // "from" price or a range is probably more honest than a flat fee.
+    // TODO(Joanson): real length. This one varies by scope, so a range is
+    // probably more honest than a single figure.
     duration: null,
-    price: null,
     waMessage: "Hi Jo, I'd like to talk about Complete Relocation Support.",
   },
 ];
