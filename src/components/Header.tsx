@@ -69,8 +69,8 @@ export default function Header({ businessName, logoUrl }: { businessName: string
     <header className="sticky top-0 z-40 border-b border-navy/10 bg-cream/95 backdrop-blur-md">
       <nav
         aria-label="Main"
-        className={`mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 transition-[height] duration-200 ${
-          scrolled ? "h-[60px]" : "h-[72px]"
+        className={`mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 transition-[min-height] duration-200 ${
+          scrolled ? "min-h-[60px]" : "min-h-[72px]"
         }`}
       >
         <Link
@@ -89,7 +89,10 @@ export default function Header({ businessName, logoUrl }: { businessName: string
                 className={`w-auto object-contain transition-[height] ${scrolled ? "h-7" : "h-8"}`}
                 priority
               />
-              <span className="hidden sm:inline">{businessName}</span>
+              <span className="hidden flex-col leading-tight sm:flex">
+                <span>{businessName}</span>
+                <span className="text-[0.68rem] font-medium tracking-normal text-navy/55">by Joanson B. James</span>
+              </span>
             </>
           )}
         </Link>
