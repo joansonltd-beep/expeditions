@@ -18,8 +18,7 @@ export type ServiceTier = {
   whoFor?: string[]; // who this tier suits
   reviews?: string[]; // what we look at during it
   youReceive?: string[]; // what the customer walks away with
-  duration?: string | null; // null renders the "to be confirmed" placeholder
-  price?: string | null; // null renders the "to be confirmed" placeholder
+  duration?: string | null; // null means the box is skipped
   includes: string[];
   notIncluded: string[];
   waMessage: string; // prefilled WhatsApp opener naming this tier
@@ -60,12 +59,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "The offices, schools or employers you will be dealing with",
       "An honest view of what is achievable in your timeframe",
     ],
-    // TODO(Joanson): real figures. Until then /services shows a "to be
-    // confirmed" note rather than an invented number. Fill both in and the
-    // placeholder is replaced automatically. Example: duration: "About 45
-    // minutes", price: "From $150 USD".
     duration: null,
-    price: null,
     includes: [
       "Reviewing your circumstances: nationality, destination, purpose and timeline",
       "Identifying which pathway applies to you, whether that is visiting, working or studying",
@@ -102,9 +96,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Any guarantee of eligibility, processing time or outcome.",
       "The government's own application fee, which you pay directly to them.",
     ],
-    // TODO(Joanson): real figures for certificate assistance.
     duration: null,
-    price: null,
     waMessage: "Hi Jo, I'd like help with a CSME Skills Certificate application.",
   },
   {
@@ -128,10 +120,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Immigration, admission, banking or tenancy decisions, all of which belong to the relevant authority or provider.",
       "Third-party costs such as flights, accommodation and government fees, which are separate from our service fee.",
     ],
-    // TODO(Joanson): real figures. This one likely varies by scope, so a
-    // "from" price or a range is probably more honest than a flat fee.
     duration: null,
-    price: null,
     waMessage: "Hi Jo, I'd like to talk about Complete Relocation Support.",
   },
 ];

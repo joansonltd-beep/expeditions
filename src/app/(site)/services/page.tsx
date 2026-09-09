@@ -92,22 +92,10 @@ export default async function ServicesPage() {
               </>
             ) : null}
 
-            {/* Length and price render only once they are real. Until then this
-                says so plainly rather than showing an invented figure. */}
-            {tier.duration !== undefined || tier.price !== undefined ? (
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">How long it takes</p>
-                  <p className="mt-1 font-semibold text-slate-900">
-                    {tier.duration ?? "To be confirmed. Ask us and we will tell you."}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-slate-200 bg-white px-5 py-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">Price</p>
-                  <p className="mt-1 font-semibold text-slate-900">
-                    {tier.price ?? "Request a quote. We confirm any fee in writing before you commit."}
-                  </p>
-                </div>
+            {tier.duration ? (
+              <div className="mt-8 rounded-xl border border-slate-200 bg-white px-5 py-4 sm:max-w-xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">How long it takes</p>
+                <p className="mt-1 font-semibold text-slate-900">{tier.duration}</p>
               </div>
             ) : null}
 

@@ -241,7 +241,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "What does it cost?",
-      a: "Depends on the route. Visiting is free to plan. Working starts at $100 and studying at $150, both depending on how much is already sorted. Business registration has its own prices. Ask and I will tell you before you commit to anything.",
+      a: "Nothing to start. Every consultation, whether you are visiting, working, studying or setting up a business, is free. We talk through your situation first, and you decide from there.",
     },
     {
       q: "How do I send you documents?",

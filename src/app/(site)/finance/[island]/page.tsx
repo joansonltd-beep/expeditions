@@ -228,7 +228,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             <SectionHead
               eyebrow="Packages"
               title="Business setup packages"
-              intro="Select your country to see pricing in your local currency. Each package is 50% upfront, with the balance on completion."
+              intro="Free consultation. Tell us which package fits and we will scope exactly what your setup needs."
             />
             <FinancePricing packages={packages} addOns={addOns} />
           </Section>
