@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { LANGUAGE_GROUPS, getLanguage, type Language } from "@/lib/languages";
+import { LANGUAGES, getLanguage } from "@/lib/languages";
 
 type Entry = {
   id: number;
@@ -10,12 +10,6 @@ type Entry = {
   source: string;
   output: string | null;
   status: "pending" | "done" | "failed";
-};
-
-const TIER_LABEL: Record<Language["tier"], string> = {
-  voice: "speaks and listens",
-  typed: "type it in, hear it spoken",
-  text: "written only",
 };
 
 function LanguageSelect({
@@ -30,7 +24,7 @@ function LanguageSelect({
   onChange: (code: string) => void;
 }) {
   return (
-    <div className="flex-1 min-w-[220px]">
+    <div className="flex-1 min-w-[200px]">
       <label htmlFor={id} className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/55">
         {label}
       </label>
@@ -40,23 +34,32 @@ function LanguageSelect({
         onChange={(e) => onChange(e.target.value)}
         className="w-full rounded-xl border border-navy/20 bg-white px-3 py-3 text-base font-semibold text-navy focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
       >
-        {LANGUAGE_GROUPS.map((g) => (
-          <optgroup key={g.group} label={g.group}>
-            {g.items.map((l) => (
-              <option key={l.code} value={l.code}>
-                {l.name} — {l.where} ({TIER_LABEL[l.tier]})
-              </option>
-            ))}
-          </optgroup>
+        {LANGUAGES.map((l) => (
+          <option key={l.code} value={l.code}>
+            {l.name} — {l.where}
+          </option>
         ))}
       </select>
     </div>
   );
 }
 
+// MyMemory's free translation API. No key or account needed for casual use
+// (a per-IP daily word cap applies); it's what powers the built-in-feeling
+// translation here since no browser or OS ships one on its own.
+async function translate(text: string, from: string, to: string): Promise<string> {
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${from}|${to}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("request failed");
+  const data = await res.json();
+  const out = data?.responseData?.translatedText;
+  if (!out || data.responseStatus >= 400) throw new Error("translation failed");
+  return out as string;
+}
+
 export default function Translator() {
   const [from, setFrom] = useState("en");
-  const [to, setTo] = useState("ht");
+  const [to, setTo] = useState("fr");
   const [typeMode, setTypeMode] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(true);
   const [listening, setListening] = useState(false);
@@ -81,18 +84,12 @@ export default function Translator() {
     }
   }, []);
 
-  const canSpeak = speechSupported && !!fromLang.rec && !typeMode;
+  const canSpeak = speechSupported && !typeMode;
 
-  const notices = useMemo(() => {
-    const m: string[] = [];
-    if (!speechSupported) m.push("This browser can't listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.");
-    else if (!fromLang.rec) m.push(`No browser recognises spoken ${fromLang.name} yet, so type it instead.`);
-    else if (fromLang.approx) m.push(`Speech recognition hears ${fromLang.name} through an ${fromLang.rec.startsWith("hi") ? "Hindi" : "English"} recogniser, so it will mangle some words. The translation step usually fixes them from context.`);
-    if (toLang.via) m.push(`There is no ${toLang.name} voice on any browser, so the translation is read aloud by ${toLang.via}. The written text is the accurate part.`);
-    if (!toLang.tts) m.push(`${toLang.name} has no browser voice, so translations appear as text only.`);
-    if (toLang.rough || fromLang.rough) m.push(`Translation into or out of ${toLang.rough ? toLang.name : fromLang.name} is a rough guide. Check anything important with a speaker.`);
-    return m;
-  }, [fromLang, toLang, speechSupported]);
+  const notice = useMemo(() => {
+    if (!speechSupported) return "This browser can't listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.";
+    return "";
+  }, [speechSupported]);
 
   function stopListening() {
     listeningRef.current = false;
@@ -108,7 +105,7 @@ export default function Translator() {
 
   function startListening() {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR || !fromLang.rec) return;
+    if (!SR) return;
     const recog = new SR();
     recog.lang = fromLang.rec;
     recog.continuous = true;
@@ -165,7 +162,7 @@ export default function Translator() {
 
   function speak(text: string, code: string) {
     const lang = getLanguage(code);
-    if (!lang?.tts || !window.speechSynthesis) return;
+    if (!lang || !window.speechSynthesis) return;
     const u = new SpeechSynthesisUtterance(text);
     u.lang = lang.tts;
     const base = lang.tts.split("-")[0];
@@ -184,16 +181,9 @@ export default function Translator() {
     setEntries((prev) => [...prev, { id, fromCode: srcCode, toCode: tgtCode, source: text, output: null, status: "pending" }]);
 
     try {
-      const res = await fetch("/api/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, from: srcCode, to: tgtCode }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.ok) throw new Error(data.error || "failed");
-      setEntries((prev) => prev.map((e) => (e.id === id ? { ...e, output: data.text, status: "done" } : e)));
-      const targetLang = getLanguage(tgtCode);
-      if (targetLang?.tts && autoSpeak) speak(data.text, tgtCode);
+      const out = await translate(text, srcCode, tgtCode);
+      setEntries((prev) => prev.map((e) => (e.id === id ? { ...e, output: out, status: "done" } : e)));
+      if (autoSpeak) speak(out, tgtCode);
     } catch {
       setEntries((prev) => prev.map((e) => (e.id === id ? { ...e, output: null, status: "failed" } : e)));
     }
@@ -225,10 +215,8 @@ export default function Translator() {
           <LanguageSelect id="to-lang" label="They hear" value={to} onChange={setTo} />
         </div>
 
-        {notices.length ? (
-          <div className="mt-4 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">
-            {notices.join(" ")}
-          </div>
+        {notice ? (
+          <div className="mt-4 rounded-xl border-l-4 border-accent bg-accent-soft px-4 py-3 text-sm text-slate-700">{notice}</div>
         ) : null}
       </div>
 
@@ -255,16 +243,13 @@ export default function Translator() {
                   ) : (
                     <>
                       <p className="mt-1.5 text-xl font-semibold text-navy">{e.output}</p>
-                      {tgt.rough ? <p className="mt-1 text-xs text-red-600">Rough rendering. Verify with a speaker before you rely on it.</p> : null}
-                      {tgt.tts ? (
-                        <button
-                          type="button"
-                          onClick={() => speak(e.output!, e.toCode)}
-                          className="mt-2 rounded-full border border-navy/20 px-3 py-1 text-xs font-semibold text-navy transition hover:border-brand hover:text-brand"
-                        >
-                          Play again
-                        </button>
-                      ) : null}
+                      <button
+                        type="button"
+                        onClick={() => speak(e.output!, e.toCode)}
+                        className="mt-2 rounded-full border border-navy/20 px-3 py-1 text-xs font-semibold text-navy transition hover:border-brand hover:text-brand"
+                      >
+                        Play again
+                      </button>
                     </>
                   )}
                 </article>

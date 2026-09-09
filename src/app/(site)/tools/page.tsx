@@ -6,8 +6,8 @@ import { Icon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Free CARICOM Tools: Currency Converter and Translator",
   description:
-    "Free tools for anyone visiting, working or studying in CARICOM: a currency converter for all twelve member states, plus USD, CAD and GBP, and a translator covering the region's creoles and indigenous languages.",
-  keywords: ["CARICOM currency converter", "Caribbean translator", "CARICOM tools", "Caribbean creole translator"],
+    "Free tools for anyone visiting, working or studying in CARICOM: a currency converter for all twelve member states, plus USD, CAD and GBP, and a translator covering the region's official languages.",
+  keywords: ["CARICOM currency converter", "Caribbean translator", "CARICOM tools"],
   alternates: { canonical: "/tools" },
 };
 
@@ -22,7 +22,7 @@ const TOOLS = [
     href: "/tools/translator",
     icon: "globe" as const,
     title: "Translator",
-    text: "Speak or type in one Caribbean language and get it back in another, including creoles and indigenous languages most translators skip.",
+    text: "Speak or type in one of the region's official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
   },
 ];
 
