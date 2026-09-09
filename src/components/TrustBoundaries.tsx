@@ -17,13 +17,13 @@ export default function TrustBoundaries() {
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Being straight with you</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              What I do, and what I don&rsquo;t decide
+              What I can do, and what I cannot do
             </h2>
           </div>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2 sm:gap-14">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-brand">I help you</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-brand">What I can do</h3>
               <ul className="mt-4">
                 {WE_DO.map((item) => (
                   <li key={item} className="border-t border-navy/12 py-3 text-navy/80 last:border-b">
@@ -33,7 +33,7 @@ export default function TrustBoundaries() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Others decide</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-accent">What I cannot do</h3>
               <ul className="mt-4">
                 {THEY_DECIDE.map((item) => (
                   <li key={item} className="border-t border-navy/12 py-3 text-navy/80 last:border-b">
