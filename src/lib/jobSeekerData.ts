@@ -1,4 +1,4 @@
-// Reference data for the Job Seekers enquiry form on the Go Work page.
+// Reference data for the Job Seekers enquiry form on the Work page.
 
 export const EDUCATION_OPTIONS = [
   "Primary school",
@@ -12,7 +12,7 @@ export const EDUCATION_OPTIONS = [
   "Other professional certification",
 ] as const;
 
-// Pulled from real degree programs listed on the Go Study page, so the field
+// Pulled from real degree programs listed on the Study page, so the field
 // list overlaps with what CARICOM nationals are actually studying, not just
 // generic job-board categories.
 export const PROFESSION_OPTIONS = [

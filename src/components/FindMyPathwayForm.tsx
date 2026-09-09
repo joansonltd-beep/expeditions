@@ -35,15 +35,15 @@ const OCCUPATION_LABEL: Record<Purpose, string | null> = {
 // Where to send someone next, by purpose. Every href is a real page.
 const NEXT_GUIDES: Record<Purpose, { label: string; href: string }[]> = {
   Visit: [
-    { label: "Go Visit: visiting another CARICOM country", href: "/getting-there" },
+    { label: "Visiting another CARICOM country", href: "/getting-there" },
     { label: "Country guides", href: "/destinations" },
   ],
   Work: [
     { label: "CARICOM Skills Certificate guide", href: "/caricom-skills-certificate" },
-    { label: "Go Work: working in another CARICOM country", href: "/getting-started" },
+    { label: "Working in another CARICOM country", href: "/getting-started" },
   ],
   Study: [
-    { label: "Go Study: studying in another CARICOM country", href: "/study" },
+    { label: "Studying in another CARICOM country", href: "/study" },
     { label: "Country guides", href: "/destinations" },
   ],
   Relocate: [

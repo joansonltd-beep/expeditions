@@ -10,7 +10,7 @@ import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
 
 export const metadata: Metadata = {
-  title: "Go Study: Studying Within CARICOM",
+  title: "Studying Within CARICOM",
   description:
     "Thinking about studying in another CARICOM country, including a University of the West Indies campus outside your own? Here's what actually applies, since CSME and free movement don't cover students.",
   keywords: [
@@ -145,8 +145,8 @@ export default async function StudyPage() {
 
       <PageHeader
         icon={<Icon name="graduationCap" className="h-7 w-7 text-brand" />}
-        title="Go Study"
-        crumb="Go Study"
+        title="Study"
+        crumb="Study"
         intro="Thinking about studying somewhere else in CARICOM? Here's what actually applies, and where we can still help."
         photos={SCHOOL_PHOTOS}
       />

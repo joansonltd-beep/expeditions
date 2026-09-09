@@ -84,7 +84,7 @@ const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Go Work: Working in Another CARICOM Country",
+  title: "Working in Another CARICOM Country",
   description:
     "What it takes to work in another CARICOM country: the CARICOM Skills Certificate pathway, the documents each country asks for, business setup for the self-employed, banking, and the travel around it.",
   keywords: [
@@ -203,8 +203,8 @@ export default function GettingStartedPage() {
 
       <PageHeader
         icon={<Icon name="compass" className="h-7 w-7 text-brand" />}
-        title="Go Work"
-        crumb="Go Work"
+        title="Work"
+        crumb="Work"
         intro="Working in another CARICOM country starts with the CARICOM Skills Certificate, or with business registration if you are setting up for yourself. Here is what each route involves and where we can help."
         footnote="Free movement of skills covers work. Visiting and studying are separate processes with their own requirements."
         photos={BUSINESS_CENTER_PHOTOS}

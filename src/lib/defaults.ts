@@ -186,7 +186,7 @@ export const DEFAULT_SERVICES: Service[] = [
       related: [
         { label: "Accommodation", href: "/accommodations" },
         { label: "Airport transfers", href: "/transfers" },
-        { label: "Go Visit", href: "/getting-there" },
+        { label: "Visit", href: "/getting-there" },
       ],
     },
   },

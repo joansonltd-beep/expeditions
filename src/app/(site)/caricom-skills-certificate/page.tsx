@@ -245,7 +245,7 @@ export default function CsmePage() {
           </p>
           <p className="mt-3 text-sm text-slate-600">
             <Link href="/getting-started" className="font-semibold text-brand hover:underline">
-              See the whole Go Work pathway →
+              See the whole Work pathway →
             </Link>
           </p>
         </div>

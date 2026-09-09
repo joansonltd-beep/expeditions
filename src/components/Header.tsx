@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSiteClient } from "@/components/SiteSettingsProvider";
-import { track } from "@/lib/analytics";
 
 // Header height in px at rest. The announcement strip above it is separate and
 // is not sticky, so it scrolls away while the header itself stays.
@@ -13,9 +11,9 @@ export const HEADER_HEIGHT = 72;
 
 type NavItem = { href: string; label: string; title?: string };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title: "Travel within CARICOM" };
-const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
-const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Visit", title: "Travel within CARICOM" };
+const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Work", title: "Relocating within CARICOM" };
+const STUDY: NavItem = { href: "/study", label: "Study", title: "Studying within CARICOM" };
 const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
 const TOOLS: NavItem = { href: "/tools", label: "Tools" };
 
@@ -34,13 +32,8 @@ const MOBILE_LINKS: NavItem[] = Array.from(
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { whatsappNumber } = useSiteClient();
   const pathname = usePathname();
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
-
-  const waHeader = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(
-    "Hi Jo, I have a question about moving within CARICOM."
-  )}`;
 
   // Only used to tighten the header slightly once you start scrolling. The
   // header is always solid now, so nothing depends on this for legibility.
@@ -109,22 +102,6 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href="tel:+18687236644"
-            onClick={() => track("phone_click", { location: "header" })}
-            className="hidden text-sm font-medium text-navy/70 transition hover:text-brand md:inline"
-          >
-            868-723-6644
-          </a>
-          <a
-            href={waHeader}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => track("whatsapp_click", { location: "header" })}
-            className="hidden rounded-full bg-[#ce1126] px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ce1126] focus-visible:ring-offset-2 sm:inline-flex"
-          >
-            WhatsApp Jo
-          </a>
           <button
             className="flex h-11 w-11 items-center justify-center text-navy lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -158,25 +135,6 @@ export default function Header({ businessName, logoUrl }: { businessName: string
                 {l.title ? <span className="ml-1.5 text-sm font-normal text-navy/50">({l.title})</span> : null}
               </Link>
             ))}
-          </div>
-
-          <div className="mt-4 flex flex-col gap-2.5 border-t border-navy/10 pt-4">
-            <a
-              href={waHeader}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track("whatsapp_click", { location: "header-mobile" })}
-              className="inline-flex items-center justify-center rounded-full bg-[#ce1126] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95"
-            >
-              WhatsApp Jo
-            </a>
-            <a
-              href="tel:+18687236644"
-              onClick={() => track("phone_click", { location: "header-mobile" })}
-              className="text-center text-sm font-medium text-navy/70 hover:text-brand"
-            >
-              Call 868-723-6644
-            </a>
           </div>
         </div>
       ) : null}

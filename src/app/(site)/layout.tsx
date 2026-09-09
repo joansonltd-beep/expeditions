@@ -11,12 +11,11 @@ import { SITE_URL } from "@/lib/siteUrl";
 type FooterLink = { href: string; label: string; title?: string };
 
 // The three journeys the site is built around, plus the reference pages that
-// support them. The header is a fixed sentence and never changes, so the footer
-// is where everything else stays reachable.
+// support them.
 const journeyLinks: FooterLink[] = [
-  { href: "/getting-there", label: "Go Visit", title: "Visiting another CARICOM country" },
-  { href: "/getting-started", label: "Go Work", title: "Working in another CARICOM country" },
-  { href: "/study", label: "Go Study", title: "Studying in another CARICOM country" },
+  { href: "/getting-there", label: "Visit", title: "Visiting another CARICOM country" },
+  { href: "/getting-started", label: "Work", title: "Working in another CARICOM country" },
+  { href: "/study", label: "Study", title: "Studying in another CARICOM country" },
   { href: "/caricom-skills-certificate", label: "CARICOM Skills Certificate" },
   { href: "/destinations", label: "Country Guides" },
   { href: "/guides", label: "CARICOM Move Basics", title: "Free guides" },

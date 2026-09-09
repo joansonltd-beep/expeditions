@@ -6,7 +6,7 @@ import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
-  title: "Go Visit: Visiting Another CARICOM Country",
+  title: "Visiting Another CARICOM Country",
   description:
     "Planning a visit to another CARICOM country? We help you understand the travel requirements, arrange flights, accommodation and transfers, and prepare for arrival.",
   keywords: [
@@ -83,7 +83,7 @@ const FAQS = [
   },
   {
     q: "Can I look for work while visiting?",
-    a: "Entering as a visitor does not give you the right to take up employment. If work is the goal, start with the Go Work pathway and the Skills Certificate rather than travelling first and sorting it out later.",
+    a: "Entering as a visitor does not give you the right to take up employment. If work is the goal, start with the Work pathway and the Skills Certificate rather than travelling first and sorting it out later.",
   },
   {
     q: "Do you book trips outside CARICOM?",
@@ -112,8 +112,8 @@ export default function GettingTherePage() {
 
       <PageHeader
         icon={<Icon name="plane" className="h-7 w-7 text-brand" />}
-        title="Go Visit"
-        crumb="Go Visit"
+        title="Visit"
+        crumb="Visit"
         intro="Planning a trip to another CARICOM country? We help you understand what your destination asks of visitors, arrange the flights, stay and transfers, and get you ready for arrival."
         footnote="Visiting, working and studying are three different processes with three different sets of requirements. This page covers visiting."
         photos={[
@@ -236,11 +236,11 @@ export default function GettingTherePage() {
             Entry to any country is decided by its immigration authority at the border. A booking is not permission to
             enter. Thinking about working or studying instead?{" "}
             <Link href="/getting-started" className="font-semibold text-brand hover:underline">
-              Go Work
+              Work
             </Link>{" "}
             and{" "}
             <Link href="/study" className="font-semibold text-brand hover:underline">
-              Go Study
+              Study
             </Link>{" "}
             cover those.
           </p>
