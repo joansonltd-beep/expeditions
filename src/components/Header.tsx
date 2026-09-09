@@ -11,23 +11,13 @@ import { track } from "@/lib/analytics";
 // is not sticky, so it scrolls away while the header itself stays.
 export const HEADER_HEIGHT = 72;
 
-type NavItem = { href: string; label: string; title?: string; static?: boolean };
+type NavItem = { href: string; label: string; title?: string };
 
-const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit,", title: "Travel within CARICOM" };
+const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Go Visit", title: "Travel within CARICOM" };
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Go Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Go Study", title: "Studying within CARICOM" };
-
-// Relabeled "CARICOM" so the whole row reads as one sentence:
-// "Let's Go Visit,  Go Work  or  Go Study  In  a  CARICOM  Country!".
-const DESTINATIONS: NavItem = { href: "/destinations", label: "CARICOM" };
-
-// Plain, unclickable words sitting in the nav so it reads as a sentence.
-// Not links — just there.
-const LETS: NavItem = { href: "#lets", label: "Let's", static: true };
-const OR: NavItem = { href: "#or", label: "or", static: true };
-const IN: NavItem = { href: "#in", label: "In", static: true };
-const A: NavItem = { href: "#a", label: "a", static: true };
-const COUNTRY: NavItem = { href: "#country", label: "Country!", static: true };
+const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
+const TOOLS: NavItem = { href: "/tools", label: "Tools" };
 
 // "Reports" is no longer its own nav link: it lives under the CARICOM
 // (destinations) page instead, but /survey itself is still a normal,
@@ -37,18 +27,9 @@ const AFTER: NavItem[] = [{ href: "/about", label: "About Us" }];
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
   new Map(
-    [LETS, COME_SEE_ME, COME_LIVE_WITH_ME, OR, STUDY, IN, A, DESTINATIONS, COUNTRY, ...AFTER].map((l) => [l.href, l])
+    [COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, DESTINATIONS, TOOLS, ...AFTER].map((l) => [l.href, l])
   ).values()
 );
-
-// One of the plain, unclickable sentence words (LETS, OR, IN, A, COUNTRY).
-function StaticWord({ item }: { item: NavItem }) {
-  return (
-    <span aria-hidden="true" className="select-none text-sm font-medium text-navy/45">
-      {item.label}
-    </span>
-  );
-}
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
   const [open, setOpen] = useState(false);
@@ -113,26 +94,9 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           )}
         </Link>
 
-        {/* desktop nav: the sentence, unchanged in wording and order */}
+        {/* desktop nav */}
         <div className="hidden items-center gap-6 lg:flex">
-          <StaticWord item={LETS} />
-          <Link href={COME_SEE_ME.href} title={COME_SEE_ME.title} className={linkClass(COME_SEE_ME.href)}>
-            {COME_SEE_ME.label}
-          </Link>
-          <Link href={COME_LIVE_WITH_ME.href} title={COME_LIVE_WITH_ME.title} className={linkClass(COME_LIVE_WITH_ME.href)}>
-            {COME_LIVE_WITH_ME.label}
-          </Link>
-          <StaticWord item={OR} />
-          <Link href={STUDY.href} title={STUDY.title} className={linkClass(STUDY.href)}>
-            {STUDY.label}
-          </Link>
-          <StaticWord item={IN} />
-          <StaticWord item={A} />
-          <Link href={DESTINATIONS.href} className={linkClass(DESTINATIONS.href)}>
-            {DESTINATIONS.label}
-          </Link>
-          <StaticWord item={COUNTRY} />
-          {AFTER.map((l) => (
+          {[COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, DESTINATIONS, TOOLS, ...AFTER].map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
             </Link>
@@ -172,29 +136,23 @@ export default function Header({ businessName, logoUrl }: { businessName: string
         </div>
       </nav>
 
-      {/* mobile menu: same sentence, same order, same wording */}
+      {/* mobile menu */}
       {open ? (
         <div id="mobile-menu" className="border-t border-navy/10 bg-cream px-5 pb-5 pt-3 lg:hidden">
           <div className="flex flex-col">
-            {MOBILE_LINKS.map((l) =>
-              l.static ? (
-                <span key={l.href} aria-hidden="true" className="select-none px-2 py-2 text-sm font-medium text-navy/45">
-                  {l.label}
-                </span>
-              ) : (
-                <Link
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className={`rounded px-2 py-2.5 text-base font-medium transition hover:bg-sand ${
-                    isActive(l.href) ? "text-accent" : "text-navy"
-                  }`}
-                >
-                  {l.label}
-                  {l.title ? <span className="ml-1.5 text-sm font-normal text-navy/50">({l.title})</span> : null}
-                </Link>
-              )
-            )}
+            {MOBILE_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className={`rounded px-2 py-2.5 text-base font-medium transition hover:bg-sand ${
+                  isActive(l.href) ? "text-accent" : "text-navy"
+                }`}
+              >
+                {l.label}
+                {l.title ? <span className="ml-1.5 text-sm font-normal text-navy/50">({l.title})</span> : null}
+              </Link>
+            ))}
           </div>
 
           <div className="mt-4 flex flex-col gap-2.5 border-t border-navy/10 pt-4">
