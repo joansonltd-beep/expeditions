@@ -63,7 +63,7 @@ export default function PlanMyMovePage() {
         title="Plan My Move"
         crumb="Plan My Move"
         intro="Tell me where you are starting and where you want to go, and I will tell you what your situation actually needs."
-        footnote="This is an initial enquiry rather than a finished plan, and there is no charge for asking."
+        footnote="There is no charge for asking. A Move Planning Consultation, where we go through your situation properly, is $10, paid once you send this form."
       />
 
       {/* THE JOURNEY */}

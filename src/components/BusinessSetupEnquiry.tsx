@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
+import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 // Hard eligibility gate: business setup is only offered to citizens/residents
 // of Trinidad & Tobago, Jamaica and Grenada. The enquiry form only renders
@@ -29,10 +31,10 @@ export default function BusinessSetupEnquiry({
   eligibilityTitle: string;
   ineligibleMessage: string;
 }) {
-  const { generalEmail } = useSiteClient();
   const waLink = useWhatsAppLink();
   const [country, setCountry] = useState("");
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: services[0] ?? "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -43,11 +45,16 @@ export default function BusinessSetupEnquiry({
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const countryLabel = COUNTRIES.find((c) => c.value === country)?.label ?? "";
-    const subject = encodeURIComponent(`Business setup enquiry: ${form.service} - ${form.name}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCountry: ${countryLabel}\nService: ${form.service}\n\nDetails:\n${form.message}`
-    );
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${body}`;
+    const message = `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nCountry: ${countryLabel}\nService: ${form.service}\n\nDetails:\n${form.message}`;
+
+    savePendingConsultation({
+      source: "business-setup",
+      message,
+      figures: { country: countryLabel, service: form.service },
+      mailtoSubject: encodeURIComponent(`Business setup enquiry: ${form.service} - ${form.name}`),
+      mailtoBody: encodeURIComponent(message),
+    });
+    setSubmitted(true);
   }
 
   return (
@@ -73,7 +80,13 @@ export default function BusinessSetupEnquiry({
         </div>
       ) : null}
 
-      {eligible ? (
+      {eligible && submitted ? (
+        <div className="mt-6 border-t border-slate-100 pt-6">
+          <ConsultancyPaymentPanel onBack={() => setSubmitted(false)} />
+        </div>
+      ) : null}
+
+      {eligible && !submitted ? (
         <form onSubmit={onSubmit} className="mt-6 border-t border-slate-100 pt-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm font-semibold text-slate-900">
@@ -131,7 +144,7 @@ export default function BusinessSetupEnquiry({
           </label>
           <div className="mt-5 flex flex-wrap gap-3">
             <button type="submit" className={btnPrimary}>
-              Send enquiry
+              Request Consultancy
             </button>
             <a
               href={waLink(`Hi Jo, I'm interested in business setup help (${form.service}).`)}

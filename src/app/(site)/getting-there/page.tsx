@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
-import FreeConsultationBlock from "@/components/FreeConsultationBlock";
+import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
 
 export const metadata: Metadata = {
@@ -202,7 +202,7 @@ export default function GettingTherePage() {
         </div>
       </Section>
 
-      <FreeConsultationBlock lead="Planning a visit to any of the twelve CARICOM countries we cover costs nothing. Tell us your dates and what you need, and we will map it out." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation for any of the twelve CARICOM countries we cover is $10. Tell us your dates and what you need, and we will map it out." />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about visiting" />

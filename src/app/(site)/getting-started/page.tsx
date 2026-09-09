@@ -5,7 +5,7 @@ import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
 import JobOfferEnquiry from "@/components/JobOfferEnquiry";
-import FreeConsultationBlock from "@/components/FreeConsultationBlock";
+import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 
 const BUSINESS_CENTER_PHOTOS: HeroPhoto[] = [
@@ -330,7 +330,7 @@ export default function GettingStartedPage() {
         </div>
       </Section>
 
-      <FreeConsultationBlock lead="Talking through your move, whether that is the Skills Certificate, a job search, flights or somewhere to stay, costs nothing. Tell us where you are starting from and we will tell you what applies." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your move, whether that is the Skills Certificate, a job search, flights or somewhere to stay, is $10. Tell us where you are starting from and we will tell you what applies." />
 
       <Section>
         <SectionHead eyebrow="FAQ" title="Common questions about working in CARICOM" />

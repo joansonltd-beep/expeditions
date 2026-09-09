@@ -241,7 +241,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "What does it cost?",
-      a: "Nothing to start. Every consultation, whether you are visiting, working, studying or setting up a business, is free. We talk through your situation first, and you decide from there.",
+      a: "A Move Planning Consultation, whether you are visiting, working, studying or setting up a business, is $10. We talk through your situation and tell you what applies before anything else is decided.",
     },
     {
       q: "How do I send you documents?",

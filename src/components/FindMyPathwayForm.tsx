@@ -2,11 +2,12 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
-import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
+import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
-import { captureLead } from "@/lib/leadCapture";
 import { track } from "@/lib/analytics";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import FygaroPaymentButton from "@/components/FygaroPaymentButton";
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
@@ -60,12 +61,14 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  *
  * Shorter than the Plan My Move form on purpose. It asks only what is needed
  * to point someone at the right pathway, then shows the next step inline
- * rather than leaving them on a "thanks, we'll be in touch" dead end.
+ * rather than leaving them on a "thanks, we'll be in touch" dead end. The
+ * free reading recommendations show immediately; the actual enquiry is held
+ * by savePendingConsultation() and only reaches Jo once the $10 payment goes
+ * through and the visitor lands on /consultation-paid.
  *
  * Never asks for passport numbers, bank details or document uploads.
  */
 export default function FindMyPathwayForm() {
-  const { generalEmail } = useSiteClient();
   const waLink = useWhatsAppLink();
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
@@ -124,12 +127,15 @@ export default function FindMyPathwayForm() {
     });
     track("form_submit", { form: "pathway", purpose: form.purpose });
 
-    captureLead({ source: "find-my-pathway", message: lines.join("\n") });
+    savePendingConsultation({
+      source: "find-my-pathway",
+      message: lines.join("\n"),
+      figures: { purpose: form.purpose, from: form.current, to: form.destination },
+      mailtoSubject: encodeURIComponent(`Find my pathway: ${form.purpose} - ${form.name}`),
+      mailtoBody: encodeURIComponent(lines.join("\n")),
+    });
 
     setDone(true);
-
-    const subject = encodeURIComponent(`Find my pathway: ${form.purpose} - ${form.name}`);
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${encodeURIComponent(lines.join("\n"))}`;
   }
 
   if (done && purpose) {
@@ -137,9 +143,15 @@ export default function FindMyPathwayForm() {
       <div className="rounded-3xl border border-brand/30 bg-brand-soft p-7 sm:p-8">
         <h2 className="text-xl font-bold text-slate-900">Thanks {form.name.split(" ")[0] || "for that"}. Here is your next step.</h2>
         <p className="mt-2 text-slate-700">
-          Your email app should have opened with your answers filled in. Send that and we will come back to you, usually
-          within one business day. If it did not open, message us on WhatsApp instead and we will pick it up there.
+          Pay the $10 consultation fee below and your answers go to Jo the moment payment goes through.
         </p>
+
+        <div className="mt-6 rounded-2xl border border-brand/25 bg-white p-6 text-center">
+          <p className="font-semibold text-slate-900">$10 Move Planning Consultation</p>
+          <div className="mt-4">
+            <FygaroPaymentButton />
+          </div>
+        </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
@@ -153,13 +165,6 @@ export default function FindMyPathwayForm() {
           >
             Chat with Jo on WhatsApp
           </a>
-          <Link
-            href="/services#consultation"
-            onClick={() => track("consultation_click", { location: "pathway-result" })}
-            className={btnPrimary}
-          >
-            Book a Move Planning Consultation
-          </Link>
         </div>
 
         <div className="mt-7 border-t border-brand/20 pt-6">
@@ -308,7 +313,7 @@ export default function FindMyPathwayForm() {
       </p>
 
       <button type="submit" className={`${btnPrimary} mt-5 w-full`}>
-        Find my pathway
+        Request Consultancy
       </button>
       <p className="mt-3 text-center text-xs text-slate-600">
         By sending this you agree we may use these details to respond, as set out in our{" "}

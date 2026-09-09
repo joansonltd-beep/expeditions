@@ -1,9 +1,11 @@
 "use client";
 
 import { useId, useState } from "react";
-import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
+import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
@@ -26,12 +28,11 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  * another CARICOM country. Deliberately short: enough for us to tell them what
  * their particular route involves, not a self-service guide.
  *
- * Same static-friendly pattern as the other forms on the site: submitting opens
- * the visitor's own mail client with everything filled in, so no backend is
- * needed and the enquiry genuinely comes from their address.
+ * Submitting doesn't send anything yet: savePendingConsultation() holds the
+ * answers and a $10 payment panel takes over. The enquiry only reaches Jo
+ * once payment completes and the visitor lands on /consultation-paid.
  */
 export default function JobOfferEnquiry() {
-  const { generalEmail } = useSiteClient();
   const waLink = useWhatsAppLink();
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
@@ -43,6 +44,7 @@ export default function JobOfferEnquiry() {
   const [workAddress, setWorkAddress] = useState("");
   const [csme, setCsme] = useState<"Yes" | "No" | "Not sure" | "">("");
   const [touched, setTouched] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const csmeValid = csme !== "";
 
@@ -58,18 +60,27 @@ export default function JobOfferEnquiry() {
     setTouched(true);
     if (!csmeValid) return;
 
-    const subject = encodeURIComponent(`Job offer enquiry: ${origin || "?"} to ${destination || "?"} - ${name}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${name}`,
-        `Number: ${phone}`,
-        `Country of origin: ${origin}`,
-        `Country of job offer: ${destination}`,
-        `Potential work address: ${workAddress || "(not given)"}`,
-        `Has a CARICOM Skills Certificate: ${csme}`,
-      ].join("\n")
-    );
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${body}`;
+    const lines = [
+      `Name: ${name}`,
+      `Number: ${phone}`,
+      `Country of origin: ${origin}`,
+      `Country of job offer: ${destination}`,
+      `Potential work address: ${workAddress || "(not given)"}`,
+      `Has a CARICOM Skills Certificate: ${csme}`,
+    ];
+
+    savePendingConsultation({
+      source: "job-offer",
+      message: lines.join("\n"),
+      figures: { origin, destination, csme },
+      mailtoSubject: encodeURIComponent(`Job offer enquiry: ${origin || "?"} to ${destination || "?"} - ${name}`),
+      mailtoBody: encodeURIComponent(lines.join("\n")),
+    });
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return <ConsultancyPaymentPanel onBack={() => setSubmitted(false)} />;
   }
 
   return (
@@ -204,7 +215,7 @@ export default function JobOfferEnquiry() {
 
       <div className="mt-5 flex flex-wrap gap-3">
         <button type="submit" className={btnPrimary}>
-          Find out what I need
+          Request Consultancy
         </button>
         <a
           href={waLink("Hi Jo, I have a job offer in another CARICOM country and want to know what I need.")}

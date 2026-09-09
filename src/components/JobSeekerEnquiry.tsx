@@ -1,22 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
+import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { EDUCATION_OPTIONS, PROFESSION_OPTIONS } from "@/lib/jobSeekerData";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
 const field =
   "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 
-// Static-friendly, same pattern as ContactForm/BusinessSetupEnquiry: builds a
-// prefilled email on submit, sent from the applicant's own mail client, so it
-// genuinely comes from their address. No backend, so it can't attach a file;
-// they're asked to attach their resume themselves before hitting send.
+// Submitting doesn't send anything yet: savePendingConsultation() holds the
+// answers and a $10 payment panel takes over. No backend, so it can't attach
+// a file; they're asked to attach their resume themselves once the mailto
+// hand-off opens after payment.
 export default function JobSeekerEnquiry() {
-  const { generalEmail } = useSiteClient();
   const waLink = useWhatsAppLink();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,6 +29,7 @@ export default function JobSeekerEnquiry() {
   const [csme, setCsme] = useState<"Yes" | "No" | "">("");
   const [comments, setComments] = useState("");
   const [countriesTouched, setCountriesTouched] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const allSelected = countries.length === COUNTRY_NAMES.length;
   const toggleCountry = (c: string) => {
@@ -47,11 +49,20 @@ export default function JobSeekerEnquiry() {
     setCountriesTouched(true);
     if (!countriesValid || !csmeValid) return;
 
-    const subject = encodeURIComponent(`Job seeker enquiry: ${jobTitle} - ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nHighest education: ${education}\nCSME Skills Certificate: ${csme}\nCountries open to: ${countries.join(", ")}\nProfession/field: ${profession}\nJob title: ${jobTitle}\n\nComments:\n${comments || "(none)"}\n\n(Remember to attach your resume before sending, if you have one.)`
-    );
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${body}`;
+    const message = `Name: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nHighest education: ${education}\nCSME Skills Certificate: ${csme}\nCountries open to: ${countries.join(", ")}\nProfession/field: ${profession}\nJob title: ${jobTitle}\n\nComments:\n${comments || "(none)"}\n\n(Remember to attach your resume before sending, if you have one.)`;
+
+    savePendingConsultation({
+      source: "job-seeker",
+      message,
+      figures: { profession, jobTitle, csme },
+      mailtoSubject: encodeURIComponent(`Job seeker enquiry: ${jobTitle} - ${name}`),
+      mailtoBody: encodeURIComponent(message),
+    });
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return <ConsultancyPaymentPanel onBack={() => setSubmitted(false)} />;
   }
 
   return (
@@ -143,7 +154,7 @@ export default function JobSeekerEnquiry() {
 
       <div className="mt-5 flex flex-wrap gap-3">
         <button type="submit" className={btnPrimary}>
-          Send enquiry
+          Request Consultancy
         </button>
         <a href={waLink("Hi Jo, I'm a job seeker looking for work in another CARICOM country.")} target="_blank" rel="noopener noreferrer" className={btnWhatsapp}>
           Message on WhatsApp

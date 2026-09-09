@@ -228,7 +228,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
             <SectionHead
               eyebrow="Packages"
               title="Business setup packages"
-              intro="Free consultation. Tell us which package fits and we will scope exactly what your setup needs."
+              intro="$10 consultation. Tell us which package fits and we will scope exactly what your setup needs."
             />
             <FinancePricing packages={packages} addOns={addOns} />
           </Section>

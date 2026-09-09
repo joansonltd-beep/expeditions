@@ -1,9 +1,10 @@
 "use client";
 
 import { useId, useState } from "react";
-import { useSiteClient } from "@/components/SiteSettingsProvider";
 import { btnPrimary } from "@/components/ui";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 // What the visitor wants to do. These mirror the three journeys the site is
 // built around, plus the certificate people most often ask about by name.
@@ -27,12 +28,12 @@ const field =
   "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-600 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 const labelClass = "block text-sm font-semibold text-slate-900";
 
-// Static-friendly enquiry form: builds a prefilled email on submit. Works on
-// any host with no backend. Deliberately collects only what is needed for a
-// first assessment; never passport numbers, bank details or other sensitive
-// information, which are handled separately once contact is made.
+// Deliberately collects only what is needed for a first assessment; never
+// passport numbers, bank details or other sensitive information, which are
+// handled separately once contact is made. Submitting doesn't send anything
+// yet: savePendingConsultation() holds the answers and a $10 payment panel
+// takes over, same as every other enquiry form on the site.
 export default function ContactForm() {
-  const { generalEmail } = useSiteClient();
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
   const [form, setForm] = useState({
@@ -48,6 +49,7 @@ export default function ContactForm() {
     travellers: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const set =
     (k: keyof typeof form) =>
@@ -56,26 +58,35 @@ export default function ContactForm() {
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(`Enquiry: ${form.purpose} - ${form.name}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name}`,
-        `Email: ${form.email}`,
-        `Phone / WhatsApp: ${form.phone}`,
-        `Preferred contact method: ${form.contactMethod}`,
-        "",
-        `Purpose: ${form.purpose}`,
-        `Citizenship: ${form.citizenship}`,
-        `Currently living in: ${form.currentCountry}`,
-        `Intended destination: ${form.destination}`,
-        `Intended travel date: ${form.travelDate}`,
-        `Number of travellers: ${form.travellers}`,
-        "",
-        "About my situation:",
-        form.message,
-      ].join("\n")
-    );
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${body}`;
+    const lines = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Phone / WhatsApp: ${form.phone}`,
+      `Preferred contact method: ${form.contactMethod}`,
+      "",
+      `Purpose: ${form.purpose}`,
+      `Citizenship: ${form.citizenship}`,
+      `Currently living in: ${form.currentCountry}`,
+      `Intended destination: ${form.destination}`,
+      `Intended travel date: ${form.travelDate}`,
+      `Number of travellers: ${form.travellers}`,
+      "",
+      "About my situation:",
+      form.message,
+    ];
+
+    savePendingConsultation({
+      source: "contact-form",
+      message: lines.join("\n"),
+      figures: { purpose: form.purpose, destination: form.destination },
+      mailtoSubject: encodeURIComponent(`Enquiry: ${form.purpose} - ${form.name}`),
+      mailtoBody: encodeURIComponent(lines.join("\n")),
+    });
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return <ConsultancyPaymentPanel onBack={() => setSubmitted(false)} />;
   }
 
   return (
@@ -270,10 +281,10 @@ export default function ContactForm() {
       </p>
 
       <button type="submit" className={`${btnPrimary} mt-5 w-full`}>
-        Send enquiry
+        Request Consultancy
       </button>
       <p className="mt-3 text-center text-xs text-slate-600">
-        This opens your email app with the details filled in, so you can see exactly what is sent before it goes.
+        Submitting takes you to the $10 consultation payment step; your request is sent once that goes through.
       </p>
     </form>
   );

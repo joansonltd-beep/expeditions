@@ -2,10 +2,11 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
-import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
+import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
-import { captureLead } from "@/lib/leadCapture";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { savePendingConsultation } from "@/lib/pendingConsultation";
+import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
@@ -32,17 +33,14 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  * The Plan My Move enquiry. Every CTA labelled "Plan My Move" across the site
  * lands here.
  *
- * Submission uses the same static-friendly pattern as every other form on the
- * site: it opens the visitor's own mail client with the answers filled in, so
- * the enquiry genuinely comes from their address and nothing depends on a
- * backend being up. It also fires captureLead(), which posts to /api/lead and
- * forwards to LEAD_WEBHOOK_URL when that env var is set. It is not set today,
- * so the mail hand-off is what actually delivers the enquiry.
+ * Submitting does not send anything yet: the answers are held by
+ * savePendingConsultation() and the form gives way to a $10 payment panel.
+ * Only after the visitor pays and lands on /consultation-paid does the
+ * enquiry actually reach Jo (captureLead() + a mailto hand-off built there).
  *
  * This is an initial assessment, not a finished plan, and the copy says so.
  */
 export default function PlanMyMoveForm() {
-  const { generalEmail } = useSiteClient();
   const waLink = useWhatsAppLink();
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
@@ -60,6 +58,7 @@ export default function PlanMyMoveForm() {
   const [help, setHelp] = useState<string[]>([]);
   const [consent, setConsent] = useState(false);
   const [touched, setTouched] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const set =
     (k: keyof typeof form) =>
@@ -93,17 +92,21 @@ export default function PlanMyMoveForm() {
       form.message || "(none)",
     ];
 
-    // Fire and forget, so a configured webhook records the lead too. Never
-    // blocks the mail hand-off.
-    captureLead({
+    // Held until payment goes through — see pendingConsultation.ts and
+    // /consultation-paid, which is what actually sends this.
+    savePendingConsultation({
       source: "plan-my-move",
       message: lines.join("\n"),
       recommended: help.join(", "),
       figures: { from: form.from, to: form.to, reason: form.reason, timeframe: form.timeframe },
+      mailtoSubject: encodeURIComponent(`Plan My Move: ${form.from || "?"} to ${form.to || "?"} - ${form.name}`),
+      mailtoBody: encodeURIComponent(lines.join("\n")),
     });
+    setSubmitted(true);
+  }
 
-    const subject = encodeURIComponent(`Plan My Move: ${form.from || "?"} to ${form.to || "?"} - ${form.name}`);
-    window.location.href = `mailto:${generalEmail}?subject=${subject}&body=${encodeURIComponent(lines.join("\n"))}`;
+  if (submitted) {
+    return <ConsultancyPaymentPanel onBack={() => setSubmitted(false)} />;
   }
 
   return (
@@ -294,7 +297,7 @@ export default function PlanMyMoveForm() {
 
       <div className="mt-6 flex flex-wrap gap-3">
         <button type="submit" className={btnPrimary}>
-          Request My Move Plan
+          Request Consultancy
         </button>
         <a
           href={waLink("Hi Jo, I'd like help planning a move within CARICOM.")}
@@ -307,9 +310,8 @@ export default function PlanMyMoveForm() {
       </div>
 
       <p className="mt-4 text-xs text-slate-600">
-        This is an initial enquiry, not a finished plan. We read what you send and come back to you about the right
-        next step, which may be a consultation or simply a pointer to the free guides. Submitting opens your email app
-        with the answers filled in, so you can see exactly what is sent before it goes.
+        This is an initial enquiry, not a finished plan. Submitting takes you to the $10 consultation payment step;
+        your request is sent once that goes through.
       </p>
     </form>
   );

@@ -6,7 +6,7 @@ import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
 import SchoolSearch from "@/components/SchoolSearch";
 import { getSiteSettings } from "@/lib/siteData";
-import FreeConsultationBlock from "@/components/FreeConsultationBlock";
+import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
 
 export const metadata: Metadata = {
@@ -366,7 +366,7 @@ export default async function StudyPage() {
       </Section>
 
       {/* FAQ */}
-      <FreeConsultationBlock lead="Talking through your study plans, whether that is the application, somewhere to stay, or getting there, costs nothing. Tell us where you are headed and we will map out what applies." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your study plans, whether that is the application, somewhere to stay, or getting there, is $10. Tell us where you are headed and we will map out what applies." />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about studying in CARICOM" />
