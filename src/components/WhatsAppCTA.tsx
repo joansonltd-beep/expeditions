@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
-import { btnPrimary, btnWhatsapp } from "@/components/ui";
+import { btn, btnWhatsapp } from "@/components/ui";
 import { Container } from "@/components/ui";
 import { track } from "@/lib/analytics";
 
@@ -48,7 +48,7 @@ export default function WhatsAppCTA({
             <Link
               href="/services#consultation"
               onClick={() => track("consultation_click", { location })}
-              className={`${btnPrimary} bg-cream text-navy hover:bg-white`}
+              className={`${btn} bg-cream text-navy hover:bg-white focus-visible:ring-cream`}
             >
               Book a Move Planning Consultation
             </Link>
