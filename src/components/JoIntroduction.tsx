@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Container, btnPrimary } from "@/components/ui";
 import JoNote from "@/components/JoNote";
@@ -8,9 +7,10 @@ import ClientTicker from "@/components/ClientTicker";
  * Jo, near the top of the page, so the business reads as a person before it
  * reads as a service.
  *
- * Asymmetric on purpose: portrait in a narrower column, text in a wider one,
- * with the note breaking the grid underneath. The photograph is real and
- * already on the About page; nothing here is stock.
+ * Asymmetric on purpose: video in a narrower column, text in a wider one,
+ * with the note breaking the grid underneath. The clip is real, shot on a
+ * beach; nothing here is stock. Muted, autoplaying and looped so it reads as
+ * a moving portrait rather than something the visitor has to operate.
  */
 export default function JoIntroduction() {
   return (
@@ -19,12 +19,14 @@ export default function JoIntroduction() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16">
           <figure className="max-w-sm">
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-navy/10">
-              <Image
-                src="/photos/jo.jpg"
-                alt="Joanson Baptiste James, who runs Expeditions With Jo"
-                fill
-                sizes="(min-width: 1024px) 22rem, 100vw"
-                className="object-cover"
+              <video
+                src="/videos/jo-beach.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-label="Joanson Baptiste James, who runs Expeditions With Jo"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
             <figcaption className="mt-3 text-sm text-navy/60">
@@ -34,13 +36,16 @@ export default function JoIntroduction() {
           </figure>
 
           <div className="lg:pt-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">The person you deal with</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              I have made this move myself
+            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+              Meet{" "}
+              <Link href="/about" className="underline decoration-2 underline-offset-4 hover:text-brand">
+                Jo
+              </Link>
+              , your partner for your expeditions
             </h2>
             <div className="mt-5 space-y-4 text-lg leading-relaxed text-navy/75">
               <p>
-                So as you can tell from my photo, I am Grenadian. I moved to Trinidad in 2020, in the middle of the
+                So as you can tell from the video, I am Grenadian. I moved to Trinidad in 2020, in the middle of the
                 pandemic, which made that process about as painstaking as it gets. Then I moved again to Jamaica in
                 2025. Before deciding either time, I worked through what all twelve CSME countries require, so I was
                 choosing rather than guessing.
