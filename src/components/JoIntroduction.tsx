@@ -51,16 +51,16 @@ export default function JoIntroduction() {
                 choosing rather than guessing.
               </p>
               <p>
-                You would be dealing with someone who knows beyond theory what the process involves, and who knows how
-                to avoid the pitfalls and the delays, especially the unnecessary administrative ones.
+                You'd be working with someone who has actually done this, not just read about it, and who knows where
+                the pitfalls and the unnecessary administrative delays usually are.
                 <a href="#admin-delays" className="ml-0.5 align-super text-sm text-brand hover:underline">
                   *
                 </a>
               </p>
               <p>
-                Travelling is the easy part. As a former travel agency owner I can handle that side for you without any
-                fuss: airfare, ground transfers and accommodation. My services tend to be cheaper than other travel
-                agencies.
+                Travelling itself is the easy part. As a former travel agency owner, I handle that side for you with no
+                fuss: flights, ground transfers, accommodation. My rates usually come in lower than what you'd pay
+                elsewhere.
               </p>
             </div>
 
