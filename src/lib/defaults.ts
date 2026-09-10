@@ -602,7 +602,7 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "Our mission",
       paragraphs: [
-        "To guide CARICOM citizens through Move Planning Consultations, assist with CSME Skills Certificate applications, and coordinate travel and relocation from start to finish. Regional professionals, students and families deserve to reach life-changing opportunities across CARICOM without administrative confusion and border anxiety holding them back.",
+        "I help CARICOM nationals get through a Move Planning Consultation, put together a CSME Skills Certificate application, and organise the travel that goes with a move. Most people aren't stopped by the process itself. They're stopped by not knowing what to do first, or getting stuck on a form nobody explained properly.",
       ],
     },
     {
