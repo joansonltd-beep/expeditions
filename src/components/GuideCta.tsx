@@ -19,7 +19,7 @@ export default function GuideCta({ className = "" }: { className?: string }) {
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <Link href="/plan-my-move" className={btnPrimary}>
-          Tell Jo about my plans
+          Tell Jo about your plans
         </Link>
         <Link href="/services#skills-certificate" className={btnGhost}>
           Ask about CSME Certificate Support

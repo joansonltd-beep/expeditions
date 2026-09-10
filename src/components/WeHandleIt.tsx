@@ -30,7 +30,7 @@ export default function WeHandleIt({
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
         <Link href="/plan-my-move" className="text-sm font-semibold text-brand hover:underline">
-          Tell Jo about my plans →
+          Tell Jo about your plans →
         </Link>
         <a href="tel:+18687236644" className="text-sm font-semibold text-slate-700 hover:text-brand">
           Or call 868-723-6644
