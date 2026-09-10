@@ -51,7 +51,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     telephone: `+${settings.whatsappNumber.replace(/\D/g, "")}`,
     email: settings.generalEmail,
     priceRange: "$$",
-    address: { "@type": "PostalAddress", addressCountry: "TT", addressRegion: "Trinidad and Tobago" },
+    address: { "@type": "PostalAddress", addressLocality: "Kingston", addressCountry: "JM" },
     areaServed: [
       { "@type": "Place", name: "CARICOM" },
       { "@type": "Place", name: "Caribbean" },
@@ -88,6 +88,19 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     sameAs: [settings.facebookUrl, settings.instagramUrl].filter(Boolean),
   };
 
+  // Separate from the business entity above: identifies the site itself.
+  // No potentialAction/SearchAction here since the site has no on-site
+  // search to point it at — adding one would describe a feature that
+  // doesn't exist.
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: settings.businessName,
+    url: SITE_URL,
+    publisher: { "@id": `${SITE_URL}/#business` },
+  };
+
   return (
     <SiteSettingsProvider
       value={{
@@ -97,6 +110,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       }}
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"

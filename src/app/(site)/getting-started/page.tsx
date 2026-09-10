@@ -288,6 +288,12 @@ export default function GettingStartedPage() {
         />
         <div className="mx-auto max-w-2xl">
           <JobSeekerEnquiry />
+          <p className="mt-6 text-center text-sm text-slate-600">
+            Or browse openings yourself:{" "}
+            <Link href="/internal/job-search" className="font-semibold text-brand hover:underline">
+              Search CARICOM job boards →
+            </Link>
+          </p>
         </div>
       </Section>
 
