@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
   title: {
-    default: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
+    default: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
     template: "%s · Expeditions With Jo",
   },
   description:
     "Help for CARICOM citizens working out how to visit, work or study in another CARICOM country: what each destination asks for, which office handles it, and getting the papers and travel organised.",
   keywords: [
     "CARICOM",
-    "CARICOM mobility",
+    "how to move to another CARICOM country",
     "visit another CARICOM country",
     "work in another CARICOM country",
     "study in another CARICOM country",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
+    title: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
     description:
       "Tell Jo where you are starting and where you want to go. We work out what your destination asks for and organise the papers, flights and arrival around it.",
     images: [
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Expeditions With Jo, CARICOM mobility support for visiting, working and studying",
+        alt: "Expeditions With Jo, help to visit, work or study in another CARICOM country",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CARICOM Mobility Support | Visit, Work or Study | Expeditions With Jo",
+    title: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
     description:
       "Working out how to visit, work or study in another CARICOM country, and getting it organised once you know.",
     images: ["/og.png"],

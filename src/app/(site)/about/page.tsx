@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Expeditions With Jo helps CARICOM citizens visit, work or study in another CARICOM country. Run by Joanson Baptiste James from Trinidad and Tobago, covering requirements, documents, travel and practical arrangements.",
   keywords: [
-    "CARICOM mobility support",
+    "help to move to another CARICOM country",
     "CARICOM Skills Certificate help",
     "Treaty of Chaguaramas",
     "visit work or study in CARICOM",
