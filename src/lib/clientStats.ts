@@ -15,10 +15,10 @@ export type ClientStat = {
   label: string;
 };
 
-export const CLIENT_STATS_AS_OF = "August 2026";
+export const CLIENT_STATS_AS_OF = "September 2026";
 
 export const CLIENT_STATS: ClientStat[] = [
   { value: 11, label: "helped to visit" },
-  { value: 3, label: "moved for work" },
-  { value: 1, label: "gone to study" },
+  { value: 5, label: "moved for work" },
+  { value: 2, label: "gone to study" },
 ];

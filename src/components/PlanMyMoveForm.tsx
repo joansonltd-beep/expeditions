@@ -34,7 +34,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  * lands here.
  *
  * Submitting does not send anything yet: the answers are held by
- * savePendingConsultation() and the form gives way to a $10 payment panel.
+ * savePendingConsultation() and the form gives way to a $100 payment panel.
  * Only after the visitor pays and lands on /consultation-paid does the
  * enquiry actually reach Jo (captureLead() + a mailto hand-off built there).
  *
@@ -310,7 +310,7 @@ export default function PlanMyMoveForm() {
       </div>
 
       <p className="mt-4 text-xs text-slate-600">
-        This is an initial enquiry, not a finished plan. Submitting takes you to the $10 consultation payment step;
+        This is an initial enquiry, not a finished plan. Submitting takes you to the $100 consultation payment step;
         your request is sent once that goes through.
       </p>
     </form>

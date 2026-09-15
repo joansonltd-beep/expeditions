@@ -1,4 +1,4 @@
-// Bridges a filled-in enquiry form to the $10 payment step. The enquiry is
+// Bridges a filled-in enquiry form to the $100 payment step. The enquiry is
 // held here, client-side, from the moment someone submits a form until they
 // land back on /consultation-paid after paying through Fygaro — only then
 // does captureLead()/the mailto hand-off actually fire. See

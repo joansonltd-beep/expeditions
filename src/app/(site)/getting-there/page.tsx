@@ -202,7 +202,7 @@ export default function GettingTherePage() {
         </div>
       </Section>
 
-      <ConsultationCtaBlock lead="A Move Planning Consultation for any of the twelve CARICOM countries we cover is $10. Tell us your dates and what you need, and we will map it out." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation for any of the twelve CARICOM countries we cover is $100. Tell us your dates and what you need, and we will map it out." />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about visiting" />

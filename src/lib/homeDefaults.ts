@@ -241,7 +241,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "What does it cost?",
-      a: "A Move Planning Consultation, whether you are visiting, working, studying or setting up a business, is $10. We talk through your situation and tell you what applies before anything else is decided.",
+      a: "A Move Planning Consultation, whether you are visiting, working, studying or setting up a business, is $100. We talk through your situation and tell you what applies before anything else is decided.",
     },
     {
       q: "How do I send you documents?",

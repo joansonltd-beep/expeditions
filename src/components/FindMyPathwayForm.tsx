@@ -63,7 +63,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  * to point someone at the right pathway, then shows the next step inline
  * rather than leaving them on a "thanks, we'll be in touch" dead end. The
  * free reading recommendations show immediately; the actual enquiry is held
- * by savePendingConsultation() and only reaches Jo once the $10 payment goes
+ * by savePendingConsultation() and only reaches Jo once the $100 payment goes
  * through and the visitor lands on /consultation-paid.
  *
  * Never asks for passport numbers, bank details or document uploads.
@@ -143,11 +143,11 @@ export default function FindMyPathwayForm() {
       <div className="rounded-3xl border border-brand/30 bg-brand-soft p-7 sm:p-8">
         <h2 className="text-xl font-bold text-slate-900">Thanks {form.name.split(" ")[0] || "for that"}. Here is your next step.</h2>
         <p className="mt-2 text-slate-700">
-          Pay the $10 consultation fee below and your answers go to Jo the moment payment goes through.
+          Pay the $100 consultation fee below and your answers go to Jo the moment payment goes through.
         </p>
 
         <div className="mt-6 rounded-2xl border border-brand/25 bg-white p-6 text-center">
-          <p className="font-semibold text-slate-900">$10 Move Planning Consultation</p>
+          <p className="font-semibold text-slate-900">$100 Move Planning Consultation</p>
           <div className="mt-4">
             <FygaroPaymentButton />
           </div>

@@ -29,7 +29,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  * their particular route involves, not a self-service guide.
  *
  * Submitting doesn't send anything yet: savePendingConsultation() holds the
- * answers and a $10 payment panel takes over. The enquiry only reaches Jo
+ * answers and a $100 payment panel takes over. The enquiry only reaches Jo
  * once payment completes and the visitor lands on /consultation-paid.
  */
 export default function JobOfferEnquiry() {

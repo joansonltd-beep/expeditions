@@ -336,7 +336,7 @@ export default function GettingStartedPage() {
         </div>
       </Section>
 
-      <ConsultationCtaBlock lead="A Move Planning Consultation covering your move, whether that is the Skills Certificate, a job search, flights or somewhere to stay, is $10. Tell us where you are starting from and we will tell you what applies." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your move, whether that is the Skills Certificate, a job search, flights or somewhere to stay, is $100. Tell us where you are starting from and we will tell you what applies." />
 
       <Section>
         <SectionHead eyebrow="FAQ" title="Common questions about working in CARICOM" />

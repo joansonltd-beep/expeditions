@@ -366,7 +366,7 @@ export default async function StudyPage() {
       </Section>
 
       {/* FAQ */}
-      <ConsultationCtaBlock lead="A Move Planning Consultation covering your study plans, whether that is the application, somewhere to stay, or getting there, is $10. Tell us where you are headed and we will map out what applies." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your study plans, whether that is the application, somewhere to stay, or getting there, is $100. Tell us where you are headed and we will map out what applies." />
 
       <Section alt>
         <SectionHead eyebrow="FAQ" title="Common questions about studying in CARICOM" />

@@ -33,7 +33,7 @@ export default function FinancePricing({ packages, addOns }: { packages: Package
               <div className="flex flex-1 flex-col p-7">
                 <CheckList items={features} className="text-sm" />
                 <div className="mt-auto pt-6">
-                  <CtaButtons message={`Hi Jo, I'd like to book a $10 consultation about the ${p.name} business package.`} showContact={false} />
+                  <CtaButtons message={`Hi Jo, I'd like to book a $100 consultation about the ${p.name} business package.`} showContact={false} />
                 </div>
               </div>
             </div>

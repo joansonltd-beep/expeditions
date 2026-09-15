@@ -18,7 +18,7 @@ export default function ConsultationPaidPage() {
         icon={<Icon name="check" className="h-7 w-7 text-brand" />}
         title="Payment received"
         crumb="Payment Received"
-        intro="Thanks — your $10 consultation fee has gone through."
+        intro="Thanks — your $100 consultation fee has gone through."
       />
       <Section>
         <div className="mx-auto max-w-2xl">

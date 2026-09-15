@@ -31,7 +31,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
 // Deliberately collects only what is needed for a first assessment; never
 // passport numbers, bank details or other sensitive information, which are
 // handled separately once contact is made. Submitting doesn't send anything
-// yet: savePendingConsultation() holds the answers and a $10 payment panel
+// yet: savePendingConsultation() holds the answers and a $100 payment panel
 // takes over, same as every other enquiry form on the site.
 export default function ContactForm() {
   const uid = useId();
@@ -284,7 +284,7 @@ export default function ContactForm() {
         Request Consultancy
       </button>
       <p className="mt-3 text-center text-xs text-slate-600">
-        Submitting takes you to the $10 consultation payment step; your request is sent once that goes through.
+        Submitting takes you to the $100 consultation payment step; your request is sent once that goes through.
       </p>
     </form>
   );

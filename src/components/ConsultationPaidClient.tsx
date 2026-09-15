@@ -6,7 +6,7 @@ import { btnPrimary } from "@/components/ui";
 import { captureLead } from "@/lib/leadCapture";
 import { takePendingConsultation } from "@/lib/pendingConsultation";
 
-// This is the page Fygaro should redirect to after a successful $10 payment
+// This is the page Fygaro should redirect to after a successful $100 payment
 // (set as the payment button's return URL in the Fygaro dashboard). Landing
 // here is treated as proof of payment — Fygaro doesn't hand back a
 // verifiable token, so this trusts its own redirect the same way most small

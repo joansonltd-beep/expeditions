@@ -9,12 +9,12 @@ export default function ConsultancyPaymentPanel({ onBack }: { onBack: () => void
     <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-lg shadow-slate-900/5 sm:p-8">
       <h2 className="text-xl font-bold text-slate-900">Pay to send your request</h2>
       <p className="mt-2 text-sm text-slate-600">
-        Your answers are saved. Pay the $10 consultation fee below and your request goes to Jo the moment payment
+        Your answers are saved. Pay the $100 consultation fee below and your request goes to Jo the moment payment
         goes through.
       </p>
 
       <div className="mt-6 rounded-2xl border border-brand/25 bg-brand-soft p-6 text-center">
-        <p className="font-semibold text-slate-900">$10 Move Planning Consultation</p>
+        <p className="font-semibold text-slate-900">$100 Move Planning Consultation</p>
         <div className="mt-4">
           <FygaroPaymentButton />
         </div>
