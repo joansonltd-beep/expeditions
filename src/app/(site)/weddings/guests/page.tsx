@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, btnGhost, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
+import BookingPriceDisclaimer from "@/components/BookingPriceDisclaimer";
 
 export const metadata: Metadata = {
   title: "Wedding Guest Travel",
@@ -60,7 +61,7 @@ const COUPLE_HELP = [
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Does it cost me anything to book through Jo?",
-    a: "No more than booking it yourself. You pay the fare and the room rate. Where a group booking gets a better rate than the public one, that is the rate you get.",
+    a: "No more than booking it yourself.* You pay the fare and the room rate. Where a group booking gets a better rate than the public one, that is the rate you get.",
   },
   {
     q: "The couple sent me a link. What do I do with it?",
@@ -193,6 +194,9 @@ export default function WeddingGuestsPage() {
               <p className="mt-2 text-slate-600">{f.a}</p>
             </div>
           ))}
+        </div>
+        <div className="mx-auto mt-8 max-w-3xl">
+          <BookingPriceDisclaimer />
         </div>
       </Section>
 

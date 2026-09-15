@@ -182,16 +182,34 @@ h2 {
   background: #ce1126;
 }
 
-/* Green, black and red running on the diagonal, the way the flag's band does.
-   The flag edges its black band in yellow, which is left out: at strip height
-   it reads as a smear rather than an edge. */
+/* Green, black and red on the diagonal, the way the flag's band runs, with the
+   flag's yellow edging the black band. The yellow is kept narrow on purpose:
+   white text on yellow fails contrast badly, so the band is sized to sit at
+   the edges of where the copy lands, and the copy carries a slight shadow so
+   it stays crisp if it does clip one. */
 .announce[data-flag="st-kitts-and-nevis"] {
   background: linear-gradient(
     100deg,
-    #00703c 0 34%,
-    #111111 34% 58%,
-    #ce1126 58% 100%
+    #00703c 0 20%,
+    #ffc726 20% 21.5%,
+    #111111 21.5% 78.5%,
+    #ffc726 78.5% 80%,
+    #ce1126 80% 100%
   );
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+/* The flag carries two white stars on its black band. One sits inline ahead of
+   the copy rather than behind it, so it is always legible whatever the text
+   wraps to. */
+.announce[data-flag="st-kitts-and-nevis"] p::before {
+  content: "";
+  display: inline-block;
+  width: 0.92em;
+  height: 0.92em;
+  margin-right: 0.5em;
+  vertical-align: -0.1em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1.1 -1.1 2.2 2.2'%3E%3Cpath fill='white' d='M0 -1 0.2245 -0.309 0.951 -0.309 0.363 0.118 0.588 0.809 0 0.382 -0.588 0.809 -0.363 0.118 -0.951 -0.309 -0.2245 -0.309Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .announce a:focus-visible {
