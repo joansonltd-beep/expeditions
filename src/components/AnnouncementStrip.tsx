@@ -13,7 +13,7 @@ import { currentIndependence, formatDayMonth } from "@/lib/independenceData";
  * message from `announcement()` below. Return null and the strip disappears
  * along with the space it occupies.
  */
-type Announcement = { text: string; href: string; label: string };
+type Announcement = { text: string; href: string; label: string; flag: string };
 
 function announcement(): Announcement | null {
   const current = currentIndependence();
@@ -23,11 +23,14 @@ function announcement(): Announcement | null {
       text: `Celebrating ${day.name}'s Independence · ${formatDayMonth(day)}`,
       href: `/destinations/${day.slug}`,
       label: "Read the country guide",
+      // Drives the strip colours in globals.css. A country without its own
+      // rule there falls back to the default band.
+      flag: day.slug,
     };
   }
 
   // Nothing running. Add a manual announcement here when one is needed:
-  //   return { text: "...", href: "/...", label: "..." };
+  //   return { text: "...", href: "/...", label: "...", flag: "" };
   return null;
 }
 
@@ -36,13 +39,13 @@ export default function AnnouncementStrip() {
   if (!item) return null;
 
   return (
-    <div className="bg-[#ce1126] text-white">
+    <div className="announce text-white" data-flag={item.flag}>
       <div className="mx-auto flex max-w-[1400px] items-center justify-center gap-x-3 gap-y-1 px-5 py-2 text-center">
         <p className="text-[0.8rem] font-medium leading-snug sm:text-sm">
           {item.text}
           <Link
             href={item.href}
-            className="ml-2 hidden font-semibold underline underline-offset-2 hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-1 focus-visible:ring-offset-[#ce1126] sm:inline"
+            className="ml-2 hidden font-semibold underline underline-offset-2 hover:no-underline sm:inline"
           >
             {item.label}
           </Link>

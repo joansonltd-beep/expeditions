@@ -14,6 +14,7 @@ type NavItem = { href: string; label: string; title?: string };
 const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Visit", title: "Travel within CARICOM" };
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Study", title: "Studying within CARICOM" };
+const MARRY: NavItem = { href: "/marry", label: "Marry", title: "Getting married within CARICOM" };
 const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
 const TOOLS: NavItem = { href: "/tools", label: "Tools" };
 
@@ -25,7 +26,7 @@ const AFTER: NavItem[] = [{ href: "/about", label: "About Us" }];
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
   new Map(
-    [COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, DESTINATIONS, TOOLS, ...AFTER].map((l) => [l.href, l])
+    [COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY, DESTINATIONS, TOOLS, ...AFTER].map((l) => [l.href, l])
   ).values()
 );
 
@@ -94,7 +95,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
 
         {/* desktop nav */}
         <div className="hidden items-center gap-6 lg:flex">
-          {[COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, DESTINATIONS, TOOLS, ...AFTER].map((l) => (
+          {[COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY, DESTINATIONS, TOOLS, ...AFTER].map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
             </Link>

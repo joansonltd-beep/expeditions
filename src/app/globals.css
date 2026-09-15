@@ -164,3 +164,38 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/*
+  The announcement strip wears the flag of whichever independence day is
+  running. White text sits directly on every band, so each colour is picked to
+  clear AA against white on its own:
+
+    St. Kitts and Nevis green  #00703c   6.2:1
+    black                      #111111  18.9:1
+    red                        #ce1126   5.7:1
+
+  The flag's own green (#009e49) is only 3.5:1 against white, so it is darkened
+  here rather than used raw. Add a country by adding a rule below; anything
+  without one keeps the default band.
+*/
+.announce {
+  background: #ce1126;
+}
+
+/* Green, black and red running on the diagonal, the way the flag's band does.
+   The flag edges its black band in yellow, which is left out: at strip height
+   it reads as a smear rather than an edge. */
+.announce[data-flag="st-kitts-and-nevis"] {
+  background: linear-gradient(
+    100deg,
+    #00703c 0 34%,
+    #111111 34% 58%,
+    #ce1126 58% 100%
+  );
+}
+
+.announce a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
