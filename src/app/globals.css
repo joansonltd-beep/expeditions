@@ -199,17 +199,27 @@ h2 {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
-/* The flag carries two white stars on its black band. One sits inline ahead of
-   the copy rather than behind it, so it is always legible whatever the text
-   wraps to. */
-.announce[data-flag="st-kitts-and-nevis"] p::before {
-  content: "";
-  display: inline-block;
-  width: 0.92em;
-  height: 0.92em;
-  margin-right: 0.5em;
-  vertical-align: -0.1em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1.1 -1.1 2.2 2.2'%3E%3Cpath fill='white' d='M0 -1 0.2245 -0.309 0.951 -0.309 0.363 0.118 0.588 0.809 0 0.382 -0.588 0.809 -0.363 0.118 -0.951 -0.309 -0.2245 -0.309Z'/%3E%3C/svg%3E") center / contain no-repeat;
+/* The flag carries two white stars on its black band, so the strip carries one
+   at each end of the copy.
+
+   They are pseudo-elements on the flex ROW, not on the paragraph: as flex items
+   they sit at the ends and the text wraps between them. Hung off the paragraph
+   instead, a trailing star orphans onto its own line as soon as the copy fills
+   the width.
+
+   Desktop only. The copy already runs close to the full width between roughly
+   640px and 1024px, and two stars plus their gaps is enough to tip it onto a
+   second line and double the height of the strip. Below that the bands carry
+   the flag on their own. */
+@media (min-width: 1024px) {
+  .announce[data-flag="st-kitts-and-nevis"] > div::before,
+  .announce[data-flag="st-kitts-and-nevis"] > div::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 13px;
+    height: 13px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1.1 -1.1 2.2 2.2'%3E%3Cpath fill='white' d='M0 -1 0.2245 -0.309 0.951 -0.309 0.363 0.118 0.588 0.809 0 0.382 -0.588 0.809 -0.363 0.118 -0.951 -0.309 -0.2245 -0.309Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
 }
 
 .announce a:focus-visible {
