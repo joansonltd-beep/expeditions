@@ -93,8 +93,12 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           )}
         </Link>
 
-        {/* desktop nav */}
-        <div className="hidden items-center gap-6 lg:flex">
+        {/* desktop nav
+            Takes the free space between the logo and the right-hand controls
+            rather than huddling against them, and opens the gaps up as the
+            window gets wider. At 1400px there was a third of the bar sitting
+            empty. */}
+        <div className="hidden flex-1 items-center justify-center gap-8 lg:flex xl:gap-10 2xl:gap-12">
           {[COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY, DESTINATIONS, TOOLS, ...AFTER].map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
