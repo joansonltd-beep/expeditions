@@ -1,3 +1,23 @@
+/**
+ * THE WEDDINGS SECTION
+ *
+ * Pages
+ *   /weddings                  this file, the hub
+ *   /weddings/[country]        one per CARICOM country, titled "Getting married in X"
+ *   /weddings/guests           for people attending somebody else's wedding
+ *
+ * Editing the copy
+ *   Per-country wording, the timing band and who each country suits all live in
+ *   src/lib/marryData.ts. Everything else is in the page files themselves.
+ *   Nav label is "Marry" in src/components/Header.tsx; the URL is /weddings.
+ *
+ * What deliberately is NOT published
+ *   Waiting periods in days, licence fees and document lists. They differ per
+ *   country, they change without notice, and working them out for a particular
+ *   couple is what the consultation is for. The one exception is Suriname,
+ *   which will only marry a couple where one partner lives there, so it is
+ *   said plainly before anyone books flights.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, type HeroPhoto } from "@/components/ui";
@@ -17,7 +37,7 @@ export const metadata: Metadata = {
     "CARICOM destination wedding",
     "Caribbean wedding travel planning",
   ],
-  alternates: { canonical: "/marry" },
+  alternates: { canonical: "/weddings" },
 };
 
 // NOTE FOR EDITORS, NOT FOR THE PAGE: the specific waiting periods, fees and
@@ -218,6 +238,58 @@ export default function MarryPage() {
         </div>
       </Section>
 
+      {/* SERVICES */}
+      <Section>
+        <SectionHead
+          eyebrow="What you can ask for"
+          title="Three ways people use me"
+          intro="Most couples want the first. Plenty end up wanting all three."
+        />
+        <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
+          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 className="text-lg font-bold text-slate-900">The couple&rsquo;s wedding plan</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Everything between deciding to do it and being legally married.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-slate-600">
+              <li>A shortlist of countries that fit the time you can take off</li>
+              <li>The marriage licence, start to finish</li>
+              <li>Your document list, checked before you fly</li>
+              <li>Flights and accommodation for the two of you</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 className="text-lg font-bold text-slate-900">Guest travel and room blocks</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              The part that quietly eats your evenings if nobody takes it off you.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-slate-600">
+              <li>Group flights by departure city, not just yours</li>
+              <li>A room block with a rate and a deadline</li>
+              <li>One travel page you send to everyone</li>
+              <li>Transfers, so nobody is haggling at arrivals at midnight</li>
+            </ul>
+            <Link href="/weddings/guests" className="mt-4 text-sm font-semibold text-brand hover:underline">
+              What your guests see &rarr;
+            </Link>
+          </div>
+
+          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 className="text-lg font-bold text-slate-900">Staying on afterwards</h3>
+            <p className="mt-2 text-sm text-slate-600">
+              You are already in the region. Going home on the Monday is a waste of a flight.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-slate-600">
+              <li>Extending the trip either side of the day</li>
+              <li>Moving to a quieter island once the guests go home</li>
+              <li>Upgrades and honeymoon stays</li>
+              <li>Open-jaw tickets, so you fly home from somewhere else</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
       {/* WHERE */}
       <Section>
         <SectionHead
@@ -230,7 +302,7 @@ export default function MarryPage() {
             {MARRY_COUNTRIES.map((p) => (
               <li key={p.slug}>
                 <Link
-                  href={`/marry/${p.slug}`}
+                  href={`/weddings/${p.slug}`}
                   className="flex h-full flex-col justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-brand"
                 >
                   <span className="font-semibold text-slate-900">
@@ -329,7 +401,7 @@ export default function MarryPage() {
         </p>
       </Section>
 
-      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100. Tell me which country you are thinking of and I will tell you what it actually takes." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me which country you are thinking of and I will tell you what it actually takes." />
     </>
   );
 }

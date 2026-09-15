@@ -1,4 +1,4 @@
-// Per-country content for the /marry/[country] pages.
+// Per-country content for the /weddings/[country] pages.
 //
 // WHAT GOES HERE, AND WHAT DELIBERATELY DOES NOT:
 //

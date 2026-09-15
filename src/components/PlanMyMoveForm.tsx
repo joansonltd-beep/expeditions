@@ -10,7 +10,7 @@ import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
-const REASONS = ["Visit", "Work", "Business", "Study", "Family", "Retirement", "Other", "Not sure yet"];
+const REASONS = ["Visit", "Work", "Business", "Study", "Wedding", "Family", "Retirement", "Other", "Not sure yet"];
 
 const TIMEFRAMES = ["Within 3 months", "3 to 6 months", "6 to 12 months", "Just researching"];
 
@@ -21,6 +21,7 @@ const HELP_OPTIONS = [
   "Banking",
   "Business setup",
   "Flights or transfers",
+  "Wedding travel and room blocks",
   "Full relocation support",
   "Not sure yet",
 ];

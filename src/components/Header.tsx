@@ -14,7 +14,7 @@ type NavItem = { href: string; label: string; title?: string };
 const COME_SEE_ME: NavItem = { href: "/getting-there", label: "Visit", title: "Travel within CARICOM" };
 const COME_LIVE_WITH_ME: NavItem = { href: "/getting-started", label: "Work", title: "Relocating within CARICOM" };
 const STUDY: NavItem = { href: "/study", label: "Study", title: "Studying within CARICOM" };
-const MARRY: NavItem = { href: "/marry", label: "Marry", title: "Getting married within CARICOM" };
+const MARRY: NavItem = { href: "/weddings", label: "Marry", title: "Getting married within CARICOM" };
 const DESTINATIONS: NavItem = { href: "/destinations", label: "Destinations" };
 const TOOLS: NavItem = { href: "/tools", label: "Tools" };
 

@@ -24,6 +24,7 @@ const journeyLinks: FooterLink[] = [
 const companyLinks: FooterLink[] = [
   { href: "/plan-my-move", label: "Plan My Move", title: "Start a relocation enquiry" },
   { href: "/services", label: "Our Services", title: "Consultation, certificate assistance and full support" },
+  { href: "/weddings", label: "Weddings", title: "Destination weddings and wedding guest travel" },
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodation" },
   { href: "/transfers", label: "Transfers" },

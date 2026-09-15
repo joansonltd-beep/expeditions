@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
       `${c.name} wedding requirements`,
       `${c.name} wedding planner from abroad`,
     ],
-    alternates: { canonical: `/marry/${c.slug}` },
+    alternates: { canonical: `/weddings/${c.slug}` },
   };
 }
 
@@ -133,7 +133,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
                 means living there with legal permission to do so, on a residence permit or as a citizen who lives
                 there. A {c.name} passport does not count on its own if you live somewhere else, and neither does
                 visiting, however long you stay. If that is not your situation,{" "}
-                <Link href="/marry" className="font-semibold text-brand hover:underline">
+                <Link href="/weddings" className="font-semibold text-brand hover:underline">
                   any of the other eleven
                 </Link>{" "}
                 will work instead.
@@ -211,7 +211,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
         </div>
         <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-slate-600">
           Looking at more than one country?{" "}
-          <Link href="/marry" className="font-semibold text-brand hover:underline">
+          <Link href="/weddings" className="font-semibold text-brand hover:underline">
             Compare the twelve
           </Link>{" "}
           and I will help you pick.
@@ -219,7 +219,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
       </Section>
 
       <ConsultationCtaBlock
-        lead={`A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody's travel, is $100. Tell me what you have in mind and I will tell you what it actually takes.`}
+        lead={`A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me what you have in mind and I will tell you what it actually takes.`}
       />
     </>
   );
