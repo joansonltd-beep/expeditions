@@ -86,7 +86,7 @@ export default function DestinationsPage() {
   return (
     <>
       <PageHeader
-        title="CARI-GO to one of these CARICOM Countries"
+        title="CARI-COME to one of these CARICOM Countries"
         crumb="Where are we Going?"
         intro="Twelve CARICOM countries with Free Movement*, twelve different answers. Pick one below for the cost of living, places to see, things to do, where to eat, and national symbols."
         photos={AIRPORT_PHOTOS}
