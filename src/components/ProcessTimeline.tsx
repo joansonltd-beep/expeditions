@@ -30,8 +30,7 @@ export default function ProcessTimeline({
     <section className="bg-sand py-16 sm:py-24">
       <Container>
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{title}</h2>
+          <h2 className="mt-3 text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.95rem]">{title}</h2>
           {intro ? <p className="mt-3 text-lg text-navy/70">{intro}</p> : null}
         </div>
 

@@ -88,22 +88,46 @@ export function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * Section heading.
+ *
+ * `lead` is the important part. Every section used to open at the same size,
+ * which meant a page of six sections shouted six times at equal volume and
+ * read as a list of identical blocks rather than as a page with a shape. Mark
+ * one or two sections per page as the lead and leave the rest quiet, so the
+ * eye has somewhere to land first.
+ *
+ * Use `eyebrow` sparingly for the same reason. A stack of uppercase
+ * micro-labels down a page is decoration pretending to be structure.
+ */
 export function SectionHead({
   eyebrow,
   title,
   intro,
   center = true,
+  lead = false,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   center?: boolean;
+  lead?: boolean;
 }) {
   return (
-    <div className={`${center ? "mx-auto text-center" : ""} mb-12 max-w-2xl`}>
+    <div className={`${center ? "mx-auto text-center" : ""} ${lead ? "mb-14 max-w-3xl" : "mb-9 max-w-2xl"}`}>
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-      <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">{title}</h2>
-      {intro ? <p className="mt-3 text-lg text-navy/70">{intro}</p> : null}
+      <h2
+        className={
+          lead
+            ? "mt-3 font-display text-4xl font-bold leading-[1.04] tracking-tight text-navy sm:text-[3.25rem]"
+            : "mt-2 text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]"
+        }
+      >
+        {title}
+      </h2>
+      {intro ? (
+        <p className={lead ? "mt-5 text-lg text-navy/70" : "mt-2.5 text-[1.02rem] text-navy/65"}>{intro}</p>
+      ) : null}
     </div>
   );
 }

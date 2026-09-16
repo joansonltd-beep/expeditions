@@ -25,8 +25,7 @@ export default function DestinationPreview() {
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Where people go</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Country guides</h2>
+            <h2 className="font-display text-4xl font-bold leading-[1.04] tracking-tight sm:text-[3.25rem]">Country guides</h2>
             <p className="mt-3 text-lg text-cream/70">
               What it costs to live there, and what to expect once you land.
             </p>

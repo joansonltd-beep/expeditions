@@ -15,8 +15,7 @@ export default function TrustBoundaries() {
       <Container>
         <div className="mx-auto max-w-4xl">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Being straight with you</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+            <h2 className="mt-3 text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.95rem]">
               What I can do, and what I cannot do
             </h2>
           </div>

@@ -24,12 +24,12 @@
   --color-brand-soft: #e7f1f0;   /* pale teal wash */
   --color-accent: #b04e2f;       /* warm coral — one accent, used sparingly */
   --color-accent-dark: #8e3e25;
-  --color-accent-soft: #fbefe9;
+  --color-accent-soft: #fdf1e3;
   --color-navy: #0e2a3a;         /* headings and deep sections */
-  --color-sand: #f3eadb;         /* section separation */
-  --color-cream: #fdfbf7;        /* page ground */
+  --color-sand: #e7efee;         /* section separation */
+  --color-cream: #f6f9f9;        /* page ground: cool, so the photography supplies the warmth */
   --color-whatsapp: #25d366;
-  --color-field-warm: #f3eadb;   /* kept: the seasonal skin overrides it */
+  --color-field-warm: #eef4f3;   /* kept: the seasonal skin overrides it */
 
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-fraunces);
