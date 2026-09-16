@@ -24,7 +24,7 @@ import { Section, PageHeader, SectionHead, CheckList, type HeroPhoto } from "@/c
 import { Icon } from "@/components/icons";
 import WeHandleIt from "@/components/WeHandleIt";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
-import { MARRY_COUNTRIES, TIMING_LABEL } from "@/lib/marryData";
+import { OPEN_COUNTRIES, SOON_COUNTRIES, TIMING_LABEL } from "@/lib/marryData";
 
 export const metadata: Metadata = {
   title: "Getting Married In Another CARICOM Country",
@@ -294,22 +294,44 @@ export default function MarryPage() {
       <Section>
         <SectionHead
           eyebrow="Where"
-          title="Any of the twelve"
-          intro="Tell me which one you have in mind and I will tell you what it takes. If you are open-minded, I will tell you which ones suit the time you have."
+          title="Where I can do this today"
+          intro="A country goes on the open list once I have confirmed its marriage procedure with the registry itself, not before. The rest are being worked through."
         />
         <div className="mx-auto max-w-4xl">
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {MARRY_COUNTRIES.map((p) => (
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Open now</p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {OPEN_COUNTRIES.map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/weddings/${p.slug}`}
-                  className="flex h-full flex-col justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 transition hover:border-brand"
+                  className="flex h-full flex-col justify-center rounded-xl border border-brand/40 bg-white px-4 py-3 transition hover:border-brand"
                 >
-                  <span className="font-semibold text-slate-900">
+                  <span className="font-semibold text-slate-900">{p.name}</span>
+                  <span className="mt-0.5 text-xs text-slate-500">{TIMING_LABEL[p.timing]}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+            Being confirmed
+          </p>
+          <p className="mt-2 max-w-2xl text-sm text-slate-600">
+            I am going through these registry by registry. Tell me which one you have in mind and your date, and I
+            will confirm it for you and come back either way.
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {SOON_COUNTRIES.map((p) => (
+              <li key={p.slug}>
+                <Link
+                  href={`/weddings/${p.slug}`}
+                  className="flex h-full flex-col justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 transition hover:border-slate-400"
+                >
+                  <span className="font-semibold text-slate-700">
                     {p.name}
                     {p.timing === "resident-only" ? <span className="text-accent">*</span> : null}
                   </span>
-                  <span className="mt-0.5 text-xs text-slate-500">{TIMING_LABEL[p.timing]}</span>
+                  <span className="mt-0.5 text-xs text-slate-500">Confirming the procedure</span>
                 </Link>
               </li>
             ))}

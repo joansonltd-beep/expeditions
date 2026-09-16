@@ -41,6 +41,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
 
   const guide = getCountryGuide(c.slug);
   const residentOnly = c.timing === "resident-only";
+  const open = c.status === "open";
 
   const photos: HeroPhoto[] = guide?.photo
     ? [
@@ -71,11 +72,15 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
     : [
         {
           q: `How long do we have to be in ${c.name} before we can marry?`,
-          a: `${TIMING_LABEL[c.timing]}. The exact requirement depends on which licence applies to you and on your circumstances, and it is one of the first things I pin down, because it decides your flights and everybody's leave.`,
+          a: open
+            ? `${TIMING_LABEL[c.timing]}. The exact requirement depends on which licence applies to you and on your circumstances, and it is one of the first things I pin down, because it decides your flights and everybody's leave.`
+            : `Every country sets its own waiting time, and I have not yet confirmed ${c.name}'s with the registry itself, so I am not going to quote you one. Tell me your date and I will confirm it and come back to you either way.`,
         },
         {
           q: `What do we need to bring to ${c.name}?`,
-          a: "That depends on where you were born, where you live now and whether either of you has been married before. The form the documents take matters as much as having them, and getting it wrong is what sends couples back to a registry a second time. I work out the exact list for your situation and check everything before you fly.",
+          a: open
+            ? "That depends on where you were born, where you live now and whether either of you has been married before. The form the documents take matters as much as having them, and getting it wrong is what sends couples back to a registry a second time. I work out the exact list for your situation and check everything before you fly."
+            : `That is part of what I am confirming for ${c.name}. What I can tell you now is that the form your documents take usually matters as much as having them, which is why it is worth asking early rather than close to the date.`,
         },
         {
           q: `We are CARICOM nationals. Is it easier for us in ${c.name}?`,
@@ -108,7 +113,9 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
         intro={
           residentOnly
             ? `${c.name} only marries couples where one of you lives there, so this is the one country I usually cannot arrange a wedding in. Here is what that means, and where to go instead.`
-            : "Planning the day from somewhere else? I handle the licence, the documents and the travel, for you and for everyone flying in."
+            : open
+              ? "Planning the day from somewhere else? I handle the licence, the documents and the travel, for you and for everyone flying in."
+              : `I am confirming ${c.name}'s marriage procedure with the registry now. The travel side I can arrange today. Tell me your date and I will come back to you on the rest.`
         }
         photos={photos}
       />
@@ -120,13 +127,15 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
 
           <div
             className={`mt-8 rounded-2xl border p-6 ${
-              residentOnly ? "border-accent/40 bg-accent-soft" : "border-brand/30 bg-brand-soft"
+              residentOnly || !open ? "border-accent/40 bg-accent-soft" : "border-brand/30 bg-brand-soft"
             }`}
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              {residentOnly ? "Read this first" : "Timing"}
+              {residentOnly ? "Read this first" : open ? "Timing" : "Not open yet"}
             </p>
-            <p className="mt-2 text-lg font-bold text-slate-900">{TIMING_LABEL[c.timing]}</p>
+            <p className="mt-2 text-lg font-bold text-slate-900">
+              {residentOnly || open ? TIMING_LABEL[c.timing] : "I am confirming the procedure here"}
+            </p>
             {residentOnly ? (
               <p className="mt-3 text-slate-700">
                 {c.name} will only marry a couple where at least one of you actually lives in the country. Resident
@@ -140,9 +149,9 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
               </p>
             ) : (
               <p className="mt-3 text-slate-700">
-                Every country asks you to be on the ground for a set time before it will marry you, and {c.name} sits
-                at this end of the range. What exactly applies to the two of you depends on your circumstances, and
-                sorting that out is where we start.
+                {open
+                  ? `Every country asks you to be on the ground for a set time before it will marry you, and ${c.name} sits at this end of the range. What exactly applies to the two of you depends on your circumstances, and sorting that out is where we start.`
+                  : `I have not yet confirmed ${c.name}'s marriage procedure with the registry itself, so I am not quoting timings or costs for it. Tell me your date and I will confirm it and come back to you either way. Everything on the travel side, the flights, the rooms and the transfers, I can arrange today.`}
               </p>
             )}
             <p className="mt-3 text-sm font-semibold text-slate-700">Best suited to: {c.suits}</p>
@@ -154,14 +163,22 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
       <Section alt>
         <SectionHead
           eyebrow={`Your wedding in ${c.name}`}
-          title="What I take off you"
-          intro="I handle the legal side and the travel. The florist, the photographer and the person running the day itself are local, and I will point you to them."
+          title={open ? "What I take off you" : "What I can do today"}
+          intro={
+            open
+              ? "I handle the legal side and the travel. The florist, the photographer and the person running the day itself are local, and I will point you to them."
+              : "The travel side is ready to go. The licence I will confirm for your date before either of us commits to anything."
+          }
         />
         <div className="mx-auto max-w-3xl">
           <CheckList
             items={[
-              `The marriage licence for ${c.name}, start to finish`,
-              "The exact document list for your situation, checked before you fly",
+              open
+                ? `The marriage licence for ${c.name}, start to finish`
+                : `Confirming what ${c.name} asks of you, with the registry, for your date`,
+              open
+                ? "The exact document list for your situation, checked before you fly"
+                : "Telling you straight away if the timing will not work for you",
               `Flights into ${c.name} for the two of you and for guests coming from different countries`,
               "Accommodation, including a block of rooms held together for your guests",
               "Airport transfers and moving everybody around on the day",
@@ -219,7 +236,11 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
       </Section>
 
       <ConsultationCtaBlock
-        lead={`A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me what you have in mind and I will tell you what it actually takes.`}
+        lead={
+          open
+            ? `A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me what you have in mind and I will tell you what it actually takes.`
+            : `Tell me your date for ${c.name} and I will confirm the procedure with the registry and come back to you either way. There is no charge for asking. A full Move Planning Consultation is $100 and comes off the booking if you go ahead.`
+        }
       />
     </>
   );
