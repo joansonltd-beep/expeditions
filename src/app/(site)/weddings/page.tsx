@@ -209,8 +209,9 @@ export default function MarryPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Coming home</p>
             <h3 className="mt-3 text-xl font-bold text-slate-900">Marry back home</h3>
             <p className="mt-3 text-slate-600">
-              You live in New York or London or Toronto, and you want to marry where your family is from. Not at a
-              resort. At the church in Kingston, or the yard in Grenada, with the people who are still there.
+              You live in New York or London or Toronto, and you want to marry where your family is from. Not an
+              island somebody picked for you off a brochure. The church in Kingston, the yard in Grenada, or a resort
+              an hour from where your mother grew up, with the people who are still there.
             </p>
             <p className="mt-3 text-slate-600">
               The venue is rarely the hard part. The hard part is that your documents were issued somewhere else,
