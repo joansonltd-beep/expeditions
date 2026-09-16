@@ -1,20 +1,24 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import CurrencyFlag from "@/components/CurrencyFlag";
 
 type CurrencyCode = "TTD" | "JMD" | "BBD" | "XCD" | "BZD" | "GYD" | "SRD" | "USD" | "CAD" | "GBP";
 
-const CURRENCIES: { code: CurrencyCode; flag: string; name: string; where: string }[] = [
-  { code: "TTD", flag: "🇹🇹", name: "Trinidad and Tobago Dollar", where: "Trinidad and Tobago" },
-  { code: "JMD", flag: "🇯🇲", name: "Jamaican Dollar", where: "Jamaica" },
-  { code: "BBD", flag: "🇧🇧", name: "Barbados Dollar", where: "Barbados" },
-  { code: "XCD", flag: "🌴", name: "East Caribbean Dollar", where: "Antigua and Barbuda, Dominica, Grenada, Saint Lucia, St. Kitts and Nevis, St. Vincent and the Grenadines" },
-  { code: "BZD", flag: "🇧🇿", name: "Belize Dollar", where: "Belize" },
-  { code: "GYD", flag: "🇬🇾", name: "Guyanese Dollar", where: "Guyana" },
-  { code: "SRD", flag: "🇸🇷", name: "Surinamese Dollar", where: "Suriname" },
-  { code: "USD", flag: "🇺🇸", name: "US Dollar", where: "United States" },
-  { code: "CAD", flag: "🇨🇦", name: "Canadian Dollar", where: "Canada" },
-  { code: "GBP", flag: "🇬🇧", name: "Pound Sterling", where: "United Kingdom" },
+// No flag field on purpose. Flag emoji do not render on Windows, and a native
+// <option> cannot hold an element, so flags are drawn by CurrencyFlag wherever
+// real markup is allowed instead.
+const CURRENCIES: { code: CurrencyCode; name: string; where: string }[] = [
+  { code: "TTD", name: "Trinidad and Tobago Dollar", where: "Trinidad and Tobago" },
+  { code: "JMD", name: "Jamaican Dollar", where: "Jamaica" },
+  { code: "BBD", name: "Barbados Dollar", where: "Barbados" },
+  { code: "XCD", name: "East Caribbean Dollar", where: "Antigua and Barbuda, Dominica, Grenada, Saint Lucia, St. Kitts and Nevis, St. Vincent and the Grenadines" },
+  { code: "BZD", name: "Belize Dollar", where: "Belize" },
+  { code: "GYD", name: "Guyanese Dollar", where: "Guyana" },
+  { code: "SRD", name: "Surinamese Dollar", where: "Suriname" },
+  { code: "USD", name: "US Dollar", where: "United States" },
+  { code: "CAD", name: "Canadian Dollar", where: "Canada" },
+  { code: "GBP", name: "Pound Sterling", where: "United Kingdom" },
 ];
 
 // Per 1 USD. Used only when no live rate can be reached.
@@ -23,7 +27,7 @@ const FALLBACK: Record<CurrencyCode, number> = {
 };
 
 function meta(code: string) {
-  return CURRENCIES.find((c) => c.code === code) ?? { code, flag: "", name: code, where: "" };
+  return CURRENCIES.find((c) => c.code === code) ?? { code, name: code, where: "" };
 }
 
 function money(n: number, dp = 2) {
@@ -155,7 +159,8 @@ export default function CurrencyConverter() {
 
         <div className="mt-4 flex flex-wrap items-end gap-3">
           <div className="flex-1 min-w-[200px]">
-            <label htmlFor="from-cur" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/55">
+            <label htmlFor="from-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/55">
+              <CurrencyFlag code={from} />
               From
             </label>
             <select
@@ -166,7 +171,7 @@ export default function CurrencyConverter() {
             >
               {CURRENCIES.map((c) => (
                 <option key={c.code} value={c.code}>
-                  {c.flag} {c.code} – {c.name}
+                  {c.code} – {c.name}
                 </option>
               ))}
             </select>
@@ -185,7 +190,8 @@ export default function CurrencyConverter() {
           </button>
 
           <div className="flex-1 min-w-[200px]">
-            <label htmlFor="to-cur" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/55">
+            <label htmlFor="to-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/55">
+              <CurrencyFlag code={to} />
               To
             </label>
             <select
@@ -196,7 +202,7 @@ export default function CurrencyConverter() {
             >
               {CURRENCIES.map((c) => (
                 <option key={c.code} value={c.code}>
-                  {c.flag} {c.code} – {c.name}
+                  {c.code} – {c.name}
                 </option>
               ))}
             </select>
@@ -293,7 +299,10 @@ export default function CurrencyConverter() {
             {CURRENCIES.filter((c) => c.code !== from).map((c) => (
               <tr key={c.code} className="border-b border-navy/5 last:border-0">
                 <td className="py-1.5">
-                  {c.flag} <strong>{c.code}</strong>
+                  <span className="inline-flex items-center gap-2">
+                    <CurrencyFlag code={c.code} />
+                    <strong>{c.code}</strong>
+                  </span>
                   <span className="ml-1.5 text-xs text-navy/50">{c.name}</span>
                 </td>
                 <td className="py-1.5 text-right">{rateFormat(rateBetween(from, c.code))}</td>
