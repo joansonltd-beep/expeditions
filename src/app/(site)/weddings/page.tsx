@@ -80,8 +80,13 @@ const I_HELP = [
   "Bringing in a local planner for the day itself and running that relationship for you, so you are dealing with one person and not five",
   "Flights for the two of you and for guests coming in from different countries",
   "Accommodation, including a block of rooms held together for your guests",
-  "Airport transfers and moving everybody around on the day",
+  "Somebody at arrivals, and transport throughout: airport runs, getting around during the stay, and everybody to the ceremony and back on the day",
+  "Visas for guests who are not travelling on a CARICOM passport",
+  "How you will pay for things locally, so you are not relying on a foreign card at a vendor's counter",
   "One travel page for your guests, so you stop answering the same question forty times",
+  "Applying for the marriage certificate once the day is over",
+  "Getting that certificate legalised, so it is accepted where you actually live",
+  "The name change afterwards, from the passport through to the bank",
 ];
 
 const I_DO_NOT = [
@@ -161,9 +166,27 @@ export default function MarryPage() {
             country and a date they cannot move.
           </p>
           <p className="mt-4 text-slate-600">
-            That is the part I take off you. I work out which country fits the time you and your guests can actually
-            take off, tell you exactly what to bring and in what form, and get everybody there and housed. You choose
-            the dress and the venue.
+            That is where I start. I work out which country fits the time you and your guests can actually take off,
+            tell you exactly what to bring and in what form, and check it long before you are anywhere near a plane.
+          </p>
+          <p className="mt-4 text-slate-600">
+            Then I get everybody there. Flights for the two of you and for guests coming in from wherever they live.
+            A block of rooms held together, so your family is not scattered across three hotels. Somebody at arrivals
+            when they land, and transport for the whole of it: the run from the airport, getting around during the
+            stay, and moving everybody to the ceremony and away again on the day, which is the bit that quietly goes
+            wrong when forty people are relying on taxis they have not booked. Visas for anyone not travelling on a
+            CARICOM passport. A way of paying for things on the ground, because local suppliers rarely want a foreign
+            card. And a planner on the day itself, briefed and kept moving by me, so you are not running a project
+            from another country.
+          </p>
+          <p className="mt-4 text-slate-600">
+            It does not finish when the register is signed either. The certificate has to be applied for. If you are
+            going to use it where you live, it usually has to be legalised first or nobody will accept it. Then comes
+            everything a new name touches, from the passport to the bank. That is months of quiet paperwork from
+            several time zones away, and it is part of the job rather than something I hand back to you afterwards.
+          </p>
+          <p className="mt-4 text-slate-600">
+            What is left for the two of you is the part you actually wanted. How the day looks, and turning up to it.
           </p>
         </div>
       </Section>

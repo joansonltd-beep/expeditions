@@ -301,6 +301,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
               "A local planner for the day itself, brought in and managed by me",
               "Airport transfers and moving everybody around on the day",
               "One travel page for your guests, so you stop answering the same question forty times",
+              `The marriage certificate afterwards, legalised if you need it recognised outside ${c.name}`,
             ]}
           />
           <div className="mt-8">
