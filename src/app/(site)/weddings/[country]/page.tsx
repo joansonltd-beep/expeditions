@@ -236,9 +236,9 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
                 </p>
                 <p className="mt-3 text-slate-700">
                   What I am for is the version that is not that. A certificate that does not say what it needs to say.
-                  A divorce in another country. Office hours that do not fit your flights. And underneath all of it,
-                  thirty guests trying to reach the same island in the same week from four different airports, which is
-                  the part that actually eats your evenings.
+                  A divorce in another country. Office hours that do not fit your flights. Thirty guests trying to reach
+                  the same island in the same week from four different airports. And a planner who needs briefing,
+                  chasing and paying while you are in another time zone.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link href="/plan-my-move" className={btnPrimary}>
@@ -283,8 +283,8 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
           title={open ? "What I take off you" : "What I can do today"}
           intro={
             open
-              ? "I handle the legal side and the travel. The florist, the photographer and the person running the day itself are local, and I will point you to them."
-              : "The travel side is ready to go. The licence I will confirm for your date before either of us commits to anything."
+              ? "I handle the legal side and the travel, and I bring in a local planner for the day itself so you are not managing that separately either."
+              : "The travel side is ready to go, and I can bring in a planner. The licence I will confirm for your date before either of us commits to anything."
           }
         />
         <div className="mx-auto max-w-3xl">
@@ -298,6 +298,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
                 : "Telling you straight away if the timing will not work for you",
               `Flights into ${c.name} for the two of you and for guests coming from different countries`,
               "Accommodation, including a block of rooms held together for your guests",
+              "A local planner for the day itself, brought in and managed by me",
               "Airport transfers and moving everybody around on the day",
               "One travel page for your guests, so you stop answering the same question forty times",
             ]}

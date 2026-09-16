@@ -29,7 +29,7 @@ import { OPEN_COUNTRIES, SOON_COUNTRIES, TIMING_LABEL } from "@/lib/marryData";
 export const metadata: Metadata = {
   title: "Getting Married In Another CARICOM Country",
   description:
-    "Marrying in a CARICOM country you do not live in. I handle the licence, the documents and the travel for you and for everyone flying in, whether you are coming home from abroad or already in the region.",
+    "Marrying in a CARICOM country you do not live in. I handle the licence, the paperwork, everybody's travel and the planner for the day, whether you are coming home from abroad or already in the region.",
   keywords: [
     "getting married in another CARICOM country",
     "destination wedding Caribbean",
@@ -77,6 +77,7 @@ const I_HELP = [
   "Working out which country suits the time you and your guests can actually take off",
   "The marriage licence, start to finish, for the country you choose",
   "Getting your documents right before you travel, so nothing is turned away at the counter",
+  "Bringing in a local planner for the day itself and running that relationship for you, so you are dealing with one person and not five",
   "Flights for the two of you and for guests coming in from different countries",
   "Accommodation, including a block of rooms held together for your guests",
   "Airport transfers and moving everybody around on the day",
@@ -85,7 +86,7 @@ const I_HELP = [
 
 const I_DO_NOT = [
   "Register the marriage. The registry issues the licence and records the marriage, not me.",
-  "Plan the wedding itself. Flowers, decor, catering, photography and running the day are a local planner's job, and I will point you to one.",
+  "Be your florist, photographer or venue. Those are specialists, and the planner and I engage them rather than pretending to be them.",
   "Set the fees or the waiting times. Every country sets its own and changes them when it likes.",
   "Advise on whether your marriage will be recognised where you live. That is a question for a lawyer there.",
 ];
@@ -118,7 +119,7 @@ const MARRY_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do you plan the wedding?",
-    a: "No. I handle the legal side and the travel: the licence, the documents, the flights, the rooms and the transfers. The florist, the photographer and the person running your timeline on the day are all local, and I will put you in touch with them.",
+    a: "I organise it. The day itself is run by a local planner, because someone has to be standing in the room and that someone should know the venue. What I do is bring that planner in, brief them, and keep them moving alongside the licence and everybody's travel, so you are answering to one person rather than coordinating a committee from another country.",
   },
   {
     q: "Can you guarantee we will be legally married?",
@@ -145,7 +146,7 @@ export default function MarryPage() {
         icon={<Icon name="heart" className="h-7 w-7 text-brand" />}
         title="Marry"
         crumb="Marry"
-        intro="Marry somewhere you have always loved, or go home and marry where your family still is. I handle the licence, the paperwork, the flights and the rooms, so the only thing left for you to plan is the day itself."
+        intro="Get married somewhere you have always loved, or go home and marry where your family came from. I handle the licence, the paperwork, the flights and the rooms, and I bring in a planner for the day itself, so all the two of you have to do is turn up and say I do."
         photos={HERO_PHOTOS}
       />
 
@@ -354,7 +355,7 @@ export default function MarryPage() {
         <SectionHead
           eyebrow="Being straight with you"
           title="What I do, and what I don't"
-          intro="I am a travel and paperwork person, not a wedding planner. Knowing the difference saves everybody time."
+          intro="I am not the person arranging your flowers. I am the person making sure the licence, the travel and the planner all land on the same day."
         />
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
           <div>
