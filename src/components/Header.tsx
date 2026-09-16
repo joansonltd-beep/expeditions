@@ -111,7 +111,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
           {/* Divides the four things you can go and do from the reference
               pages behind them. Decorative, so it is hidden from screen
               readers; the grouping is already carried by the order. */}
-          <span aria-hidden="true" className="h-4 w-px shrink-0 bg-navy/25" />
+          <span aria-hidden="true" className="h-6 w-0.5 shrink-0 rounded-full bg-navy/45" />
 
           {REFERENCE.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
