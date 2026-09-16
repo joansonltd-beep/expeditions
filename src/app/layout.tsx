@@ -59,10 +59,10 @@ export const metadata: Metadata = {
       "Tell Jo where you are starting and where you want to go. We work out what your destination asks for and organise the papers, flights and arrival around it.",
     images: [
       {
-        url: "/og.png",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Expeditions With Jo, help to visit, work or study in another CARICOM country",
+        alt: "Expeditions With Jo: visit, work, study or marry in another CARICOM country",
       },
     ],
   },
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
     description:
       "Working out how to visit, work or study in another CARICOM country, and getting it organised once you know.",
-    images: ["/og.png"],
+    images: ["/og.jpg"],
   },
 };
 

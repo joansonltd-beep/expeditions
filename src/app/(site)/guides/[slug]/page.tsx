@@ -39,7 +39,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     keywords: a.keywords?.join(", "),
     datePublished: a.publishedAt || undefined,
     url: `${SITE_URL}/guides/${a.slug}`,
-    image: `${SITE_URL}/og.png`,
+    image: `${SITE_URL}/og.jpg`,
     author: { "@type": "Organization", name: "Expeditions With Jo" },
     publisher: { "@type": "Organization", name: "Expeditions With Jo", logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` } },
   };

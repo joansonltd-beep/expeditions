@@ -47,7 +47,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     name: settings.businessName,
     description: settings.footerBlurb,
     url: SITE_URL,
-    image: `${SITE_URL}/og.png`,
+    image: `${SITE_URL}/og.jpg`,
     logo: `${SITE_URL}/icon.png`,
     telephone: `+${settings.whatsappNumber.replace(/\D/g, "")}`,
     email: settings.generalEmail,
