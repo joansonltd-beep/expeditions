@@ -84,12 +84,17 @@ export default function Translator() {
     }
   }, []);
 
-  const canSpeak = speechSupported && !typeMode;
+  // A language can be translatable without being speakable. Haitian Creole is
+  // the current example: MyMemory handles it, browsers have no voice for it.
+  const speechAvailable = fromLang.speech && toLang.speech;
+  const canSpeak = speechSupported && speechAvailable && !typeMode;
 
   const notice = useMemo(() => {
+    if (!fromLang.speech) return `${fromLang.name} is text only. No browser can listen to it or read it aloud yet, so type it in and the translation still works.`;
+    if (!toLang.speech) return `${toLang.name} is text only. The translation will appear as text rather than being read aloud.`;
     if (!speechSupported) return "This browser can't listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.";
     return "";
-  }, [speechSupported]);
+  }, [speechSupported, fromLang, toLang]);
 
   function stopListening() {
     listeningRef.current = false;
@@ -105,7 +110,7 @@ export default function Translator() {
 
   function startListening() {
     const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SR) return;
+    if (!SR || !fromLang.speech) return;
     const recog = new SR();
     recog.lang = fromLang.rec;
     recog.continuous = true;
@@ -162,7 +167,7 @@ export default function Translator() {
 
   function speak(text: string, code: string) {
     const lang = getLanguage(code);
-    if (!lang || !window.speechSynthesis) return;
+    if (!lang || !lang.speech || !window.speechSynthesis) return;
     const u = new SpeechSynthesisUtterance(text);
     u.lang = lang.tts;
     const base = lang.tts.split("-")[0];
@@ -243,13 +248,15 @@ export default function Translator() {
                   ) : (
                     <>
                       <p className="mt-1.5 text-xl font-semibold text-navy">{e.output}</p>
-                      <button
-                        type="button"
-                        onClick={() => speak(e.output!, e.toCode)}
-                        className="mt-2 rounded-full border border-navy/20 px-3 py-1 text-xs font-semibold text-navy transition hover:border-brand hover:text-brand"
-                      >
-                        Play again
-                      </button>
+                      {getLanguage(e.toCode)?.speech ? (
+                        <button
+                          type="button"
+                          onClick={() => speak(e.output!, e.toCode)}
+                          className="mt-2 rounded-full border border-navy/20 px-3 py-1 text-xs font-semibold text-navy transition hover:border-brand hover:text-brand"
+                        >
+                          Play again
+                        </button>
+                      ) : null}
                     </>
                   )}
                 </article>
@@ -278,12 +285,17 @@ export default function Translator() {
         ) : (
           <button
             type="button"
+            disabled={!fromLang.speech}
             onClick={() => (listening ? stopListening() : startListening())}
             className={`flex w-full items-center justify-center gap-3 rounded-xl px-4 py-4 text-base font-semibold text-white transition ${
-              listening ? "bg-accent" : "bg-navy hover:bg-navy/90"
+              !fromLang.speech
+                ? "cursor-not-allowed bg-navy/30"
+                : listening
+                  ? "bg-accent"
+                  : "bg-navy hover:bg-navy/90"
             }`}
           >
-            {listening ? "Listening. Tap to stop" : "Start listening"}
+            {!fromLang.speech ? "Type instead for this language" : listening ? "Listening. Tap to stop" : "Start listening"}
           </button>
         )}
 

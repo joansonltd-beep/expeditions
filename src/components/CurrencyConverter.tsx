@@ -42,13 +42,27 @@ const STEPS = [1, 5, 10, 25, 50, 100, 500, 1000, 5000];
 export default function CurrencyConverter() {
   const [rates, setRates] = useState<Record<string, number>>(FALLBACK);
   const [status, setStatus] = useState<{ text: string; stale: boolean }>({ text: "Loading rates", stale: false });
+  const [checking, setChecking] = useState(false);
+  const [justChecked, setJustChecked] = useState(false);
   const [from, setFrom] = useState<CurrencyCode>("TTD");
   const [to, setTo] = useState<CurrencyCode>("JMD");
   const [amountStr, setAmountStr] = useState("1.00");
 
-  function load() {
-    setStatus({ text: "Loading rates", stale: false });
-    fetch("https://open.er-api.com/v6/latest/USD")
+  // The upstream serves Cache-Control: public, max-age=3600. Without
+  // no-store the browser answers Refresh from its own cache: identical
+  // bytes, identical timestamp, and a button that looks broken.
+  function load(manual = false) {
+    if (manual) setChecking(true);
+    setStatus((prev) => (manual ? prev : { text: "Loading rates", stale: false }));
+
+    const done = () => {
+      if (!manual) return;
+      setChecking(false);
+      setJustChecked(true);
+      window.setTimeout(() => setJustChecked(false), 4000);
+    };
+
+    fetch("https://open.er-api.com/v6/latest/USD", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => {
         if (!d?.rates) return Promise.reject();
@@ -58,14 +72,17 @@ export default function CurrencyConverter() {
         applyRates(d.rates, when, true);
       })
       .catch(() =>
-        fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json")
+        fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json", {
+          cache: "no-store",
+        })
           .then((r) => (r.ok ? r.json() : Promise.reject()))
           .then((d) => {
             if (!d?.usd) return Promise.reject();
             applyRates(d.usd, d.date || "today", true);
           })
       )
-      .catch(() => applyRates(FALLBACK, "stored rates", false));
+      .catch(() => applyRates(FALLBACK, "stored rates", false))
+      .finally(done);
   }
 
   function applyRates(map: Record<string, number>, when: string, isLive: boolean) {
@@ -76,7 +93,9 @@ export default function CurrencyConverter() {
     }
     setRates(clean);
     setStatus({
-      text: isLive ? `Mid-market rate, updated ${when}` : `Live rates unavailable. Showing ${when}.`,
+      text: isLive
+        ? `Mid-market rate, published ${when}. These are set once a day.`
+        : `Live rates unavailable. Showing ${when}.`,
       stale: !isLive,
     });
   }
@@ -189,8 +208,13 @@ export default function CurrencyConverter() {
             />
             {status.text}
           </span>
-          <button type="button" onClick={load} className="font-semibold text-brand underline-offset-2 hover:underline">
-            Refresh rates
+          <button
+            type="button"
+            onClick={() => load(true)}
+            disabled={checking}
+            className="font-semibold text-brand underline-offset-2 hover:underline disabled:opacity-60"
+          >
+            {checking ? "Checking\u2026" : justChecked ? "Up to date" : "Refresh rates"}
           </button>
         </div>
       </div>
