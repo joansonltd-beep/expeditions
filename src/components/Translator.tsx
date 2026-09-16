@@ -90,7 +90,7 @@ export default function Translator() {
   const canSpeak = speechSupported && canHearFrom && !typeMode;
 
   const notice = useMemo(() => {
-    if (!canHearFrom) return `No browser can listen to ${fromLang.name} yet, so type it in. The translation still works, and ${toLang.ttsNote ? "can still be read aloud" : "can be read aloud"}.`;
+    if (!canHearFrom) return `Listening is not available for ${fromLang.short}. Type it in and it translates just the same.`;
     if (toLang.ttsNote) return toLang.ttsNote;
     if (!speechSupported) return "This browser can't listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.";
     return "";
@@ -295,7 +295,7 @@ export default function Translator() {
                   : "bg-navy hover:bg-navy/90"
             }`}
           >
-            {!canHearFrom ? "Type instead for this language" : listening ? "Listening. Tap to stop" : "Start listening"}
+            {!canHearFrom ? "Type it in instead" : listening ? "Listening. Tap to stop" : "Start listening"}
           </button>
         )}
 
