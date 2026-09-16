@@ -39,9 +39,24 @@ function rateFormat(n: number) {
 
 const STEPS = [1, 5, 10, 25, 50, 100, 500, 1000, 5000];
 
+
+// The rate feed publishes just after midnight UTC. Every country we serve is
+// UTC-4 or UTC-5, so a correctly formatted local date shows YESTERDAY for
+// rates that are hours old, every day, forever. Relative age avoids that.
+function ageFrom(d: Date): string {
+  const mins = Math.round((Date.now() - d.getTime()) / 60000);
+  if (mins < 2) return "just now";
+  if (mins < 60) return `${mins} minutes ago`;
+  const hrs = Math.round(mins / 60);
+  if (hrs === 1) return "an hour ago";
+  if (hrs < 36) return `${hrs} hours ago`;
+  const days = Math.round(hrs / 24);
+  return days === 1 ? "yesterday" : `${days} days ago`;
+}
+
 export default function CurrencyConverter() {
   const [rates, setRates] = useState<Record<string, number>>(FALLBACK);
-  const [status, setStatus] = useState<{ text: string; stale: boolean }>({ text: "Loading rates", stale: false });
+  const [status, setStatus] = useState<{ text: string; stale: boolean; exact?: string }>({ text: "Loading rates", stale: false });
   const [checking, setChecking] = useState(false);
   const [justChecked, setJustChecked] = useState(false);
   const [from, setFrom] = useState<CurrencyCode>("TTD");
@@ -66,10 +81,9 @@ export default function CurrencyConverter() {
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => {
         if (!d?.rates) return Promise.reject();
-        const when = d.time_last_update_utc
-          ? new Date(d.time_last_update_utc).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })
-          : "just now";
-        applyRates(d.rates, when, true);
+        const at = d.time_last_update_utc ? new Date(d.time_last_update_utc) : undefined;
+        const when = at ? at.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }) : "just now";
+        applyRates(d.rates, when, true, at && !isNaN(at.getTime()) ? at : undefined);
       })
       .catch(() =>
         fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json", {
@@ -85,7 +99,7 @@ export default function CurrencyConverter() {
       .finally(done);
   }
 
-  function applyRates(map: Record<string, number>, when: string, isLive: boolean) {
+  function applyRates(map: Record<string, number>, when: string, isLive: boolean, at?: Date) {
     const clean: Record<string, number> = {};
     for (const c of CURRENCIES) {
       const v = map[c.code] !== undefined ? map[c.code] : map[c.code.toLowerCase()];
@@ -94,8 +108,9 @@ export default function CurrencyConverter() {
     setRates(clean);
     setStatus({
       text: isLive
-        ? `Mid-market rate, published ${when}. These are set once a day.`
+        ? `Mid-market rate, updated ${at ? ageFrom(at) : when}. Rates are set once a day.`
         : `Live rates unavailable. Showing ${when}.`,
+      exact: at ? at.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }) : "",
       stale: !isLive,
     });
   }
@@ -206,7 +221,7 @@ export default function CurrencyConverter() {
             <span
               className={`mr-1.5 inline-block h-2 w-2 rounded-full align-middle ${status.stale ? "bg-amber-500" : "bg-emerald-600"}`}
             />
-            {status.text}
+            <span title={status.exact || undefined}>{status.text}</span>
           </span>
           <button
             type="button"
