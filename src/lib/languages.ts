@@ -8,10 +8,10 @@
 // official language of Haiti, it has an ISO code, and MyMemory translates it
 // in both directions at the same quality as French.
 //
-// What it does not have is browser speech. No mainstream browser ships
-// recognition or a voice for ht-HT, so it is marked speech: false and the
-// microphone and speaker are hidden for it rather than silently falling back
-// to an English voice reading Creole aloud.
+// What it does not have is its own browser speech. Nothing recognises spoken
+// Haitian Creole, so its microphone stays off. It is read aloud with a French
+// voice, which is a genuine approximation rather than a fudge: Creole spelling
+// is French-derived, so French pronounces it far closer than English would.
 
 export type Language = {
   code: string; // ISO 639-1, used as the MyMemory langpair segment
@@ -19,19 +19,35 @@ export type Language = {
   where: string;
   rec: string; // BCP-47 tag for SpeechRecognition
   tts: string; // BCP-47 tag for speechSynthesis
-  /** False where no browser ships recognition or a voice: text only. */
-  speech: boolean;
+  /**
+   * Some languages can be read aloud but not listened to. Empty rec means no
+   * browser recognises it, so the microphone is hidden. Empty tts would mean
+   * no voice at all; an approximate voice is better than none, but say so.
+   */
+  ttsNote?: string;
 };
 
 export const LANGUAGES: Language[] = [
-  { code: "en", name: "English", where: "Every member state except Haiti and Suriname", rec: "en-US", tts: "en-US", speech: true },
-  { code: "fr", name: "Français (French)", where: "Haiti", rec: "fr-FR", tts: "fr-FR", speech: true },
-  { code: "ht", name: "Kreyòl Ayisyen (Haitian Creole)", where: "Haiti, and Haitian communities across the region", rec: "", tts: "", speech: false },
-  { code: "nl", name: "Nederlands (Dutch)", where: "Suriname", rec: "nl-NL", tts: "nl-NL", speech: true },
-  { code: "es", name: "Español (Spanish)", where: "Belize, and across the wider region", rec: "es-MX", tts: "es-MX", speech: true },
-  { code: "hi", name: "हिन्दी (Hindi)", where: "Indo-Caribbean communities", rec: "hi-IN", tts: "hi-IN", speech: true },
-  { code: "zh", name: "中文 (Mandarin)", where: "Chinese communities in Suriname, Guyana, Trinidad, Jamaica", rec: "zh-CN", tts: "zh-CN", speech: true },
-  { code: "pt", name: "Português (Portuguese)", where: "Brazilian communities in Guyana and Suriname", rec: "pt-BR", tts: "pt-BR", speech: true },
+  { code: "en", name: "English", where: "Every member state except Haiti and Suriname", rec: "en-US", tts: "en-US" },
+  { code: "fr", name: "Français (French)", where: "Haiti", rec: "fr-FR", tts: "fr-FR" },
+  {
+    code: "ht",
+    name: "Kreyòl Ayisyen (Haitian Creole)",
+    where: "Haiti, and Haitian communities across the region",
+    // No browser recognises spoken Haitian Creole, so the microphone stays off:
+    // French recognition would return French words and we would then translate
+    // the wrong sentence. Reading it aloud is a different matter. Creole
+    // orthography is French-derived, so a French voice pronounces it far closer
+    // than an English one, which mangles ou, è and the nasal vowels.
+    rec: "",
+    tts: "fr-FR",
+    ttsNote: "Read aloud with a French voice, which is the closest match available. Pronunciation is approximate.",
+  },
+  { code: "nl", name: "Nederlands (Dutch)", where: "Suriname", rec: "nl-NL", tts: "nl-NL" },
+  { code: "es", name: "Español (Spanish)", where: "Belize, and across the wider region", rec: "es-MX", tts: "es-MX" },
+  { code: "hi", name: "हिन्दी (Hindi)", where: "Indo-Caribbean communities", rec: "hi-IN", tts: "hi-IN" },
+  { code: "zh", name: "中文 (Mandarin)", where: "Chinese communities in Suriname, Guyana, Trinidad, Jamaica", rec: "zh-CN", tts: "zh-CN" },
+  { code: "pt", name: "Português (Portuguese)", where: "Brazilian communities in Guyana and Suriname", rec: "pt-BR", tts: "pt-BR" },
 ];
 
 export function getLanguage(code: string): Language | undefined {
