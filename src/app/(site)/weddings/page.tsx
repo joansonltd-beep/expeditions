@@ -186,6 +186,11 @@ export default function MarryPage() {
             several time zones away, and it is part of the job rather than something I hand back to you afterwards.
           </p>
           <p className="mt-4 text-slate-600">
+            That last part is quoted on its own rather than folded into the booking, because it runs on long after
+            the trip is over and not every couple needs all of it. We work out which pieces actually apply to you in
+            the consultation, and you know the cost before anything starts.
+          </p>
+          <p className="mt-4 text-slate-600">
             What is left for the two of you is the part you actually wanted. How the day looks, and turning up to it.
           </p>
         </div>
@@ -447,7 +452,7 @@ export default function MarryPage() {
         </p>
       </Section>
 
-      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me which country you are thinking of and I will tell you what it actually takes." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Anything that carries on after the wedding is quoted separately, and we go through it in the same conversation so there are no surprises later." />
     </>
   );
 }
