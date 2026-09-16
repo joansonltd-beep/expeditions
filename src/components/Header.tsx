@@ -23,11 +23,14 @@ const TOOLS: NavItem = { href: "/tools", label: "Tools" };
 // directly shareable page — just not in the top nav.
 const AFTER: NavItem[] = [{ href: "/about", label: "About Us" }];
 
+// The nav splits in two: the four things a visitor can go and do, then the
+// reference pages behind them. A hairline sits between the groups on desktop.
+const PATHWAYS: NavItem[] = [COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY];
+const REFERENCE: NavItem[] = [DESTINATIONS, TOOLS, ...AFTER];
+
 // No "Home" link: the logo itself goes home, same as most sites.
 const MOBILE_LINKS: NavItem[] = Array.from(
-  new Map(
-    [COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY, DESTINATIONS, TOOLS, ...AFTER].map((l) => [l.href, l])
-  ).values()
+  new Map([...PATHWAYS, ...REFERENCE].map((l) => [l.href, l])).values()
 );
 
 export default function Header({ businessName, logoUrl }: { businessName: string; logoUrl: string | null }) {
@@ -99,7 +102,18 @@ export default function Header({ businessName, logoUrl }: { businessName: string
             window gets wider. At 1400px there was a third of the bar sitting
             empty. */}
         <div className="hidden flex-1 items-center justify-center gap-8 lg:flex xl:gap-10 2xl:gap-12">
-          {[COME_SEE_ME, COME_LIVE_WITH_ME, STUDY, MARRY, DESTINATIONS, TOOLS, ...AFTER].map((l) => (
+          {PATHWAYS.map((l) => (
+            <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
+              {l.label}
+            </Link>
+          ))}
+
+          {/* Divides the four things you can go and do from the reference
+              pages behind them. Decorative, so it is hidden from screen
+              readers; the grouping is already carried by the order. */}
+          <span aria-hidden="true" className="h-4 w-px shrink-0 bg-navy/25" />
+
+          {REFERENCE.map((l) => (
             <Link key={l.href} href={l.href} title={l.title} className={linkClass(l.href)}>
               {l.label}
             </Link>
