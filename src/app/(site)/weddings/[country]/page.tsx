@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Section, PageHeader, SectionHead, CheckList, btnGhost, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost, type HeroPhoto } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import WeHandleIt from "@/components/WeHandleIt";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
@@ -42,6 +42,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
   const guide = getCountryGuide(c.slug);
   const residentOnly = c.timing === "resident-only";
   const open = c.status === "open";
+  const marryGuide = c.guide;
 
   const photos: HeroPhoto[] = guide?.photo
     ? [
@@ -158,6 +159,122 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
           </div>
         </div>
       </Section>
+
+      {/* THE GUIDE, where we publish one */}
+      {marryGuide ? (
+        <>
+          <Section alt>
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl font-bold text-slate-900">What {c.name} actually requires</h2>
+              <p className="mt-3 text-slate-600">{marryGuide.summary}</p>
+              <p className="mt-4 text-sm text-slate-500">
+                Checked with the current published requirements in {marryGuide.checked}. Countries change their fees and
+                their rules without announcing it, so treat this as a solid starting point rather than the last word.
+              </p>
+
+              <h3 className="mt-10 text-lg font-bold text-slate-900">The licence</h3>
+              <div className="mt-4 grid gap-3">
+                {marryGuide.licences.map((l) => (
+                  <div
+                    key={l.name}
+                    className={`rounded-2xl border p-5 ${
+                      l.forYou ? "border-brand/40 bg-white" : "border-slate-200 bg-slate-50"
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                      <h4 className="font-bold text-slate-900">{l.name}</h4>
+                      {l.forYou ? (
+                        <span className="rounded-full bg-brand-soft px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-brand">
+                          Most visiting couples
+                        </span>
+                      ) : null}
+                    </div>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{l.detail}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h3 className="mt-10 text-lg font-bold text-slate-900">How long you have to be there</h3>
+              <p className="mt-3 text-slate-600">{marryGuide.waiting}</p>
+
+              <h3 className="mt-10 text-lg font-bold text-slate-900">Where it is handled</h3>
+              <p className="mt-3 text-slate-600">{marryGuide.office}</p>
+
+              <h3 className="mt-10 text-lg font-bold text-slate-900">What to bring</h3>
+              <div className="mt-4">
+                <CheckList items={marryGuide.documents} />
+              </div>
+
+              <h3 className="mt-10 text-lg font-bold text-slate-900">What it costs the country</h3>
+              <p className="mt-3 text-slate-600">{marryGuide.officialCost}</p>
+            </div>
+          </Section>
+
+          {/* The failure modes. The most useful thing on the page, and the
+              reason most readers decide not to do this alone. */}
+          <Section>
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-2xl font-bold text-slate-900">What catches people out</h2>
+              <p className="mt-3 text-slate-600">
+                None of these are hidden. They are just the things nobody thinks to check until they are standing at
+                a counter with the wrong piece of paper.
+              </p>
+              <ul className="mt-6 grid gap-4">
+                {marryGuide.catches.map((item) => (
+                  <li key={item} className="rounded-2xl border border-accent/25 bg-accent-soft p-5">
+                    <p className="text-sm leading-relaxed text-slate-700">{item}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 rounded-2xl border border-brand/30 bg-brand-soft p-6 sm:p-7">
+                <h3 className="text-lg font-bold text-slate-900">You can absolutely do this yourself</h3>
+                <p className="mt-2 text-slate-700">
+                  Everything above is on this page precisely so you can. Plenty of couples do, and if you are marrying
+                  in {c.name} with two passports, two clean birth certificates and no previous marriages, it is not a
+                  hard process.
+                </p>
+                <p className="mt-3 text-slate-700">
+                  What I am for is the version that is not that. A certificate that does not say what it needs to say.
+                  A divorce in another country. Office hours that do not fit your flights. And underneath all of it,
+                  thirty guests trying to reach the same island in the same week from four different airports, which is
+                  the part that actually eats your evenings.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link href="/plan-my-move" className={btnPrimary}>
+                    Tell me about your wedding
+                  </Link>
+                  <Link href="/weddings/guests" className={btnGhost}>
+                    See the guest side
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Section>
+
+          <Section alt>
+            <SectionHead eyebrow="Step by step" title={`Getting married in ${c.name}, in order`} />
+            <div className="mx-auto max-w-3xl">
+              <ol className="grid gap-0">
+                {marryGuide.steps.map((s, i) => (
+                  <li
+                    key={s.title}
+                    className="grid grid-cols-[2.25rem_1fr] gap-4 border-t border-dashed border-slate-300 py-5 first:border-t-0 first:pt-0"
+                  >
+                    <span className="font-display text-2xl font-bold leading-none text-brand tabular-nums">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-slate-900">{s.title}</h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{s.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </Section>
+        </>
+      ) : null}
 
       {/* WHAT I DO FOR THIS WEDDING */}
       <Section alt>

@@ -145,7 +145,7 @@ export default function MarryPage() {
         icon={<Icon name="heart" className="h-7 w-7 text-brand" />}
         title="Marry"
         crumb="Marry"
-        intro="Getting married in a CARICOM country you do not live in. I handle the licence, the documents and the travel, for you and for everyone flying in."
+        intro="Marry somewhere you have always loved, or go home and marry where your family still is. I handle the licence, the paperwork, the flights and the rooms, so the only thing left for you to plan is the day itself."
         photos={HERO_PHOTOS}
       />
 
