@@ -44,3 +44,8 @@ next-env.d.ts
 
 # sanity
 .sanity/
+
+# Personal photos kept in public/ but not for deployment. Twice committed by
+# accident via a broad "git add public", so ignored explicitly.
+public/photos/me in suit.jpeg
+public/photos/me with flag background.jpg
