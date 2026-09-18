@@ -70,7 +70,7 @@ export const DEFAULT_HOME: HomeContent = {
   journeysEyebrow: "Start here",
   journeysTitle: "Why are you going?",
   journeysIntro:
-    "Visiting, working and studying each follow a different process, with different rules. Pick the one that fits you.",
+    "Visiting, working, studying and marrying each follow a different process, with different rules. Pick the one that fits you.",
   journeys: [
     {
       title: "I want to visit",
@@ -89,6 +89,12 @@ export const DEFAULT_HOME: HomeContent = {
       text: "Free movement does not cover study, so this is a different process. We help with the school, the permit, and getting you there.",
       cta: "See what studying involves",
       href: "/study",
+    },
+    {
+      title: "I want to get married",
+      text: "Somewhere you have always loved, or back home where your family came from. We handle the licence, the paperwork, everybody's travel and the planner for the day.",
+      cta: "See what marrying involves",
+      href: "/weddings",
     },
   ],
   journeysNote:

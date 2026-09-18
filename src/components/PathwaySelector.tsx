@@ -22,6 +22,11 @@ const PATHWAY_IMAGE: Record<string, { src: string; alt: string; caption: string 
     alt: "The University of the West Indies campus at St. Augustine, Trinidad",
     caption: "UWI St. Augustine",
   },
+  "/weddings": {
+    src: "/places/trinidad-and-tobago/queens-park-savannah.jpg",
+    alt: "Queen's Royal College, one of the Magnificent Seven mansions by Queen's Park Savannah, Port of Spain",
+    caption: "Queen's Park Savannah, Trinidad",
+  },
 };
 
 /**
