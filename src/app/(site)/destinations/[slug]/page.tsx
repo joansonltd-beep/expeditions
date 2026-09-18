@@ -495,7 +495,17 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
         <div className="mx-auto mt-6 grid max-w-3xl gap-5 sm:grid-cols-2">
           {g.placesToSee.map((p, i) => (
             <div key={i} id={placeSlug(p.name)} className="scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-              {p.photo ? (
+              {p.video ? (
+                <video
+                  className="aspect-[16/9] w-full bg-navy object-cover"
+                  src={p.video.src}
+                  poster={p.video.poster}
+                  preload="none"
+                  controls
+                  playsInline
+                  aria-label={p.video.label}
+                />
+              ) : p.photo ? (
                 <div className="relative aspect-[16/9] w-full">
                   <Image src={p.photo.src} alt={p.photo.alt} fill sizes="(max-width: 768px) 100vw, 384px" className="object-cover" />
                 </div>
@@ -503,7 +513,9 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <div className="p-6">
                 <h3 className="font-semibold text-slate-900">{p.name}</h3>
                 <p className="mt-2 text-sm text-slate-600">{p.description}</p>
-                {p.photo ? (
+                {p.video ? (
+                  <p className="mt-3 text-xs text-slate-400">Video: {p.video.credit}</p>
+                ) : p.photo ? (
                   <p className="mt-3 text-xs text-slate-400">
                     Photo:{" "}
                     {p.photo.creditUrl ? (

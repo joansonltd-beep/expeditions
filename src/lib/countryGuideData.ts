@@ -41,7 +41,15 @@ export type CostOfLiving = {
   asOf: string; // e.g. "August 2026"; cost of living data goes stale fast
 };
 
-export type PlaceToSee = { name: string; description: string; photo?: CountryPhoto };
+/**
+ * A short clip for places where motion is the point, a waterfall being the
+ * obvious case. Deliberately click to play rather than autoplay: the card
+ * shows the poster and downloads nothing until someone asks for it, which
+ * matters on a mobile connection.
+ */
+export type PlaceVideo = { src: string; poster: string; label: string; credit: string };
+
+export type PlaceToSee = { name: string; description: string; photo?: CountryPhoto; video?: PlaceVideo };
 export type Experience = { title: string; description: string };
 export type PlaceToEat = { name: string; description: string; area?: string };
 export type LocalDish = { name: string; description: string };
@@ -1962,8 +1970,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     photo: {
       src: "/destinations/jamaica.jpg",
       alt: "Dunn's River Falls, Ocho Rios, Jamaica",
-      credit: "Don Ramey Logan, CC BY-SA 3.0, via Wikimedia Commons",
-      creditUrl: "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_wide_Photo_Don_Ramey_Logan.jpg",
+      credit: "Joanson Baptiste James",
     },
     coordinates: { lat: 17.997, lng: -76.7936, display: "18.00°N, 76.79°W", zoom: 9 },
     demographics: {
@@ -2054,8 +2061,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         photo: {
           src: "/destinations/jamaica.jpg",
           alt: "Dunn's River Falls, Ocho Rios, Jamaica",
-          credit: "Don Ramey Logan, CC BY-SA 3.0, via Wikimedia Commons",
-          creditUrl: "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_wide_Photo_Don_Ramey_Logan.jpg",
+          credit: "Joanson Baptiste James",
+        },
+        video: {
+          src: "/videos/dunns-river-falls.mp4",
+          poster: "/videos/dunns-river-falls-poster.jpg",
+          label: "Dunn's River Falls, filmed from the pool at the bottom",
+          credit: "Joanson Baptiste James",
         },
       },
       {
