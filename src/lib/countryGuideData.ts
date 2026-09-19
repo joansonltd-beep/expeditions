@@ -47,7 +47,14 @@ export type CostOfLiving = {
  * shows the poster and downloads nothing until someone asks for it, which
  * matters on a mobile connection.
  */
-export type PlaceVideo = { src: string; poster: string; label: string; credit: string };
+export type PlaceVideo = {
+  src: string;
+  poster: string;
+  label: string;
+  credit: string;
+  /** Shot on a phone held upright. Gets a taller box so it is not cropped to a sliver. */
+  portrait?: boolean;
+};
 
 export type PlaceToSee = { name: string; description: string; photo?: CountryPhoto; video?: PlaceVideo };
 export type Experience = { title: string; description: string };
@@ -137,7 +144,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "antigua-and-barbuda",
     name: "Antigua and Barbuda",
-    tagline: "365 beaches, a working Georgian dockyard, and the Caribbean's biggest frigate bird colony.",
+    tagline: "365 beaches, one for every day of the year, and a Georgian naval dockyard still in working order.",
     overview:
       "Antigua and Barbuda is a two-island nation in the Eastern Caribbean: Antigua, the larger and more developed island, built around sailing, historic English Harbour and its beaches; and Barbuda, low-lying, sparsely populated and largely undeveloped, known for pink sand and seabirds.",
     photo: {
@@ -477,7 +484,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "barbados",
     name: "Barbados",
-    tagline: "The Caribbean's culinary capital: a former British colony turned republic, built around rum, reefs and Bajan cuisine.",
+    tagline: "The Caribbean's culinary capital: a former British colony turned republic, built around rum and Bajan food.",
     overview:
       "Barbados is the easternmost Caribbean island, a former British colony that became a parliamentary republic in 2021. It combines well-developed tourism infrastructure with deep cultural heritage: historic Bridgetown, the birthplace of rum, and a food scene often called the best in the Caribbean.",
     photo: {
@@ -803,7 +810,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "belize",
     name: "Belize",
-    tagline: "The only English-speaking CARICOM country in Central America: the world's second-largest barrier reef alongside Maya ruins and rainforest.",
+    tagline: "The only English-speaking CARICOM country in Central America: the world's second-largest barrier reef offshore, Maya ruins inland.",
     overview:
       "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It's a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland, a mix of marine and jungle that few CARICOM countries can offer.",
     photo: {
@@ -1698,7 +1705,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "guyana",
     name: "Guyana",
-    tagline: "Mainland South America's only English-speaking country: a vast, largely untouched interior of rainforest, savannah and waterfalls, transformed by a recent oil boom.",
+    tagline: "Mainland South America's only English-speaking country: a vast, largely untouched interior of rainforest and savannah, transformed by a recent oil boom.",
     overview:
       "Guyana is the odd one out geographically among CARICOM's island states: mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown's real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
     photo: {
@@ -1964,7 +1971,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "jamaica",
     name: "Jamaica",
-    tagline: "The Caribbean's best-known island by far: reggae, jerk, and a coastline that runs from Blue Mountain coffee slopes to Seven Mile Beach.",
+    tagline: "The Caribbean's best-known island by far, running from the Blue Mountain coffee slopes down to Seven Mile Beach, with reggae and jerk the whole way.",
     overview:
       "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally: reggae, Bob Marley and jerk cooking all trace back here. It's a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
     photo: {
@@ -2064,10 +2071,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
           credit: "Joanson Baptiste James",
         },
         video: {
-          src: "/videos/dunns-river-falls.mp4",
-          poster: "/videos/dunns-river-falls-poster.jpg",
-          label: "Dunn's River Falls, filmed from the pool at the bottom",
+          src: "/videos/dunns-pool.mp4",
+          poster: "/videos/dunns-pool-poster.jpg",
+          label: "Dunn's River Falls running down into the pool at the bottom",
           credit: "Joanson Baptiste James",
+          portrait: true,
         },
       },
       {
@@ -2260,7 +2268,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "st-kitts-and-nevis",
     name: "St. Kitts and Nevis",
-    tagline: "The smallest sovereign state in the Americas: two volcanic islands, a UNESCO fortress, and a carnival held at Christmas instead of summer.",
+    tagline: "The smallest sovereign state in the Americas: two volcanic islands under a UNESCO fortress, and a carnival held at Christmas instead of summer.",
     overview:
       "St. Kitts and Nevis is the smallest sovereign country in the Americas, by both area and population: a federation of two volcanic islands separated by a narrow strait called The Narrows. St. Kitts is the larger, more developed island, home to Brimstone Hill Fortress and the capital, Basseterre; Nevis is quieter, greener and more residential, with its own hot springs and a constitutional right to secede from the federation if it ever chooses to.",
     photo: {
@@ -3434,7 +3442,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "trinidad-and-tobago",
     name: "Trinidad and Tobago",
-    tagline: "The most populous, most industrialised CARICOM state, and home of the world's biggest Carnival, calypso, soca and steelpan.",
+    tagline: "The most industrialised CARICOM state and the most populous, and home of the world's biggest Carnival and the steelpan.",
     overview:
       "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
     photo: {

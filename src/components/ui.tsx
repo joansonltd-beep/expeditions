@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RotatingPhotoBg, { type HeroPhoto } from "@/components/RotatingPhotoBg";
+import HeroVideoBg from "@/components/HeroVideoBg";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export type { HeroPhoto };
@@ -161,6 +162,7 @@ export function PageHeader({
   crumb,
   image,
   photos,
+  video,
 }: {
   icon?: React.ReactNode;
   title: string;
@@ -169,11 +171,23 @@ export function PageHeader({
   crumb: string;
   image?: React.ReactNode;
   photos?: HeroPhoto[];
+  /** A silent looping clip behind the header, in place of the rotating stills. */
+  video?: { src: string; poster: string };
 }) {
-  if (photos?.length) {
+  if (video || photos?.length) {
     return (
       <div className="relative isolate flex min-h-[360px] flex-col overflow-hidden bg-navy sm:min-h-[420px]">
-        <RotatingPhotoBg photos={photos} />
+        {video ? (
+          <>
+            {/* The poster sits underneath so there is never a blank header,
+                and so it is what shows when motion is turned down. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={video.poster} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+            <HeroVideoBg src={video.src} poster={video.poster} />
+          </>
+        ) : (
+          <RotatingPhotoBg photos={photos!} />
+        )}
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-navy/25" />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy/70 to-transparent" />
         <Container className="relative mt-auto py-10 sm:py-12">

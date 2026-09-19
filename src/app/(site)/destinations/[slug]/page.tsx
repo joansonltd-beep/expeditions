@@ -497,11 +497,12 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             <div key={i} id={placeSlug(p.name)} className="scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white">
               {p.video ? (
                 <video
-                  className="aspect-[16/9] w-full bg-navy object-cover"
+                  className={`w-full bg-navy object-cover ${p.video.portrait ? "aspect-[4/5]" : "aspect-[16/9]"}`}
                   src={p.video.src}
                   poster={p.video.poster}
                   preload="none"
                   controls
+                  muted
                   playsInline
                   aria-label={p.video.label}
                 />
