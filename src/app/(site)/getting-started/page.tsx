@@ -8,6 +8,7 @@ import JobOfferEnquiry from "@/components/JobOfferEnquiry";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import JobSeekerEnquiry from "@/components/JobSeekerEnquiry";
 import { BUSINESS_CENTER_PHOTOS } from "@/lib/sitePhotos";
+import PageIssueNote from "@/components/PageIssueNote";
 
 
 export const metadata: Metadata = {
@@ -300,6 +301,7 @@ export default function GettingStartedPage() {
           </p>
         </div>
       </Section>
+      <PageIssueNote section="work" />
     </>
   );
 }

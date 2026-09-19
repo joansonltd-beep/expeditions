@@ -5,6 +5,7 @@ import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
 import { VISIT_PHOTOS } from "@/lib/sitePhotos";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "Visiting Another CARICOM Country",
@@ -240,6 +241,7 @@ export default function GettingTherePage() {
           </p>
         </div>
       </Section>
+      <PageIssueNote section="visit" />
     </>
   );
 }

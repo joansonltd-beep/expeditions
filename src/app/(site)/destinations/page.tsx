@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader } from "@/components/ui";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
+import PageIssueNote from "@/components/PageIssueNote";
 
 // The header used to rotate through Wikimedia airport photos. Those files are
 // still under /public/photos/heroes/airports if they are ever wanted again;
@@ -72,6 +73,7 @@ export default function DestinationsPage() {
           </Link>
         </div>
       </Section>
+      <PageIssueNote section="destinations" />
     </>
   );
 }

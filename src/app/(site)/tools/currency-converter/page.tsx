@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader, Section } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CurrencyConverter from "@/components/CurrencyConverter";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "CARICOM Currency Converter",
@@ -25,6 +26,7 @@ export default function CurrencyConverterPage() {
           <CurrencyConverter />
         </div>
       </Section>
+      <PageIssueNote section="tools" />
     </>
   );
 }

@@ -26,6 +26,7 @@ import WeHandleIt from "@/components/WeHandleIt";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { OPEN_COUNTRIES, SOON_COUNTRIES, TIMING_LABEL } from "@/lib/marryData";
 import { WEDDING_HERO_PHOTOS as HERO_PHOTOS } from "@/lib/sitePhotos";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "Getting Married In Another CARICOM Country",
@@ -429,6 +430,7 @@ export default function MarryPage() {
       </Section>
 
       <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Anything that carries on after the wedding is quoted separately, and we go through it in the same conversation so there are no surprises later." />
+      <PageIssueNote section="marry" />
     </>
   );
 }

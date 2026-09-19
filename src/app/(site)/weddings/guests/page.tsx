@@ -5,6 +5,7 @@ import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import BookingPriceDisclaimer from "@/components/BookingPriceDisclaimer";
 import { GUEST_HERO_PHOTOS as HERO_PHOTOS } from "@/lib/sitePhotos";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "Wedding Guest Travel",
@@ -194,6 +195,7 @@ export default function WeddingGuestsPage() {
       </Section>
 
       <ConsultationCtaBlock lead="Booking your own travel to a wedding costs you nothing beyond the fare, so just get in touch. The $100 consultation is for couples planning the wedding itself, and it comes off the booking if you go ahead." />
+      <PageIssueNote section="marry" />
     </>
   );
 }

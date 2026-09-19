@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader, Section } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "Free CARICOM Tools: Currency Converter and Translator",
@@ -53,6 +54,7 @@ export default function ToolsPage() {
           ))}
         </div>
       </Section>
+      <PageIssueNote section="tools" />
     </>
   );
 }

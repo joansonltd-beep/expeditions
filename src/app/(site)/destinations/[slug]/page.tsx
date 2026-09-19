@@ -11,6 +11,7 @@ import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { independenceFor, formatDayMonth, daysUntil, anniversaryYears } from "@/lib/independenceData";
 import { SITE_URL } from "@/lib/siteUrl";
 import { isOwnWork } from "@/lib/photoCredits";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export function generateStaticParams() {
   return COUNTRY_GUIDES.map((g) => ({ slug: g.slug }));
@@ -687,6 +688,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
           </div>
         </Section>
       ) : null}
+      <PageIssueNote section="destinations" />
     </>
   );
 }

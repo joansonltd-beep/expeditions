@@ -9,6 +9,7 @@ import { getSiteSettings } from "@/lib/siteData";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
 import { SCHOOL_PHOTOS } from "@/lib/sitePhotos";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "Studying Within CARICOM",
@@ -384,6 +385,7 @@ export default async function StudyPage() {
           </p>
         </div>
       </Section>
+      <PageIssueNote section="study" />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader, Section } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import Translator from "@/components/Translator";
+import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
   title: "CARICOM Translator",
@@ -26,6 +27,7 @@ export default function TranslatorPage() {
           <Translator />
         </div>
       </Section>
+      <PageIssueNote section="tools" />
     </>
   );
 }
