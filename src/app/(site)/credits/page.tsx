@@ -109,8 +109,8 @@ export default function CreditsPage() {
           <p className="mt-12 text-sm text-navy/55">
             If you are one of the photographers here and something is credited wrongly, or you would rather it came
             down, email{" "}
-            <a href="mailto:hello@expeditionswithjo.com" className="underline underline-offset-4 hover:text-navy">
-              hello@expeditionswithjo.com
+            <a href="mailto:photo@expeditionswithjo.com" className="underline underline-offset-4 hover:text-navy">
+              photo@expeditionswithjo.com
             </a>{" "}
             and it will be corrected or removed.
           </p>
