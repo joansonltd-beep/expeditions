@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Section, PageHeader } from "@/components/ui";
 import CombinedSurveyForm from "@/components/CombinedSurveyForm";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
+import { SURVEY_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "Cost of Living Survey: Salaries, Rent and Utilities",
@@ -35,14 +36,7 @@ export default function SurveyPage() {
         crumb="Reports"
         intro="Real numbers from people actually living and working across CARICOM. Nothing is linked back to you, and it is only ever used in aggregate."
         footnote="One survey, three parts. Answer whichever you can, skip the rest."
-        photos={[
-          {
-            src: "/places/saint-lucia/castries-market.jpg",
-            alt: "Castries Market, Saint Lucia",
-            credit: "Gene93k, CC BY-SA 3.0, via Wikimedia Commons",
-            creditUrl: "https://commons.wikimedia.org/wiki/File:Castries_Market_from_Jeremie_Street.JPG",
-          },
-        ]}
+        photos={SURVEY_PHOTOS}
       />
       <Section>
         <div className="mx-auto max-w-2xl">

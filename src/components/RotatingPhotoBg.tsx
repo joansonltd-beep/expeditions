@@ -24,17 +24,8 @@ export default function RotatingPhotoBg({ photos, intervalMs = 6000 }: { photos:
   return (
     <>
       <Image key={photo.src} src={photo.src} alt={photo.alt} fill priority sizes="100vw" className="object-cover" />
-      {photo.credit ? (
-        <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/50">
-          {photo.creditUrl ? (
-            <a href={photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-              {photo.credit}
-            </a>
-          ) : (
-            photo.credit
-          )}
-        </p>
-      ) : null}
+      {/* Credits live on /credits, linked from the footer, rather than sitting
+          in grey type over every header. */}
     </>
   );
 }

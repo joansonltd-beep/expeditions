@@ -10,6 +10,7 @@ import { COUNTRY_GUIDES, getCountryGuide } from "@/lib/countryGuideData";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
 import { independenceFor, formatDayMonth, daysUntil, anniversaryYears } from "@/lib/independenceData";
 import { SITE_URL } from "@/lib/siteUrl";
+import { isOwnWork } from "@/lib/photoCredits";
 
 export function generateStaticParams() {
   return COUNTRY_GUIDES.map((g) => ({ slug: g.slug }));
@@ -156,17 +157,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                   priority
                 />
               </div>
-              <figcaption className="mt-2 text-xs text-slate-400">
-                {g.photo.alt}
-                {" · "}
-                {g.photo.creditUrl ? (
-                  <a href={g.photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    {g.photo.credit}
-                  </a>
-                ) : (
-                  g.photo.credit
-                )}
-              </figcaption>
+              <figcaption className="mt-2 text-xs text-slate-400">{g.photo.alt}</figcaption>
             </figure>
           ) : null}
 
@@ -514,19 +505,10 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               <div className="p-6">
                 <h3 className="font-semibold text-slate-900">{p.name}</h3>
                 <p className="mt-2 text-sm text-slate-600">{p.description}</p>
-                {p.video ? (
+                {p.video && isOwnWork(p.video.credit) ? (
                   <p className="mt-3 text-xs text-slate-400">Video: {p.video.credit}</p>
-                ) : p.photo ? (
-                  <p className="mt-3 text-xs text-slate-400">
-                    Photo:{" "}
-                    {p.photo.creditUrl ? (
-                      <a href={p.photo.creditUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {p.photo.credit}
-                      </a>
-                    ) : (
-                      p.photo.credit
-                    )}
-                  </p>
+                ) : p.photo && isOwnWork(p.photo.credit) ? (
+                  <p className="mt-3 text-xs text-slate-400">Photo: {p.photo.credit}</p>
                 ) : null}
               </div>
             </div>

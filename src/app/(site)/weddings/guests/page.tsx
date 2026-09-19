@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, SectionHead, CheckList, btnGhost, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, CheckList, btnGhost } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import BookingPriceDisclaimer from "@/components/BookingPriceDisclaimer";
+import { GUEST_HERO_PHOTOS as HERO_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "Wedding Guest Travel",
@@ -19,14 +20,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/weddings/guests" },
 };
 
-const HERO_PHOTOS: HeroPhoto[] = [
-  {
-    src: "/places/barbados/carlisle-bay.jpg",
-    alt: "Carlisle Bay, Barbados",
-    credit: "P. Hughes, CC BY-SA 4.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Carlisle_Bay_-_Barbados.jpg",
-  },
-];
 
 // The airports guests most often leave from. Codes are included because they
 // are what people see on a booking screen, and because "Kingston" and

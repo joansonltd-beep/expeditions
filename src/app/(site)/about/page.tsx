@@ -6,6 +6,7 @@ import { Section, PageHeader } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ContentSections from "@/components/ContentSections";
 import CtaButtons from "@/components/CtaButtons";
+import { ABOUT_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -33,14 +34,7 @@ export default async function AboutPage() {
         title="About Us"
         intro={about.intro}
         crumb="About Us"
-        photos={[
-          {
-            src: "/places/grenada/carenage.jpg",
-            alt: "The Carenage, the horseshoe harbour at St. George's, Grenada",
-            credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
-            creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
-          },
-        ]}
+        photos={ABOUT_PHOTOS}
         image={
           <figure className="max-w-[210px] overflow-hidden rounded-lg bg-cream ring-1 ring-white/25 lg:ml-auto">
             <Image

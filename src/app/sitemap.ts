@@ -28,6 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/survey",
     "/about",
     "/policies",
+    "/credits",
   ];
   const articles = await getArticles();
   const guideRoutes = articles.map((a) => `/guides/${a.slug}`);
@@ -49,6 +50,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (path === "/business-setup" || path === "/finance" || path === "/guides" || path === "/destinations") return 0.8;
     if (path.startsWith("/guides/") || path.startsWith("/finance/") || path.startsWith("/destinations/")) return 0.7;
     if (path === "/about" || path === "/policies" || path === "/insurance") return 0.4;
+    // Listed so the attribution page is reachable, but it is not a landing page.
+    if (path === "/credits") return 0.2;
     return 0.6;
   };
 

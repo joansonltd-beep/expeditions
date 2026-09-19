@@ -198,9 +198,14 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
               <span>
                 © {year} {settings.businessName}. All rights reserved.
               </span>
-              <Link href="/policies" className="hover:text-slate-300">
-                Policies &amp; Privacy
-              </Link>
+              <span className="flex flex-wrap gap-x-5 gap-y-2">
+                <Link href="/credits" className="hover:text-slate-300">
+                  Photography credits
+                </Link>
+                <Link href="/policies" className="hover:text-slate-300">
+                  Policies &amp; Privacy
+                </Link>
+              </span>
             </div>
           </div>
         </footer>

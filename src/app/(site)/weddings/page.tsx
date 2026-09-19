@@ -20,11 +20,12 @@
  */
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, SectionHead, CheckList, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import WeHandleIt from "@/components/WeHandleIt";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { OPEN_COUNTRIES, SOON_COUNTRIES, TIMING_LABEL } from "@/lib/marryData";
+import { WEDDING_HERO_PHOTOS as HERO_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "Getting Married In Another CARICOM Country",
@@ -46,32 +47,6 @@ export const metadata: Metadata = {
 // couple is what the consultation is for. Keep this page to what we do and
 // where we do it. The one exception is Suriname, where the rule rules people
 // out entirely, so they need to know before they book anything.
-const HERO_PHOTOS: HeroPhoto[] = [
-  {
-    src: "/places/jamaica/negril.jpg",
-    alt: "Negril Beach, Jamaica",
-    credit: "Gustavo.kunst, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Negril.jpg",
-  },
-  {
-    src: "/places/barbados/carlisle-bay.jpg",
-    alt: "Carlisle Bay, Barbados",
-    credit: "P. Hughes, CC BY-SA 4.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Carlisle_Bay_-_Barbados.jpg",
-  },
-  {
-    src: "/places/saint-lucia/pitons.jpg",
-    alt: "Gros Piton and Petit Piton behind Soufrière, Saint Lucia",
-    credit: "Aneil Lutchman, CC BY-SA 2.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Gros_Piton_and_Petit_Piton_in_Saint_Lucia.JPG",
-  },
-  {
-    src: "/places/st-vincent-and-the-grenadines/tobago-cays.jpg",
-    alt: "Aerial view of Tobago Cays Marine Park, St. Vincent and the Grenadines",
-    credit: "Iain Grant, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:TobagoCaysAerial.jpg",
-  },
-];
 
 const I_HELP = [
   "Working out which country suits the time you and your guests can actually take off",

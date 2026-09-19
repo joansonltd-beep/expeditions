@@ -4,6 +4,7 @@ import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
+import { VISIT_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "Visiting Another CARICOM Country",
@@ -116,14 +117,7 @@ export default function GettingTherePage() {
         crumb="Visit"
         intro="Planning a trip to another CARICOM country? We help you understand what your destination asks of visitors, arrange the flights, stay and transfers, and get you ready for arrival."
         footnote="Visiting, working and studying are three different processes with three different sets of requirements. This page covers visiting."
-        photos={[
-          {
-            src: "/photos/hero.jpg",
-            alt: "Pigeon Point, Tobago: a thatched-roof jetty over turquoise Caribbean water",
-            credit: "Kp93, CC BY-SA 3.0, via Wikimedia Commons",
-            creditUrl: "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg",
-          },
-        ]}
+        photos={VISIT_PHOTOS}
       />
 
       <Section>

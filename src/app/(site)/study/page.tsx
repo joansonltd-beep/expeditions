@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost, type HeroPhoto } from "@/components/ui";
+import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import WeHandleIt from "@/components/WeHandleIt";
@@ -8,6 +8,7 @@ import SchoolSearch from "@/components/SchoolSearch";
 import { getSiteSettings } from "@/lib/siteData";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import { NATIONAL_INSTITUTIONS } from "@/lib/schoolData";
+import { SCHOOL_PHOTOS } from "@/lib/sitePhotos";
 
 export const metadata: Metadata = {
   title: "Studying Within CARICOM",
@@ -100,32 +101,6 @@ const UWI_CAMPUSES = [
 // rather than guessed. UWI Cave Hill is also left out: the only Commons
 // photos of it are a single low-res (640x480) 2010 phone-camera batch, none
 // of which hold up full-bleed.
-const SCHOOL_PHOTOS: HeroPhoto[] = [
-  {
-    src: "/photos/heroes/uwi-st-augustine.jpg",
-    alt: "University of the West Indies campus, St. Augustine, Trinidad and Tobago",
-    credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_St._Augustine_UWI_CampusFXD.jpg",
-  },
-  {
-    src: "/photos/heroes/schools/uwi-mona.jpg",
-    alt: "The chapel at UWI Mona campus, Jamaica",
-    credit: "Sti2, CC BY-SA 3.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:Chapel_Mona_Campus_UWI.jpg",
-  },
-  {
-    src: "/photos/heroes/schools/university-of-belize.jpg",
-    alt: "University of Belize, Central Campus",
-    credit: "Josh Gross, CC BY 2.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:University_of_Belize,_Central_Campus.jpg",
-  },
-  {
-    src: "/photos/heroes/schools/utt-san-fernando.jpg",
-    alt: "University of Trinidad and Tobago, San Fernando campus",
-    credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
-    creditUrl: "https://commons.wikimedia.org/wiki/File:T%26T_San_Fernando_UTT_Campus_1.jpg",
-  },
-];
 
 export default async function StudyPage() {
   const settings = await getSiteSettings();
