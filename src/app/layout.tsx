@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Tell Jo where you are starting and where you want to go. We work out what your destination asks for, then organise the papers and the travel around it.",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og-falls.jpg",
         width: 1200,
         height: 630,
         alt: "The Expeditions With Jo logo over Dunn's River Falls, Jamaica",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
     description:
       "Working out how to visit, work, study or marry in another CARICOM country, and getting it organised once you know.",
-    images: ["/og.jpg"],
+    images: ["/og-falls.jpg"],
   },
 };
 
