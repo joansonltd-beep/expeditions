@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Expeditions With Jo: visit, work, study or marry in another CARICOM country",
+        alt: "The Expeditions With Jo logo over Dunn's River Falls, Jamaica",
       },
     ],
   },
