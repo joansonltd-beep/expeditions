@@ -5,10 +5,10 @@ import { Icon } from "@/components/icons";
 import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
-  title: "Free CARICOM Tools: Currency Converter and Translator",
+  title: "Free CARICOM Tools: Currency Converter, Translator and Property Intake",
   description:
     "Free tools for anyone visiting, working or studying in CARICOM: a currency converter for all twelve member states, plus USD, CAD and GBP, and a translator covering the region's official languages.",
-  keywords: ["CARICOM currency converter", "Caribbean translator", "CARICOM tools"],
+  keywords: ["CARICOM currency converter", "Caribbean translator", "CARICOM tools", "list my property Jamaica"],
   alternates: { canonical: "/tools" },
 };
 
@@ -25,6 +25,12 @@ const TOOLS = [
     title: "Translator",
     text: "Speak or type in one of the region's official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
   },
+  {
+    href: "/tools/list-my-property",
+    icon: "home" as const,
+    title: "List my property",
+    text: "Own a place in Jamaica? Answer the questions Airbnb asks when a listing goes up, and walk away with an email you can send us about managing it.",
+  },
 ];
 
 export default function ToolsPage() {
@@ -34,10 +40,10 @@ export default function ToolsPage() {
         icon={<Icon name="sparkles" className="h-7 w-7 text-brand" />}
         title="Free tools for your move"
         crumb="Tools"
-        intro="Two small, free tools that come up constantly when planning a move within CARICOM."
+        intro="Small, free tools that come up constantly, whether you are planning a move within CARICOM or working out what to do with a property back home."
       />
       <Section>
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {TOOLS.map((t) => (
             <Link
               key={t.href}

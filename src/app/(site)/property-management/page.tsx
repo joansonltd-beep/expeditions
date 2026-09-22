@@ -289,8 +289,8 @@ export default function PropertyManagementPage() {
             >
               Email about your property
             </a>
-            <Link href="/accommodations" className={btnGhost}>
-              Looking for somewhere to stay instead?
+            <Link href="/tools/list-my-property" className={btnGhost}>
+              Answer a few questions first
             </Link>
           </div>
           <div className="mt-8">

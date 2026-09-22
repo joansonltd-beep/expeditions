@@ -26,6 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // advertised in a sitemap.
     "/insurance",
     "/property-management",
+    "/tools/list-my-property",
     "/survey",
     "/about",
     "/policies",
