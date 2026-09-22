@@ -58,6 +58,25 @@ export default async function AboutPage() {
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={about.sections} />
 
+          {/* Kept here rather than in the Sanity body so it cannot be edited
+              away by accident: it is a claim about a verifiable status, and if
+              it ever stops being true it has to come down. */}
+          <div className="mt-10 rounded-2xl border border-brand/25 bg-brand-soft p-7">
+            <h2 className="text-lg font-semibold text-navy">Also an Airbnb Superhost</h2>
+            <p className="mt-3 text-navy/75">
+              Joanson hosts on Airbnb in Jamaica and holds Superhost status, which Airbnb grants on guest rating,
+              response rate, cancellations and completed stays, and reassesses every three months. It is the reason
+              the accommodation side of this business knows what a good stay looks like from both sides of the door.
+            </p>
+            <p className="mt-3 text-navy/75">
+              Expeditions With Jo now also{" "}
+              <Link href="/property-management" className="font-semibold text-brand hover:underline">
+                manages Airbnb property for owners in Jamaica
+              </Link>
+              .
+            </p>
+          </div>
+
           <div className="mt-10 rounded-2xl border border-slate-200 bg-slate-50/80 p-7">
             <h2 className="text-lg font-semibold text-slate-900">Contact</h2>
             <ul className="mt-4 grid gap-3 text-sm">

@@ -27,6 +27,7 @@ const companyLinks: FooterLink[] = [
   { href: "/weddings", label: "Weddings", title: "Destination weddings and wedding guest travel" },
   { href: "/flights", label: "Flights" },
   { href: "/accommodations", label: "Accommodation" },
+  { href: "/property-management", label: "Property Management", title: "Airbnb management for owners in Jamaica" },
   { href: "/transfers", label: "Transfers" },
   { href: "/finance", label: "Banking" },
   { href: "/business-setup", label: "Business Setup" },

@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // to the Welcome Pickups booking site, and a redirecting URL should not be
     // advertised in a sitemap.
     "/insurance",
+    "/property-management",
     "/survey",
     "/about",
     "/policies",
@@ -49,6 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (path.startsWith("/caricom-skills-certificate/")) return 0.8;
     if (path === "/business-setup" || path === "/finance" || path === "/guides" || path === "/destinations") return 0.8;
     if (path.startsWith("/guides/") || path.startsWith("/finance/") || path.startsWith("/destinations/")) return 0.7;
+    if (path === "/property-management") return 0.7;
     if (path === "/about" || path === "/policies" || path === "/insurance") return 0.4;
     // Listed so the attribution page is reachable, but it is not a landing page.
     if (path === "/credits") return 0.2;
