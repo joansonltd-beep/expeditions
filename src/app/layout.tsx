@@ -25,17 +25,18 @@ export const metadata: Metadata = {
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
   title: {
-    default: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
+    default: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
     template: "%s · Expeditions With Jo",
   },
   description:
-    "Help for CARICOM citizens working out how to visit, work or study in another CARICOM country: what each destination asks for, which office handles it, and getting the papers and travel organised.",
+    "Help for CARICOM citizens working out how to visit, work, study or marry in another CARICOM country: what each destination asks for, which office handles it, and getting the papers and the travel organised.",
   keywords: [
     "CARICOM",
     "how to move to another CARICOM country",
     "visit another CARICOM country",
     "work in another CARICOM country",
     "study in another CARICOM country",
+    "get married in another CARICOM country",
     "CARICOM Skills Certificate",
     "CSME Skills Certificate",
     "CSME free movement",
@@ -54,9 +55,9 @@ export const metadata: Metadata = {
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
+    title: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
     description:
-      "Tell Jo where you are starting and where you want to go. We work out what your destination asks for and organise the papers, flights and arrival around it.",
+      "Tell Jo where you are starting and where you want to go. We work out what your destination asks for, then organise the papers and the travel around it.",
     images: [
       {
         url: "/og.jpg",
@@ -68,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visit, Work or Study in Another CARICOM Country | Expeditions With Jo",
+    title: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
     description:
-      "Working out how to visit, work or study in another CARICOM country, and getting it organised once you know.",
+      "Working out how to visit, work, study or marry in another CARICOM country, and getting it organised once you know.",
     images: ["/og.jpg"],
   },
 };
