@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost } from "@/components/ui";
+import Image from "next/image";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -157,6 +158,29 @@ export default function PropertyManagementPage() {
               sits in.
             </p>
           </div>
+
+          {/*
+            Airbnb's own profile card, which it generates for hosts to share.
+            The figures on it are a snapshot and will move, so the caption
+            dates them rather than letting the page imply they are current
+            forever. The alt text carries the same numbers, because a card
+            that only exists as a picture proves nothing to a screen reader
+            or to a search engine.
+          */}
+          <figure className="mt-8">
+            <Image
+              src="/photos/superhost-card.jpg"
+              alt="Airbnb profile card for Joanson: Superhost, 25 reviews, 4.88 star rating, 1 year hosting."
+              width={1080}
+              height={752}
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="mx-auto w-full max-w-[520px] rounded-2xl border border-navy/10"
+            />
+            <figcaption className="mt-3 text-center text-sm text-navy/60">
+              Airbnb host profile, September 2026: Superhost, 4.88 across 25 reviews, hosting for a year. Airbnb
+              reassesses the status quarterly, so treat the figures as of that date.
+            </figcaption>
+          </figure>
 
           <div className="mt-10">
             <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
