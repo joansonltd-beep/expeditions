@@ -9,6 +9,7 @@ import {
   ABOUT_PHOTOS,
   SURVEY_PHOTOS,
   VISIT_PHOTOS,
+  AIRPORT_PHOTOS,
 } from "@/lib/sitePhotos";
 
 /**
@@ -20,7 +21,7 @@ import {
  * named, and the original is linked. That used to be printed under each photo.
  * It is collected here instead, which the licences allow: attribution may be
  * given "in any reasonable manner based on the medium", and for a website that
- * means a credits page every photo's page links to.
+ * means a credits page every photo’s page links to.
  *
  * The list is DERIVED, never hand-maintained. Add a photo anywhere in
  * sitePhotos.ts or countryGuideData.ts and it appears here on the next build.
@@ -33,7 +34,7 @@ export type Attribution = {
   /** What the photograph shows, taken from its alt text. */
   subject: string;
   author: string;
-  /** "CC BY-SA 4.0", "Public domain", or "" for Jo's own work. */
+  /** "CC BY-SA 4.0", "Public domain", or "" for Jo’s own work. */
   licence: string;
   licenceUrl?: string;
   sourceUrl?: string;
@@ -47,9 +48,9 @@ export type Attribution = {
  * Credit strings are written as "Author, Licence, via Source".
  *
  * The licence is found by pattern rather than by position, because a
- * photographer's own name can contain a comma: "Jerrye and Roy Klotz, MD"
+ * photographer’s own name can contain a comma: "Jerrye and Roy Klotz, MD"
  * splits into two parts and the second is not a licence. Anything with no
- * licence and no source is Jo's own photograph.
+ * licence and no source is Jo’s own photograph.
  */
 function parseCredit(credit: string): { author: string; licence: string; own: boolean } {
   const parts = credit.split(",").map((p) => p.trim());
@@ -113,6 +114,7 @@ function collect(): Attribution[] {
     [HOME_HERO_PHOTOS, "Home page"],
     [TT_HERO_PHOTOS, "Home page"],
     [VISIT_PHOTOS, "Visit"],
+    [AIRPORT_PHOTOS, "Visit"],
     [BUSINESS_CENTER_PHOTOS, "Work"],
     [SCHOOL_PHOTOS, "Study"],
     [WEDDING_HERO_PHOTOS, "Marry"],
@@ -139,7 +141,7 @@ function collect(): Attribution[] {
 
 export const PHOTO_CREDITS: Attribution[] = collect();
 
-/** Jo's own work first, since it is the part that is not a licence obligation. */
+/** Jo’s own work first, since it is the part that is not a licence obligation. */
 export const OWN_CREDITS = PHOTO_CREDITS.filter((c) => c.own);
 export const LICENSED_CREDITS = PHOTO_CREDITS.filter((c) => !c.own);
 

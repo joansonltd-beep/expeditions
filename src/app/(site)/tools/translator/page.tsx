@@ -7,7 +7,7 @@ import PageIssueNote from "@/components/PageIssueNote";
 export const metadata: Metadata = {
   title: "CARICOM Translator",
   description:
-    "Speak or type in one of the region's official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
+    "Speak or type in one of the region’s official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
   keywords: ["Caribbean translator", "CARICOM languages", "English French Dutch Spanish translator"],
   alternates: { canonical: "/tools/translator" },
 };

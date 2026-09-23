@@ -2,13 +2,13 @@
 // as /studio: lives outside the (site) route group, so it renders with no
 // public header/nav/footer). No password gate yet.
 //
-// Uses Google's Programmable Search Engine embed widget rather than the
+// Uses Google’s Programmable Search Engine embed widget rather than the
 // Custom Search JSON API: the JSON API is closed to new customers ahead of
 // its Jan 2027 shutdown, so a from-scratch API key can never get real access
-// no matter how it's configured. The embed widget is a separate, still fully
+// no matter how it’s configured. The embed widget is a separate, still fully
 // available product that needs no API key, just the engine ID (cx), which is
-// a public identifier, not a secret. See JobSearchWidget for why it's loaded
-// via explicit render rather than Google's default auto-scanning embed.
+// a public identifier, not a secret. See JobSearchWidget for why it’s loaded
+// via explicit render rather than Google’s default auto-scanning embed.
 
 import type { Metadata } from "next";
 import JobSearchWidget from "@/components/internal/JobSearchWidget";

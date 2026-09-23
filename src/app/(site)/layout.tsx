@@ -93,7 +93,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
   // Separate from the business entity above: identifies the site itself.
   // No potentialAction/SearchAction here since the site has no on-site
   // search to point it at — adding one would describe a feature that
-  // doesn't exist.
+  // doesn’t exist.
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",

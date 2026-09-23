@@ -61,7 +61,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
  *
  * Shorter than the Plan My Move form on purpose. It asks only what is needed
  * to point someone at the right pathway, then shows the next step inline
- * rather than leaving them on a "thanks, we'll be in touch" dead end. The
+ * rather than leaving them on a "thanks, we’ll be in touch" dead end. The
  * free reading recommendations show immediately; the actual enquiry is held
  * by savePendingConsultation() and only reaches Jo once the $100 payment goes
  * through and the visitor lands on /consultation-paid.

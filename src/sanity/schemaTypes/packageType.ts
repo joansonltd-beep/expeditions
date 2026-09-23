@@ -16,7 +16,7 @@ export const packageType = defineType({
     }),
     defineField({
       name: "features",
-      title: "What's included",
+      title: "What’s included",
       type: "array",
       of: [{ type: "string" }],
     }),

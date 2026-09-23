@@ -6,8 +6,8 @@ export const EDUCATION_OPTIONS = [
   "CAPE/A-Levels",
   "Technical/vocational certificate",
   "Associate degree",
-  "Bachelor's degree",
-  "Master's degree",
+  "Bachelor’s degree",
+  "Master’s degree",
   "Doctorate",
   "Other professional certification",
 ] as const;

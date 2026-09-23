@@ -15,11 +15,11 @@ import { Section, SectionHead } from "@/components/ui";
  *    getTestimonials() filters out placeholder names, so a half-finished entry
  *    cannot go live by accident.
  *
- * 2. Photographs — drop files in public/photos/ and reference them. Jo's
+ * 2. Photographs — drop files in public/photos/ and reference them. Jo’s
  *    portrait is already live on the About page. Still wanted: Jo working with
  *    a client, and anything from an actual arrival or handover.
  *
- * 3. Case studies — needs Joanson to supply real situations with the client's
+ * 3. Case studies — needs Joanson to supply real situations with the client’s
  *    permission, anonymised where they prefer. A case study should say what the
  *    person wanted, what was in the way, what we did, and what happened, with
  *    no claim that the outcome is typical or guaranteed.

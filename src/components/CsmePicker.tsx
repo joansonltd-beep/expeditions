@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import type { CsmeCountry } from "@/lib/csmeData";
 
 // Country picker for the CSME Skills Certificate. The visitor chooses their
-// country from a dropdown, then is taken to that country's instructions page.
+// country from a dropdown, then is taken to that country’s instructions page.
 export default function CsmePicker({ countries }: { countries: CsmeCountry[] }) {
   const router = useRouter();
   const [slug, setSlug] = useState("");

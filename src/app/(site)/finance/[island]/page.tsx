@@ -203,7 +203,7 @@ export default async function IslandBankingPage({ params }: { params: Promise<{ 
               every day. Reach out and we&rsquo;ll walk you through it.
             </p>
             <div className="mt-4">
-              <CtaButtons message={`Hi Jo, I'd like help opening a bank account and relocating to ${i.name}.`} />
+              <CtaButtons message={`Hi Jo, I’d like help opening a bank account and relocating to ${i.name}.`} />
             </div>
           </div>
         </div>

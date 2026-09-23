@@ -3,7 +3,7 @@ import { PageHeader, Section } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import ConsultationPaidClient from "@/components/ConsultationPaidClient";
 
-// Set this exact URL as the Fygaro payment button's return/success URL in
+// Set this exact URL as the Fygaro payment button’s return/success URL in
 // the Fygaro dashboard: https://www.expeditionswithjo.com/consultation-paid
 export const metadata: Metadata = {
   title: "Payment Received",

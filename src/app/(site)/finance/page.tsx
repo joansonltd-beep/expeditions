@@ -47,7 +47,7 @@ export default function BankingHubPage() {
           <SectionHead
             eyebrow="Self-employed or running a company"
             title="Opening a business bank account"
-            intro="Business accounts ask for more than personal ones. Here's what each bank actually publishes, country by country, for the three places we currently handle business setup in."
+            intro="Business accounts ask for more than personal ones. Here’s what each bank actually publishes, country by country, for the three places we currently handle business setup in."
             center={false}
           />
           <div className="space-y-4">
@@ -116,7 +116,7 @@ export default function BankingHubPage() {
             intro="Banking is one piece of the move. From your visa or CSME certificate, to flights, housing and getting your account opened, we handle every step of a successful relocation."
             center={false}
           />
-          <CtaButtons message="Hi Jo, I'd like help opening a bank account and relocating." />
+          <CtaButtons message="Hi Jo, I’d like help opening a bank account and relocating." />
         </div>
       </Section>
     </>

@@ -8,7 +8,7 @@
 // source to listen. Full lyrics are never reproduced on this site, even when
 // a comparison source quotes them.
 //
-// Pledge: many CARICOM countries don't have a distinct, publicly documented
+// Pledge: many CARICOM countries don’t have a distinct, publicly documented
 // "national pledge" text (as opposed to an anthem or citizenship oath). The
 // field is left out entirely for a country rather than filled with anything
 // unverified: never guess or paraphrase a pledge from memory.
@@ -117,7 +117,7 @@ export type Demographics = {
   medianAge?: string;
   ageStructure?: string;
   ethnicComposition?: SourcedFigure;
-  outlyingPopulation?: SourcedFigure; // e.g. Barbuda's population within Antigua and Barbuda
+  outlyingPopulation?: SourcedFigure; // e.g. Barbuda’s population within Antigua and Barbuda
   urbanizationNote?: string;
 };
 
@@ -149,7 +149,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       "Antigua and Barbuda is a two-island nation in the Eastern Caribbean: Antigua, the larger and more developed island, built around sailing, historic English Harbour and its beaches; and Barbuda, low-lying, sparsely populated and largely undeveloped, known for pink sand and seabirds.",
     photo: {
       src: "/destinations/antigua-and-barbuda.jpg",
-      alt: "Nelson's Dockyard, English Harbour, Antigua",
+      alt: "Nelson’s Dockyard, English Harbour, Antigua",
       credit: "Dr. Thomas Liptak, CC BY 4.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_English_Harbour_Nelson's_Dockyard_2.jpg",
     },
@@ -162,7 +162,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       areaKm2: "≈442 km² total (Antigua ≈281 km², Barbuda ≈161 km², plus the small uninhabited islet of Redonda)",
       independence: "1 November 1981, from the United Kingdom",
-      capital: "St. John's, on Antigua. Barbuda's main settlement is Codrington.",
+      capital: "St. John’s, on Antigua. Barbuda’s main settlement is Codrington.",
       officialLanguages: ["English (official)", "Antiguan Creole (widely spoken)"],
       currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1 since 1976. US dollars are widely accepted in tourist areas.",
       government:
@@ -177,14 +177,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         value: "≈2,200 people live on Barbuda",
         sourceName: "March 2025 population estimate",
       },
-      urbanizationNote: "Most residents live in or around St. John's and other coastal communities on Antigua; Barbuda is sparsely populated.",
+      urbanizationNote: "Most residents live in or around St. John’s and other coastal communities on Antigua; Barbuda is sparsely populated.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$800–1,300/month for an ordinary local rental",
       rentPremium1BR: "≈US$1,200–2,500+/month in marina and beachfront areas (English Harbour, Jolly Harbour)",
       groceriesSingle: "≈US$150–400/month, depending on how much you rely on imported vs. local produce and seafood",
       inexpensiveMeal: "≈US$10–12",
-      midRangeMealForTwo: "≈US$40–90, heavily dependent on whether it's a casual local spot or a marina-area restaurant",
+      midRangeMealForTwo: "≈US$40–90, heavily dependent on whether it’s a casual local spot or a marina-area restaurant",
       utilities: "≈US$120–300/month for a small apartment, mostly driven by how much air conditioning is used",
       budgetModestSingle: "≈US$1,100–1,700/month all-in (modest rental, local food, limited AC)",
       budgetComfortableSingle: "≈US$1,800–2,500+/month all-in (private rental in a desirable area, dining out regularly, a car)",
@@ -202,12 +202,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       residency:
         "Antigua and Barbuda also runs an investment-based Permanent Residence programme, open to people who can show a minimum annual income of US$100,000 and pay a flat annual tax of US$20,000, with a minimum physical presence of only around 30 days a year, plus a separate Citizenship by Investment programme typically processed in 3 to 6 months. Both are aimed at people buying tax residency or a second passport, not the standard route for someone moving here to work.",
       healthcare:
-        "Mount St. John's Medical Centre in St. John's is the main public hospital. Most movers carry private health insurance, roughly US$240-390/month for local coverage or US$400-800/month for an international plan, and use private clinics for routine care. For serious or specialist treatment, medical evacuation to Miami (about 3 hours by air) or Barbados is common, so it's worth checking what a policy covers for evacuation.",
+        "Mount St. John’s Medical Centre in St. John’s is the main public hospital. Most movers carry private health insurance, roughly US$240-390/month for local coverage or US$400-800/month for an international plan, and use private clinics for routine care. For serious or specialist treatment, medical evacuation to Miami (about 3 hours by air) or Barbados is common, so it’s worth checking what a policy covers for evacuation.",
       taxes:
         "Antigua and Barbuda has charged no personal income tax on residents since April 2016, covering wages, business, pension and investment income alike, with no capital gains, inheritance or wealth tax either. The tax most residents notice day to day is the Antigua and Barbuda Sales Tax (ABST), a 15% consumption tax added to most goods and services.",
       areas: [
         {
-          name: "Saint John's",
+          name: "Saint John’s",
           description:
             "The capital, with roughly 22,000 people and most government offices, banks and medical facilities on the island. Two-bedroom apartments run roughly US$800-1,200/month.",
         },
@@ -219,7 +219,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "English Harbour and Falmouth Harbour",
           description:
-            "The island's sailing heartland, home to the UNESCO-listed Nelson's Dockyard and a magnet for the yachting crowd. Costs generally run higher here than in Jolly Harbour.",
+            "The island’s sailing heartland, home to the UNESCO-listed Nelson’s Dockyard and a magnet for the yachting crowd. Costs generally run higher here than in Jolly Harbour.",
         },
         {
           name: "Five Islands Village",
@@ -235,12 +235,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     placesToSee: [
       {
-        name: "Nelson's Dockyard",
+        name: "Nelson’s Dockyard",
         description:
-          "A UNESCO World Heritage site in English Harbour and the world's only continuously working Georgian-era dockyard, with a museum, restaurants and historic naval buildings.",
+          "A UNESCO World Heritage site in English Harbour and the world’s only continuously working Georgian-era dockyard, with a museum, restaurants and historic naval buildings.",
         photo: {
           src: "/destinations/antigua-and-barbuda.jpg",
-          alt: "Nelson's Dockyard, English Harbour, Antigua",
+          alt: "Nelson’s Dockyard, English Harbour, Antigua",
           credit: "Dr. Thomas Liptak, CC BY 4.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Antigua_English_Harbour_Nelson's_Dockyard_2.jpg",
         },
@@ -257,22 +257,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       },
       {
-        name: "Devil's Bridge",
+        name: "Devil’s Bridge",
         description:
           "A natural limestone arch at Indian Town National Park, carved by the Atlantic. At high tide, waves force geysers of water through blowholes in the rock.",
         photo: {
           src: "/places/antigua-and-barbuda/devils-bridge.jpg",
-          alt: "Devil's Bridge, Antigua",
+          alt: "Devil’s Bridge, Antigua",
           credit: "John Honsberger, CC BY-SA 3.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Devils_Bridge,_Antigua.JPG",
         },
       },
       {
-        name: "Betty's Hope",
-        description: "Antigua's first full-scale sugar plantation, with a restored working windmill and a visitor centre on its history.",
+        name: "Betty’s Hope",
+        description: "Antigua’s first full-scale sugar plantation, with a restored working windmill and a visitor centre on its history.",
         photo: {
           src: "/places/antigua-and-barbuda/bettys-hope.jpg",
-          alt: "The restored windmill at Betty's Hope, Antigua",
+          alt: "The restored windmill at Betty’s Hope, Antigua",
           credit: "Ragingwhitebuffalo, public domain, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Bettyshope.JPG",
         },
@@ -300,21 +300,21 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Stingray City",
-        description: "Shallow, clear water off Seaton's Village where visitors can wade in and interact with southern stingrays.",
+        description: "Shallow, clear water off Seaton’s Village where visitors can wade in and interact with southern stingrays.",
       },
       {
-        name: "St. John's Public Market",
-        description: "The capital's market, liveliest on Saturdays, for local produce, spices and street food.",
+        name: "St. John’s Public Market",
+        description: "The capital’s market, liveliest on Saturdays, for local produce, spices and street food.",
         photo: {
           src: "/places/antigua-and-barbuda/st-johns-public-market.jpg",
-          alt: "St. John's Public Market, Antigua (historical photograph)",
+          alt: "St. John’s Public Market, Antigua (historical photograph)",
           credit: "Public domain, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:St._Johns_-_Public_Market.jpg",
         },
       },
       {
         name: "Fort James & Fort Barrington",
-        description: "Two 18th-century forts guarding either side of St. John's Harbour, both an easy walk with coastal views.",
+        description: "Two 18th-century forts guarding either side of St. John’s Harbour, both an easy walk with coastal views.",
         photo: {
           src: "/places/antigua-and-barbuda/fort-james.jpg",
           alt: "Fort James, Antigua",
@@ -325,10 +325,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Frigate Bird Sanctuary, Barbuda",
         description:
-          "The largest frigate bird colony in the Western Hemisphere, reached by a boat trip through Codrington Lagoon's mangroves.",
+          "The largest frigate bird colony in the Western Hemisphere, reached by a boat trip through Codrington Lagoon’s mangroves.",
       },
       {
-        name: "Barbuda's pink sand beach",
+        name: "Barbuda’s pink sand beach",
         description:
           "An 11-mile, largely secluded beach tinted pink by crushed coral and shell. Its southern stretch is also known as Princess Diana Beach, renamed in 2011 after the beach she used to visit.",
       },
@@ -337,7 +337,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         title: "Antigua Sailing Week",
         description:
-          "Held in late April, one of the world's premier yacht racing regattas (founded 1967), with shoreside parties every night of racing.",
+          "Held in late April, one of the world’s premier yacht racing regattas (founded 1967), with shoreside parties every night of racing.",
       },
       {
         title: "Antigua Carnival",
@@ -365,7 +365,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Pepperpot and fungee",
         description:
-          "Widely cited as Antigua and Barbuda's national dish: a hearty stew (traditionally with spinach, eggplant, peas and meat) served with fungee, a cornmeal-and-okra side similar to polenta.",
+          "Widely cited as Antigua and Barbuda’s national dish: a hearty stew (traditionally with spinach, eggplant, peas and meat) served with fungee, a cornmeal-and-okra side similar to polenta.",
       },
       {
         name: "Saltfish",
@@ -374,7 +374,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Goat water",
         description:
-          "A spiced goat stew enjoyed across the Leeward Islands (it's especially associated with neighbouring Montserrat, where it's the national dish, but it's a well-loved weekend dish in Antigua too).",
+          "A spiced goat stew enjoyed across the Leeward Islands (it’s especially associated with neighbouring Montserrat, where it’s the national dish, but it’s a well-loved weekend dish in Antigua too).",
       },
       {
         name: "Fresh seafood",
@@ -388,12 +388,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Cliff-front dining with plunge pools and a Mediterranean-leaning menu.",
       },
       {
-        name: "Cecilia's High Point Cafe",
-        area: "Dutchman's Bay, Antigua",
-        description: "A long-standing favourite overlooking Dutchman's Bay, with a French-influenced, locally-sourced menu.",
+        name: "Cecilia’s High Point Cafe",
+        area: "Dutchman’s Bay, Antigua",
+        description: "A long-standing favourite overlooking Dutchman’s Bay, with a French-influenced, locally-sourced menu.",
       },
       {
-        name: "Catherine's Cafe",
+        name: "Catherine’s Cafe",
         area: "Pigeon Point Beach, English Harbour",
         description: "A beachfront French-inspired spot known for Saturday live music and Wednesday jazz nights.",
       },
@@ -409,21 +409,21 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Incanto Restaurant & Lounge",
-        area: "Near Nelson's Dockyard",
+        area: "Near Nelson’s Dockyard",
         description: "Italian menu: risotto, gnocchi and lobster linguine.",
       },
       {
         name: "Fat Cat Coffee",
         area: "Antigua",
-        description: "One of Antigua's most consistently well-regarded coffee houses.",
+        description: "One of Antigua’s most consistently well-regarded coffee houses.",
       },
       {
         name: "Nobu Barbuda",
         area: "Princess Diana Beach, Barbuda",
-        description: "The Caribbean's only Nobu: Japanese-Peruvian fusion on a remote beach, reachable by boat or helicopter. A splurge, not an everyday spot.",
+        description: "The Caribbean’s only Nobu: Japanese-Peruvian fusion on a remote beach, reachable by boat or helicopter. A splurge, not an everyday spot.",
       },
       {
-        name: "Uncle Roddy's Beach Bar & Grill",
+        name: "Uncle Roddy’s Beach Bar & Grill",
         area: "Coral Group Bay, Barbuda",
         description: "A local institution for grilled Barbudan lobster, fish and conch right on the beach. Reserve a day ahead.",
       },
@@ -448,7 +448,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What is the currency and do I need cash?",
-        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in most hotels, restaurants and larger shops, but smaller vendors and markets often prefer cash. ATMs are available in St. John's, major resorts and some villages; let your bank know you're travelling first.",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in most hotels, restaurants and larger shops, but smaller vendors and markets often prefer cash. ATMs are available in St. John’s, major resorts and some villages; let your bank know you’re travelling first.",
       },
       {
         q: "Do I need a visa to visit as a tourist?",
@@ -456,15 +456,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "How do I get around the island?",
-        a: "Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available in St. John's and at the airport; driving is on the left, and roads are generally good but narrow and hilly in places. Local buses connect St. John's with many villages cheaply, though schedules are informal. Water taxis and ferries run for beach hops and trips to Barbuda.",
+        a: "Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available in St. John’s and at the airport; driving is on the left, and roads are generally good but narrow and hilly in places. Local buses connect St. John’s with many villages cheaply, though schedules are informal. Water taxis and ferries run for beach hops and trips to Barbuda.",
       },
       {
         q: "What local food should I try?",
-        a: "Fungee and pepperpot is the national dish: a cornmeal-and-okra side (fungee) with a spiced stew (pepperpot) of spinach, eggplant, peas and meat. Also look for saltfish (a Sunday favourite), goat water, fresh grilled fish, lobster and conch, and bakes with saltfish or cheese as a street snack. Try the St. John's Public Market or the beach bars around English Harbour and Jolly Harbour.",
+        a: "Fungee and pepperpot is the national dish: a cornmeal-and-okra side (fungee) with a spiced stew (pepperpot) of spinach, eggplant, peas and meat. Also look for saltfish (a Sunday favourite), goat water, fresh grilled fish, lobster and conch, and bakes with saltfish or cheese as a street snack. Try the St. John’s Public Market or the beach bars around English Harbour and Jolly Harbour.",
       },
       {
         q: "Is Antigua and Barbuda safe for tourists?",
-        a: "Most visits are trouble-free. Use normal precautions: don't leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft is the main risk, especially in crowded areas. Check your government's current travel advisory before you go.",
+        a: "Most visits are trouble-free. Use normal precautions: don’t leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft is the main risk, especially in crowded areas. Check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -472,11 +472,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and breezy boat trips. Bring something a little more modest if you'll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
+        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and breezy boat trips. Bring something a little more modest if you’ll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "A friendly \"good morning\" or \"good afternoon\" before asking a question is expected and appreciated. Dress is generally casual, but modest attire is expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, and small tips for taxi drivers and tour guides are welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
+        a: "A friendly \"good morning“ or ”good afternoon\" before asking a question is expected and appreciated. Dress is generally casual, but modest attire is expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, and small tips for taxi drivers and tour guides are welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
       },
     ],
     lastUpdated: "August 2026",
@@ -484,7 +484,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "barbados",
     name: "Barbados",
-    tagline: "The Caribbean's culinary capital: a former British colony turned republic, built around rum and Bajan food.",
+    tagline: "The Caribbean’s culinary capital: a former British colony turned republic, built around rum and Bajan food.",
     overview:
       "Barbados is the easternmost Caribbean island, a former British colony that became a parliamentary republic in 2021. It combines well-developed tourism infrastructure with deep cultural heritage: historic Bridgetown, the birthplace of rum, and a food scene often called the best in the Caribbean.",
     photo: {
@@ -534,9 +534,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "Barbados is one of the four CARICOM countries with full free movement: nationals of Barbados, Belize, Dominica and St. Vincent and the Grenadines can live and work in each other's countries without a CSME Skills Certificate. Other CARICOM nationals still apply for the CSME Skills Certificate; see the CSME steps for Barbados for the process. Non-CARICOM nationals can enter visa-free for up to 6 months as visitors but need an employer-sponsored work permit for local employment, or can apply for the Barbados Welcome Stamp, a renewable 12-month visa for people working remotely for an employer outside Barbados.",
+        "Barbados is one of the four CARICOM countries with full free movement: nationals of Barbados, Belize, Dominica and St. Vincent and the Grenadines can live and work in each other’s countries without a CSME Skills Certificate. Other CARICOM nationals still apply for the CSME Skills Certificate; see the CSME steps for Barbados for the process. Non-CARICOM nationals can enter visa-free for up to 6 months as visitors but need an employer-sponsored work permit for local employment, or can apply for the Barbados Welcome Stamp, a renewable 12-month visa for people working remotely for an employer outside Barbados.",
       residency:
-        "The Welcome Stamp requires proof of at least US$50,000 in income over the visa year, an application fee of US$2,000 for an individual (US$3,000 for a family), and comes with an exemption from Barbados income tax on that foreign income for the visa's term; it does not permit local employment. Standard permanent residence is available after 5 years of continuous residence, and citizenship after 7 years for Commonwealth nationals. A Special Entry and Reside Permit (SERP) exists for retirees over 60 and high-net-worth individuals with substantial income and assets.",
+        "The Welcome Stamp requires proof of at least US$50,000 in income over the visa year, an application fee of US$2,000 for an individual (US$3,000 for a family), and comes with an exemption from Barbados income tax on that foreign income for the visa’s term; it does not permit local employment. Standard permanent residence is available after 5 years of continuous residence, and citizenship after 7 years for Commonwealth nationals. A Special Entry and Reside Permit (SERP) exists for retirees over 60 and high-net-worth individuals with substantial income and assets.",
       healthcare:
         "Queen Elizabeth Hospital (QEH) in Bridgetown is the main public hospital, backed by six polyclinics for primary care, funded partly through National Insurance Scheme contributions. Private GP visits run roughly BBD 75-150 and specialists BBD 150-300; international health insurance, required for the Welcome Stamp, typically runs US$150-500/month depending on age and coverage.",
       taxes:
@@ -614,7 +614,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Crane Beach",
-        description: "Pink-tinged sand below 80-foot cliffs on the southeast coast, regularly ranked among the world's best beaches.",
+        description: "Pink-tinged sand below 80-foot cliffs on the southeast coast, regularly ranked among the world’s best beaches.",
         photo: {
           src: "/destinations/barbados.jpg",
           alt: "Crane Beach, Barbados",
@@ -634,11 +634,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       },
       {
-        name: "Harrison's Cave",
+        name: "Harrison’s Cave",
         description: "A large limestone cave system with guided tram tours past stalactites, streams and underground chambers.",
         photo: {
           src: "/places/barbados/harrisons-cave.jpg",
-          alt: "Inside Harrison's Cave, Barbados",
+          alt: "Inside Harrison’s Cave, Barbados",
           credit: "Berit, CC BY 2.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Golden_water,_Harrisons_Cave_(6832478562).jpg",
         },
@@ -665,11 +665,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Barbados Wildlife Reserve",
-        description: "A mahogany-wood reserve in St. Peter where Barbados's green monkeys roam free, best seen at the 11am and 2:30pm feedings.",
+        description: "A mahogany-wood reserve in St. Peter where Barbados’s green monkeys roam free, best seen at the 11am and 2:30pm feedings.",
         photo: {
           src: "/places/barbados/wildlife-reserve.jpg",
           alt: "A green monkey in Barbados",
-          credit: "Mike's Birds, CC BY-SA 2.0, via Wikimedia Commons",
+          credit: "Mike’s Birds, CC BY-SA 2.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:African_Green_Monkey_from_Barbados_(4449731705).jpg",
         },
       },
@@ -678,7 +678,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         title: "Oistins Fish Fry",
         description:
-          "Friday (and Saturday) nights in the fishing town of Oistins: grilled marlin, swordfish and flying fish, calypso and soca, and craft stalls. Barbados's biggest tourist draw.",
+          "Friday (and Saturday) nights in the fishing town of Oistins: grilled marlin, swordfish and flying fish, calypso and soca, and craft stalls. Barbados’s biggest tourist draw.",
       },
       {
         title: "Crop Over Festival",
@@ -687,7 +687,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Rum distillery tours",
-        description: "Mount Gay (the world's oldest rum distillery, est. 1703), Foursquare in St. Philip, or St. Nicholas Abbey's own distillery.",
+        description: "Mount Gay (the world’s oldest rum distillery, est. 1703), Foursquare in St. Philip, or St. Nicholas Abbey’s own distillery.",
       },
       {
         title: "Catamaran and snorkelling cruise",
@@ -695,11 +695,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Surfing (or watching) at the Soup Bowl",
-        description: "A renowned reef break at Bathsheba on the east coast, one of the Caribbean's best-known surf spots.",
+        description: "A renowned reef break at Bathsheba on the east coast, one of the Caribbean’s best-known surf spots.",
       },
       {
         title: "A night out in St. Lawrence Gap",
-        description: "The south coast's dining and nightlife strip: everything from casual bars to gourmet restaurants, near Dover Beach.",
+        description: "The south coast’s dining and nightlife strip: everything from casual bars to gourmet restaurants, near Dover Beach.",
       },
     ],
     localDishes: [
@@ -729,7 +729,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "The Fish Pot",
-        area: "Six Men's Bay, north-west coast",
+        area: "Six Men’s Bay, north-west coast",
         description: "A well-regarded, relaxed beachfront spot for fresh seafood in a converted fort.",
       },
       {
@@ -738,14 +738,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A long-running, owner-run favourite for local, Barbados-caught seafood, with a gallery of Caribbean art on-site.",
       },
       {
-        name: "Uncle George's Fish Net Grill",
+        name: "Uncle George’s Fish Net Grill",
         area: "Oistins",
         description: "Grilled fish and seafood in the heart of the Oistins Fish Fry scene, with regular live music.",
       },
       {
-        name: "Cuz's Fish Stand",
+        name: "Cuz’s Fish Stand",
         area: "Pebbles Beach, Bridgetown",
-        description: "A decades-old, no-frills stand famous for its fried marlin fish cutter sandwiches, one of the island's most-loved cheap eats.",
+        description: "A decades-old, no-frills stand famous for its fried marlin fish cutter sandwiches, one of the island’s most-loved cheap eats.",
       },
     ],
     symbols: {
@@ -782,7 +782,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What are the must-do experiences in Barbados?",
-        a: "Swim with sea turtles and snorkel shipwrecks on a catamaran cruise from Bridgetown or the south coast, walk historic Bridgetown and the Garrison (a UNESCO World Heritage Site) and George Washington House, tour St. Nicholas Abbey's plantation house and rum distillery, relax on Crane Beach or the south-coast beaches, catch the Oistins Fish Fry on a Friday night, and tour a rum distillery such as Mount Gay, Foursquare or St. Nicholas Abbey.",
+        a: "Swim with sea turtles and snorkel shipwrecks on a catamaran cruise from Bridgetown or the south coast, walk historic Bridgetown and the Garrison (a UNESCO World Heritage Site) and George Washington House, tour St. Nicholas Abbey’s plantation house and rum distillery, relax on Crane Beach or the south-coast beaches, catch the Oistins Fish Fry on a Friday night, and tour a rum distillery such as Mount Gay, Foursquare or St. Nicholas Abbey.",
       },
       {
         q: "What local food should I try?",
@@ -790,7 +790,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Is Barbados safe for tourists?",
-        a: "Barbados is generally considered one of the safer Caribbean destinations for tourists. Use normal precautions: don't leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft can occur, especially in crowded areas and at night. Check your government's current travel advisory before you go.",
+        a: "Barbados is generally considered one of the safer Caribbean destinations for tourists. Use normal precautions: don’t leave valuables in cars, avoid poorly lit areas at night, and keep an eye on belongings at the beach. Petty theft can occur, especially in crowded areas and at night. Check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -798,11 +798,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and evening breezes. Bring something a little more modest if you'll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
+        a: "Light, breathable clothing, swimwear, sandals, a hat and sunglasses, plus sunscreen and insect repellent. A light jacket or sweater helps for air-conditioned spaces and evening breezes. Bring something a little more modest if you’ll visit a church or formal venue, and a rain jacket or umbrella if travelling in the wetter months.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Barbadians (\"Bajans\") value good manners; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, and small tips for taxi drivers and tour guides are welcome. Friday night at Oistins Fish Fry draws a crowd, so expect music, noise and a lively atmosphere.",
+        a: "Barbadians (\"Bajans\") value good manners; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, and small tips for taxi drivers and tour guides are welcome. Friday night at Oistins Fish Fry draws a crowd, so expect music, noise and a lively atmosphere.",
       },
     ],
     lastUpdated: "August 2026",
@@ -810,9 +810,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "belize",
     name: "Belize",
-    tagline: "The only English-speaking CARICOM country in Central America: the world's second-largest barrier reef offshore, Maya ruins inland.",
+    tagline: "The only English-speaking CARICOM country in Central America: the world’s second-largest barrier reef offshore, Maya ruins inland.",
     overview:
-      "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It's a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland, a mix of marine and jungle that few CARICOM countries can offer.",
+      "Belize is the only fully Central American member of CARICOM, and the only one with English as its official language. It’s a dual destination: the Belize Barrier Reef and its cayes for diving and snorkelling, and Maya ruins, caves and rainforest inland, a mix of marine and jungle that few CARICOM countries can offer.",
     photo: {
       src: "/destinations/belize.jpg",
       alt: "The Great Blue Hole, a giant marine sinkhole off the coast of Belize",
@@ -833,7 +833,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "English (official)",
         "Spanish (widely spoken)",
         "Belize Kriol",
-        "Maya languages (Yucatec, Mopan, Q'eqchi')",
+        "Maya languages (Yucatec, Mopan, Q’eqchi')",
         "Garifuna",
       ],
       currency: "Belize dollar (BZD), fixed at BZ$2 to US$1. US dollars are widely accepted in tourist areas.",
@@ -846,7 +846,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "CIA World Factbook (2010 census, most recent available)",
       },
       urbanizationNote:
-        "The largest population centre is Belize City. Inland towns like San Ignacio (Cayo), Orange Walk and Corozal are growing, while coastal towns and the cayes (Ambergris Caye's San Pedro, Caye Caulker, Placencia) are more tourism-oriented. Belize also receives immigration from neighbouring Central American countries.",
+        "The largest population centre is Belize City. Inland towns like San Ignacio (Cayo), Orange Walk and Corozal are growing, while coastal towns and the cayes (Ambergris Caye’s San Pedro, Caye Caulker, Placencia) are more tourism-oriented. Belize also receives immigration from neighbouring Central American countries.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$400–700/month in mainland towns (Belize City, San Ignacio, Belmopan) for an ordinary local unit",
@@ -866,18 +866,18 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "Belize is one of the four CARICOM countries that have moved past the standard CSME certificate to full free movement: nationals of Belize, Barbados, Dominica and St. Vincent and the Grenadines can settle and work in each other's countries without any extra application. Other CARICOM nationals still need the CSME Skills Certificate; see the CSME steps for Belize for that process. Most non-CARICOM visitors get 30 to 90 days visa-free depending on nationality, but taking up a job requires a work permit sponsored by a Belizean employer, applied for through the Immigration Department.",
+        "Belize is one of the four CARICOM countries that have moved past the standard CSME certificate to full free movement: nationals of Belize, Barbados, Dominica and St. Vincent and the Grenadines can settle and work in each other’s countries without any extra application. Other CARICOM nationals still need the CSME Skills Certificate; see the CSME steps for Belize for that process. Most non-CARICOM visitors get 30 to 90 days visa-free depending on nationality, but taking up a job requires a work permit sponsored by a Belizean employer, applied for through the Immigration Department.",
       residency:
-        "Permanent residence requires at least 1 year of legal residence in Belize before you apply, during which you can't have been out of the country for more than 14 days in total, plus a clean record (no conviction carrying a possible sentence of 12 months or more) and proof you can support yourself. Expect a passport showing that year-old entry stamp, a medical exam completed by a Belize-licensed doctor, a police record, bank statements and an immigration interview, with approval taking at least 3 months. Belize also runs a dedicated retirement route, the Qualified Retired Persons (QRP) programme: anyone 40 or older with at least US$2,000 a month (US$24,000 a year) coming in from outside the country can apply, and the only presence requirement is 30 consecutive days a year in Belize. QRP status also comes with duty-free import allowances for personal belongings.",
+        "Permanent residence requires at least 1 year of legal residence in Belize before you apply, during which you can’t have been out of the country for more than 14 days in total, plus a clean record (no conviction carrying a possible sentence of 12 months or more) and proof you can support yourself. Expect a passport showing that year-old entry stamp, a medical exam completed by a Belize-licensed doctor, a police record, bank statements and an immigration interview, with approval taking at least 3 months. Belize also runs a dedicated retirement route, the Qualified Retired Persons (QRP) programme: anyone 40 or older with at least US$2,000 a month (US$24,000 a year) coming in from outside the country can apply, and the only presence requirement is 30 consecutive days a year in Belize. QRP status also comes with duty-free import allowances for personal belongings.",
       healthcare:
-        "Public clinics and hospitals handle emergencies well, and having English-speaking staff is a real advantage for newly arrived movers, but routine and specialist care thins out once you're away from Belize City. Anything more involved than a standard hospital stay often means travelling to Mexico, Guatemala or the US, so most movers pair local coverage with a policy that includes medical evacuation. Dial 911 for emergencies.",
+        "Public clinics and hospitals handle emergencies well, and having English-speaking staff is a real advantage for newly arrived movers, but routine and specialist care thins out once you’re away from Belize City. Anything more involved than a standard hospital stay often means travelling to Mexico, Guatemala or the US, so most movers pair local coverage with a policy that includes medical evacuation. Dial 911 for emergencies.",
       taxes:
-        "Individual income above an exempt band of roughly BZ$26,000-29,000 a year is taxed at a flat 25%; the exact threshold shifts slightly depending on the source, so check the current figure with the Belize Tax Service before budgeting around it. QRP retirees get a further break, since approved retirement income brought in from abroad isn't taxed locally.",
+        "Individual income above an exempt band of roughly BZ$26,000-29,000 a year is taxed at a flat 25%; the exact threshold shifts slightly depending on the source, so check the current figure with the Belize Tax Service before budgeting around it. QRP retirees get a further break, since approved retirement income brought in from abroad isn’t taxed locally.",
       areas: [
         {
           name: "Belize City",
           description:
-            "The country's largest city and commercial hub, with the main hospitals, schools and international airport, even though Belmopan is the capital.",
+            "The country’s largest city and commercial hub, with the main hospitals, schools and international airport, even though Belmopan is the capital.",
         },
         {
           name: "Ambergris Caye (San Pedro)",
@@ -942,10 +942,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Caye Caulker",
-        description: "A laid-back island built around a \"Go Slow\" motto: golf carts instead of cars, easy snorkelling and day trips to the reef.",
+        description: "A laid-back island built around a “Go Slow” motto: golf carts instead of cars, easy snorkelling and day trips to the reef.",
         photo: {
           src: "/places/belize/caye-caulker.jpg",
-          alt: "\"The Split\", Caye Caulker, Belize",
+          alt: "“The Split”, Caye Caulker, Belize",
           credit: "Steven Zwerink, CC BY-SA 2.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:%22The_Split%22,_Caye_Caulker,_Belize.jpg",
         },
@@ -962,11 +962,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Actun Tunichil Muknal (ATM Cave)",
-        description: "A sacred Maya cave with calcified skeletal remains and ceramics still in place, reached by a jungle trek and river crossings, one of Belize's best-known adventures.",
+        description: "A sacred Maya cave with calcified skeletal remains and ceramics still in place, reached by a jungle trek and river crossings, one of Belize’s best-known adventures.",
       },
       {
         name: "Xunantunich",
-        description: "A major Maya site near San Ignacio, with the climbable \"El Castillo\" pyramid and views into Guatemala.",
+        description: "A major Maya site near San Ignacio, with the climbable “El Castillo” pyramid and views into Guatemala.",
         photo: {
           src: "/places/belize/xunantunich.jpg",
           alt: "El Castillo, Xunantunich, Belize",
@@ -1008,7 +1008,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Garifuna cultural experiences",
-        description: "Drumming, dance and traditional food in Hopkins or Placencia, reflecting Belize's Afro-Caribbean Garifuna heritage.",
+        description: "Drumming, dance and traditional food in Hopkins or Placencia, reflecting Belize’s Afro-Caribbean Garifuna heritage.",
       },
       {
         title: "Whale shark trips off Placencia",
@@ -1039,19 +1039,19 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     ],
     placesToEat: [
       {
-        name: "Elvi's Kitchen",
+        name: "Elvi’s Kitchen",
         area: "San Pedro, Ambergris Caye",
-        description: "A San Pedro institution since 1974, from a burger window to a full seafood restaurant: Belize Tourism Board's Restaurant of the Year in 2022.",
+        description: "A San Pedro institution since 1974, from a burger window to a full seafood restaurant: Belize Tourism Board’s Restaurant of the Year in 2022.",
       },
       {
-        name: "Estel's Dine by the Sea",
+        name: "Estel’s Dine by the Sea",
         area: "San Pedro, Ambergris Caye",
         description: "A family-run, beachfront spot for Belizean breakfast (fry jacks, chorizo and beans) right on the sand.",
       },
       {
         name: "The Guava Limb Restaurant & Café",
         area: "San Ignacio, Cayo District",
-        description: "Farm-to-table dining using produce from its own Maya Farm; widely regarded as San Ignacio's best restaurant.",
+        description: "Farm-to-table dining using produce from its own Maya Farm; widely regarded as San Ignacio’s best restaurant.",
       },
     ],
     symbols: {
@@ -1060,13 +1060,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         title: "Land of the Free",
         lyricist: "Samuel Alfred Haynes",
         composer: "Selwyn Walford Young",
-        adopted: "1981, at independence (the lyrics began as Haynes's 1929 poem \"Land of the Gods\")",
+        adopted: "1981, at independence (the lyrics began as Haynes’s 1929 poem \"Land of the Gods\")",
         officialUrl: "https://www.pressoffice.gov.bz/national-anthem-prayer/",
       },
       // No official National Pledge text confirmed. A school recitation
       // often called the "Tribute to the Belizean Flag" circulates online,
       // but different unofficial sources give different, inconsistent
-      // wording for it, and the Government of Belize Press Office's own
+      // wording for it, and the Government of Belize Press Office’s own
       // national symbols page lists only the anthem and a national prayer.
       // Left out rather than picking one of the conflicting versions.
     },
@@ -1093,7 +1093,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Is Belize safe for tourists?",
-        a: "Belize can be visited safely, but it has higher crime rates in some urban areas, particularly parts of Belize City. Tourist areas like San Ignacio, the cayes, Placencia and major resorts are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+        a: "Belize can be visited safely, but it has higher crime rates in some urban areas, particularly parts of Belize City. Tourist areas like San Ignacio, the cayes, Placencia and major resorts are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don’t flash valuables, and use reputable tour operators and transport. Check your government’s current travel advisory and ask your hotel or tour operator about areas to avoid.",
       },
       {
         q: "What is the best time to visit?",
@@ -1101,11 +1101,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking or cave trips, plus sunscreen, a hat, sunglasses and insect repellent (important in the jungle and in the evenings). Quick-dry clothes and a small dry bag help for boat trips and cave tubing. Bring a light rain jacket or poncho, especially in the wetter months. If you're visiting a cave, bring clothes you don't mind getting muddy; some operators require closed-toe shoes.",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking or cave trips, plus sunscreen, a hat, sunglasses and insect repellent (important in the jungle and in the evenings). Quick-dry clothes and a small dry bag help for boat trips and cave tubing. Bring a light rain jacket or poncho, especially in the wetter months. If you’re visiting a cave, bring clothes you don’t mind getting muddy; some operators require closed-toe shoes.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Belize is genuinely multicultural: Creole, Mestizo, Garifuna, Maya, Mennonite, East Indian, Chinese and more. Dress modestly in villages and churches. English is official, but you'll hear Kriol, Spanish, Garifuna and Maya languages daily; a friendly attitude goes a long way. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. Life on the cayes runs slower than on the mainland, especially in the towns.",
+        a: "Belize is genuinely multicultural: Creole, Mestizo, Garifuna, Maya, Mennonite, East Indian, Chinese and more. Dress modestly in villages and churches. English is official, but you’ll hear Kriol, Spanish, Garifuna and Maya languages daily; a friendly attitude goes a long way. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for guides, boat captains and drivers appreciated. Life on the cayes runs slower than on the mainland, especially in the towns.",
       },
     ],
     lastUpdated: "August 2026",
@@ -1115,7 +1115,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Dominica",
     tagline: "The \"Nature Isle of the Caribbean\": a mountainous, volcanic island built for hikers and divers, not beach loungers.",
     overview:
-      "Dominica is a mountainous, volcanic island of rainforest, rivers and hot springs, and the only Eastern Caribbean island still home to a Kalinago (Carib) community, the region's last pre-Columbian population. It's less developed for mass tourism than most of its neighbours and has few sandy beaches: the draw here is hiking, diving and nature, not lounging.",
+      "Dominica is a mountainous, volcanic island of rainforest, rivers and hot springs, and the only Eastern Caribbean island still home to a Kalinago (Carib) community, the region’s last pre-Columbian population. It’s less developed for mass tourism than most of its neighbours and has few sandy beaches: the draw here is hiking, diving and nature, not lounging.",
     photo: {
       src: "/destinations/dominica.jpg",
       alt: "Boiling Lake, Morne Trois Pitons National Park, Dominica",
@@ -1143,7 +1143,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "CIA World Factbook (2011 census, most recent available)",
       },
       urbanizationNote:
-        "Most people live in and around Roseau and the southwest. Portsmouth is the second-largest town. Dominica is the only Eastern Caribbean island where a Kalinago community survived colonisation: around 3,000–3,500 people live in the Kalinago Territory on the east coast, though only a small number are considered \"pure\" Kalinago after generations of intermarriage.",
+        "Most people live in and around Roseau and the southwest. Portsmouth is the second-largest town. Dominica is the only Eastern Caribbean island where a Kalinago community survived colonisation: around 3,000–3,500 people live in the Kalinago Territory on the east coast, though only a small number are considered “pure” Kalinago after generations of intermarriage.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$300–600/month in Portsmouth, Calibishie, Salisbury and other towns and villages outside Roseau",
@@ -1161,13 +1161,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     movingHere: {
       visaWorkPermit:
-        "Dominica is one of the four CARICOM countries with full free movement: nationals of Dominica, Barbados, Belize and St. Vincent and the Grenadines can move to and work in each other's countries without any extra application. Dominica is also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also settle and work here without a permit. Other CARICOM nationals go through the CSME Skills Certificate instead; see the CSME steps for Dominica for that process. Non-CARICOM visitors typically get a few weeks to a few months visa-free depending on nationality, and everyone must file Dominica's online ED (embarkation/disembarkation) card before arrival. A non-CARICOM national taking up a job needs a work permit tied to a specific employer, who has to show the role couldn't reasonably be filled locally.",
+        "Dominica is one of the four CARICOM countries with full free movement: nationals of Dominica, Barbados, Belize and St. Vincent and the Grenadines can move to and work in each other’s countries without any extra application. Dominica is also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also settle and work here without a permit. Other CARICOM nationals go through the CSME Skills Certificate instead; see the CSME steps for Dominica for that process. Non-CARICOM visitors typically get a few weeks to a few months visa-free depending on nationality, and everyone must file Dominica’s online ED (embarkation/disembarkation) card before arrival. A non-CARICOM national taking up a job needs a work permit tied to a specific employer, who has to show the role couldn’t reasonably be filled locally.",
       residency:
         "A one-year, renewable Temporary Residence Permit is open to people who can show they can support themselves and either own or rent property on the island. Dominica also runs a well-known Citizenship by Investment programme: a non-refundable contribution to the Economic Diversification Fund starting at US$200,000 for a single applicant, or a qualifying real estate purchase from US$200,000 held for several years, with decisions typically taking 3 to 6 months.",
       healthcare:
-        "Princess Margaret Hospital in Roseau, with around 200 beds, is the country's main hospital; care at public facilities is free or heavily subsidised for residents, and a specialist visit at a private clinic runs roughly US$50-150. Specialist and complex treatment is limited on-island, so serious cases are often referred to Martinique, Barbados or Trinidad, which is why most movers carry international health insurance, roughly US$100-500/month, that includes medical evacuation.",
+        "Princess Margaret Hospital in Roseau, with around 200 beds, is the country’s main hospital; care at public facilities is free or heavily subsidised for residents, and a specialist visit at a private clinic runs roughly US$50-150. Specialist and complex treatment is limited on-island, so serious cases are often referred to Martinique, Barbados or Trinidad, which is why most movers carry international health insurance, roughly US$100-500/month, that includes medical evacuation.",
       taxes:
-        "Dominica taxes residents only on income sourced in Dominica; foreign income generally stays untaxed as long as it isn't remitted onto the island, and tax residency itself only kicks in once someone spends more than 183 days a year there. There's no capital gains, wealth or inheritance tax, and no withholding tax on dividends or interest paid to non-residents. VAT runs at 15% generally, dropping to 10% for hotels and tourism services.",
+        "Dominica taxes residents only on income sourced in Dominica; foreign income generally stays untaxed as long as it isn’t remitted onto the island, and tax residency itself only kicks in once someone spends more than 183 days a year there. There’s no capital gains, wealth or inheritance tax, and no withholding tax on dividends or interest paid to non-residents. VAT runs at 15% generally, dropping to 10% for hotels and tourism services.",
       areas: [
         {
           name: "Roseau",
@@ -1177,7 +1177,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "Portsmouth",
           description:
-            "A livelier, younger town in the north, home to Ross University's medical school. Rentals run roughly US$450-925/month, about 20 minutes from the airport.",
+            "A livelier, younger town in the north, home to Ross University’s medical school. Rentals run roughly US$450-925/month, about 20 minutes from the airport.",
         },
         {
           name: "Marigot",
@@ -1204,7 +1204,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Boiling Lake",
         description:
-          "The world's second-largest thermally active lake, a churning, mist-covered crater in Morne Trois Pitons National Park (a UNESCO World Heritage Site), reachable only by a strenuous 6–8 hour round-trip hike.",
+          "The world’s second-largest thermally active lake, a churning, mist-covered crater in Morne Trois Pitons National Park (a UNESCO World Heritage Site), reachable only by a strenuous 6–8 hour round-trip hike.",
         photo: {
           src: "/destinations/dominica.jpg",
           alt: "Boiling Lake, Morne Trois Pitons National Park, Dominica",
@@ -1224,7 +1224,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Trafalgar Falls",
-        description: "Twin waterfalls (\"Mother\" and \"Father\") near Wotten Waven, among the easiest of Dominica's falls to reach, with swimmable lower pools.",
+        description: "Twin waterfalls (“Mother” and “Father”) near Wotten Waven, among the easiest of Dominica’s falls to reach, with swimmable lower pools.",
         photo: {
           src: "/places/dominica/trafalgar-falls.jpg",
           alt: "Trafalgar Falls, Dominica",
@@ -1244,7 +1244,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Ti Tou Gorge & Wotten Waven hot springs",
-        description: "A narrow canyon with clear water for swimming, next to Wotten Waven, the village at the centre of Dominica's sulphur hot springs.",
+        description: "A narrow canyon with clear water for swimming, next to Wotten Waven, the village at the centre of Dominica’s sulphur hot springs.",
       },
       {
         name: "Champagne Reef",
@@ -1272,7 +1272,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Kalinago Territory",
-        description: "Home to the Caribbean's last Kalinago (Carib) community, on the east coast: craft, cultural sites and coastal scenery.",
+        description: "Home to the Caribbean’s last Kalinago (Carib) community, on the east coast: craft, cultural sites and coastal scenery.",
         photo: {
           src: "/places/dominica/kalinago-territory.jpg",
           alt: "Kalinago Territory, Dominica",
@@ -1284,7 +1284,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "The Boiling Lake hike",
-        description: "A full-day, guided trek through rainforest and the Valley of Desolation to the edge of the lake, one of the Caribbean's most demanding and iconic hikes.",
+        description: "A full-day, guided trek through rainforest and the Valley of Desolation to the edge of the lake, one of the Caribbean’s most demanding and iconic hikes.",
       },
       {
         title: "Waterfall hikes and swims",
@@ -1304,7 +1304,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Hiking the Waitukubuli National Trail",
-        description: "A 185km, 14-segment trail across the whole island, the Caribbean's only long-distance hiking trail, walkable in day-length sections or end to end.",
+        description: "A 185km, 14-segment trail across the whole island, the Caribbean’s only long-distance hiking trail, walkable in day-length sections or end to end.",
       },
     ],
     localDishes: [
@@ -1327,14 +1327,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Mountain chicken (historical note, not a recommendation)",
         description:
-          "Dominica's traditional national dish is actually a large frog (Leptodactylus fallax), not poultry. A chytrid fungus outbreak in 2002 wiped out over 80% of the wild population within 18 months, and it's now Critically Endangered: around 100 individuals remain in the wild across Dominica and Montserrat combined. Hunting has been banned since 2004. It's mentioned here for cultural context, not as something to order.",
+          "Dominica’s traditional national dish is actually a large frog (Leptodactylus fallax), not poultry. A chytrid fungus outbreak in 2002 wiped out over 80% of the wild population within 18 months, and it’s now Critically Endangered: around 100 individuals remain in the wild across Dominica and Montserrat combined. Hunting has been banned since 2004. It’s mentioned here for cultural context, not as something to order.",
       },
     ],
     placesToEat: [
       {
         name: "Lacou Melrose House",
         area: "Roseau",
-        description: "A charming restaurant in the historic Melrose House, with a chalkboard menu that changes with what's fresh.",
+        description: "A charming restaurant in the historic Melrose House, with a chalkboard menu that changes with what’s fresh.",
       },
       {
         name: "Petit Paris Restaurant & Bar",
@@ -1342,13 +1342,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "French-Caribbean cuisine in the capital.",
       },
       {
-        name: "Kozy's Niche",
+        name: "Kozy’s Niche",
         area: "Roseau",
         description: "A local favourite blending Italian and Caribbean cooking: lionfish and grilled mahi-mahi are the dishes to order.",
       },
     ],
     symbols: {
-      motto: "Après Bondie C'est La Ter (Kwéyòl for \"After God is the Earth\")",
+      motto: "Après Bondie C’est La Ter (Kwéyòl for “After God is the Earth”)",
       anthem: {
         title: "Isle of Beauty, Isle of Splendour",
         lyricist: "Rev. Wilfred Oscar Morgan Pond",
@@ -1381,11 +1381,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What local food should I try?",
-        a: "Callaloo (a leafy-green dish, often with crab or saltfish), crab back (stuffed crab shells, a festive specialty), rice and peas with dumplings and stewed fish or chicken, and fresh grilled fish, lobster in season and conch. Dominica's traditional national dish is actually mountain chicken, a large frog now critically endangered and protected since a 2004 hunting ban, so it's not something to order. Try the small local restaurants and cook-shops in Roseau and Portsmouth.",
+        a: "Callaloo (a leafy-green dish, often with crab or saltfish), crab back (stuffed crab shells, a festive specialty), rice and peas with dumplings and stewed fish or chicken, and fresh grilled fish, lobster in season and conch. Dominica’s traditional national dish is actually mountain chicken, a large frog now critically endangered and protected since a 2004 hunting ban, so it’s not something to order. Try the small local restaurants and cook-shops in Roseau and Portsmouth.",
       },
       {
         q: "Is Dominica safe for tourists?",
-        a: "Dominica is generally considered one of the safer Caribbean islands for tourists. Violent crime against visitors is rare; petty theft can occur, especially in crowded areas or if valuables are left unattended. Use normal precautions: don't leave bags on the beach, avoid poorly lit areas at night, and secure valuables in your accommodation. For hikes, always use a reputable guide, especially for challenging trails like Boiling Lake. Check your government's current travel advisory before you go.",
+        a: "Dominica is generally considered one of the safer Caribbean islands for tourists. Violent crime against visitors is rare; petty theft can occur, especially in crowded areas or if valuables are left unattended. Use normal precautions: don’t leave bags on the beach, avoid poorly lit areas at night, and secure valuables in your accommodation. For hikes, always use a reputable guide, especially for challenging trails like Boiling Lake. Check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -1397,7 +1397,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Dominicans are generally friendly and a little reserved; a polite greeting before asking a question is appreciated. Dress is casual, with modest attire expected in churches and some villages. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides and drivers welcome. Stay on marked trails, don't litter, and follow your guide's instructions, especially in the volcanic and rainforest areas.",
+        a: "Dominicans are generally friendly and a little reserved; a polite greeting before asking a question is appreciated. Dress is casual, with modest attire expected in churches and some villages. Tipping 10% in restaurants is standard if a service charge isn’t already included, with small tips for guides and drivers welcome. Stay on marked trails, don’t litter, and follow your guide’s instructions, especially in the volcanic and rainforest areas.",
       },
     ],
     lastUpdated: "August 2026",
@@ -1405,9 +1405,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "grenada",
     name: "Grenada",
-    tagline: "The \"Spice Isle\": a tri-island state built on nutmeg, and home to the world's first underwater sculpture park.",
+    tagline: "The “Spice Isle”: a tri-island state built on nutmeg, and home to the world’s first underwater sculpture park.",
     overview:
-      "Grenada is a tri-island state (Grenada, Carriacou and Petite Martinique) long known as the \"Spice Isle\" for the nutmeg, mace, cocoa and cinnamon grown on its slopes; nutmeg appears on the national flag. It's also a country that has rebuilt more than once: a 1979 revolution and its violent 1983 collapse brought a brief US-led intervention, and Hurricane Ivan in 2004 destroyed 90% of the island's buildings and nearly wiped out the nutmeg industry overnight. Today it's calm, green and mountainous, with diving, waterfalls and rainforest as much a draw as its beaches.",
+      "Grenada is a tri-island state (Grenada, Carriacou and Petite Martinique) long known as the “Spice Isle” for the nutmeg, mace, cocoa and cinnamon grown on its slopes; nutmeg appears on the national flag. It’s also a country that has rebuilt more than once: a 1979 revolution and its violent 1983 collapse brought a brief US-led intervention, and Hurricane Ivan in 2004 destroyed 90% of the island’s buildings and nearly wiped out the nutmeg industry overnight. Today it’s calm, green and mountainous, with diving, waterfalls and rainforest as much a draw as its beaches.",
     photo: {
       src: "/destinations/grenada.jpg",
       alt: "Grand Anse Beach, Grenada",
@@ -1423,7 +1423,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       areaKm2: "≈344 km² across three inhabited islands: Grenada (≈311 km²), Carriacou (≈34 km²) and Petite Martinique (≈2.4 km²)",
       independence: "7 February 1974, from the United Kingdom",
-      capital: "St. George's",
+      capital: "St. George’s",
       officialLanguages: ["English (official)", "Grenadian Creole English and French Patois widely spoken"],
       currency: "Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1",
       government:
@@ -1439,11 +1439,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "2011 census, most recent island-level breakdown",
       },
       urbanizationNote:
-        "Most people live on the main island of Grenada, in and around St. George's. Carriacou (Hillsborough its main town) lies about 40km north-east by ferry or short flight; Petite Martinique, smaller still, sits just off Carriacou.",
+        "Most people live on the main island of Grenada, in and around St. George’s. Carriacou (Hillsborough its main town) lies about 40km north-east by ferry or short flight; Petite Martinique, smaller still, sits just off Carriacou.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$435–800/month outside St. George's, or for a modest unit in town",
-      rentPremium1BR: "≈US$800–1,800/month in St. George's, Grand Anse, True Blue or the Lance aux Epines / Westerhall south-coast corridor",
+      rentTypical1BR: "≈US$435–800/month outside St. George’s, or for a modest unit in town",
+      rentPremium1BR: "≈US$800–1,800/month in St. George’s, Grand Anse, True Blue or the Lance aux Epines / Westerhall south-coast corridor",
       groceriesSingle: "≈US$250–450/month",
       inexpensiveMeal: "≈US$7–12",
       midRangeMealForTwo: "≈US$30–80, more at upscale beachfront or resort restaurants",
@@ -1451,7 +1451,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,300–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–3,500/month all-in",
       notes:
-        "Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle (a beachfront rental near Grand Anse, frequent dining and tours) can run US$3,500–5,000+/month. Local minibuses (\"reggae buses\") cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
+        "Carriacou and the northern parishes (e.g. Sauteurs) run 50–70% cheaper than the south-coast expat corridor. A premium lifestyle (a beachfront rental near Grand Anse, frequent dining and tours) can run US$3,500–5,000+/month. Local minibuses (“reggae buses”) cost roughly US$1–3 per trip; taxis run about US$1.50–3/km.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/grenada-living-cost/",
       asOf: "August 2026",
@@ -1462,19 +1462,19 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       residency:
         "Grenada also runs a Citizenship by Investment programme: a non-refundable contribution to the National Transformation Fund starting at US$235,000, or a qualifying real estate purchase from US$270,000 held for a set period, with decisions usually taking 4 to 6 months. Grenada is the only Caribbean CBI country whose citizenship comes with US E-2 investor visa eligibility, on top of visa-free access to a wide range of other countries.",
       healthcare:
-        "General Hospital in St. George's is the main public facility, though specialist care is limited and more complex cases are often referred to Barbados, Trinidad or the US. A May 2025 partnership with New York's Mount Sinai Health System is meant to build up specialist capacity locally over time. Most movers carry private insurance, from roughly US$150-300/month for a basic plan up to US$500-800/month for comprehensive cover with medical evacuation.",
+        "General Hospital in St. George’s is the main public facility, though specialist care is limited and more complex cases are often referred to Barbados, Trinidad or the US. A May 2025 partnership with New York’s Mount Sinai Health System is meant to build up specialist capacity locally over time. Most movers carry private insurance, from roughly US$150-300/month for a basic plan up to US$500-800/month for comprehensive cover with medical evacuation.",
       taxes:
-        "Grenada taxes residents on Grenada-sourced income once someone has spent more than 183 days a year on the island; foreign income generally stays untaxed. Local income is taxed in bands: nothing on the first EC$24,000 a year, 10% up to EC$36,000, and 28% above that. There's no capital gains, inheritance, estate or wealth tax, and VAT runs 15% generally, 10% for tourism and hospitality.",
+        "Grenada taxes residents on Grenada-sourced income once someone has spent more than 183 days a year on the island; foreign income generally stays untaxed. Local income is taxed in bands: nothing on the first EC$24,000 a year, 10% up to EC$36,000, and 28% above that. There’s no capital gains, inheritance, estate or wealth tax, and VAT runs 15% generally, 10% for tourism and hospitality.",
       areas: [
         {
-          name: "St. George's",
+          name: "St. George’s",
           description:
             "The capital, urban and convenient for services rather than beach-focused. Two-bedroom apartments run roughly EC$1,200-2,000/month.",
         },
         {
           name: "Grand Anse",
           description:
-            "The main base for movers, next to its well-known stretch of beach, with the island's densest cluster of restaurants and services. Two-bedroom apartments run roughly EC$2,000-3,500/month.",
+            "The main base for movers, next to its well-known stretch of beach, with the island’s densest cluster of restaurants and services. Two-bedroom apartments run roughly EC$2,000-3,500/month.",
         },
         {
           name: "True Blue",
@@ -1500,7 +1500,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Molinere Underwater Sculpture Park",
-        description: "The world's first underwater sculpture park (opened 2006), with more than 80 submerged works by Jason deCaires Taylor slowly becoming an artificial reef.",
+        description: "The world’s first underwater sculpture park (opened 2006), with more than 80 submerged works by Jason deCaires Taylor slowly becoming an artificial reef.",
         photo: {
           src: "/places/grenada/molinere.jpg",
           alt: "Underwater sculptures at Molinere Underwater Sculpture Park, Grenada",
@@ -1510,7 +1510,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Grand Anse Beach",
-        description: "Grenada's best-known beach: two miles of soft white sand, calm water, and restaurants and bars along the shore.",
+        description: "Grenada’s best-known beach: two miles of soft white sand, calm water, and restaurants and bars along the shore.",
         photo: {
           src: "/destinations/grenada.jpg",
           alt: "Grand Anse Beach, Grenada",
@@ -1545,14 +1545,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A 17th-century plantation turned working organic cocoa farm, with tours through the chocolate-making process.",
         photo: {
           src: "/places/grenada/belmont-estate.jpg",
-          alt: "Belmont Estate, St. Patrick's, Grenada",
+          alt: "Belmont Estate, St. Patrick’s, Grenada",
           credit: "Dpursoo, CC BY-SA 3.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Belmont_Estate,_St_Patrick's,_Grenada_1.JPG",
         },
       },
       {
         name: "Carriacou",
-        description: "Grenada's larger sister island, quieter and less developed: Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
+        description: "Grenada’s larger sister island, quieter and less developed: Hillsborough town, boatbuilding traditions, and its own set of beaches and dive sites.",
         photo: {
           src: "/places/grenada/carriacou.jpg",
           alt: "Hillsborough, Carriacou",
@@ -1562,10 +1562,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "The Carenage & Fort George",
-        description: "St. George's horseshoe-shaped historic harbour, ringed by colourful buildings and restaurants, overlooked by Fort George, an 18th-century fort with panoramic views over the capital.",
+        description: "St. George’s horseshoe-shaped historic harbour, ringed by colourful buildings and restaurants, overlooked by Fort George, an 18th-century fort with panoramic views over the capital.",
         photo: {
           src: "/places/grenada/carenage.jpg",
-          alt: "The Carenage, St. George's, Grenada",
+          alt: "The Carenage, St. George’s, Grenada",
           credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
         },
@@ -1584,7 +1584,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Spicemas Carnival",
-        description: "Grenada's carnival, centred on St. George's in early August after a season that builds from May: soca, costume bands and street parades.",
+        description: "Grenada’s carnival, centred on St. George’s in early August after a season that builds from May: soca, costume bands and street parades.",
       },
       {
         title: "Diving the Bianca C wreck",
@@ -1610,7 +1610,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Oil down",
-        description: "Grenada's national dish: breadfruit, coconut milk, callaloo, dumplings and salted meat or fish, slow-cooked in one pot until the coconut oil rises. Traditionally made as a communal, all-day beach cookout.",
+        description: "Grenada’s national dish: breadfruit, coconut milk, callaloo, dumplings and salted meat or fish, slow-cooked in one pot until the coconut oil rises. Traditionally made as a communal, all-day beach cookout.",
       },
       {
         name: "Callaloo soup",
@@ -1627,12 +1627,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     ],
     placesToEat: [
       {
-        name: "Patrick's Local Homestyle Restaurant",
-        area: "St. George's",
+        name: "Patrick’s Local Homestyle Restaurant",
+        area: "St. George’s",
         description: "Grenadian food tapas-style: oil down, callaloo soup, ginger pork and fish cakes, all in small plates.",
       },
       {
-        name: "Umbrella's Beach Bar",
+        name: "Umbrella’s Beach Bar",
         area: "Grand Anse Beach",
         description: "A women-run beach bar serving fresh, locally-sourced seafood on the sand.",
       },
@@ -1669,7 +1669,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What is the currency and do I need cash?",
-        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in many hotels, restaurants and larger shops, but smaller vendors, markets and rural spots often prefer cash. ATMs are available in St. George's, Grand Anse and a few other towns, but limited on Carriacou and Petite Martinique.",
+        a: "The currency is the Eastern Caribbean dollar (XCD), fixed at EC$2.70 to US$1. US dollars are widely accepted in tourist areas, though change may come back in XCD. Major cards work in many hotels, restaurants and larger shops, but smaller vendors, markets and rural spots often prefer cash. ATMs are available in St. George’s, Grand Anse and a few other towns, but limited on Carriacou and Petite Martinique.",
       },
       {
         q: "Do I need a visa to visit as a tourist?",
@@ -1677,15 +1677,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "How do I get around the island?",
-        a: "Inexpensive local buses connect St. George's with most parishes, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in St. George's; driving is on the left, and roads are generally good but narrow and hilly. Ferries and boats run to Carriacou and Petite Martinique; check schedules ahead, as they vary.",
+        a: "Inexpensive local buses connect St. George’s with most parishes, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in St. George’s; driving is on the left, and roads are generally good but narrow and hilly. Ferries and boats run to Carriacou and Petite Martinique; check schedules ahead, as they vary.",
       },
       {
         q: "What local food should I try?",
-        a: "Oil down is the national dish: salted meat or fish, callaloo, dumplings and breadfruit, cooked in coconut milk. Also look for callaloo soup, rice and peas with stewed chicken or fish and provision (root crops), and fresh grilled fish, lobster in season and conch. Try the local cook-shops and market eateries in St. George's, beachfront restaurants along Grand Anse and Lance aux Épines, and estate restaurants like Belmont.",
+        a: "Oil down is the national dish: salted meat or fish, callaloo, dumplings and breadfruit, cooked in coconut milk. Also look for callaloo soup, rice and peas with stewed chicken or fish and provision (root crops), and fresh grilled fish, lobster in season and conch. Try the local cook-shops and market eateries in St. George’s, beachfront restaurants along Grand Anse and Lance aux Épines, and estate restaurants like Belmont.",
       },
       {
         q: "Is Grenada safe for tourists?",
-        a: "Grenada is generally considered one of the safer Caribbean destinations for tourists. Violent crime against visitors is uncommon; petty theft can occur, especially on beaches or in crowded areas. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government's current travel advisory before you go.",
+        a: "Grenada is generally considered one of the safer Caribbean destinations for tourists. Violent crime against visitors is uncommon; petty theft can occur, especially on beaches or in crowded areas. Use normal precautions: don’t leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -1693,11 +1693,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for waterfall hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue, and clothes you don't mind getting a bit dirty or damp if you're visiting a spice estate or hiking.",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for waterfall hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue, and clothes you don’t mind getting a bit dirty or damp if you’re visiting a spice estate or hiking.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Grenadians are generally warm and polite; a friendly greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
+        a: "Grenadians are generally warm and polite; a friendly greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers and tour guides welcome. Sunday is traditionally quiet, with some shops and services on reduced hours.",
       },
     ],
     lastUpdated: "August 2026",
@@ -1705,9 +1705,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "guyana",
     name: "Guyana",
-    tagline: "Mainland South America's only English-speaking country: a vast, largely untouched interior of rainforest and savannah, transformed by a recent oil boom.",
+    tagline: "Mainland South America’s only English-speaking country: a vast, largely untouched interior of rainforest and savannah, transformed by a recent oil boom.",
     overview:
-      "Guyana is the odd one out geographically among CARICOM's island states: mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown's real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
+      "Guyana is the odd one out geographically among CARICOM’s island states: mainland South America, over 80% covered in rainforest, and by far the largest country in the group at more than 200,000 km². Since offshore oil production began in 2019, its economy has grown faster than almost any country on Earth, transforming Georgetown’s real estate market and cost of living in the space of a few years. Away from the capital, most of the country is still Amerindian villages, savannah ranches and unbroken forest.",
     photo: {
       src: "/destinations/guyana.jpg",
       alt: "Aerial view of Kaieteur Falls, Guyana",
@@ -1727,7 +1727,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       officialLanguages: ["English (official)", "Guyanese Creole, widely spoken"],
       currency: "Guyanese dollar (GYD), floating since 2015, trading at roughly GY$209 to US$1",
       government:
-        "Cooperative Republic. Unlike several smaller CARICOM states, Guyana's President is an executive head of state and head of government combined (since the 1980 constitution), not a ceremonial office.",
+        "Cooperative Republic. Unlike several smaller CARICOM states, Guyana’s President is an executive head of state and head of government combined (since the 1980 constitution), not a ceremonial office.",
       medianAge: "≈27 years, one of the younger populations in CARICOM",
       ethnicComposition: {
         value: "East Indian ≈40%, African descent ≈29%, mixed ≈20%, Amerindian ≈10.5%, other ≈0.5%",
@@ -1746,7 +1746,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,000–1,400/month all-in",
       budgetComfortableSingle: "≈US$1,400–2,500/month all-in",
       notes:
-        "Cost of living here needs an asterisk: Guyana's economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result. One widely reported example saw a property's rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. A premium lifestyle (luxury rental in central Georgetown or an upscale suburb, frequent dining) can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
+        "Cost of living here needs an asterisk: Guyana’s economy has grown faster than almost anywhere on Earth since offshore oil production started in 2019, and Georgetown rents have risen dramatically as a result. One widely reported example saw a property’s rent rise over 165% in 2024 alone, and property values are up roughly 500% in five years. That surge is concentrated in oil-industry-driven premium listings; the ranges above reflect more typical local costs, but expect newer, furnished or secure buildings in central Georgetown to run well above them. A premium lifestyle (luxury rental in central Georgetown or an upscale suburb, frequent dining) can run US$2,500–4,000+/month. Minibus and taxi fares in Georgetown run roughly US$0.90–2.20 per ride.",
       sourceName: "Relocation and expat cost-of-living guides, and real-estate reporting on the oil boom",
       asOf: "August 2026",
     },
@@ -1787,7 +1787,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       ],
       notes:
-        "Georgetown's oil-boom-driven rents have climbed sharply in the neighbourhoods movers favour most, so treat any rental figure as a starting point and check current listings rather than relying on older estimates.",
+        "Georgetown’s oil-boom-driven rents have climbed sharply in the neighbourhoods movers favour most, so treat any rental figure as a starting point and check current listings rather than relying on older estimates.",
       sourceName: "592Hub and Jarnias Cyril relocation guides",
       sourceUrl: "https://www.jarniascyril.com/expatriation/install-guyana-expat-complete-guide/",
       secondarySourceName: "Guyana Revenue Authority (official income tax rates)",
@@ -1798,7 +1798,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Kaieteur Falls",
         description:
-          "One of the world's most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it; visitors fly in on a small plane over unbroken rainforest.",
+          "One of the world’s most powerful single-drop waterfalls, roughly four times the height of Niagara. No road reaches it; visitors fly in on a small plane over unbroken rainforest.",
         photo: {
           src: "/destinations/guyana.jpg",
           alt: "Aerial view of Kaieteur Falls, Guyana",
@@ -1827,7 +1827,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       },
       {
-        name: "Georgetown's colonial architecture & Stabroek Market",
+        name: "Georgetown’s colonial architecture & Stabroek Market",
         description: "18th- and 19th-century wooden buildings and the seawall protecting the below-sea-level capital, plus Stabroek Market, a landmark iron-and-steel market building with a clock tower, open since 1881.",
         photo: {
           src: "/places/guyana/stabroek-market.jpg",
@@ -1872,7 +1872,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Birdwatching",
-        description: "Guyana is one of the world's most serious birding destinations, with harpy eagles, macaws and hundreds of other species in largely untouched habitat.",
+        description: "Guyana is one of the world’s most serious birding destinations, with harpy eagles, macaws and hundreds of other species in largely untouched habitat.",
       },
       {
         title: "Turtle watching at Shell Beach",
@@ -1882,7 +1882,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Pepperpot",
-        description: "Guyana's national dish: meat slow-cooked in cassareep, the reduced, bittersweet juice of cassava root, traditionally served at Christmas.",
+        description: "Guyana’s national dish: meat slow-cooked in cassareep, the reduced, bittersweet juice of cassava root, traditionally served at Christmas.",
       },
       {
         name: "Cook-up rice",
@@ -1894,24 +1894,24 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Roti and curry",
-        description: "A strong Indo-Guyanese influence on everyday eating, reflecting the country's East Indian plurality: curried chicken, goat or vegetables wrapped in roti.",
+        description: "A strong Indo-Guyanese influence on everyday eating, reflecting the country’s East Indian plurality: curried chicken, goat or vegetables wrapped in roti.",
       },
     ],
     placesToEat: [
       {
         name: "Backyard Café",
         area: "Georgetown",
-        description: "Chef Delven Adams's take on Guyanese cuisine, named to TIME Magazine's World's Greatest Places 2026 list.",
+        description: "Chef Delven Adams’s take on Guyanese cuisine, named to TIME Magazine’s World’s Greatest Places 2026 list.",
       },
       {
         name: "Aagman Indian Restaurant",
         area: "Georgetown",
-        description: "A well-regarded Indian restaurant reflecting Guyana's large Indo-Guyanese population; the paneer tikka masala is a standout.",
+        description: "A well-regarded Indian restaurant reflecting Guyana’s large Indo-Guyanese population; the paneer tikka masala is a standout.",
       },
       {
-        name: "Govinda's Higher Taste",
+        name: "Govinda’s Higher Taste",
         area: "Georgetown",
-        description: "Georgetown's first all-vegetarian restaurant.",
+        description: "Georgetown’s first all-vegetarian restaurant.",
       },
     ],
     symbols: {
@@ -1923,10 +1923,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         adopted: "1966, at independence",
         officialUrl: "https://en.wikipedia.org/wiki/Dear_Land_of_Guyana,_of_Rivers_and_Plains",
       },
-      // Two materially different texts circulate online as Guyana's National
+      // Two materially different texts circulate online as Guyana’s National
       // Pledge, both attributed to the same secondary source without a clean
       // official-government confirmation for either. Rather than guess which
-      // is correct, it's left out, same policy as Belize.
+      // is correct, it’s left out, same policy as Belize.
     },
     visitorFaq: [
       {
@@ -1935,15 +1935,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What is the currency and do I need cash?",
-        a: "The currency is the Guyanese dollar (GYD), which floats, so exchange rates move; US dollars are often quoted informally. USD is widely accepted in Georgetown's business and tourist areas, but smaller towns and rural spots usually prefer GYD. Major cards work in many hotels, larger restaurants and some shops in Georgetown, but cash is standard outside the capital and for tours. ATMs are available in Georgetown and a few larger towns, but limited or nonexistent in the interior, so carry enough cash before heading inland.",
+        a: "The currency is the Guyanese dollar (GYD), which floats, so exchange rates move; US dollars are often quoted informally. USD is widely accepted in Georgetown’s business and tourist areas, but smaller towns and rural spots usually prefer GYD. Major cards work in many hotels, larger restaurants and some shops in Georgetown, but cash is standard outside the capital and for tours. ATMs are available in Georgetown and a few larger towns, but limited or nonexistent in the interior, so carry enough cash before heading inland.",
       },
       {
         q: "Do I need a visa to visit as a tourist?",
-        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free or with a visa on arrival for short stays, often up to 30–90 days, though rules vary by nationality and some passport holders must arrange a visa in advance. You'll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Guyana's Passport, Immigration and Citizenship Office or your nearest embassy before travelling.",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free or with a visa on arrival for short stays, often up to 30–90 days, though rules vary by nationality and some passport holders must arrange a visa in advance. You’ll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Guyana’s Passport, Immigration and Citizenship Office or your nearest embassy before travelling.",
       },
       {
         q: "How do I get around the country?",
-        a: "Minibuses and taxis are common in and around Georgetown and between major towns, inexpensive but often crowded. Small domestic airlines link Georgetown's Cheddi Jagan International Airport with interior airstrips like Kaieteur, Lethem and Annai, essential for reaching remote eco-lodges and the Rupununi. River boats reach many interior communities and eco-lodges, usually arranged by a tour operator. Rental cars are available in Georgetown; driving is on the left, and a 4x4 is recommended for rougher interior roads. Guided, organised tours are the norm for Kaieteur Falls, Iwokrama and Rupununi safaris, with transport, guides and permits usually included.",
+        a: "Minibuses and taxis are common in and around Georgetown and between major towns, inexpensive but often crowded. Small domestic airlines link Georgetown’s Cheddi Jagan International Airport with interior airstrips like Kaieteur, Lethem and Annai, essential for reaching remote eco-lodges and the Rupununi. River boats reach many interior communities and eco-lodges, usually arranged by a tour operator. Rental cars are available in Georgetown; driving is on the left, and a 4x4 is recommended for rougher interior roads. Guided, organised tours are the norm for Kaieteur Falls, Iwokrama and Rupununi safaris, with transport, guides and permits usually included.",
       },
       {
         q: "What local food should I try?",
@@ -1951,7 +1951,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Is Guyana safe for tourists?",
-        a: "Guyana can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Georgetown. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government's current travel advisory and talk to your tour operator about current conditions.",
+        a: "Guyana can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Georgetown. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don’t flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government’s current travel advisory and talk to your tour operator about current conditions.",
       },
       {
         q: "What is the best time to visit?",
@@ -1963,7 +1963,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Guyana is highly multicultural: Indo-Guyanese, Afro-Guyanese, Indigenous, mixed, Chinese, Portuguese, Syrian-Lebanese and more, so respect local customs and religious practices. English is official, but you'll hear Guyanese Creole, Hindi, Urdu, Chinese and Indigenous languages in daily life. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide's advice on behaviour in villages and protected areas.",
+        a: "Guyana is highly multicultural: Indo-Guyanese, Afro-Guyanese, Indigenous, mixed, Chinese, Portuguese, Syrian-Lebanese and more, so respect local customs and religious practices. English is official, but you’ll hear Guyanese Creole, Hindi, Urdu, Chinese and Indigenous languages in daily life. Tipping 10% in restaurants is standard if a service charge isn’t already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide’s advice on behaviour in villages and protected areas.",
       },
     ],
     lastUpdated: "August 2026",
@@ -1971,12 +1971,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "jamaica",
     name: "Jamaica",
-    tagline: "The Caribbean's best-known island by far, running from the Blue Mountain coffee slopes down to Seven Mile Beach, with reggae and jerk the whole way.",
+    tagline: "The Caribbean’s best-known island by far, running from the Blue Mountain coffee slopes down to Seven Mile Beach, with reggae and jerk the whole way.",
     overview:
-      "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally: reggae, Bob Marley and jerk cooking all trace back here. It's a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
+      "Jamaica is the most populous English-speaking Caribbean country by a wide margin, and easily the best known internationally: reggae, Bob Marley and jerk cooking all trace back here. It’s a bigger, more varied island than most of its CARICOM neighbours: mountains and coffee estates in the interior, resort coastline around Negril and Ocho Rios, and Kingston, the largest English-speaking city south of Miami, as its cultural and business centre. A 2022 government push to become a republic by 2025 was retracted in March 2025, so Jamaica remains a constitutional monarchy for now.",
     photo: {
       src: "/destinations/jamaica.jpg",
-      alt: "Dunn's River Falls, Ocho Rios, Jamaica",
+      alt: "Dunn’s River Falls, Ocho Rios, Jamaica",
       credit: "Joanson Baptiste James",
     },
     coordinates: { lat: 17.997, lng: -76.7936, display: "18.00°N, 76.79°W", zoom: 9 },
@@ -2000,7 +2000,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "2024 estimate",
       },
       urbanizationNote:
-        "The Kingston Metropolitan Area is by far the largest population centre and the country's economic and cultural hub; Montego Bay and Ocho Rios are the main tourism centres on the north coast.",
+        "The Kingston Metropolitan Area is by far the largest population centre and the country’s economic and cultural hub; Montego Bay and Ocho Rios are the main tourism centres on the north coast.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$350–600/month in outer Kingston (Half Way Tree, Constant Spring, Portmore) or a modest unit elsewhere",
@@ -2030,12 +2030,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "Kingston",
           description:
-            "The capital and the country's business and cultural hub. New Kingston and Barbican suit professionals; Cherry Gardens, Norbrook and Liguanea are established, relatively secure neighbourhoods, at a price premium over the rest of the city.",
+            "The capital and the country’s business and cultural hub. New Kingston and Barbican suit professionals; Cherry Gardens, Norbrook and Liguanea are established, relatively secure neighbourhoods, at a price premium over the rest of the city.",
         },
         {
           name: "Montego Bay",
           description:
-            "Jamaica's second city and main north-coast hub, popular with remote workers and retirees; Ironshore and Rose Hall offer gated communities close to Sangster International Airport.",
+            "Jamaica’s second city and main north-coast hub, popular with remote workers and retirees; Ironshore and Rose Hall offer gated communities close to Sangster International Airport.",
         },
         {
           name: "Mandeville",
@@ -2054,7 +2054,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       ],
       notes:
-        "Work permit and residency rules change, so confirm current requirements directly with PICA or Jamaica's Ministry of Labour and Social Security before making plans around them.",
+        "Work permit and residency rules change, so confirm current requirements directly with PICA or Jamaica’s Ministry of Labour and Social Security before making plans around them.",
       sourceName: "Passport, Immigration and Citizenship Agency (PICA) and PwC Tax Summaries",
       sourceUrl: "https://www.pica.gov.jm/immigration/permanent-residence",
       secondarySourceName: "Expat.com",
@@ -2063,24 +2063,24 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     placesToSee: [
       {
-        name: "Dunn's River Falls",
-        description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach: one of Jamaica's most-photographed sights.",
+        name: "Dunn’s River Falls",
+        description: "A terraced waterfall near Ocho Rios that visitors climb hand in hand, cascading straight onto the beach: one of Jamaica’s most-photographed sights.",
         photo: {
           src: "/destinations/jamaica.jpg",
-          alt: "Dunn's River Falls, Ocho Rios, Jamaica",
+          alt: "Dunn’s River Falls, Ocho Rios, Jamaica",
           credit: "Joanson Baptiste James",
         },
         video: {
           src: "/videos/dunns-pool.mp4",
           poster: "/videos/dunns-pool-poster.jpg",
-          label: "Dunn's River Falls running down into the pool at the bottom",
+          label: "Dunn’s River Falls running down into the pool at the bottom",
           credit: "Joanson Baptiste James",
           portrait: true,
         },
       },
       {
         name: "Blue Mountains",
-        description: "Jamaica's highest range, home to Blue Mountain Peak (2,256m) and the coffee estates that grow the world-famous Blue Mountain coffee, most of it exported to Japan.",
+        description: "Jamaica’s highest range, home to Blue Mountain Peak (2,256m) and the coffee estates that grow the world-famous Blue Mountain coffee, most of it exported to Japan.",
         photo: {
           src: "/places/jamaica/blue-mountains.jpg",
           alt: "The Blue Mountains, Jamaica",
@@ -2108,7 +2108,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Bob Marley Museum & Devon House",
-        description: "Marley's former Kingston home, now a museum on his life and the roots of reggae; nearby, Devon House is an 1881 Jamaican-Georgian mansion turned heritage site, famous for its ice cream.",
+        description: "Marley’s former Kingston home, now a museum on his life and the roots of reggae; nearby, Devon House is an 1881 Jamaican-Georgian mansion turned heritage site, famous for its ice cream.",
         photo: {
           src: "/places/jamaica/bob-marley-museum.jpg",
           alt: "The Bob Marley Museum courtyard, Hope Road, Kingston, Jamaica",
@@ -2117,8 +2117,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       },
       {
-        name: "Doctor's Cave Beach",
-        description: "A historic Montego Bay beach that grew famous in the 1920s after a British osteopath publicised its supposedly restorative waters, and it's still one of the city's best-known beaches.",
+        name: "Doctor’s Cave Beach",
+        description: "A historic Montego Bay beach that grew famous in the 1920s after a British osteopath publicised its supposedly restorative waters, and it’s still one of the city’s best-known beaches.",
       },
       {
         name: "Blue and John Crow Mountains National Park",
@@ -2126,7 +2126,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Port Royal",
-        description: "Once called \"the wickedest city on Earth\" for its pirate-haven reputation, two-thirds of it sank in a 1692 earthquake. Its archaeological landscape at the mouth of Kingston Harbour became Jamaica's second UNESCO World Heritage Site in July 2025.",
+        description: "Once called \"the wickedest city on Earth\" for its pirate-haven reputation, two-thirds of it sank in a 1692 earthquake. Its archaeological landscape at the mouth of Kingston Harbour became Jamaica’s second UNESCO World Heritage Site in July 2025.",
         photo: {
           src: "/places/jamaica/port-royal.jpg",
           alt: "Port Royal, Jamaica",
@@ -2137,7 +2137,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     ],
     experiences: [
       {
-        title: "Climbing Dunn's River Falls",
+        title: "Climbing Dunn’s River Falls",
         description: "A guided, hand-in-hand climb up the terraced falls, one of the most-repeated Jamaica experiences there is.",
       },
       {
@@ -2149,7 +2149,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Chicken or pork slow-grilled over pimento wood, best eaten at a roadside jerk stand, not a hotel restaurant.",
       },
       {
-        title: "Cliff diving at Rick's Café",
+        title: "Cliff diving at Rick’s Café",
         description: "A Negril institution: sunset drinks and cliff jumps from platforms up to 35 feet above the water.",
       },
       {
@@ -2164,15 +2164,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Ackee and saltfish",
-        description: "Jamaica's national dish: ackee, the national fruit, cooked with salted cod, onion and pepper. Traditionally a breakfast dish, served with fried dumplings or breadfruit.",
+        description: "Jamaica’s national dish: ackee, the national fruit, cooked with salted cod, onion and pepper. Traditionally a breakfast dish, served with fried dumplings or breadfruit.",
       },
       {
         name: "Jerk chicken or pork",
-        description: "Meat marinated in Scotch bonnet pepper, allspice and thyme, then slow-cooked over pimento wood: Jamaica's best-known culinary export.",
+        description: "Meat marinated in Scotch bonnet pepper, allspice and thyme, then slow-cooked over pimento wood: Jamaica’s best-known culinary export.",
       },
       {
         name: "Patties",
-        description: "Flaky, turmeric-yellow pastry filled with spiced beef, chicken or vegetables: Jamaica's everyday fast food.",
+        description: "Flaky, turmeric-yellow pastry filled with spiced beef, chicken or vegetables: Jamaica’s everyday fast food.",
       },
       {
         name: "Curried goat",
@@ -2183,7 +2183,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Kingston Jerk",
         area: "Kingston",
-        description: "Widely cited by locals as the city's best jerk: chicken, pork, festival and roast breadfruit off the pimento-wood grill.",
+        description: "Widely cited by locals as the city’s best jerk: chicken, pork, festival and roast breadfruit off the pimento-wood grill.",
       },
       {
         name: "Sweetwood Jerk Joint",
@@ -2191,7 +2191,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A wide jerk menu (chicken, pork, sausage, lamb, fish and conch) with traditional pimento-wood barbecue sides.",
       },
       {
-        name: "Gloria's",
+        name: "Gloria’s",
         area: "Kingston",
         description: "A long-standing favourite for seafood.",
       },
@@ -2203,7 +2203,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Scotchies",
         area: "Montego Bay (original), plus Ocho Rios and Kingston",
-        description: "One of Jamaica's most famous jerk centres: open-air, pimento-wood barbecue, wooden tables and barrel stools. The Montego Bay original is the one most people mean by \"Scotchies.\"",
+        description: "One of Jamaica’s most famous jerk centres: open-air, pimento-wood barbecue, wooden tables and barrel stools. The Montego Bay original is the one most people mean by “Scotchies.”",
       },
     ],
     symbols: {
@@ -2228,27 +2228,27 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What is the currency and do I need cash?",
-        a: "The currency is the Jamaican dollar (JMD), which floats. USD is accepted in many tourist areas, but you'll usually get better value paying in JMD, and change often comes back in JMD. Major cards work in most hotels, larger restaurants and shops in tourist areas, but smaller vendors, cookshops and rural spots often prefer cash. ATMs are widely available in Kingston, Montego Bay, Ocho Rios, Negril and other main towns.",
+        a: "The currency is the Jamaican dollar (JMD), which floats. USD is accepted in many tourist areas, but you’ll usually get better value paying in JMD, and change often comes back in JMD. Major cards work in most hotels, larger restaurants and shops in tourist areas, but smaller vendors, cookshops and rural spots often prefer cash. ATMs are widely available in Kingston, Montego Bay, Ocho Rios, Negril and other main towns.",
       },
       {
         q: "Do I need a visa to visit as a tourist?",
-        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with Jamaica's Passport, Immigration and Citizenship Agency (PICA) or your nearest embassy before travelling.",
+        a: "Many nationalities, including the US, UK, Canada, the EU and CARICOM, can enter visa-free for short stays, often up to 90 days, with a valid passport and proof of onward travel. Always confirm current rules with Jamaica’s Passport, Immigration and Citizenship Agency (PICA) or your nearest embassy before travelling.",
       },
       {
         q: "How do I get around the island?",
-        a: "Government and private buses connect major towns, relatively cheap but can be crowded. Route taxis and shared minibuses (\"coasters\") run on fixed routes and are cheap and common, if fast-paced and crowded. Licensed taxis, with red plates marked PP or PPV, are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and roads range from good highways to narrow, winding mountain roads, so defensive driving matters. Organised tours are common for attractions like Dunn's River Falls, Blue Mountain coffee tours and river rafting, usually including transport and a guide.",
+        a: "Government and private buses connect major towns, relatively cheap but can be crowded. Route taxis and shared minibuses (“coasters”) run on fixed routes and are cheap and common, if fast-paced and crowded. Licensed taxis, with red plates marked PP or PPV, are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and roads range from good highways to narrow, winding mountain roads, so defensive driving matters. Organised tours are common for attractions like Dunn’s River Falls, Blue Mountain coffee tours and river rafting, usually including transport and a guide.",
       },
       {
         q: "What are the must-do experiences in Jamaica?",
-        a: "Climb Dunn's River Falls near Ocho Rios on a guided ascent of the terraced waterfall, watch the sunset (and try cliff-jumping) at the Negril Cliffs, tour a Blue Mountains coffee estate and hike its cool-climate scenery, spend time on Seven Mile Beach in Negril or Doctor's Cave Beach in Montego Bay, visit the Bob Marley Museum and take in Kingston's reggae and dancehall culture, go bamboo rafting on the Rio Grande in Portland, and explore inland spots like YS Falls or the Blue Hole.",
+        a: "Climb Dunn’s River Falls near Ocho Rios on a guided ascent of the terraced waterfall, watch the sunset (and try cliff-jumping) at the Negril Cliffs, tour a Blue Mountains coffee estate and hike its cool-climate scenery, spend time on Seven Mile Beach in Negril or Doctor’s Cave Beach in Montego Bay, visit the Bob Marley Museum and take in Kingston’s reggae and dancehall culture, go bamboo rafting on the Rio Grande in Portland, and explore inland spots like YS Falls or the Blue Hole.",
       },
       {
         q: "What local food should I try?",
-        a: "Jerk chicken (marinated in Scotch bonnet, pimento and herbs, then grilled or smoked over pimento wood) is Jamaica's best-known culinary export. Ackee and saltfish is the national dish, alongside rice and peas, stewed chicken or fish, curry goat, festival, fried dumplings and bammy, plus fresh grilled or fried fish and seafood. Try local cookshops, street vendors, famous jerk centres like Scotchies in Montego Bay and Ocho Rios, and beach grills in Negril and Ocho Rios.",
+        a: "Jerk chicken (marinated in Scotch bonnet, pimento and herbs, then grilled or smoked over pimento wood) is Jamaica’s best-known culinary export. Ackee and saltfish is the national dish, alongside rice and peas, stewed chicken or fish, curry goat, festival, fried dumplings and bammy, plus fresh grilled or fried fish and seafood. Try local cookshops, street vendors, famous jerk centres like Scotchies in Montego Bay and Ocho Rios, and beach grills in Negril and Ocho Rios.",
       },
       {
         q: "Is Jamaica safe for tourists?",
-        a: "Jamaica can be visited safely, but it has higher crime rates in some areas, especially parts of Kingston and some urban neighbourhoods. Major resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar areas, don't flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+        a: "Jamaica can be visited safely, but it has higher crime rates in some areas, especially parts of Kingston and some urban neighbourhoods. Major resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar areas, don’t flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government’s current travel advisory and ask your hotel or tour operator about areas to avoid.",
       },
       {
         q: "What is the best time to visit?",
@@ -2256,11 +2256,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking in the Blue Mountains or a long walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue. For hiking in the Blue Mountains or a long walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Jamaicans are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some communities. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers, tour guides and hotel staff welcome. Reggae and dancehall are central to national identity; being open-minded and courteous about the music and culture goes a long way.",
+        a: "Jamaicans are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some communities. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers, tour guides and hotel staff welcome. Reggae and dancehall are central to national identity; being open-minded and courteous about the music and culture goes a long way.",
       },
     ],
     lastUpdated: "August 2026",
@@ -2302,7 +2302,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     },
     costOfLiving: {
       rentTypical1BR: "≈US$600–900/month outside Basseterre or in a modest unit",
-      rentPremium1BR: "≈US$900–1,800/month in Basseterre, Frigate Bay, South Friars, or on Nevis near Charlestown/Pinney's Beach",
+      rentPremium1BR: "≈US$900–1,800/month in Basseterre, Frigate Bay, South Friars, or on Nevis near Charlestown/Pinney’s Beach",
       groceriesSingle: "≈US$220–350/month, more if relying on imported goods",
       inexpensiveMeal: "≈US$10–22",
       midRangeMealForTwo: "≈US$90",
@@ -2310,7 +2310,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,700–2,500/month all-in",
       budgetComfortableSingle: "≈US$2,500–4,500/month all-in",
       notes:
-        "Electricity here runs notably higher than almost anywhere else in the Caribbean: St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago's rate and more than Antigua's, largely because of import-dependent power generation, so budget for it accordingly if you'll run air conditioning regularly. A premium lifestyle (Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use) can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
+        "Electricity here runs notably higher than almost anywhere else in the Caribbean: St. Kitts and Nevis reportedly pays around five times Trinidad and Tobago’s rate and more than Antigua’s, largely because of import-dependent power generation, so budget for it accordingly if you’ll run air conditioning regularly. A premium lifestyle (Frigate Bay, South Friars or Nevis beachfront, frequent dining, high AC use) can run US$4,500–7,000+/month. A monthly public transport pass runs roughly US$80.",
       sourceName: "Global Citizen Solutions, Numbeo and other relocation guides",
       sourceUrl: "https://www.globalcitizensolutions.com/st-kitts-and-nevis-living-cost/",
       asOf: "August 2026",
@@ -2319,7 +2319,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       visaWorkPermit:
         "CARICOM nationals need the CSME Skills Certificate to live and work in St. Kitts and Nevis without a work permit; see the CSME steps for St. Kitts and Nevis for the process. St. Kitts and Nevis is also one of six OECS member states with full free movement among themselves (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines): citizens of those countries can settle here indefinitely and work without a permit at all. Visitors from more than 120 other countries can enter without a visa, though since May 2025 most arrivals also need an Electronic Travel Authorisation (eTA) beforehand, costing around US$17 for a single 90-day entry. Non-CARICOM nationals taking up a job still need a standard work permit tied to a local employer.",
       residency:
-        "St. Kitts and Nevis runs the Caribbean's oldest Citizenship by Investment programme, going back to 1984: a Sustainable Island State Contribution starting at US$250,000 for a family of up to four, or a real estate purchase from US$325,000 for a condo share up to US$600,000 for a single-family home, held for at least 7 years. Both routes now include a mandatory interview for the main applicant and any dependants aged 16 or older, and are typically decided within 4 to 6 months.",
+        "St. Kitts and Nevis runs the Caribbean’s oldest Citizenship by Investment programme, going back to 1984: a Sustainable Island State Contribution starting at US$250,000 for a family of up to four, or a real estate purchase from US$325,000 for a condo share up to US$600,000 for a single-family home, held for at least 7 years. Both routes now include a mandatory interview for the main applicant and any dependants aged 16 or older, and are typically decided within 4 to 6 months.",
       healthcare:
         "Joseph N. France General Hospital in Basseterre is the main public hospital on St. Kitts, with Alexandra Hospital serving Nevis. International health insurance with medical evacuation cover is strongly recommended, typically US$1,500-5,000 a year, since flying out a serious case to Barbados or the US can otherwise cost US$15,000-50,000 out of pocket.",
       taxes:
@@ -2332,7 +2332,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "Frigate Bay",
           description:
-            "The island's best-known base for movers. Three-bedroom apartments run roughly EC$5,400-8,100/month, with villas well beyond that.",
+            "The island’s best-known base for movers. Three-bedroom apartments run roughly EC$5,400-8,100/month, with villas well beyond that.",
         },
         {
           name: "The Southeast Peninsula",
@@ -2344,10 +2344,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
         {
           name: "Charlestown (Nevis)",
-          description: "The sister island's main town, quieter and more local in feel. One-bedroom rentals run roughly EC$1,215-2,430/month.",
+          description: "The sister island’s main town, quieter and more local in feel. One-bedroom rentals run roughly EC$1,215-2,430/month.",
         },
         {
-          name: "Pinney's Beach (Nevis)",
+          name: "Pinney’s Beach (Nevis)",
           description: "A beachfront stretch on Nevis, with oceanview villas from around EC$8,100/month.",
         },
       ],
@@ -2370,7 +2370,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "The St. Kitts Scenic Railway",
-        description: "A narrow-gauge railway built in 1912–1926 to move sugar cane, now a 30-mile tourist rail journey around the island's coastline and countryside.",
+        description: "A narrow-gauge railway built in 1912–1926 to move sugar cane, now a 30-mile tourist rail journey around the island’s coastline and countryside.",
         photo: {
           src: "/places/st-kitts-and-nevis/scenic-railway.jpg",
           alt: "St. Kitts Scenic Railway train",
@@ -2390,7 +2390,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Timothy Hill",
-        description: "A viewpoint on St. Kitts's south-east peninsula where the Atlantic and Caribbean sides of the island are both visible at once.",
+        description: "A viewpoint on St. Kitts’s south-east peninsula where the Atlantic and Caribbean sides of the island are both visible at once.",
         photo: {
           src: "/places/st-kitts-and-nevis/timothy-hill-frigate-bay.jpg",
           alt: "Frigate Bay viewed from Timothy Hill, St. Kitts",
@@ -2413,22 +2413,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "South-coast beaches on St. Kitts: South Friars for beach-accessible snorkelling on a reef just offshore, Cockleshell for its laid-back beach bar scene, both looking across to Nevis.",
       },
       {
-        name: "Dieppe Bay's black sand beach",
+        name: "Dieppe Bay’s black sand beach",
         description: "A volcanic black-sand beach on the north coast, where the Caribbean and Atlantic meet.",
       },
       {
-        name: "Pinney's Beach, Nevis",
-        description: "A long, palm-fringed beach on Nevis's west coast lined with casual bars, one of the region's classic beach settings.",
+        name: "Pinney’s Beach, Nevis",
+        description: "A long, palm-fringed beach on Nevis’s west coast lined with casual bars, one of the region’s classic beach settings.",
       },
       {
         name: "Charlestown & the Alexander Hamilton Museum",
-        description: "Nevis's small Georgian-era capital. The Museum of Nevis History sits on the site where US Founding Father Alexander Hamilton is believed to have been born, around 1754, though historians still debate the exact year.",
+        description: "Nevis’s small Georgian-era capital. The Museum of Nevis History sits on the site where US Founding Father Alexander Hamilton is believed to have been born, around 1754, though historians still debate the exact year.",
       },
     ],
     experiences: [
       {
         title: "Sugar Mas",
-        description: "St. Kitts and Nevis's carnival, running from mid-December to early January: the only major Caribbean carnival held over Christmas and New Year rather than before Lent or in summer, ending with a Grand Parade on 1 January.",
+        description: "St. Kitts and Nevis’s carnival, running from mid-December to early January: the only major Caribbean carnival held over Christmas and New Year rather than before Lent or in summer, ending with a Grand Parade on 1 January.",
       },
       {
         title: "Riding the Scenic Railway",
@@ -2436,11 +2436,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Hiking Nevis Peak",
-        description: "A steep, rope-assisted rainforest climb to the summit of Nevis's volcano.",
+        description: "A steep, rope-assisted rainforest climb to the summit of Nevis’s volcano.",
       },
       {
         title: "A ferry day trip to Nevis",
-        description: "A short crossing of The Narrows for a quieter island, hot springs, and Charlestown's Georgian streets.",
+        description: "A short crossing of The Narrows for a quieter island, hot springs, and Charlestown’s Georgian streets.",
       },
       {
         title: "Snorkelling South Friars Bay",
@@ -2465,7 +2465,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Ballahoo",
         area: "Basseterre",
-        description: "Overlooking Basseterre's central square, with a wide menu from BBQ chicken wraps and sushi to West Indian curries.",
+        description: "Overlooking Basseterre’s central square, with a wide menu from BBQ chicken wraps and sushi to West Indian curries.",
       },
       {
         name: "Sprat Net",
@@ -2473,7 +2473,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A casual, reasonably priced spot with long wooden benches; locals rate it for pizza as much as seafood.",
       },
       {
-        name: "Rosey's Art Gallery & Café",
+        name: "Rosey’s Art Gallery & Café",
         area: "Basseterre",
         description: "A relaxed café on the main square for bagels, cakes and frittatas.",
       },
@@ -2492,14 +2492,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         adopted: "1983, chosen by national competition out of 45 entries, days before independence",
         officialUrl: "https://en.wikipedia.org/wiki/O_Land_of_Beauty!",
       },
-      // No official National Pledge text found on the government's national
-      // symbols pages (gov.kn's certificate has also expired, blocking direct
+      // No official National Pledge text found on the government’s national
+      // symbols pages (gov.kn’s certificate has also expired, blocking direct
       // access). Left out rather than guessed.
     },
     visitorFaq: [
       {
         q: "How much does it cost to visit St. Kitts and Nevis?",
-        a: "St. Kitts and Nevis is moderate to high cost by Caribbean standards, especially in prime tourist and expat areas like Frigate Bay, South Friars and Nevis's beachfront. A budget traveller can expect roughly US$100–150/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$200–350/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$500+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent, including why electricity runs notably higher here than most of the Caribbean.",
+        a: "St. Kitts and Nevis is moderate to high cost by Caribbean standards, especially in prime tourist and expat areas like Frigate Bay, South Friars and Nevis’s beachfront. A budget traveller can expect roughly US$100–150/day (guesthouse or budget hotel, local food, public transport, few tours); mid-range roughly US$200–350/day (a comfortable hotel or Airbnb, a mix of local and nicer restaurants, several tours); luxury US$500+/day (upscale resort or boutique hotel, fine dining, private tours). For a longer stay, see the cost-of-living section above for typical monthly rent, including why electricity runs notably higher here than most of the Caribbean.",
       },
       {
         q: "What is the currency and do I need cash?",
@@ -2515,15 +2515,15 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What are the must-do experiences in St. Kitts and Nevis?",
-        a: "Explore Brimstone Hill Fortress National Park, a UNESCO World Heritage Site and one of the best-preserved historic fortresses in the Caribbean. Relax on Frigate Bay or South Friars Bay, both with beach bars and water sports. Hike Nevis Peak with a guide for rainforest trails and panoramic views, or spend the day at Pinney's Beach, a long palm-fringed beach with casual bars and restaurants. Tour historic sugar-estate sites like Romney Manor, or take the ferry to Nevis for beaches, Charlestown and waterfront dining.",
+        a: "Explore Brimstone Hill Fortress National Park, a UNESCO World Heritage Site and one of the best-preserved historic fortresses in the Caribbean. Relax on Frigate Bay or South Friars Bay, both with beach bars and water sports. Hike Nevis Peak with a guide for rainforest trails and panoramic views, or spend the day at Pinney’s Beach, a long palm-fringed beach with casual bars and restaurants. Tour historic sugar-estate sites like Romney Manor, or take the ferry to Nevis for beaches, Charlestown and waterfront dining.",
       },
       {
         q: "What local food should I try?",
-        a: "Stewed saltfish with spicy plantains, seasoned breadfruit and coconut dumplings is the current national dish, chosen by national poll in 2003. Goat water, a hearty goat stew with breadfruit and dumplings, was the dish it replaced and is still widely eaten. Also look for roti (curry chicken, goat or shrimp in flatbread), fried fish, grilled lobster and conch, and rice and peas with stewed chicken or fish and provision. Try the local bars and small restaurants in Basseterre, beach bars in Frigate Bay and South Friars, and the waterfront venues around Pinney's Beach on Nevis.",
+        a: "Stewed saltfish with spicy plantains, seasoned breadfruit and coconut dumplings is the current national dish, chosen by national poll in 2003. Goat water, a hearty goat stew with breadfruit and dumplings, was the dish it replaced and is still widely eaten. Also look for roti (curry chicken, goat or shrimp in flatbread), fried fish, grilled lobster and conch, and rice and peas with stewed chicken or fish and provision. Try the local bars and small restaurants in Basseterre, beach bars in Frigate Bay and South Friars, and the waterfront venues around Pinney’s Beach on Nevis.",
       },
       {
         q: "Is St. Kitts and Nevis safe for tourists?",
-        a: "The federation is generally considered relatively safe for tourists, with most visits trouble-free. Petty theft (bags, phones) can occur, especially on beaches or in crowded areas. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government's current travel advisory before you go.",
+        a: "The federation is generally considered relatively safe for tourists, with most visits trouble-free. Petty theft (bags, phones) can occur, especially on beaches or in crowded areas. Use normal precautions: don’t leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -2531,11 +2531,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and light hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking Nevis Peak or a longer walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and light hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue. For hiking Nevis Peak or a longer walk, add lightweight long trousers, moisture-wicking shirts and a small daypack.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Kittitians and Nevisians are generally friendly and polite; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Life runs relatively relaxed, especially on Nevis, so build in patience for schedules.",
+        a: "Kittitians and Nevisians are generally friendly and polite; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers and tour guides welcome. Life runs relatively relaxed, especially on Nevis, so build in patience for schedules.",
       },
     ],
     lastUpdated: "August 2026",
@@ -2545,7 +2545,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Saint Lucia",
     tagline: "Home of the Pitons, a UNESCO World Heritage volcanic landmark, and a drive-in volcano you can walk right up to.",
     overview:
-      "Saint Lucia is a mountainous, volcanic island in the Eastern Caribbean, best known for the Pitons (twin rainforest-covered spires rising straight out of the sea near Soufrière) and for the geothermal activity that also produced Sulphur Springs, billed as the world's only drive-in volcano. Away from the resort corridor around Rodney Bay in the north, the island is steep, green and rural: banana farms, fishing villages, and a strong Kwéyòl (French Creole) culture alongside English.",
+      "Saint Lucia is a mountainous, volcanic island in the Eastern Caribbean, best known for the Pitons (twin rainforest-covered spires rising straight out of the sea near Soufrière) and for the geothermal activity that also produced Sulphur Springs, billed as the world’s only drive-in volcano. Away from the resort corridor around Rodney Bay in the north, the island is steep, green and rural: banana farms, fishing villages, and a strong Kwéyòl (French Creole) culture alongside English.",
     photo: {
       src: "/destinations/saint-lucia.jpg",
       alt: "Gros Piton and Petit Piton, near Soufrière, Saint Lucia",
@@ -2585,7 +2585,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$1,500–2,000/month all-in (excluding-rent estimate of ≈US$883–2,500 plus rent)",
       budgetComfortableSingle: "≈US$2,500–3,500/month all-in",
       notes:
-        "A Global Citizen Solutions \"basic utilities\" bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia's utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use, so treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
+        "A Global Citizen Solutions “basic utilities” bundle quotes just US$115/month for electricity, water and garbage collection combined, but that undercounts electricity: Saint Lucia’s utility, LUCELEC, charges roughly EC$0.86–0.91 (≈US$0.32–0.34) per kWh, which works out to the higher electricity-alone figures above for typical household use, so treat the bundled figure cautiously. Overall cost of living runs roughly 22% below the US, driven mainly by cheaper rent (about 74% lower than US averages). Castries and the Rodney Bay/Gros Islet tourist corridor in the north are noticeably pricier than the south (Soufrière, Vieux Fort) or rural interior villages. A family of four should budget roughly US$2,500–4,000/month excluding rent.",
       sourceName: "Global Citizen Solutions cost-of-living data",
       sourceUrl: "https://www.globalcitizensolutions.com/st-lucia-living-cost/",
       asOf: "August 2026",
@@ -2598,12 +2598,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       healthcare:
         "Owen King EU Hospital in Castries, with around 120 beds, is the main public hospital; St. Jude Hospital in the south has been under reconstruction. Tapion Hospital is the leading private option, with round-the-clock emergency care. International health insurance is standard for movers, with premiums for older applicants (65 and up) starting around US$150/month.",
       taxes:
-        "People who don't count as Saint Lucia tax residents pay no local tax on worldwide income, capital gains, dividends or inheritance. Tax residents face a progressive scale: nothing on the first XCD 10,000 a year, 10% on the next band up to XCD 20,000, and 30% above that, though a 2025 budget measure removed tax on pension income entirely. VAT runs 12.5% generally, 10% for accommodation and telecoms.",
+        "People who don’t count as Saint Lucia tax residents pay no local tax on worldwide income, capital gains, dividends or inheritance. Tax residents face a progressive scale: nothing on the first XCD 10,000 a year, 10% on the next band up to XCD 20,000, and 30% above that, though a 2025 budget measure removed tax on pension income entirely. VAT runs 12.5% generally, 10% for accommodation and telecoms.",
       areas: [
         {
           name: "Rodney Bay",
           description:
-            "The island's biggest concentration of long-term movers, built around a marina and Reduit Beach with the most restaurant choice, though prices run above the island average.",
+            "The island’s biggest concentration of long-term movers, built around a marina and Reduit Beach with the most restaurant choice, though prices run above the island average.",
         },
         {
           name: "Cap Estate",
@@ -2632,7 +2632,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "The Pitons (Gros Piton & Petit Piton)",
-        description: "Twin volcanic spires rising directly from the sea near Soufrière, a UNESCO World Heritage Site since 2004 and the island's defining landmark.",
+        description: "Twin volcanic spires rising directly from the sea near Soufrière, a UNESCO World Heritage Site since 2004 and the island’s defining landmark.",
         photo: {
           src: "/places/saint-lucia/pitons.jpg",
           alt: "Gros Piton and Petit Piton behind Soufrière, Saint Lucia",
@@ -2642,7 +2642,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Sulphur Springs Park",
-        description: "Billed as \"the world's only drive-in volcano\": a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
+        description: "Billed as \"the world’s only drive-in volcano\": a dormant volcanic crater you can drive up to and walk around, with bubbling sulphur pools and mud baths.",
         photo: {
           src: "/places/saint-lucia/sulphur-springs.jpg",
           alt: "Sulphur Springs geothermal area near Soufrière, Saint Lucia",
@@ -2706,7 +2706,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Castries Central Market",
-        description: "The capital's market, with a produce floor downstairs and a local-food floor upstairs serving stewed chicken, fish and other everyday Saint Lucian lunches.",
+        description: "The capital’s market, with a produce floor downstairs and a local-food floor upstairs serving stewed chicken, fish and other everyday Saint Lucian lunches.",
         photo: {
           src: "/places/saint-lucia/castries-market.jpg",
           alt: "Castries Market, Saint Lucia",
@@ -2736,7 +2736,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Saint Lucia Carnival",
-        description: "The island's carnival, held in July with soca, costume bands and parades through Castries. Moved off the traditional pre-Lenten calendar decades ago.",
+        description: "The island’s carnival, held in July with soca, costume bands and parades through Castries. Moved off the traditional pre-Lenten calendar decades ago.",
       },
       {
         title: "Diving and snorkelling Anse Chastanet reef",
@@ -2752,13 +2752,13 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Rainforest Adventures aerial tram and zipline",
-        description: "A canopy tour above the rainforest near Chassin/Babonneau in the island's northeast, combining an open-air aerial tram, ziplines and nature trails.",
+        description: "A canopy tour above the rainforest near Chassin/Babonneau in the island’s northeast, combining an open-air aerial tram, ziplines and nature trails.",
       },
     ],
     localDishes: [
       {
         name: "Green fig and saltfish",
-        description: "Saint Lucia's national dish: boiled unripe green bananas (\"green figs\") with salted, flaked codfish, onions, peppers and local seasoning. Rooted in 19th-century provisions of cheap bananas and imported salt cod.",
+        description: "Saint Lucia’s national dish: boiled unripe green bananas (\"green figs\") with salted, flaked codfish, onions, peppers and local seasoning. Rooted in 19th-century provisions of cheap bananas and imported salt cod.",
       },
       {
         name: "Bouyon",
@@ -2842,7 +2842,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Is Saint Lucia safe for tourists?",
-        a: "Saint Lucia is generally considered moderately safe for tourists, with most visits trouble-free. Petty theft can occur, especially on beaches, in crowded areas or at night. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Some areas outside the main tourist zones see more crime, so ask your hotel or tour operator about places to avoid, and check your government's current travel advisory before you go.",
+        a: "Saint Lucia is generally considered moderately safe for tourists, with most visits trouble-free. Petty theft can occur, especially on beaches, in crowded areas or at night. Use normal precautions: don’t leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Some areas outside the main tourist zones see more crime, so ask your hotel or tour operator about places to avoid, and check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -2850,11 +2850,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking the Pitons or waterfalls, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking Gros Piton, add lightweight long trousers, moisture-wicking shirts and a small daypack with water and snacks.",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for hiking the Pitons or waterfalls, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue. For hiking Gros Piton, add lightweight long trousers, moisture-wicking shirts and a small daypack with water and snacks.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Saint Lucians are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers and tour guides welcome. Many people speak Kwéyòl (French Creole) alongside English; a few basic Kwéyòl or French greetings are often welcomed but not required.",
+        a: "Saint Lucians are generally friendly and expressive; a polite greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers and tour guides welcome. Many people speak Kwéyòl (French Creole) alongside English; a few basic Kwéyòl or French greetings are often welcomed but not required.",
       },
     ],
     lastUpdated: "August 2026",
@@ -2862,9 +2862,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "st-vincent-and-the-grenadines",
     name: "St. Vincent and the Grenadines",
-    tagline: "One volcanic mainland and 32 smaller islands and cays strung south to the Tobago Cays: one of the Caribbean's classic sailing grounds.",
+    tagline: "One volcanic mainland and 32 smaller islands and cays strung south to the Tobago Cays: one of the Caribbean’s classic sailing grounds.",
     overview:
-      "St. Vincent and the Grenadines is a multi-island nation: St. Vincent itself, mountainous and volcanic with the active La Soufrière at its northern end, plus a scattered chain of smaller Grenadine islands running south (Bequia, Mustique, Canouan, Union Island and dozens of smaller cays, including the Tobago Cays marine park). St. Vincent has most of the population and everyday life; the Grenadines are quieter, sail-in territory, ranging from Bequia's fishing-village character to Mustique's private-island exclusivity.",
+      "St. Vincent and the Grenadines is a multi-island nation: St. Vincent itself, mountainous and volcanic with the active La Soufrière at its northern end, plus a scattered chain of smaller Grenadine islands running south (Bequia, Mustique, Canouan, Union Island and dozens of smaller cays, including the Tobago Cays marine park). St. Vincent has most of the population and everyday life; the Grenadines are quieter, sail-in territory, ranging from Bequia’s fishing-village character to Mustique’s private-island exclusivity.",
     photo: {
       src: "/destinations/st-vincent-and-the-grenadines.jpg",
       alt: "Aerial view of the Tobago Cays, St. Vincent and the Grenadines",
@@ -2892,7 +2892,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "2012 census",
       },
       urbanizationNote:
-        "Most people live on St. Vincent, concentrated in and around Kingstown. Bequia, a short ferry away, is the largest and most populous of the Grenadines; the rest of the chain (Mustique, Canouan, Union Island, Palm Island, Petit St. Vincent and many smaller uninhabited cays) has only a fraction of the country's population between them.",
+        "Most people live on St. Vincent, concentrated in and around Kingstown. Bequia, a short ferry away, is the largest and most populous of the Grenadines; the rest of the chain (Mustique, Canouan, Union Island, Palm Island, Petit St. Vincent and many smaller uninhabited cays) has only a fraction of the country’s population between them.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$296/month outside Kingstown city centre (EC$800, Numbeo)",
@@ -2904,25 +2904,25 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$900–1,400/month all-in",
       budgetComfortableSingle: "≈US$1,400–2,800/month all-in on St. Vincent; noticeably more to live in or near the Grenadines' resort islands",
       notes:
-        "Numbeo's bundled \"basic utilities\" figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month. The higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
+        "Numbeo’s bundled “basic utilities” figure (EC$200 ≈ US$74/month total for electricity, water and garbage) undercounts electricity: VINLEC, the local utility, adds a fuel surcharge on top of its base rate that has run as high as EC$0.83/kWh on its own in 2026 as fuel costs rose, so real electricity bills swing with the surcharge month to month. The higher, unbundled figures above are more realistic. St. Vincent itself is the affordable option; Bequia is pricier, and Mustique, Canouan and the smaller private-island Grenadines are a different, much higher price tier built around tourism and second homes.",
       sourceName: "Numbeo and livingcost.org",
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Saint+Vincent+And+The+Grenadines",
       asOf: "August 2026",
     },
     movingHere: {
       visaWorkPermit:
-        "St. Vincent and the Grenadines is one of the four CARICOM countries with full free movement: nationals of St. Vincent and the Grenadines, Barbados, Belize and Dominica can settle and work in each other's countries without any extra application. It's also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also live and work here without a permit. Other CARICOM nationals still go through the CSME Skills Certificate; see the CSME steps for St. Vincent and the Grenadines for that process. Most other visitors get a month visa-free, extendable, while CARICOM nationals and British passport holders commonly get 6 months. Anyone staying longer than a year, or working outside the free-movement groups above, applies for a temporary residence permit through the Office of the Prime Minister, showing either financial means or a local job.",
+        "St. Vincent and the Grenadines is one of the four CARICOM countries with full free movement: nationals of St. Vincent and the Grenadines, Barbados, Belize and Dominica can settle and work in each other’s countries without any extra application. It’s also one of six OECS member states with a separate, overlapping free-movement arrangement (Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, Saint Lucia and St. Vincent and the Grenadines), so citizens of Antigua and Barbuda, Grenada, St. Kitts and Nevis and Saint Lucia can also live and work here without a permit. Other CARICOM nationals still go through the CSME Skills Certificate; see the CSME steps for St. Vincent and the Grenadines for that process. Most other visitors get a month visa-free, extendable, while CARICOM nationals and British passport holders commonly get 6 months. Anyone staying longer than a year, or working outside the free-movement groups above, applies for a temporary residence permit through the Office of the Prime Minister, showing either financial means or a local job.",
       residency:
-        "There's no fixed-price citizenship or residence-by-investment scheme here like some neighbouring islands run; longer stays go through the temporary residence process above. The government instead promotes business investment through Invest SVG, which offers import duty exemptions and tax holidays for priority sectors.",
+        "There’s no fixed-price citizenship or residence-by-investment scheme here like some neighbouring islands run; longer stays go through the temporary residence process above. The government instead promotes business investment through Invest SVG, which offers import duty exemptions and tax holidays for priority sectors.",
       healthcare:
         "Milton Cato Memorial Hospital in Kingstown is the main public hospital, with a new, World Bank-funded facility under construction in Arnos Vale. Complex cases are often referred to Queen Elizabeth Hospital in Barbados, roughly a two-hour flight away, or to Trinidad. International private health insurance, typically US$200-600/month for a healthy adult including medical evacuation, is standard for movers.",
       taxes:
-        "Following a 2025 reform, income above an annual exemption of XCD 25,000 is taxed progressively: 10% on the first band to XCD 5,000, 20% up to XCD 10,000, and 30% above that. Residents are taxed only on income actually received in St. Vincent and the Grenadines, and there's no capital gains, inheritance, gift or offshore-dividend withholding tax. VAT runs 16% generally, 10% for hospitality.",
+        "Following a 2025 reform, income above an annual exemption of XCD 25,000 is taxed progressively: 10% on the first band to XCD 5,000, 20% up to XCD 10,000, and 30% above that. Residents are taxed only on income actually received in St. Vincent and the Grenadines, and there’s no capital gains, inheritance, gift or offshore-dividend withholding tax. VAT runs 16% generally, 10% for hospitality.",
       areas: [
         {
           name: "Kingstown and its outskirts (Villa, Indian Bay, Arnos Vale, Calliaqua)",
           description:
-            "The capital's more residential surrounding neighbourhoods, the most popular base for movers. Two-bedroom apartments run roughly US$800-2,000/month.",
+            "The capital’s more residential surrounding neighbourhoods, the most popular base for movers. Two-bedroom apartments run roughly US$800-2,000/month.",
         },
         {
           name: "The leeward (west) coast of the mainland",
@@ -2931,7 +2931,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "Bequia",
           description:
-            "The second-largest island, a short ferry ride from Kingstown, with the territory's most established outside community and its own international school. Villa rentals run roughly US$1,500-3,500/month.",
+            "The second-largest island, a short ferry ride from Kingstown, with the territory’s most established outside community and its own international school. Villa rentals run roughly US$1,500-3,500/month.",
         },
         {
           name: "Canouan",
@@ -2949,7 +2949,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Tobago Cays Marine Park",
-        description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean's best-known sailing and snorkelling anchorages. Turtles are a regular sight in the shallows.",
+        description: "A cluster of small, uninhabited islands and cays ringed by a horseshoe reef, protected as a marine park and one of the Caribbean’s best-known sailing and snorkelling anchorages. Turtles are a regular sight in the shallows.",
         photo: {
           src: "/places/st-vincent-and-the-grenadines/tobago-cays.jpg",
           alt: "Aerial view of Tobago Cays Marine Park, St. Vincent and the Grenadines",
@@ -2959,7 +2959,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "La Soufrière",
-        description: "St. Vincent's active volcano at the island's northern end, last erupting explosively in April 2021. A demanding hiking trail leads to the crater rim when conditions allow.",
+        description: "St. Vincent’s active volcano at the island’s northern end, last erupting explosively in April 2021. A demanding hiking trail leads to the crater rim when conditions allow.",
         photo: {
           src: "/places/st-vincent-and-the-grenadines/la-soufriere.jpg",
           alt: "La Soufrière volcano, St. Vincent",
@@ -2969,11 +2969,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "St. Vincent Botanic Gardens",
-        description: "Established in 1765, the oldest botanical garden in the Western Hemisphere, in Kingstown. Home to a breadfruit tree descended from Captain Bligh's original 1793 shipment from Tahiti.",
+        description: "Established in 1765, the oldest botanical garden in the Western Hemisphere, in Kingstown. Home to a breadfruit tree descended from Captain Bligh’s original 1793 shipment from Tahiti.",
       },
       {
         name: "Falls of Baleine",
-        description: "A waterfall on St. Vincent's remote northern coast, reachable only by boat, tumbling into a rocky pool a short walk from the beach landing.",
+        description: "A waterfall on St. Vincent’s remote northern coast, reachable only by boat, tumbling into a rocky pool a short walk from the beach landing.",
       },
       {
         name: "Dark View Falls",
@@ -2991,7 +2991,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Wallilabou Bay",
-        description: "A quiet bay on St. Vincent's west coast used as a filming location for Pirates of the Caribbean, with some of the set dressing still standing.",
+        description: "A quiet bay on St. Vincent’s west coast used as a filming location for Pirates of the Caribbean, with some of the set dressing still standing.",
         photo: {
           src: "/places/st-vincent-and-the-grenadines/wallilabou-bay.jpg",
           alt: "Wallilabou Bay, St. Vincent",
@@ -3001,7 +3001,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Owia Salt Pond",
-        description: "A natural tidal swimming pool cut into volcanic rock on St. Vincent's northeastern coast, protected from the Atlantic swell by a rock barrier.",
+        description: "A natural tidal swimming pool cut into volcanic rock on St. Vincent’s northeastern coast, protected from the Atlantic swell by a rock barrier.",
       },
       {
         name: "Fort Charlotte",
@@ -3027,11 +3027,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     experiences: [
       {
         title: "Sailing the Grenadines",
-        description: "One of the Caribbean's classic sailing grounds: island-hopping by yacht or charter through Bequia, Mustique, Canouan, Union Island and the Tobago Cays.",
+        description: "One of the Caribbean’s classic sailing grounds: island-hopping by yacht or charter through Bequia, Mustique, Canouan, Union Island and the Tobago Cays.",
       },
       {
         title: "Hiking La Soufrière",
-        description: "A challenging trail to the crater rim of St. Vincent's active volcano, best done with a local guide and only when conditions permit.",
+        description: "A challenging trail to the crater rim of St. Vincent’s active volcano, best done with a local guide and only when conditions permit.",
       },
       {
         title: "Diving and snorkelling the Tobago Cays",
@@ -3043,7 +3043,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Birdwatching for the St. Vincent parrot on the Vermont Nature Trail",
-        description: "A rainforest loop trail through Grand Bonhomme Mountain in the island's interior, one of the best places to spot the St. Vincent parrot (Amazona guildingii), the endemic national bird. Dawn and dusk are prime times.",
+        description: "A rainforest loop trail through Grand Bonhomme Mountain in the island’s interior, one of the best places to spot the St. Vincent parrot (Amazona guildingii), the endemic national bird. Dawn and dusk are prime times.",
       },
       {
         title: "Vincy Mas",
@@ -3074,12 +3074,12 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     ],
     placesToEat: [
       {
-        name: "Vee Jay's Restaurant & Bar",
+        name: "Vee Jay’s Restaurant & Bar",
         area: "Kingstown",
         description: "A Kingstown institution serving traditional Vincy lunchtime fare: mutton or fish stew, curried goat, roti.",
       },
       {
-        name: "Basil's Bar (Cobblestone Inn)",
+        name: "Basil’s Bar (Cobblestone Inn)",
         area: "Kingstown",
         description: "Local Caribbean dishes with international touches, in the historic Cobblestone Inn building.",
       },
@@ -3089,7 +3089,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "Fresh fish and pasta in a more upscale setting, with live music on some nights.",
       },
       {
-        name: "Jack's Beach Bar",
+        name: "Jack’s Beach Bar",
         area: "Princess Margaret Beach, Bequia",
         description: "A beachfront bar and grill on Bequia: grilled fish burgers, jerk pork and plantain, and cocktails on the sand.",
       },
@@ -3129,7 +3129,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "How do I get around the islands?",
-        a: "Inexpensive local buses connect Kingstown with many villages and key sites on St. Vincent, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in Kingstown; driving is on the left, and St. Vincent's roads are generally good but narrow and hilly. Ferries and boats handle island-hopping around the Grenadines (Bequia, Union Island, Canouan, the Tobago Cays and more); schedules vary, and private charters are common.",
+        a: "Inexpensive local buses connect Kingstown with many villages and key sites on St. Vincent, though schedules can be informal. Taxis are readily available at the airport, cruise port and major hotels; agree the fare in advance. Rental cars are available at the airport and in Kingstown; driving is on the left, and St. Vincent’s roads are generally good but narrow and hilly. Ferries and boats handle island-hopping around the Grenadines (Bequia, Union Island, Canouan, the Tobago Cays and more); schedules vary, and private charters are common.",
       },
       {
         q: "What are the must-do experiences in St. Vincent and the Grenadines?",
@@ -3141,7 +3141,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Is St. Vincent and the Grenadines safe for tourists?",
-        a: "SVG is generally considered relatively safe for tourists, with most visits trouble-free. Petty theft can occur, especially on beaches or in crowded areas. Use normal precautions: don't leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Some areas outside the main tourist zones see more crime, so ask your hotel or tour operator about places to avoid, and check your government's current travel advisory before you go.",
+        a: "SVG is generally considered relatively safe for tourists, with most visits trouble-free. Petty theft can occur, especially on beaches or in crowded areas. Use normal precautions: don’t leave valuables in cars or on the beach, avoid poorly lit areas at night, and secure belongings in your accommodation. Some areas outside the main tourist zones see more crime, so ask your hotel or tour operator about places to avoid, and check your government’s current travel advisory before you go.",
       },
       {
         q: "What is the best time to visit?",
@@ -3149,11 +3149,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for volcano and waterfall hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. For hiking La Soufrière, add lightweight long trousers, moisture-wicking shirts and a small daypack with water and snacks.",
+        a: "Light, breathable clothing, swimwear, sandals and sturdy shoes for volcano and waterfall hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue. For hiking La Soufrière, add lightweight long trousers, moisture-wicking shirts and a small daypack with water and snacks.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Vincentians are generally friendly and polite; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers, boat captains and tour guides welcome. Life in the Grenadines runs slower and more relaxed than on the mainland, especially on the smaller islands, so build in patience for schedules.",
+        a: "Vincentians are generally friendly and polite; a greeting before asking a question is appreciated. Dress is casual but neat, with modest attire expected in churches and some villages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers, boat captains and tour guides welcome. Life in the Grenadines runs slower and more relaxed than on the mainland, especially on the smaller islands, so build in patience for schedules.",
       },
     ],
     lastUpdated: "August 2026",
@@ -3163,7 +3163,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     name: "Suriname",
     tagline: "The only Dutch-speaking country in the Americas: a Dutch colonial capital fronting a vast, largely untouched Amazon interior.",
     overview:
-      "Suriname is the odd one out among CARICOM's mostly English-speaking, mostly Commonwealth members: a former Dutch colony, independent since 1975, where Dutch is the official language and Sranan Tongo the everyday lingua franca. Its capital, Paramaribo, is a UNESCO World Heritage city of wooden Dutch colonial buildings on the Suriname River; beyond the narrow coastal strip where most people live, the country is over 90% Amazon rainforest, rivers and Maroon and Indigenous villages, among the least densely populated and most forested countries on Earth.",
+      "Suriname is the odd one out among CARICOM’s mostly English-speaking, mostly Commonwealth members: a former Dutch colony, independent since 1975, where Dutch is the official language and Sranan Tongo the everyday lingua franca. Its capital, Paramaribo, is a UNESCO World Heritage city of wooden Dutch colonial buildings on the Suriname River; beyond the narrow coastal strip where most people live, the country is over 90% Amazon rainforest, rivers and Maroon and Indigenous villages, among the least densely populated and most forested countries on Earth.",
     photo: {
       src: "/destinations/suriname.jpg",
       alt: "Fort Zeelandia, Paramaribo, Suriname",
@@ -3191,7 +3191,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         sourceName: "2012 census",
       },
       urbanizationNote:
-        "Roughly two-thirds of the population lives on the narrow coastal strip, especially in and around Paramaribo. The vast interior, most of the country's land area, is covered in rainforest and sparsely populated by Maroon communities (descended from escaped enslaved Africans) and Indigenous villages, reachable mainly by river or small aircraft.",
+        "Roughly two-thirds of the population lives on the narrow coastal strip, especially in and around Paramaribo. The vast interior, most of the country’s land area, is covered in rainforest and sparsely populated by Maroon communities (descended from escaped enslaved Africans) and Indigenous villages, reachable mainly by river or small aircraft.",
     },
     costOfLiving: {
       rentTypical1BR: "≈US$200–350/month outside central Paramaribo",
@@ -3203,7 +3203,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       budgetModestSingle: "≈US$800–1,200/month all-in",
       budgetComfortableSingle: "≈US$1,200–2,500/month all-in",
       notes:
-        "Suriname is generally the most affordable CARICOM country for rent and local food, but treat every dollar figure here as more time-sensitive than usual: the Surinamese dollar has been volatile, and prices quoted in SRD shift with the exchange rate faster than the fixed-peg Eastern Caribbean islands. Electricity comes from a mix of the Afobaka hydroelectric dam and thermal (diesel/heavy fuel oil) generation, so it isn't uniformly cheap the way hydro-only figures might suggest. Expect real bills toward the higher end of the range with regular AC use.",
+        "Suriname is generally the most affordable CARICOM country for rent and local food, but treat every dollar figure here as more time-sensitive than usual: the Surinamese dollar has been volatile, and prices quoted in SRD shift with the exchange rate faster than the fixed-peg Eastern Caribbean islands. Electricity comes from a mix of the Afobaka hydroelectric dam and thermal (diesel/heavy fuel oil) generation, so it isn’t uniformly cheap the way hydro-only figures might suggest. Expect real bills toward the higher end of the range with regular AC use.",
       sourceName: "Numbeo and relocation cost-of-living guides",
       sourceUrl: "https://www.numbeo.com/cost-of-living/country_result.jsp?country=Suriname",
       asOf: "August 2026",
@@ -3214,7 +3214,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       residency:
         "Longer stays go through a multi-step process: a Temporary Authorisation of Stay arranged before departure, then a temporary visa, then a local residence permit application, with fairly heavy documentation, legalised civil records, a police clearance and a medical certificate among them. Permanent residency, and eventually naturalisation, becomes possible after around 5 years of regular residence.",
       healthcare:
-        "Academic Hospital Paramaribo (AZP) is the main public hospital, alongside private options such as Diakonessenhuis. Malaria risk is limited to the interior, but dengue and chikungunya circulate more widely, and medication stock-outs do happen, so movers on regular prescriptions should bring an extended supply. International health insurance with medical evacuation cover is strongly recommended, since specialist care thins out once you're away from Paramaribo.",
+        "Academic Hospital Paramaribo (AZP) is the main public hospital, alongside private options such as Diakonessenhuis. Malaria risk is limited to the interior, but dengue and chikungunya circulate more widely, and medication stock-outs do happen, so movers on regular prescriptions should bring an extended supply. International health insurance with medical evacuation cover is strongly recommended, since specialist care thins out once you’re away from Paramaribo.",
       taxes:
         "Suriname taxes residents on worldwide income and non-residents only on Suriname-sourced income, on a progressive scale with five bands running from 0% up to 38% at the top. Bracket thresholds get adjusted periodically, so check the current figures with the Suriname Tax Service before budgeting around them.",
       areas: [
@@ -3240,7 +3240,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       ],
       notes:
-        "Dutch is the language of government, schools and most local employers, so movers who don't speak it will find the job market and the paperwork considerably harder going.",
+        "Dutch is the language of government, schools and most local employers, so movers who don’t speak it will find the job market and the paperwork considerably harder going.",
       sourceName: "Jarnias Cyril relocation guide",
       sourceUrl: "https://www.jarniascyril.com/expatriation/moving-to-suriname-as-an-expat-complete-guide/",
       asOf: "August 2026",
@@ -3258,7 +3258,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Fort Zeelandia",
-        description: "Built in 1667 and the oldest surviving building in Paramaribo, now home to the Surinaams Museum, standing out as one of the district's few stone structures amid the wooden colonial buildings.",
+        description: "Built in 1667 and the oldest surviving building in Paramaribo, now home to the Surinaams Museum, standing out as one of the district’s few stone structures amid the wooden colonial buildings.",
         photo: {
           src: "/destinations/suriname.jpg",
           alt: "Fort Zeelandia, Paramaribo, Suriname",
@@ -3295,14 +3295,14 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         description: "A former 18th-century coffee and cocoa plantation in Commewijne, across the river from Paramaribo, now a nature reserve with monkeys, sloths and over 250 bird species alongside old plantation ruins.",
         photo: {
           src: "/places/suriname/peperpot.jpg",
-          alt: "The director's house at Peperpot plantation, Suriname",
+          alt: "The director’s house at Peperpot plantation, Suriname",
           credit: "Pauline van Till, CC BY-SA 3.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:Directeurshuis_plantage_Peperpot.JPG",
         },
       },
       {
         name: "Galibi Nature Reserve",
-        description: "A coastal reserve near the mouth of the Marowijne River, among the Western Hemisphere's most important nesting sites for leatherback and other sea turtles, April to August.",
+        description: "A coastal reserve near the mouth of the Marowijne River, among the Western Hemisphere’s most important nesting sites for leatherback and other sea turtles, April to August.",
       },
       {
         name: "Brokopondo Reservoir",
@@ -3317,8 +3317,8 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     ],
     experiences: [
       {
-        title: "Walking Paramaribo's UNESCO historic centre",
-        description: "A self-guided or guided walk past the wooden colonial streetscape, the Presidential Palace, the Cathedral of St Peter and St Paul (one of the world's largest wooden buildings), and the Waterkant riverfront.",
+        title: "Walking Paramaribo’s UNESCO historic centre",
+        description: "A self-guided or guided walk past the wooden colonial streetscape, the Presidential Palace, the Cathedral of St Peter and St Paul (one of the world’s largest wooden buildings), and the Waterkant riverfront.",
       },
       {
         title: "Central Suriname Nature Reserve expedition",
@@ -3340,7 +3340,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     localDishes: [
       {
         name: "Pom",
-        description: "Suriname's best-known festive dish: grated pomtajer root baked with chicken (or fish), citrus and spices into a casserole. A Surinamese-Jewish dish now central to birthdays and celebrations across all communities. \"Without the pom, there are no birthdays,\" as the local saying goes.",
+        description: "Suriname’s best-known festive dish: grated pomtajer root baked with chicken (or fish), citrus and spices into a casserole. A Surinamese-Jewish dish now central to birthdays and celebrations across all communities. \"Without the pom, there are no birthdays,\" as the local saying goes.",
       },
       {
         name: "Roti",
@@ -3348,7 +3348,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Nasi goreng and bami (mie goreng)",
-        description: "Indonesian-style fried rice and fried noodles, widely eaten thanks to Suriname's large Javanese community.",
+        description: "Indonesian-style fried rice and fried noodles, widely eaten thanks to Suriname’s large Javanese community.",
       },
       {
         name: "Pindasoep",
@@ -3364,7 +3364,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "Restaurant Sarinah",
         area: "Paramaribo",
-        description: "Traditional Indonesian and Javanese dishes including rendang and nasi rames, one of the city's best-known Indonesian restaurants.",
+        description: "Traditional Indonesian and Javanese dishes including rendang and nasi rames, one of the city’s best-known Indonesian restaurants.",
       },
       {
         name: "De Gadri",
@@ -3383,7 +3383,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
     ],
     symbols: {
-      motto: "Justitia – Pietas – Fides (Latin: \"Justice, Piety, Loyalty\")",
+      motto: "Justitia – Pietas – Fides (Latin: “Justice, Piety, Loyalty”)",
       anthem: {
         title: "God zij met ons Suriname (\"God Be with Our Suriname\")",
         composer: "Johannes Corstianus de Puy",
@@ -3406,23 +3406,23 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Do I need a visa to visit as a tourist?",
-        a: "Visa rules vary widely by nationality: some, including certain CARICOM and EU passport holders, may get visa-free or simplified entry, while others need to arrange a visa or e-visa in advance. You'll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Suriname's Immigration Service or your nearest Surinamese embassy before travelling.",
+        a: "Visa rules vary widely by nationality: some, including certain CARICOM and EU passport holders, may get visa-free or simplified entry, while others need to arrange a visa or e-visa in advance. You’ll need a passport valid at least 6 months beyond your stay and proof of onward travel. Always confirm current rules with Suriname’s Immigration Service or your nearest Surinamese embassy before travelling.",
       },
       {
         q: "How do I get around the country?",
-        a: "Minibuses and taxis are common in and around Paramaribo and between major towns, inexpensive but often crowded. River boats are essential for reaching many interior communities, Maroon villages and some eco-lodges, usually arranged by a tour operator. Small domestic airlines link Paramaribo's Johan Adolf Pengel International Airport with interior airstrips, important for remote eco-tourism. Rental cars are available in Paramaribo; driving is on the left, unusually for a former Dutch colony, and a 4x4 is required for many interior roads. Guided, organised tours are the norm for Brownsberg, the Central Suriname Nature Reserve, and Maroon or Indigenous village visits, with transport, guides and permits usually included.",
+        a: "Minibuses and taxis are common in and around Paramaribo and between major towns, inexpensive but often crowded. River boats are essential for reaching many interior communities, Maroon villages and some eco-lodges, usually arranged by a tour operator. Small domestic airlines link Paramaribo’s Johan Adolf Pengel International Airport with interior airstrips, important for remote eco-tourism. Rental cars are available in Paramaribo; driving is on the left, unusually for a former Dutch colony, and a 4x4 is required for many interior roads. Guided, organised tours are the norm for Brownsberg, the Central Suriname Nature Reserve, and Maroon or Indigenous village visits, with transport, guides and permits usually included.",
       },
       {
         q: "What are the must-do experiences in Suriname?",
-        a: "Explore Paramaribo's UNESCO historic inner city: Dutch colonial wooden architecture, the Waterkant riverfront, markets and historic buildings. Hike and birdwatch in Brownsberg Nature Park, with waterfalls and viewpoints over the Brokopondo Reservoir. Take a multi-day expedition into the Central Suriname Nature Reserve's pristine rainforest, or visit Maroon villages along the Suriname and Commewijne rivers. Tour former plantations in Commewijne, like Peperpot, now nature parks and heritage sites, or join a seasonal turtle nesting tour at Galibi to see leatherbacks come ashore.",
+        a: "Explore Paramaribo’s UNESCO historic inner city: Dutch colonial wooden architecture, the Waterkant riverfront, markets and historic buildings. Hike and birdwatch in Brownsberg Nature Park, with waterfalls and viewpoints over the Brokopondo Reservoir. Take a multi-day expedition into the Central Suriname Nature Reserve’s pristine rainforest, or visit Maroon villages along the Suriname and Commewijne rivers. Tour former plantations in Commewijne, like Peperpot, now nature parks and heritage sites, or join a seasonal turtle nesting tour at Galibi to see leatherbacks come ashore.",
       },
       {
         q: "What local food should I try?",
-        a: "Pom is Suriname's best-known festive dish: grated pomtajer root baked with chicken or fish, citrus and spices into a casserole, central to birthdays and celebrations. Also look for roti (curry chicken, goat or potato in flatbread, reflecting the Hindustani community), nasi goreng and bami (Indonesian-style fried rice and noodles, reflecting the Javanese community), and pindasoep, a West African-rooted peanut soup. Try the local eateries and street stalls in Paramaribo, the Waterkant and central market area, and the interior eco-lodges, which usually serve traditional meals.",
+        a: "Pom is Suriname’s best-known festive dish: grated pomtajer root baked with chicken or fish, citrus and spices into a casserole, central to birthdays and celebrations. Also look for roti (curry chicken, goat or potato in flatbread, reflecting the Hindustani community), nasi goreng and bami (Indonesian-style fried rice and noodles, reflecting the Javanese community), and pindasoep, a West African-rooted peanut soup. Try the local eateries and street stalls in Paramaribo, the Waterkant and central market area, and the interior eco-lodges, which usually serve traditional meals.",
       },
       {
         q: "Is Suriname safe for tourists?",
-        a: "Suriname can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Paramaribo. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government's current travel advisory and talk to your tour operator about current conditions.",
+        a: "Suriname can be visited safely with proper planning, but it has higher crime rates in some urban areas, particularly parts of Paramaribo. Main hotels, organised tours and interior eco-lodges are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don’t flash valuables, and use reputable tour operators and transport. In the interior, safety is more about logistics and health, guides, boats, wildlife, medical access, than crime. Check your government’s current travel advisory and talk to your tour operator about current conditions.",
       },
       {
         q: "What is the best time to visit?",
@@ -3434,7 +3434,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Suriname is highly multicultural: Hindustani, Maroon, Creole, Javanese, mixed, Indigenous, Chinese, European and more, so respect local customs and religious practices. Dutch is official, but you'll hear Sranan Tongo, Hindi, Javanese, Chinese and Indigenous languages daily; English is spoken in many tourist contexts but not universally. Tipping 10% in restaurants is standard if a service charge isn't already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide's advice on behaviour in villages and protected areas.",
+        a: "Suriname is highly multicultural: Hindustani, Maroon, Creole, Javanese, mixed, Indigenous, Chinese, European and more, so respect local customs and religious practices. Dutch is official, but you’ll hear Sranan Tongo, Hindi, Javanese, Chinese and Indigenous languages daily; English is spoken in many tourist contexts but not universally. Tipping 10% in restaurants is standard if a service charge isn’t already included, with small tips for guides, boat captains and drivers appreciated. In the interior, life is slower and community-oriented; be patient and respectful, and follow your guide’s advice on behaviour in villages and protected areas.",
       },
     ],
     lastUpdated: "August 2026",
@@ -3442,9 +3442,9 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
   {
     slug: "trinidad-and-tobago",
     name: "Trinidad and Tobago",
-    tagline: "The most industrialised CARICOM state and the most populous, and home of the world's biggest Carnival and the steelpan.",
+    tagline: "The most industrialised CARICOM state and the most populous, and home of the world’s biggest Carnival and the steelpan.",
     overview:
-      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region's most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
+      "Trinidad and Tobago is a twin-island republic at the southern tip of the Caribbean chain, just off Venezuela. Trinidad is the larger, more urban and industrial island: an oil and gas economy, the region’s most ethnically diverse population, and the home of Carnival, calypso, soca and the steelpan (invented here). Tobago, a short flight or ferry away, is smaller, quieter and built around beaches, reef and rainforest rather than industry.",
     photo: {
       src: "/destinations/trinidad-and-tobago.jpg",
       alt: "Pitch Lake, La Brea, Trinidad",
@@ -3475,31 +3475,31 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         "Most of the population lives on Trinidad, concentrated in and around Port of Spain and the east-west corridor through Chaguanas, San Fernando and Arima. Tobago has a much smaller, more dispersed population centred on Scarborough and the southwest coast around Crown Point.",
     },
     costOfLiving: {
-      rentTypical1BR: "≈US$295–665/month outside Port of Spain's city centre (Numbeo)",
-      rentPremium1BR: "≈US$515–1,105/month in Port of Spain's city centre; Tobago's tourist zones (Crown Point, Canaan) run similarly high",
+      rentTypical1BR: "≈US$295–665/month outside Port of Spain’s city centre (Numbeo)",
+      rentPremium1BR: "≈US$515–1,105/month in Port of Spain’s city centre; Tobago’s tourist zones (Crown Point, Canaan) run similarly high",
       groceriesSingle: "≈US$220–400/month for basics; imported goods cost noticeably more than local produce",
-      inexpensiveMeal: "≈US$3–8 (doubles, roti, a plate from a \"cookshop\")",
+      inexpensiveMeal: "≈US$3–8 (doubles, roti, a plate from a “cookshop”)",
       midRangeMealForTwo: "≈US$30–60, more at upscale Port of Spain or Tobago resort restaurants",
       utilities: "≈US$25–60/month for electricity without heavy AC, ≈US$60–120/month with regular AC use, plus roughly US$9–20/month water and US$5–15/month cooking gas",
       budgetModestSingle: "≈US$1,200–1,800/month all-in",
       budgetComfortableSingle: "≈US$1,800–2,800/month all-in",
       notes:
-        "Electricity is genuinely cheap here relative to the rest of the Caribbean: T&TEC's residential rate runs around US$0.05–0.06/kWh, among the lowest in the world, because natural gas (Trinidad produces its own) is priced to the utility well below international market rates. That's a real, durable cost-of-living advantage over the smaller islands, not just a marketing line. The main expenses are imported goods, private healthcare and car ownership. San Fernando, Chaguanas and Arima run cheaper than Port of Spain; Tobago's tourist areas run closer to Port of Spain prices.",
+        "Electricity is genuinely cheap here relative to the rest of the Caribbean: T&TEC’s residential rate runs around US$0.05–0.06/kWh, among the lowest in the world, because natural gas (Trinidad produces its own) is priced to the utility well below international market rates. That’s a real, durable cost-of-living advantage over the smaller islands, not just a marketing line. The main expenses are imported goods, private healthcare and car ownership. San Fernando, Chaguanas and Arima run cheaper than Port of Spain; Tobago’s tourist areas run closer to Port of Spain prices.",
       sourceName: "Numbeo (Port of Spain)",
       sourceUrl: "https://www.numbeo.com/cost-of-living/in/Port-Of-Spain",
       asOf: "August 2026",
     },
     movingHere: {
       visaWorkPermit:
-        "CARICOM nationals need the CSME Skills Certificate to live and work in Trinidad and Tobago without a work permit; see the CSME steps for Trinidad and Tobago for the process. Citizens of the EU, UK, US and Canada, among others, can enter visa-free for up to 90 days, but taking up a job needs a work permit applied for through the TTBizLink platform, with the employer first showing no suitably qualified local candidate is available. A standard permit costs TTD 1,000 and can run for up to 3 years, though processing commonly takes 2 to 6 months, so it's worth starting the paperwork well ahead of any planned start date.",
+        "CARICOM nationals need the CSME Skills Certificate to live and work in Trinidad and Tobago without a work permit; see the CSME steps for Trinidad and Tobago for the process. Citizens of the EU, UK, US and Canada, among others, can enter visa-free for up to 90 days, but taking up a job needs a work permit applied for through the TTBizLink platform, with the employer first showing no suitably qualified local candidate is available. A standard permit costs TTD 1,000 and can run for up to 3 years, though processing commonly takes 2 to 6 months, so it’s worth starting the paperwork well ahead of any planned start date.",
       residency: "Permanent residence is available after 5 years of continuous, legal residence in the country.",
       healthcare:
         "Public healthcare is free to all residents, with 5 regional hospitals and more than 100 health posts around the country. A private GP visit runs roughly TTD 300-600 and a specialist TTD 500-1,200; local health insurance plans typically cost TTD 2,000-4,000 a month.",
       taxes:
-        "Trinidad and Tobago taxes residents (anyone present 183 days or more in a calendar year) on worldwide income, with a personal allowance of TTD 90,000 a year before tax applies, then a two-tier system: 25% on chargeable income up to TTD 1 million and 30% above that. There's no inheritance, gift or capital gains tax on property sales. VAT sits at 12.5%, and property tax runs roughly 1-3% depending on location.",
+        "Trinidad and Tobago taxes residents (anyone present 183 days or more in a calendar year) on worldwide income, with a personal allowance of TTD 90,000 a year before tax applies, then a two-tier system: 25% on chargeable income up to TTD 1 million and 30% above that. There’s no inheritance, gift or capital gains tax on property sales. VAT sits at 12.5%, and property tax runs roughly 1-3% depending on location.",
       areas: [
         {
-          name: "Port of Spain and its suburbs (Maraval, St. Ann's, Cascade, Goodwood Park, Westmoorings)",
+          name: "Port of Spain and its suburbs (Maraval, St. Ann’s, Cascade, Goodwood Park, Westmoorings)",
           description:
             "The capital and its most established residential areas for movers, home to the International School of Port of Spain. Three-bedroom houses run roughly TTD 8,000-15,000/month.",
         },
@@ -3511,7 +3511,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         {
           name: "San Fernando",
           description:
-            "The southern economic centre, close to the island's oil and gas installations, with fewer international school options. Three-bedroom houses run roughly TTD 5,500-9,000/month.",
+            "The southern economic centre, close to the island’s oil and gas installations, with fewer international school options. Three-bedroom houses run roughly TTD 5,500-9,000/month.",
         },
         {
           name: "Tobago (Crown Point and around)",
@@ -3528,7 +3528,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
     placesToSee: [
       {
         name: "Pitch Lake",
-        description: "The world's largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
+        description: "The world’s largest natural deposit of asphalt, at La Brea in southwest Trinidad: a semi-solid, walkable lake covering about 40 hectares, in use since Sir Walter Raleigh caulked his ships with it in 1595.",
         photo: {
           src: "/destinations/trinidad-and-tobago.jpg",
           alt: "Pitch Lake, La Brea, Trinidad",
@@ -3538,7 +3538,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Caroni Bird Sanctuary",
-        description: "A mangrove swamp on Trinidad's west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
+        description: "A mangrove swamp on Trinidad’s west coast, famous for the nightly return of thousands of scarlet ibis (the national bird) to roost, best seen by guided boat tour at sunset.",
         photo: {
           src: "/places/trinidad-and-tobago/caroni-scarlet-ibis.jpg",
           alt: "Scarlet ibis roosting at Caroni Swamp, Trinidad",
@@ -3548,7 +3548,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Asa Wright Nature Centre",
-        description: "A rainforest reserve and former plantation house in Trinidad's Northern Range, known for birdwatching: hummingbirds at close range and dozens of other species on its trails.",
+        description: "A rainforest reserve and former plantation house in Trinidad’s Northern Range, known for birdwatching: hummingbirds at close range and dozens of other species on its trails.",
       },
       {
         name: "Fort George",
@@ -3561,22 +3561,22 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
         },
       },
       {
-        name: "Queen's Park Savannah",
-        description: "A large city park in Port of Spain ringed by the Magnificent Seven colonial-era mansions, and the epicentre of Carnival's biggest stage shows.",
+        name: "Queen’s Park Savannah",
+        description: "A large city park in Port of Spain ringed by the Magnificent Seven colonial-era mansions, and the epicentre of Carnival’s biggest stage shows.",
         photo: {
           src: "/places/trinidad-and-tobago/queens-park-savannah.jpg",
-          alt: "Queen's Royal College, one of the Magnificent Seven mansions by Queen's Park Savannah, Port of Spain",
+          alt: "Queen’s Royal College, one of the Magnificent Seven mansions by Queen’s Park Savannah, Port of Spain",
           credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
           creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_PoS_M7-1_Queen's_Royal_College.jpg",
         },
       },
       {
         name: "Main Ridge Forest Reserve",
-        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere: over 10,000 acres of rainforest across Tobago's central spine, with hiking trails and dense birdlife.",
+        description: "Declared a protected forest reserve in 1776, the oldest legally protected rainforest in the Western Hemisphere: over 10,000 acres of rainforest across Tobago’s central spine, with hiking trails and dense birdlife.",
       },
       {
         name: "Pigeon Point Heritage Park",
-        description: "Tobago's best-known beach, fronted by a thatched-roof jetty that's become the island's signature image, with calm, clear water.",
+        description: "Tobago’s best-known beach, fronted by a thatched-roof jetty that’s become the island’s signature image, with calm, clear water.",
         photo: {
           src: "/places/trinidad-and-tobago/pigeon-point.jpg",
           alt: "Pigeon Point beach, Tobago",
@@ -3586,7 +3586,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Buccoo Reef & Nylon Pool",
-        description: "A protected reef system off Tobago's southwest coast, rated among the world's best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
+        description: "A protected reef system off Tobago’s southwest coast, rated among the world’s best reefs by Jacques Cousteau, with glass-bottom boat tours stopping at the shallow, crystal-clear Nylon Pool sandbar.",
         photo: {
           src: "/places/trinidad-and-tobago/buccoo-reef.jpg",
           alt: "Shallow waters of the Buccoo Reef Complex, Tobago",
@@ -3596,7 +3596,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Argyle Falls",
-        description: "Tobago's tallest waterfall at about 54 metres, dropping across three tiers near Roxborough, with natural pools for swimming after a short rainforest walk.",
+        description: "Tobago’s tallest waterfall at about 54 metres, dropping across three tiers near Roxborough, with natural pools for swimming after a short rainforest walk.",
       },
       {
         name: "Fort King George",
@@ -3616,7 +3616,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Walking Pitch Lake",
-        description: "Guided walks across the semi-solid asphalt surface of the world's largest natural bitumen deposit, with a guide explaining the geology and the small freshwater pools that support unusual microbial life.",
+        description: "Guided walks across the semi-solid asphalt surface of the world’s largest natural bitumen deposit, with a guide explaining the geology and the small freshwater pools that support unusual microbial life.",
       },
       {
         title: "Scarlet ibis watching at Caroni Swamp",
@@ -3628,11 +3628,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         title: "Hiking Main Ridge Forest Reserve",
-        description: "Trails through Tobago's rainforest interior, including routes to Argyle Falls, with a good chance of spotting endemic and migratory birds.",
+        description: "Trails through Tobago’s rainforest interior, including routes to Argyle Falls, with a good chance of spotting endemic and migratory birds.",
       },
       {
         title: "Doubles at dawn",
-        description: "Trinidad's street-food ritual: curried channa in fried bara, bought from a stand that's often only open in the early morning, eaten standing up.",
+        description: "Trinidad’s street-food ritual: curried channa in fried bara, bought from a stand that’s often only open in the early morning, eaten standing up.",
       },
     ],
     localDishes: [
@@ -3642,11 +3642,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         name: "Doubles",
-        description: "Trinidad's iconic street food, not the official national dish but arguably more eaten day to day: curried chickpeas (channa) between two pieces of fried flatbread (bara), dressed with chutneys and pepper sauce.",
+        description: "Trinidad’s iconic street food, not the official national dish but arguably more eaten day to day: curried chickpeas (channa) between two pieces of fried flatbread (bara), dressed with chutneys and pepper sauce.",
       },
       {
         name: "Roti",
-        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato: a staple lunch across both islands, reflecting the country's large Indo-Trinidadian population.",
+        description: "Flatbread wrapped around curried chicken, goat, shrimp or potato: a staple lunch across both islands, reflecting the country’s large Indo-Trinidadian population.",
       },
       {
         name: "Pelau",
@@ -3662,10 +3662,10 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       {
         name: "George & Son Doubles and Pies",
         area: "Woodbrook, Port of Spain",
-        description: "One of the city's well-known doubles stands, a quick, cheap classic Trini breakfast.",
+        description: "One of the city’s well-known doubles stands, a quick, cheap classic Trini breakfast.",
       },
       {
-        name: "D'Lime Cafe",
+        name: "D’Lime Cafe",
         area: "Port of Spain",
         description: "Casual Trini fare (doubles, roti and curries) at reasonable prices in a laid-back setting.",
       },
@@ -3702,7 +3702,7 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What is the currency and do I need cash?",
-        a: "The currency is the Trinidad and Tobago dollar (TTD). USD is sometimes accepted in tourist areas, but you'll usually get better value paying in TTD, and change often comes back in TTD. Major cards work in most hotels, larger restaurants and shops in Port of Spain, Chaguanas, San Fernando and the main Tobago towns, but smaller vendors, street food stalls and rural spots often prefer cash. ATMs are widely available in Port of Spain, major Trinidad towns, and in Tobago (Scarborough, Crown Point, Canaan).",
+        a: "The currency is the Trinidad and Tobago dollar (TTD). USD is sometimes accepted in tourist areas, but you’ll usually get better value paying in TTD, and change often comes back in TTD. Major cards work in most hotels, larger restaurants and shops in Port of Spain, Chaguanas, San Fernando and the main Tobago towns, but smaller vendors, street food stalls and rural spots often prefer cash. ATMs are widely available in Port of Spain, major Trinidad towns, and in Tobago (Scarborough, Crown Point, Canaan).",
       },
       {
         q: "Do I need a visa to visit as a tourist?",
@@ -3710,19 +3710,19 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "How do I get around the islands?",
-        a: "Buses and \"maxi taxis\" (route taxis and minibuses on fixed routes) are inexpensive and common for getting between Port of Spain, Chaguanas, San Fernando and other Trinidad towns. Taxis are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and Trinidad's roads range from good highways to congested urban streets, while Tobago's are generally smaller and quieter. Short domestic flights connect Piarco (Trinidad) and Tobago, useful if you're splitting time between the islands, and passenger and vehicle ferries also run between the two; check schedules ahead either way.",
+        a: "Buses and “maxi taxis” (route taxis and minibuses on fixed routes) are inexpensive and common for getting between Port of Spain, Chaguanas, San Fernando and other Trinidad towns. Taxis are readily available at airports, cruise ports and major hotels; agree the fare in advance. Rental cars are available at airports and in major towns; driving is on the left, and Trinidad’s roads range from good highways to congested urban streets, while Tobago’s are generally smaller and quieter. Short domestic flights connect Piarco (Trinidad) and Tobago, useful if you’re splitting time between the islands, and passenger and vehicle ferries also run between the two; check schedules ahead either way.",
       },
       {
         q: "What are the must-do experiences in Trinidad and Tobago?",
-        a: "Experience Carnival in Port of Spain in the pre-Lenten season, with calypso, soca, steelpan, costumes and street parties. Visit Pitch Lake in La Brea, one of the world's largest natural asphalt lakes, and walk its semi-solid surface. Go birdwatching at Asa Wright Nature Centre and the Caroni Bird Sanctuary, especially for scarlet ibis at sunset. Explore Tobago's beaches: Pigeon Point, the Nylon Pool sandbar, Buccoo Bay and Store Bay. Hike the Main Ridge Forest Reserve on Tobago, one of the oldest legally protected rainforest reserves in the world. Or just take in Port of Spain's street food and urban culture: doubles, roti, markets and music.",
+        a: "Experience Carnival in Port of Spain in the pre-Lenten season, with calypso, soca, steelpan, costumes and street parties. Visit Pitch Lake in La Brea, one of the world’s largest natural asphalt lakes, and walk its semi-solid surface. Go birdwatching at Asa Wright Nature Centre and the Caroni Bird Sanctuary, especially for scarlet ibis at sunset. Explore Tobago’s beaches: Pigeon Point, the Nylon Pool sandbar, Buccoo Bay and Store Bay. Hike the Main Ridge Forest Reserve on Tobago, one of the oldest legally protected rainforest reserves in the world. Or just take in Port of Spain’s street food and urban culture: doubles, roti, markets and music.",
       },
       {
         q: "What local food should I try?",
-        a: "Crab and callaloo is the official national dish: callaloo stewed with coconut milk, okra and crab, traditionally the centrepiece of Sunday lunch. Doubles, curried chickpeas in fried bara, isn't the official national dish but is arguably eaten more often day to day, and is the country's best-known street food. Also look for roti, pelau (a one-pot rice dish with meat, pigeon peas, coconut milk and spices), and fresh grilled or curried fish, crab and lobster, especially in Tobago. Try the doubles stands and cookshops in Port of Spain, San Fernando and Chaguanas, beachside grills in Tobago (Store Bay, Buccoo), and mid-range to upscale restaurants on both islands.",
+        a: "Crab and callaloo is the official national dish: callaloo stewed with coconut milk, okra and crab, traditionally the centrepiece of Sunday lunch. Doubles, curried chickpeas in fried bara, isn’t the official national dish but is arguably eaten more often day to day, and is the country’s best-known street food. Also look for roti, pelau (a one-pot rice dish with meat, pigeon peas, coconut milk and spices), and fresh grilled or curried fish, crab and lobster, especially in Tobago. Try the doubles stands and cookshops in Port of Spain, San Fernando and Chaguanas, beachside grills in Tobago (Store Bay, Buccoo), and mid-range to upscale restaurants on both islands.",
       },
       {
         q: "Is Trinidad and Tobago safe for tourists?",
-        a: "Trinidad and Tobago can be visited safely, but it has higher crime rates in some urban areas, especially parts of Port of Spain and certain neighbourhoods. Major Tobago resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don't flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government's current travel advisory and ask your hotel or tour operator about areas to avoid.",
+        a: "Trinidad and Tobago can be visited safely, but it has higher crime rates in some urban areas, especially parts of Port of Spain and certain neighbourhoods. Major Tobago resorts, well-known beaches and organised tours are generally fine with normal precautions: avoid walking alone at night in unfamiliar urban areas, don’t flash valuables, and use licensed taxis and reputable tour operators. Be cautious at ATMs and in crowded places, and keep bags and phones secure. Check your government’s current travel advisory and ask your hotel or tour operator about areas to avoid.",
       },
       {
         q: "What is the best time to visit?",
@@ -3730,11 +3730,11 @@ export const COUNTRY_GUIDES: CountryGuide[] = [
       },
       {
         q: "What should I pack?",
-        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you'll visit a church or formal venue. If you're visiting for Carnival, pack colourful clothes, comfortable shoes for dancing and walking, and protection from both sun and rain.",
+        a: "Light, breathable clothing, swimwear, sandals and comfortable shoes for walking and hikes, plus sunscreen, a hat, sunglasses and insect repellent. A light rain jacket or poncho helps, especially in the wetter months. Bring something a little more modest if you’ll visit a church or formal venue. If you’re visiting for Carnival, pack colourful clothes, comfortable shoes for dancing and walking, and protection from both sun and rain.",
       },
       {
         q: "Any cultural tips I should know?",
-        a: "Trinidad and Tobago is highly multicultural: Afro-Trinbagonian, Indo-Trinbagonian, mixed, Chinese, Syrian-Lebanese, European and more, so respect local customs and religious practices. English is official, but you'll hear Trinidadian and Tobagonian English Creole daily, alongside Hindi, Spanish and other languages. Tipping 10–15% in restaurants is standard if a service charge isn't already included, with small tips for taxi drivers, tour guides and hotel staff welcome. During Carnival season, expect large crowds, loud music and a party atmosphere, so book accommodation and transport well in advance.",
+        a: "Trinidad and Tobago is highly multicultural: Afro-Trinbagonian, Indo-Trinbagonian, mixed, Chinese, Syrian-Lebanese, European and more, so respect local customs and religious practices. English is official, but you’ll hear Trinidadian and Tobagonian English Creole daily, alongside Hindi, Spanish and other languages. Tipping 10–15% in restaurants is standard if a service charge isn’t already included, with small tips for taxi drivers, tour guides and hotel staff welcome. During Carnival season, expect large crowds, loud music and a party atmosphere, so book accommodation and transport well in advance.",
       },
     ],
     lastUpdated: "August 2026",

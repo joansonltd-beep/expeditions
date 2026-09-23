@@ -15,7 +15,7 @@ export const CSME_OFFICIAL_SOURCES: { label: string; href: string; note: string 
   {
     label: "CARICOM: Free Movement of Skills",
     href: "https://caricom.org/free-movement-of-skills/",
-    note: "The Secretariat's own overview of the regime and the approved categories.",
+    note: "The Secretariat’s own overview of the regime and the approved categories.",
   },
   {
     label: "CARICOM Single Market and Economy (CSME)",
@@ -46,7 +46,7 @@ export type CsmeCountry = {
   howTo: string;
   officialUrl?: string;
   fullFreeMovement?: boolean; // implemented full free movement on 1 Oct 2025
-  // Application fee in the country's own currency, human-readable. Omit when the
+  // Application fee in the country’s own currency, human-readable. Omit when the
   // country does not publish a fee (the page then tells the reader to confirm).
   fee?: string;
   formUrl?: string; // direct link to the application form, if known
@@ -108,7 +108,7 @@ export const CSME_STEPS: CsmeStep[] = [
   },
   {
     title: "Use it abroad",
-    text: "When you arrive in another member state, present the certificate to immigration for an initial six-month entry stamp. You can begin work immediately, then receive an indefinite stay stamp once that country's competent authority verifies the certificate. Your spouse and dependants get the same rights to live and work with you.",
+    text: "When you arrive in another member state, present the certificate to immigration for an initial six-month entry stamp. You can begin work immediately, then receive an indefinite stay stamp once that country’s competent authority verifies the certificate. Your spouse and dependants get the same rights to live and work with you.",
     tips: [
       "Travel with your original qualification documents and a fresh Police Certificate of Character. The receiving country will want them for verification.",
     ],
@@ -118,7 +118,7 @@ export const CSME_STEPS: CsmeStep[] = [
 // Shared final step for the country pages.
 const USE_IT_ABROAD: CsmeStep = {
   title: "Use it abroad",
-  text: "When you arrive in another member state, present the certificate to immigration for an initial six-month entry stamp. You can begin work immediately, then receive an indefinite stay stamp once that country's competent authority verifies the certificate. Spouses and dependants enjoy the same rights to live and work with you.",
+  text: "When you arrive in another member state, present the certificate to immigration for an initial six-month entry stamp. You can begin work immediately, then receive an indefinite stay stamp once that country’s competent authority verifies the certificate. Spouses and dependants enjoy the same rights to live and work with you.",
   tips: [
     "Travel with your original qualification documents and a fresh Police Certificate of Character. The receiving country will want them for verification.",
   ],
@@ -135,7 +135,7 @@ export const CSME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Where do I apply for the Skills Certificate?",
-    a: "You can apply in your home country or in the country where you want to work, through that country's designated ministry or body. Each country's office is listed on this page.",
+    a: "You can apply in your home country or in the country where you want to work, through that country’s designated ministry or body. Each country’s office is listed on this page.",
   },
   {
     q: "How long does it take and does it expire?",
@@ -147,7 +147,7 @@ export const CSME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Does the Skills Certificate let me study in another CARICOM country?",
-    a: "No. Free movement of skills is about the right to work. A student normally needs the destination country's own student visa or permit, applied for separately through that country's immigration authority.",
+    a: "No. Free movement of skills is about the right to work. A student normally needs the destination country’s own student visa or permit, applied for separately through that country’s immigration authority.",
   },
   {
     q: "Do I still need a Skills Certificate after full free movement started?",
@@ -161,7 +161,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     name: "Antigua and Barbuda",
     authority: "Ministry of Labour (Labour, Public Administration and Empowerment)",
     howTo:
-      "Apply through the Ministry of Labour in St. John's. Bring your qualification, passport and birth certificate to start the process.",
+      "Apply through the Ministry of Labour in St. John’s. Bring your qualification, passport and birth certificate to start the process.",
     detail: {
       steps: [
         {
@@ -170,7 +170,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Contact the Ministry of Labour first",
-          text: "Call or visit the Ministry of Labour at Nevis Street and Friendly Alley in St. John's to get the current form, document list and fee before you gather anything.",
+          text: "Call or visit the Ministry of Labour at Nevis Street and Friendly Alley in St. John’s to get the current form, document list and fee before you gather anything.",
         },
         {
           title: "Gather your documents",
@@ -191,7 +191,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         USE_IT_ABROAD,
       ],
       submit: "In person at the Ministry of Labour.",
-      address: "Nevis Street & Friendly Alley, St. John's",
+      address: "Nevis Street & Friendly Alley, St. John’s",
       notes: [
         "Confirm the fee and the document checklist with the Ministry of Labour before you apply.",
       ],
@@ -214,7 +214,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Complete the form and have it signed by a Justice of the Peace",
-          text: "Fill in the application form and have it signed and stamped by a Justice of the Peace. The Council will not accept the form without the JP's official stamp.",
+          text: "Fill in the application form and have it signed and stamped by a Justice of the Peace. The Council will not accept the form without the JP’s official stamp.",
         },
         {
           title: "Gather your documents",
@@ -367,7 +367,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
     name: "Grenada",
     authority: "Ministry of Foreign Affairs, Trade & Export Development",
     howTo:
-      "Complete the application form and submit it in person, with your fee receipt from the treasury, to the Ministry of Foreign Affairs in St. George's.",
+      "Complete the application form and submit it in person, with your fee receipt from the treasury, to the Ministry of Foreign Affairs in St. George’s.",
     officialUrl: "https://llca.gov.gd/labour/services/caricom-skills-certificate/",
     formUrl: "https://llca.gov.gd/labour/wp-content/uploads/sites/3/2023/12/CSME_skills_certificate_application_form.pdf",
     fee: "EC$250 (XCD) per application, paid to the treasury. Present the treasury receipt with your completed application.",
@@ -379,10 +379,10 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Gather your documents",
-          text: "Grenada's application form lists the package: your university degree, birth certificate, passport copies, marriage certificate if applicable, and two passport-sized photographs. You must bring originals and certified copies of everything.",
+          text: "Grenada’s application form lists the package: your university degree, birth certificate, passport copies, marriage certificate if applicable, and two passport-sized photographs. You must bring originals and certified copies of everything.",
           tips: [
             "No university degree? Artistes, musicians, media workers and sportspersons submit a letter from their respective organisation or association plus a letter from their employer as supporting evidence.",
-            "Teachers need their Teacher's Training Certificate. Nurses need their nursing certificates together with registration with the Nursing Council.",
+            "Teachers need their Teacher’s Training Certificate. Nurses need their nursing certificates together with registration with the Nursing Council.",
             "Get your Police Certificate of Character from the Royal Grenada Police Force early, but not too early. They are typically valid for only six months from issue.",
             "Artisans and skilled tradespeople usually need a CVQ or verification through the Grenada National Accreditation Board.",
           ],
@@ -397,9 +397,9 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         },
         {
           title: "Submit in person to the Ministry of Foreign Affairs",
-          text: "Applicants must appear in person with originals and certified copies at the Ministry of Foreign Affairs, Trade & Export Development, Ministerial Complex, 4th Floor, Sir Eric M. Gairy Botanical Gardens, Tanteen, St. George's. Your original degree, marriage and birth certificates are returned to you.",
+          text: "Applicants must appear in person with originals and certified copies at the Ministry of Foreign Affairs, Trade & Export Development, Ministerial Complex, 4th Floor, Sir Eric M. Gairy Botanical Gardens, Tanteen, St. George’s. Your original degree, marriage and birth certificates are returned to you.",
           tips: [
-            "Call ahead on (473) 440-2640 ext. 23501 to confirm current requirements and whether you need an appointment. Grenada's process is still paper-based and details like photo specs can shift.",
+            "Call ahead on (473) 440-2640 ext. 23501 to confirm current requirements and whether you need an appointment. Grenada’s process is still paper-based and details like photo specs can shift.",
           ],
         },
         {
@@ -412,7 +412,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
         "Completed application form",
         "University degree, presented to the Grenada National Accreditation Board for verification (originals and certified copies)",
         "No degree? Artistes, musicians, media workers and sportspersons: a letter from your organisation or association plus a letter from your employer",
-        "Teachers: Teacher's Training Certificate; nurses: nursing certificates plus Nursing Council registration",
+        "Teachers: Teacher’s Training Certificate; nurses: nursing certificates plus Nursing Council registration",
         "Birth certificate",
         "Passport (copy of the pages with biographical details, date of issue and expiry)",
         "Marriage certificate (if applicable)",
@@ -421,7 +421,7 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       ],
       processingTime: "Around five to six weeks. A committee reviews each application.",
       submit: "In person, with originals and certified copies. Originals are returned to you.",
-      address: "Ministerial Complex, 4th Floor, Sir Eric M. Gairy Botanical Gardens, Tanteen, St. George's",
+      address: "Ministerial Complex, 4th Floor, Sir Eric M. Gairy Botanical Gardens, Tanteen, St. George’s",
       phone: "(473) 440-2640 / 2712 / 3036 ext. 23501",
       email: "registry@mofa.gov.gd",
       notes: [
@@ -535,11 +535,11 @@ export const CSME_COUNTRIES: CsmeCountry[] = [
       address: "1F North Street, Kingston",
       phone: "(876) 922-9500-8",
       notes: [
-        "Applications made anywhere other than the Labour Ministry's North Street office are not valid. The Ministry has publicly warned against third parties offering to process certificates.",
+        "Applications made anywhere other than the Labour Ministry’s North Street office are not valid. The Ministry has publicly warned against third parties offering to process certificates.",
       ],
     },
   },
-  // Montserrat deliberately excluded: it's a British Overseas Territory and
+  // Montserrat deliberately excluded: it’s a British Overseas Territory and
   // only a partial CSME participant, so the free movement of skills this
   // site is built around does not fully apply there.
   {

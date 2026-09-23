@@ -83,7 +83,7 @@ export default async function GuidesPage() {
             and we&apos;ll walk you through your specific move.
           </p>
           <div className="mt-4">
-            <CtaButtons message="Hi Jo, I have a question that's not covered in your guides." />
+            <CtaButtons message="Hi Jo, I have a question that’s not covered in your guides." />
           </div>
         </div>
       </Section>

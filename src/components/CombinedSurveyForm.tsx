@@ -74,7 +74,7 @@ const amountsInitial = Object.fromEntries(UTILITY_TYPES.map((u) => [u, ""])) as 
  * Each section still posts to its own existing endpoint, because each one
  * feeds a different Google Sheet with a different column layout. Combining
  * them into a single sheet would need a new Apps Script and a new destination,
- * which is Joanson's to set up. Nothing about the existing data pipeline
+ * which is Joanson’s to set up. Nothing about the existing data pipeline
  * changes here.
  *
  * Fully anonymous: no name, email or IP is collected or forwarded.

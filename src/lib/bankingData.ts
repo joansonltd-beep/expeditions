@@ -9,7 +9,7 @@
 //
 // Researched July 2026 from the banks' own product pages. Fees, minimums and
 // document lists change, so every island page carries a "confirm with the
-// branch" note and links to the bank's own page.
+// branch" note and links to the bank’s own page.
 
 export type Bank = "republic" | "scotia" | "acb" | "ncb";
 
@@ -36,7 +36,7 @@ export type BankingIsland = {
   currency: string;
   minOpening?: string; // human-readable; omitted when the bank genuinely does not publish it
   phone?: string; // shown alongside a "confirm with the branch" fallback
-  // Set when the island's basic account is NOT the bank's electronic-access
+  // Set when the island’s basic account is NOT the bank’s electronic-access
   // product (e.g. Scotiabank Jamaica, which does not offer one). The text
   // explains what they get instead.
   noElectronicAccount?: string;
@@ -46,9 +46,9 @@ export type BankingIsland = {
   // recommend. Shown up front so it is read before any bank-specific detail.
   keyRequirement?: string;
   notes?: string[];
-  // Island-specific document lists, sourced from that island's own bank page,
+  // Island-specific document lists, sourced from that island’s own bank page,
   // overriding the generic BANK_DOCUMENTS[bank] / BANK_NONRESIDENT_DOCUMENTS[bank]
-  // fallback below. Use these whenever an island's own page differs from the
+  // fallback below. Use these whenever an island’s own page differs from the
   // regional default (different local agencies, a longer or shorter list, etc).
   documents?: string[];
   nonResidentDocuments?: string[];
@@ -56,8 +56,8 @@ export type BankingIsland = {
 
 // What each bank asks for. Individual islands can add to this via `notes`.
 export const REPUBLIC_DOCUMENTS = [
-  "A completed account application, done in branch or through Republic's online onboarding",
-  "One or two valid forms of photo identification: passport, national ID card or driver's permit",
+  "A completed account application, done in branch or through Republic’s online onboarding",
+  "One or two valid forms of photo identification: passport, national ID card or driver’s permit",
   "Proof of address dated within the last three months, such as a utility bill. If the bill is not in your name, bring the lease plus an authorisation letter from the account holder",
   "Proof of income: a job letter, a recent payslip, or business financials if you are self-employed",
   "The minimum opening deposit for the account",
@@ -66,12 +66,12 @@ export const REPUBLIC_DOCUMENTS = [
 export const REPUBLIC_NONRESIDENT_DOCUMENTS = [
   "A utility bill covering the last three months, or your lease agreement",
   "Proof of income: job letter and payslip, or financials if you run a business",
-  "A banker's reference letter from your current bank",
+  "A banker’s reference letter from your current bank",
   "Your work permit, CARICOM Skills Certificate or student documentation, where these apply",
 ];
 
 export const SCOTIA_DOCUMENTS = [
-  "One valid government-issued photo ID: passport, driver's licence, voter's ID or national ID",
+  "One valid government-issued photo ID: passport, driver’s licence, voter’s ID or national ID",
   "Proof of address: a utility bill, rent receipt, lease agreement, property tax receipt, or a statement from a licensed financial institution",
   "Proof of employment: a job letter, a payslip, or a business registration certificate if you are self-employed",
   "Your tax number, or the tax ID issued by your country of residence if you are not yet resident",
@@ -80,24 +80,24 @@ export const SCOTIA_DOCUMENTS = [
 ];
 
 export const ACB_DOCUMENTS = [
-  "Two pieces of government-issued photo identification: a passport (valid, and clearly showing both your photograph and your signature), driver's licence or voter's ID",
+  "Two pieces of government-issued photo identification: a passport (valid, and clearly showing both your photograph and your signature), driver’s licence or voter’s ID",
   "Proof of address, dated within the last three months: a statement from a reputable bank, a statement from a recognised credit card provider, or a utility bill",
   "Source of funds: a letter from your employer stating your position, years of service and monthly salary or weekly wage. If you are self-employed, the latest financial statements, invoices of purchases, an estimate of sales and a completed Declaration of Income form",
-  "Original source of wealth: 12 months of bank statements for accumulated savings, a solicitor's or agent's letter for a property sale or inheritance, or a pension letter",
+  "Original source of wealth: 12 months of bank statements for accumulated savings, a solicitor’s or agent’s letter for a property sale or inheritance, or a pension letter",
   "The minimum opening deposit for the account",
 ];
 
 export const ACB_NONRESIDENT_DOCUMENTS = [
   "A reference letter from a financial institution",
-  "Valid government-issued photo identification evidencing your nationality or residence, such as a passport, driver's licence or national ID",
+  "Valid government-issued photo identification evidencing your nationality or residence, such as a passport, driver’s licence or national ID",
   "Two reference letters from two different well-known banks, addressed to ACB Caribbean. If two are not possible, ask the bank what it will accept instead",
 ];
 
 export const NCB_DOCUMENTS = [
-  "One valid photo ID: driver's licence (both sides), National ID (Elector Registration Identification Card), passport, diplomatic ID, or the National Council for Senior Citizens card. Without a driver's licence, your TRN card works",
+  "One valid photo ID: driver’s licence (both sides), National ID (Elector Registration Identification Card), passport, diplomatic ID, or the National Council for Senior Citizens card. Without a driver’s licence, your TRN card works",
   "Your Taxpayer Registration Number (TRN)",
   "Proof of address, no more than six months old: a utility bill, a current credit card or bank statement, a postmarked envelope addressed to you, or your National ID",
-  "Proof of income, no more than six months old: a letter from your employer, a payslip, or proof of salary paid into an account for the last three months. If you are self-employed, an accountant's letter stating your salary range and title, your tax return, or bank statements",
+  "Proof of income, no more than six months old: a letter from your employer, a payslip, or proof of salary paid into an account for the last three months. If you are self-employed, an accountant’s letter stating your salary range and title, your tax return, or bank statements",
   "Two referees, each with a name, telephone number and occupation. A referee must have been an NCB customer for at least a year and cannot be an immediate family member",
 ];
 
@@ -129,17 +129,17 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     minOpening: "TT$100",
     alsoHas: "Scotiabank",
     documents: [
-      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver's permit without a nationality statement needs a second, supporting ID. Dual nationals bring ID for each nationality",
-      "A recent utility bill for proof of address (with an authorisation letter if it isn't in your name); if you are not yet resident, a utility bill from the last three months, or a lease agreement or landlord's letter instead",
+      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver’s permit without a nationality statement needs a second, supporting ID. Dual nationals bring ID for each nationality",
+      "A recent utility bill for proof of address (with an authorisation letter if it isn’t in your name); if you are not yet resident, a utility bill from the last three months, or a lease agreement or landlord’s letter instead",
       "Proof of income: a job letter and a pay stub from the last three months if employed; audited financials for the last three years, management accounts, or a Statement of Affairs and Statement of Income and Expenditure if self-employed. A start-up provides an opening balance sheet and cash flow projections",
     ],
     nonResidentDocuments: [
-      "A banking reference from your current overseas institution (waived if you've already been legally resident for 5+ years)",
+      "A banking reference from your current overseas institution (waived if you’ve already been legally resident for 5+ years)",
       "Your work permit or, for students, a letter of enrolment, where applicable",
     ],
     notes: [
       "No monthly service charge, and you get three free in-branch debits a month. Go over that and a flat TT$18 monthly fee applies.",
-      "Free transactions at Republic's Blue Machines (ABMs), with a TT$5,000 daily limit, and free LINX point-of-sale purchases up to TT$10,000 a day.",
+      "Free transactions at Republic’s Blue Machines (ABMs), with a TT$5,000 daily limit, and free LINX point-of-sale purchases up to TT$10,000 a day.",
       "Balances of TT$500 or more earn 0.25% interest, paid on the last working day of the month.",
     ],
   },
@@ -155,12 +155,12 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     minOpening: "BDS$100",
     alsoHas: "Scotiabank",
     documents: [
-      "One of the following: a National ID card, a passport, or a driver's licence (a driver's licence is only accepted alongside another form of valid photo ID)",
-      "Proof of address dated within the last three months: a utility bill (excluding cell phone bills), another bank's statement (excluding credit union or other financial-institution statements), an official government or tax document such as correspondence from the BRA or NIS, or a rental agreement or contract from your landlord. If the bill isn't in your name, Republic Bank will provide an authorisation letter for the bill-holder to complete",
+      "One of the following: a National ID card, a passport, or a driver’s licence (a driver’s licence is only accepted alongside another form of valid photo ID)",
+      "Proof of address dated within the last three months: a utility bill (excluding cell phone bills), another bank’s statement (excluding credit union or other financial-institution statements), an official government or tax document such as correspondence from the BRA or NIS, or a rental agreement or contract from your landlord. If the bill isn’t in your name, Republic Bank will provide an authorisation letter for the bill-holder to complete",
       "Proof of income: if employed, a job letter or your most recent pay slip. If self-employed, up-to-date audited financial statements for the last three years, or a Statement of Affairs and a Statement of Income and Expenditure. A start-up entity (in operation less than three years) provides an opening balance sheet and cash flow projections for three years instead",
     ],
     nonResidentDocuments: [
-      "A foreign banker's reference, or a bank statement from the last three months",
+      "A foreign banker’s reference, or a bank statement from the last three months",
       "If self-employed, a utility bill confirming your permanent foreign address",
       "A work permit, CARICOM Skills Certificate, or other official document granting permission to work. Students provide a missionary permit, student visa, or a letter of enrolment or acceptance from a Barbados educational institution instead",
     ],
@@ -187,7 +187,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       "Proof of income: a job letter or payslip if employed; an income and expenditure statement if self-employed",
       "Your TIN Certificate, required of every applicant including foreign nationals",
     ],
-    nonResidentDocuments: ["A banker's reference, subject to the bank's conditions"],
+    nonResidentDocuments: ["A banker’s reference, subject to the bank’s conditions"],
     notes: [
       "No monthly maintenance fee and no restrictions on deposits or withdrawals. ATM, point-of-sale and mobile banking (RepublicMobile) transactions are free; the first in-branch withdrawal each month is free, and further ones cost G$300 each.",
       "Interest is only calculated on a minimum monthly balance of G$25,000 and over, paid on the last day of the month. The current rate is 0.082%.",
@@ -205,8 +205,8 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     currency: "XCD",
     minOpening: "EC$1",
     documents: [
-      "One valid photo ID: a passport, national ID card, or driver's permit (must not be expired)",
-      "Proof of address: a utility bill, or the bank's confirmation-of-address form if the bill isn't in your name",
+      "One valid photo ID: a passport, national ID card, or driver’s permit (must not be expired)",
+      "Proof of address: a utility bill, or the bank’s confirmation-of-address form if the bill isn’t in your name",
       "Proof of income: a job letter and a copy of your contract if employed; up-to-date financial statements or tax returns if self-employed",
     ],
     notes: [
@@ -226,7 +226,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     minOpening: "EC$25",
     notes: [
       "No monthly maintenance fee. Three in-branch transactions a month are free; after that a monthly charge of EC$15 applies.",
-      "Republic Bank (EC) Limited took over Scotiabank's Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
+      "Republic Bank (EC) Limited took over Scotiabank’s Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
     ],
   },
   {
@@ -241,7 +241,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     minOpening: "EC$25",
     notes: [
       "No monthly maintenance fee, with three free in-branch transactions a month and an EC$15 monthly charge beyond that. The account does not earn interest.",
-      "Republic Bank (EC) Limited took over Scotiabank's Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
+      "Republic Bank (EC) Limited took over Scotiabank’s Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
     ],
   },
   {
@@ -256,7 +256,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     minOpening: "EC$25",
     notes: [
       "No monthly maintenance fee, with three free in-branch transactions a month and an EC$15 monthly charge beyond that. The account does not earn interest.",
-      "Republic Bank (EC) Limited took over Scotiabank's Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
+      "Republic Bank (EC) Limited took over Scotiabank’s Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
     ],
   },
   {
@@ -270,8 +270,8 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     currency: "XCD",
     minOpening: "EC$25",
     notes: [
-      "No monthly maintenance fee. Three free in-branch teller debits a month, then an EC$17.55 monthly fee applies. No charge for using Republic's Blue Machine ABMs, and the account does not earn interest.",
-      "Republic Bank (EC) Limited took over Scotiabank's Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
+      "No monthly maintenance fee. Three free in-branch teller debits a month, then an EC$17.55 monthly fee applies. No charge for using Republic’s Blue Machine ABMs, and the account does not earn interest.",
+      "Republic Bank (EC) Limited took over Scotiabank’s Eastern Caribbean branches, so an old Scotiabank account here is now a Republic account.",
     ],
   },
   {
@@ -285,8 +285,8 @@ export const BANKING_ISLANDS: BankingIsland[] = [
     currency: "SRD",
     minOpening: "SRD 25",
     documents: [
-      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver's licence without a nationality statement needs a second, supporting ID (national ID, passport or nationality certificate). Dual nationals bring ID for each nationality",
-      "A recent utility bill, plus an authorisation letter if it isn't in your name",
+      "One form of ID that clearly states your nationality, such as a national ID card or passport. A driver’s licence without a nationality statement needs a second, supporting ID (national ID, passport or nationality certificate). Dual nationals bring ID for each nationality",
+      "A recent utility bill, plus an authorisation letter if it isn’t in your name",
       "A job letter and pay slip. A reference letter may also be asked for, depending on your situation",
     ],
     notes: [
@@ -295,8 +295,8 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       "Banking here is conducted in Dutch as well as English. Ask whether your documents need a translation.",
     ],
   },
-  // The Bahamas deliberately excluded: it's a CARICOM member but not a CSME
-  // free-movement participant, so it's out of scope for this site, same
+  // The Bahamas deliberately excluded: it’s a CARICOM member but not a CSME
+  // free-movement participant, so it’s out of scope for this site, same
   // reasoning as Montserrat.
   {
     slug: "antigua-and-barbuda",
@@ -312,7 +312,7 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       "ACB Caribbean does not offer a dedicated electronic-access account in Antigua. The Regular Savings Account is the everyday starting point, and it comes with a debit card, ATM access and mobile banking.",
     notes: [
       "Pays 2% interest. You need to keep EC$100 in the account: fall below it and a EC$10 fee applies.",
-      "Neither Republic Bank nor Scotiabank operates here. Scotiabank's old branches became Eastern Caribbean Amalgamated Bank (ECAB) in 2021, so ACB Caribbean, the island's largest indigenous bank, is where we send people.",
+      "Neither Republic Bank nor Scotiabank operates here. Scotiabank’s old branches became Eastern Caribbean Amalgamated Bank (ECAB) in 2021, so ACB Caribbean, the island’s largest indigenous bank, is where we send people.",
       "You can start by phone on 1-268-481-4200, Monday to Friday, 8am to 4:30pm, or download the application form and take it into a branch.",
     ],
   },
@@ -333,14 +333,14 @@ export const BANKING_ISLANDS: BankingIsland[] = [
       accountName: "Savings or Day-To-Day account",
       accountUrl: "https://jm.scotiabank.com/personal/chequing-and-savings/opening-a-new-account-requirements.html",
       minOpening: "J$5,000",
-      note: "Scotiabank Jamaica does not offer the Electronic Access Account it runs elsewhere in the region, so its everyday Savings and Day-To-Day accounts are the starting point. Both come with Scotia OnLine and mobile banking. The TRN requirement applies here too, and the rest of its document list differs from NCB's, so check with the branch.",
+      note: "Scotiabank Jamaica does not offer the Electronic Access Account it runs elsewhere in the region, so its everyday Savings and Day-To-Day accounts are the starting point. Both come with Scotia OnLine and mobile banking. The TRN requirement applies here too, and the rest of its document list differs from NCB’s, so check with the branch.",
     },
     keyRequirement:
       "You need a Taxpayer Registration Number (TRN) to open any bank account in Jamaica, at any bank. There is no way around it and no account you can open without one, so if you do not have a TRN yet, apply for that before anything else.",
     notes: [
       "No monthly service charge and no minimum balance fee. You get four free NCB ATM withdrawals a month and free online bill payment.",
       "The account is non-interest bearing, so it is for day-to-day money rather than savings. Pair it with a savings account if you want interest.",
-      "You can open it online through NCB's remote onboarding, without visiting a branch, if you have a driver's licence, National ID or passport.",
+      "You can open it online through NCB’s remote onboarding, without visiting a branch, if you have a driver’s licence, National ID or passport.",
     ],
   },
 ];

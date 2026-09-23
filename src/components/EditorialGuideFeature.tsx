@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui";
 import type { Article } from "@/lib/siteData";
 
-// Rough category from the guide's own slug and keywords, so a label can be
+// Rough category from the guide’s own slug and keywords, so a label can be
 // shown without inventing taxonomy the CMS does not have.
 function categoryFor(a: Article): string {
   const hay = `${a.slug} ${a.title} ${(a.keywords ?? []).join(" ")}`.toLowerCase();
@@ -24,7 +24,7 @@ function formatDate(d?: string): string | null {
 /**
  * One featured guide with room to breathe, then three as a plain list.
  *
- * The Skills Certificate guide is always the feature: it is the site's main
+ * The Skills Certificate guide is always the feature: it is the site’s main
  * entry point and the thing most people arrive looking for. The rest come from
  * the CMS in whatever order it returns them.
  */

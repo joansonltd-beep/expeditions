@@ -13,7 +13,7 @@ import { SITE_URL } from "@/lib/siteUrl";
  * It lives under Tools rather than as another enquiry form because that is
  * what it is. Nothing is posted to a server and nothing is stored: the form
  * composes an email the owner sends from their own account, which means the
- * enquiry arrives from a real address and there is no data of anyone else's
+ * enquiry arrives from a real address and there is no data of anyone else’s
  * sitting on this site waiting to leak.
  */
 

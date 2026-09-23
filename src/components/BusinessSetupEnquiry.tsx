@@ -147,7 +147,7 @@ export default function BusinessSetupEnquiry({
               Request Consultancy
             </button>
             <a
-              href={waLink(`Hi Jo, I'm interested in business setup help (${form.service}).`)}
+              href={waLink(`Hi Jo, I’m interested in business setup help (${form.service}).`)}
               target="_blank"
               rel="noopener noreferrer"
               className={btnWhatsapp}

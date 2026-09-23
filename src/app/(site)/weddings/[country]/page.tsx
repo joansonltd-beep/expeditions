@@ -74,7 +74,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
         {
           q: `How long do we have to be in ${c.name} before we can marry?`,
           a: open
-            ? `${TIMING_LABEL[c.timing]}. The exact requirement depends on which licence applies to you and on your circumstances, and it is one of the first things I pin down, because it decides your flights and everybody's leave.`
+            ? `${TIMING_LABEL[c.timing]}. The exact requirement depends on which licence applies to you and on your circumstances, and it is one of the first things I pin down, because it decides your flights and everybody’s leave.`
             : `Every country sets its own waiting time, and I have not yet confirmed ${c.name}'s with the registry itself, so I am not going to quote you one. Tell me your date and I will confirm it and come back to you either way.`,
         },
         {
@@ -357,7 +357,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
       <ConsultationCtaBlock
         lead={
           open
-            ? `A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Tell me what you have in mind and I will tell you what it actually takes.`
+            ? `A Move Planning Consultation covering your wedding in ${c.name}, the licence, the documents and everybody’s travel, is $100, and it comes off the booking if you go ahead. Tell me what you have in mind and I will tell you what it actually takes.`
             : `Tell me your date for ${c.name} and I will confirm the procedure with the registry and come back to you either way. There is no charge for asking. A full Move Planning Consultation is $100 and comes off the booking if you go ahead.`
         }
       />

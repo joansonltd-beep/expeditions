@@ -71,7 +71,7 @@ export type ServiceFaq = { q: string; a: string };
 
 // The standard blocks every important service page carries, so a visitor can
 // see who it is for, what they get, what they have to supply, and where our
-// responsibility stops and a third party's decision begins. All optional: a
+// responsibility stops and a third party’s decision begins. All optional: a
 // page renders only the blocks that are filled in.
 export type ServiceDetail = {
   whoFor?: string[];
@@ -178,7 +178,7 @@ export const DEFAULT_SERVICES: Service[] = [
         },
         {
           q: "What if my flight is cancelled or delayed?",
-          a: "Tell us and we will help you work through the airline's options. The airline sets what it will offer, and any rebooking or refund is its decision under its own conditions of carriage.",
+          a: "Tell us and we will help you work through the airline’s options. The airline sets what it will offer, and any rebooking or refund is its decision under its own conditions of carriage.",
         },
       ],
       disclaimer:
@@ -232,7 +232,7 @@ export const DEFAULT_SERVICES: Service[] = [
       ],
       notControlled: [
         "Availability and nightly rates, which are set by the property or platform",
-        "Property standards, cleanliness and the accuracy of a host's listing",
+        "Property standards, cleanliness and the accuracy of a host’s listing",
         "Cancellation terms, which belong to the property or platform",
         "Whether a landlord or host accepts a particular guest or booking",
       ],
@@ -274,7 +274,7 @@ export const DEFAULT_SERVICES: Service[] = [
       "Pre-booked, English-speaking drivers in over 100 cities through Welcome Pickups, plus local rides in Trinidad.",
     cardFeatures: ["Airport pickups and drop-offs", "Over 100 cities worldwide", "Door-to-door, no taxi lines"],
     intro:
-      "Landing on your new island, or just need a ride while you're there? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
+      "Landing on your new island, or just need a ride while you’re there? Book reliable international airport transfers with ease, door to door, wherever you are headed.",
     body: [
       {
         heading: "International airport transfers",
@@ -318,7 +318,7 @@ export const DEFAULT_SERVICES: Service[] = [
       ],
       process: [
         "Book directly through our Welcome Pickups link, or send us your flight details.",
-        "You receive a confirmation with your driver's details.",
+        "You receive a confirmation with your driver’s details.",
         "Your driver meets you in arrivals and takes you to your address.",
       ],
       feesNote:
@@ -414,7 +414,7 @@ export const DEFAULT_SERVICES: Service[] = [
       ],
       included: [
         "Guidance on preparing to open a local account, including the documents and practical steps that may apply to you",
-        "Checking your documents against the bank's own published requirements",
+        "Checking your documents against the bank’s own published requirements",
         "Preparing loan and credit card applications so they are complete before you submit",
         "Business registration and getting your documents ready for a business account",
       ],
@@ -427,7 +427,7 @@ export const DEFAULT_SERVICES: Service[] = [
       notControlled: [
         "Whether the bank opens an account for you",
         "Whether a loan or credit card application is approved, and on what terms",
-        "The bank's interest rates, fees and processing times",
+        "The bank’s interest rates, fees and processing times",
         "Changes a bank makes to its own document requirements",
       ],
       process: [
@@ -446,7 +446,7 @@ export const DEFAULT_SERVICES: Service[] = [
         },
         {
           q: "Will I definitely be approved for a loan?",
-          a: "No. Approval is the bank's decision, based on its own criteria. We help you submit a complete and properly prepared application, which is a different thing from a guaranteed outcome.",
+          a: "No. Approval is the bank’s decision, based on its own criteria. We help you submit a complete and properly prepared application, which is a different thing from a guaranteed outcome.",
         },
         {
           q: "Do you need my bank details or passwords?",
@@ -519,7 +519,7 @@ export const DEFAULT_PACKAGES: Package[] = [
 ];
 
 // --- finance add-ons ------------------------------------------------------
-// Either usdPrice (converted + rounded up to the nearest 100 in the visitor's
+// Either usdPrice (converted + rounded up to the nearest 100 in the visitor’s
 // currency) or amountText (an existing figure shown as-is, just tagged with
 // TTD/XCD) is set, never both.
 export type AddOn = {
@@ -546,7 +546,7 @@ export type Testimonial = { quote: string; person: string; context: string };
 // Deliberately empty. The site renders no testimonial section at all until real
 // client quotes are added in Studio, so nothing invented or placeholder can
 // ever appear. Add each one with a real first name and last initial, plus the
-// destination or service it relates to, and only with the client's permission.
+// destination or service it relates to, and only with the client’s permission.
 export const DEFAULT_TESTIMONIALS: Testimonial[] = [];
 
 // --- about --------------------------------------------------------------
@@ -562,9 +562,9 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "I have done this myself",
       paragraphs: [
-        "I'm originally from Grenada. I moved to Trinidad in 2020, right in the middle of the pandemic, which made that process about as hard as it gets. Then I moved again to Jamaica in 2025. Before either move, I worked through what all twelve CSME countries actually require, so I was choosing with real information instead of guessing. You'd be working with someone who has actually done this, not just read about it, and who knows where the pitfalls and the unnecessary administrative delays usually are.",
-        "To be clear about that last part: I cannot speed up or override anybody's process. What I can do is make sure the only waiting you do is the waiting that is built in, rather than extra weeks caused by something missing or wrong in your application.",
-        "Travelling itself is the easy part. As a former travel agency owner, I handle that side for you with no fuss: flights, ground transfers, accommodation. My rates usually come in lower than what you'd pay elsewhere. It was so frustrating going through the rest of it myself that I decided to start doing it for other people.",
+        "I’m originally from Grenada. I moved to Trinidad in 2020, right in the middle of the pandemic, which made that process about as hard as it gets. Then I moved again to Jamaica in 2025. Before either move, I worked through what all twelve CSME countries actually require, so I was choosing with real information instead of guessing. You’d be working with someone who has actually done this, not just read about it, and who knows where the pitfalls and the unnecessary administrative delays usually are.",
+        "To be clear about that last part: I cannot speed up or override anybody’s process. What I can do is make sure the only waiting you do is the waiting that is built in, rather than extra weeks caused by something missing or wrong in your application.",
+        "Travelling itself is the easy part. As a former travel agency owner, I handle that side for you with no fuss: flights, ground transfers, accommodation. My rates usually come in lower than what you’d pay elsewhere. It was so frustrating going through the rest of it myself that I decided to start doing it for other people.",
         "I ran a travel agency alongside it, so flights, hotels and transfers were the easy half. Plenty of my customers were not going on holiday either. They were going to take up a job, join family or start a course, and they were stuck on exactly the same things I had been stuck on. So the business grew around that instead.",
       ],
     },
@@ -602,7 +602,7 @@ export const DEFAULT_ABOUT: AboutData = {
     {
       heading: "Our mission",
       paragraphs: [
-        "I help CARICOM nationals get through a Move Planning Consultation, put together a CSME Skills Certificate application, and organise the travel that goes with a move. Most people aren't stopped by the process itself. They're stopped by not knowing what to do first, or getting stuck on a form nobody explained properly.",
+        "I help CARICOM nationals get through a Move Planning Consultation, put together a CSME Skills Certificate application, and organise the travel that goes with a move. Most people aren’t stopped by the process itself. They’re stopped by not knowing what to do first, or getting stuck on a form nobody explained properly.",
       ],
     },
     {
@@ -682,8 +682,8 @@ export const DEFAULT_POLICIES: PoliciesData = {
     {
       paragraphs: [
         "Effective Date: November 5, 2025",
-        "At Expeditions With Jo (the \"Company,\" \"we,\" \"us,\" or \"our\"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.expeditionswithjo.com (the \"Site\"), book a service, make purchases, or interact with our services. By using the Site or our services, you consent to the practices described in this policy.",
-        "This policy complies with applicable laws, including but not limited to the General Data Protection Regulation (GDPR) for EU residents, the California Consumer Privacy Act (CCPA) for California residents, the Gramm-Leach-Bliley Act (GLBA) for financial information handling, and relevant Trinidad and Tobago data protection regulations. We also adhere to Payment Card Industry Data Security Standards (PCI DSS) for secure payment processing to enable acceptance of Visa, Mastercard, and other major credit cards. Our payment processing is handled through Fygaro, integrated with First Citizens Bank's e-commerce gateway, which supports 3D Secure (3DS) authentication for enhanced transaction security. If you do not agree with this policy, please do not use the Site or our services.",
+        "At Expeditions With Jo (the \"Company,“ ”we,“ ”us,“ or ”our\"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.expeditionswithjo.com (the “Site”), book a service, make purchases, or interact with our services. By using the Site or our services, you consent to the practices described in this policy.",
+        "This policy complies with applicable laws, including but not limited to the General Data Protection Regulation (GDPR) for EU residents, the California Consumer Privacy Act (CCPA) for California residents, the Gramm-Leach-Bliley Act (GLBA) for financial information handling, and relevant Trinidad and Tobago data protection regulations. We also adhere to Payment Card Industry Data Security Standards (PCI DSS) for secure payment processing to enable acceptance of Visa, Mastercard, and other major credit cards. Our payment processing is handled through Fygaro, integrated with First Citizens Bank’s e-commerce gateway, which supports 3D Secure (3DS) authentication for enhanced transaction security. If you do not agree with this policy, please do not use the Site or our services.",
       ],
     },
     {
@@ -691,7 +691,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
       paragraphs: ["We collect information to provide and improve our relocation and travel booking services, process payments, and communicate with you. The types of information include:"],
       bullets: [
         "Personal Information: Name, email address, phone number, mailing address, date of birth, and emergency contact details (collected during booking or registration).",
-        "Payment Information: Credit/debit card details (e.g., card number, expiration date, CVV), billing address. Note: We do not store full card details on our servers; payment processing is handled securely by Fygaro via First Citizens Bank's PCI DSS-compliant gateway, including 3D Secure authentication where applicable.",
+        "Payment Information: Credit/debit card details (e.g., card number, expiration date, CVV), billing address. Note: We do not store full card details on our servers; payment processing is handled securely by Fygaro via First Citizens Bank’s PCI DSS-compliant gateway, including 3D Secure authentication where applicable.",
         "Relocation and Travel Information: CSME application and supporting documents, dietary or medical needs disclosed for safety on a booked trip, passport details (for international travel).",
         "Usage Data: IP address, browser type, device information, pages visited, and time spent on the Site (collected via cookies and analytics tools).",
         "Communication Data: Information you provide in inquiries, reviews, or support requests.",
@@ -709,7 +709,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
         "Analysing usage to improve services and prevent fraud.",
         "Complying with legal obligations, such as tax reporting or health/safety regulations for travel.",
       ],
-      note: "For payment processing, we use your card information solely to complete transactions via Fygaro and First Citizens Bank's gateway. We obtain explicit consent before storing any payment details for recurring bookings or subscriptions, as required by Visa and Mastercard rules. 3D Secure may be prompted during checkout to verify your identity and reduce fraud risk.",
+      note: "For payment processing, we use your card information solely to complete transactions via Fygaro and First Citizens Bank’s gateway. We obtain explicit consent before storing any payment details for recurring bookings or subscriptions, as required by Visa and Mastercard rules. 3D Secure may be prompted during checkout to verify your identity and reduce fraud risk.",
     },
     {
       heading: "3. How We Share Your Information",
@@ -727,7 +727,7 @@ export const DEFAULT_POLICIES: PoliciesData = {
       paragraphs: ["Protecting your information, especially payment data, is a priority. We implement reasonable administrative, technical, and physical safeguards, including:"],
       bullets: [
         "Encryption of data in transit (HTTPS/TLS) and at rest.",
-        "PCI DSS Level 1 compliance through Fygaro and First Citizens Bank's payment gateway to protect cardholder data.",
+        "PCI DSS Level 1 compliance through Fygaro and First Citizens Bank’s payment gateway to protect cardholder data.",
         "Support for 3D Secure (3DS) authentication protocols (e.g., Verified by Visa, Mastercard SecureCode).",
         "Regular security audits, firewalls, and access controls.",
         "Anonymisation of usage data where possible.",
@@ -750,13 +750,13 @@ export const DEFAULT_POLICIES: PoliciesData = {
       bullets: [
         "Access, Correction, Deletion: Request a copy, updates, or deletion of your information.",
         "Opt-Out: Unsubscribe from emails (via link in messages) or marketing.",
-        "Do Not Sell/Share: Under CCPA, opt out of any \"sales\" (we do not sell data).",
+        "Do Not Sell/Share: Under CCPA, opt out of any “sales” (we do not sell data).",
         "GDPR Rights: Withdraw consent, object to processing, or data portability.",
       ],
       note: "To exercise rights, email queries@expeditionswithjo.com. We respond within 30-45 days. For CCPA, verified requests are free (up to twice yearly). We retain data only as long as needed (e.g., 7 years for financial records per IRS rules) or as required by law, then securely delete it.",
     },
     {
-      heading: "7. Children's Privacy",
+      heading: "7. Children’s Privacy",
       paragraphs: [
         "Our Site is not intended for children under 13 (or 16 in some jurisdictions). We do not knowingly collect data from children without parental consent. If we discover such data, we delete it promptly.",
       ],

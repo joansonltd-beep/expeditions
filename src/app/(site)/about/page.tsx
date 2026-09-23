@@ -27,7 +27,7 @@ export default async function AboutPage() {
   const [about, settings] = await Promise.all([getAbout(), getSiteSettings()]);
   return (
     <>
-      {/* St. George's behind, Jo in front. The page opens by saying he is
+      {/* St. George’s behind, Jo in front. The page opens by saying he is
           Grenadian, so the header shows where that is. The Carenage rather
           than a beach: it is a working harbour and recognisably Grenada. */}
       <PageHeader
@@ -115,7 +115,7 @@ export default async function AboutPage() {
           </div>
 
           <div className="mt-8">
-            <CtaButtons message="Hi Jo, I'd like some help." />
+            <CtaButtons message="Hi Jo, I’d like some help." />
           </div>
         </div>
       </Section>

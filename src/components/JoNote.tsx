@@ -1,5 +1,5 @@
 /**
- * A short aside in Jo's voice, reusable on any page.
+ * A short aside in Jo’s voice, reusable on any page.
  *
  * Deliberately not a card: a left rule, a small label and the words. It reads
  * as a margin note in an article rather than another boxed component.

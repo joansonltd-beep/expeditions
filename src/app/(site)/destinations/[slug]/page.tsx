@@ -58,7 +58,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
   const fullFreeMovementNames = CSME_COUNTRIES.filter((c) => c.fullFreeMovement).map((c) => c.name);
 
   // Sections after "Moving here" alternate background, so when that section
-  // is absent (country not yet covered), flip every later Section's alt so
+  // is absent (country not yet covered), flip every later Section’s alt so
   // the light/dark rhythm still lines up.
   const flip = Boolean(g.movingHere);
 
@@ -96,7 +96,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             q: "Do all CARICOM nationals need the certificate, or is there full free movement?",
             a: csmeCountry?.fullFreeMovement
               ? `${g.name} is one of four CARICOM countries with full free movement between themselves: ${fullFreeMovementNames.join(", ")}. Nationals of those four can live and work in ${g.name} without a CSME Skills Certificate. Everyone else moving to ${g.name} still needs the certificate.`
-              : `No. Four CARICOM countries have gone further than the standard CSME certificate and implemented full free movement between themselves: ${fullFreeMovementNames.join(", ")}. Nationals of those four can work in each other's countries without a certificate. Everyone else, including anyone moving to or from ${g.name}, still applies for the CSME Skills Certificate.`,
+              : `No. Four CARICOM countries have gone further than the standard CSME certificate and implemented full free movement between themselves: ${fullFreeMovementNames.join(", ")}. Nationals of those four can work in each other’s countries without a certificate. Everyone else, including anyone moving to or from ${g.name}, still applies for the CSME Skills Certificate.`,
           },
         ]
       : []),
@@ -448,7 +448,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                 {g.name}: this is exactly what we do every day. Reach out and we&rsquo;ll walk you through every step.
               </p>
               <div className="mt-4">
-                <CtaButtons message={`Hi Jo, I'd like help relocating to ${g.name}.`} />
+                <CtaButtons message={`Hi Jo, I’d like help relocating to ${g.name}.`} />
               </div>
             </div>
           </div>

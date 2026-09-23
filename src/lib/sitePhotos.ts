@@ -60,7 +60,7 @@ export const HOME_HERO_PHOTOS: HomeHeroPhoto[] = [
   },
 ];
 
-/** Swapped in for Trinidad and Tobago's independence window. */
+/** Swapped in for Trinidad and Tobago’s independence window. */
 export const TT_HERO_PHOTOS: HomeHeroPhoto[] = [
   {
     src: "/photos/hero.jpg",
@@ -85,8 +85,8 @@ export const TT_HERO_PHOTOS: HomeHeroPhoto[] = [
   },
   {
     src: "/places/trinidad-and-tobago/queens-park-savannah.jpg",
-    place: "Queen's Park Savannah, Port of Spain",
-    alt: "Queen's Royal College, one of the Magnificent Seven mansions by Queen's Park Savannah, Port of Spain",
+    place: "Queen’s Park Savannah, Port of Spain",
+    alt: "Queen’s Royal College, one of the Magnificent Seven mansions by Queen’s Park Savannah, Port of Spain",
     credit: "Baldur Brückner, CC BY-SA 4.0, via Wikimedia Commons",
     creditUrl: "https://commons.wikimedia.org/wiki/File:TnT_PoS_M7-1_Queen's_Royal_College.jpg",
   },
@@ -140,13 +140,13 @@ export const BUSINESS_CENTER_PHOTOS: CreditedPhoto[] = [
   },
   {
     src: "/photos/heroes/business/st-georges.jpg",
-    alt: "The Carenage, St. George's, Grenada",
+    alt: "The Carenage, St. George’s, Grenada",
     credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
     creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
   },
   {
     src: "/photos/heroes/business/st-johns.jpg",
-    alt: "Port of St. John's, Antigua and Barbuda",
+    alt: "Port of St. John’s, Antigua and Barbuda",
     credit: "Matt H. Wade, CC BY-SA 3.0, via Wikimedia Commons",
     creditUrl: "https://commons.wikimedia.org/wiki/File:Port_of_St._Johns_Antigua.jpg",
   },
@@ -252,7 +252,7 @@ export const GUEST_HERO_PHOTOS: CreditedPhoto[] = [
 export const ABOUT_PHOTOS: CreditedPhoto[] = [
     {
       src: "/places/grenada/carenage.jpg",
-      alt: "The Carenage, the horseshoe harbour at St. George's, Grenada",
+      alt: "The Carenage, the horseshoe harbour at St. George’s, Grenada",
       credit: "Ramakrishna Reddy Yekulla, CC BY-SA 3.0, via Wikimedia Commons",
       creditUrl: "https://commons.wikimedia.org/wiki/File:The_Carenage,_St_George's,_Grenada.jpg",
     },
@@ -267,6 +267,58 @@ export const SURVEY_PHOTOS: CreditedPhoto[] = [
       creditUrl: "https://commons.wikimedia.org/wiki/File:Castries_Market_from_Jeremie_Street.JPG",
     },
   ];
+
+/** Terminals and arrival halls, for the pages about actually getting there. */
+export const AIRPORT_PHOTOS: CreditedPhoto[] = [
+  {
+    src: "/photos/heroes/airports/antigua-vc-bird.jpg",
+    alt: "V.C. Bird International Airport, Antigua",
+    credit: "CROIX, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:V.C._Bird_International_Airport,_Interior.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/grenada-maurice-bishop.jpg",
+    alt: "Maurice Bishop International Airport, Grenada",
+    credit: "Estormiz, public domain, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Maurice_Bishop_International_Airport_Grenada.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/guyana-cheddi-jagan.jpg",
+    alt: "Cheddi Jagan International Airport, Guyana",
+    credit: "Interestica, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Arrivals_-_Cheddi_Jagan_International_Airport,_Guyana.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/belize-philip-goldson.jpg",
+    alt: "Philip S. W. Goldson International Airport, Belize",
+    credit: "Pgbk87, CC BY-SA 3.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Philip_S._W._Goldson_International_Airport.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/dominica-douglas-charles.jpg",
+    alt: "Gate 1, Douglas-Charles Airport, Dominica",
+    credit: "DOMDCF, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:American_Eagle_-_Gate_1.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/saint-lucia-hewanorra.jpg",
+    alt: "Hewanorra International Airport, Saint Lucia",
+    credit: "ImagePerson, public domain (CC0), via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Hewanorra_Airport_St_Lucia_1094.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/st-vincent-argyle.jpg",
+    alt: "Argyle International Airport, St. Vincent and the Grenadines",
+    credit: "Dylanwill, CC BY-SA 4.0, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:Argyle_Terminal_Building.jpg",
+  },
+  {
+    src: "/photos/heroes/airports/suriname-pengel.jpg",
+    alt: "Johan Adolf Pengel International Airport, Suriname",
+    credit: "Ymnes, public domain, via Wikimedia Commons",
+    creditUrl: "https://commons.wikimedia.org/wiki/File:JAP_Airport,_2022_-_1.jpg",
+  },
+];
 
 /** The Visit page header. */
 export const VISIT_PHOTOS: CreditedPhoto[] = [

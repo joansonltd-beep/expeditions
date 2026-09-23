@@ -44,8 +44,8 @@ function LanguageSelect({
   );
 }
 
-// MyMemory's free translation API. No key or account needed for casual use
-// (a per-IP daily word cap applies); it's what powers the built-in-feeling
+// MyMemory’s free translation API. No key or account needed for casual use
+// (a per-IP daily word cap applies); it’s what powers the built-in-feeling
 // translation here since no browser or OS ships one on its own.
 async function translate(text: string, from: string, to: string): Promise<string> {
   const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${from}|${to}`;
@@ -92,7 +92,7 @@ export default function Translator() {
   const notice = useMemo(() => {
     if (!canHearFrom) return `Listening is not available for ${fromLang.short}. Type it in and it translates just the same.`;
     if (toLang.ttsNote) return toLang.ttsNote;
-    if (!speechSupported) return "This browser can't listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.";
+    if (!speechSupported) return "This browser can’t listen to speech. Chrome on a laptop or Android phone can. Typing works everywhere.";
     return "";
   }, [speechSupported, fromLang, toLang, canHearFrom]);
 

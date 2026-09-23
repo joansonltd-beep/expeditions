@@ -30,7 +30,7 @@ const labelClass = "block text-sm font-semibold text-slate-900";
 
 // Deliberately collects only what is needed for a first assessment; never
 // passport numbers, bank details or other sensitive information, which are
-// handled separately once contact is made. Submitting doesn't send anything
+// handled separately once contact is made. Submitting doesn’t send anything
 // yet: savePendingConsultation() holds the answers and a $100 payment panel
 // takes over, same as every other enquiry form on the site.
 export default function ContactForm() {
@@ -200,7 +200,7 @@ export default function ContactForm() {
             value={form.currentCountry}
             onChange={set("currentCountry")}
             className={`mt-1.5 ${field}`}
-            placeholder="Country you're travelling from"
+            placeholder="Country you’re travelling from"
           />
         </div>
       </div>
@@ -268,7 +268,7 @@ export default function ContactForm() {
           onChange={set("message")}
           rows={4}
           className={`mt-1.5 ${field} resize-y`}
-          placeholder="What you're planning, where you've got to so far, and anything you're stuck on"
+          placeholder="What you’re planning, where you’ve got to so far, and anything you’re stuck on"
         />
       </div>
 

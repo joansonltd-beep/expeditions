@@ -4,7 +4,7 @@
 // does captureLead()/the mailto hand-off actually fire. See
 // ConsultancyPaymentPanel and ConsultationPaidClient.
 //
-// localStorage rather than sessionStorage: Fygaro's checkout may open in a
+// localStorage rather than sessionStorage: Fygaro’s checkout may open in a
 // new tab, and this needs to survive that.
 
 export type PendingConsultation = {
@@ -12,14 +12,14 @@ export type PendingConsultation = {
   message: string; // full plain-text body, same shape captureLead() expects
   recommended?: string;
   figures?: Record<string, string | number>;
-  mailtoSubject: string; // already encodeURIComponent'd
-  mailtoBody: string; // already encodeURIComponent'd
+  mailtoSubject: string; // already encodeURIComponent’d
+  mailtoBody: string; // already encodeURIComponent’d
   savedAt: number;
 };
 
 const KEY = "pendingConsultation";
 // Long enough to get through a slow checkout, short enough that an
-// abandoned, unrelated visit from earlier the same day can't fire later.
+// abandoned, unrelated visit from earlier the same day can’t fire later.
 const MAX_AGE_MS = 60 * 60 * 1000;
 
 export function savePendingConsultation(payload: Omit<PendingConsultation, "savedAt">): void {
@@ -27,7 +27,7 @@ export function savePendingConsultation(payload: Omit<PendingConsultation, "save
     localStorage.setItem(KEY, JSON.stringify({ ...payload, savedAt: Date.now() }));
   } catch {
     // Storage can be unavailable (private browsing, quota). The payment
-    // panel still shows; the return page's "we couldn't find your request"
+    // panel still shows; the return page’s "we couldn’t find your request"
     // fallback covers this case.
   }
 }

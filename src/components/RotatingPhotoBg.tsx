@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export type HeroPhoto = { src: string; alt: string; credit?: string; creditUrl?: string };
 
-// Full-bleed background for PageHeader's photo mode. Cycles through the
-// given photos every intervalMs when there's more than one; a single photo
+// Full-bleed background for PageHeader’s photo mode. Cycles through the
+// given photos every intervalMs when there’s more than one; a single photo
 // just renders statically. Always declares itself as a photo hero so the
 // header can go transparent over it.
 export default function RotatingPhotoBg({ photos, intervalMs = 6000 }: { photos: HeroPhoto[]; intervalMs?: number }) {

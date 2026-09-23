@@ -8,7 +8,7 @@ import BusinessSetupEnquiry from "@/components/BusinessSetupEnquiry";
 export const metadata: Metadata = {
   title: "Business Setup",
   description:
-    "Business registration, bank account, accounting, social media, website and payment processing setup for small businesses in Trinidad and Tobago, Jamaica and Grenada. Plus how CARICOM's Right of Establishment lets you set up a business on another island.",
+    "Business registration, bank account, accounting, social media, website and payment processing setup for small businesses in Trinidad and Tobago, Jamaica and Grenada. Plus how CARICOM’s Right of Establishment lets you set up a business on another island.",
   keywords: [
     "CARICOM right of establishment",
     "start a business in another CARICOM country",
@@ -36,7 +36,7 @@ export default async function BusinessSetupPage() {
       <Section>
         <SectionHead
           eyebrow={p.eyebrow}
-          title="What's included"
+          title="What’s included"
           intro="Every business is different, so work is scoped and quoted around what you actually need rather than a fixed package."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

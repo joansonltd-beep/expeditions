@@ -37,7 +37,7 @@ const WHO_FOR = [
 
 const WE_HELP = [
   "Working out which approved category fits your qualification",
-  "Explaining what your country's office asks for, and in what order",
+  "Explaining what your country’s office asks for, and in what order",
   "Checking your documents against the published requirements before you submit",
   "Registering a business and preparing what a business bank account needs",
   "Opening a personal or business bank account once you arrive",
@@ -45,7 +45,7 @@ const WE_HELP = [
 ];
 
 const NOT_CONTROLLED = [
-  "Whether a Skills Certificate is issued. That is the designated government office's decision.",
+  "Whether a Skills Certificate is issued. That is the designated government office’s decision.",
   "Whether an employer hires you, and on what terms.",
   "Whether immigration admits you and grants an indefinite stay.",
   "Whether a bank opens an account or approves a loan.",
@@ -59,7 +59,7 @@ const FAQS = [
   },
   {
     q: "Can you guarantee I will get a certificate or a job?",
-    a: "No. The certificate is issued or refused by a government office, and hiring is the employer's decision. We help you understand the process, prepare properly and handle the practical arrangements. Nobody outside those bodies can promise you an outcome.",
+    a: "No. The certificate is issued or refused by a government office, and hiring is the employer’s decision. We help you understand the process, prepare properly and handle the practical arrangements. Nobody outside those bodies can promise you an outcome.",
   },
   {
     q: "Do I need a job offer before applying for a Skills Certificate?",
@@ -67,11 +67,11 @@ const FAQS = [
   },
   {
     q: "What if I am self-employed rather than taking a job?",
-    a: "A different route applies. CARICOM's Right of Establishment covers setting up a business in another member state, and the paperwork is business registration rather than a Skills Certificate. Our business setup pages cover it.",
+    a: "A different route applies. CARICOM’s Right of Establishment covers setting up a business in another member state, and the paperwork is business registration rather than a Skills Certificate. Our business setup pages cover it.",
   },
   {
     q: "Can my family come with me?",
-    a: "A Skills Certificate holder's spouse and dependants generally gain the same rights to live and work in the receiving country. The receiving country still applies its own rules, so confirm before you make plans around it.",
+    a: "A Skills Certificate holder’s spouse and dependants generally gain the same rights to live and work in the receiving country. The receiving country still applies its own rules, so confirm before you make plans around it.",
   },
 ];
 
@@ -102,7 +102,7 @@ const SELF_EMPLOYED_ITEMS = [
   {
     href: "/business-setup",
     title: "Business Setup",
-    text: "Register your business under CARICOM's Right of Establishment, from name search to a ready-to-use business bank account.",
+    text: "Register your business under CARICOM’s Right of Establishment, from name search to a ready-to-use business bank account.",
   },
   {
     href: "/finance#business",
@@ -212,7 +212,7 @@ lead
         <SectionHead
           eyebrow="Job seekers"
           title="Looking for work in another CARICOM country?"
-          intro="Tell us what you're looking for and we'll be in touch about openings that match, no need to have an offer lined up first."
+          intro="Tell us what you’re looking for and we’ll be in touch about openings that match, no need to have an offer lined up first."
           center={false}
         />
         <div className="mx-auto max-w-2xl">
@@ -294,7 +294,7 @@ lead
             country asks for and what your next step is.
           </p>
           <div className="mt-6">
-            <CtaButtons message="Hi Jo, I'd like help working in another CARICOM country." />
+            <CtaButtons message="Hi Jo, I’d like help working in another CARICOM country." />
           </div>
           <p className="mt-6 text-sm text-slate-600">
             Skills Certificates are issued by government offices, and hiring decisions belong to employers. We help you

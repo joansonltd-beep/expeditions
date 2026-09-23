@@ -13,7 +13,7 @@ import { btnPrimary, btnGhost } from "@/components/ui";
  *
  * The questions mirror what Airbnb asks when a listing is created, so an owner
  * who answers these has effectively done the first half of a listing. Five
- * extras are Jamaica's rather than Airbnb's: water tank, backup power, gated
+ * extras are Jamaica’s rather than Airbnb’s: water tank, backup power, gated
  * access, hot water, and who is currently holding the keys. Those are the ones
  * that decide whether a property can take guests at all.
  *

@@ -2,7 +2,7 @@
 // survey, utility cost survey, and rent survey. All fully anonymous, no name
 // or email is collected. Country options are the 12 CSME free-movement
 // countries this site already covers, kept in one place (csmeData.ts) so
-// the surveys' country lists can't drift from the rest of the site.
+// the surveys' country lists can’t drift from the rest of the site.
 
 export const SURVEY_INDUSTRIES = [
   "Accounting & Auditing",
@@ -37,8 +37,8 @@ export const EDUCATION_OPTIONS = [
   "Secondary school",
   "Certificate/Diploma",
   "Associate Degree",
-  "Bachelor's Degree",
-  "Master's Degree",
+  "Bachelor’s Degree",
+  "Master’s Degree",
   "Doctorate",
   "Other",
 ] as const;

@@ -48,10 +48,10 @@ function validate(body: unknown): { ok: true; data: RentPayload } | { ok: false;
   if (!Number.isFinite(rent) || rent <= 0) return { ok: false, error: "Enter a valid monthly rent." };
 
   if (!Array.isArray(b.included) || b.included.length === 0) {
-    return { ok: false, error: "Select at least one option for what's included in your rent (or None)." };
+    return { ok: false, error: "Select at least one option for what’s included in your rent (or None)." };
   }
   const included = b.included.filter((u): u is string => (RENT_INCLUDED_OPTIONS as readonly string[]).includes(u as string));
-  if (included.length !== b.included.length) return { ok: false, error: "Invalid selection for what's included in rent." };
+  if (included.length !== b.included.length) return { ok: false, error: "Invalid selection for what’s included in rent." };
 
   const occupants = Number(b.occupants);
   if (!Number.isFinite(occupants) || occupants <= 0 || !Number.isInteger(occupants)) {
@@ -66,7 +66,7 @@ function validate(body: unknown): { ok: true; data: RentPayload } | { ok: false;
   }
   if (b.parking !== "Yes" && b.parking !== "No") return { ok: false, error: "Select yes or no for parking." };
   if (!isNonEmptyString(b.duration) || !(RENT_DURATION_OPTIONS as readonly string[]).includes(b.duration)) {
-    return { ok: false, error: "Select how long you've been paying your current rent." };
+    return { ok: false, error: "Select how long you’ve been paying your current rent." };
   }
   if (!isNonEmptyString(b.lastIncrease) || !(RENT_INCREASE_OPTIONS as readonly string[]).includes(b.lastIncrease)) {
     return { ok: false, error: "Select when your rent last increased." };

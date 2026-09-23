@@ -2,9 +2,9 @@
 
 import Script from "next/script";
 
-// Fygaro's payment-button widget replaces its own <script> tag with a
+// Fygaro’s payment-button widget replaces its own <script> tag with a
 // rendered button once it loads, so this only needs to sit where the button
-// should appear. Loaded lazily since it's only ever shown after someone
+// should appear. Loaded lazily since it’s only ever shown after someone
 // actually reaches the payment step, not on every page view.
 export default function FygaroPaymentButton() {
   return (

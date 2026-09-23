@@ -51,7 +51,7 @@ export default function JoIntroduction() {
                 choosing rather than guessing.
               </p>
               <p>
-                You'd be working with someone who has actually done this, not just read about it, and who knows where
+                You’d be working with someone who has actually done this, not just read about it, and who knows where
                 the pitfalls and the unnecessary administrative delays usually are.
                 <a href="#admin-delays" className="ml-0.5 align-super text-sm text-brand hover:underline">
                   *
@@ -59,7 +59,7 @@ export default function JoIntroduction() {
               </p>
               <p>
                 Travelling itself is the easy part. As a former travel agency owner, I handle that side for you with no
-                fuss: flights, ground transfers, accommodation. My rates usually come in lower than what you'd pay
+                fuss: flights, ground transfers, accommodation. My rates usually come in lower than what you’d pay
                 elsewhere.
               </p>
             </div>

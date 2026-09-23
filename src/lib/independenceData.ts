@@ -102,7 +102,7 @@ export function formatDayMonth(d: IndependenceDay): string {
 // 31st would switch on at 8pm on the 30th local time.
 const AST_OFFSET_MS = -4 * 60 * 60 * 1000;
 
-/** Today's date in Atlantic Standard Time, as {year, month, day}. */
+/** Today’s date in Atlantic Standard Time, as {year, month, day}. */
 export function astToday(now: Date = new Date()): { year: number; month: number; day: number } {
   const shifted = new Date(now.getTime() + AST_OFFSET_MS);
   return {
@@ -130,7 +130,7 @@ export function anniversaryYears(d: IndependenceDay, now: Date = new Date()): nu
 
 // How long before the day the site starts marking it, and how long after.
 // TRAIL_DAYS is 0 so the celebration ends with the day itself: Trinidad and
-// Tobago's runs to the end of 31 August and the site is back to normal on
+// Tobago’s runs to the end of 31 August and the site is back to normal on
 // 1 September, in Atlantic Standard Time.
 export const LEAD_DAYS = 10;
 export const TRAIL_DAYS = 0;
@@ -163,12 +163,12 @@ export function currentIndependence(now: Date = new Date()): { day: Independence
   return best;
 }
 
-// Site-wide flag palettes for the run-up to a country's independence day.
+// Site-wide flag palettes for the run-up to a country’s independence day.
 //
-// Deliberately empty. Re-skinning the whole site in a flag's colours for ten
+// Deliberately empty. Re-skinning the whole site in a flag’s colours for ten
 // days a year fought the brand rather than celebrating the country, so the
 // palettes were removed and the site keeps teal all year. The announcement
-// strip and the banner still mark every country's day.
+// strip and the banner still mark every country’s day.
 //
 // The mechanism is left in place: adding an entry here, plus a matching theme
 // block in globals.css, turns it back on. `colours` is how the palette gets

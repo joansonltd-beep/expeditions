@@ -63,7 +63,7 @@ export const metadata: Metadata = {
         url: "/og-falls.jpg",
         width: 1200,
         height: 630,
-        alt: "The Expeditions With Jo logo over Dunn's River Falls, Jamaica",
+        alt: "The Expeditions With Jo logo over Dunn’s River Falls, Jamaica",
       },
     ],
   },
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  // Around a CARICOM country's independence day the site wears that country's
+  // Around a CARICOM country’s independence day the site wears that country’s
   // flag colours. The palette swap lives in globals.css under
   // [data-theme="..."]; this only decides whether one is on. Pages revalidate
   // every 60s (the Sanity fetch in the site layout sets that), so the skin

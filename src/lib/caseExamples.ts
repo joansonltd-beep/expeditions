@@ -10,7 +10,7 @@
 //
 // Rules for anything added:
 //   - No names, and no detail specific enough to identify someone.
-//   - `question` should be the customer's actual question, in their words.
+//   - `question` should be the customer’s actual question, in their words.
 //   - `support` is what we did. Never what the authority decided.
 //   - `next` is the step that followed. Never an outcome, never an approval,
 //     and never "and they got the job".

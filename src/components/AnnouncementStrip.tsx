@@ -7,7 +7,7 @@ import { currentIndependence, formatDayMonth } from "@/lib/independenceData";
  * Deliberately generic. Right now the only thing that fills it is a CARICOM
  * independence day, which switches itself on ten days beforehand and off at
  * midnight after, so nothing has to be remembered or taken down. Trinidad and
- * Tobago's clears itself at the end of 31 August.
+ * Tobago’s clears itself at the end of 31 August.
  *
  * To run something else here later (a closure, a deadline, an offer), return a
  * message from `announcement()` below. Return null and the strip disappears

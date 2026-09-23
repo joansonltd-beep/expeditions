@@ -132,7 +132,7 @@ export default function PlanMyMoveForm() {
             value={form.from}
             onChange={set("from")}
             className={`mt-1.5 ${field}`}
-            placeholder="Country you're leaving"
+            placeholder="Country you’re leaving"
           />
         </div>
         <div>
@@ -146,7 +146,7 @@ export default function PlanMyMoveForm() {
             value={form.to}
             onChange={set("to")}
             className={`mt-1.5 ${field}`}
-            placeholder="Country you're headed to"
+            placeholder="Country you’re headed to"
           />
         </div>
       </div>
@@ -268,7 +268,7 @@ export default function PlanMyMoveForm() {
           onChange={set("message")}
           rows={4}
           className={`mt-1.5 ${field} resize-y`}
-          placeholder="Optional. Where you've got to so far, or what you're stuck on."
+          placeholder="Optional. Where you’ve got to so far, or what you’re stuck on."
         />
       </div>
 
@@ -301,7 +301,7 @@ export default function PlanMyMoveForm() {
           Request Consultancy
         </button>
         <a
-          href={waLink("Hi Jo, I'd like help planning a move within CARICOM.")}
+          href={waLink("Hi Jo, I’d like help planning a move within CARICOM.")}
           target="_blank"
           rel="noopener noreferrer"
           className={btnWhatsapp}

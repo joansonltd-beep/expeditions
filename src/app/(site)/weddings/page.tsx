@@ -4,7 +4,7 @@
  * Pages
  *   /weddings                  this file, the hub
  *   /weddings/[country]        one per CARICOM country, titled "Getting married in X"
- *   /weddings/guests           for people attending somebody else's wedding
+ *   /weddings/guests           for people attending somebody else’s wedding
  *
  * Editing the copy
  *   Per-country wording, the timing band and who each country suits all live in
@@ -31,7 +31,7 @@ import PageIssueNote from "@/components/PageIssueNote";
 export const metadata: Metadata = {
   title: "Getting Married In Another CARICOM Country",
   description:
-    "Marrying in a CARICOM country you do not live in. I handle the licence, the paperwork, everybody's travel and the planner for the day, whether you are coming home from abroad or already in the region.",
+    "Marrying in a CARICOM country you do not live in. I handle the licence, the paperwork, everybody’s travel and the planner for the day, whether you are coming home from abroad or already in the region.",
   keywords: [
     "getting married in another CARICOM country",
     "destination wedding Caribbean",
@@ -58,7 +58,7 @@ const I_HELP = [
   "Accommodation, including a block of rooms held together for your guests",
   "Somebody at arrivals, and transport throughout: airport runs, getting around during the stay, and everybody to the ceremony and back on the day",
   "Visas for guests who are not travelling on a CARICOM passport",
-  "How you will pay for things locally, so you are not relying on a foreign card at a vendor's counter",
+  "How you will pay for things locally, so you are not relying on a foreign card at a vendor’s counter",
   "One travel page for your guests, so you stop answering the same question forty times",
   "Applying for the marriage certificate once the day is over",
   "Getting that certificate legalised, so it is accepted where you actually live",
@@ -84,7 +84,7 @@ const I_WILL_ASK = [
 const MARRY_FAQS: { q: string; a: string }[] = [
   {
     q: "How long do we have to be there before we can marry?",
-    a: "It depends entirely on the country. Some let you marry almost as soon as you land. Others want you there a full fortnight before you can even apply. That one number shapes your flights and everybody's leave, so working out which country fits the time you actually have is one of the first things we do together.",
+    a: "It depends entirely on the country. Some let you marry almost as soon as you land. Others want you there a full fortnight before you can even apply. That one number shapes your flights and everybody’s leave, so working out which country fits the time you actually have is one of the first things we do together.",
   },
   {
     q: "We are CARICOM nationals. Does free movement mean we can just turn up and marry?",
@@ -100,7 +100,7 @@ const MARRY_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do you plan the wedding?",
-    a: "I organise it. The day itself is run by a local planner, because someone has to be standing in the room and that someone should know the venue. What I do is bring that planner in, brief them, and keep them moving alongside the licence and everybody's travel, so you are answering to one person rather than coordinating a committee from another country.",
+    a: "I organise it. The day itself is run by a local planner, because someone has to be standing in the room and that someone should know the venue. What I do is bring that planner in, brief them, and keep them moving alongside the licence and everybody’s travel, so you are answering to one person rather than coordinating a committee from another country.",
   },
   {
     q: "Can you guarantee we will be legally married?",
@@ -360,7 +360,7 @@ lead
       <Section alt>
         <SectionHead
           eyebrow="Being straight with you"
-          title="What I do, and what I don't"
+          title="What I do, and what I don’t"
           intro="I am not the person arranging your flowers. I am the person making sure the licence, the travel and the planner all land on the same day."
         />
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -397,7 +397,7 @@ lead
         </div>
       </Section>
 
-      {/* WHAT I'LL ASK */}
+      {/* WHAT I’LL ASK */}
       <Section>
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-slate-900">What I&rsquo;ll ask you first</h2>
@@ -430,7 +430,7 @@ lead
         </p>
       </Section>
 
-      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody's travel, is $100, and it comes off the booking if you go ahead. Anything that carries on after the wedding is quoted separately, and we go through it in the same conversation so there are no surprises later." />
+      <ConsultationCtaBlock lead="A Move Planning Consultation covering your wedding, the licence, the documents and everybody’s travel, is $100, and it comes off the booking if you go ahead. Anything that carries on after the wedding is quoted separately, and we go through it in the same conversation so there are no surprises later." />
       <PageIssueNote section="marry" />
     </>
   );

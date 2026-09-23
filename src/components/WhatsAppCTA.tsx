@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useSiteClient, useWhatsAppLink } from "@/components/SiteSettingsProvider";
-import { btn, btnWhatsapp } from "@/components/ui";
+import { btn } from "@/components/ui";
 import { Container } from "@/components/ui";
 import { track } from "@/lib/analytics";
 
 /**
- * The closing action: WhatsApp first, because that is how most people actually
- * get in touch, with the consultation beside it.
+ * The closing action: the consultation first, because that is what actually
+ * closes, with WhatsApp beside it for anyone who would rather just message.
  *
  * Sits on navy so it reads as the end of the page rather than another pale
  * section, and carries the phone and email as plain links underneath for
@@ -17,7 +17,7 @@ import { track } from "@/lib/analytics";
 export default function WhatsAppCTA({
   title = "Tell Jo where you are starting",
   text = "Send a message with where you are and where you want to go. I will come back to you, usually within a business day.",
-  message = "Hi Jo, I'm thinking about another CARICOM country. Can you help?",
+  message = "Hi Jo, I’m thinking about another CARICOM country. Can you help?",
   location = "footer-cta",
 }: {
   title?: string;
@@ -36,15 +36,6 @@ export default function WhatsAppCTA({
           <p className="mx-auto mt-4 max-w-xl text-lg text-cream/75">{text}</p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href={waLink(message)}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track("whatsapp_click", { location })}
-              className={btnWhatsapp}
-            >
-              WhatsApp Jo
-            </a>
             <Link
               href="/services#consultation"
               onClick={() => track("consultation_click", { location })}
@@ -52,6 +43,15 @@ export default function WhatsAppCTA({
             >
               Book a Move Planning Consultation
             </Link>
+            <a
+              href={waLink(message)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("whatsapp_click", { location })}
+              className={`${btn} border border-cream/40 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream`}
+            >
+              Or message on WhatsApp
+            </a>
           </div>
 
           <p className="mt-8 text-sm text-cream/65">

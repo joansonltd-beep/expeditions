@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * The "you don't have to do this yourself" callout.
+ * The "you don’t have to do this yourself" callout.
  *
  * The guides on this site are deliberately detailed, which can leave a reader
  * assuming the whole thing is a DIY exercise. This sits alongside them to say

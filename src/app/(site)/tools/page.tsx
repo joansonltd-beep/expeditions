@@ -7,7 +7,7 @@ import PageIssueNote from "@/components/PageIssueNote";
 export const metadata: Metadata = {
   title: "Free CARICOM Tools: Currency Converter, Translator and Property Intake",
   description:
-    "Free tools for anyone visiting, working or studying in CARICOM: a currency converter for all twelve member states, plus USD, CAD and GBP, and a translator covering the region's official languages.",
+    "Free tools for anyone visiting, working or studying in CARICOM: a currency converter for all twelve member states, plus USD, CAD and GBP, and a translator covering the region’s official languages.",
   keywords: ["CARICOM currency converter", "Caribbean translator", "CARICOM tools", "list my property Jamaica"],
   alternates: { canonical: "/tools" },
 };
@@ -23,7 +23,7 @@ const TOOLS = [
     href: "/tools/translator",
     icon: "globe" as const,
     title: "Translator",
-    text: "Speak or type in one of the region's official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
+    text: "Speak or type in one of the region’s official languages and get it back in another: English, French, Dutch, Spanish, Hindi, Mandarin or Portuguese.",
   },
   {
     href: "/tools/list-my-property",

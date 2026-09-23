@@ -126,7 +126,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
 
 export async function getServices(category?: ServiceCategory): Promise<Service[]> {
   const res = await query<Service[]>(SERVICES_QUERY);
-  // The "detail" blocks (who it's for, what we don't control, FAQs) were added
+  // The "detail" blocks (who it’s for, what we don’t control, FAQs) were added
   // to the code before Sanity had them. Fall back to the bundled detail for a
   // service whose CMS document has none, so the disclaimers and expectations
   // still render rather than silently disappearing.

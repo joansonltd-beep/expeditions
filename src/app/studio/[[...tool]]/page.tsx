@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 };
 
 export default function StudioPage() {
-  // Without a project id the Studio can't initialise, so show setup steps
+  // Without a project id the Studio can’t initialise, so show setup steps
   // instead of crashing.
   if (!isSanityConfigured) {
     return (

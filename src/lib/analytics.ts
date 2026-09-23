@@ -1,7 +1,7 @@
 // Conversion event tracking.
 //
 // No analytics provider is installed on this site today. Rather than pick one
-// and add third-party tracking without the owner's decision (it carries a
+// and add third-party tracking without the owner’s decision (it carries a
 // consent obligation under the privacy policy this site publishes), this is a
 // provider-agnostic layer: it pushes named events to whichever tag is present
 // and does nothing at all when none is.

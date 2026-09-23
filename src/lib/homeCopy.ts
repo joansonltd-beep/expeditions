@@ -3,10 +3,10 @@
 // "Who this is for" is drawn from the situations people actually arrive with,
 // so it should only change when the business changes, not on a copy whim.
 // "What we decide / what we do not" is the line between guidance and somebody
-// else's decision, which is the most legally sensitive sentence on the site.
+// else’s decision, which is the most legally sensitive sentence on the site.
 // Both belong with serviceTiers.ts rather than in Studio.
 
-// Real situations, in the customer's own framing. Nothing here claims an
+// Real situations, in the customer’s own framing. Nothing here claims an
 // outcome; each one is a description of a problem people turn up with.
 export const WHO_THIS_IS_FOR: string[] = [
   "You have a job offer in another CARICOM country and you are not sure what has to happen before you can take it up.",

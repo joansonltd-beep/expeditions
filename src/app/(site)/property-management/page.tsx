@@ -14,9 +14,9 @@ import { SITE_URL } from "@/lib/siteUrl";
  * it. That is why it stays out of the top navigation: the four pathways are
  * one audience and this is another, and mixing them makes both weaker.
  *
- * Written in Jo's first person, from his own post, rather than the "we" the
+ * Written in Jo’s first person, from his own post, rather than the "we" the
  * first draft used. That matters commercially as well as tonally: what is
- * being sold here is one named Superhost's record, and "we" hides the only
+ * being sold here is one named Superhost’s record, and "we" hides the only
  * asset the page has.
  *
  * The rate is stated. Jo put "no more than 20%" in public before this page
@@ -52,17 +52,17 @@ const PROBLEMS = [
   {
     icon: "banknote",
     title: "The pricing",
-    text: "It doesn't match what similar units nearby are charging. I get that you want to earn as much as you can as fast as you can, but being a tourist doesn't mean unlimited $$$.",
+    text: "It doesn’t match what similar units nearby are charging. I get that you want to earn as much as you can as fast as you can, but being a tourist doesn’t mean unlimited $$$.",
   },
   {
     icon: "tag",
     title: "The title and description",
-    text: "They don't tell guests why they should pick you over the other forty places in the same search. A list of features is not a reason.",
+    text: "They don’t tell guests why they should pick you over the other forty places in the same search. A list of features is not a reason.",
   },
   {
     icon: "message",
     title: "The reply time",
-    text: "They finally do pick you, and then it's slow to no replies, so they book somewhere else. This one costs you bookings you had already won.",
+    text: "They finally do pick you, and then it’s slow to no replies, so they book somewhere else. This one costs you bookings you had already won.",
   },
 ];
 
@@ -86,7 +86,7 @@ const SUITS = [
   {
     icon: "calculator",
     title: "Your listing has gone quiet",
-    text: "It used to book and now it doesn't, or it never really did. Literally $0.00 some months, while the bills carry on as normal.",
+    text: "It used to book and now it doesn’t, or it never really did. Literally $0.00 some months, while the bills carry on as normal.",
   },
   {
     icon: "home",
@@ -103,15 +103,15 @@ const SUITS = [
 const FAQS = [
   {
     q: "What does it cost?",
-    a: "Capped at 20% of bookings, and the exact figure depends on the property. I don't get paid if you don't get stays. There is no monthly retainer and no fee for a quiet month, because I would rather earn my share by filling your calendar than charge you whether it works or not.",
+    a: "Capped at 20% of bookings, and the exact figure depends on the property. I don’t get paid if you don’t get stays. There is no monthly retainer and no fee for a quiet month, because I would rather earn my share by filling your calendar than charge you whether it works or not.",
   },
   {
     q: "20% is too much.",
-    a: "I hear that one a lot. Two things. It's based on the property, so it is not 20% across the board. And it's 20% of bookings you aren't getting right now. An empty unit still costs you light bill, internet and mortgage every month, and 100% of nothing is nothing.",
+    a: "I hear that one a lot. Two things. It’s based on the property, so it is not 20% across the board. And it’s 20% of bookings you aren’t getting right now. An empty unit still costs you light bill, internet and mortgage every month, and 100% of nothing is nothing.",
   },
   {
     q: "What does Superhost actually mean?",
-    a: "It is Airbnb's own status, not a title anyone can award themselves. It takes a high guest rating, a fast response rate, almost no cancellations and a minimum number of completed stays, and Airbnb reassesses it every three months. It is a record of how guests were actually treated, kept by the platform rather than by me.",
+    a: "It is Airbnb’s own status, not a title anyone can award themselves. It takes a high guest rating, a fast response rate, almost no cancellations and a minimum number of completed stays, and Airbnb reassesses it every three months. It is a record of how guests were actually treated, kept by the platform rather than by me.",
   },
   {
     q: "Why Jamaica only?",
@@ -159,16 +159,16 @@ export default function PropertyManagementPage() {
 
       <PageHeader
         icon={<Icon name="home" className="h-7 w-7 text-brand" />}
-        title="Owners with slow Airbnb bookings, this one's for you"
+        title="Owners with slow Airbnb bookings, this one’s for you"
         crumb="Property Management"
-        intro="I'm a Superhost who recently moved to Jamaica, and I've been looking at a lot of listings lately that should be booking but aren't. I fix what is stopping them, then run the listing for a percentage of bookings."
-        footnote="Jamaica for now. Capped at 20%, and I don't get paid if you don't get stays."
+        intro="I’m a Superhost who recently moved to Jamaica, and I’ve been looking at a lot of listings lately that should be booking but aren’t. I fix what is stopping them, then run the listing for a percentage of bookings."
+        footnote="Jamaica for now. Capped at 20%, and I don’t get paid if you don’t get stays."
       />
 
       <Section>
         <SectionHead
           lead
-          title="Why your listing isn't booking"
+          title="Why your listing isn’t booking"
           intro="Nice units, good locations, and four things going wrong. Usually all four at once."
         />
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
@@ -208,7 +208,7 @@ export default function PropertyManagementPage() {
           </div>
 
           {/*
-            Airbnb's own profile card, which it generates for hosts to share.
+            Airbnb’s own profile card, which it generates for hosts to share.
             The caption is only a date: that the figures are a snapshot is
             obvious from it being a screenshot, and the panel above already
             says Airbnb reassesses the status quarterly.
@@ -379,7 +379,7 @@ export default function PropertyManagementPage() {
           <div className="mt-8">
             <CtaButtons
               showContact={false}
-              message="Hi Jo, I have a property in Jamaica and I'd like to talk about managing it."
+              message="Hi Jo, I have a property in Jamaica and I’d like to talk about managing it."
             />
           </div>
         </div>

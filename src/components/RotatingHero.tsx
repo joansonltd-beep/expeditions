@@ -5,7 +5,7 @@ import Image from "next/image";
 import { currentIndependence } from "@/lib/independenceData";
 import { HOME_HERO_PHOTOS, TT_HERO_PHOTOS, type HomeHeroPhoto } from "@/lib/sitePhotos";
 
-// During a country's independence celebration the hero shows only that
+// During a country’s independence celebration the hero shows only that
 // country. Add a country here alongside its FLAG_THEMES entry to give it the
 // same treatment. The photos themselves live in sitePhotos.ts, so /credits is
 // built from the same list the hero shows.
@@ -20,7 +20,7 @@ function activePhotos(): HomeHeroPhoto[] {
   return (slug && NATIONAL_HERO_PHOTOS[slug]) || HOME_HERO_PHOTOS;
 }
 
-// Renders the first photo on the server (so there's no hydration mismatch),
+// Renders the first photo on the server (so there’s no hydration mismatch),
 // then swaps to a random one right after mount so repeat visits see variety.
 export default function RotatingHero() {
   const photos = activePhotos();

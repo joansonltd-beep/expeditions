@@ -77,7 +77,7 @@ export function RouteSteps({ steps }: { steps: { title: string; text: string }[]
 
 /**
  * Label and value in rows separated by hairlines. For facts that belong in a
- * table but do not deserve a table's furniture.
+ * table but do not deserve a table’s furniture.
  */
 export function FactRows({ rows }: { rows: { label: string; value: React.ReactNode }[] }) {
   return (

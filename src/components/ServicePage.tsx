@@ -54,7 +54,7 @@ export default function ServicePage({
   ctaTitle?: string;
   ctaText?: string;
   // Overrides for pages that want a punchier on-page headline/intro than the
-  // service's canonical name, without changing the WhatsApp/chat message
+  // service’s canonical name, without changing the WhatsApp/chat message
   // text (which stays grammatically tied to the plain service name).
   title?: string;
   intro?: string;
@@ -97,7 +97,7 @@ export default function ServicePage({
         <div className="mx-auto max-w-3xl">
           <ContentSections sections={service.body} />
           <div className="mt-8">
-            <CtaButtons message={`Hi Jo, I'm interested in ${subject}.`} primaryLink={service.primaryLink} />
+            <CtaButtons message={`Hi Jo, I’m interested in ${subject}.`} primaryLink={service.primaryLink} />
           </div>
         </div>
       </Section>
@@ -195,7 +195,7 @@ export default function ServicePage({
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">{ctaTitle}</h2>
           <p className="mx-auto mt-3 max-w-xl text-slate-600">{ctaText}</p>
           <div className="mt-7 flex justify-center">
-            <CtaButtons message={`Hi Jo, I'm interested in ${subject}.`} primaryLink={service.primaryLink} />
+            <CtaButtons message={`Hi Jo, I’m interested in ${subject}.`} primaryLink={service.primaryLink} />
           </div>
         </div>
       </Section>

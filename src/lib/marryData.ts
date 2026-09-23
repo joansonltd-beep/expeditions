@@ -127,7 +127,7 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
         "A certified English translation of anything not already in English",
       ],
       catches: [
-        "Choosing the wrong licence is the expensive mistake here. The ordinary licence's fifteen day residency has caught couples who booked a week and assumed one licence was the same as another.",
+        "Choosing the wrong licence is the expensive mistake here. The ordinary licence’s fifteen day residency has caught couples who booked a week and assumed one licence was the same as another.",
         "Both of you normally have to appear at Legal Affairs in person, which means office hours, which means not a weekend and not a public holiday.",
         "Some documents may be asked for notarised or apostilled even though many are not. It is worth confirming for your specific papers rather than assuming, because getting a document legalised from abroad takes weeks.",
         "The single status declaration is usually sworn on the island. If you were planning to arrive the night before, that is one more thing competing for the same morning.",
@@ -173,7 +173,7 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
     status: "soon",
     timing: "few",
     pitch:
-      "The only English-speaking CARICOM country in Central America, with the world's second-largest barrier reef off one side and rainforest on the other. A wedding here is rarely only a wedding.",
+      "The only English-speaking CARICOM country in Central America, with the world’s second-largest barrier reef off one side and rainforest on the other. A wedding here is rarely only a wedding.",
     suits: "Couples building a proper trip around the day rather than a long weekend.",
   },
   {
@@ -200,7 +200,7 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
     status: "soon",
     timing: "long",
     pitch:
-      "Mainland South America's only English-speaking country, with a huge diaspora in New York, Toronto and London. Most weddings here are family coming home rather than couples discovering the place.",
+      "Mainland South America’s only English-speaking country, with a huge diaspora in New York, Toronto and London. Most weddings here are family coming home rather than couples discovering the place.",
     suits: "Guyanese families abroad marrying at home, with relatives already on the ground.",
   },
   {
@@ -213,7 +213,7 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
         "Jamaica asks less of your calendar than almost anywhere else in the region. You need to be on the island a day before you marry, and that is the whole of the timing rule.",
       licences: [
         {
-          name: "Minister's Marriage Licence",
+          name: "Minister’s Marriage Licence",
           detail:
             "The licence nearly every visiting couple uses. Issued by the Ministry of Justice and valid for 90 days from the date of issue, so it can be obtained ahead of your date rather than in a rush on arrival.",
           forYou: true,
@@ -221,10 +221,10 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
       ],
       waiting:
         "Both of you have to be physically in Jamaica for at least 24 hours before the ceremony. There is no longer residency requirement, and no blood test or medical.",
-      office: "Ministry of Justice, with the marriage recorded afterwards by the Registrar General's Department.",
+      office: "Ministry of Justice, with the marriage recorded afterwards by the Registrar General’s Department.",
       documents: [
         "Valid passports for both of you",
-        "Certified copies of both birth certificates, which must show your father's name",
+        "Certified copies of both birth certificates, which must show your father’s name",
         "If either of you is divorced, the original or a certified copy of the Decree Absolute",
         "If either of you is widowed, the previous marriage certificate together with the death certificate",
         "Written, witnessed parental consent if either of you is under 18",
@@ -239,7 +239,7 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
       steps: [
         {
           title: "Before you fly",
-          body: "Get your birth certificates out and check them for your father's name before anything else. Gather passports, and the divorce or death paperwork if it applies. The licence application can begin at this stage rather than on arrival.",
+          body: "Get your birth certificates out and check them for your father’s name before anything else. Gather passports, and the divorce or death paperwork if it applies. The licence application can begin at this stage rather than on arrival.",
         },
         {
           title: "Arriving",
@@ -251,11 +251,11 @@ export const MARRY_COUNTRIES: MarryCountry[] = [
         },
         {
           title: "Afterwards",
-          body: "Apply to the Registrar General's Department for the official marriage certificate. You will need it for any name change, immigration matter or bank.",
+          body: "Apply to the Registrar General’s Department for the official marriage certificate. You will need it for any name change, immigration matter or bank.",
         },
       ],
       officialCost:
-        "The licence itself is inexpensive, in the region of US$40 at the time of writing, plus the marriage officer's own fee. Fees are set by Jamaica and change without notice.",
+        "The licence itself is inexpensive, in the region of US$40 at the time of writing, plus the marriage officer’s own fee. Fees are set by Jamaica and change without notice.",
     },
     timing: "short",
     pitch:

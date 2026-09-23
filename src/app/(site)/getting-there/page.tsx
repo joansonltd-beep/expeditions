@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
+import { RouteSteps } from "@/components/sections";
 import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
-import { VISIT_PHOTOS } from "@/lib/sitePhotos";
+import { VISIT_PHOTOS, AIRPORT_PHOTOS } from "@/lib/sitePhotos";
 import PageIssueNote from "@/components/PageIssueNote";
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ const ITEMS = [
     href: "/transfers",
     icon: "car" as const,
     title: "Transfers",
-    text: "Reliable rides from the airport and for getting around while you're visiting.",
+    text: "Reliable rides from the airport and for getting around while you’re visiting.",
   },
 ];
 
@@ -68,7 +69,7 @@ const YOU_PROVIDE = [
 ];
 
 const NOT_CONTROLLED = [
-  "Whether you are admitted at the border, and for how long. That is the immigration officer's decision on the day.",
+  "Whether you are admitted at the border, and for how long. That is the immigration officer’s decision on the day.",
   "Entry requirements, which are set by each country and can change without notice.",
   "Airline fares, schedules, delays and cancellations.",
   "Property standards and the cancellation terms of hotels and booking platforms.",
@@ -81,7 +82,7 @@ const FAQS = [
   },
   {
     q: "How is visiting different from working or studying there?",
-    a: "Visiting is a short stay for tourism, family or business. Working in another member state generally involves the CARICOM Skills Certificate, and studying requires that country's own student visa or permit. They are separate processes with separate requirements, which is why we treat them as separate journeys.",
+    a: "Visiting is a short stay for tourism, family or business. Working in another member state generally involves the CARICOM Skills Certificate, and studying requires that country’s own student visa or permit. They are separate processes with separate requirements, which is why we treat them as separate journeys.",
   },
   {
     q: "Can I look for work while visiting?",
@@ -118,7 +119,7 @@ export default function GettingTherePage() {
         crumb="Visit"
         intro="Planning a trip to another CARICOM country? We help you understand what your destination asks of visitors, arrange the flights, stay and transfers, and get you ready for arrival."
         footnote="Visiting, working and studying are three different processes with three different sets of requirements. This page covers visiting."
-        photos={VISIT_PHOTOS}
+        photos={[...AIRPORT_PHOTOS, ...VISIT_PHOTOS]}
       />
 
       <Section>
@@ -177,23 +178,35 @@ export default function GettingTherePage() {
 
       <Section>
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl font-bold text-slate-900">From enquiry to arrival</h2>
-          <ol className="mt-6 grid gap-4">
-            {[
-              "Tell us your destination, your dates and who is travelling.",
-              "We confirm what your destination requires of visitors on your passport.",
-              "We come back with flight, stay and transfer options, with prices.",
-              "You choose, we book, and you get your confirmations.",
-              "We stay reachable on WhatsApp while you travel.",
-            ].map((step, i) => (
-              <li key={step} className="flex gap-4">
-                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand text-sm font-bold text-white">
-                  {i + 1}
-                </span>
-                <span className="pt-1 text-slate-600">{step}</span>
-              </li>
-            ))}
-          </ol>
+          <h2 className="font-display text-[1.75rem] font-bold leading-[1.15] tracking-tight text-navy sm:text-[2.1rem]">
+            From enquiry to arrival
+          </h2>
+          <div className="mt-8">
+            <RouteSteps
+              steps={[
+                {
+                  title: "You tell us the trip",
+                  text: "Your destination, your dates, and who is travelling.",
+                },
+                {
+                  title: "We check what the border asks for",
+                  text: "What your destination requires of visitors travelling on your passport, confirmed rather than assumed.",
+                },
+                {
+                  title: "We come back with options and prices",
+                  text: "Flights, somewhere to stay and transfers, priced, so you are choosing rather than guessing.",
+                },
+                {
+                  title: "You choose and we book it",
+                  text: "You get the confirmations, in your name.",
+                },
+                {
+                  title: "We stay reachable while you travel",
+                  text: "On WhatsApp, for the whole trip, not just until the booking clears.",
+                },
+              ]}
+            />
+          </div>
         </div>
       </Section>
 
@@ -225,7 +238,7 @@ export default function GettingTherePage() {
             Tell us where you want to go and when, and we will come back with what it involves and what it costs.
           </p>
           <div className="mt-6">
-            <CtaButtons message="Hi Jo, I'd like help visiting another CARICOM country." />
+            <CtaButtons message="Hi Jo, I’d like help visiting another CARICOM country." />
           </div>
           <p className="mt-6 text-sm text-slate-600">
             Entry to any country is decided by its immigration authority at the border. A booking is not permission to

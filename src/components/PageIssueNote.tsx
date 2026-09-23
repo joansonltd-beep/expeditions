@@ -1,5 +1,5 @@
 /**
- * "Something wrong here? Tell us." at the foot of a section's pages.
+ * "Something wrong here? Tell us." at the foot of a section’s pages.
  *
  * Each section of the site has its own mailbox, so a correction about the
  * Study page lands in the Study inbox rather than the general one. There is

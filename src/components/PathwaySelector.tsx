@@ -24,8 +24,8 @@ const PATHWAY_IMAGE: Record<string, { src: string; alt: string; caption: string 
   },
   "/weddings": {
     src: "/places/trinidad-and-tobago/queens-park-savannah.jpg",
-    alt: "Queen's Royal College, one of the Magnificent Seven mansions by Queen's Park Savannah, Port of Spain",
-    caption: "Queen's Park Savannah, Trinidad",
+    alt: "Queen’s Royal College, one of the Magnificent Seven mansions by Queen’s Park Savannah, Port of Spain",
+    caption: "Queen’s Park Savannah, Trinidad",
   },
 };
 

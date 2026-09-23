@@ -1,6 +1,6 @@
 // Utility cost survey endpoint. Validates a submission server-side, then
 // forwards it to the Google Sheet webhook configured in
-// UTILITIES_SURVEY_WEBHOOK_URL (a separate Sheet from the salary survey's).
+// UTILITIES_SURVEY_WEBHOOK_URL (a separate Sheet from the salary survey’s).
 // Fully anonymous: no name, email or IP is included in the forwarded payload.
 
 import { CSME_COUNTRIES } from "@/lib/csmeData";

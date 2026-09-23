@@ -54,7 +54,7 @@ const faqJsonLd = {
 // side by side is the clearest way to avoid implying we influence the decision.
 const WE_HELP = [
   "Working out which of the approved categories fits your qualification",
-  "Explaining what your country's office asks for, and in what order",
+  "Explaining what your country’s office asks for, and in what order",
   "Checking your document set against the published requirements before you go",
   "Flagging the timing traps, such as a Police Certificate of Character expiring mid-application",
   "Arranging flights, accommodation and transfers if you have to travel to apply or to start work",
@@ -303,7 +303,7 @@ lead
             can arrange the flights, the stay and the transfers in one go.
           </p>
           <div className="mt-7 flex justify-center">
-            <CtaButtons message="Hi Jo, I'd like a Skills Certificate readiness assessment. My category and destination country are:" />
+            <CtaButtons message="Hi Jo, I’d like a Skills Certificate readiness assessment. My category and destination country are:" />
           </div>
         </div>
       </Section>

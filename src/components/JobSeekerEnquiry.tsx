@@ -13,9 +13,9 @@ const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 const field =
   "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-500 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 
-// Submitting doesn't send anything yet: savePendingConsultation() holds the
-// answers and a $100 payment panel takes over. No backend, so it can't attach
-// a file; they're asked to attach their resume themselves once the mailto
+// Submitting doesn’t send anything yet: savePendingConsultation() holds the
+// answers and a $100 payment panel takes over. No backend, so it can’t attach
+// a file; they’re asked to attach their resume themselves once the mailto
 // hand-off opens after payment.
 export default function JobSeekerEnquiry() {
   const waLink = useWhatsAppLink();

@@ -4,7 +4,7 @@
 
 export type HomeStat = { value: string; label: string };
 export type HomeJourney = { title: string; text: string; cta: string; href: string };
-// `cta` overrides the card's default link text, for cards where a specific
+// `cta` overrides the card’s default link text, for cards where a specific
 // action reads better than a generic one.
 export type HomePillar = { icon: string; title: string; text: string; href: string; cta?: string };
 export type HomeStep = { title: string; text: string };
@@ -92,7 +92,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       title: "I want to get married",
-      text: "Somewhere you have always loved, or back home where your family came from. We handle the licence, the paperwork, everybody's travel and the planner for the day.",
+      text: "Somewhere you have always loved, or back home where your family came from. We handle the licence, the paperwork, everybody’s travel and the planner for the day.",
       cta: "See what marrying involves",
       href: "/weddings",
     },
@@ -129,7 +129,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
   ],
   howNote:
-    "I help you get your documents in order, put the application together, and once something is approved, carry it out. What I cannot do is approve it. A CSME certificate, a student permit, a place at a school, a bank account, a tenancy: each one is somebody else's decision, and nobody outside those offices can promise you an answer.",
+    "I help you get your documents in order, put the application together, and once something is approved, carry it out. What I cannot do is approve it. A CSME certificate, a student permit, a place at a school, a bank account, a tenancy: each one is somebody else’s decision, and nobody outside those offices can promise you an answer.",
 
   csmeEyebrow: "Working in another CARICOM country",
   csmeTitle: "The Skills Certificate, country by country",
@@ -139,7 +139,7 @@ export const DEFAULT_HOME: HomeContent = {
   studyEyebrow: "Studying in another CARICOM country",
   studyTitle: "Studying works differently to working",
   studyText:
-    "People are often surprised by this one. Free movement covers work, not study, so a student still needs the destination country's own student visa or permit. We help you sort that out along with the travel and somewhere to live.",
+    "People are often surprised by this one. Free movement covers work, not study, so a student still needs the destination country’s own student visa or permit. We help you sort that out along with the travel and somewhere to live.",
 
   supportEyebrow: "Supporting services",
   supportTitle: "The rest of it",
@@ -243,7 +243,7 @@ export const DEFAULT_HOME: HomeContent = {
     },
     {
       q: "Does free movement cover studying?",
-      a: "No, and this catches people out. Free movement is about the right to work. A student normally still has to apply to the destination country's own immigration authority for a student visa or permit.",
+      a: "No, and this catches people out. Free movement is about the right to work. A student normally still has to apply to the destination country’s own immigration authority for a student visa or permit.",
     },
     {
       q: "What does it cost?",
@@ -281,7 +281,7 @@ export type InsurancePage = {
 export const DEFAULT_INSURANCE: InsurancePage = {
   title: "We have moved",
   intro: "Our insurance services now have their own dedicated home.",
-  body: "For life, health, critical illness, income protection and retirement planning, visit Joanson Baptiste James's dedicated insurance site, in partnership with Guardian Life of the Caribbean.",
+  body: "For life, health, critical illness, income protection and retirement planning, visit Joanson Baptiste James’s dedicated insurance site, in partnership with Guardian Life of the Caribbean.",
   bookNote: "You can still book a consultation directly on the new site.",
   bookLabel: "Book a consultation",
   visitLabel: "Visit joansonbjames.com",

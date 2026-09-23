@@ -1,6 +1,6 @@
 import FygaroPaymentButton from "@/components/FygaroPaymentButton";
 
-// Shown in place of a form after it's submitted: the answers are already
+// Shown in place of a form after it’s submitted: the answers are already
 // saved (see pendingConsultation.ts), and this is the only thing left to do.
 // Nothing is sent to Jo until the visitor lands back on /consultation-paid
 // after paying — that page is what actually fires captureLead()/mailto.

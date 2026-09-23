@@ -14,7 +14,7 @@ import PageIssueNote from "@/components/PageIssueNote";
 export const metadata: Metadata = {
   title: "Studying Within CARICOM",
   description:
-    "Thinking about studying in another CARICOM country, including a University of the West Indies campus outside your own? Here's what actually applies, since CSME and free movement don't cover students.",
+    "Thinking about studying in another CARICOM country, including a University of the West Indies campus outside your own? Here’s what actually applies, since CSME and free movement don’t cover students.",
   keywords: [
     "studying in another CARICOM country",
     "University of the West Indies international students",
@@ -33,7 +33,7 @@ const LAST_UPDATED = { display: "August 2026", iso: "2026-08-01" };
 // destination country decide. Keeping them apart is the point.
 const WE_HELP = [
   "Researching institutions and what each one asks applicants for",
-  "Working through the school's application and admission timeline with you",
+  "Working through the school’s application and admission timeline with you",
   "Organising and checking the documents you need to gather",
   "Explaining the student visa or permit process for your destination country",
   "Cost of living, banking and what to expect once you land, country by country",
@@ -44,7 +44,7 @@ const WE_HELP = [
 const WE_DO_NOT = [
   "Admission. The institution decides who it accepts, on its own criteria.",
   "Scholarships and funding. Awards are made by the institution or the funding body.",
-  "Student visas and permits. The destination country's immigration authority decides.",
+  "Student visas and permits. The destination country’s immigration authority decides.",
   "Accreditation and licensing outcomes, particularly at private and offshore medical schools.",
   "Tuition fees, deadlines and entry requirements, which the institution sets and can change.",
 ];
@@ -63,7 +63,7 @@ const WE_WILL_ASK = [
 const STUDY_FAQS: { q: string; a: string }[] = [
   {
     q: "Does the CARICOM Skills Certificate cover studying?",
-    a: "No. The Skills Certificate and CSME free movement are about the right to work. A student normally has to apply to the destination country's own immigration authority for a student visa or permit, separately from anything CSME covers.",
+    a: "No. The Skills Certificate and CSME free movement are about the right to work. A student normally has to apply to the destination country’s own immigration authority for a student visa or permit, separately from anything CSME covers.",
   },
   {
     q: "Can you get me admitted to a university?",
@@ -79,11 +79,11 @@ const STUDY_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can you help my family come with me?",
-    a: "We can help plan the travel and accommodation for everyone coming. Whether dependants are permitted to accompany a student, and on what terms, is set by the destination country's immigration rules, so that has to be checked country by country.",
+    a: "We can help plan the travel and accommodation for everyone coming. Whether dependants are permitted to accompany a student, and on what terms, is set by the destination country’s immigration rules, so that has to be checked country by country.",
   },
   {
     q: "Is studying at a UWI campus in another country simpler because UWI is regional?",
-    a: "Academically it is one university across CARICOM, which helps. It does not remove the immigration step: a CARICOM national studying at a UWI campus outside their own country still needs that country's student visa or permit, the same as at any other school.",
+    a: "Academically it is one university across CARICOM, which helps. It does not remove the immigration step: a CARICOM national studying at a UWI campus outside their own country still needs that country’s student visa or permit, the same as at any other school.",
   },
 ];
 
@@ -97,8 +97,8 @@ const UWI_CAMPUSES = [
 
 // Campus photos for schools on this page where a verified, freely licensed
 // photo could actually be found. Several institutions (SGU, University of
-// Guyana, UWI Five Islands, and most of the offshore medical schools) don't
-// have a usable free campus photo on Wikimedia Commons, so they're left out
+// Guyana, UWI Five Islands, and most of the offshore medical schools) don’t
+// have a usable free campus photo on Wikimedia Commons, so they’re left out
 // rather than guessed. UWI Cave Hill is also left out: the only Commons
 // photos of it are a single low-res (640x480) 2010 phone-camera batch, none
 // of which hold up full-bleed.
@@ -123,11 +123,11 @@ export default async function StudyPage() {
         icon={<Icon name="graduationCap" className="h-7 w-7 text-brand" />}
         title="Study"
         crumb="Study"
-        intro="Thinking about studying somewhere else in CARICOM? Here's what actually applies, and where we can still help."
+        intro="Thinking about studying somewhere else in CARICOM? Here’s what actually applies, and where we can still help."
         photos={SCHOOL_PHOTOS}
       />
 
-      {/* CSME DOESN'T COVER THIS */}
+      {/* CSME DOESN’T COVER THIS */}
       <Section>
         <div className="mx-auto max-w-3xl">
           <p className="mb-6 text-sm text-slate-600">
@@ -217,7 +217,7 @@ export default async function StudyPage() {
           </p>
           <ul className="mt-4 space-y-2">
             {[
-              "An acceptance or admission letter from the school you're enrolling at",
+              "An acceptance or admission letter from the school you’re enrolling at",
               "A valid passport",
               "Proof you can cover tuition and living costs for your stay",
               "A medical certificate or police certificate, in some countries",
@@ -261,7 +261,7 @@ export default async function StudyPage() {
           <SectionHead
             eyebrow="Every step, one contact"
             title="From application to your first semester, we can help"
-            intro="Whichever school on this page you choose, you don't have to coordinate it all yourself. We help get you prepared and ready to go, from the application itself through to being settled in for your first semester."
+            intro="Whichever school on this page you choose, you don’t have to coordinate it all yourself. We help get you prepared and ready to go, from the application itself through to being settled in for your first semester."
             center={false}
           />
           <div className="grid gap-6 lg:grid-cols-2">
@@ -301,9 +301,9 @@ export default async function StudyPage() {
             Have these to hand and the first conversation goes a lot further. None of it is a test, and &ldquo;I do not
             know yet&rdquo; is a perfectly good answer to most of it.
           </p>
-          <ol className="mt-5 grid gap-3">
+          <ol className="mt-5 grid gap-4 border-t border-navy/12 pt-4">
             {WE_WILL_ASK.map((q, i) => (
-              <li key={q} className="flex gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4">
+              <li key={q} className="flex gap-4 border-b border-navy/12 pb-4 last:border-0 last:pb-0">
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-brand text-sm font-bold text-white">
                   {i + 1}
                 </span>
@@ -376,7 +376,7 @@ export default async function StudyPage() {
             .
           </p>
           <div className="mt-6">
-            <CtaButtons message="Hi Jo, I'd like help preparing to study in another CARICOM country." />
+            <CtaButtons message="Hi Jo, I’d like help preparing to study in another CARICOM country." />
           </div>
           <p className="mt-6 text-sm text-slate-600">
             Admission decisions are made by the institution. Student visa and immigration decisions are made by the

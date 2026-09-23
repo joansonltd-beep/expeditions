@@ -3,7 +3,7 @@ import { WE_DO, THEY_DECIDE } from "@/lib/homeCopy";
 
 /**
  * The one place on the home page that spells out where our part stops and
- * somebody else's decision starts.
+ * somebody else’s decision starts.
  *
  * Two lists side by side, separated by a rule rather than boxed in cards, so
  * the comparison reads at a glance. This is the only full statement of it on

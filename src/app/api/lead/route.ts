@@ -14,7 +14,7 @@ export async function POST(request: Request): Promise<Response> {
   const webhook = process.env.LEAD_WEBHOOK_URL;
 
   if (!webhook) {
-    // No endpoint configured yet. Log so it's visible during development.
+    // No endpoint configured yet. Log so it’s visible during development.
     console.info("[lead] (no LEAD_WEBHOOK_URL set) captured:", lead);
     return Response.json({ ok: true, forwarded: false });
   }
@@ -28,7 +28,7 @@ export async function POST(request: Request): Promise<Response> {
     return Response.json({ ok: true, forwarded: true });
   } catch (err) {
     console.error("[lead] failed to forward to webhook:", err);
-    // Still return OK: the visitor's WhatsApp hand-off must not depend on this.
+    // Still return OK: the visitor’s WhatsApp hand-off must not depend on this.
     return Response.json({ ok: true, forwarded: false });
   }
 }

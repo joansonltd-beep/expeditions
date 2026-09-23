@@ -31,9 +31,9 @@ const DEPARTURES: { city: string; code: string; note: string }[] = [
   { city: "Montego Bay, Jamaica", code: "MBJ", note: "Sangster. Often the cheaper of the two, and four hours from Kingston." },
   { city: "Bridgetown, Barbados", code: "BGI", note: "Grantley Adams. The best-connected hub in the Eastern Caribbean." },
   { city: "Georgetown, Guyana", code: "GEO", note: "Cheddi Jagan. Allow for the drive out to Timehri." },
-  { city: "St. George's, Grenada", code: "GND", note: "Maurice Bishop." },
+  { city: "St. George’s, Grenada", code: "GND", note: "Maurice Bishop." },
   { city: "Castries, Saint Lucia", code: "SLU / UVF", note: "Two airports. UVF is the long-haul one and is well south of the capital." },
-  { city: "St. John's, Antigua", code: "ANU", note: "V.C. Bird. A common connecting point for the smaller islands." },
+  { city: "St. John’s, Antigua", code: "ANU", note: "V.C. Bird. A common connecting point for the smaller islands." },
 ];
 
 const GUEST_HELP = [
@@ -75,7 +75,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What if I book and then cannot go?",
-    a: "That depends on the fare and the hotel's own terms, which differ from one booking to the next. I will tell you what yours are before you pay, so the answer is not a surprise later.",
+    a: "That depends on the fare and the hotel’s own terms, which differ from one booking to the next. I will tell you what yours are before you pay, so the answer is not a surprise later.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function WeddingGuestsPage() {
         <SectionHead
           eyebrow="Where you are starting"
           title="Flying from where you actually live"
-          intro="The couple's flight is rarely your flight. These are the departure points most guests use, and the ones where the details catch people out."
+          intro="The couple’s flight is rarely your flight. These are the departure points most guests use, and the ones where the details catch people out."
         />
         <div className="mx-auto max-w-4xl">
           <ul className="grid gap-3 sm:grid-cols-2">

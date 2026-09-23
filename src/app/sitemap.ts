@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const bankingRoutes = BANKING_ISLANDS.map((i) => `/finance/${i.slug}`);
   const destinationRoutes = COUNTRY_GUIDES.map((g) => `/destinations/${g.slug}`);
 
-  // Tiered priorities: the CSME guide is the site's main search entry point,
+  // Tiered priorities: the CSME guide is the site’s main search entry point,
   // so it and its country pages rank above the supporting travel pages.
   const priorityFor = (path: string) => {
     if (path === "") return 1;

@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-// Google's default embed scans the whole page for .gcse-search elements and
+// Google’s default embed scans the whole page for .gcse-search elements and
 // self-initializes the moment its script tag executes. That auto-scan
 // conflicts with how React/Next.js control when/how scripts and DOM nodes
 // get inserted (double-render in dev, hydration timing in prod), and throws

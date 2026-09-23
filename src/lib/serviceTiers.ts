@@ -73,7 +73,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Submitting anything on your behalf at this stage.",
       "Any government or third-party fee, which you pay directly.",
     ],
-    waMessage: "Hi Jo, I'd like to book a Move Planning Consultation.",
+    waMessage: "Hi Jo, I’d like to book a Move Planning Consultation.",
   },
   {
     id: "skills-certificate",
@@ -94,10 +94,10 @@ export const SERVICE_TIERS: ServiceTier[] = [
     notIncluded: [
       "Approval. The certificate is issued or refused by the designated government office, and we have no influence over that decision.",
       "Any guarantee of eligibility, processing time or outcome.",
-      "The government's own application fee, which you pay directly to them.",
+      "The government’s own application fee, which you pay directly to them.",
     ],
     duration: null,
-    waMessage: "Hi Jo, I'd like help with a CSME Skills Certificate application.",
+    waMessage: "Hi Jo, I’d like help with a CSME Skills Certificate application.",
   },
   {
     id: "complete-package",
@@ -121,7 +121,7 @@ export const SERVICE_TIERS: ServiceTier[] = [
       "Third-party costs such as flights, accommodation and government fees, which are separate from our service fee.",
     ],
     duration: null,
-    waMessage: "Hi Jo, I'd like to talk about Complete Relocation Support.",
+    waMessage: "Hi Jo, I’d like to talk about Complete Relocation Support.",
   },
 ];
 

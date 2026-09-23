@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import type { BankingIsland } from "@/lib/bankingData";
 
 // Island picker for the banking hub. The visitor chooses where they are
-// opening an account, then is taken to that island's requirements page.
+// opening an account, then is taken to that island’s requirements page.
 export default function BankingPicker({ islands }: { islands: BankingIsland[] }) {
   const router = useRouter();
   const [slug, setSlug] = useState("");
