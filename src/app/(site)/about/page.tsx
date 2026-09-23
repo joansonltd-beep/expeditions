@@ -48,7 +48,7 @@ export default async function AboutPage() {
             />
             <figcaption className="px-4 py-3">
               <span className="block text-sm font-semibold text-navy">Joanson Baptiste James</span>
-              <span className="block text-xs text-navy/65">Founder, Expeditions With Jo</span>
+              <span className="block text-xs text-navy/70">Founder, Expeditions With Jo</span>
             </figcaption>
           </figure>
         }

@@ -20,7 +20,7 @@ export type Section = keyof typeof SECTION_EMAILS;
 export default function PageIssueNote({ section }: { section: Section }) {
   const email = SECTION_EMAILS[section];
   return (
-    <p className="mx-auto max-w-3xl px-5 pb-16 pt-12 text-center text-sm text-navy/55">
+    <p className="mx-auto max-w-3xl px-5 pb-16 pt-12 text-center text-sm text-navy/70">
       Something on this page wrong, out of date, or missing? Email{" "}
       <a href={`mailto:${email}`} className="underline underline-offset-4 hover:text-navy">
         {email}

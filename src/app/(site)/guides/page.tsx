@@ -66,7 +66,7 @@ export default async function GuidesPage() {
               href={`/guides/${a.slug}`}
               className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl"
             >
-              {a.publishedAt ? <p className="text-xs font-medium text-slate-400">{formatDate(a.publishedAt)}</p> : null}
+              {a.publishedAt ? <p className="text-xs font-medium text-slate-500">{formatDate(a.publishedAt)}</p> : null}
               <h2 className="mt-1 text-xl font-semibold text-slate-900">{a.title}</h2>
               <p className="mt-2 text-slate-600">{a.excerpt}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-brand">Read guide →</span>

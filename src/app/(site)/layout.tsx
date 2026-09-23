@@ -141,11 +141,11 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Visit, Work &amp; Study</h4>
-              <ul className="grid gap-2.5 text-sm">
+              <h3 className="mb-3.5 text-sm font-semibold text-white">Visit, Work &amp; Study</h3>
+              <ul className="grid text-sm">
                 {journeyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} title={l.title} className="text-slate-300 hover:text-white">
+                    <Link href={l.href} title={l.title} className="block py-3 text-slate-300 hover:text-white">
                       {l.label}
                     </Link>
                   </li>
@@ -154,11 +154,11 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Services &amp; Company</h4>
-              <ul className="grid gap-2.5 text-sm">
+              <h3 className="mb-3.5 text-sm font-semibold text-white">Services &amp; Company</h3>
+              <ul className="grid text-sm">
                 {companyLinks.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} title={l.title} className="text-slate-300 hover:text-white">
+                    <Link href={l.href} title={l.title} className="block py-3 text-slate-300 hover:text-white">
                       {l.label}
                     </Link>
                   </li>
@@ -167,26 +167,26 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h4 className="mb-3.5 text-sm font-semibold text-white">Contact</h4>
-              <ul className="grid gap-2.5 text-sm text-slate-400">
+              <h3 className="mb-3.5 text-sm font-semibold text-white">Contact</h3>
+              <ul className="grid text-sm text-slate-400">
                 <li>
-                  <a href={waHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  <a href={waHref} target="_blank" rel="noopener noreferrer" className="block py-3 hover:text-white">
                     WhatsApp 868-723-6644
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+18687236644" className="hover:text-white">
+                  <a href="tel:+18687236644" className="block py-3 hover:text-white">
                     Call 868-723-6644
                   </a>
                 </li>
                 <li>
-                  <a href={`mailto:${settings.generalEmail}`} className="hover:text-white">
+                  <a href={`mailto:${settings.generalEmail}`} className="block py-3 hover:text-white">
                     {settings.generalEmail}
                   </a>
                 </li>
                 {settings.chatbotUrl ? (
                   <li>
-                    <a href={settings.chatbotUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                    <a href={settings.chatbotUrl} target="_blank" rel="noopener noreferrer" className="block py-3 hover:text-white">
                       Chat with us
                     </a>
                   </li>
@@ -200,10 +200,10 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
                 © {year} {settings.businessName}. All rights reserved.
               </span>
               <span className="flex flex-wrap gap-x-5 gap-y-2">
-                <Link href="/credits" className="hover:text-slate-300">
+                <Link href="/credits" className="block py-1.5 hover:text-slate-300">
                   Photography credits
                 </Link>
-                <Link href="/policies" className="hover:text-slate-300">
+                <Link href="/policies" className="block py-1.5 hover:text-slate-300">
                   Policies &amp; Privacy
                 </Link>
               </span>

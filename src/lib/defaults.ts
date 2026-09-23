@@ -54,7 +54,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   youtubeUrl: null,
   xUrl: null,
   heroEyebrow: "Moving around CARICOM",
-  heroHeadline: "Thinking about working, studying or visiting another CARICOM country?",
+  heroHeadline: "Thinking about visiting, working, studying or marrying in another CARICOM country?",
   heroSubcopy:
     "Tell Jo where you are starting and where you want to go. We will help you work out what to check first, and organise the flights, papers and arrival details around it.",
   paymentNote:

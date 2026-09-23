@@ -132,6 +132,7 @@ export default function CsmePage() {
       {/* COUNTRY PICKER */}
       <Section alt>
         <SectionHead
+lead
           eyebrow="Apply in your country"
           title="Where to apply, country by country"
           intro="Pick the country where you live (or where you want to work). You can apply in your home country or the host country."

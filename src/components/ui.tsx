@@ -25,7 +25,7 @@ function Breadcrumbs({ crumb, onDark = false }: { crumb: string; onDark?: boolea
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <nav aria-label="Breadcrumb" className="mb-4">
-        <ol className={`flex flex-wrap items-center gap-2 text-sm ${onDark ? "text-white/75" : "text-navy/60"}`}>
+        <ol className={`flex flex-wrap items-center gap-2 text-sm ${onDark ? "text-white/75" : "text-navy/70"}`}>
           <li>
             <Link href="/" className={onDark ? "hover:text-white hover:underline" : "hover:text-brand hover:underline"}>
               Home
@@ -127,7 +127,7 @@ export function SectionHead({
         {title}
       </h2>
       {intro ? (
-        <p className={lead ? "mt-5 text-lg text-navy/70" : "mt-2.5 text-[1.02rem] text-navy/65"}>{intro}</p>
+        <p className={lead ? "mt-5 text-lg text-navy/70" : "mt-2.5 text-[1.02rem] text-navy/70"}>{intro}</p>
       ) : null}
     </div>
   );
@@ -218,7 +218,7 @@ export function PageHeader({
             ) : null}
             <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-navy sm:text-4xl">{title}</h1>
             {intro ? <p className="mt-4 max-w-2xl text-lg text-navy/75">{intro}</p> : null}
-            {footnote ? <p className="mt-2 max-w-2xl text-sm text-navy/55">{footnote}</p> : null}
+            {footnote ? <p className="mt-2 max-w-2xl text-sm text-navy/70">{footnote}</p> : null}
           </div>
           {image ? <div className="shrink-0 lg:w-[340px]">{image}</div> : null}
         </div>

@@ -143,7 +143,7 @@ export default function CurrencyConverter() {
     <div>
       <div className="rounded-2xl border border-navy/10 bg-white p-5 sm:p-6">
         <div>
-          <label htmlFor="amount" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/55">
+          <label htmlFor="amount" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/70">
             Amount
           </label>
           <input
@@ -159,7 +159,7 @@ export default function CurrencyConverter() {
 
         <div className="mt-4 flex flex-wrap items-end gap-3">
           <div className="flex-1 min-w-[200px]">
-            <label htmlFor="from-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/55">
+            <label htmlFor="from-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/70">
               <CurrencyFlag code={from} />
               From
             </label>
@@ -190,7 +190,7 @@ export default function CurrencyConverter() {
           </button>
 
           <div className="flex-1 min-w-[200px]">
-            <label htmlFor="to-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/55">
+            <label htmlFor="to-cur" className="mb-1.5 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-navy/70">
               <CurrencyFlag code={to} />
               To
             </label>
@@ -210,19 +210,19 @@ export default function CurrencyConverter() {
         </div>
 
         <div className="mt-6 border-t border-navy/10 pt-5">
-          <p className="text-sm text-navy/60">
+          <p className="text-sm text-navy/70">
             {money(amount)} {fMeta.code} – {fMeta.name}
           </p>
           <p className="mt-0.5 text-4xl font-bold tracking-tight tabular-nums text-navy sm:text-5xl">
             {money(amount * r)} {tMeta.code}
           </p>
-          <p className="mt-2 text-sm tabular-nums text-navy/60">
+          <p className="mt-2 text-sm tabular-nums text-navy/70">
             1 {from} = {rateFormat(r)} {to}
             <br />1 {to} = {rateFormat(1 / r)} {from}
           </p>
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-navy/55">
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm text-navy/70">
           <span>
             <span
               className={`mr-1.5 inline-block h-2 w-2 rounded-full align-middle ${status.stale ? "bg-amber-500" : "bg-emerald-600"}`}
@@ -247,7 +247,7 @@ export default function CurrencyConverter() {
           </h3>
           <table className="w-full text-sm tabular-nums">
             <thead>
-              <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/55">
+              <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/70">
                 <th className="pb-1.5">{from}</th>
                 <th className="pb-1.5 text-right">{to}</th>
               </tr>
@@ -269,7 +269,7 @@ export default function CurrencyConverter() {
           </h3>
           <table className="w-full text-sm tabular-nums">
             <thead>
-              <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/55">
+              <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/70">
                 <th className="pb-1.5">{to}</th>
                 <th className="pb-1.5 text-right">{from}</th>
               </tr>
@@ -290,7 +290,7 @@ export default function CurrencyConverter() {
         <h3 className="mb-3 text-base font-semibold text-navy">What 1 {from} is worth across the region</h3>
         <table className="w-full text-sm tabular-nums">
           <thead>
-            <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/55">
+            <tr className="border-b border-navy/10 text-left text-xs font-semibold text-navy/70">
               <th className="pb-1.5">Currency</th>
               <th className="pb-1.5 text-right">Per 1 {from}</th>
             </tr>
@@ -312,7 +312,7 @@ export default function CurrencyConverter() {
         </table>
       </div>
 
-      <div className="mt-5 space-y-2 text-sm text-navy/55">
+      <div className="mt-5 space-y-2 text-sm text-navy/70">
         <p>
           These are mid-market rates, the midpoint between what buyers and sellers are paying on the wholesale
           market. A bank, cambio or transfer service will add its own margin, so the rate you are actually offered

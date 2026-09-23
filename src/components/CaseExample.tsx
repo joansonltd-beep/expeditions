@@ -60,7 +60,7 @@ export default function CaseExample() {
             ))}
           </dl>
 
-          <p className="mt-8 text-sm text-navy/55">
+          <p className="mt-8 text-sm text-navy/70">
             Shared with permission and anonymised. Every situation is different, and nothing here suggests a particular
             result is typical or promised.
           </p>

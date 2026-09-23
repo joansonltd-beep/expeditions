@@ -182,7 +182,7 @@ export default async function CountryCsmePage({ params }: { params: Promise<{ co
             ) : null}
           </div>
           {!c.officialUrl && !c.formUrl ? (
-            <p className="mt-4 text-sm text-slate-400">
+            <p className="mt-4 text-sm text-slate-500">
               Search your government website for &ldquo;{c.authority}&rdquo; to confirm the current requirements.
             </p>
           ) : null}

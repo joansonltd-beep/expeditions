@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 /*
-  Expeditions With Jo palette: blue primary, pulled from caricom.org (nav bar
-  #007acc, headings #1a4087), dominant, with a red/coral accent used sparingly
-  (CTAs and small highlights only). Retune the whole site from this single
-  @theme block.
+  One token block skins the whole site. Teal carries the actions, navy carries
+  the type, cream and sand separate the sections, and a single deep spice red
+  handles highlights and cautions.
+
+  Seasonal national-day palettes used to override these. That mechanism is
+  gone; the announcement strip still marks the day, but the site keeps its own
+  colours all year.
 */
 @theme {
   /*
@@ -15,16 +18,16 @@
     Contrast against white, all above AA for body text:
       brand      #0b6b72  6.2:1
       brand-dark #084f55  9.1:1
-      accent     #b04e2f  5.3:1
+      accent     #a32b1f  7.2:1
       navy       #0e2a3a  15.1:1
   */
   --color-brand: #0b6b72;        /* sea teal — primary action */
   --color-brand-dark: #084f55;   /* deeper teal — hover/pressed */
   --color-brand-light: #148b94;  /* lighter teal — small highlights */
   --color-brand-soft: #e7f1f0;   /* pale teal wash */
-  --color-accent: #b04e2f;       /* warm coral — one accent, used sparingly */
-  --color-accent-dark: #8e3e25;
-  --color-accent-soft: #fdf1e3;
+  --color-accent: #a32b1f;       /* deep spice red — highlights and cautions only */
+  --color-accent-dark: #7f2118;
+  --color-accent-soft: #fbeeec;
   --color-navy: #0e2a3a;         /* headings and deep sections */
   --color-sand: #e7efee;         /* section separation */
   --color-cream: #f6f9f9;        /* page ground: cool, so the photography supplies the warmth */
@@ -76,50 +79,7 @@ h2 {
   Only add a palette here after checking it against white for AA contrast.
 */
 
-/* Trinidad and Tobago: red, black and white, for Independence Day on 31 August.
-   #ce1126 gives 5.7:1 against white, so it is safe for body text and buttons;
-   #8f0c1a (9.4:1) carries the hover state. Black appears via the accent slot
-   and the banner rather than as the button hover, which keeps hovers reading
-   as hovers rather than as a colour change. */
-[data-theme="tt"] {
-  --color-brand: #ce1126;
-  --color-brand-dark: #8f0c1a;
-  --color-brand-light: #e63950;
-  --color-brand-soft: #fdeef1;
-  /* Every button goes red for the celebration, the WhatsApp green included. */
-  --color-accent: #ce1126;
-  --color-accent-dark: #8f0c1a;
-  --color-accent-soft: #f4f4f5;
-  --color-whatsapp: #ce1126;
-  /* The warm sand wash reads as muddy next to flag red; go clean instead. */
-  --color-field-warm: #ffffff;
-}
 
-/*
-  The flag itself, behind the whole page: red field with a white-edged black
-  band running corner to corner, fixed so it reads as one flag rather than
-  repeating down the page.
-
-  Held at low saturation on purpose. Most sections have no background of their
-  own, so body text sits directly on this; at full strength the red would drop
-  slate-900 body copy well below AA. The tints here keep every text surface
-  above 12:1.
-*/
-[data-theme="tt"] body {
-  background:
-    linear-gradient(
-      118deg,
-      transparent 0 39%,
-      color-mix(in srgb, #ffffff 88%, transparent) 39% 44.5%,
-      color-mix(in srgb, #141414 13%, transparent) 44.5% 57%,
-      color-mix(in srgb, #ffffff 88%, transparent) 57% 62.5%,
-      transparent 62.5% 100%
-    ),
-    color-mix(in srgb, #ce1126 9%, #ffffff);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 /* Hero flip gallery: a tile that rotates out and the next tile rotates in. */
 .flip-scene { perspective: 1000px; }
@@ -226,4 +186,42 @@ h2 {
   outline: 2px solid #ffffff;
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/*
+  Reading measure. A paragraph in a 1400px container runs past 800px, which is
+  roughly 110 characters and well past comfortable. 68ch lands around 65 to 75.
+*/
+.measure {
+  max-width: 68ch;
+}
+
+/*
+  One visible focus ring for anything focusable that has not declared its own.
+  Buttons carry their own ring; plain links did not carry anything.
+*/
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/*
+  The looping hero animations are decoration. Anyone who has asked their system
+  for less motion should not get them, and neither should the scroll-driven
+  transitions.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .anim-fly, .anim-bob, .anim-drive, .anim-sail, .anim-coin,
+  .flip-card {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

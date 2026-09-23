@@ -226,7 +226,7 @@ export default function PropertyManagementPage() {
               sizes="(max-width: 768px) 100vw, 640px"
               className="mx-auto w-full max-w-[520px] rounded-2xl border border-navy/10"
             />
-            <figcaption className="mt-3 text-center text-sm text-navy/60">
+            <figcaption className="mt-3 text-center text-sm text-navy/70">
               Airbnb host profile, September 2026
             </figcaption>
           </figure>

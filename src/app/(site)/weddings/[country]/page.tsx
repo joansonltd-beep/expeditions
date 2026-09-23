@@ -253,7 +253,7 @@ export default async function MarryCountryPage({ params }: { params: Promise<{ c
           </Section>
 
           <Section alt>
-            <SectionHead eyebrow="Step by step" title={`Getting married in ${c.name}, in order`} />
+            <SectionHead lead eyebrow="Step by step" title={`Getting married in ${c.name}, in order`} />
             <div className="mx-auto max-w-3xl">
               <ol className="grid gap-0">
                 {marryGuide.steps.map((s, i) => (

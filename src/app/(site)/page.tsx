@@ -107,7 +107,7 @@ export default async function HomePage() {
                 </blockquote>
                 <figcaption className="mt-3 text-sm">
                   <span className="font-semibold text-navy">{t.person}</span>
-                  {t.context ? <span className="block text-navy/60">{t.context}</span> : null}
+                  {t.context ? <span className="block text-navy/70">{t.context}</span> : null}
                 </figcaption>
               </figure>
             ))}

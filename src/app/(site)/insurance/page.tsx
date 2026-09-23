@@ -48,7 +48,7 @@ export default async function InsurancePage() {
               className="mx-auto w-full max-w-2xl rounded-2xl border border-slate-200 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl"
             />
           </a>
-          <p className="mt-4 text-sm text-slate-400">Click the preview to open joansonbjames.com</p>
+          <p className="mt-4 text-sm text-slate-500">Click the preview to open joansonbjames.com</p>
         </div>
       </Section>
     </>

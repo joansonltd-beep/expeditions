@@ -243,7 +243,7 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
                 />
                 <span className="font-semibold text-navy">{s.title}</span>
               </span>
-              <span className="mt-1.5 block text-sm text-navy/65">{s.text}</span>
+              <span className="mt-1.5 block text-sm text-navy/70">{s.text}</span>
             </label>
           ))}
         </div>
@@ -283,11 +283,11 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
             </div>
             <label className={label}>
               Gross monthly salary in {currency}, before deductions
-              <span className="mt-0.5 block text-xs font-normal text-navy/60">
+              <span className="mt-0.5 block text-xs font-normal text-navy/70">
                 If commission based, use your base salary. Your own currency, not USD.
               </span>
               <span className="relative mt-1.5 block">
-                <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-navy/60">{symbol}</span>
+                <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-navy/70">{symbol}</span>
                 <input required type="number" min={1} step="any" inputMode="decimal" value={salary.monthlySalaryLocal} onChange={setSalaryField("monthlySalaryLocal")} className={`${field} pl-14`} placeholder="e.g. 2500" />
               </span>
             </label>
@@ -347,15 +347,15 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
             </label>
             <label className={label}>
               Monthly rent in {currency}
-              <span className="mt-0.5 block text-xs font-normal text-navy/60">Your own currency, not USD.</span>
+              <span className="mt-0.5 block text-xs font-normal text-navy/70">Your own currency, not USD.</span>
               <span className="relative mt-1.5 block">
-                <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-navy/60">{symbol}</span>
+                <span className="pointer-events-none absolute inset-y-0 left-3.5 flex items-center text-navy/70">{symbol}</span>
                 <input required type="number" min={1} step="any" inputMode="decimal" value={rent.monthlyRentLocal} onChange={setRentField("monthlyRentLocal")} className={`${field} pl-14`} placeholder="e.g. 900" />
               </span>
             </label>
             <fieldset className={label}>
               Does the rent include anything?
-              <span className="mt-0.5 block text-xs font-normal text-navy/60">Select all that apply.</span>
+              <span className="mt-0.5 block text-xs font-normal text-navy/70">Select all that apply.</span>
               <div className="mt-2 grid gap-2 sm:grid-cols-2">
                 {RENT_INCLUDED_OPTIONS.map((o) => (
                   <label key={o} className="flex items-center gap-2 border border-navy/15 bg-cream px-3.5 py-2.5 text-sm font-normal text-navy/80">
@@ -438,7 +438,7 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
             </label>
             <fieldset className={label}>
               Which do you pay for, and how much a month in {currency}?
-              <span className="mt-0.5 block text-xs font-normal text-navy/60">Tick one to enter an amount.</span>
+              <span className="mt-0.5 block text-xs font-normal text-navy/70">Tick one to enter an amount.</span>
               <div className="mt-2 grid gap-2">
                 {UTILITY_TYPES.map((u) => (
                   <div key={u} className="grid items-center gap-2 sm:grid-cols-[1fr_10rem]">
@@ -448,7 +448,7 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
                     </label>
                     {utilities.includes(u) ? (
                       <span className="relative block">
-                        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-navy/60">{symbol}</span>
+                        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-navy/70">{symbol}</span>
                         <input required type="number" min={0} step="any" inputMode="decimal" value={amounts[u]} onChange={(e) => setAmounts((a) => ({ ...a, [u]: e.target.value }))} className={`${field} pl-12`} placeholder="0" aria-label={`Monthly cost for ${u}`} />
                       </span>
                     ) : null}
@@ -465,7 +465,7 @@ export default function CombinedSurveyForm({ countries }: { countries: string[] 
       <button type="submit" disabled={status === "submitting"} className={`${btnPrimary} mt-8 w-full disabled:opacity-60`}>
         {status === "submitting" ? "Submitting…" : "Submit response"}
       </button>
-      <p className="mt-3 text-center text-xs text-navy/55">
+      <p className="mt-3 text-center text-xs text-navy/70">
         Used only in aggregate. No name, email or IP is stored.
       </p>
     </form>

@@ -175,6 +175,7 @@ export default function MarryPage() {
       {/* THE TWO PATHS */}
       <Section alt>
         <SectionHead
+lead
           eyebrow="Who this is for"
           title="Two different weddings"
           intro="Both end at the same registry counter, but they start in very different places."

@@ -55,7 +55,7 @@ export default function SocialLinks({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={s.label}
-          className="text-slate-400 transition hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          className="grid h-11 w-11 place-items-center -m-3 text-slate-500 transition hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
             <path d={s.path} />

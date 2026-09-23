@@ -25,7 +25,7 @@ function LanguageSelect({
 }) {
   return (
     <div className="flex-1 min-w-[200px]">
-      <label htmlFor={id} className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/55">
+      <label htmlFor={id} className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-navy/70">
         {label}
       </label>
       <select
@@ -227,7 +227,7 @@ export default function Translator() {
 
       <div className="mt-5 min-h-[80px] rounded-2xl border border-navy/10 bg-white p-5 sm:p-6">
         {entries.length === 0 ? (
-          <p className="py-6 text-center text-navy/55">
+          <p className="py-6 text-center text-navy/70">
             Choose two languages, then start talking or typing. Everything you say lands here beside its translation.
           </p>
         ) : (
@@ -299,7 +299,7 @@ export default function Translator() {
           </button>
         )}
 
-        <div className="mt-3 flex flex-wrap gap-4 text-sm text-navy/60">
+        <div className="mt-3 flex flex-wrap gap-4 text-sm text-navy/70">
           <label className="flex cursor-pointer items-center gap-2">
             <input type="checkbox" checked={autoSpeak} onChange={(e) => setAutoSpeak(e.target.checked)} />
             Speak translations out loud

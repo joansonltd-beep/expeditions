@@ -163,18 +163,19 @@ export function currentIndependence(now: Date = new Date()): { day: Independence
   return best;
 }
 
-// Flag palettes, applied site-wide for the run-up to a country's independence
-// day. Only countries with a palette that has been checked for contrast get
-// one; everything else keeps the usual CARICOM blue. Add a country here only
-// after verifying its colours pass AA against white.
+// Site-wide flag palettes for the run-up to a country's independence day.
 //
-// `colours` is how the palette is named in the banner copy, so it has to read
-// naturally in a sentence and match the theme block in globals.css.
+// Deliberately empty. Re-skinning the whole site in a flag's colours for ten
+// days a year fought the brand rather than celebrating the country, so the
+// palettes were removed and the site keeps teal all year. The announcement
+// strip and the banner still mark every country's day.
+//
+// The mechanism is left in place: adding an entry here, plus a matching theme
+// block in globals.css, turns it back on. `colours` is how the palette gets
+// named in the banner copy, so it has to read naturally in a sentence.
 export type FlagTheme = { theme: string; colours: string };
 
-export const FLAG_THEMES: Record<string, FlagTheme> = {
-  "trinidad-and-tobago": { theme: "tt", colours: "red, black, and white" },
-};
+export const FLAG_THEMES: Record<string, FlagTheme> = {};
 
 /** The flag theme to apply right now, or null for the normal palette. */
 export function currentFlagTheme(now: Date = new Date()): string | null {

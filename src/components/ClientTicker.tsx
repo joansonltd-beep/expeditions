@@ -47,7 +47,7 @@ function Stat({ value, label, start }: { value: number; label: string; start: bo
   return (
     <div>
       <div className="font-display text-4xl font-bold leading-none text-navy sm:text-5xl">{shown}</div>
-      <div className="mt-2 text-sm text-navy/65">{label}</div>
+      <div className="mt-2 text-sm text-navy/70">{label}</div>
     </div>
   );
 }

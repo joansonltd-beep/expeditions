@@ -184,6 +184,7 @@ export default function GettingStartedPage() {
 
       <Section>
         <SectionHead
+lead
           eyebrow="Taking a job"
           title="Regular employment"
           intro="Got a job lined up on another island, or hunting for one? Fill this in to find out what you need to turn the offer into an actual move."

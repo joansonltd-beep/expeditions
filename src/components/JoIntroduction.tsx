@@ -29,7 +29,7 @@ export default function JoIntroduction() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-navy/60">
+            <figcaption className="mt-3 text-sm text-navy/70">
               <span className="font-semibold text-navy">Joanson Baptiste James</span>
               <span className="mt-0.5 block">Founder, Expeditions With Jo</span>
             </figcaption>
@@ -66,7 +66,7 @@ export default function JoIntroduction() {
 
             {/* The asterisk. Says plainly what "avoiding delays" does and does
                 not mean, so it cannot be read as a promise to jump a queue. */}
-            <p id="admin-delays" className="mt-5 border-l-2 border-navy/15 pl-5 text-base text-navy/65">
+            <p id="admin-delays" className="mt-5 border-l-2 border-navy/15 pl-5 text-base text-navy/70">
               <span aria-hidden="true" className="text-brand">*</span> To be clear about that: I cannot speed up or
               override anybody&rsquo;s process. What I can do is make sure the only waiting you do is the waiting that
               is built in, rather than extra weeks caused by something missing or wrong in your application.

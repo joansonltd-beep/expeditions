@@ -43,13 +43,13 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search a course (e.g. accounting), affiliation (e.g. adventist), public/government, school or country…"
-          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
+          className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"
         />
         {query ? (
           <button
             type="button"
             onClick={() => setQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-slate-400 hover:text-slate-600"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-slate-500 hover:text-slate-600"
             aria-label="Clear search"
           >
             Clear
@@ -103,7 +103,7 @@ export default function SchoolSearch({ institutions }: { institutions: CountrySc
                     </div>
                   ) : null}
                   <div className="mt-1.5 ml-4 flex flex-wrap items-center gap-1.5">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                       Courses offered:
                     </span>
                     {s.programs.map((p) => (

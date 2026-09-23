@@ -42,7 +42,7 @@ function CreditRow({ c }: { c: Attribution }) {
           c.subject
         )}
       </span>
-      <span className="mt-1 block shrink-0 text-navy/60 sm:mt-0 sm:text-right">
+      <span className="mt-1 block shrink-0 text-navy/70 sm:mt-0 sm:text-right">
         {c.author}
         {c.licence ? (
           <>
@@ -80,7 +80,7 @@ export default function CreditsPage() {
           {OWN_CREDITS.length ? (
             <div className="mb-12">
               <h2 className="text-[1.6rem] font-bold tracking-tight text-navy">Photographs I took myself</h2>
-              <p className="mt-2 text-navy/65">No licence needed for these ones. I was standing there.</p>
+              <p className="mt-2 text-navy/70">No licence needed for these ones. I was standing there.</p>
               <ul className="mt-5 border-b border-navy/10">
                 {OWN_CREDITS.map((c) => (
                   <CreditRow key={c.src} c={c} />
@@ -90,7 +90,7 @@ export default function CreditsPage() {
           ) : null}
 
           <h2 className="text-[1.6rem] font-bold tracking-tight text-navy">Licensed photographs</h2>
-          <p className="mt-2 text-navy/65">
+          <p className="mt-2 text-navy/70">
             {LICENSED_CREDITS.length} photographs, listed by where they appear on the site. The licence name links to
             its full terms.
           </p>
@@ -106,7 +106,7 @@ export default function CreditsPage() {
             </section>
           ))}
 
-          <p className="mt-12 text-sm text-navy/55">
+          <p className="mt-12 text-sm text-navy/70">
             If you are one of the photographers here and something is credited wrongly, or you would rather it came
             down, email{" "}
             <a href="mailto:photo@expeditionswithjo.com" className="underline underline-offset-4 hover:text-navy">

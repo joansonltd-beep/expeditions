@@ -88,7 +88,7 @@ export default function Header({ businessName, logoUrl }: { businessName: string
               />
               <span className="hidden items-baseline gap-1.5 sm:inline-flex">
                 <span>{businessName}</span>
-                <span className="relative top-1.5 hidden text-[0.68rem] font-medium tracking-normal text-navy/55 xl:inline">
+                <span className="relative top-1.5 hidden text-[0.68rem] font-medium tracking-normal text-navy/70 xl:inline">
                   by Joanson B. James
                 </span>
               </span>

@@ -158,7 +158,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                   priority
                 />
               </div>
-              <figcaption className="mt-2 text-xs text-slate-400">{g.photo.alt}</figcaption>
+              <figcaption className="mt-2 text-xs text-slate-500">{g.photo.alt}</figcaption>
             </figure>
           ) : null}
 
@@ -166,11 +166,11 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
           <div className="mt-6 grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 sm:grid-cols-2">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Capital</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Capital</p>
               <p className="mt-1 text-slate-700">{g.demographics.capital}</p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Population</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Population</p>
               <p className="mt-1 text-slate-700">
                 {g.demographics.population.value}
                 {g.demographics.population.sourceUrl ? (
@@ -183,13 +183,13 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                     ({g.demographics.population.sourceName})
                   </a>
                 ) : (
-                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.population.sourceName})</span>
+                  <span className="ml-1.5 text-xs text-slate-500">({g.demographics.population.sourceName})</span>
                 )}
               </p>
             </div>
             {g.demographics.areaKm2 ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Area</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Area</p>
                 <p className="mt-1 text-slate-700">{g.demographics.areaKm2}</p>
               </div>
             ) : null}
@@ -210,7 +210,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             ) : null}
             {g.coordinates ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Coordinates</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Coordinates</p>
                 <p className="mt-1 text-slate-700">
                   {g.coordinates.display}
                   {googleMapsUrl ? (
@@ -227,50 +227,50 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               </div>
             ) : null}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Languages</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Languages</p>
               <p className="mt-1 text-slate-700">{g.demographics.officialLanguages.join(", ")}</p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Currency</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Currency</p>
               <p className="mt-1 text-slate-700">{g.demographics.currency}</p>
             </div>
             {g.demographics.medianAge ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Median age</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Median age</p>
                 <p className="mt-1 text-slate-700">{g.demographics.medianAge}</p>
               </div>
             ) : null}
             {g.demographics.outlyingPopulation ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Outlying islands</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Outlying islands</p>
                 <p className="mt-1 text-slate-700">
                   {g.demographics.outlyingPopulation.value}
-                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.outlyingPopulation.sourceName})</span>
+                  <span className="ml-1.5 text-xs text-slate-500">({g.demographics.outlyingPopulation.sourceName})</span>
                 </p>
               </div>
             ) : null}
             {g.demographics.ageStructure ? (
               <div className="sm:col-span-2">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Age structure</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Age structure</p>
                 <p className="mt-1 text-slate-700">{g.demographics.ageStructure}</p>
               </div>
             ) : null}
             {g.demographics.ethnicComposition ? (
               <div className="sm:col-span-2">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Ethnic composition</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Ethnic composition</p>
                 <p className="mt-1 text-slate-700">
                   {g.demographics.ethnicComposition.value}
-                  <span className="ml-1.5 text-xs text-slate-400">({g.demographics.ethnicComposition.sourceName})</span>
+                  <span className="ml-1.5 text-xs text-slate-500">({g.demographics.ethnicComposition.sourceName})</span>
                 </p>
               </div>
             ) : null}
             <div className="sm:col-span-2">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Government</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Government</p>
               <p className="mt-1 text-slate-700">{g.demographics.government}</p>
             </div>
             {g.demographics.urbanizationNote ? (
               <div className="sm:col-span-2">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Where people live</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Where people live</p>
                 <p className="mt-1 text-slate-700">{g.demographics.urbanizationNote}</p>
               </div>
             ) : null}
@@ -289,60 +289,60 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
       {/* COST OF LIVING */}
       <Section alt>
-        <SectionHead eyebrow="Budgeting" title="Cost of living" />
+        <SectionHead lead eyebrow="Budgeting" title="Cost of living" />
         <div className="mx-auto max-w-3xl">
           <div className="grid gap-4 sm:grid-cols-2">
             {g.costOfLiving.rentTypical1BR ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, ordinary local market</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Rent, 1BR, ordinary local market</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentTypical1BR}</p>
               </div>
             ) : null}
             {g.costOfLiving.rentPremium1BR ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Rent, 1BR, marina / tourist areas</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Rent, 1BR, marina / tourist areas</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.rentPremium1BR}</p>
               </div>
             ) : null}
             {g.costOfLiving.groceriesSingle ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Groceries, one person</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Groceries, one person</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.groceriesSingle}</p>
               </div>
             ) : null}
             {g.costOfLiving.utilities ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Utilities, small apartment</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Utilities, small apartment</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.utilities}</p>
               </div>
             ) : null}
             {g.costOfLiving.inexpensiveMeal ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Inexpensive restaurant meal</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Inexpensive restaurant meal</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.inexpensiveMeal}</p>
               </div>
             ) : null}
             {g.costOfLiving.midRangeMealForTwo ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Mid-range dinner for two</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Mid-range dinner for two</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.midRangeMealForTwo}</p>
               </div>
             ) : null}
             {g.costOfLiving.budgetModestSingle ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Modest monthly budget, single person</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Modest monthly budget, single person</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.budgetModestSingle}</p>
               </div>
             ) : null}
             {g.costOfLiving.budgetComfortableSingle ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Comfortable monthly budget, single person</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Comfortable monthly budget, single person</p>
                 <p className="mt-1 text-lg font-semibold text-slate-900">{g.costOfLiving.budgetComfortableSingle}</p>
               </div>
             ) : null}
           </div>
           {g.costOfLiving.notes ? <p className="mt-5 text-sm text-slate-600">{g.costOfLiving.notes}</p> : null}
-          <p className="mt-5 text-xs text-slate-400">
+          <p className="mt-5 text-xs text-slate-500">
             Sources:{" "}
             {g.costOfLiving.sourceUrl ? (
               <a href={g.costOfLiving.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
@@ -380,26 +380,26 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
           <SectionHead eyebrow="Relocating" title={`Moving to ${g.name}`} intro="Visas, healthcare, taxes and where people settle, for anyone actually planning the move." />
           <div className="mx-auto max-w-3xl space-y-6">
             <div className="rounded-xl border border-slate-200 bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Visa and work permit</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Visa and work permit</p>
               <p className="mt-2 text-slate-600">{g.movingHere.visaWorkPermit}</p>
             </div>
             {g.movingHere.residency ? (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Permanent residency</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Permanent residency</p>
                 <p className="mt-2 text-slate-600">{g.movingHere.residency}</p>
               </div>
             ) : null}
             <div className="rounded-xl border border-slate-200 bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Healthcare</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Healthcare</p>
               <p className="mt-2 text-slate-600">{g.movingHere.healthcare}</p>
             </div>
             <div className="rounded-xl border border-slate-200 bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Taxes</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Taxes</p>
               <p className="mt-2 text-slate-600">{g.movingHere.taxes}</p>
             </div>
             {g.movingHere.areas.length ? (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Where people settle</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Where people settle</p>
                 <div className="mt-3 grid gap-4 sm:grid-cols-2">
                   {g.movingHere.areas.map((a) => (
                     <div key={a.name} className="rounded-xl border border-slate-200 bg-white p-5">
@@ -411,7 +411,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               </div>
             ) : null}
             {g.movingHere.notes ? <p className="text-sm text-slate-600">{g.movingHere.notes}</p> : null}
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-slate-500">
               Sources:{" "}
               {g.movingHere.sourceUrl ? (
                 <a href={g.movingHere.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">
@@ -507,9 +507,9 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                 <h3 className="font-semibold text-slate-900">{p.name}</h3>
                 <p className="mt-2 text-sm text-slate-600">{p.description}</p>
                 {p.video && isOwnWork(p.video.credit) ? (
-                  <p className="mt-3 text-xs text-slate-400">Video: {p.video.credit}</p>
+                  <p className="mt-3 text-xs text-slate-500">Video: {p.video.credit}</p>
                 ) : p.photo && isOwnWork(p.photo.credit) ? (
-                  <p className="mt-3 text-xs text-slate-400">Photo: {p.photo.credit}</p>
+                  <p className="mt-3 text-xs text-slate-500">Photo: {p.photo.credit}</p>
                 ) : null}
               </div>
             </div>
@@ -558,7 +558,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h3 className="font-semibold text-slate-900">
                 {p.name}
-                {p.area ? <span className="ml-2 text-xs font-normal text-slate-400">{p.area}</span> : null}
+                {p.area ? <span className="ml-2 text-xs font-normal text-slate-500">{p.area}</span> : null}
               </h3>
               <p className="mt-2 text-sm text-slate-600">{p.description}</p>
             </div>
@@ -601,7 +601,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
             <div className="rounded-2xl border border-slate-200 bg-white p-6">
               <h3 className="font-semibold text-slate-900">National pledge</h3>
               <p className="mt-2 whitespace-pre-line text-slate-600">{g.symbols.pledge.text}</p>
-              <p className="mt-3 text-xs text-slate-400">Source: {g.symbols.pledge.sourceName}</p>
+              <p className="mt-3 text-xs text-slate-500">Source: {g.symbols.pledge.sourceName}</p>
             </div>
           ) : null}
         </div>
@@ -624,7 +624,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-open:rotate-180"
+                      className="h-4 w-4 shrink-0 text-slate-500 transition-transform group-open:rotate-180"
                     >
                       <path d="m6 9 6 6 6-6" />
                     </svg>

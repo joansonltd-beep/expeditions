@@ -36,7 +36,7 @@ export default function RotatingHero() {
       <Image src={photo.src} alt={photo.alt} fill priority sizes="100vw" className="object-cover" />
       {/* The photographer is credited on /credits, linked from the footer.
           The place name stays: it is what the photo is telling you. */}
-      <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/50">{photo.place}</p>
+      <p className="absolute bottom-2 right-3 z-10 text-[11px] text-white/70">{photo.place}</p>
     </>
   );
 }

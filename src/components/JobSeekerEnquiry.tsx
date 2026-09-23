@@ -11,7 +11,7 @@ import ConsultancyPaymentPanel from "@/components/ConsultancyPaymentPanel";
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
 
 const field =
-  "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-400 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
+  "w-full rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] text-slate-900 transition placeholder:text-slate-500 focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 
 // Submitting doesn't send anything yet: savePendingConsultation() holds the
 // answers and a $100 payment panel takes over. No backend, so it can't attach

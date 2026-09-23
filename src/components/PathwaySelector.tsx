@@ -130,7 +130,7 @@ export default function PathwaySelector({
           })}
         </ul>
 
-        {note ? <p className="mt-8 max-w-3xl text-sm text-navy/60">{note}</p> : null}
+        {note ? <p className="mt-8 max-w-3xl text-sm text-navy/70">{note}</p> : null}
       </Container>
     </section>
   );
