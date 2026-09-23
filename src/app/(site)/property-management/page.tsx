@@ -161,11 +161,14 @@ export default function PropertyManagementPage() {
 
           {/*
             Airbnb's own profile card, which it generates for hosts to share.
-            The figures on it are a snapshot and will move, so the caption
-            dates them rather than letting the page imply they are current
-            forever. The alt text carries the same numbers, because a card
-            that only exists as a picture proves nothing to a screen reader
-            or to a search engine.
+            The caption is only a date: that the figures are a snapshot is
+            obvious from it being a screenshot, and the panel above already
+            says Airbnb reassesses the status quarterly. Repeating that under
+            the card turned the proof into a disclaimer.
+
+            The alt text still carries the numbers, because a claim that only
+            exists inside a picture proves nothing to a screen reader or to a
+            search engine.
           */}
           <figure className="mt-8">
             <Image
@@ -177,8 +180,7 @@ export default function PropertyManagementPage() {
               className="mx-auto w-full max-w-[520px] rounded-2xl border border-navy/10"
             />
             <figcaption className="mt-3 text-center text-sm text-navy/60">
-              Airbnb host profile, September 2026: Superhost, 4.88 across 25 reviews, hosting for a year. Airbnb
-              reassesses the status quarterly, so treat the figures as of that date.
+              Airbnb host profile, September 2026
             </figcaption>
           </figure>
 
