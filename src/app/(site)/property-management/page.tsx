@@ -29,7 +29,7 @@ const MANAGEMENT_EMAIL = "info@expeditionswithjo.com";
 export const metadata: Metadata = {
   title: "Airbnb Property Management in Jamaica",
   description:
-    "A Superhost in Jamaica fixes the photos, the pricing, the listing and the reply times, then runs the property for no more than 20% of bookings. No booking, no fee.",
+    "A Superhost in Jamaica fixes the photos, the pricing, the listing and the reply times, then runs the property for a fee capped at 20% of bookings. No booking, no fee.",
   keywords: [
     "Airbnb property management Jamaica",
     "Airbnb management company Jamaica",
@@ -103,7 +103,7 @@ const SUITS = [
 const FAQS = [
   {
     q: "What does it cost?",
-    a: "No more than 20% of bookings, and the exact figure depends on the property. I don't get paid if you don't get stays. There is no monthly retainer and no fee for a quiet month, because I would rather earn my share by filling your calendar than charge you whether it works or not.",
+    a: "Capped at 20% of bookings, and the exact figure depends on the property. I don't get paid if you don't get stays. There is no monthly retainer and no fee for a quiet month, because I would rather earn my share by filling your calendar than charge you whether it works or not.",
   },
   {
     q: "20% is too much.",
@@ -162,7 +162,7 @@ export default function PropertyManagementPage() {
         title="Owners with slow Airbnb bookings, this one's for you"
         crumb="Property Management"
         intro="I'm a Superhost who recently moved to Jamaica, and I've been looking at a lot of listings lately that should be booking but aren't. I fix what is stopping them, then run the listing for a percentage of bookings."
-        footnote="Jamaica for now. No more than 20%, and I don't get paid if you don't get stays."
+        footnote="Jamaica for now. Capped at 20%, and I don't get paid if you don't get stays."
       />
 
       <Section>
@@ -288,7 +288,7 @@ export default function PropertyManagementPage() {
             What it costs
           </h2>
           <p className="mt-3 text-navy/75">
-            No more than <strong className="font-semibold text-navy">20% of your earnings</strong>, and the exact
+            <strong className="font-semibold text-navy">Capped at 20% of your earnings</strong>, and the exact
             figure depends on the property. No monthly retainer, no fee for a quiet month.{" "}
             <strong className="font-semibold text-navy">I don&rsquo;t get paid if you don&rsquo;t get stays.</strong>
           </p>
