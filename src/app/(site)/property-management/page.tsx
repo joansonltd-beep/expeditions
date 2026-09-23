@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost } from "@/components/ui";
 import Image from "next/image";
+import { Section, PageHeader, SectionHead, CheckList, btnPrimary, btnGhost } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import CtaButtons from "@/components/CtaButtons";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -14,14 +14,14 @@ import { SITE_URL } from "@/lib/siteUrl";
  * it. That is why it stays out of the top navigation: the four pathways are
  * one audience and this is another, and mixing them makes both weaker.
  *
- * The connective tissue is real, though, and the page says so out loud: the
- * diaspora owner with a place in Jamaica is the same person as the diaspora
- * couple marrying back home, and the Superhost record is what makes the
- * accommodation side of the business credible in the first place.
+ * Written in Jo's first person, from his own post, rather than the "we" the
+ * first draft used. That matters commercially as well as tonally: what is
+ * being sold here is one named Superhost's record, and "we" hides the only
+ * asset the page has.
  *
- * Written while the service is a demand test rather than a going concern. It
- * claims a Superhost rating on Jo's own hosting and nothing more: no portfolio,
- * no occupancy figures, no client count. Those go in when they are true.
+ * The rate is stated. Jo put "no more than 20%" in public before this page
+ * was written, so leaving it off would only have made the site the vaguer of
+ * the two places an owner could look.
  */
 
 const MANAGEMENT_EMAIL = "info@expeditionswithjo.com";
@@ -29,72 +29,97 @@ const MANAGEMENT_EMAIL = "info@expeditionswithjo.com";
 export const metadata: Metadata = {
   title: "Airbnb Property Management in Jamaica",
   description:
-    "Superhost-run Airbnb management for owners in Jamaica. Listing, pricing, guest messages, turnover and maintenance handled, for a percentage of what the property earns.",
+    "A Superhost in Jamaica fixes the photos, the pricing, the listing and the reply times, then runs the property for no more than 20% of bookings. No booking, no fee.",
   keywords: [
     "Airbnb property management Jamaica",
     "Airbnb management company Jamaica",
     "short term rental management Jamaica",
     "Airbnb co-host Jamaica",
     "manage my Airbnb in Jamaica",
+    "my Airbnb is not getting bookings",
     "overseas owner Airbnb Jamaica",
   ],
   alternates: { canonical: "/property-management" },
 };
 
-const WE_DO = [
-  "Set the listing up, or rebuild one that is not earning what it should",
-  "Photograph the property and write the listing so it reads like somewhere people want to stay",
-  "Price it week by week against what is actually happening in the area, rather than leaving one rate up all year",
-  "Answer every guest message, including the ones at two in the morning",
-  "Screen enquiries and handle the awkward ones before they become a booking you regret",
-  "Coordinate cleaning and turnover between stays",
-  "Arrange repairs and call out a plumber, an electrician or a handyman when something goes",
-  "Restock what runs out, from linens to light bulbs",
-  "Chase reviews, answer them, and keep the rating where it needs to be",
-  "Send you a statement showing what came in, what went out and what is yours",
+/** The four reasons a decent property sits empty, in the order they cost money. */
+const PROBLEMS = [
+  {
+    icon: "sparkles",
+    title: "The pictures",
+    text: "A picture usually speaks 1000 words, but the pictures are speaking like kindergarten pickney. Nice unit, good location, and photos that give a guest no reason to stop scrolling.",
+  },
+  {
+    icon: "banknote",
+    title: "The pricing",
+    text: "It doesn't match what similar units nearby are charging. I get that you want to earn as much as you can as fast as you can, but being a tourist doesn't mean unlimited $$$.",
+  },
+  {
+    icon: "tag",
+    title: "The title and description",
+    text: "They don't tell guests why they should pick you over the other forty places in the same search. A list of features is not a reason.",
+  },
+  {
+    icon: "message",
+    title: "The reply time",
+    text: "They finally do pick you, and then it's slow to no replies, so they book somewhere else. This one costs you bookings you had already won.",
+  },
 ];
 
-const WE_DO_NOT = [
-  "Own or buy the property. It stays yours, and so does the income after our share",
+const I_HANDLE = [
+  "Reshoot the property and rewrite the listing so it reads like somewhere people want to stay",
+  "Price it week by week against what similar units nearby are actually charging, instead of leaving one rate up all year",
+  "Answer every guest message, including the ones at two in the morning",
+  "Screen enquiries and handle the awkward ones before they become a booking you regret",
+  "Chase reviews, reply to them, and keep the rating where it needs to be",
+  "Send you a statement showing what came in, what went out, and what is yours",
+];
+
+const I_DO_NOT = [
+  "Own or buy your property. It stays yours, and so does the income after my share",
   "Guarantee occupancy or a monthly figure. Anyone who guarantees you a number on a short-term rental is guessing",
   "Control what Airbnb does. Rankings, fees and policy are theirs, and they change them",
-  "Handle your tax filing. We give you the statements; your accountant does the rest",
+  "Handle your tax filing. You get the statements; your accountant does the rest",
 ];
 
 const SUITS = [
   {
-    icon: "globe",
-    title: "You live abroad",
-    text: "New York, London, Toronto, and a property in Jamaica you cannot get to. Someone has to be on the ground, and it cannot be a cousin doing you a favour indefinitely.",
+    icon: "calculator",
+    title: "Your listing has gone quiet",
+    text: "It used to book and now it doesn't, or it never really did. Literally $0.00 some months, while the bills carry on as normal.",
   },
   {
     icon: "home",
-    title: "Family property sitting idle",
-    text: "A house nobody lives in full-time, costing money in rates and upkeep and earning nothing. It can pay for itself, and often for more than itself.",
+    title: "You are new and stuck",
+    text: "Months in and still waiting on a first booking. The first one is the hardest, because you have no reviews to show and no ranking to stand on.",
   },
   {
-    icon: "banknote",
-    title: "A listing that is underperforming",
-    text: "You are already on Airbnb, the reviews are fine, and the calendar still has gaps. Usually that is pricing and response time rather than the property.",
+    icon: "globe",
+    title: "You are not in Jamaica",
+    text: "New York, London, Toronto, and a property you cannot get to. Someone has to be on the ground, and it cannot be a cousin doing you a favour indefinitely.",
   },
 ];
 
 const FAQS = [
   {
     q: "What does it cost?",
-    a: "A percentage of what the property earns, so we only do well when it does. The exact percentage depends on the property, how much work it needs at the start, and whether we are running turnover as well as guest communication, so it is quoted once we have seen the place rather than guessed at from a website.",
+    a: "No more than 20% of bookings, and the exact figure depends on the property. I don't get paid if you don't get stays. There is no monthly retainer and no fee for a quiet month, because I would rather earn my share by filling your calendar than charge you whether it works or not.",
+  },
+  {
+    q: "20% is too much.",
+    a: "I hear that one a lot. Two things. It's based on the property, so it is not 20% across the board. And it's 20% of bookings you aren't getting right now. An empty unit still costs you light bill, internet and mortgage every month, and 100% of nothing is nothing.",
   },
   {
     q: "What does Superhost actually mean?",
-    a: "It is Airbnb's own status, not a title anyone can award themselves. It requires a high overall rating, a strong response rate, a low cancellation rate and a minimum number of completed stays, and Airbnb reassesses it every three months. It is a record of how guests were actually treated, kept by the platform rather than by us.",
+    a: "It is Airbnb's own status, not a title anyone can award themselves. It takes a high guest rating, a fast response rate, almost no cancellations and a minimum number of completed stays, and Airbnb reassesses it every three months. It is a record of how guests were actually treated, kept by the platform rather than by me.",
   },
   {
     q: "Why Jamaica only?",
-    a: "Because running a property well is a local job. It means knowing which cleaner turns up, which handyman answers the phone on a Sunday, and what a comparable place two streets over is charging this week. We would rather do that properly in one country than badly in twelve. Other CARICOM countries follow once the first ones are working.",
+    a: "Running a property well is a local job. It means knowing which cleaner turns up, which handyman answers the phone on a Sunday, and what a comparable place two streets over is charging this week. I would rather do that properly in one country than badly in twelve. Other CARICOM countries follow once Jamaica is working.",
   },
   {
     q: "Do I have to use Airbnb?",
-    a: "Airbnb is where the experience is, so it is where we start. If the property suits other short-stay platforms as well, we can list there too, but we will say so rather than quietly spreading it thin.",
+    a: "Airbnb is where my experience is, so it is where I start. If the property suits other short-stay platforms too, I can list there as well, but I will say so rather than quietly spreading it thin.",
   },
   {
     q: "What if I want to use the property myself?",
@@ -102,7 +127,7 @@ const FAQS = [
   },
   {
     q: "How do I know what is coming in?",
-    a: "A statement showing bookings, payouts, cleaning, maintenance and our share. Airbnb also shows you everything on your own account, which stays in your name. Nothing about the money is a thing you have to take our word for.",
+    a: "A statement showing bookings, payouts, cleaning, maintenance and my share. Airbnb also shows you everything on your own account, which stays in your name. Nothing about the money is something you have to take my word for.",
   },
 ];
 
@@ -134,28 +159,51 @@ export default function PropertyManagementPage() {
 
       <PageHeader
         icon={<Icon name="home" className="h-7 w-7 text-brand" />}
-        title="Airbnb property management in Jamaica"
+        title="Owners with slow Airbnb bookings, this one's for you"
         crumb="Property Management"
-        intro="You own a place in Jamaica and you are not in Jamaica. We run it as a short-stay rental, from the listing and the pricing to the guest at two in the morning and the plumber on Sunday, for a percentage of what it earns."
-        footnote="Jamaica for now. We would rather do one country properly than twelve badly."
+        intro="I'm a Superhost who recently moved to Jamaica, and I've been looking at a lot of listings lately that should be booking but aren't. I fix what is stopping them, then run the listing for a percentage of bookings."
+        footnote="Jamaica for now. No more than 20%, and I don't get paid if you don't get stays."
       />
 
       <Section>
+        <SectionHead
+          lead
+          title="Why your listing isn't booking"
+          intro="Nice units, good locations, and four things going wrong. Usually all four at once."
+        />
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
+          {PROBLEMS.map((p) => (
+            <div key={p.title} className="rounded-2xl border border-navy/10 bg-white p-7">
+              <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-brand">
+                <Icon name={p.icon as "sparkles"} className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-navy">{p.title}</h3>
+              <p className="mt-2 text-navy/70">{p.text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-navy/75">
+          I help owners fix all of that, then manage the listing for a percentage of bookings.
+        </p>
+      </Section>
+
+      <Section alt>
         <div className="mx-auto max-w-3xl">
           <div className="rounded-2xl border border-brand/25 bg-brand-soft p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">The short version</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Why me</p>
             <p className="mt-3 text-xl font-semibold leading-snug text-navy">
-              Joanson Baptiste James is an Airbnb Superhost, and Expeditions With Jo manages property on that record.
+              Guests see the property is run by a Superhost, and that title lends the listing an extra bit of
+              credibility, which makes them more willing to book.
             </p>
             <p className="mt-4 text-navy/75">
-              Superhost is Airbnb&rsquo;s own status rather than a badge anyone can hand themselves. It takes a high
-              guest rating, a fast response rate, almost no cancellations and a minimum number of completed stays, and
-              Airbnb checks it again every three months. It is not a marketing claim. It is a record of how guests were
-              actually treated, kept by the platform.
+              I have an over 4.8 rating with over 20 positive reviews on my existing portfolio, and I&rsquo;m willing
+              to extend all that good will to you.
             </p>
             <p className="mt-4 text-navy/75">
-              That is the whole pitch. Your property is run by someone the platform already rates, in the country it
-              sits in.
+              Superhost is Airbnb&rsquo;s own status, not a badge anyone can hand themselves. It takes a high guest
+              rating, a fast response rate, almost no cancellations and a minimum number of completed stays, and Airbnb
+              checks it again every three months. It is a record of how guests were actually treated, kept by the
+              platform.
             </p>
           </div>
 
@@ -163,8 +211,7 @@ export default function PropertyManagementPage() {
             Airbnb's own profile card, which it generates for hosts to share.
             The caption is only a date: that the figures are a snapshot is
             obvious from it being a screenshot, and the panel above already
-            says Airbnb reassesses the status quarterly. Repeating that under
-            the card turned the proof into a disclaimer.
+            says Airbnb reassesses the status quarterly.
 
             The alt text still carries the numbers, because a claim that only
             exists inside a picture proves nothing to a screen reader or to a
@@ -183,45 +230,32 @@ export default function PropertyManagementPage() {
               Airbnb host profile, September 2026
             </figcaption>
           </figure>
+        </div>
+      </Section>
 
-          <div className="mt-10">
-            <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
-              Why a relocation consultancy is doing this
-            </h2>
-            <p className="mt-3 text-navy/75">
-              It is closer to the day job than it looks. This business already books people into places to stay across
-              the region, which means knowing what makes a property worth staying in and what makes a guest complain.
-              The Superhost rating came from the other side of that same counter.
-            </p>
-            <p className="mt-4 text-navy/75">
-              And the owner we are talking to is usually someone we already know. The person with a house in Jamaica
-              and a life in Toronto is the same person planning a wedding back home, or working out whether they could
-              move back. Property management is the thing they need first, because the house is costing them money
-              right now.
+      <Section>
+        <SectionHead lead title="What I do with your listing" />
+        <div className="mx-auto max-w-3xl">
+          <CheckList items={I_HANDLE} />
+          <div className="mt-8 rounded-2xl border border-navy/10 bg-white p-7">
+            <h3 className="text-lg font-semibold text-navy">Want to sit back and do nothing at all?</h3>
+            <p className="mt-2 text-navy/75">
+              For owners who just want the property to earn for them, full management is offered as well: cleaning,
+              repairs, restocking, the lot. That one is case by case, because it depends on where the property is and
+              what it needs.
             </p>
           </div>
         </div>
       </Section>
 
       <Section alt>
-        <SectionHead
-          lead
-          title="What we handle"
-          intro="All of it, unless you want to keep a piece of it yourself. Plenty of owners keep the cleaning arrangement they already trust, and that is fine."
-        />
-        <div className="mx-auto max-w-3xl">
-          <CheckList items={WE_DO} />
-        </div>
-      </Section>
-
-      <Section>
         <div className="mx-auto max-w-3xl">
           <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
-            What we do not do
+            What I don&rsquo;t do
           </h2>
           <p className="mt-3 text-navy/75">Being straight with you is cheaper for both of us than a surprise later.</p>
           <ul className="mt-6 grid gap-3">
-            {WE_DO_NOT.map((item, i) => (
+            {I_DO_NOT.map((item, i) => (
               <li key={i} className="relative pl-7 text-navy/75">
                 <span aria-hidden="true" className="absolute left-0 top-0 font-semibold text-accent">
                   &times;
@@ -233,11 +267,8 @@ export default function PropertyManagementPage() {
         </div>
       </Section>
 
-      <Section alt>
-        <SectionHead
-          title="Who this suits"
-          intro="Three situations, and they overlap more often than not."
-        />
+      <Section>
+        <SectionHead title="Who this is for" />
         <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-3">
           {SUITS.map((s) => (
             <div key={s.title} className="rounded-2xl border border-navy/10 bg-white p-6">
@@ -251,32 +282,58 @@ export default function PropertyManagementPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section alt>
         <div className="mx-auto max-w-3xl">
           <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
-            How the money works
+            What it costs
           </h2>
           <p className="mt-3 text-navy/75">
-            We take a percentage of what the property earns. Not a monthly retainer, not a fee whether it books or not.
-            If the calendar is empty we have earned nothing, which is the arrangement that keeps us honest about
-            pricing.
+            No more than <strong className="font-semibold text-navy">20% of your earnings</strong>, and the exact
+            figure depends on the property. No monthly retainer, no fee for a quiet month.{" "}
+            <strong className="font-semibold text-navy">I don&rsquo;t get paid if you don&rsquo;t get stays.</strong>
           </p>
-          <p className="mt-4 text-navy/75">
-            The percentage depends on the property: how much work it needs before it can be listed, whether we are
-            running turnover as well as guest communication, and how many bedrooms there are to keep filled. It gets
-            quoted after we have seen the place, because a number invented from a website is a number that changes
-            later, and nobody enjoys that conversation.
-          </p>
-          <p className="mt-4 text-navy/75">
+
+          <div className="mt-6 rounded-2xl border border-navy/10 bg-white p-7">
+            <h3 className="text-lg font-semibold text-navy">&ldquo;20% is too much&rdquo;</h3>
+            <p className="mt-2 text-navy/75">
+              Whenever I mention the percentage, someone says that. I get it. But it&rsquo;s based on the property, so
+              it is not 20% across the board, and it&rsquo;s 20% (max) of bookings you aren&rsquo;t getting right now.
+            </p>
+            <p className="mt-4 text-navy/75">
+              An empty unit still costs you light bill, internet and mortgage every month. I&rsquo;d rather earn my
+              share by filling your calendar than charge you a flat fee whether it works or not.
+            </p>
+          </div>
+
+          <p className="mt-6 text-navy/75">
             Cleaning, laundry, repairs and supplies are the property&rsquo;s costs and come out of what it earns. They
             show on the statement with receipts, at what they cost, with nothing added on top.
           </p>
+
           <div className="mt-6 rounded-2xl border border-dashed border-navy/20 bg-sand/60 p-6">
             <p className="text-sm text-navy/75">
-              The Airbnb account stays in your name. The payouts go to your bank, not ours. We are running the
+              The Airbnb account stays in your name. The payouts go to your bank, not mine. I&rsquo;m running the
               property, not standing between you and your money.
             </p>
           </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
+            Why a relocation consultancy is doing this
+          </h2>
+          <p className="mt-3 text-navy/75">
+            It is closer to the day job than it looks. I already book people into places to stay across the region,
+            which means I know what makes a property worth staying in and what makes a guest complain. The Superhost
+            rating came from the other side of that same counter.
+          </p>
+          <p className="mt-4 text-navy/75">
+            And the owner is usually someone I already know. The person with a house in Jamaica and a life in Toronto
+            is the same person planning a wedding back home, or working out whether they could move back. This is the
+            thing they need first, because the house is costing them money right now.
+          </p>
         </div>
       </Section>
 
@@ -297,27 +354,27 @@ export default function PropertyManagementPage() {
       <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-[1.6rem] font-bold leading-tight tracking-tight text-navy sm:text-[1.9rem]">
-            We are taking on a small number of properties to start
+            If your listing has been quiet, tell me about it
           </h2>
           <p className="mt-4 text-navy/75">
-            This is new, and we would rather run a few properties properly than sign up thirty and let the ratings
-            slide. If you have a place in Jamaica sitting empty, tell us where it is and what condition it is in, and
-            we will tell you honestly whether it is worth listing and roughly what it could do.
+            Whether it&rsquo;s literally $0.00 income, or you&rsquo;re new and you&rsquo;ve been struggling for months
+            to get that first booking. Tell me where the property is and what condition it&rsquo;s in, and I&rsquo;ll
+            tell you honestly whether it is worth listing and roughly what it could do.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <Link href="/tools/list-my-property" className={btnPrimary}>
+              Answer a few questions about your property
+            </Link>
             <a
               href={`mailto:${MANAGEMENT_EMAIL}?subject=${encodeURIComponent(
                 "Airbnb property management enquiry"
               )}&body=${encodeURIComponent(
                 "Where the property is:\nHow many bedrooms:\nIs it already on Airbnb:\nWhat condition it is in:\nAnything else I should know:\n"
               )}`}
-              className={btnPrimary}
+              className={btnGhost}
             >
-              Email about your property
+              Or just email me
             </a>
-            <Link href="/tools/list-my-property" className={btnGhost}>
-              Answer a few questions first
-            </Link>
           </div>
           <div className="mt-8">
             <CtaButtons
