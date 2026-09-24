@@ -38,7 +38,7 @@ export default function ToolsPage() {
     <>
       <PageHeader
         icon={<Icon name="sparkles" className="h-7 w-7 text-brand" />}
-        title="Free tools for your move"
+        title="Free tools"
         crumb="Tools"
         intro="Small, free tools that come up constantly, whether you are planning a move within CARICOM or working out what to do with a property back home."
       />
