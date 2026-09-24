@@ -42,15 +42,12 @@ export default function HeroSection({
           <h1 className="font-display text-[2.1rem] font-bold leading-[1.1] text-white sm:text-5xl">{headline}</h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">{subcopy}</p>
 
+          {/* One action here. The consultation used to sit beside it and
+              again at the foot of the page, so the hero asked twice and led
+              with neither. */}
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/find-my-pathway" className={btnPrimary}>
               Work out what I need to do first
-            </Link>
-            <Link
-              href="/services#consultation"
-              className="inline-flex items-center justify-center rounded-full border border-white/45 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-            >
-              Book a Move Planning Consultation
             </Link>
           </div>
 

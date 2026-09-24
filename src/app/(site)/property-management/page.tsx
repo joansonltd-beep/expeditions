@@ -342,7 +342,7 @@ export default function PropertyManagementPage() {
         <div className="mx-auto max-w-3xl">
           <dl className="grid gap-5">
             {FAQS.map((f) => (
-              <div key={f.q} className="rounded-2xl border border-navy/10 bg-white p-6">
+              <div key={f.q} className="border-b border-navy/15 py-5">
                 <dt className="font-semibold text-navy">{f.q}</dt>
                 <dd className="mt-2 text-navy/70">{f.a}</dd>
               </div>

@@ -183,7 +183,7 @@ export default function WeddingGuestsPage() {
         <SectionHead eyebrow="Questions" title="What guests ask" />
         <div className="mx-auto grid max-w-3xl gap-6">
           {FAQS.map((f) => (
-            <div key={f.q} className="rounded-2xl border border-slate-200 bg-white p-6">
+            <div key={f.q} className="border-b border-navy/15 py-5">
               <h3 className="text-lg font-bold text-slate-900">{f.q}</h3>
               <p className="mt-2 text-slate-600">{f.a}</p>
             </div>

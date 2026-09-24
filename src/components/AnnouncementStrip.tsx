@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { currentIndependence, formatDayMonth } from "@/lib/independenceData";
+import { currentIndependence, currentObservance, formatDayMonth } from "@/lib/independenceData";
 
 /**
  * The slim strip above the header.
@@ -16,6 +16,18 @@ import { currentIndependence, formatDayMonth } from "@/lib/independenceData";
 type Announcement = { text: string; href: string; label: string; flag: string };
 
 function announcement(): Announcement | null {
+  // A one-day observance outranks an independence day still ten days out.
+  const obs = currentObservance();
+  if (obs) {
+    const { observance, years } = obs;
+    return {
+      text: `Happy ${observance.title}, ${observance.name} · ${years} years a republic`,
+      href: `/destinations/${observance.slug}`,
+      label: "Read the country guide",
+      flag: observance.slug,
+    };
+  }
+
   const current = currentIndependence();
   if (current) {
     const { day } = current;

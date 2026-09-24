@@ -348,7 +348,7 @@ export default async function StudyPage() {
         <SectionHead eyebrow="FAQ" title="Common questions about studying in CARICOM" />
         <div className="mx-auto grid max-w-3xl gap-4">
           {STUDY_FAQS.map((f) => (
-            <details key={f.q} className="group rounded-2xl border border-slate-200 bg-white p-6">
+            <details key={f.q} className="group border-b border-navy/15 py-5">
               <summary className="cursor-pointer list-none font-semibold text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
                 <span className="flex items-start justify-between gap-4">
                   {f.q}

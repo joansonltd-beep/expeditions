@@ -183,3 +183,47 @@ export function currentFlagTheme(now: Date = new Date()): string | null {
   if (!current) return null;
   return FLAG_THEMES[current.day.slug]?.theme ?? null;
 }
+
+
+/**
+ * National days that are not independence days.
+ *
+ * Trinidad and Tobago gained independence on 31 August 1962 and became a
+ * republic on 24 September 1976, and observes both. The second is a separate
+ * public holiday, not a second independence day, so it gets its own list
+ * rather than being bent into CARICOM_INDEPENDENCE.
+ *
+ * These run for the day itself and nothing either side. An independence day
+ * gets ten days of run-up because people plan travel around it; a republic day
+ * is marked, not anticipated.
+ */
+export type Observance = {
+  slug: string; // matches COUNTRY_GUIDES
+  name: string;
+  title: string; // "Republic Day"
+  day: number;
+  month: number;
+  year: number; // the year it began
+};
+
+export const CARICOM_OBSERVANCES: Observance[] = [
+  {
+    slug: "trinidad-and-tobago",
+    name: "Trinidad and Tobago",
+    title: "Republic Day",
+    day: 24,
+    month: 9,
+    year: 1976,
+  },
+];
+
+/** The observance falling today, if any. Today only, in Atlantic Standard Time. */
+export function currentObservance(now: Date = new Date()): { observance: Observance; years: number } | null {
+  const t = astToday(now);
+  for (const o of CARICOM_OBSERVANCES) {
+    if (t.month === o.month && t.day === o.day) {
+      return { observance: o, years: t.year - o.year };
+    }
+  }
+  return null;
+}

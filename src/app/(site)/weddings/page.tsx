@@ -175,7 +175,7 @@ export default function MarryPage() {
       {/* THE TWO PATHS */}
       <Section alt>
         <SectionHead
-lead
+          lead
           eyebrow="Who this is for"
           title="Two different weddings"
           intro="Both end at the same registry counter, but they start in very different places."
@@ -252,8 +252,8 @@ lead
           title="Three ways people use me"
           intro="Most couples want the first. Plenty end up wanting all three."
         />
-        <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
-          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+        <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3 lg:gap-10">
+          <div className="flex flex-col border-t-2 border-brand pt-5 lg:border-l lg:border-t-0 lg:border-navy/15 lg:pl-6 lg:pt-0 lg:first:border-l-0 lg:first:pl-0">
             <h3 className="text-lg font-bold text-slate-900">The couple&rsquo;s wedding plan</h3>
             <p className="mt-2 text-sm text-slate-600">
               Everything between deciding to do it and being legally married.
@@ -266,7 +266,7 @@ lead
             </ul>
           </div>
 
-          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+          <div className="flex flex-col border-t-2 border-brand pt-5 lg:border-l lg:border-t-0 lg:border-navy/15 lg:pl-6 lg:pt-0 lg:first:border-l-0 lg:first:pl-0">
             <h3 className="text-lg font-bold text-slate-900">Guest travel and room blocks</h3>
             <p className="mt-2 text-sm text-slate-600">
               The part that quietly eats your evenings if nobody takes it off you.
@@ -282,7 +282,7 @@ lead
             </Link>
           </div>
 
-          <div className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+          <div className="flex flex-col border-t-2 border-brand pt-5 lg:border-l lg:border-t-0 lg:border-navy/15 lg:pl-6 lg:pt-0 lg:first:border-l-0 lg:first:pl-0">
             <h3 className="text-lg font-bold text-slate-900">Staying on afterwards</h3>
             <p className="mt-2 text-sm text-slate-600">
               You are already in the region. Going home on the Monday is a waste of a flight.
@@ -415,7 +415,7 @@ lead
         <SectionHead eyebrow="Questions" title="The ones people actually ask" />
         <div className="mx-auto grid max-w-3xl gap-6">
           {MARRY_FAQS.map((f) => (
-            <div key={f.q} className="rounded-2xl border border-slate-200 bg-white p-6">
+            <div key={f.q} className="border-b border-navy/15 py-5">
               <h3 className="text-lg font-bold text-slate-900">{f.q}</h3>
               <p className="mt-2 text-slate-600">{f.a}</p>
             </div>
