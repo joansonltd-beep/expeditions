@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .display { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Manrope', system-ui, sans-serif; }
+    .script { font-family: 'Caveat', cursive; }
+    a { color: inherit; text-decoration: none; }
+    .panel { position: relative; display: flex; flex-direction: column; height: 816px; overflow: hidden; background: #ffffff; }
+    .h1 { font-family: 'Fraunces', Georgia, serif; margin: 0; font-weight: 700; line-height: 1.08; color: #0e2a3a; }
+    .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .wave { display: block; position: absolute; left: 0; width: 100%; height: 48px; z-index: 2; }
+    .graf { position: absolute; margin: 0; z-index: 4; font-family: 'Caveat', cursive; font-weight: 700; line-height: 1; white-space: nowrap; }
+    .flagrow { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; }
+    .flagrow svg { width: 33px; height: auto; display: block; border-radius: 1.5px; box-shadow: 0 0 0 0.5px rgba(14,42,58,0.22); }
+  </style>
+</helmet>
+
+<div class="sans" style="width: 1056px; height: 816px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #ffffff;">
+
+  <!-- ===== PANEL 1 — INSIDE FLAP ===== -->
+  <div class="panel" style="border-right: 1px dashed rgba(14,42,58,0.16);">
+    <div style="flex: 1; padding: 36px 30px 0;">
+      <h2 class="h1" style="font-size: 29px;">Start your<br>CARICOM journey</h2>
+      <p style="margin: 13px 0 0; font-size: 14.5px; line-height: 1.5; color: rgba(14,42,58,0.78);">
+        Tell us where you're starting and where you want to go. We'll work out what to check first, then organise the rest around it.
+      </p>
+
+      <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 13px;">
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 27px; height: 27px; border-radius: 50%; background: #12a3ae; display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 6.5"/></svg>
+          </span>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.4; color: #0e2a3a;"><strong>Free Move Basics guides</strong><br><span style="color: rgba(14,42,58,0.7);">on the website</span></p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 27px; height: 27px; border-radius: 50%; background: #c9832a; display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 6.5"/></svg>
+          </span>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.4; color: #0e2a3a;"><strong>Move Planning Consultation</strong><br><span style="color: rgba(14,42,58,0.7);">$100, to map your route</span></p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 27px; height: 27px; border-radius: 50%; background: #d9663a; display: flex; align-items: center; justify-content: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 6.5"/></svg>
+          </span>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.4; color: #0e2a3a;"><strong>End-to-end support</strong><br><span style="color: rgba(14,42,58,0.7);">papers through arrival</span></p>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; background: #f4f7f8; border-radius: 12px; padding: 13px 15px;">
+        <p style="margin: 0; font-size: 12.5px; line-height: 1.5; color: rgba(14,42,58,0.72);">
+          We explain the process and organise the arrangements. The offices, schools, employers and banks make their own decisions.
+        </p>
+      </div>
+
+      <div style="margin-top: 14px; border-top: 1px solid rgba(14,42,58,0.14); padding-top: 11px;">
+        <p style="margin: 0; font-size: 10.5px; line-height: 1.45; color: rgba(14,42,58,0.68);">
+          <strong style="color: #0b6b72;">*Logistics</strong> mainly covers flights and somewhere to stay. It can also include getting to know the country, working out public transport, sorting a driver's licence, and knowing where the groceries, hospitals and everything else you'll need actually are. All case by case, based on what comes out of the consultation.
+        </p>
+      </div>
+    </div>
+
+    <div style="position: relative; height: 205px;">
+      <img src="pic-barbados.jpg" alt="Crane Beach, Barbados" class="photo">
+      <svg class="wave" style="top: 0;" viewBox="0 0 400 48" preserveAspectRatio="none">
+        <path d="M0,24 C90,50 170,2 260,17 C320,27 360,9 400,19 L400,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== PANEL 2 — BACK PANEL ===== -->
+  <div class="panel" style="border-right: 1px dashed rgba(14,42,58,0.16);">
+    <div style="padding: 46px 30px 0; text-align: center;">
+      <img src="logo.png" alt="Expeditions With Jo" style="width: 178px; height: auto;">
+    </div>
+
+    <div style="position: relative; height: 268px; margin-top: 16px;">
+      <img src="pic-airport.jpg" alt="Maurice Bishop International Airport, Grenada" class="photo">
+      <svg class="wave" style="top: 0;" viewBox="0 0 400 48" preserveAspectRatio="none">
+        <path d="M0,24 C90,50 170,2 260,17 C320,27 360,9 400,19 L400,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="wave" style="bottom: 0;" viewBox="0 0 400 48" preserveAspectRatio="none">
+        <path d="M0,20 C70,3 140,41 220,27 C290,15 350,38 400,25 L400,48 L0,48 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <div style="flex: 1; padding: 10px 30px 24px; display: flex; flex-direction: column; justify-content: center;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#12a3ae" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+          <span style="font-size: 14px; font-weight: 600; color: #0e2a3a;">expeditionswithjo.com</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#12a3ae" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <span style="font-size: 13.5px; font-weight: 600; color: #0e2a3a;">info@expeditionswithjo.com</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 11px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#25a35a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span style="font-size: 15px; font-weight: 800; line-height: 1.4; color: #0e2a3a;">
+            868-723-6644 <span style="font-size: 10.5px; font-weight: 600; color: rgba(14,42,58,0.55);">Trinidad</span><br>
+            876-210-9898 <span style="font-size: 10.5px; font-weight: 600; color: rgba(14,42,58,0.55);">Jamaica</span>
+          </span>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; display: flex; align-items: center; gap: 12px;">
+        <img src="qr.png" alt="Scan to get started" style="width: 62px; height: 62px; flex-shrink: 0;">
+        <p style="margin: 0; font-size: 13px; line-height: 1.45; color: #0e2a3a;"><strong>Scan to get started.</strong><br><span style="color: rgba(14,42,58,0.7);">Tell us about your move.</span></p>
+      </div>
+
+      <div class="flagrow" style="margin-top: 14px;">
+        <!-- Trinidad and Tobago -->
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="300" fill="#CE1126"/>
+          <polygon points="0,0 160,0 500,300 340,300" fill="#ffffff"/>
+          <polygon points="26,0 134,0 474,300 366,300" fill="#000000"/>
+        </svg>
+        <!-- Grenada -->
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="300" fill="#CE1126"/>
+          <polygon points="40,40 460,40 250,150" fill="#FCD116"/>
+          <polygon points="40,260 460,260 250,150" fill="#FCD116"/>
+          <polygon points="40,40 40,260 250,150" fill="#007A5E"/>
+          <polygon points="460,40 460,260 250,150" fill="#007A5E"/>
+          <circle cx="250" cy="150" r="46" fill="#CE1126"/>
+          <circle cx="110" cy="150" r="24" fill="#FCD116"/>
+          <path d="M110,126 A24,24 0 0 1 110,174 Z" fill="#CE1126"/>
+          <g fill="#FCD116">
+            <g transform="translate(125,20) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(250,20) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(375,20) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(125,280) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(250,280) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(375,280) scale(15)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(250,150) scale(28)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+          </g>
+        </svg>
+        <!-- Jamaica -->
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="300" fill="#000000"/>
+          <polygon points="0,0 600,0 300,150" fill="#009B3A"/>
+          <polygon points="0,300 600,300 300,150" fill="#009B3A"/>
+          <path d="M0,0 L600,300 M600,0 L0,300" stroke="#FED100" stroke-width="52" stroke-linecap="square" fill="none"/>
+        </svg>
+        <!-- Barbados -->
+        <svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="450" height="300" fill="#00267F"/>
+          <rect x="150" width="150" height="300" fill="#FFC726"/>
+          <g fill="#000000">
+            <polygon points="225,46 236,112 214,112"/>
+            <polygon points="181,68 190,112 172,112"/>
+            <polygon points="269,68 278,112 260,112"/>
+            <rect x="166" y="112" width="118" height="15"/>
+            <polygon points="212,127 238,127 232,250 218,250"/>
+          </g>
+        </svg>
+        <!-- Guyana -->
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="300" fill="#009E49"/>
+          <polygon points="0,0 500,150 0,300" fill="#ffffff"/>
+          <polygon points="0,16 462,150 0,284" fill="#FCD116"/>
+          <polygon points="0,0 250,150 0,300" fill="#000000"/>
+          <polygon points="0,18 220,150 0,282" fill="#CF142B"/>
+        </svg>
+        <!-- Saint Lucia -->
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="300" fill="#66CCFF"/>
+          <polygon points="300,44 402,256 198,256" fill="#ffffff"/>
+          <polygon points="300,44 379,256 221,256" fill="#000000"/>
+          <polygon points="300,150 402,256 198,256" fill="#FCD116"/>
+        </svg>
+      </div>
+
+      <div class="flagrow" style="margin-top: 7px;">
+        <!-- St. Vincent and the Grenadines -->
+        <svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="450" height="300" fill="#0058AA"/>
+          <rect x="112" width="226" height="300" fill="#FCD116"/>
+          <rect x="338" width="112" height="300" fill="#078930"/>
+          <g fill="#078930">
+            <polygon points="188,90 208,120 188,150 168,120"/>
+            <polygon points="287,90 307,120 287,150 267,120"/>
+            <polygon points="237,170 257,200 237,230 217,200"/>
+          </g>
+        </svg>
+        <!-- Antigua and Barbuda -->
+        <svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+          <clipPath id="agbV"><polygon points="0,0 450,0 225,300"/></clipPath>
+          <rect width="450" height="300" fill="#CE1126"/>
+          <g clip-path="url(#agbV)">
+            <rect width="450" height="110" fill="#000000"/>
+            <rect y="110" width="450" height="56" fill="#0072C6"/>
+            <rect y="166" width="450" height="134" fill="#ffffff"/>
+          </g>
+          <path d="M168,110 A57,57 0 0 1 282,110 Z" fill="#FCD116"/>
+        </svg>
+        <!-- St. Kitts and Nevis -->
+        <svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="0,0 450,0 0,300" fill="#009E49"/>
+          <polygon points="450,0 450,300 0,300" fill="#CE1126"/>
+          <polygon points="0,240 450,-60 450,60 0,360" fill="#FCD116"/>
+          <polygon points="0,262 450,-38 450,38 0,338" fill="#000000"/>
+          <g fill="#ffffff">
+            <g transform="translate(140,207) scale(28)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(300,100) scale(28)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+          </g>
+        </svg>
+        <!-- Dominica -->
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="600" height="300" fill="#006B3F"/>
+          <rect y="120" width="600" height="20" fill="#FCD116"/>
+          <rect y="140" width="600" height="20" fill="#000000"/>
+          <rect y="160" width="600" height="20" fill="#ffffff"/>
+          <rect x="270" width="20" height="300" fill="#FCD116"/>
+          <rect x="290" width="20" height="300" fill="#000000"/>
+          <rect x="310" width="20" height="300" fill="#ffffff"/>
+          <circle cx="300" cy="150" r="62" fill="#D41C30"/>
+          <g fill="#007A33">
+            <g transform="translate(300,102) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(328,111) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(346,135) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(346,165) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(328,189) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(300,198) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(272,189) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(254,165) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(254,135) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+            <g transform="translate(272,111) scale(8)"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+          </g>
+          <path d="M300,120 C312,132 318,142 318,154 C318,168 310,178 300,182 C290,178 282,168 282,154 C282,142 288,132 300,120 Z" fill="#4B2E83"/>
+        </svg>
+        <!-- Belize -->
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="300" fill="#003F87"/>
+          <rect width="500" height="26" fill="#CE1126"/>
+          <rect y="274" width="500" height="26" fill="#CE1126"/>
+          <circle cx="250" cy="150" r="110" fill="#ffffff"/>
+          <circle cx="250" cy="150" r="99" fill="none" stroke="#289400" stroke-width="22"/>
+          <path d="M250,96 C262,116 276,128 276,146 C276,160 264,170 250,170 C236,170 224,160 224,146 C224,128 238,116 250,96 Z" fill="#289400"/>
+          <rect x="244" y="166" width="12" height="38" fill="#6B4A2B"/>
+        </svg>
+        <!-- Suriname -->
+        <svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="450" height="300" fill="#377E3F"/>
+          <rect y="60" width="450" height="30" fill="#ffffff"/>
+          <rect y="90" width="450" height="120" fill="#B40A2D"/>
+          <rect y="210" width="450" height="30" fill="#ffffff"/>
+          <g transform="translate(225,150) scale(46)" fill="#ECC81D"><path d="M0,-1 L0.2245,-0.309 L0.951,-0.309 L0.363,0.118 L0.588,0.809 L0,0.382 L-0.588,0.809 L-0.363,0.118 L-0.951,-0.309 L-0.2245,-0.309 Z"/></g>
+        </svg>
+      </div>
+
+      <p style="margin: 12px 0 0; font-size: 7px; line-height: 1.45; color: rgba(14,42,58,0.42);">
+        Photographs via Wikimedia Commons: Crane Beach, Barbados (Johnmartindavies, CC BY-SA 3.0); Pigeon Point, Tobago (Kp93, CC BY-SA 3.0); The Pitons, Saint Lucia (Aneil Lutchman, CC BY-SA 2.0); Grand Anse Beach, Grenada (Varun Kapoor, CC BY 3.0); Tobago Cays, St. Vincent and the Grenadines (Iain Grant, CC BY-SA 3.0); Maurice Bishop International Airport, Grenada (Estormiz, public domain).
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== PANEL 3 — FRONT COVER ===== -->
+  <div class="panel">
+    <div style="position: relative; height: 566px;">
+      <img src="pic-tobago.jpg" alt="Pigeon Point, Tobago" class="photo">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,42,58,0.74) 0%, rgba(14,42,58,0.46) 40%, rgba(14,42,58,0.2) 62%, rgba(14,42,58,0) 82%);"></div>
+      <div style="position: absolute; top: 0; left: 0; right: 0; padding: 44px 30px 0;">
+        <h1 class="h1" style="font-size: 36px; color: #ffffff;">Move across<br>CARICOM with<br><span class="display" style="color: #ffd27a; font-style: italic;">confidence</span></h1>
+        <p style="margin: 18px 0 0; font-size: 16.5px; font-weight: 700; color: #ffffff;">Visit &middot; Work &middot; Study &middot; Marry</p>
+        <p style="margin: 6px 0 0; font-size: 15px; line-height: 1.45; color: #ffffff;">
+          With a clear plan, and someone<br>who's done it before.
+        </p>
+      </div>
+      <svg class="wave" style="bottom: 0; height: 56px;" viewBox="0 0 400 56" preserveAspectRatio="none">
+        <path d="M0,24 C70,4 140,48 220,33 C290,20 350,44 400,29 L400,56 L0,56 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <div style="flex: 1; padding: 16px 30px 24px; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <img src="logo.png" alt="Expeditions With Jo" style="width: 160px; height: auto;">
+
+      <div style="margin-top: auto; width: 100%; display: flex; align-items: center; justify-content: center; gap: 12px;">
+        <img src="qr.png" alt="Scan to get started" style="width: 52px; height: 52px; flex-shrink: 0;">
+        <div style="text-align: left;">
+          <p style="margin: 0; font-size: 14.5px; font-weight: 800; color: #0e2a3a;">868-723-6644</p>
+          <p style="margin: 1px 0 0; font-size: 14.5px; font-weight: 800; color: #0e2a3a;">876-210-9898</p>
+          <p style="margin: 2px 0 0; font-size: 11.5px; color: rgba(14,42,58,0.65);">expeditionswithjo.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Outside (fold this face out)", "x": 0, "y": 0, "w": 1056, "h": 816, "print": "fixed" },
+    { "file": "Inside.dc.html", "title": "Inside (open spread)", "x": 1176, "y": 0, "w": 1056, "h": 816, "print": "fixed" }
+  ],
+  "annotations": [
+    { "id": "fold-note", "x": 0, "y": -70, "w": 1056, "text": "Outside face, left to right: inside flap, back panel, front cover" },
+    { "id": "spread-note", "x": 1176, "y": -70, "w": 1056, "text": "Inside spread, left to right: what Jo can/can't do, meet Jo, why are you going" }
+  ],
+  "launch": { "view": "canvas" }
+}

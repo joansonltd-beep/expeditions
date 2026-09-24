@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .display { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; }
+    .sans { font-family: 'Manrope', system-ui, sans-serif; }
+    .script { font-family: 'Caveat', cursive; }
+    a { color: inherit; text-decoration: none; }
+    .panel { position: relative; display: flex; flex-direction: column; height: 816px; overflow: hidden; background: #ffffff; }
+    .h1 { font-family: 'Fraunces', Georgia, serif; margin: 0; font-weight: 700; line-height: 1.08; color: #0e2a3a; }
+    .sub { margin: 6px 0 0; font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-style: italic; color: rgba(14,42,58,0.62); }
+    .photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .wave { display: block; position: absolute; left: 0; width: 100%; height: 48px; z-index: 2; }
+    .graf { position: absolute; margin: 0; z-index: 4; font-family: 'Caveat', cursive; font-weight: 700; line-height: 1; white-space: nowrap; }
+  </style>
+</helmet>
+
+<div class="sans" style="width: 1056px; height: 816px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #ffffff;">
+
+  <!-- ===== PANEL 4 — WHAT JO CAN (AND CAN'T) DO ===== -->
+  <div class="panel" style="border-right: 1px dashed rgba(14,42,58,0.16);">
+    <div style="padding: 42px 28px 0;">
+      <h2 class="h1" style="font-size: 26px;">What Jo can<br>(and can't) do</h2>
+      <p class="sub">Being straight with you</p>
+
+      <div style="margin-top: 20px; background: #e8f6ee; border-radius: 14px; padding: 15px 16px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="width: 22px; height: 22px; border-radius: 50%; background: #25a35a; display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 9.5 17 19 6.5"/></svg>
+          </span>
+          <p style="margin: 0; font-size: 13px; font-weight: 800; color: #0e2a3a;">What Jo can do</p>
+        </div>
+        <div style="margin-top: 11px; display: flex; flex-direction: column; gap: 8px;">
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Explain what your destination asks for</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Work out what order things happen in</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Check your documents before you submit</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Book flights, stays and transfers</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; height: 160px; margin-top: 16px;">
+      <img src="pic-stlucia.jpg" alt="The Pitons, Saint Lucia" class="photo">
+      <svg class="wave" style="top: 0; height: 28px;" viewBox="0 0 400 34" preserveAspectRatio="none">
+        <path d="M0,17 C90,35 170,1 260,12 C320,19 360,6 400,13 L400,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="wave" style="bottom: 0; height: 28px;" viewBox="0 0 400 34" preserveAspectRatio="none">
+        <path d="M0,14 C70,2 140,29 220,19 C290,11 350,27 400,18 L400,34 L0,34 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <div style="flex: 1; padding: 16px 28px 26px;">
+      <div style="background: #fbeae3; border-radius: 14px; padding: 15px 16px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="width: 22px; height: 22px; border-radius: 50%; background: #d9663a; display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <p style="margin: 0; font-size: 13px; font-weight: 800; color: #0e2a3a;">What Jo can't do</p>
+        </div>
+        <div style="margin-top: 11px; display: flex; flex-direction: column; gap: 8px;">
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Guarantee a certificate, visa or permit</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Decide if a school or employer says yes</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Control whether a bank opens an account</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Set any fee beyond my own, government or otherwise</p>
+          <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #0e2a3a;">Say how long any of it takes</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; background: #fdf3dc; border-radius: 12px; padding: 13px 15px; display: flex; gap: 11px; align-items: flex-start;">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#c9832a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 1px;"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17.5v.5"/></svg>
+        <p style="margin: 0; font-size: 13px; font-weight: 700; line-height: 1.45; color: #0e2a3a;">
+          If anyone promises you a certificate, a visa or a job, walk away.
+        </p>
+      </div>
+    </div>
+
+    <p class="graf" style="left: 30px; bottom: 14px; font-size: 20px; transform: rotate(-4deg); color: rgba(217,102,58,0.62);">catch flights, not feelings</p>
+  </div>
+
+  <!-- ===== PANEL 5 — MEET JO ===== -->
+  <div class="panel" style="border-right: 1px dashed rgba(14,42,58,0.16);">
+    <div style="position: relative; height: 230px;">
+      <img src="pic-grenada.jpg" alt="Grand Anse Beach, Grenada" class="photo">
+      <svg class="wave" style="bottom: 0;" viewBox="0 0 400 48" preserveAspectRatio="none">
+        <path d="M0,20 C70,3 140,41 220,27 C290,15 350,38 400,25 L400,48 L0,48 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <div style="flex: 1; padding: 22px 28px 30px;">
+      <h2 class="h1" style="font-size: 30px;">Meet Jo</h2>
+      <p class="sub">The person you deal with</p>
+
+      <div style="margin-top: 22px; display: flex; gap: 14px; align-items: flex-start;">
+        <img src="jo-photo.jpg" alt="Joanson Baptiste James" style="width: 118px; height: 140px; object-fit: cover; object-position: center 22%; border-radius: 16px; flex-shrink: 0;">
+        <div style="padding-top: 12px;">
+          <p class="script" style="margin: 0; font-size: 32px; line-height: 0.95; color: #0b6b72;">Hi, I'm Jo!</p>
+          <p style="margin: 10px 0 0; font-size: 13px; font-weight: 800; line-height: 1.25; color: #0e2a3a;">Joanson<br>Baptiste James</p>
+        </div>
+      </div>
+
+      <p style="margin: 22px 0 0; font-size: 14.5px; line-height: 1.55; color: #0e2a3a;">
+        Grenadian by birth. I moved to Trinidad in 2020, then to Jamaica in 2025, working through what each CSME country requires before I went.
+      </p>
+      <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.55; color: #0e2a3a;">
+        So you'd be working with someone who has actually done this, not just read about it.
+      </p>
+
+      <div style="margin-top: 20px; background: #e4f4f5; border-radius: 14px; padding: 14px 16px;">
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.5; color: #0e2a3a;">
+          <strong>Flights, transfers and accommodation handled directly.</strong> A CARICOM one-stop shop.
+        </p>
+      </div>
+    </div>
+
+    <p class="graf" style="left: 30px; bottom: 24px; font-size: 23px; transform: rotate(-4deg); color: rgba(11,107,114,0.5);">CARICOM is your oyster</p>
+  </div>
+
+  <!-- ===== PANEL 6 — WHY ARE YOU GOING ===== -->
+  <div class="panel">
+    <div style="flex: 1; padding: 38px 28px 0;">
+      <h2 class="h1" style="font-size: 26px;">Why are you going?</h2>
+      <p class="sub">Different paths, same reliable guidance</p>
+
+      <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 9px;">
+
+        <div style="background: #fdf3dc; border-radius: 14px; padding: 13px 15px; display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #c9832a; display: flex; align-items: center; justify-content: center;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          </span>
+          <div>
+            <h3 style="margin: 0; font-size: 16px; font-weight: 800; color: #c9832a;">I want to visit</h3>
+            <p style="margin: 5px 0 0; font-size: 13px; line-height: 1.45; color: rgba(14,42,58,0.78);">I build the itinerary and find you the best deal to make it happen.</p>
+          </div>
+        </div>
+
+        <div style="background: #e8f6ee; border-radius: 14px; padding: 13px 15px; display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #25a35a; display: flex; align-items: center; justify-content: center;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+          </span>
+          <div>
+            <h3 style="margin: 0; font-size: 16px; font-weight: 800; color: #1f8a4c;">I want to work</h3>
+            <p style="margin: 5px 0 0; font-size: 13px; line-height: 1.45; color: rgba(14,42,58,0.78);">I help with the CARICOM Skills Certificate where it applies, with finding, applying and interviewing for a job, and with the logistics* of moving.</p>
+          </div>
+        </div>
+
+        <div style="background: #e4f4f5; border-radius: 14px; padding: 13px 15px; display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #0b6b72; display: flex; align-items: center; justify-content: center;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/></svg>
+          </span>
+          <div>
+            <h3 style="margin: 0; font-size: 16px; font-weight: 800; color: #0b6b72;">I want to study</h3>
+            <p style="margin: 5px 0 0; font-size: 13px; line-height: 1.45; color: rgba(14,42,58,0.78);">Free movement doesn't cover study, so I help with applications to the schools we list, and the logistics* of studying abroad.</p>
+          </div>
+        </div>
+
+        <div style="background: #fbeae3; border-radius: 14px; padding: 13px 15px; display: flex; gap: 12px; align-items: flex-start;">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #b04e2f; display: flex; align-items: center; justify-content: center;">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 20.7 4.6 13.5a4.7 4.7 0 0 1 0-6.7 4.7 4.7 0 0 1 6.7 0l.7.7.7-.7a4.7 4.7 0 0 1 6.7 0 4.7 4.7 0 0 1 0 6.7Z"/></svg>
+          </span>
+          <div>
+            <h3 style="margin: 0; font-size: 16px; font-weight: 800; color: #a8441f;">I want to marry</h3>
+            <p style="margin: 5px 0 0; font-size: 13px; line-height: 1.45; color: rgba(14,42,58,0.78);">Somewhere you've always loved, or back home where your family came from. I handle the licence, the paperwork, everybody's travel and the planner for the day.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="graf" style="right: 4px; top: 545px; font-size: 17px; transform: rotate(90deg); transform-origin: 100% 0; color: rgba(11,107,114,0.45);">one way or round trip?</p>
+
+    <div style="position: relative; height: 200px;">
+      <img src="pic-svg.jpg" alt="Tobago Cays" class="photo">
+      <svg class="wave" style="top: 0;" viewBox="0 0 400 48" preserveAspectRatio="none">
+        <path d="M0,24 C90,50 170,2 260,17 C320,27 360,9 400,19 L400,0 L0,0 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
