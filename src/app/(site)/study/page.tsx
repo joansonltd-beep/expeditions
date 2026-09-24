@@ -27,8 +27,6 @@ export const metadata: Metadata = {
 
 // When the guidance on this page was last checked. Month precision; `iso` is
 // the first of the month purely so it can go in a <time> element.
-const LAST_UPDATED = { display: "August 2026", iso: "2026-08-01" };
-
 // What we actually do for a student, set against what the school and the
 // destination country decide. Keeping them apart is the point.
 const WE_HELP = [
@@ -130,14 +128,6 @@ export default async function StudyPage() {
       {/* CSME DOESN’T COVER THIS */}
       <Section>
         <div className="mx-auto max-w-3xl">
-          <p className="mb-6 text-sm text-slate-600">
-            Last updated:{" "}
-            <time dateTime={LAST_UPDATED.iso} className="font-semibold text-slate-900">
-              {LAST_UPDATED.display}
-            </time>
-            . Student visa rules are set country by country and change without notice. Confirm the current position with
-            the destination country&rsquo;s immigration authority and the institution before you act on anything here.
-          </p>
           <h2 className="text-2xl font-bold text-slate-900">CSME doesn&rsquo;t cover studying</h2>
           <p className="mt-3 text-slate-600">
             The CSME Skills Certificate and full free movement are both about the right to work, not study. The CARICOM

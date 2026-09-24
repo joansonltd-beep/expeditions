@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Fraunces } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/siteUrl";
 import { currentFlagTheme } from "@/lib/independenceData";
@@ -9,10 +9,15 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-// One display face, one body face. Fraunces carries warmth without tipping
-// into decorative; the soft optical axis keeps it friendly at large sizes.
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// One display face, one body face.
+//
+// Fraunces was here and it drew too much attention to itself: a curled J, an
+// odd F terminal, and enough weight at heading sizes that the letterforms read
+// before the words did. Source Serif 4 keeps the warmth and the editorial feel
+// with conventional shapes, so a headline reads as a headline rather than as a
+// typeface.
+const displaySerif = Source_Serif_4({
+  variable: "--font-display-serif",
   subsets: ["latin"],
   display: "swap",
   weight: ["600", "700"],
@@ -92,7 +97,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme={flagTheme ?? undefined}
-      className={`${geistSans.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${displaySerif.variable} h-full antialiased`}
     >
       <body className="min-h-full text-slate-900">{children}</body>
     </html>

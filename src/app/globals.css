@@ -35,7 +35,7 @@
   --color-field-warm: #eef4f3;   /* kept: the seasonal skin overrides it */
 
   --font-sans: var(--font-geist-sans);
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-display-serif);
 }
 
 /*
