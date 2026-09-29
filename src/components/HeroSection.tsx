@@ -39,7 +39,7 @@ export default function HeroSection({
       <Container className="relative z-10 py-16 sm:py-20">
         <div className="max-w-xl">
           <IndependenceBanner compact />
-          <h1 className="font-display text-[1.8rem] font-bold leading-[1.15] text-white sm:text-[2.5rem]">{headline}</h1>
+          <h1 className="font-display text-[1.6rem] font-bold leading-[1.2] text-white sm:text-[2.125rem]">{headline}</h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">{subcopy}</p>
 
           {/* One action here. The consultation used to sit beside it and
