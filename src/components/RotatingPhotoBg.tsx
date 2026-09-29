@@ -9,7 +9,7 @@ export type HeroPhoto = { src: string; alt: string; credit?: string; creditUrl?:
 // given photos every intervalMs when there’s more than one; a single photo
 // just renders statically. Always declares itself as a photo hero so the
 // header can go transparent over it.
-export default function RotatingPhotoBg({ photos, intervalMs = 6000 }: { photos: HeroPhoto[]; intervalMs?: number }) {
+export default function RotatingPhotoBg({ photos, intervalMs = 4000 }: { photos: HeroPhoto[]; intervalMs?: number }) {
   const [i, setI] = useState(0);
 
   useEffect(() => {

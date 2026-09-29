@@ -29,8 +29,11 @@ export const metadata: Metadata = {
   // from parent to child, so a canonical set on the root layout is inherited by
   // every page that does not set its own, telling Google those pages are
   // duplicates of the homepage. Each page sets its own canonical instead.
+  // Brand first, keywords after. Google leans toward showing the bare domain
+  // as a site name when the homepage title reads as a string of keywords, so
+  // the name leads and the description of the work follows it.
   title: {
-    default: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
+    default: "Expeditions With Jo | Visit, Work, Study or Marry in Another CARICOM Country",
     template: "%s · Expeditions With Jo",
   },
   description:
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     locale: "en_TT",
     siteName: "Expeditions With Jo",
     url: SITE_URL,
-    title: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
+    title: "Expeditions With Jo | Visit, Work, Study or Marry in Another CARICOM Country",
     description:
       "Tell Jo where you are starting and where you want to go. We work out what your destination asks for, then organise the papers and the travel around it.",
     images: [
@@ -74,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visit, Work, Study or Marry in Another CARICOM Country | Expeditions With Jo",
+    title: "Expeditions With Jo | Visit, Work, Study or Marry in Another CARICOM Country",
     description:
       "Working out how to visit, work, study or marry in another CARICOM country, and getting it organised once you know.",
     images: ["/og-falls.jpg"],
