@@ -54,6 +54,7 @@ export default function PlanMyMoveForm() {
     name: "",
     email: "",
     phone: "",
+    access: "",
     message: "",
   });
   const [help, setHelp] = useState<string[]>([]);
@@ -88,6 +89,9 @@ export default function PlanMyMoveForm() {
       `Name: ${form.name}`,
       `Email: ${form.email}`,
       `Phone / WhatsApp: ${form.phone}`,
+      "",
+      "Access needs:",
+      form.access || "(none given)",
       "",
       "Message:",
       form.message || "(none)",
@@ -255,6 +259,27 @@ export default function PlanMyMoveForm() {
           onChange={set("phone")}
           className={`mt-1.5 ${field}`}
           placeholder="Include your country code"
+        />
+      </div>
+
+      {/* Asked here rather than left to the message box, so nobody has to
+          decide whether it is worth raising. An operator needs this at the
+          point of booking, not after. */}
+      <div className="mt-4">
+        <label htmlFor={id("access")} className={labelClass}>
+          Access or mobility needs
+        </label>
+        <p className="mt-1 text-sm text-slate-600">
+          Optional. Tell us what has to be arranged, not your medical history. We put it to the airline, the property
+          and the driver, and tell you what each one confirms.
+        </p>
+        <textarea
+          id={id("access")}
+          value={form.access}
+          onChange={set("access")}
+          rows={3}
+          className={`mt-1.5 ${field} resize-y`}
+          placeholder="For example: wheelchair user, needs step-free entry and a roll-in shower; assistance from check-in to the gate; travelling with a mobility scooter."
         />
       </div>
 
