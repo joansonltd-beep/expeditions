@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { Section, PageHeader, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
@@ -63,7 +64,11 @@ export default function FindMyPathwayPage() {
             </p>
           </div>
           <div>
-            <FindMyPathwayForm />
+            {/* The form reads the hero's answers from the query string, which
+                needs a boundary for the page to stay statically prerendered. */}
+            <Suspense fallback={<div className="min-h-[28rem]" aria-hidden="true" />}>
+              <FindMyPathwayForm />
+            </Suspense>
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-5xl">

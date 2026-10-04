@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Container, btnPrimary } from "@/components/ui";
+import { Container } from "@/components/ui";
 import RotatingHero from "@/components/RotatingHero";
 import IndependenceBanner from "@/components/IndependenceBanner";
+import RouteSelector from "@/components/RouteSelector";
 
 /**
  * Image-led hero with the words held in a controlled column on the left.
@@ -37,19 +37,15 @@ export default function HeroSection({
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy/70 to-transparent" />
 
       <Container className="relative z-10 py-16 sm:py-20">
-        <div className="max-w-xl">
+        <div className="max-w-2xl">
           <IndependenceBanner compact />
           <h1 className="font-display text-[1.6rem] font-bold leading-[1.2] text-white sm:text-[2.125rem]">{headline}</h1>
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/85">{subcopy}</p>
 
-          {/* One action here. The consultation used to sit beside it and
-              again at the foot of the page, so the hero asked twice and led
-              with neither. */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/find-my-pathway" className={btnPrimary}>
-              Work out what I need to do first
-            </Link>
-          </div>
+          {/* The hero used to offer a single button into the questionnaire.
+              The questions themselves are a better invitation than a label
+              describing them, so they sit here and travel with the visitor. */}
+          <RouteSelector />
 
           {trustNote ? <p className="mt-7 max-w-lg text-sm leading-relaxed text-white/70">{trustNote}</p> : null}
         </div>

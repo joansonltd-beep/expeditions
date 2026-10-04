@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
 import { track } from "@/lib/analytics";
@@ -73,11 +74,23 @@ export default function FindMyPathwayForm() {
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
 
+  // The hero's route selector sends its three answers through the query
+  // string. Seeded lazily at first render rather than in an effect, so there
+  // is no flash of an empty form and no setState during mount.
+  const params = useSearchParams();
+  const seeded = {
+    current: params.get("from") ?? "",
+    destination: params.get("to") ?? "",
+    purpose: (PURPOSES as readonly string[]).includes(params.get("purpose") ?? "")
+      ? (params.get("purpose") as Purpose)
+      : ("" as const),
+  };
+
   const [form, setForm] = useState({
     nationality: "",
-    current: "",
-    destination: "",
-    purpose: "" as Purpose | "",
+    current: seeded.current,
+    destination: seeded.destination,
+    purpose: seeded.purpose as Purpose | "",
     occupation: "",
     offer: "",
     timeframe: "",
@@ -85,7 +98,11 @@ export default function FindMyPathwayForm() {
     email: "",
     whatsapp: "",
   });
-  const [started, setStarted] = useState(false);
+  // Arriving with answers already given means the visitor has started, so the
+  // form opens rather than making them click into it again.
+  const [started, setStarted] = useState(
+    Boolean(seeded.current || seeded.destination || seeded.purpose),
+  );
   const [done, setDone] = useState(false);
 
   const purpose = form.purpose as Purpose | "";
