@@ -21,6 +21,8 @@ export const WE_DO: string[] = [
   "Work out what order things have to happen in",
   "Check your documents over before you hand anything in",
   "Book the flights, the stay and the transfers",
+  "Put your access needs to each operator in writing, and tell you what they confirm",
+  "Help with the medical letters and disability documents a journey or an application asks for",
   "Tell you where people usually come unstuck",
 ];
 
@@ -29,5 +31,6 @@ export const THEY_DECIDE: string[] = [
   "Whether a school takes you, and whether an employer hires you",
   "Whether a bank opens your account",
   "Whether immigration lets you in, and for how long",
+  "Whether an operator can actually meet an access need on the day",
   "What the fees are and how long any of it takes",
 ];

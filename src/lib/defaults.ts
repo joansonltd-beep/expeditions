@@ -145,6 +145,7 @@ export const DEFAULT_SERVICES: Service[] = [
         "Booking and confirmation handled for you",
         "Guidance on baggage allowances and special airline requests",
         "Support for seniors and travellers needing extra assistance",
+        "Wheelchair and airport assistance put to the airline when you book, with its answer passed back to you in writing",
         "WhatsApp updates before and during your journey",
       ],
       youProvide: [
@@ -222,6 +223,7 @@ export const DEFAULT_SERVICES: Service[] = [
         "Hotel, guesthouse, Airbnb and short-stay apartment options",
         "Choices matched to your location, comfort level and budget",
         "Booking and confirmation handled for you",
+        "Step-free entry, lift access and bathroom layout checked with the property itself before you book, rather than taken from the listing",
         "Advice on which areas suit your purpose and how to get around from them",
       ],
       youProvide: [
@@ -302,6 +304,7 @@ export const DEFAULT_SERVICES: Service[] = [
         "Pre-booked, English-speaking drivers through Welcome Pickups in over 100 cities",
         "Airport pickups and drop-offs, door to door",
         "A driver waiting for you rather than a taxi queue",
+        "An accessible vehicle requested where the operator runs one, and a straight answer where it does not",
         "Local Trinidad airport pickup and drop-off",
       ],
       youProvide: [
