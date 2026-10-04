@@ -119,6 +119,14 @@ h2 {
   0%, 100% { transform: rotateY(0deg); }
   50% { transform: rotateY(180deg); }
 }
+/*
+  The route line on the Caribbean map. The dash pattern travels from the
+  origin toward the destination, which is the one thing on that map that is
+  meant to read as movement rather than decoration.
+*/
+@keyframes routeDash {
+  to { stroke-dashoffset: -13; }
+}
 
 /* Respect users who prefer less motion. */
 @media (prefers-reduced-motion: reduce) {
