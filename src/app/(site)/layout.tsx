@@ -196,8 +196,10 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           </div>
           <div className="border-t border-white/10">
             <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-2 px-5 py-6 text-xs text-slate-400">
+              {/* Ownership sits here rather than in the footer blurb, because
+                  this line is code and the blurb comes from Sanity. */}
               <span>
-                © {year} {settings.businessName}. All rights reserved.
+                © {year} {settings.businessName}. Jamaican owned. All rights reserved.
               </span>
               <span className="flex flex-wrap gap-x-5 gap-y-2">
                 <Link href="/credits" className="block py-1.5 hover:text-slate-300">
