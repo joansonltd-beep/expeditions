@@ -127,17 +127,34 @@ export default function CaribbeanMap({ countries }: { countries: MapCountry[] })
           {/* The route, drawn as an arc rather than a straight line, because a
               straight line between two islands reads as a border. */}
           {route ? (
-            <g>
+            // Keyed on the journey, so choosing a new destination draws the
+            // new line rather than swapping one finished line for another.
+            <g key={`${route.from.slug}-${route.to.slug}`}>
+              {/* Drawn on, once. */}
               <path
                 d={arc(route.from, route.to)}
+                pathLength={1}
                 fill="none"
                 stroke="#5ec6c0"
-                strokeWidth="2.5"
+                strokeOpacity="0.45"
+                strokeWidth="2"
                 strokeLinecap="round"
-                strokeDasharray="6 7"
-                className="motion-safe:animate-[routeDash_1.2s_linear_infinite]"
+                strokeDasharray="1"
+                className="motion-safe:animate-[routeDraw_620ms_ease-out_both]"
               />
-              <circle cx={route.from.x} cy={route.from.y} r="7" fill="none" stroke="#5ec6c0" strokeWidth="2" />
+              {/* Then the travelling dash on top, once the line exists. */}
+              <g className="motion-safe:animate-[routeFade_300ms_ease-out_520ms_both]">
+                <path
+                  d={arc(route.from, route.to)}
+                  fill="none"
+                  stroke="#5ec6c0"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeDasharray="6 7"
+                  className="motion-safe:animate-[routeDash_1.2s_linear_infinite]"
+                />
+                <circle cx={route.from.x} cy={route.from.y} r="7" fill="none" stroke="#5ec6c0" strokeWidth="2" />
+              </g>
             </g>
           ) : null}
 

@@ -96,8 +96,9 @@ section can take a form that suits it:
 | `FactRows` | Facts that want a table's clarity without its furniture |
 | `Callout` | A caution or an aside, as a left edge not a panel |
 | `Band` | A dark full-bleed pause in a long page |
+| `LinkRows` | A short list of places to go next |
 
-Cards are allowed. They are one option of six, not the default.
+Cards are allowed. They are one option of seven, not the default.
 
 `SectionHead` takes a `lead` flag. One heading per page is the lead; the rest
 stay quiet. A page where every heading is the same size has no shape.

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Section, PageHeader, SectionHead, CheckList } from "@/components/ui";
 import { RouteSteps } from "@/components/sections";
+import { LinkRows } from "@/components/sections";
 import { Icon } from "@/components/icons";
 import ConsultationCtaBlock from "@/components/ConsultationCtaBlock";
 import CtaButtons from "@/components/CtaButtons";
@@ -128,21 +129,17 @@ export default function GettingTherePage() {
           title="The practical parts of your visit"
           intro="Use as many or as few as you need."
         />
-        <div className="mx-auto grid max-w-3xl gap-5 sm:grid-cols-2">
-          {ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:border-brand hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-            >
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-brand-soft text-brand">
-                <Icon name={item.icon} className="h-6 w-6" />
-              </div>
-              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
-              <p className="mt-2 text-slate-600">{item.text}</p>
-              <span className="mt-3 inline-block text-sm font-semibold text-brand">See what is involved →</span>
-            </Link>
-          ))}
+        {/* Rows, not cards. Three cards in a two-column grid left the third
+            stranded beside an empty half. */}
+        <div className="mx-auto max-w-3xl">
+          <LinkRows
+            rows={ITEMS.map((item) => ({
+              href: item.href,
+              title: item.title,
+              text: item.text,
+              icon: <Icon name={item.icon} className="h-5 w-5" />,
+            }))}
+          />
         </div>
       </Section>
 

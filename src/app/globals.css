@@ -82,43 +82,6 @@ h2 {
 
 
 /* Hero flip gallery: a tile that rotates out and the next tile rotates in. */
-.flip-scene { perspective: 1000px; }
-.flip-card {
-  transition: transform 0.35s ease;
-  transform: rotateY(0deg);
-  will-change: transform;
-}
-.flip-card.is-flipping { transform: rotateY(90deg); }
-
-/* Per-tile looping animations (the "gif" on each face). */
-.anim-fly { display: inline-block; animation: flyacross 3s ease-in-out infinite; }
-.anim-bob { display: inline-block; animation: floaty 2.6s ease-in-out infinite; }
-.anim-drive { display: inline-block; animation: drive 3s ease-in-out infinite; }
-.anim-sail { display: inline-block; animation: sail 3s ease-in-out infinite; }
-.anim-coin { display: inline-block; animation: coinflip 2.4s ease-in-out infinite; }
-
-@keyframes flyacross {
-  0% { transform: translateX(-26px) translateY(6px); }
-  50% { transform: translateX(0) translateY(-6px); }
-  100% { transform: translateX(26px) translateY(6px); }
-}
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-@keyframes drive {
-  0% { transform: translateX(-30px); }
-  50% { transform: translateX(0); }
-  100% { transform: translateX(30px); }
-}
-@keyframes sail {
-  0%, 100% { transform: translateY(0) rotate(-4deg); }
-  50% { transform: translateY(-9px) rotate(4deg); }
-}
-@keyframes coinflip {
-  0%, 100% { transform: rotateY(0deg); }
-  50% { transform: rotateY(180deg); }
-}
 /*
   The route line on the Caribbean map. The dash pattern travels from the
   origin toward the destination, which is the one thing on that map that is
@@ -126,6 +89,21 @@ h2 {
 */
 @keyframes routeDash {
   to { stroke-dashoffset: -13; }
+}
+/*
+  The route drawing itself, once, when a new journey is chosen. The path is
+  given pathLength 1 so one dash covers the whole line whatever its real
+  length, and the offset runs to 0 to draw it on. Both of these finish on
+  their visible state, so switching animations off leaves the route drawn
+  rather than missing.
+*/
+@keyframes routeDraw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes routeFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 /*
   One question replacing another in the pathway questionnaire. Small and
@@ -240,13 +218,39 @@ h2 {
 }
 
 /*
-  The looping hero animations are decoration. Anyone who has asked their system
-  for less motion should not get them, and neither should the scroll-driven
-  transitions.
+  Section headings easing in as they arrive.
+
+  Driven by a scroll timeline rather than JavaScript: no observer, no state,
+  nothing to hydrate, and it costs the page no work when it is off screen.
+
+  The static state of a .reveal element is fully visible. The animation only
+  ever animates *towards* that, so anywhere the timeline is unsupported, or
+  animations are switched off, the heading is simply there. Content that
+  depends on an animation to become visible is a trap, and this cannot fall
+  into it.
+
+  Guarded by @supports so a browser without view timelines does not run this
+  as an ordinary time-based animation and fade every heading in at once on
+  load, whether it is on screen or not.
+*/
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 22%;
+  }
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+/*
+  Anyone who has asked their system for less motion should not get the
+  scroll-driven transitions either.
 */
 @media (prefers-reduced-motion: reduce) {
-  .anim-fly, .anim-bob, .anim-drive, .anim-sail, .anim-coin,
-  .flip-card {
+  .reveal {
     animation: none !important;
     transition: none !important;
     transform: none !important;

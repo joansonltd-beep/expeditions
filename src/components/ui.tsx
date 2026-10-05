@@ -115,7 +115,9 @@ export function SectionHead({
   lead?: boolean;
 }) {
   return (
-    <div className={`${center ? "mx-auto text-center" : ""} ${lead ? "mb-14 max-w-3xl" : "mb-9 max-w-2xl"}`}>
+    <div
+      className={`reveal ${center ? "mx-auto text-center" : ""} ${lead ? "mb-14 max-w-3xl" : "mb-9 max-w-2xl"}`}
+    >
       {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
       <h2
         className={

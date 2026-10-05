@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Section patterns that are not cards.
  *
@@ -9,9 +11,11 @@
  *
  * These are the alternatives, so a section can take the form that suits what
  * it is actually saying: prose gets a split, an order of operations gets a
- * route, facts get rows, and a caution gets an edge rather than a whole panel.
+ * route, facts get rows, somewhere to go next gets a list, and a caution
+ * gets an edge rather than a whole panel.
  *
- * Cards are not banned. They are now one option among five.
+ * Cards are not banned. They are now one option among seven: the six patterns
+ * here, plus a card. AGENTS.md carries the same table and the same count.
  */
 
 /**
@@ -129,5 +133,56 @@ export function Band({ children }: { children: React.ReactNode }) {
     <section className="border-y border-navy/20 bg-navy py-16 text-white sm:py-20">
       <div className="mx-auto w-full max-w-[1400px] px-5">{children}</div>
     </section>
+  );
+}
+
+/**
+ * A short list of places to go next, as rows rather than as cards.
+ *
+ * Three cards in a two-column grid leave the third stranded beside an empty
+ * half; four in a three-column grid do the same. Rows do not care how many
+ * there are. They also give each item the full width for its sentence, which
+ * a narrow card does not, and on a phone they are one clean column instead of
+ * a stack of boxes.
+ *
+ * The whole row is the target, so it is a generous thing to hit with a thumb.
+ */
+export function LinkRows({
+  rows,
+}: {
+  rows: { href: string; title: string; text: string; icon?: React.ReactNode }[];
+}) {
+  return (
+    <ul className="border-t border-navy/15">
+      {rows.map((r) => (
+        <li key={r.href} className="border-b border-navy/15">
+          <Link
+            href={r.href}
+            className="group flex items-start gap-5 py-6 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          >
+            {r.icon ? (
+              <span
+                aria-hidden="true"
+                className="mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white"
+              >
+                {r.icon}
+              </span>
+            ) : null}
+            <span className="min-w-0 flex-1">
+              <span className="block font-display text-xl font-bold text-navy transition group-hover:text-brand">
+                {r.title}
+              </span>
+              <span className="measure mt-1 block text-navy/75">{r.text}</span>
+            </span>
+            <span
+              aria-hidden="true"
+              className="mt-1 shrink-0 text-brand transition group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
