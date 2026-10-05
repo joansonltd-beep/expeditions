@@ -121,7 +121,7 @@ export default function RouteSelector() {
           Find my route
           <span aria-hidden="true">→</span>
         </button>
-        <p className="text-sm text-navy/60">Nothing is sent yet. This only sets up the questions.</p>
+        <p className="text-sm text-navy/60">Takes about a minute.</p>
       </div>
     </form>
   );

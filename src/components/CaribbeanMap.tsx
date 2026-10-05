@@ -73,7 +73,7 @@ export default function CaribbeanMap({ countries }: { countries: MapCountry[] })
         <div>
           <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">Where are you going?</h2>
           <p className="measure mt-2 text-navy/70">
-            Pick a country to see what it asks for. Set where you are starting and the map draws the route.
+            Pick a country to see what it asks for. Tell us where you are starting and we will trace the journey.
           </p>
         </div>
         <div>
@@ -217,7 +217,7 @@ export default function CaribbeanMap({ countries }: { countries: MapCountry[] })
             <p className="measure mt-1.5 text-navy/80">{active.tagline}</p>
             <p className="mt-1.5 text-sm text-navy/70">
               {active.costLabel ? `From ${active.costLabel}.` : "Budget figures are on the country page."}
-              {route ? ` Route shown from ${route.from.name}.` : ""}
+              {route ? ` Travelling from ${route.from.name}.` : ""}
             </p>
             <Link
               href={`/destinations/${active.slug}`}
