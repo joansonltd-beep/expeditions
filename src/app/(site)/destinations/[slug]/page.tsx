@@ -12,9 +12,16 @@ import { independenceFor, formatDayMonth, daysUntil, anniversaryYears } from "@/
 import { SITE_URL } from "@/lib/siteUrl";
 import { isOwnWork } from "@/lib/photoCredits";
 import PageIssueNote from "@/components/PageIssueNote";
+import DestinationLens from "@/components/DestinationLens";
 
 export function generateStaticParams() {
   return COUNTRY_GUIDES.map((g) => ({ slug: g.slug }));
+}
+
+/** The published range, shortened to the figures for a one-line label. */
+function budgetLabel(s: string | undefined): string | null {
+  const m = s?.match(/≈?US\$[\d,]+(?:\s*[–-]\s*[\d,]+)?/);
+  return m ? `${m[0].replace("≈", "")} a month` : null;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -145,6 +152,18 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
               ← All countries at a glance
             </Link>
           </p>
+
+          {/* Four ways into a long guide. Hides nothing; every section below
+              stays on the page and in the markup. */}
+          <div className="mt-6">
+            <DestinationLens
+              countryName={g.name}
+              slug={g.slug}
+              freeMovement={Boolean(csmeCountry?.fullFreeMovement)}
+              costLabel={budgetLabel(g.costOfLiving?.budgetModestSingle)}
+              hasMovingSection={Boolean(g.movingHere)}
+            />
+          </div>
 
           {g.photo ? (
             <figure className="mt-5">
@@ -288,7 +307,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       </Section>
 
       {/* COST OF LIVING */}
-      <Section alt>
+      <Section alt id="cost">
         <SectionHead lead eyebrow="Budgeting" title="Cost of living" />
         <div className="mx-auto max-w-3xl">
           <div className="grid gap-4 sm:grid-cols-2">
@@ -376,7 +395,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
 
       {/* MOVING HERE */}
       {g.movingHere ? (
-        <Section>
+        <Section id="moving">
           <SectionHead eyebrow="Relocating" title={`Moving to ${g.name}`} intro="Visas, healthcare, taxes and where people settle, for anyone actually planning the move." />
           <div className="mx-auto max-w-3xl space-y-6">
             <div className="rounded-xl border border-slate-200 bg-white p-5">
@@ -456,7 +475,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       ) : null}
 
       {/* PLACES TO SEE */}
-      <Section alt={flip}>
+      <Section alt={flip} id="see">
         <SectionHead eyebrow="See" title="Places to see" />
         <div className="mx-auto max-w-3xl">
           {googleMapsEmbedUrl ? (
@@ -518,7 +537,7 @@ export default async function CountryGuidePage({ params }: { params: Promise<{ s
       </Section>
 
       {/* EXPERIENCES */}
-      <Section alt={!flip}>
+      <Section alt={!flip} id="do">
         <SectionHead eyebrow="Do" title="Experiences to have" />
         <div className="mx-auto grid max-w-3xl gap-5">
           {g.experiences.map((e, i) => (
