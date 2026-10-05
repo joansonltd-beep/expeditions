@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     "Tell us where you are moving from and to, why you are going and when. We will come back with the right next step for visiting, working or studying in another CARICOM country.",
   keywords: [
     "plan my move CARICOM",
+    "find my CARICOM pathway",
+    "which CARICOM pathway applies to me",
+    "CSME Skills Certificate eligibility",
     "CARICOM relocation help",
     "moving to another CARICOM country",
     "relocating within CARICOM",
@@ -55,7 +58,14 @@ const STAGES: { icon: IconName; title: string; text: string }[] = [
   },
 ];
 
-export default function PlanMyMovePage() {
+export default async function PlanMyMovePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ from?: string; to?: string; purpose?: string }>;
+}) {
+  // Read on the server so the form, and anything the hero prefilled, is in
+  // the served HTML rather than appearing only after hydration.
+  const sp = await searchParams;
   return (
     <>
       <PageHeader
@@ -97,7 +107,11 @@ export default function PlanMyMovePage() {
       {/* THE FORM */}
       <Section alt id="form">
         <div className="mx-auto max-w-2xl">
-          <PlanMyMoveForm />
+          <PlanMyMoveForm
+            initialFrom={sp.from ?? ""}
+            initialTo={sp.to ?? ""}
+            initialPurpose={sp.purpose ?? ""}
+          />
           <ServiceDisclaimer className="mt-8" />
         </div>
       </Section>

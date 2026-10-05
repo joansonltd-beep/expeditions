@@ -53,7 +53,7 @@ export default function RouteSelector() {
     if (to) q.set("to", to);
     if (purpose) q.set("purpose", purpose);
     const qs = q.toString();
-    router.push(qs ? `/find-my-pathway?${qs}` : "/find-my-pathway");
+    router.push(qs ? `/plan-my-move?${qs}` : "/plan-my-move");
   }
 
   return (

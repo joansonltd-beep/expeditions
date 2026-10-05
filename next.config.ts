@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
         destination: "https://www.book-online-transfers.com/en/expeditionswithjo",
         permanent: false,
       },
+      // Find My Pathway and Plan My Move asked the same questions and led to
+      // the same consultation, so they are one form now. This path is indexed
+      // and linked from older pages, so it redirects rather than 404s. Next
+      // carries the query string over, which keeps the hero's prefill working.
+      {
+        source: "/find-my-pathway",
+        destination: "/plan-my-move",
+        permanent: true,
+      },
       {
         source: "/csme-skills-certificate",
         destination: "/caricom-skills-certificate",
