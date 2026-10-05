@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Section, PageHeader } from "@/components/ui";
 import RandomDestinationLink from "@/components/RandomDestinationLink";
 import CountryFinder, { type FinderCountry } from "@/components/CountryFinder";
+import CaribbeanMap, { type MapCountry } from "@/components/CaribbeanMap";
 import PageIssueNote from "@/components/PageIssueNote";
 import { COUNTRY_GUIDES } from "@/lib/countryGuideData";
 import { CSME_COUNTRIES } from "@/lib/csmeData";
@@ -69,6 +70,24 @@ export default function DestinationsPage() {
       costLabel: budgetLabel(g.costOfLiving?.budgetModestSingle),
     }));
 
+  // The map needs real positions, so a country without coordinates is left off
+  // it rather than placed somewhere plausible. All twelve carry them today.
+  const mapCountries: MapCountry[] = [...COUNTRY_GUIDES]
+    .filter((g) => g.coordinates)
+    .map((g) => {
+      const c = countries.find((x) => x.slug === g.slug);
+      return {
+        slug: g.slug,
+        name: g.name,
+        tagline: g.tagline,
+        freeMovement: c?.freeMovement ?? false,
+        costLabel: c?.costLabel ?? null,
+        lat: g.coordinates!.lat,
+        lng: g.coordinates!.lng,
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <>
       <PageHeader
@@ -77,6 +96,12 @@ export default function DestinationsPage() {
         intro="Twelve CARICOM countries with free movement*, twelve different answers. Narrow them by what it costs to live there, what language you will be working in, or whether you can move without a permit."
         video={HEADER_VIDEO}
       />
+
+      <Section>
+        <div className="mx-auto max-w-5xl">
+          <CaribbeanMap countries={mapCountries} />
+        </div>
+      </Section>
 
       <Section>
         <div className="mx-auto max-w-3xl">

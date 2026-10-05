@@ -18,7 +18,7 @@ function DetailBlock({
   if (!items?.length) return null;
   return (
     <div>
-      <h3 className="text-lg font-semibold text-slate-900">{heading}</h3>
+      <h2 className="font-sans text-lg font-semibold tracking-normal text-slate-900">{heading}</h2>
       {tone === "warn" ? (
         <ul className="mt-3 grid gap-2.5">
           {items.map((item, i) => (
@@ -112,7 +112,7 @@ export default function ServicePage({
 
             {d?.process?.length ? (
               <div>
-                <h3 className="text-lg font-semibold text-slate-900">From enquiry to done</h3>
+                <h2 className="font-sans text-lg font-semibold tracking-normal text-slate-900">From enquiry to done</h2>
                 <ol className="mt-4 grid gap-4">
                   {d.process.map((step, i) => (
                     <li key={i} className="flex gap-4">
@@ -128,7 +128,7 @@ export default function ServicePage({
 
             {d?.feesNote ? (
               <div>
-                <h3 className="text-lg font-semibold text-slate-900">Fees</h3>
+                <h2 className="font-sans text-lg font-semibold tracking-normal text-slate-900">Fees</h2>
                 <p className="mt-2 text-slate-600">{d.feesNote}</p>
               </div>
             ) : null}
@@ -171,7 +171,7 @@ export default function ServicePage({
             ) : null}
             {d?.related?.length ? (
               <div className="mt-8">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">Related</h3>
+                <h2 className="font-sans text-sm font-semibold uppercase tracking-wider text-slate-600">Related</h2>
                 <ul className="mt-3 flex flex-wrap gap-2">
                   {d.related.map((r) => (
                     <li key={r.href}>
