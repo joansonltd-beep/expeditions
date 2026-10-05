@@ -2,7 +2,6 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useWhatsAppLink } from "@/components/SiteSettingsProvider";
 import { btnPrimary, btnWhatsapp } from "@/components/ui";
 import { track } from "@/lib/analytics";
@@ -86,20 +85,29 @@ type StepId = "origin" | "destination" | "purpose" | "background" | "timeframe" 
  *
  * Never asks for passport numbers, bank details or document uploads.
  */
-export default function FindMyPathwayForm() {
+export default function FindMyPathwayForm({
+  initialFrom = "",
+  initialTo = "",
+  initialPurpose = "",
+}: {
+  initialFrom?: string;
+  initialTo?: string;
+  initialPurpose?: string;
+}) {
   const waLink = useWhatsAppLink();
   const uid = useId();
   const id = (k: string) => `${uid}-${k}`;
 
   // The hero's route selector sends its three answers through the query
-  // string. Seeded lazily at first render rather than in an effect, so there
-  // is no flash of an empty form and no setState during mount.
-  const params = useSearchParams();
+  // string. They are read on the server and handed down as props rather than
+  // read here with useSearchParams: that hook makes Next skip prerendering
+  // this subtree, which left the whole form out of the served HTML and
+  // visible only after hydration.
   const seeded = {
-    current: params.get("from") ?? "",
-    destination: params.get("to") ?? "",
-    purpose: (PURPOSES as readonly string[]).includes(params.get("purpose") ?? "")
-      ? (params.get("purpose") as Purpose)
+    current: initialFrom,
+    destination: initialTo,
+    purpose: (PURPOSES as readonly string[]).includes(initialPurpose)
+      ? (initialPurpose as Purpose)
       : ("" as const),
   };
 

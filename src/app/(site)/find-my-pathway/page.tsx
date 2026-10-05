@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Link from "next/link";
 import { Section, PageHeader, CheckList } from "@/components/ui";
 import { Icon } from "@/components/icons";
@@ -26,7 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FindMyPathwayPage() {
+export default async function FindMyPathwayPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ from?: string; to?: string; purpose?: string }>;
+}) {
+  // Read on the server so the form is in the served HTML. Reading these in the
+  // client with useSearchParams meant Next skipped prerendering the form, and
+  // the page shipped with everything around it and nothing in the middle.
+  const sp = await searchParams;
   return (
     <>
       <PageHeader
@@ -64,11 +71,11 @@ export default function FindMyPathwayPage() {
             </p>
           </div>
           <div>
-            {/* The form reads the hero's answers from the query string, which
-                needs a boundary for the page to stay statically prerendered. */}
-            <Suspense fallback={<div className="min-h-[28rem]" aria-hidden="true" />}>
-              <FindMyPathwayForm />
-            </Suspense>
+            <FindMyPathwayForm
+              initialFrom={sp.from ?? ""}
+              initialTo={sp.to ?? ""}
+              initialPurpose={sp.purpose ?? ""}
+            />
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-5xl">
