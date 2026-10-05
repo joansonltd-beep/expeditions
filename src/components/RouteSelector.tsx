@@ -18,6 +18,12 @@ import { CSME_COUNTRIES } from "@/lib/csmeData";
  *
  * A light panel over the photograph rather than a translucent one: the type
  * has to stay readable whichever frame the rotating hero happens to be on.
+ *
+ * The empty first option of each select is deliberately empty. It used to
+ * read "Pick a country", directly under a label reading "Going to", which is
+ * the same instruction twice and treats the reader as though they have not
+ * used a dropdown before. The label does the work; the select starts blank so
+ * nothing is chosen on anyone's behalf.
  */
 
 const COUNTRY_NAMES = CSME_COUNTRIES.map((c) => c.name);
@@ -32,8 +38,25 @@ const PURPOSES = [
 ] as const;
 
 const control =
-  "w-full appearance-none rounded-xl border-[1.5px] border-slate-200 bg-slate-50 px-3.5 py-3 text-[0.97rem] font-medium text-navy transition focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
+  "w-full appearance-none rounded-xl border-[1.5px] border-slate-200 bg-slate-50 py-3 pl-3.5 pr-10 text-[0.97rem] font-medium text-navy transition focus:border-brand focus:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40";
 const label = "block text-xs font-semibold uppercase tracking-[0.14em] text-navy/55";
+
+/**
+ * The dropdown arrow. `appearance-none` strips the native one, and with no
+ * placeholder text inside the control there would be nothing left to say
+ * this opens a list.
+ */
+function Chevron() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-navy/45"
+    >
+      <path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export default function RouteSelector() {
   const router = useRouter();
@@ -66,50 +89,59 @@ export default function RouteSelector() {
           <label htmlFor={id("from")} className={label}>
             Starting from
           </label>
-          <select
-            id={id("from")}
-            value={from}
-            onChange={(e) => setFrom(e.target.value)}
-            className={`mt-2 ${control}`}
-          >
-            <option value="">Where you are now</option>
-            {COUNTRY_NAMES.map((c) => (
-              <option key={c}>{c}</option>
-            ))}
-            <option value="Somewhere else">Somewhere else</option>
-          </select>
+          <div className="relative mt-2">
+            <select
+              id={id("from")}
+              value={from}
+              onChange={(e) => setFrom(e.target.value)}
+              className={control}
+            >
+              <option value="" />
+              {COUNTRY_NAMES.map((c) => (
+                <option key={c}>{c}</option>
+              ))}
+              <option value="Somewhere else">Somewhere else</option>
+            </select>
+            <Chevron />
+          </div>
         </div>
 
         <div>
           <label htmlFor={id("to")} className={label}>
             Going to
           </label>
-          <select id={id("to")} value={to} onChange={(e) => setTo(e.target.value)} className={`mt-2 ${control}`}>
-            <option value="">Pick a country</option>
-            {COUNTRY_NAMES.map((c) => (
-              <option key={c}>{c}</option>
-            ))}
-            <option value="Not decided yet">Not decided yet</option>
-          </select>
+          <div className="relative mt-2">
+            <select id={id("to")} value={to} onChange={(e) => setTo(e.target.value)} className={control}>
+              <option value="" />
+              {COUNTRY_NAMES.map((c) => (
+                <option key={c}>{c}</option>
+              ))}
+              <option value="Not decided yet">Not decided yet</option>
+            </select>
+            <Chevron />
+          </div>
         </div>
 
         <div>
           <label htmlFor={id("purpose")} className={label}>
             Going for
           </label>
-          <select
-            id={id("purpose")}
-            value={purpose}
-            onChange={(e) => setPurpose(e.target.value)}
-            className={`mt-2 ${control}`}
-          >
-            <option value="">What takes you there</option>
-            {PURPOSES.map((p) => (
-              <option key={p.value} value={p.value}>
-                {p.label}
-              </option>
-            ))}
-          </select>
+          <div className="relative mt-2">
+            <select
+              id={id("purpose")}
+              value={purpose}
+              onChange={(e) => setPurpose(e.target.value)}
+              className={control}
+            >
+              <option value="" />
+              {PURPOSES.map((p) => (
+                <option key={p.value} value={p.value}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
+            <Chevron />
+          </div>
         </div>
       </div>
 
@@ -121,7 +153,6 @@ export default function RouteSelector() {
           Find my route
           <span aria-hidden="true">→</span>
         </button>
-        <p className="text-sm text-navy/60">Takes about a minute.</p>
       </div>
     </form>
   );

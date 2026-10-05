@@ -369,7 +369,7 @@ export default function PlanMyMoveForm({
                 <label htmlFor={id("cur")} className={labelClass}>
                   Current country
                 </label>
-                <input id={id("cur")} list={id("countries")} value={form.current} onChange={set("current")} className={`mt-1.5 ${field}`} placeholder="Where you live now" />
+                <input id={id("cur")} list={id("countries")} value={form.current} onChange={set("current")} className={`mt-1.5 ${field}`} />
               </div>
             </div>
           </>
@@ -384,7 +384,7 @@ export default function PlanMyMoveForm({
               <label htmlFor={id("dest")} className={labelClass}>
                 Intended destination
               </label>
-              <input id={id("dest")} list={id("countries")} value={form.destination} onChange={set("destination")} className={`mt-1.5 ${field}`} placeholder="Where you want to go" />
+              <input id={id("dest")} list={id("countries")} value={form.destination} onChange={set("destination")} className={`mt-1.5 ${field}`} />
             </div>
           </>
         ) : null}
@@ -517,7 +517,7 @@ export default function PlanMyMoveForm({
                 <label htmlFor={id("name")} className={labelClass}>
                   Name <span aria-hidden="true" className="text-brand">*</span>
                 </label>
-                <input id={id("name")} required autoComplete="name" value={form.name} onChange={set("name")} className={`mt-1.5 ${field}`} placeholder="Your name" />
+                <input id={id("name")} required autoComplete="name" value={form.name} onChange={set("name")} className={`mt-1.5 ${field}`} />
               </div>
               <div>
                 <label htmlFor={id("email")} className={labelClass}>
