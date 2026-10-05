@@ -141,7 +141,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h3 className="mb-3.5 text-sm font-semibold text-white">Visit, Work &amp; Study</h3>
+              <h2 className="mb-3.5 font-sans text-sm font-semibold tracking-normal text-white">Visit, Work &amp; Study</h2>
               <ul className="grid text-sm">
                 {journeyLinks.map((l) => (
                   <li key={l.href}>
@@ -154,7 +154,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h3 className="mb-3.5 text-sm font-semibold text-white">Services &amp; Company</h3>
+              <h2 className="mb-3.5 font-sans text-sm font-semibold tracking-normal text-white">Services &amp; Company</h2>
               <ul className="grid text-sm">
                 {companyLinks.map((l) => (
                   <li key={l.href}>
@@ -167,7 +167,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             </div>
 
             <div>
-              <h3 className="mb-3.5 text-sm font-semibold text-white">Contact</h3>
+              <h2 className="mb-3.5 font-sans text-sm font-semibold tracking-normal text-white">Contact</h2>
               <ul className="grid text-sm text-slate-400">
                 <li>
                   <a href={waHref} target="_blank" rel="noopener noreferrer" className="block py-3 hover:text-white">

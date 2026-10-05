@@ -100,7 +100,7 @@ function Fieldset({
   return (
     <fieldset className="mt-8 border-t border-slate-100 pt-7 first:mt-0 first:border-0 first:pt-0">
       <legend className="sr-only">{legend}</legend>
-      <h3 className="text-base font-bold text-navy">{legend}</h3>
+      <h2 className="font-sans text-base font-bold tracking-normal text-navy">{legend}</h2>
       {note ? <p className="mt-1 text-sm text-slate-600">{note}</p> : null}
       <div className="mt-4 grid gap-4">{children}</div>
     </fieldset>
